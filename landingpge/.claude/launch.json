@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "hytale-front-end",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "front_end_claude/front_end", "run", "dev"],
+      "port": 5180,
+      "autoPort": true
+    }
+  ]
+}
