@@ -16,6 +16,35 @@
 .hero-caption {
   margin-top: 26px;
 }
+@media (min-width: 901px) {
+  .hero-copy > p {
+    max-width: 100%;
+    font-size: clamp(20px, 1.65vw, 25px);
+    line-height: 1.8;
+  }
+  .hero-copy .hero-caption {
+    width: 100%;
+    gap: 16px;
+    font-size: clamp(19px, 1.5vw, 23px);
+    line-height: 1.6;
+    color: var(--ink);
+  }
+  .hero-copy .hero-caption > span:last-child {
+    min-width: 0;
+    flex: 1;
+  }
+  .hero-copy .hero-caption small {
+    font-size: clamp(18px, 1.35vw, 21px);
+    line-height: 1.6;
+    color: var(--ink);
+    margin-top: 4px;
+  }
+  .hero-copy .tiny-leaf {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+  }
+}
 .story-intro {
   grid-template-columns: 1.1fr 1fr;
   gap: 54px;

@@ -17,4 +17,4 @@ Những số liệu vốn 300 triệu, doanh thu ba năm, lợi ích tăng giá 
 
 Không bịa tên HTX, đánh giá khách, giá bán, số liên hệ hay URL Zalo. Form và review bắt đầu trống; Zalo chỉ xuất hiện sau khi admin cấu hình link thật.
 
-Ảnh WebP từ 3 ảnh nguồn; gallery từ khung hình thực trong 3 video. Voice của phim giữ nguyên bản nguồn. Bản đọc biên tập từ kịch bản XLSX, không hứa là phụ đề theo thời gian. Preview chỉ có 30 giây đầu; không được mô tả là phim gốc đầy đủ.
+Ảnh WebP từ 3 ảnh nguồn; gallery từ khung hình thực trong 3 video. Video hiện dùng đầy đủ thời lượng và độ phân giải gốc 1080 × 1920, H.264 để phát trên trình duyệt; âm thanh giữ nguồn. File HEVC gốc có đường dẫn tải riêng. Không còn cắt 30 giây hoặc giảm xuống 720p. Nội dung transcript biên tập vẫn giữ trong dữ liệu để tương thích, nhưng phần Đọc lời kể trong phim đã bỏ khỏi giao diện công khai.

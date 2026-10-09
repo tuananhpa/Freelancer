@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 900" fill="none">
+  <defs>
+    <g id="leaf" stroke="#bdcba6" stroke-width="1.5">
+      <path d="M0 0C-30-28-35-65-9-98C20-72 24-34 0 0Z" fill="#bdcba6" fill-opacity=".18"/>
+      <path d="M0 0-9-98M-3-22-23-39M-5-43-26-62M-7-64-22-79M-3-22 11-40M-5-43 8-62M-7-64 1-80"/>
+    </g>
+    <g id="branch" stroke="#bdcba6" stroke-width="2">
+      <path d="M0 0C42 70 76 165 59 285M37 87-34 128M55 148 113 105M64 213-1 246"/>
+      <use href="#leaf" transform="translate(37 87) rotate(-60)"/>
+      <use href="#leaf" transform="translate(54 141) rotate(49)"/>
+      <use href="#leaf" transform="translate(-23 121) rotate(-64)"/>
+      <use href="#leaf" transform="translate(101 113) rotate(56)"/>
+      <use href="#leaf" transform="translate(64 213) rotate(-45)"/>
+      <use href="#leaf" transform="translate(14 241) rotate(-76)"/>
+      <path d="M60 232 94 267M75 248 115 250M81 255 76 296"/>
+      <g fill="#d7c18c" fill-opacity=".18"><circle cx="96" cy="272" r="13"/><circle cx="118" cy="256" r="12"/><circle cx="77" cy="302" r="14"/><circle cx="103" cy="299" r="12"/></g>
+    </g>
+    <g id="village" stroke="#d7c18c" stroke-width="1.4">
+      <path d="M0 123Q70 108 143 127T290 122M0 136Q84 120 160 140T290 137M13 103H122V43H13ZM4 43 68 12 132 43ZM1 47H136M30 103V61H53V103M76 66H105V85H76ZM60 10V2H74V10M-18 112 141 110M151 109H254V75H151ZM140 75 202 45 266 75ZM148 81H258M170 109V89H192V109M218 87H241V98H218Z"/>
+      <path d="M17 114C-10 98-4 57-20 34M-15 61C-62 48-52 18-29 19C-38-7 1-7 4 17C28 7 42 41 17 51C42 64 17 93-8 76M270 117V53M269 74C239 54 251 32 267 40C262 14 288 16 290 40C320 36 321 69 291 76"/>
+      <path d="M0 157 40 150M53 151 106 156M145 153 201 148M211 156 278 153M11 166 65 164M107 168 151 162M196 168 258 164"/>
+    </g>
+  </defs>
+  <g opacity=".42"><use href="#branch" transform="translate(-40 100) scale(.5) rotate(-18)"/><use href="#branch" transform="translate(425 100) scale(-.5 .5) rotate(-12)"/><use href="#branch" transform="translate(-35 835) scale(.5) rotate(-35)"/><use href="#branch" transform="translate(424 850) scale(-.5 .5) rotate(-28)"/></g>
+  <g opacity=".28"><use href="#village" transform="translate(-175 660) scale(.7)"/><use href="#village" transform="translate(560 720) scale(-.7 .7)"/></g>
+</svg>

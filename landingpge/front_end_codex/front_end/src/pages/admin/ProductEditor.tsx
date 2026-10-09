@@ -7,6 +7,8 @@ import { useNotice } from "../../app/providers";
 import { ProductMediaEditor } from "./ProductMediaEditor";
 import { createProductDraft } from "../../services/productDraft";
 import { orderUnits } from "../../services/inquiries";
+import { TimelineImagesEditor } from "./TimelineImagesEditor";
+import { MediaUploadProvider, useMediaUploadState } from "./MediaUploadState";
 const blockNames: Record<Block, string> = {
   hero: "Header, video & định danh",
   story: "Câu chuyện & bộ sưu tập ảnh",
@@ -23,6 +25,26 @@ export function ProductEditor({
   onClose: () => void;
   onSaved: () => void;
 }) {
+  return (
+    <MediaUploadProvider>
+      <ProductEditorForm
+        product={product}
+        onClose={onClose}
+        onSaved={onSaved}
+      />
+    </MediaUploadProvider>
+  );
+}
+function ProductEditorForm({
+  product,
+  onClose,
+  onSaved,
+}: {
+  product: Product;
+  onClose: () => void;
+  onSaved: () => void;
+}) {
+  const uploads = useMediaUploadState();
   const [p, setP] = useState(() => structuredClone(product));
   const [tab, setTab] = useState("info");
   const [error, setError] = useState("");
@@ -56,11 +78,16 @@ export function ProductEditor({
   );
   async function save(e: FormEvent) {
     e.preventDefault();
+    if (uploads.busy || uploading) return;
     setBusy(true);
     setError("");
     try {
       await repository.products.save({
         ...p,
+        timeline: p.timeline.map((event) => ({
+          ...event,
+          images: event.images?.filter((image) => image.src.trim()),
+        })),
         orderUnit: p.orderUnit?.trim() || "kg",
       });
       notify("Đã lưu sản phẩm. Nội dung công khai sẽ dùng bản cập nhật.");
@@ -224,14 +251,6 @@ export function ProductEditor({
                     <option value="draft">Bản nháp</option>
                   </select>
                 </label>
-                <label className="checkbox-label">
-                  <input
-                    type="checkbox"
-                    checked={p.demo}
-                    onChange={(e) => patch("demo", e.target.checked)}
-                  />
-                  Đánh dấu lô minh họa
-                </label>
               </div>
             </>
           )}
@@ -268,6 +287,7 @@ export function ProductEditor({
                 <button
                   type="button"
                   className="button button-outline"
+                  disabled={uploads.busy}
                   onClick={() =>
                     patch("timeline", [
                       ...p.timeline,
@@ -297,6 +317,7 @@ export function ProductEditor({
                       type="button"
                       className="icon-button"
                       aria-label={`Xóa mốc ${i + 1}`}
+                      disabled={uploads.busy}
                       onClick={() =>
                         patch(
                           "timeline",
@@ -345,6 +366,17 @@ export function ProductEditor({
                       />
                     </label>
                   </div>
+                  <TimelineImagesEditor
+                    images={event.images}
+                    onChange={(images) =>
+                      setP((prev) => ({
+                        ...prev,
+                        timeline: prev.timeline.map((item, n) =>
+                          n === i ? { ...item, images } : item,
+                        ),
+                      }))
+                    }
+                  />
                 </div>
               ))}
             </>
@@ -447,7 +479,10 @@ export function ProductEditor({
         )}
         <div className="editor-footer">
           <span>Thay đổi được lưu riêng cho sản phẩm này.</span>
-          <button className="button" disabled={busy || uploading}>
+          <button
+            className="button"
+            disabled={busy || uploading || uploads.busy}
+          >
             <Save size={17} />
             {busy ? "Đang lưu…" : "Lưu sản phẩm"}
           </button>

@@ -31,7 +31,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       try {
         const u = isMock
           ? sessionStorage.getItem("hytales.demo.admin") === "active"
-            ? { name: "Quản trị viên demo", role: "admin" as const }
+            ? { name: "Quản trị viên", role: "admin" as const }
             : null
           : await apiAuth.me();
         if (active && u?.role === "admin") setUser(u);
@@ -48,7 +48,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, []);
   async function login(email = "", password = "") {
     const u = isMock
-      ? { name: "Quản trị viên demo", role: "admin" as const }
+      ? { name: "Quản trị viên", role: "admin" as const }
       : await apiAuth.login(email, password);
     if (u.role !== "admin")
       throw new Error("Tài khoản không có quyền quản trị.");

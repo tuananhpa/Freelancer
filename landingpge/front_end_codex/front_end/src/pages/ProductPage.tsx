@@ -20,6 +20,7 @@ import {
   MessageCircle,
   Expand,
   ScanLine,
+  Download,
 } from "lucide-react";
 import { useLanguage } from "../app/providers";
 import { useResource } from "../hooks/useResource";
@@ -27,6 +28,8 @@ import { repository } from "../services";
 import { Loading, ErrorState, NotFound, Modal } from "../components/common";
 import { InquiryModal } from "../components/InquiryModal";
 import { ReviewSection } from "../components/ReviewSection";
+import { useVideoAspect } from "../hooks/useVideoAspect";
+import { originalVideoUrl } from "../utils/media";
 export default function ProductPage() {
   const { slug = "" } = useParams();
   const { lang, t } = useLanguage();
@@ -38,10 +41,12 @@ export default function ProductPage() {
   } = useResource(() => repository.products.get(slug), [slug]);
   const { data: products } = useResource(() => repository.products.list());
   const { data: settings } = useResource(() => repository.settings.get());
+  const aspect = useVideoAspect(product?.video);
   const [muted, setMuted] = useState(true);
   const [playing, setPlaying] = useState(false);
   const [step, setStep] = useState(0);
   const [photo, setPhoto] = useState<number>();
+  const [journeyPhoto, setJourneyPhoto] = useState<string>();
   const [film, setFilm] = useState<{
     src: string;
     name: string;
@@ -55,6 +60,7 @@ export default function ProductPage() {
       document.title = `${lang === "vi" ? product.name : product.nameEn} | HYTales`;
     setStep(0);
     setPhoto(undefined);
+    setJourneyPhoto(undefined);
     setMuted(true);
   }, [product?.id, lang]);
   useEffect(() => {
@@ -105,12 +111,16 @@ export default function ProductPage() {
       </div>
       {enabled("hero") && (
         <section className="container product-hero">
-          <div className="product-hero-media">
+          <div
+            className="product-hero-media"
+            style={p.video ? aspect.frameStyle : undefined}
+          >
             {p.video ? (
               <MediaVideo
                 ref={video}
                 display={p.imageDisplay}
                 src={p.video}
+                onLoadedMetadata={aspect.onLoadedMetadata}
                 autoPlay={
                   !window.matchMedia("(prefers-reduced-motion: reduce)")
                     .matches &&
@@ -123,8 +133,8 @@ export default function ProductPage() {
                 muted={muted}
                 loop
                 playsInline
-                preload="none"
-                poster={p.image}
+                preload="metadata"
+                poster={p.gallery[0] || p.image}
                 onPlay={() => setPlaying(true)}
                 onPause={() => setPlaying(false)}
                 onError={() => setPlaying(false)}
@@ -145,6 +155,17 @@ export default function ProductPage() {
                   {t("Phim từ miền vườn", "Film from the orchard")}
                 </span>
                 <div>
+                  {originalVideoUrl(p.video) && (
+                    <a
+                      className="glass-button"
+                      href={originalVideoUrl(p.video)}
+                      download
+                      aria-label={t("Tải video gốc", "Download original video")}
+                      title={t("Tải video gốc", "Download original video")}
+                    >
+                      <Download size={19} />
+                    </a>
+                  )}
                   <button
                     className="glass-button"
                     onClick={() => void togglePlay()}
@@ -159,6 +180,7 @@ export default function ProductPage() {
                   <button
                     className="glass-button"
                     onClick={() => setMuted(!muted)}
+                    aria-pressed={!muted}
                     aria-label={
                       muted
                         ? t("Bật âm thanh", "Enable sound")
@@ -166,11 +188,6 @@ export default function ProductPage() {
                     }
                   >
                     {muted ? <VolumeX size={19} /> : <Volume2 size={19} />}
-                    <span>
-                      {muted
-                        ? t("Nghe chuyện", "Listen")
-                        : t("Tắt tiếng", "Mute")}
-                    </span>
                   </button>
                   <button
                     className="glass-button"
@@ -204,11 +221,10 @@ export default function ProductPage() {
               <div>
                 <Package size={17} />
                 <strong>{t("Thông tin lô hàng", "Batch information")}</strong>
-                {p.demo && <span className="status-badge">Demo</span>}
               </div>
               <dl>
                 <dt>{t("Mã lô", "Batch code")}</dt>
-                <dd>{p.batchCode}</dd>
+                <dd>{p.batchCode || t("Chưa cập nhật", "Awaiting update")}</dd>
                 <dt>
                   {t("Ngày thu hoạch / sản xuất", "Harvest / production date")}
                 </dt>
@@ -238,7 +254,7 @@ export default function ProductPage() {
                   <ShieldCheck size={14} />
                   {t(
                     "Chưa có hồ sơ chứng nhận cho lô mẫu này.",
-                    "No certificate has been supplied for this sample batch.",
+                    "No certificate has been supplied for this batch.",
                   )}
                 </small>
               )}
@@ -280,19 +296,6 @@ export default function ProductPage() {
             </p>
             <h2>{p.subtitle[lang]}</h2>
             <p>{p.story[lang]}</p>
-            <details className="transcript">
-              <summary>
-                <Volume2 size={16} />
-                {t("Đọc lời kể trong phim", "Read the film narration")}
-              </summary>
-              <p>{p.transcript}</p>
-              <small>
-                {t(
-                  "Biên tập từ kịch bản nông sản do dự án cung cấp.",
-                  "Edited from the narration script supplied by the project.",
-                )}
-              </small>
-            </details>
           </div>
           <div className="story-gallery">
             {photos.map((src, i) => (
@@ -333,14 +336,6 @@ export default function ProductPage() {
                   {t("Từ vườn quê đến tay bạn", "From the orchard to you")}
                 </h2>
               </div>
-              <p>
-                {p.demo
-                  ? t(
-                      "Hành trình minh họa. Nhật ký thực tế\nsẽ được chủ thể cập nhật theo từng lô.",
-                      "Illustrative journey. Actual batch records\nwill be supplied by the producer.",
-                    )
-                  : t("Nhật ký của lô hàng", "This batch’s journey")}
-              </p>
             </div>
             <div
               className="timeline"
@@ -383,11 +378,59 @@ export default function ProductPage() {
                     {p.timeline[step].detail[lang] ||
                       p.timeline[step].detail.vi}
                   </p>
+                  {!!p.timeline[step].images?.some((image) => image.src) && (
+                    <>
+                      {(p.timeline[step].images?.filter((image) => image.src)
+                        .length || 0) > 1 && (
+                        <p className="timeline-images-hint">
+                          {t(
+                            `${p.timeline[step].images?.filter((image) => image.src).length} ảnh · Vuốt để xem, bấm để phóng to`,
+                            `${p.timeline[step].images?.filter((image) => image.src).length} photos · Swipe to explore, tap to enlarge`,
+                          )}
+                        </p>
+                      )}
+                      <div className="timeline-images">
+                        {p.timeline[step].images
+                          ?.filter((image) => image.src)
+                          .map((image, i) => (
+                            <button
+                              type="button"
+                              key={`${image.src}-${i}`}
+                              aria-label={t(
+                                `Xem ảnh ${i + 1} của ${p.timeline[step].title[lang] || p.timeline[step].title.vi}`,
+                                `View step photo ${i + 1}`,
+                              )}
+                              onClick={() => setJourneyPhoto(image.src)}
+                            >
+                              <MediaImage
+                                src={image.src}
+                                display={image.display}
+                                loading="lazy"
+                                alt={`${p.timeline[step].title[lang] || p.timeline[step].title.vi} · ${i + 1}`}
+                              />
+                            </button>
+                          ))}
+                      </div>
+                    </>
+                  )}
                 </div>
               </div>
             )}
           </div>
         </section>
+      )}
+      {journeyPhoto && (
+        <Modal
+          title={t("Ảnh hành trình", "Journey photo")}
+          wide
+          onClose={() => setJourneyPhoto(undefined)}
+        >
+          <MediaImage
+            src={journeyPhoto}
+            alt={t("Ảnh hành trình sản phẩm", "Product journey photo")}
+            className="journey-lightbox-image"
+          />
+        </Modal>
       )}
       {enabled("videos") && (
         <section className="section container short-films" id="phim-ngan">
@@ -463,8 +506,8 @@ export default function ProductPage() {
           </div>
           <p className="quiet-note">
             {t(
-              "Trích đoạn từ 3 phim gốc của dự án. Bật âm thanh để nghe giọng kể.",
-              "Previews from the project’s three original films. Enable sound to hear the narration.",
+              "Phim đầy đủ từ dự án. Bật âm thanh để nghe giọng kể.",
+              "Full films from the project. Enable sound to hear the narration.",
             )}
           </p>
         </section>
@@ -566,10 +609,20 @@ export default function ProductPage() {
           />
           <p className="quiet-note">
             {t(
-              "Bản xem trước 30 giây từ phim gốc.",
-              "30-second preview of the original film.",
+              "Phim đầy đủ. Mở toàn màn hình để thưởng thức.",
+              "Full film. Open fullscreen to enjoy the story.",
             )}
           </p>
+          {originalVideoUrl(film.src) && (
+            <a
+              className="text-button"
+              href={originalVideoUrl(film.src)}
+              download
+            >
+              <Download size={18} />
+              {t("Tải video gốc", "Download original video")}
+            </a>
+          )}
         </Modal>
       )}
       {inquiry && (

@@ -68,19 +68,12 @@ export default function LoginPage() {
           </p>
           {isMock ? (
             <>
-              <div className="demo-note">
-                <strong>Bản demo frontend</strong>
-                <p>
-                  Phiên quản trị minh họa trên trình duyệt. Backend sẽ bổ sung
-                  tài khoản, xác thực và phân quyền thật.
-                </p>
-              </div>
               <button
                 className="button full-width"
                 disabled={busy}
                 onClick={() => void enter()}
               >
-                Mở không gian demo
+                Mở không gian quản trị
                 <ArrowUpRight size={18} />
               </button>
             </>

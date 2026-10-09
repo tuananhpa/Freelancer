@@ -58,7 +58,9 @@ function decodeQr(filename, expected) {
     });
     await page.screenshot({ path: path.join(output, "home-preview.png") });
     await page.goto(`${base}/admin/products`);
-    await page.getByRole("button", { name: "Mở không gian demo" }).waitFor();
+    await page
+      .getByRole("button", { name: "Mở không gian quản trị" })
+      .waitFor();
     assert.ok(
       page.url().includes("/admin/login"),
       "private admin redirects to login",
@@ -113,7 +115,7 @@ function decodeQr(filename, expected) {
     await page
       .getByRole("button", { name: "Gửi câu hỏi", exact: true })
       .click();
-    await page.getByText(/Đã lưu câu hỏi vào hộp thư admin demo/).waitFor();
+    await page.getByText(/Đã lưu câu hỏi vào hộp thư quản trị/).waitFor();
     await page.getByRole("button", { name: "Đóng trò chuyện" }).click();
     await page.reload();
     await page
@@ -125,7 +127,7 @@ function decodeQr(filename, expected) {
       fullPage: true,
     });
     await page.goto(`${base}/admin/login`);
-    await page.getByRole("button", { name: "Mở không gian demo" }).click();
+    await page.getByRole("button", { name: "Mở không gian quản trị" }).click();
     await page
       .getByRole("heading", { name: "Chào người kể chuyện." })
       .waitFor();
@@ -263,7 +265,9 @@ function decodeQr(filename, expected) {
       .waitFor();
     await page.goto(`${base}/admin/products`);
     await page.getByRole("button", { name: "Đăng xuất" }).click();
-    await page.getByRole("button", { name: "Mở không gian demo" }).waitFor();
+    await page
+      .getByRole("button", { name: "Mở không gian quản trị" })
+      .waitFor();
     assert.deepEqual(errors, [], "no uncaught browser errors");
     console.log(
       "PASS: guest routes, admin guard, timeline, gallery, inquiry, review persistence, FAQ/chat, CMS, drafts, QR PNG/SVG/PDF, QR decoding with/without logo, QR contrast validation, logout, responsive 360/390/768/1440, no JS errors.",

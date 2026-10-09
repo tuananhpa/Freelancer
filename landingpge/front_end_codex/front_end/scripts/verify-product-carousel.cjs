@@ -18,7 +18,7 @@ const base = process.env.TEST_URL || "http://127.0.0.1:5173";
     const errors = [];
     page.on("pageerror", (error) => errors.push(error.message));
     await page.goto(base + "/admin/login");
-    await page.getByRole("button", { name: "Mở không gian demo" }).click();
+    await page.getByRole("button", { name: "Mở không gian quản trị" }).click();
     await page.goto(base + "/admin/settings");
     await page
       .getByRole("button", { name: "Lưu thiết lập", exact: true })

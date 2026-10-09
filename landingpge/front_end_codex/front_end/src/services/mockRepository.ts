@@ -47,7 +47,30 @@ export function createMockRepository(storage: StorageLike): Repository {
         !s.settings
       )
         return fresh();
-      return { ...s, settings: normalizeSettings(s.settings) };
+      const products = s.products.map((product: Product) => {
+        const seed = seedProducts.find((p) => p.id === product.id);
+        return {
+          ...product,
+          video: /^\/media\/(nhan-long|vai-trung|cam-duong-canh)\.mp4$/.test(
+            product.video,
+          )
+            ? product.video.replace(/^\/media\//, "/hytales-videos/")
+            : product.video,
+          batchCode: /^HY-(NL|VT|CC)-DEMO-01$/.test(product.batchCode)
+            ? ""
+            : product.batchCode,
+          faq: product.faq.map((item) => {
+            const match = seed?.faq.find(
+              (f) => f.question.vi === item.question.vi,
+            );
+            return match &&
+              /demo|Trang mẫu/i.test(item.answer.vi + item.answer.en)
+              ? { ...item, answer: match.answer }
+              : item;
+          }),
+        };
+      });
+      return { ...s, products, settings: normalizeSettings(s.settings) };
     } catch {
       return fresh();
     }
@@ -57,7 +80,7 @@ export function createMockRepository(storage: StorageLike): Repository {
       storage.setItem(key, JSON.stringify(s));
     } catch {
       throw new Error(
-        "Không thể lưu dữ liệu demo. Bộ nhớ trình duyệt có thể đã đầy hoặc bị chặn.",
+        "Không thể lưu dữ liệu. Bộ nhớ trình duyệt có thể đã đầy hoặc bị chặn.",
       );
     }
   };

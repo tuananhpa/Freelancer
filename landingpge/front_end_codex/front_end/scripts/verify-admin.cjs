@@ -49,7 +49,7 @@ fs.mkdirSync(output, { recursive: true });
       "blank social links are hidden",
     );
     await page.goto(base + "/admin/login");
-    await page.getByRole("button", { name: "Mở không gian demo" }).click();
+    await page.getByRole("button", { name: "Mở không gian quản trị" }).click();
     await page.goto(base + "/admin/settings");
     await page
       .getByLabel("Liên kết Zalo", { exact: true })
@@ -213,7 +213,7 @@ fs.mkdirSync(output, { recursive: true });
     });
     await picker
       .getByRole("button", {
-        name: "Nhãn lồng Phố Hiến – phim 30 giây",
+        name: "Nhãn lồng Phố Hiến – phim đầy đủ 1080p",
         exact: true,
       })
       .click();
@@ -226,7 +226,12 @@ fs.mkdirSync(output, { recursive: true });
       .waitFor();
     await editor
       .getByLabel("Tải video câu chuyện", { exact: true })
-      .setInputFiles(path.resolve(__dirname, "../public/media/nhan-long.mp4"));
+      .setInputFiles(
+        path.join(
+          path.resolve(__dirname, "../../../HYTales/Video"),
+          fs.readdirSync(path.resolve(__dirname, "../../../HYTales/Video")).find(name => name.startsWith("NHA") && name.endsWith(".mp4")),
+        ),
+      );
     await page.waitForFunction(() =>
       document.querySelector(".editor-video-preview")?.src.startsWith("blob:"),
     );

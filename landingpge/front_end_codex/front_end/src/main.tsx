@@ -12,6 +12,9 @@ import "./styles/readability.css";
 import "./styles/content-refinements.css";
 import "./styles/appearance.css";
 import "./styles/product-carousel.css";
+import "./styles/video-aspect.css";
+import "./styles/player-improvements.css";
+import "./styles/orchard-background.css";
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <App />

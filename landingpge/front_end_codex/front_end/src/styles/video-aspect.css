@@ -1,0 +1,71 @@
+.hero-visual.hero-film {
+  height: auto;
+  width: min(100%, calc(560px * var(--video-ratio, 0.5625)));
+  justify-self: center;
+  border-radius: 16px;
+}
+.hero-film-stage {
+  flex: none;
+  width: 100%;
+  aspect-ratio: var(--video-ratio, 9 / 16);
+}
+.hero-film-stage > video {
+  object-fit: contain;
+}
+.hero-film-controls {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  padding-inline: 8px;
+}
+.hero-film-controls > a {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #ffffff66;
+  border-radius: 8px;
+  color: white;
+}
+.hero-film-controls .hero-play-button > span {
+  display: none;
+}
+.hero-film-controls .hero-film-dots button {
+  min-width: 30px;
+  padding-inline: 6px;
+}
+.product-hero-media:has(> video) {
+  height: auto;
+  max-height: none;
+  width: min(100%, calc(560px * var(--video-ratio, 0.5625)));
+  aspect-ratio: var(--video-ratio, 9 / 16);
+  justify-self: center;
+}
+.product-hero-media > video {
+  display: block;
+  object-fit: contain;
+}
+video.modal-video {
+  display: block;
+  width: min(100%, calc(68dvh * var(--video-ratio, 0.5625)));
+  height: auto;
+  max-height: none;
+  margin-inline: auto;
+  object-fit: contain;
+}
+video.editor-video-preview {
+  display: block;
+  width: min(100%, calc(360px * var(--video-ratio, 0.5625)));
+  height: auto;
+  max-height: none;
+  margin-inline: auto;
+}
+.hero-visual.hero-film:fullscreen {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+}
+.hero-film:fullscreen .hero-film-stage {
+  flex: 1;
+  aspect-ratio: auto;
+}

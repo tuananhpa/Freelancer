@@ -1,0 +1,49 @@
+/* Decorative background only: existing components, sizing and interactions stay intact. */
+:root:not([data-theme="night"]) {
+  --paper: #faf6eb;
+  --surface: #fffaf0;
+  --wash: #f3eedf;
+  --sage: #ebe9d7;
+  --line: #dedbc9;
+}
+:root {
+  --orchard-art: url("/decoration/orchard-etching.svg");
+  --orchard-size: max(100%, 1440px) 1000px;
+}
+:root[data-theme="night"] {
+  --orchard-art: url("/decoration/orchard-etching-night.svg");
+}
+body {
+  background-image: var(--orchard-art);
+  background-position: center top;
+  background-size: var(--orchard-size);
+  background-repeat: repeat-y;
+}
+.admin-layout,
+:root[data-theme="night"] .admin-layout {
+  background: transparent;
+}
+.treasures-section,
+.journey-section,
+.values-strip {
+  background-image: var(--orchard-art);
+  background-position: center;
+  background-size: var(--orchard-size);
+}
+@media (max-width: 900px) {
+  :root {
+    --orchard-art: url("/decoration/orchard-etching-mobile.svg");
+    --orchard-size: 100% auto;
+  }
+  :root[data-theme="night"] {
+    --orchard-art: url("/decoration/orchard-etching-mobile-night.svg");
+  }
+}
+@media print {
+  body,
+  .treasures-section,
+  .journey-section,
+  .values-strip {
+    background-image: none !important;
+  }
+}

@@ -92,8 +92,8 @@ export function ChatWidget() {
           "assistant",
           isMock
             ? {
-                vi: "Đã lưu câu hỏi vào hộp thư admin demo. Phản hồi trực tiếp sẽ được kết nối khi có backend.",
-                en: "Your question is saved in the demo inbox. Live replies require a backend.",
+                vi: "Đã lưu câu hỏi vào hộp thư quản trị.",
+                en: "Your question is saved in the admin inbox.",
               }
             : {
                 vi: "Đã gửi câu hỏi. Đội ngũ hỗ trợ sẽ tiếp nhận.",

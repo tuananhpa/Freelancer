@@ -64,7 +64,7 @@ const builtIn: MediaAsset[] = seedProducts.flatMap((p) => [
   })),
   {
     id: `${p.id}-film`,
-    name: `${p.name} – phim 30 giây`,
+    name: `${p.name} – phim đầy đủ 1080p`,
     kind: "video" as const,
     url: p.video,
     poster: p.image,

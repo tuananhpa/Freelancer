@@ -16,6 +16,9 @@
     "test:journey": "node scripts/verify-journey-readability.cjs",
     "test:appearance": "node scripts/verify-appearance.cjs",
     "test:carousel": "node scripts/verify-product-carousel.cjs",
+    "test:video-aspect": "node scripts/verify-video-aspect.cjs",
+    "test:players": "node scripts/verify-player-improvements.cjs",
+    "test:video-sources": "node scripts/verify-source-videos.cjs",
     "format": "prettier --write src scripts docs index.html package.json tsconfig.json vite.config.ts README.md"
   },
   "dependencies": {

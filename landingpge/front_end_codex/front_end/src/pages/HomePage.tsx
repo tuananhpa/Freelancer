@@ -398,7 +398,7 @@ export default function HomePage() {
             <p>
               {t(
                 "Khung kịch bản và phim mẫu giúp người trồng tự kể chuyện bằng smartphone.",
-                "Scripts and sample films help growers tell their stories with a smartphone.",
+                "Scripts and films help growers tell their stories with a smartphone.",
               )}
             </p>
           </div>

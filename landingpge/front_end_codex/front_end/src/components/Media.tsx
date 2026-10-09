@@ -9,6 +9,7 @@ import { resolveMediaUrl } from "../services/mediaLibrary";
 import { useSiteSettings } from "../app/appearance";
 import { imageDisplayStyle } from "../services/imageDisplay";
 import type { ImageDisplay } from "../types/domain";
+import { useVideoAspect } from "../hooks/useVideoAspect";
 export function useMediaSource(reference?: string) {
   const [source, setSource] = useState(
     reference?.startsWith("local-media:") ? "" : reference || "",
@@ -52,10 +53,14 @@ export function MediaImage({
 export const MediaVideo = forwardRef<
   HTMLVideoElement,
   VideoHTMLAttributes<HTMLVideoElement> & { display?: ImageDisplay }
->(function MediaVideo({ src, poster, display, style, ...props }, ref) {
+>(function MediaVideo(
+  { src, poster, display, style, onLoadedMetadata, ...props },
+  ref,
+) {
   const resolved = useMediaSource(src);
   const resolvedPoster = useMediaSource(poster);
   const settings = useSiteSettings();
+  const aspect = useVideoAspect(src);
   return (
     <video
       {...props}
@@ -63,6 +68,13 @@ export const MediaVideo = forwardRef<
       style={{
         ...imageDisplayStyle(display ?? settings.imageDisplays[poster ?? ""]),
         ...style,
+        ...aspect.frameStyle,
+        aspectRatio: aspect.ratio,
+        objectFit: "contain",
+      }}
+      onLoadedMetadata={(event) => {
+        aspect.onLoadedMetadata(event);
+        onLoadedMetadata?.(event);
       }}
       src={resolved || undefined}
       poster={resolvedPoster || "/media/placeholder.svg"}

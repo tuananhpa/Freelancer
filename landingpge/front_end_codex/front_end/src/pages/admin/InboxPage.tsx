@@ -22,11 +22,7 @@ export default function InboxPage() {
     try {
       await repository.messages.reply(id, reply[id].trim());
       reload();
-      notify(
-        isMock
-          ? "Đã lưu phản hồi demo. Gửi phản hồi trực tiếp cần backend."
-          : "Đã gửi phản hồi.",
-      );
+      notify(isMock ? "Đã lưu phản hồi." : "Đã gửi phản hồi.");
     } catch (e) {
       notify((e as Error).message);
     } finally {
@@ -125,7 +121,7 @@ export default function InboxPage() {
                   onClick={() => void respond(m.id)}
                 >
                   <Send size={15} />
-                  {isMock ? "Lưu phản hồi demo" : "Gửi phản hồi"}
+                  {isMock ? "Lưu phản hồi" : "Gửi phản hồi"}
                 </button>
               </article>
             ))

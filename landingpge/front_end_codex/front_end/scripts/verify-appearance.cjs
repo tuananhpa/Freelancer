@@ -54,7 +54,7 @@ fs.mkdirSync(output, { recursive: true });
     assert.deepEqual(await auditText(page), [], "Night homepage text contrast");
     await page.screenshot({ path: path.join(output, "night-home.png") });
     await page.goto(base + "/admin/login");
-    await page.getByRole("button", { name: "Mở không gian demo" }).click();
+    await page.getByRole("button", { name: "Mở không gian quản trị" }).click();
     await page.goto(base + "/admin/settings");
     await page
       .getByRole("heading", { name: "Logo & khung ảnh", exact: true })

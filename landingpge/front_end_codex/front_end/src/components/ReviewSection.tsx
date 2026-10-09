@@ -67,8 +67,8 @@ export function ReviewSection({ productId }: { productId: string }) {
       notify(
         isMock
           ? t(
-              "Đã lưu cảm nhận trong bản demo.",
-              "Your review is saved in this demo.",
+              "Đã lưu cảm nhận. Cảm ơn bạn!",
+              "Your review is saved. Thank you!",
             )
           : t(
               "Đã gửi cảm nhận. Cảm ơn bạn!",
@@ -196,14 +196,6 @@ export function ReviewSection({ productId }: { productId: string }) {
               {t("Bỏ ảnh", "Remove image")}
             </button>
           </div>
-        )}
-        {isMock && (
-          <small className="quiet-note">
-            {t(
-              "Cảm nhận được lưu trên trình duyệt trong bản demo.",
-              "Reviews are stored in this browser demo.",
-            )}
-          </small>
         )}
         {formError && (
           <p className="form-error" role="alert">

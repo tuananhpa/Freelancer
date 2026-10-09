@@ -17,23 +17,6 @@ type Analytics = {
   series: { label: string; value: number }[];
   regions: { label: string; percent: number }[];
 };
-const sample: Analytics = {
-  totalScans: 1284,
-  series: [
-    { label: "T2", value: 36 },
-    { label: "T3", value: 52 },
-    { label: "T4", value: 43 },
-    { label: "T5", value: 68 },
-    { label: "T6", value: 57 },
-    { label: "T7", value: 91 },
-    { label: "CN", value: 74 },
-  ],
-  regions: [
-    { label: "Hưng Yên", percent: 52 },
-    { label: "Hà Nội", percent: 31 },
-    { label: "Địa phương khác", percent: 17 },
-  ],
-};
 export default function DashboardPage() {
   const { data, error, loading, reload } = useResource(async () => ({
     products: await repository.products.list(true),
@@ -41,7 +24,9 @@ export default function DashboardPage() {
     messages: await repository.messages.list(),
   }));
   const { data: analytics, error: analyticsError } = useResource(() =>
-    isMock ? Promise.resolve(sample) : request<Analytics>("/admin/analytics"),
+    isMock
+      ? Promise.resolve<Analytics | undefined>(undefined)
+      : request<Analytics>("/admin/analytics"),
   );
   if (loading) return <Loading />;
   if (error) return <ErrorState message={error} onRetry={reload} />;
@@ -58,13 +43,6 @@ export default function DashboardPage() {
           <ArrowUpRight size={17} />
         </Link>
       </div>
-      {isMock && (
-        <div className="demo-note">
-          Số lượt quét và biểu đồ bên dưới là dữ liệu minh họa; chưa theo dõi
-          người dùng thật. Sản phẩm, yêu cầu và hộp thư phản ánh dữ liệu demo
-          trong trình duyệt này.
-        </div>
-      )}
       <div className="stats-grid">
         {[
           {
@@ -79,7 +57,7 @@ export default function DashboardPage() {
             icon: ScanLine,
             label: "Lượt quét QR",
             value: analytics?.totalScans.toLocaleString("vi-VN") ?? "—",
-            note: isMock ? "Số liệu minh họa" : "Tổng theo backend",
+            note: isMock ? "Chưa có dữ liệu lượt quét" : "Tổng lượt quét",
           },
           {
             icon: HeartHandshake,
@@ -108,9 +86,6 @@ export default function DashboardPage() {
         <section className="admin-panel">
           <div className="panel-heading">
             <h2>Lượt quét theo ngày</h2>
-            <span className="status-badge">
-              {isMock ? "Minh họa" : "Backend"}
-            </span>
           </div>
           {analyticsError ? (
             <p className="form-error">{analyticsError}</p>
@@ -131,16 +106,13 @@ export default function DashboardPage() {
           )}
           <p className="quiet-note">
             {isMock
-              ? "Chưa có bộ thu thập lượt quét, thời gian hoặc vị trí thực."
+              ? "Chưa có dữ liệu lượt quét."
               : "Dữ liệu do API /admin/analytics cung cấp."}
           </p>
         </section>
         <section className="admin-panel">
           <div className="panel-heading">
             <h2>Nơi câu chuyện được mở</h2>
-            <span className="status-badge">
-              {isMock ? "Minh họa" : "Backend"}
-            </span>
           </div>
           <div className="region-list">
             {analytics?.regions.map((r) => (

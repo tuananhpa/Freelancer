@@ -8,13 +8,17 @@ import {
   Volume2,
   VolumeX,
   Maximize,
+  Minimize,
+  X,
   ArrowUpRight,
+  Download,
 } from "lucide-react";
 import type { Product } from "../types/domain";
-import { useLanguage, useNotice } from "../app/providers";
+import { useLanguage } from "../app/providers";
 import { MediaImage, useMediaSource } from "./Media";
-import { useSiteSettings } from "../app/appearance";
-import { imageDisplayStyle } from "../services/imageDisplay";
+import { useVideoAspect } from "../hooks/useVideoAspect";
+import { originalVideoUrl } from "../utils/media";
+import { usePlayerFullscreen } from "../hooks/usePlayerFullscreen";
 
 export function HeroVideoCarousel({
   products,
@@ -24,13 +28,12 @@ export function HeroVideoCarousel({
   playRequest?: number;
 }) {
   const { lang, t } = useLanguage();
-  const settings = useSiteSettings();
-  const notify = useNotice();
   const films = products.filter((p) => p.video);
   const [index, setIndex] = useState(0);
   const current = films[index % Math.max(films.length, 1)];
   const src = useMediaSource(current?.video);
-  const poster = useMediaSource(current?.image);
+  const aspect = useVideoAspect(current?.video);
+  const poster = useMediaSource(current?.gallery[0] || current?.image);
   const [muted, setMuted] = useState(true);
   const [playing, setPlaying] = useState(false);
   const [visible, setVisible] = useState(true);
@@ -43,6 +46,7 @@ export function HeroVideoCarousel({
   );
   const stage = useRef<HTMLElement>(null);
   const video = useRef<HTMLVideoElement>(null);
+  const fullscreen = usePlayerFullscreen(stage, video, src);
   const gesture = useRef<{ x: number; y: number } | undefined>(undefined);
   useEffect(() => {
     const el = stage.current;
@@ -125,8 +129,11 @@ export function HeroVideoCarousel({
     <section
       ref={stage}
       id="hero-film"
-      className="hero-visual hero-film"
+      className={`hero-visual hero-film${fullscreen.expanded ? " is-expanded" : ""}`}
+      style={aspect.frameStyle}
       aria-label={t("Phim nông sản Hưng Yên", "Hung Yen produce films")}
+      role={fullscreen.expanded ? "dialog" : "region"}
+      aria-modal={fullscreen.expanded || undefined}
       aria-roledescription={t("Bộ phim có thể chuyển", "Video carousel")}
       tabIndex={0}
       onKeyDown={(event) => {
@@ -148,14 +155,22 @@ export function HeroVideoCarousel({
           gesture.current = undefined;
         }}
       >
+        {fullscreen.active && (
+          <button
+            className="player-exit"
+            type="button"
+            onClick={fullscreen.exit}
+            aria-label={t("Đóng toàn màn hình", "Close fullscreen")}
+          >
+            <X size={22} />
+          </button>
+        )}
         {current ? (
           <video
             ref={video}
             src={src || undefined}
             poster={poster || undefined}
-            style={imageDisplayStyle(
-              current.imageDisplay ?? settings.imageDisplays[current.image],
-            )}
+            onLoadedMetadata={aspect.onLoadedMetadata}
             muted={muted}
             loop
             playsInline
@@ -176,6 +191,21 @@ export function HeroVideoCarousel({
           />
         )}
         <div className="hero-film-shade" />
+        <div className="hero-film-title">
+          <span>
+            {current?.region[lang] ||
+              t("Đất và người Hưng Yên", "Land and people of Hung Yen")}
+          </span>
+          <h2>
+            {name || t("Câu chuyện từ miền vườn", "Stories from the orchard")}
+          </h2>
+          {current && (
+            <Link to={`/p/${current.slug}`}>
+              {t("Xem câu chuyện sản phẩm", "Read the product story")}
+              <ArrowUpRight size={18} />
+            </Link>
+          )}
+        </div>
         {films.length > 1 && (
           <>
             <button
@@ -196,21 +226,6 @@ export function HeroVideoCarousel({
             </button>
           </>
         )}
-        <div className="hero-film-title">
-          <span>
-            {current?.region[lang] ||
-              t("Đất và người Hưng Yên", "Land and people of Hung Yen")}
-          </span>
-          <h2>
-            {name || t("Câu chuyện từ miền vườn", "Stories from the orchard")}
-          </h2>
-          {current && (
-            <Link to={`/p/${current.slug}`}>
-              {t("Xem câu chuyện sản phẩm", "Read the product story")}
-              <ArrowUpRight size={18} />
-            </Link>
-          )}
-        </div>
         {failed && (
           <div className="hero-film-error" role="status">
             <span>
@@ -234,6 +249,16 @@ export function HeroVideoCarousel({
       </div>
       {current && (
         <div className="hero-film-controls">
+          {originalVideoUrl(current?.video) && (
+            <a
+              href={originalVideoUrl(current?.video)}
+              download
+              aria-label={t("Tải video gốc", "Download original video")}
+              title={t("Tải video gốc", "Download original video")}
+            >
+              <Download size={19} />
+            </a>
+          )}
           <div className="hero-playback">
             <button
               type="button"
@@ -289,22 +314,18 @@ export function HeroVideoCarousel({
           <button
             type="button"
             className="hero-fullscreen"
-            aria-label={t("Xem phim toàn màn hình", "View film in fullscreen")}
-            onClick={() => {
-              if (stage.current?.requestFullscreen)
-                void stage.current
-                  .requestFullscreen()
-                  .catch(() =>
-                    notify(
-                      t(
-                        "Trình duyệt chưa cho phép mở toàn màn hình.",
-                        "Your browser could not open fullscreen.",
-                      ),
-                    ),
-                  );
-            }}
+            aria-label={
+              fullscreen.active
+                ? t("Thu nhỏ phim", "Exit fullscreen")
+                : t("Xem phim toàn màn hình", "View film in fullscreen")
+            }
+            onClick={fullscreen.toggle}
           >
-            <Maximize size={20} />
+            {fullscreen.active ? (
+              <Minimize size={20} />
+            ) : (
+              <Maximize size={20} />
+            )}
           </button>
         </div>
       )}

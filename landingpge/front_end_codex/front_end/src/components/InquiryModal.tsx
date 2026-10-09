@@ -73,8 +73,8 @@ export function InquiryModal({
           <p>
             {isMock
               ? t(
-                  "Yêu cầu được lưu trong bản demo trên trình duyệt này. Bạn có thể xem tại Không gian quản trị → Yêu cầu kết nối.",
-                  "Your inquiry is saved in this browser demo. View it in the admin workspace.",
+                  "Yêu cầu đã được lưu trên trình duyệt này. Bạn có thể xem trong Không gian quản trị → Yêu cầu kết nối.",
+                  "Your inquiry is saved in this browser. View it in the admin workspace.",
                 )
               : t(
                   "HYTales sẽ liên hệ qua số điện thoại bạn cung cấp.",
@@ -93,14 +93,6 @@ export function InquiryModal({
               "Leave your details and connect with the people behind the produce.",
             )}
           </p>
-          {isMock && (
-            <div className="demo-note">
-              {t(
-                "Bản trải nghiệm: không phát sinh đơn hàng hay thanh toán.",
-                "Demo experience: no real order or payment will be processed.",
-              )}
-            </div>
-          )}
           {type === "purchase" && (
             <div className="inquiry-selection">
               <label>

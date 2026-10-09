@@ -19,9 +19,9 @@ export const seedProducts: Product[] = [
     region: l("Phố Hiến, Hưng Yên", "Pho Hien, Hung Yen"),
     season: l("Tháng 7 – tháng 8", "July – August"),
     image: "/media/nhan-long.webp",
-    video: "/media/nhan-long.mp4",
+    video: "/hytales-videos/nhan-long.mp4",
     gallery: [1, 2, 3].map((n) => `/media/nhan-long-scene-${n}.webp`),
-    batchCode: "HY-NL-DEMO-01",
+    batchCode: "",
     story: l(
       "Trên mảnh đất từng vang danh với câu ca “Thứ nhất Kinh kỳ, thứ nhì Phố Hiến”, nhãn lồng là thức quà gắn bó qua bao thế hệ. Cây nhãn Tổ tại chùa Hiến vẫn được gìn giữ như một chứng nhân của vùng đất. Tên gọi “nhãn lồng” bắt nguồn từ những chiếc lồng tre người dân dùng để bảo vệ chùm quả quý. Cùi dày, giòn mọng, vị ngọt thanh và hương thơm tinh tế là kết tinh của phù sa sông Hồng và kinh nghiệm canh tác được trao truyền. Từ sản vật tiến vua đến món quà quê hôm nay, mỗi trái nhãn mang theo câu chuyện về đất, về người và niềm tự hào Phố Hiến.",
       "On the banks of the Red River, Pho Hien longan has been a cherished gift for generations. The ancestral longan tree at Hien Pagoda bears witness to this heritage. Its Vietnamese name recalls the bamboo cages once used to protect precious fruit. Thick, crisp flesh and a delicate sweetness reflect the river’s fertile soil and farming knowledge passed down through families. Once offered to the royal court, today each fruit carries a story of the land, its people and the pride of Pho Hien.",
@@ -105,9 +105,9 @@ export const seedProducts: Product[] = [
     region: l("Phù Cừ, Hưng Yên", "Phu Cu, Hung Yen"),
     season: l("Tháng 5 – tháng 6", "May – June"),
     image: "/media/vai-trung.webp",
-    video: "/media/vai-trung.mp4",
+    video: "/hytales-videos/vai-trung.mp4",
     gallery: [1, 2, 3].map((n) => `/media/vai-trung-scene-${n}.webp`),
-    batchCode: "HY-VT-DEMO-01",
+    batchCode: "",
     story: l(
       "Có một thức quà Hưng Yên khi chín khoác lên sắc đỏ, dáng tròn đầy như quả trứng, cùi dày và vị ngọt thanh. Tương truyền, cụ Nguyễn Văn Diệm mang giống vải quý về trồng, để người dân gọi bằng cái tên thân thuộc “vải ông Diệm”. Tại thôn Ba Đông, cây vải cổ vẫn được hậu duệ gìn giữ qua nhiều thế hệ. Qua thời gian, cây thích nghi với thổ nhưỡng ven sông Hồng và tạo nên hương vị đặc trưng. Từ một gốc vải nơi Phù Cừ, thức quả ấy đã đi đến những thị trường mới, mang theo sự chăm chút của người trồng và tinh hoa ẩm thực quê hương.",
       "Round as an egg, with a red skin and delicately sweet flesh, this lychee is a treasure of Hung Yen. Local tradition credits Nguyen Van Diem with bringing the variety home. In Ba Dong village, his descendants have preserved the ancestral tree across generations. The variety gradually adapted to the soils near the Red River, developing its distinctive taste. From a single tree in Phu Cu, this fruit has reached new markets, carrying the care of its growers and a piece of Vietnamese culinary heritage.",
@@ -169,8 +169,8 @@ export const seedProducts: Product[] = [
       {
         question: l("Sản phẩm có OCOP không?", "Is this batch OCOP certified?"),
         answer: l(
-          "Kịch bản có nhắc đến OCOP 4 sao của vải trứng Hưng Yên. Trang mẫu chưa có hồ sơ chứng nhận của một lô cụ thể; hãy yêu cầu nhà vườn cung cấp trước khi mua.",
-          "The supplied story mentions the regional product’s four-star OCOP recognition. This demo has no certificate for a specific batch; request it from the grower.",
+          "Kịch bản có nhắc đến OCOP 4 sao của vải trứng Hưng Yên. Hãy yêu cầu nhà vườn cung cấp hồ sơ chứng nhận của lô hàng trước khi mua.",
+          "The supplied story mentions the regional product’s four-star OCOP recognition. Request the batch certificate from the grower before purchasing.",
         ),
       },
     ],
@@ -188,9 +188,9 @@ export const seedProducts: Product[] = [
     region: l("Văn Giang, Hưng Yên", "Van Giang, Hung Yen"),
     season: l("Mùa cuối năm", "End-of-year season"),
     image: "/media/cam-duong-canh.webp",
-    video: "/media/cam-duong-canh.mp4",
+    video: "/hytales-videos/cam-duong-canh.mp4",
     gallery: [1, 2, 3].map((n) => `/media/cam-duong-canh-scene-${n}.webp`),
-    batchCode: "HY-CC-DEMO-01",
+    batchCode: "",
     story: l(
       "Mỗi độ cuối năm, Hưng Yên lại khoác lên sắc vàng của những vườn cam Đường Canh vào mùa thu hoạch. Giữa vòm lá xanh, từng chùm quả trĩu cành mang theo không khí rộn ràng của ngày Tết. Trong văn hóa Việt, sắc vàng gửi gắm ước nguyện về phú quý, bình an và đủ đầy. Thức quả hiện diện trên mâm ngũ quả, trong lễ vật dâng gia tiên và trong những món quà đoàn viên. Đất và khí hậu thuận hòa cùng đôi bàn tay người trồng tạo nên trái tròn đầy, vỏ mỏng và vị ngọt đậm. Mỗi mùa quả không chỉ mang niềm vui thu hoạch mà còn gìn giữ một sắc màu của Tết quê hương.",
       "At the end of the year, Hung Yen’s Duong Canh orchards turn golden. Heavy branches carry the joyful feeling of Tet and family reunions. In Vietnamese culture, this golden colour expresses wishes for prosperity, peace and abundance. The fruit appears on traditional offering trays and is shared as a gift. Favourable soil and climate, together with the growers’ care, give it a thin skin and rich sweetness. Each harvest brings both joy to its farmers and a familiar colour of the Vietnamese New Year.",
@@ -258,8 +258,8 @@ export const seedProducts: Product[] = [
           "Can I request it as a gift?",
         ),
         answer: l(
-          "Bạn có thể gửi yêu cầu quà tặng bằng form. Đây là bản demo; chưa có giao dịch mua hàng hoặc thanh toán thật.",
-          "You can send a gift inquiry using the form. This demo does not process real orders or payments.",
+          "Bạn có thể chọn sản phẩm, số lượng và đơn vị rồi gửi yêu cầu quà tặng bằng form.",
+          "Select a product, quantity and unit, then submit a gift inquiry using the form.",
         ),
       },
     ],

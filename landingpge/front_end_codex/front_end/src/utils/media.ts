@@ -5,3 +5,11 @@ export function isReviewImage(url: string) {
     /^\/(?!\/)/.test(url)
   );
 }
+export function originalVideoUrl(source?: string) {
+  return source &&
+    /^\/(media|hytales-videos)\/(nhan-long|vai-trung|cam-duong-canh)\.mp4$/.test(
+      source,
+    )
+    ? source.replace(/^\/media\//, "/hytales-videos/")
+    : undefined;
+}

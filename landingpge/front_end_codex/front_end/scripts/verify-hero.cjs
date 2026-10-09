@@ -26,7 +26,7 @@ const loaded = (video) => video.waitFor({ state: "visible" });
     const errors = [];
     page.on("pageerror", (e) => errors.push(e.message));
     await page.goto(base);
-    await page.waitForLoadState("networkidle");
+    await page.waitForLoadState("domcontentloaded");
     assert.equal(
       await page.locator(".floating-passport").count(),
       0,
@@ -169,7 +169,7 @@ const loaded = (video) => video.waitFor({ state: "visible" });
       }
     }
     await page.goto(base + "/admin/login");
-    await page.getByRole("button", { name: "Mở không gian demo" }).click();
+    await page.getByRole("button", { name: "Mở không gian quản trị" }).click();
     await page.setViewportSize({ width: 1440, height: 1000 });
     assert.ok(
       await page

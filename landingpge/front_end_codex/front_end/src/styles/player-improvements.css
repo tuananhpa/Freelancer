@@ -1,0 +1,241 @@
+:root {
+  --site-header-height: 84px;
+}
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  height: var(--site-header-height);
+  background: var(--surface);
+  box-shadow: 0 3px 14px #10221808;
+}
+.product-section-nav {
+  top: var(--site-header-height);
+}
+html {
+  scroll-padding-top: calc(var(--site-header-height) + 80px);
+}
+.hero-film-stage > video {
+  aspect-ratio: var(--video-ratio, 9 / 16);
+}
+.hero-film-shade {
+  z-index: 2;
+}
+.hero-film-arrow,
+.hero-film-error,
+.hero-film-title {
+  z-index: 3;
+}
+.player-exit {
+  position: absolute;
+  z-index: 5;
+  top: max(14px, env(safe-area-inset-top));
+  right: max(14px, env(safe-area-inset-right));
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #ffffff88;
+  background: #102218df;
+  color: white;
+  border-radius: 50%;
+}
+.hero-visual.hero-film:is(:fullscreen, .is-expanded) {
+  width: 100%;
+  max-width: none;
+  height: 100dvh;
+  border: 0;
+  border-radius: 0;
+  background: #102218;
+}
+.hero-visual.hero-film.is-expanded {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  margin: 0;
+}
+.hero-film:is(:fullscreen, .is-expanded) .hero-film-stage {
+  flex: 1;
+  aspect-ratio: auto;
+  height: 0;
+  min-height: 0;
+}
+.hero-film:is(:fullscreen, .is-expanded) .hero-film-stage > video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.hero-film:is(:fullscreen, .is-expanded) .hero-film-title {
+  display: none;
+}
+.hero-film:is(:fullscreen, .is-expanded) .hero-film-controls {
+  flex-shrink: 0;
+  padding-bottom: max(10px, env(safe-area-inset-bottom));
+}
+.product-video-overlay .glass-button {
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  display: inline-grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+.timeline-images {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  padding-block: 20px 3px;
+}
+.timeline-images > button {
+  padding: 0;
+  background: var(--wash);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  flex: 0 0 min(240px, 70vw);
+  height: 180px;
+}
+.timeline-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.timeline-detail > div {
+  min-width: 0;
+  width: 100%;
+}
+.timeline-detail {
+  align-items: flex-start;
+}
+.timeline-detail .timeline-images-hint {
+  font-size: 15px;
+  color: var(--ink);
+  margin-top: 12px;
+}
+.timeline-images-editor {
+  margin-top: 24px;
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
+}
+.timeline-images-editor .panel-heading {
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.timeline-image-editor {
+  margin-block: 16px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+.timeline-images-fields {
+  margin: 0;
+  padding: 0;
+  min-inline-size: 0;
+  border: 0;
+}
+.journey-lightbox-image {
+  max-height: 74dvh;
+  width: 100%;
+  object-fit: contain;
+}
+.admin-sidebar {
+  width: var(--admin-sidebar-width, 270px);
+  padding-top: 70px;
+}
+.admin-main {
+  margin-left: var(--admin-sidebar-width, 270px);
+  min-width: 0;
+}
+.admin-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 45;
+}
+.sidebar-collapse {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+}
+.admin-sidebar nav svg,
+.admin-public-link svg {
+  flex-shrink: 0;
+}
+.sidebar-resizer {
+  position: fixed;
+  z-index: 41;
+  top: 0;
+  bottom: 0;
+  left: calc(var(--admin-sidebar-width) - 4px);
+  width: 8px;
+  cursor: col-resize;
+  touch-action: none;
+}
+.sidebar-resizer:hover,
+.sidebar-resizer:focus-visible {
+  background: var(--leaf);
+}
+.sidebar-collapsed .admin-sidebar {
+  padding-inline: 12px;
+}
+.sidebar-collapsed .admin-sidebar > .brand {
+  padding: 0 6px;
+}
+.sidebar-collapsed .admin-sidebar .brand > span:last-child,
+.sidebar-collapsed .admin-sidebar .workspace-label,
+.sidebar-collapsed .admin-sidebar .sidebar-note,
+.sidebar-collapsed .admin-sidebar nav a > span,
+.sidebar-collapsed .admin-public-link > span {
+  display: none;
+}
+.sidebar-collapsed .admin-sidebar nav {
+  margin-top: 28px;
+}
+.sidebar-collapsed .admin-sidebar nav a {
+  justify-content: center;
+  padding-inline: 0;
+}
+.admin-drawer-backdrop {
+  display: none;
+}
+@media (max-width: 1100px) {
+  :root {
+    --site-header-height: 80px;
+  }
+}
+@media (max-width: 760px) {
+  .admin-sidebar,
+  .sidebar-collapsed .admin-sidebar {
+    width: min(300px, 85vw);
+    left: -310px;
+    padding: 94px 22px 30px;
+  }
+  .admin-sidebar.open {
+    left: 0;
+  }
+  .admin-main {
+    margin-left: 0;
+  }
+  .sidebar-collapse,
+  .sidebar-resizer {
+    display: none;
+  }
+  .admin-drawer-backdrop {
+    display: block;
+    position: fixed;
+    inset: 72px 0 0 min(300px, 85vw);
+    z-index: 39;
+    border: 0;
+    background: #10221877;
+  }
+  .sidebar-collapsed .admin-sidebar .brand > span:last-child,
+  .sidebar-collapsed .admin-sidebar .workspace-label,
+  .sidebar-collapsed .admin-sidebar .sidebar-note,
+  .sidebar-collapsed .admin-sidebar nav a > span,
+  .sidebar-collapsed .admin-public-link > span {
+    display: block;
+  }
+  .sidebar-collapsed .admin-sidebar nav a {
+    justify-content: flex-start;
+    padding-inline: 14px;
+  }
+}

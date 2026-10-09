@@ -31,6 +31,7 @@ export type TimelineEvent = {
   title: Localized;
   detail: Localized;
   date: string;
+  images?: ManagedImage[];
 };
 export type Product = {
   id: string;

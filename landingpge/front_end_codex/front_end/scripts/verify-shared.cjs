@@ -74,7 +74,7 @@ const base = (
     await page.waitForURL("**/p/nhan-long-pho-hien");
     await page.goto(base + "/admin/login");
     await page
-      .getByRole("button", { name: "Mở không gian demo", exact: true })
+      .getByRole("button", { name: "Mở không gian quản trị", exact: true })
       .click();
     await page.goto(base + "/admin/settings");
     await page

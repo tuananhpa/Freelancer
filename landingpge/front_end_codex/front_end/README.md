@@ -55,7 +55,7 @@ front_end_codex/
 │   └── PLAN.md                # Bàn giao thiết kế backend, chưa có code
 └── front_end/
     ├── public/
-    │   └── media/             # WebP, khung hình và video preview từ kho HYTales
+    │   └── media/             # WebP và khung hình; không chứa video
     ├── src/
     │   ├── app/               # Router, ngôn ngữ, phiên admin
     │   ├── components/        # Layout, modal, form, chat, đánh giá
@@ -81,8 +81,16 @@ Admin backend cần kiểm tra session/role cho mọi request. CORS có credenti
 
 ## Media và nội dung
 
-3 video nguồn 200–270 MB được cắt thành preview 30 giây, nén H.264/AAC 720p, faststart. Ảnh WebP và 3 khung hình mỗi phim. Hero trang đầu phát phim trực tiếp, mặc định tắt tiếng; chuyển bằng mũi tên, dấu chọn phim, phím trái/phải hoặc vuốt. Điều khiển phát/tạm dừng/âm thanh/toàn màn hình nằm riêng với link câu chuyện. Không tự đổi phim; trạng thái tạm dừng giữ khi chuyển. Phim tạm dừng khi cuộn ra ngoài màn hình hoặc ẩn tab. Chế độ giảm chuyển động/tiết kiệm dữ liệu chờ người xem bấm phát. Kiểm tra luồng này bằng `npm run test:hero`. Hero sản phẩm cũng tự phát mute khi cho phép. Với media gốc, có thể xuất bản lại bằng `python scripts/prepare_media.py` (cần Pillow và ffmpeg).
+Nguồn video duy nhất là `../../HYTales/Video` tính từ frontend. Vite đọc trực tiếp ba file gốc tại URL `/hytales-videos/{nhan-long|vai-trung|cam-duong-canh}.mp4`, có hỗ trợ HTTP Range để tua/phát video. File gốc không bị sửa, chuyển mã hay cắt: HEVC 1080 × 1920, nhãn 125,225 giây; vải 90,465 giây; cam 93,460 giây. Phát và tải dùng cùng một URL/file. Các bản trùng trong `public/media` đã bỏ; dữ liệu trình duyệt dùng đường dẫn mặc định cũ được ánh xạ sang URL mới, video admin tự nhập/tải lên giữ nguyên. Khi build, plugin đóng gói đúng ba file nguồn vào `dist/hytales-videos` để bản build hoạt động độc lập; đây là đầu ra build (gitignored), không phải kho nguồn thứ hai. Checkout Git phải có thư mục HYTales/Video đầy đủ (pull LFS nếu repository dùng LFS). `python scripts/prepare_media.py` chỉ chuẩn bị ảnh/thumbnail, không tạo bản video riêng. HEVC cần kiểm tra trên các trình duyệt/thiết bị mục tiêu; hiện đã kiểm tra phát bằng Chrome Windows.
 
-Chưa có thông tin lô thực, ngày SX/HSD hoặc hồ sơ chứng nhận, nên dùng mã có `DEMO` và trạng thái chờ cập nhật. Không tạo huy hiệu OCOP/VietGAP giả. Biểu đồ lượt quét ghi rõ minh họa. Các con số dự báo tài chính trong DOCX không được trình bày như thành tích đã đạt. Chỉ hỗ trợ VI/EN ở trải nghiệm công khai; các ngôn ngữ khác là giai đoạn nối backend.
+Khung video đọc kích thước thật từ metadata: video dọc/ngang đều giữ tỷ lệ và dùng contain; khung tự tính chiều cao. Player đầu trang/sản phẩm giới hạn kích thước hiển thị để vừa bố cục, không giới hạn thời lượng. Modal và fullscreen giữ đủ khung hình. Ảnh vẫn có chỉnh fit/vị trí riêng. `npm run test:video-aspect` kiểm tra tỷ lệ/thời lượng/độ phân giải và phần lời kể đã được bỏ khỏi mọi trang sản phẩm.
+
+Hero phát trực tiếp, mặc định tắt tiếng; chuyển bằng mũi tên/dấu chọn/phím/vuốt. Không tự đổi phim, giữ lựa chọn tạm dừng và dừng khi ngoài màn hình/ẩn tab. Giảm chuyển động/tiết kiệm dữ liệu chờ bấm phát. Dùng `test:hero` để kiểm tra điều khiển. File phát đầy đủ lớn hơn preview trước đây; chưa có adaptive bitrate streaming hoặc phép đo mạng 4G thực tế.
+
+Hero đã khôi phục bố cục khung video gọn theo tỷ lệ nguồn, vùng trồng/tên sản phẩm/link câu chuyện đặt trên video và caption nhỏ bên trái theo ảnh được chủ dự án chọn. Nút fullscreen đổi sang thu nhỏ khi mở, có nút đóng ở góc; hỗ trợ API video Safari và mở rộng trong trang khi API native không khả dụng. Video sản phẩm bật/tắt tiếng bằng icon có nhãn trợ năng. Header luôn bám khi cuộn; menu nội dung sản phẩm nằm dưới header. Sidebar admin có nút thu gọn và tay kéo cạnh phải (220–420px, có phím mũi tên/Home/End), nhớ lựa chọn trên browser; điện thoại dùng menu bật/tắt.
+
+Admin → Sản phẩm & câu chuyện → Sửa sản phẩm → Hành trình → **Thêm ảnh cho mốc**. Có thể tải ảnh hoặc chọn thư viện, thay/gỡ, chỉnh fit và vị trí. Mỗi mốc có nhiều ảnh; public chỉ hiện ảnh của mốc đang chọn, bấm ảnh mở toàn bộ khung hình. Gỡ ảnh khỏi mốc giữ file trong thư viện. `npm run test:players` kiểm tra thao tác mới; iOS được kiểm thử bằng mô phỏng API, vẫn cần kiểm thử Safari trên iPhone/iPad thật.
+
+Giao diện đã bỏ nhãn demo/bản trải nghiệm, ghi chú minh họa cạnh hành trình và phần Đọc lời kể trong phim. Mã lô seed để trống, ngày SX/HSD và chứng nhận chưa có vẫn chờ cập nhật; không tạo dữ liệu xác minh giả. Dashboard không còn lượt quét/biểu đồ mẫu, hiển thị chưa có dữ liệu khi chưa nối analytics. Flag demo nội bộ và storage key cũ giữ để tương thích, không hiển thị công khai. Bỏ nhãn không thay thế backend/xác thực server; dữ liệu hiện vẫn riêng từng trình duyệt. Dự báo tài chính trong DOCX không phải thành tích đã đạt.
 
 QR là mã có thể quét thật, không phải hình minh họa. Xuất PNG 1200 px, SVG vector hoặc PDF; thêm và xóa logo. Đích đến có danh sách sản phẩm và ô nhập liên kết riêng. Bấm Áp dụng đích đến để lưu; QR `/q/:id` giữ nguyên. Với đích khác website, trang quét hiển thị tên miền trước khi người xem mở liên kết. Đường dẫn hiện tại trên localhost chỉ có tác dụng trên máy đang chạy; cấu hình domain đã deploy trước khi in/đưa cho người khác quét. Logo giữ kích thước nhỏ và mức sửa lỗi H; cần thử quét bản in trước khi sản xuất tem.

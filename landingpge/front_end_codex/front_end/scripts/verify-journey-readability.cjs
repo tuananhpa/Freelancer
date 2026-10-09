@@ -152,7 +152,7 @@ async function checkTimeline(page, count) {
       path: path.join(output, "journey-four-desktop.png"),
     });
     await page.goto(base + "/admin/login");
-    await page.getByRole("button", { name: "Mở không gian demo" }).click();
+    await page.getByRole("button", { name: "Mở không gian quản trị" }).click();
     const edit = async () => {
       await page.goto(base + "/admin/products");
       await page
