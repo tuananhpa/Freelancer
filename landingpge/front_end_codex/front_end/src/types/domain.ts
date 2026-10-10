@@ -45,6 +45,7 @@ export type Product = {
   imageDisplay?: ImageDisplay;
   galleryDisplays?: Record<string, ImageDisplay>;
   video: string;
+  videoEn?: string;
   gallery: string[];
   story: Localized;
   transcript: string;
@@ -100,6 +101,8 @@ export type Settings = {
   socialWidgetEnabled: boolean;
   chatGreeting: Localized;
   quickReplies: QuickReply[];
+  homeVideo?: string;
+  homeVideoEn?: string;
   brandLogo?: ManagedImage;
   brandName?: string;
   brandTagline?: string;

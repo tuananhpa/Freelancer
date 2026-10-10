@@ -38,6 +38,8 @@ export function normalizeSettings(value: Partial<Settings>): Settings {
     socialWidgetEnabled: value.socialWidgetEnabled ?? true,
     chatGreeting: value.chatGreeting ?? structuredClone(defaultChatGreeting),
     quickReplies: value.quickReplies ?? structuredClone(defaultQuickReplies),
+    homeVideo: value.homeVideo ?? "",
+    homeVideoEn: value.homeVideoEn ?? "",
     brandLogo: value.brandLogo,
     brandName: value.brandName ?? "HYTales",
     brandTagline: value.brandTagline ?? "Chuyện quê trong từng thức quà",

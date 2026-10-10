@@ -96,3 +96,11 @@ Admin → Sản phẩm & câu chuyện → Sửa sản phẩm → Hành trình �
 Giao diện đã bỏ nhãn demo/bản trải nghiệm, ghi chú minh họa cạnh hành trình và phần Đọc lời kể trong phim. Mã lô seed để trống, ngày SX/HSD và chứng nhận chưa có vẫn chờ cập nhật; không tạo dữ liệu xác minh giả. Dashboard không còn lượt quét/biểu đồ mẫu, hiển thị chưa có dữ liệu khi chưa nối analytics. Flag demo nội bộ và storage key cũ giữ để tương thích, không hiển thị công khai. Bỏ nhãn không thay thế backend/xác thực server; dữ liệu hiện vẫn riêng từng trình duyệt. Dự báo tài chính trong DOCX không phải thành tích đã đạt.
 
 QR là mã có thể quét thật, không phải hình minh họa. Xuất PNG 1200 px, SVG vector hoặc PDF; thêm và xóa logo. Đích đến có danh sách sản phẩm và ô nhập liên kết riêng. Bấm Áp dụng đích đến để lưu; QR `/q/:id` giữ nguyên. Với đích khác website, trang quét hiển thị tên miền trước khi người xem mở liên kết. Đường dẫn hiện tại trên localhost chỉ có tác dụng trên máy đang chạy; cấu hình domain đã deploy trước khi in/đưa cho người khác quét. Logo giữ kích thước nhỏ và mức sửa lỗi H; cần thử quét bản in trước khi sản xuất tem.
+
+
+### Video trang chủ và ngôn ngữ
+
+Video nền trang chủ quản lý riêng trong **Admin → Thiết lập → Video trang chủ** (VI/EN); để trống sẽ hiện ảnh nền, không lấy video sản phẩm. Video sản phẩm quản lý trong **Sản phẩm → Ảnh & video** (VI/EN). EN dùng bản EN nếu có, còn thiếu thì dùng VI. Tải lên/chọn/thay/xóa rồi bấm **Lưu thiết lập** hoặc **Lưu sản phẩm**. Xóa ở đây chỉ bỏ liên kết video, giữ file trong thư viện để không ảnh hưởng nơi khác. Hiện dữ liệu/file admin vẫn lưu riêng theo trình duyệt và origin, cần backend để chia sẻ cho tất cả người xem.
+
+
+Video nền trang chủ giữ nguyên khung hero, hiển thị đủ hình bằng `contain`; phần dư dùng canvas blur lấy từ cùng video đang phát (tối đa 480 px, khoảng 8 khung/giây), không tải/giải mã thêm video thứ hai. Nguồn video chính không thay codec, độ phân giải hoặc thời lượng. Kiểm tra: `node scripts/verify-hero-contain.cjs` (cần ffmpeg trên PATH; tạo clip thử trong test-results, kiểm tra góc hình, blur và layout 1440/390 px). Có thể đặt TEST_URL để kiểm tra tunnel.

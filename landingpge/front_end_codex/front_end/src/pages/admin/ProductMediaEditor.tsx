@@ -1,96 +1,12 @@
+import { AssetPicker } from "./AssetPicker";
+export { AssetPicker } from "./AssetPicker";
+import { VideoSourceEditor } from "./VideoSourceEditor";
 import { useState, useRef } from "react";
-import { Images, Upload, Trash2, ImagePlus, Film, Check } from "lucide-react";
+import { Images, Upload, Trash2, ImagePlus } from "lucide-react";
 import type { Product } from "../../types/domain";
 import { mediaLibrary, type MediaAsset } from "../../services/mediaLibrary";
-import { useResource } from "../../hooks/useResource";
-import { Modal, Loading, ErrorState } from "../../components/common";
 import { ImageFramingControls } from "../../components/ImageFramingControls";
-import { MediaImage, MediaVideo } from "../../components/Media";
-export function AssetPicker({
-  kind,
-  multiple,
-  onSelect,
-  onClose,
-}: {
-  kind: "image" | "video";
-  multiple?: boolean;
-  onSelect: (assets: MediaAsset[]) => void;
-  onClose: () => void;
-}) {
-  const { data, loading, error, reload } = useResource(() =>
-    mediaLibrary.list(),
-  );
-  const [selected, setSelected] = useState<string[]>([]);
-  const assets = data?.filter((a) => a.kind === kind) ?? [];
-  return (
-    <Modal
-      title={
-        kind === "image" ? "Chọn ảnh từ thư viện" : "Chọn video từ thư viện"
-      }
-      wide
-      onClose={onClose}
-    >
-      {loading ? (
-        <Loading />
-      ) : error ? (
-        <ErrorState message={error} onRetry={reload} />
-      ) : (
-        <>
-          <div className="media-library-grid">
-            {assets.map((asset) => (
-              <button
-                type="button"
-                key={asset.id}
-                className={`media-library-item ${selected.includes(asset.id) ? "selected" : ""}`}
-                onClick={() =>
-                  setSelected((prev) =>
-                    multiple
-                      ? prev.includes(asset.id)
-                        ? prev.filter((x) => x !== asset.id)
-                        : [...prev, asset.id]
-                      : [asset.id],
-                  )
-                }
-                aria-pressed={selected.includes(asset.id)}
-              >
-                {asset.kind === "image" || asset.poster ? (
-                  <MediaImage src={asset.poster || asset.url} alt="" />
-                ) : (
-                  <MediaVideo src={asset.url} preload="metadata" muted />
-                )}
-                <span>{asset.name}</span>
-                {selected.includes(asset.id) && (
-                  <Check className="media-check" size={18} />
-                )}
-              </button>
-            ))}
-          </div>
-          {!assets.length && (
-            <p>Thư viện chưa có file phù hợp. Bạn có thể tải từ máy.</p>
-          )}
-          <div className="media-picker-footer">
-            <span>{selected.length} file được chọn</span>
-            <button
-              type="button"
-              className="button"
-              disabled={!selected.length}
-              onClick={() => {
-                onSelect(assets.filter((a) => selected.includes(a.id)));
-                onClose();
-              }}
-            >
-              {multiple
-                ? "Thêm ảnh đã chọn"
-                : kind === "image"
-                  ? "Dùng ảnh này"
-                  : "Dùng video này"}
-            </button>
-          </div>
-        </>
-      )}
-    </Modal>
-  );
-}
+import { MediaImage } from "../../components/Media";
 export function ProductMediaEditor({
   product,
   onChange,
@@ -210,68 +126,22 @@ export function ProductMediaEditor({
           </div>
         )}
       </section>
-      <section className="media-editor-section">
-        <div className="panel-heading">
-          <h3>
-            <Film size={18} />
-            Video câu chuyện
-          </h3>
-          {product.video && (
-            <button
-              className="button button-danger button-small"
-              type="button"
-              disabled={uploading}
-              onClick={() => onChange({ video: "" })}
-            >
-              <Trash2 size={15} />
-              Xóa video
-            </button>
-          )}
-        </div>
-        {product.video ? (
-          <MediaVideo
-            className="editor-video-preview"
-            display={product.imageDisplay}
-            src={product.video}
-            poster={product.image}
-            controls
-            preload="metadata"
-          />
-        ) : (
-          <div className="media-empty">
-            <Film size={27} />
-            Chưa có video câu chuyện
-          </div>
-        )}
-        <div className="media-actions">
-          <button
-            className="button button-outline button-small"
-            type="button"
-            disabled={uploading}
-            onClick={() => setPicker("video")}
-          >
-            <Images size={16} />
-            Chọn video từ thư viện
-          </button>
-          <button
-            className="button button-small"
-            type="button"
-            disabled={uploading}
-            onClick={() => videoInput.current?.click()}
-          >
-            <Upload size={16} />
-            Tải video từ máy
-          </button>
-          <input
-            ref={videoInput}
-            type="file"
-            accept="video/mp4,video/webm"
-            hidden
-            aria-label="Tải video câu chuyện"
-            onChange={(e) => void upload(e.target.files, "video")}
-          />
-        </div>
-      </section>
+      <VideoSourceEditor
+        label="Video sản phẩm (VI)"
+        value={product.video}
+        poster={product.image}
+        onChange={(video) => onChange({ video })}
+      />
+      <VideoSourceEditor
+        label="Video sản phẩm (EN)"
+        value={product.videoEn}
+        poster={product.image}
+        onChange={(videoEn) => onChange({ videoEn })}
+      />
+      <p className="quiet-note">
+        Chưa có video EN thì dùng video VI. Bấm Lưu sản phẩm để áp dụng thay
+        đổi.
+      </p>
       <section className="media-editor-section">
         <div className="panel-heading">
           <h3>

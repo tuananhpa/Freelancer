@@ -64,3 +64,6 @@ Theme là tùy chọn thiết bị trong `localStorage['hytales.theme']`, không
 ## Deployment
 
 Các route `/p/*`, `/q/*` và `/admin/*` fallback về index.html. Thiết lập API base URL ở build time. Media dùng CDN và các phiên bản adaptive để hướng tới mục tiêu tải dưới 2 giây mạng 4G; chưa đo và chưa bảo đảm SLA này ở bản local.
+
+
+Video VI/EN: `Product.video` là nguồn VI (tương thích dữ liệu cũ), `Product.videoEn` là nguồn EN tùy chọn. `Settings.homeVideo` và `Settings.homeVideoEn` là nguồn riêng cho video nền trang chủ, mặc định rỗng. Admin lưu/xóa bằng PUT sản phẩm/thiết lập, backend cần chuẩn hóa chuỗi rỗng/null và trả playable URL. EN thiếu thì dùng VI, VI không dùng EN. Không tự gán video sản phẩm cho trang chủ. Cửa sổ xem phim cũng chọn lại nguồn khi đổi ngôn ngữ. Xóa liên kết không tự xóa object R2; kiểm tra tất cả tham chiếu trước khi xóa file.

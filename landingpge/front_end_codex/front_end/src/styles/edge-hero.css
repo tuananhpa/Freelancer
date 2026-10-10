@@ -32,8 +32,14 @@
   aspect-ratio: auto;
   flex: 1;
 }
-.home-hero-edge .hero-film:not(.is-expanded):not(:fullscreen) .hero-film-stage > video,
-.home-hero-edge .hero-film:not(.is-expanded):not(:fullscreen) .hero-film-stage > img {
+.home-hero-edge
+  .hero-film:not(.is-expanded):not(:fullscreen)
+  .hero-film-stage
+  > video,
+.home-hero-edge
+  .hero-film:not(.is-expanded):not(:fullscreen)
+  .hero-film-stage
+  > img {
   width: 100%;
   height: 100%;
   aspect-ratio: auto;
@@ -46,7 +52,9 @@
   left: max(24px, calc((100% - 1240px) / 2));
   bottom: 104px;
 }
-.home-hero-edge .hero-film:not(.is-expanded):not(:fullscreen) .hero-film-controls {
+.home-hero-edge
+  .hero-film:not(.is-expanded):not(:fullscreen)
+  .hero-film-controls {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -70,8 +78,33 @@
   .home-hero-edge .hero-copy h1 {
     font-size: clamp(36px, 10vw, 48px);
   }
-  .home-hero-edge .hero-film:not(.is-expanded):not(:fullscreen) .hero-film-title {
+  .home-hero-edge
+    .hero-film:not(.is-expanded):not(:fullscreen)
+    .hero-film-title {
     left: 20px;
     bottom: 100px;
   }
+}
+
+/* Keep the entire video visible within the existing hero frame. */
+.hero-film-stage > .home-video-backdrop {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(22px) brightness(0.68);
+  transform: scale(1.08);
+  pointer-events: none;
+  z-index: 0;
+}
+.home-hero-edge #hero-film .hero-film-stage > video.home-video-foreground {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+  object-fit: contain;
+  object-position: center;
+  background: transparent;
 }

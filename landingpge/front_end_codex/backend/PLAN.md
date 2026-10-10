@@ -458,3 +458,14 @@ AI tiếp theo có thể bắt đầu local từ bước1. Không cần lịch s
 | Quy mô, quota uploads và thiết bị/nhà mạng test4G?               | Dataset/load/profile mục9                                            | Đo và điều chỉnh theo usage thật; không tuyên bố SLA2s chỉ từ stack.                                                                         |
 
 Các quyết định còn thiếu không ngăn viết backend local và test với dữ liệu fixture; chúng ngăn bật nghiệp vụ/publication/production tương ứng khi chưa xác nhận. AI tiếp theo nên ghi decision log, cập nhật tài liệu này khi thay contract, và báo rõ những tiêu chí nào đã được đo thay vì chỉ liệt kê công nghệ đã dùng.
+
+
+## Cập nhật frontend: video độc lập và VI/EN (2026-10-10)
+
+- Đã xác định từ frontend: Product.video vẫn là nguồn VI cũ, thêm Product.videoEn?: string. Settings.homeVideo?: string và homeVideoEn?: string là hai nguồn riêng của video nền trang chủ. Mặc định cả hai rỗng, không lấy video sản phẩm.
+- Đổi EN chọn nguồn EN khi có, nếu EN rỗng thì dùng VI; VI không dùng nguồn EN. Quy tắc áp dụng video nền, video đầu trang sản phẩm và cửa sổ xem phim/bộ sưu tập phim. Không có VI/EN thì hiện ảnh, không có nút phát.
+- Admin: Thiết lập → Video trang chủ (VI/EN); Sản phẩm → Ảnh & video → Video sản phẩm (VI/EN). Mỗi ô hỗ trợ upload, chọn từ thư viện, thay, xóa liên kết và lưu. Xóa liên kết không xóa object dùng chung khỏi kho media.
+- Hiện chưa có file EN hoặc file trang chủ được cung cấp; không gán nhầm video VI thành bản EN. Upload frontend hiện lưu IndexedDB theo trình duyệt/origin; cần backend để đồng bộ cho mọi người.
+- Đề xuất backend: products.video_media_id (VI) và video_en_media_id nullable FK media.id; site_settings.home_video_media_id và home_video_en_media_id nullable FK media.id. D1 chỉ lưu metadata/object key, file R2. DTO phải trả video/videoEn/homeVideo/homeVideoEn là playable URL đã kiểm tra quyền, không local-media:. Hỗ trợ xóa bằng chuỗi rỗng/null được chuẩn hóa thống nhất, không tự điền lại khi admin xóa.
+- API quản trị PUT sản phẩm và PUT/PATCH thiết lập cần nhận cả hai nguồn; công khai trả nguồn VI/EN có quyền public. Upload tái dùng media API, chọn file nội bộ làm video public phải bị từ chối hoặc có luồng đổi visibility được xác nhận. Xóa object media cần kiểm tra tham chiếu ở cả bốn trường, không làm hỏng nguồn VI khi xóa nguồn EN. Cache phải được invalidate sau lưu.
+- Kiểm tra: VI → EN → VI đổi nguồn, EN thiếu fallback VI, EN bị xóa fallback VI, trang chủ không kế thừa sản phẩm, lưu/reload giữ đúng nguồn, video trong modal đổi ngay theo ngôn ngữ, mobile không tràn ngang. Không thay đổi codec/file gốc tự động trong frontend.

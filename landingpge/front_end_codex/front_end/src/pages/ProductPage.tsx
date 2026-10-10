@@ -28,6 +28,8 @@ import { Loading, ErrorState, NotFound, Modal } from "../components/common";
 import { InquiryModal } from "../components/InquiryModal";
 import { ReviewSection } from "../components/ReviewSection";
 import { useVideoAspect } from "../hooks/useVideoAspect";
+import type { Product } from "../types/domain";
+import { localizedVideo } from "../services/localizedVideo";
 import { formatUnitPrice } from "../services/productPrice";
 export default function ProductPage() {
   const { slug = "" } = useParams();
@@ -40,17 +42,14 @@ export default function ProductPage() {
   } = useResource(() => repository.products.get(slug), [slug]);
   const { data: products } = useResource(() => repository.products.list());
   const { data: settings } = useResource(() => repository.settings.get());
-  const aspect = useVideoAspect(product?.video);
+  const productVideo = localizedVideo(product?.video, product?.videoEn, lang);
+  const aspect = useVideoAspect(productVideo);
   const [muted, setMuted] = useState(true);
   const [playing, setPlaying] = useState(false);
   const [step, setStep] = useState(0);
   const [photo, setPhoto] = useState<number>();
   const [journeyPhoto, setJourneyPhoto] = useState<string>();
-  const [film, setFilm] = useState<{
-    src: string;
-    name: string;
-    poster: string;
-  }>();
+  const [film, setFilm] = useState<Product>();
   const [inquiry, setInquiry] = useState(false);
   const video = useRef<HTMLVideoElement>(null);
   const carousel = useRef<HTMLDivElement>(null);
@@ -112,13 +111,14 @@ export default function ProductPage() {
         <section className="container product-hero">
           <div
             className="product-hero-media"
-            style={p.video ? aspect.frameStyle : undefined}
+            style={productVideo ? aspect.frameStyle : undefined}
           >
-            {p.video ? (
+            {productVideo ? (
               <MediaVideo
                 ref={video}
+                key={productVideo}
                 display={p.imageDisplay}
-                src={p.video}
+                src={productVideo}
                 onLoadedMetadata={aspect.onLoadedMetadata}
                 autoPlay={
                   !window.matchMedia("(prefers-reduced-motion: reduce)")
@@ -147,7 +147,7 @@ export default function ProductPage() {
                 className="product-cover-image"
               />
             )}
-            {p.video && (
+            {productVideo && (
               <div className="product-video-overlay">
                 <span>
                   <Leaf size={16} />
@@ -179,9 +179,7 @@ export default function ProductPage() {
                   </button>
                   <button
                     className="glass-button"
-                    onClick={() =>
-                      setFilm({ src: p.video, name, poster: p.image })
-                    }
+                    onClick={() => setFilm(p)}
                     aria-label={t("Mở video lớn", "Open film")}
                   >
                     <Expand size={18} />
@@ -464,18 +462,14 @@ export default function ProductPage() {
           </div>
           <div className="film-carousel" ref={carousel}>
             {(products ?? [p])
-              .filter((item) => !!item.video)
+              .filter(
+                (item) => !!localizedVideo(item.video, item.videoEn, lang),
+              )
               .map((item) => (
                 <button
                   className="film-card"
                   key={item.id}
-                  onClick={() =>
-                    setFilm({
-                      src: item.video,
-                      name: lang === "vi" ? item.name : item.nameEn,
-                      poster: item.image,
-                    })
-                  }
+                  onClick={() => setFilm(item)}
                 >
                   <MediaImage
                     src={item.gallery[0] || item.image}
@@ -596,14 +590,19 @@ export default function ProductPage() {
         </Modal>
       )}
       {film && (
-        <Modal title={film.name} wide onClose={() => setFilm(undefined)}>
+        <Modal
+          title={lang === "vi" ? film.name : film.nameEn}
+          wide
+          onClose={() => setFilm(undefined)}
+        >
           <MediaVideo
             className="modal-video"
             controls
             autoPlay
             playsInline
-            src={film.src}
-            poster={film.poster}
+            key={localizedVideo(film.video, film.videoEn, lang)}
+            src={localizedVideo(film.video, film.videoEn, lang)}
+            poster={film.image}
           />
           <p className="quiet-note">
             {t(

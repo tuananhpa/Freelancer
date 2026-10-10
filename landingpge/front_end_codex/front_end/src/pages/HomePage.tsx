@@ -15,9 +15,10 @@ import { useResource } from "../hooks/useResource";
 import { repository } from "../services";
 import { ProductCarousel } from "../components/ProductCarousel";
 import { Loading, ErrorState } from "../components/common";
-import { HeroVideoCarousel } from "../components/HeroVideoCarousel";
+import { HomeVideoPlayer } from "../components/HomeVideoPlayer";
 import { InquiryModal } from "../components/InquiryModal";
 import { MediaImage } from "../components/Media";
+import { localizedVideo } from "../services/localizedVideo";
 import { useSiteSettings } from "../app/appearance";
 export default function HomePage() {
   const { lang, t } = useLanguage();
@@ -44,11 +45,13 @@ export default function HomePage() {
             <br />
             {t("Mở câu chuyện quê.", "Discover a story.")}
           </h1>
-
         </div>
-        <HeroVideoCarousel
-          products={products ?? []}
-          playRequest={0}
+        <HomeVideoPlayer
+          source={localizedVideo(
+            appearance.homeVideo,
+            appearance.homeVideoEn,
+            lang,
+          )}
         />
       </section>
       <div className="values-strip">

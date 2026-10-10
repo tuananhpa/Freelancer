@@ -1,0 +1,63 @@
+const { chromium } = require('playwright');
+const assert = require('node:assert/strict');
+const base = process.env.TEST_URL || 'http://127.0.0.1:4173';
+(async () => {
+ const browser = await chromium.launch({headless:true,executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe'});
+ try {
+  const page = await browser.newPage({viewport:{width:1440,height:1000}, reducedMotion:'reduce', locale:'vi-VN'});
+  const errors=[]; page.on('pageerror',e=>errors.push(e.message));
+  await page.goto(base);
+  await page.locator('#hero-film img').waitFor();
+  assert.equal(await page.locator('#hero-film video').count(),0,'empty homepage never inherits product videos');
+  const bytes=await page.evaluate(async()=>{
+   const canvas=document.createElement('canvas');canvas.width=32;canvas.height=32;
+   const ctx=canvas.getContext('2d');ctx.fillStyle='green';ctx.fillRect(0,0,32,32);
+   const stream=canvas.captureStream(5);const recorder=new MediaRecorder(stream,{mimeType:'video/webm'});
+   const chunks=[];recorder.ondataavailable=e=>chunks.push(e.data);
+   const result=new Promise(resolve=>recorder.onstop=async()=>resolve(Array.from(new Uint8Array(await new Blob(chunks).arrayBuffer()))));
+   recorder.start();await new Promise(r=>setTimeout(r,400));recorder.stop();stream.getTracks().forEach(t=>t.stop());return result;
+  });
+  const upload=async(label,name)=>{
+   await page.getByLabel('Tải '+label,{exact:true}).setInputFiles({name,mimeType:'video/webm',buffer:Buffer.from(bytes)});
+   await page.getByRole('region',{name:label,exact:true}).locator('video').waitFor();
+   await page.getByText('Đang lưu video vào thư viện…',{exact:true}).waitFor({state:'hidden'});
+  };
+  const state=()=>page.evaluate(()=>JSON.parse(localStorage.getItem('hytales.demo.v1')));
+  const saveSettings=async()=>{await page.getByRole('button',{name:'Lưu thiết lập',exact:true}).click();await page.getByText('Đã lưu thiết lập.',{exact:true}).waitFor();};
+  const goHome=async()=>{await page.goto(base);await page.locator('#hero-film video').waitFor();};
+  const switchEN=()=>page.getByRole('button',{name:'Switch to English',exact:true}).click();
+  const switchVI=()=>page.getByRole('button',{name:'Chuyển sang tiếng Việt',exact:true}).click();
+  await page.goto(base+'/admin/login');await page.getByRole('button',{name:'Mở không gian quản trị'}).click();
+  await page.goto(base+'/admin/settings');
+  await upload('Video trang chủ (VI)','home-vi.webm');await upload('Video trang chủ (EN)','home-en.webm');await saveSettings();
+  let saved=await state();assert.notEqual(saved.settings.homeVideo,saved.settings.homeVideoEn);
+  await goHome();let homeVI=await page.locator('#hero-film video').getAttribute('src');
+  await switchEN();await page.waitForFunction(vi=>document.querySelector('#hero-film video')?.getAttribute('src')!==vi,homeVI);
+  await switchVI();await page.waitForFunction(vi=>document.querySelector('#hero-film video')?.getAttribute('src')===vi,homeVI);
+  await page.goto(base+'/admin/settings');await upload('Video trang chủ (VI)','home-vi-replaced.webm');await saveSettings();
+  assert.notEqual((await state()).settings.homeVideo,saved.settings.homeVideo,'replace VI');
+  await page.goto(base+'/admin/settings');await page.getByRole('region',{name:'Video trang chủ (EN)',exact:true}).getByRole('button',{name:'Xóa video',exact:true}).click();await saveSettings();
+  await goHome();homeVI=await page.locator('#hero-film video').getAttribute('src');await switchEN();assert.equal(await page.locator('#hero-film video').getAttribute('src'),homeVI,'home EN fallback');await switchVI();
+  await page.goto(base+'/admin/products');await page.getByRole('button',{name:'Sửa Nhãn lồng Phố Hiến',exact:true}).click();await page.getByRole('tab',{name:'Ảnh & video',exact:true}).click();
+  await upload('Video sản phẩm (EN)','product-en.webm');await page.getByRole('button',{name:'Lưu sản phẩm',exact:true}).click();await page.locator('dialog').waitFor({state:'hidden'});
+  saved=await state();const product=saved.products.find(p=>p.name==='Nhãn lồng Phố Hiến');assert.ok(product.videoEn.startsWith('local-media:'));
+  assert.notEqual(product.videoEn,saved.settings.homeVideo,'home and product independent');
+  await page.goto(base+'/p/'+product.slug);await page.locator('.product-hero-media video').waitFor();
+  const vi=await page.locator('.product-hero-media video').getAttribute('src');assert.ok(vi.includes('nhan-long.mp4'));
+  await switchEN();await page.waitForFunction(()=>document.querySelector('.product-hero-media video')?.getAttribute('src')?.startsWith('blob:'));
+  await page.getByRole('button',{name:'Open film',exact:true}).click();await page.locator('dialog video').waitFor();
+  assert.ok((await page.locator('dialog video').getAttribute('src')).startsWith('blob:'));
+  await page.evaluate(()=>document.querySelector('button[aria-label="Chuyển sang tiếng Việt"]').click());
+  await page.waitForFunction(()=>document.querySelector('dialog video')?.getAttribute('src')?.includes('nhan-long.mp4'));
+  await page.keyboard.press('Escape');await page.locator('dialog').waitFor({state:'hidden'});
+  await page.reload();assert.ok((await page.locator('.product-hero-media video').getAttribute('src')).includes('nhan-long.mp4'));
+  await page.goto(base+'/admin/products');await page.getByRole('button',{name:'Sửa Nhãn lồng Phố Hiến',exact:true}).click();await page.getByRole('tab',{name:'Ảnh & video',exact:true}).click();
+  await page.getByRole('region',{name:'Video sản phẩm (EN)',exact:true}).getByRole('button',{name:'Xóa video',exact:true}).click();await page.getByRole('button',{name:'Lưu sản phẩm',exact:true}).click();await page.locator('dialog').waitFor({state:'hidden'});
+  await page.goto(base+'/p/'+product.slug);await page.locator('.product-hero-media video').waitFor();await switchEN();assert.ok((await page.locator('.product-hero-media video').getAttribute('src')).includes('nhan-long.mp4'),'product EN fallback after delete');
+  await page.setViewportSize({width:390,height:844});assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+  await page.goto(base+'/admin/settings');await page.getByRole('region',{name:'Video trang chủ (VI)',exact:true}).getByRole('button',{name:'Xóa video',exact:true}).click();await saveSettings();
+  await page.goto(base);await page.locator('#hero-film img').waitFor();assert.equal(await page.locator('#hero-film video').count(),0,'deleted homepage video stays empty');
+  assert.equal(await page.locator('a[download]').count(),0);assert.deepEqual(errors,[]);
+  console.log('PASS independent homepage; upload/replace/delete/save; VI/EN switch and fallback; product/modal; reload; mobile; no download');
+ } finally {await browser.close();}
+})().catch(e=>{console.error(e);process.exit(1)});

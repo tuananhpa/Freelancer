@@ -8,6 +8,7 @@ import { useNotice } from "../../app/providers";
 import { Loading, ErrorState } from "../../components/common";
 import { normalizeSettings } from "../../services/contacts";
 import { SocialLinksEditor } from "./SocialLinksEditor";
+import { VideoSourceEditor } from "./VideoSourceEditor";
 import { AppearanceEditor } from "./AppearanceEditor";
 import { MediaUploadProvider, useMediaUploadState } from "./MediaUploadState";
 export default function SettingsPage() {
@@ -79,7 +80,7 @@ function SettingsForm() {
     try {
       await repository.settings.save(form);
       window.dispatchEvent(new Event("hytales:settings-updated"));
-      notify("Đã lưu thiết lập liên hệ.");
+      notify("Đã lưu thiết lập.");
     } catch (e) {
       setFormError((e as Error).message);
     } finally {
@@ -129,6 +130,28 @@ function SettingsForm() {
             settings={form}
             onChange={(updates) => setForm((prev) => ({ ...prev, ...updates }))}
           />
+          <section className="appearance-panel" id="video-trang-chu">
+            <h2>Video trang chủ</h2>
+            <p>
+              Video riêng cho nền trang chủ, không tự lấy video sản phẩm. Khi EN
+              chưa có video, trang chủ dùng bản VI. Bấm Lưu thiết lập để áp
+              dụng.
+            </p>
+            <VideoSourceEditor
+              label="Video trang chủ (VI)"
+              value={form.homeVideo}
+              onChange={(homeVideo) =>
+                setForm((prev) => ({ ...prev, homeVideo }))
+              }
+            />
+            <VideoSourceEditor
+              label="Video trang chủ (EN)"
+              value={form.homeVideoEn}
+              onChange={(homeVideoEn) =>
+                setForm((prev) => ({ ...prev, homeVideoEn }))
+              }
+            />
+          </section>
           <AppearanceEditor settings={form} onChange={updateAppearance} />
           {logoSaving && <p role="status">Đang lưu thương hiệu…</p>}
           {formError && (
@@ -144,7 +167,7 @@ function SettingsForm() {
             {busy
               ? "Đang lưu…"
               : uploads.busy
-                ? "Đang tải ảnh…"
+                ? "Đang tải file…"
                 : "Lưu thiết lập"}
           </button>
         </form>
