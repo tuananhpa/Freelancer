@@ -1,4 +1,5 @@
 import { seedProducts } from "../data/products";
+import { validateProductPrice } from "./productPrice";
 import { normalizeInquiry } from "./inquiries";
 import {
   normalizeSettings,
@@ -93,6 +94,7 @@ export function createMockRepository(storage: StorageLike): Repository {
           (p) => p.slug === slug && p.status === "published",
         ),
       save: async (product) => {
+        validateProductPrice(product);
         const s = read();
         const old = s.products.find((p) => p.id === product.id);
         const saved = { ...product, slug: old?.slug ?? product.slug };

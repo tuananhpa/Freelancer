@@ -49,14 +49,30 @@ export const useTheme = () => useContext(ThemeContext);
 const SettingsContext = createContext<Settings>(normalizeSettings({}));
 export function SiteSettingsProvider({ children }: { children: ReactNode }) {
   const { data, reload } = useResource(() => repository.settings.get());
+  const [preview, setPreview] = useState<Partial<Settings> | null>(null);
   useEffect(() => {
     const refresh = () => reload();
+    const previewLogo = (event: Event) =>
+      setPreview((previous) => ({
+        ...previous,
+        ...(event as CustomEvent<Partial<Settings>>).detail,
+      }));
     window.addEventListener("hytales:settings-updated", refresh);
-    return () =>
+    window.addEventListener("hytales:brand-preview", previewLogo);
+    return () => {
       window.removeEventListener("hytales:settings-updated", refresh);
+      window.removeEventListener("hytales:brand-preview", previewLogo);
+    };
   }, [reload]);
+  useEffect(() => setPreview(null), [data]);
   return (
-    <SettingsContext.Provider value={data ?? normalizeSettings({})}>
+    <SettingsContext.Provider
+      value={
+        preview
+          ? { ...(data ?? normalizeSettings({})), ...preview }
+          : (data ?? normalizeSettings({}))
+      }
+    >
       {children}
     </SettingsContext.Provider>
   );

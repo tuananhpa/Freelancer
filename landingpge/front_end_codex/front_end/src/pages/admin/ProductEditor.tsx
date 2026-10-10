@@ -218,6 +218,30 @@ function ProductEditorForm({
                   </small>
                 </label>
               </div>
+              <label>
+                Giá trên một đơn vị (VND)
+                <input
+                  type="number"
+                  min="0"
+                  step="1"
+                  max={Number.MAX_SAFE_INTEGER}
+                  inputMode="numeric"
+                  value={p.priceVnd ?? ""}
+                  placeholder="Ví dụ: 120000"
+                  onChange={(e) =>
+                    patch(
+                      "priceVnd",
+                      e.target.value === ""
+                        ? undefined
+                        : Number(e.target.value),
+                    )
+                  }
+                />
+                <small>
+                  Giá tính cho 1 {p.orderUnit?.trim() || "kg"}. Để trống nếu cần
+                  khách liên hệ báo giá.
+                </small>
+              </label>
               {field("region", "Vùng trồng")}
               {field("season", "Mùa vụ")}
               <label>

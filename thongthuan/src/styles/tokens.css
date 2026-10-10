@@ -1,0 +1,7 @@
+:root {
+ --blue-950:#073654;--blue-900:#0a4265;--blue-700:#096ba8;--blue-600:#0077bc;--blue-50:#edf7fc;--gold-400:#ffd000;--white:#fff;--slate-50:#f4f7fa;--slate-200:#dce6ee;--slate-500:#516a7d;--red-700:#bc2525;
+ --color-primary:var(--blue-700);--color-heading:var(--blue-950);--color-body:#27485f;--color-muted:var(--slate-500);--color-surface:var(--white);--color-background:var(--slate-50);--color-border:var(--slate-200);--color-danger:var(--red-700);
+ --font-body:'Be Vietnam Pro','Segoe UI',Arial,sans-serif;--space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-6:24px;--space-8:32px;--space-12:48px;--space-16:64px;--space-20:80px;
+ --radius-sm:6px;--radius-md:12px;--radius-lg:18px;--shadow-sm:0 6px 24px rgba(7,54,84,.06);
+ --button-bg:var(--color-primary);--button-radius:var(--radius-sm);--input-border:var(--color-border);--header-height:88px;--content-width:1260px;
+}

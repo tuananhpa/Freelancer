@@ -5,28 +5,46 @@ import { useLanguage } from "../app/providers";
 import { useSiteSettings } from "../app/appearance";
 import { MediaImage } from "./Media";
 export function Brand({ light = false }: { light?: boolean }) {
-  const { brandLogo } = useSiteSettings();
+  const settings = useSiteSettings();
+  const name = settings.brandName?.trim() || "HYTales";
+  const tagline = settings.brandTagline ?? "Chuyện quê trong từng thức quà";
+  const image = settings.brandLogo;
+  const fullLogo = image?.src && settings.brandLogoMode !== "symbol";
   return (
     <Link
       className={`brand ${light ? "brand-light" : ""}`}
       to="/"
-      aria-label="HYTales – Trang chủ"
+      aria-label={`${name} – Trang chủ`}
     >
-      <span className="brand-symbol">
-        {brandLogo?.src ? (
+      {fullLogo ? (
+        <span className="brand-custom-logo">
           <MediaImage
-            src={brandLogo.src}
-            display={brandLogo.display ?? { fit: "contain", x: 50, y: 50 }}
-            alt="Logo HYTales"
+            src={image.src}
+            display={image.display ?? { fit: "contain", x: 50, y: 50 }}
+            alt={`Logo ${name}`}
           />
-        ) : (
-          <Leaf size={26} />
-        )}
-      </span>
-      <span>
-        HY<span className="brand-tail">Tales</span>
-        <small>Chuyện quê trong từng thức quà</small>
-      </span>
+        </span>
+      ) : (
+        <>
+          <span className="brand-symbol">
+            {image?.src ? (
+              <MediaImage
+                src={image.src}
+                display={image.display ?? { fit: "contain", x: 50, y: 50 }}
+                alt={`Logo ${name}`}
+              />
+            ) : (
+              <Leaf size={26} />
+            )}
+          </span>
+          <span className="brand-copy">
+            <span className="brand-tail brand-name" title={name}>
+              {name}
+            </span>
+            {tagline && <small>{tagline}</small>}
+          </span>
+        </>
+      )}
     </Link>
   );
 }

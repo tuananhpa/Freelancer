@@ -32,11 +32,53 @@ export function AppearanceEditor({
   return (
     <section className="appearance-panel">
       <h2>Logo & khung ảnh</h2>
+      <label>
+        Tên thương hiệu
+        <input
+          value={settings.brandName ?? "HYTales"}
+          maxLength={60}
+          required
+          onChange={(e) => onChange({ brandName: e.target.value })}
+        />
+      </label>
+      <label>
+        Dòng mô tả thương hiệu
+        <input
+          value={settings.brandTagline ?? "Chuyện quê trong từng thức quà"}
+          maxLength={120}
+          onChange={(e) => onChange({ brandTagline: e.target.value })}
+        />
+        <small>Để trống nếu muốn ẩn dòng mô tả.</small>
+      </label>
+      {settings.brandLogo?.src && (
+        <label>
+          Kiểu hiển thị logo
+          <select
+            aria-label="Kiểu hiển thị logo"
+            value={settings.brandLogoMode ?? "full"}
+            onChange={(e) =>
+              onChange({ brandLogoMode: e.target.value as "full" | "symbol" })
+            }
+          >
+            <option value="full">Chỉ ảnh logo</option>
+            <option value="symbol">Biểu tượng + tên và mô tả</option>
+          </select>
+        </label>
+      )}
       <p className="quiet-note">
-        Đổi logo, thay ảnh và chọn vùng ảnh hiển thị. Bấm Lưu thiết lập để áp
-        dụng.
+        Tên, mô tả và logo tự lưu khi thay đổi. Những thiết lập khác cần bấm Lưu
+        thiết lập.
       </p>
-      <div data-testid="brand-logo-editor">
+      <div
+        id="logo-thuong-hieu"
+        data-testid="brand-logo-editor"
+        style={{ scrollMarginTop: 110 }}
+      >
+        <p className="quiet-note">
+          Tải JPG, PNG hoặc WebP. Chọn Chỉ ảnh logo để thay toàn bộ thương hiệu,
+          hoặc Biểu tượng + tên và mô tả để giữ phần chữ bên cạnh. Tự lưu và xem
+          trước ngay.
+        </p>
         <ManagedImageEditor
           label="Logo HYTales"
           value={settings.brandLogo}

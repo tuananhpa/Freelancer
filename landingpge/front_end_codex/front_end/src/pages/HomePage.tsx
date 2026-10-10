@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import {
   ArrowUpRight,
-  Play,
   ScanLine,
   Leaf,
   BookOpen,
@@ -29,7 +28,6 @@ export default function HomePage() {
     error,
     reload,
   } = useResource(() => repository.products.list());
-  const [playRequest, setPlayRequest] = useState(0);
   const [inquiry, setInquiry] = useState(false);
   useEffect(() => {
     document.title = t(
@@ -39,55 +37,18 @@ export default function HomePage() {
   }, [lang]);
   return (
     <>
-      <section className="home-hero container">
+      <section className="home-hero home-hero-edge">
         <div className="hero-copy">
           <h1>
             {t("Chạm mã QR.", "Scan a QR.")}
             <br />
             {t("Mở câu chuyện quê.", "Discover a story.")}
           </h1>
-          <p>
-            {t(
-              "Đằng sau mỗi thức quà là một miền đất, một đôi bàn tay, một câu chuyện đáng được kể. HYTales đưa bạn chạm gần hơn với di sản nông sản Hưng Yên.",
-              "Behind every local treasure is a place, a pair of caring hands and a story worth telling. HYTales brings you closer to the agricultural heritage of Hung Yen.",
-            )}
-          </p>
-          <div className="hero-actions">
-            <a href="#dac-san" className="button">
-              {t("Khám phá thức quà quê", "Explore local treasures")}
-              <ArrowUpRight size={19} />
-            </a>
-            <button
-              className="text-button"
-              onClick={() => setPlayRequest((value) => value + 1)}
-            >
-              <span className="play-outline">
-                <Play size={15} fill="currentColor" />
-              </span>
-              {t("Xem phim câu chuyện", "Watch the story")}
-            </button>
-          </div>
-          <div className="hero-caption">
-            <span className="tiny-leaf">
-              <Leaf size={22} />
-            </span>
-            <span>
-              {t(
-                "Từ phù sa sông Hồng, gửi đến bạn",
-                "From the Red River, with care",
-              )}
-              <small>
-                {t(
-                  "Gìn giữ di sản · Kết nối người trồng",
-                  "Preserving heritage · Connecting growers",
-                )}
-              </small>
-            </span>
-          </div>
+
         </div>
         <HeroVideoCarousel
           products={products ?? []}
-          playRequest={playRequest}
+          playRequest={0}
         />
       </section>
       <div className="values-strip">

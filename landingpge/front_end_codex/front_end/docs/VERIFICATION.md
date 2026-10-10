@@ -1,5 +1,16 @@
 # Kiểm tra frontend — 09/10/2026
 
+## Sửa thương hiệu và logo — 10/10/2026
+
+- Brand trước đây chỉ thay ảnh trong biểu tượng tròn; giờ có full (toàn bộ ảnh logo) hoặc symbol (biểu tượng + tên/mô tả). Tên thương hiệu và mô tả sửa trong Thiết lập, mô tả trống được ẩn. Logo/tên/mô tả/kiểu hiển thị có xem trước và tự lưu riêng, đọc bản settings hiện tại trước khi ghi, queue giữ thứ tự cập nhật; không lưu các trường khác đang nhập dở.
+- Browser context riêng đã kiểm tra upload không cần bấm Lưu thiết lập, tên/mô tả cập nhật và giữ khi reload; cả hai chế độ, thay/gỡ ảnh, gỡ ảnh vẫn giữ tên đã chỉnh, ẩn mô tả và mobile 390 không tràn ngang. 28 unit tests và TypeScript qua. Mock vẫn lưu theo origin/trình duyệt, không đồng bộ giữa localhost/tunnel hoặc thiết bị.
+
+## Giá và upload logo — 10/10/2026
+
+- Thêm priceVnd theo orderUnit vào form sản phẩm/bảng thông tin lô; chưa có giá hiển thị Liên hệ để biết giá. Không tự đặt giá seed. Kiểm tra số nguyên không âm/safe integer trước khi lưu mock/API; giá 0 vẫn được hiển thị.
+- Lối tắt upload logo trong Thiết lập, dùng luồng ManagedImageEditor và Settings.brandLogo hiện có. Kiểm tra bằng browser context riêng: nhập/lưu 120000 VND / giỏ, tải lại trang vẫn có giá, mobile 390 không tràn ngang; upload WebP, lưu và logo thực sự tải trên header. Không thay dữ liệu phiên người dùng.
+- 28 unit tests qua; TypeScript qua. PLAN đã bổ sung trường D1/API và quy tắc xóa giá/đơn vị.
+
 ## Nền Dark/mobile và nguồn video duy nhất
 
 - Mobile dùng SVG riêng với viewBox 390×900, đặt lá dưới header thay vì cắt giữa canvas desktop; Dark dùng màu nét vẽ sáng, bỏ lớp phủ tối. Đã xem ảnh desktop/mobile ở Day/Night, không sửa kích thước/bố cục component. Ảnh kiểm tra: test-results/orchard-fixed-1440-night.png, orchard-mobile-night-final.png.

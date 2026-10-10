@@ -15,6 +15,7 @@ import "./styles/product-carousel.css";
 import "./styles/video-aspect.css";
 import "./styles/player-improvements.css";
 import "./styles/orchard-background.css";
+import "./styles/edge-hero.css";
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <App />

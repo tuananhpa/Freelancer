@@ -1,5 +1,6 @@
 import type { Repository, AdminUser } from "../types/domain";
 import { normalizeSettings, validateContactSettings } from "./contacts";
+import { validateProductPrice } from "./productPrice";
 import { normalizeInquiry } from "./inquiries";
 export const apiBase = (
   import.meta.env.VITE_API_BASE_URL || "http://localhost:8000/api"
@@ -52,8 +53,10 @@ export const apiRepository: Repository = {
         throw e;
       }
     },
-    save: (p) =>
-      request(`/admin/products/${encodeURIComponent(p.id)}`, "PUT", p),
+    save: (p) => {
+      validateProductPrice(p);
+      return request(`/admin/products/${encodeURIComponent(p.id)}`, "PUT", p);
+    },
     remove: (id) =>
       request(`/admin/products/${encodeURIComponent(id)}`, "DELETE"),
   },

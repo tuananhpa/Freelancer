@@ -51,6 +51,7 @@ export type Product = {
   facts: { value: string; label: Localized }[];
   batchCode: string;
   orderUnit?: string;
+  priceVnd?: number;
   harvestedAt: string;
   expiresAt: string;
   certifications: string[];
@@ -100,6 +101,9 @@ export type Settings = {
   chatGreeting: Localized;
   quickReplies: QuickReply[];
   brandLogo?: ManagedImage;
+  brandName?: string;
+  brandTagline?: string;
+  brandLogoMode?: "full" | "symbol";
   storyImages: ManagedImage[];
   imageDisplays: Record<string, ImageDisplay>;
 };

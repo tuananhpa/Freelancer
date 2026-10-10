@@ -1,0 +1,20 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {validateRequest,buildRequest,safeUrl,mapLinks,validateWidget} from '../src/lib/domain.js';
+import {loadState,saveState,STORAGE_KEY} from '../src/lib/repository.js';
+import {seed as fullSeed} from '../src/data/seed.js';
+const products=[{id:'p1',published:true,name:{vi:'Tôm',en:'Shrimp'},unit:'kg',image:'/assets/shrimp.jpg'}];
+const customer={name:'Khách hàng',phone:'0901234567',email:'buyer@example.com',message:''};
+test('valid request needs product and valid contact',()=>assert.deepEqual(validateRequest(customer,[{productId:'p1',quantity:20}],products),{}));
+test('reject missing contact, bad email and empty cart',()=>{const e=validateRequest({name:'',phone:'1',email:'wrong'},[],products);assert.ok(e.name&&e.phone&&e.email&&e.items)});
+test('reject zero, negative, fractional, infinite and huge quantities',()=>{for(const quantity of [0,-1,1.5,Infinity,1000001])assert.ok(validateRequest(customer,[{productId:'p1',quantity}],products).items)});
+test('deleted or unpublished products cannot be requested',()=>{assert.ok(validateRequest(customer,[{productId:'gone',quantity:2}],products).items);assert.ok(validateRequest(customer,[{productId:'p1',quantity:2}],[{...products[0],published:false}]).items)});
+test('order keeps immutable snapshot after product changes',()=>{const list=structuredClone(products);const order=buildRequest(customer,[{productId:'p1',quantity:20}],list);list[0].name.vi='Changed';list.length=0;assert.equal(order.items[0].name.vi,'Tôm');assert.equal(order.items[0].quantity,20);assert.equal(order.status,'new')});
+test('unsafe and foreign iframe URLs rejected',()=>{for(const u of ['javascript:alert(1)','data:text/html,test','https://evil.example/maps','https://www.google.com/maps/@bad'])assert.equal(safeUrl(u,'map'),'');assert.ok(safeUrl('https://www.google.com/maps/embed?pb=abc','map'));assert.equal(safeUrl('https://facebook.com.evil.com/name','facebook'),'');assert.ok(safeUrl('https://www.facebook.com/example','facebook'))});
+test('map links use each facility address',()=>{const a=mapLinks({name:'Phan Rang',address:'KCN Thanh Hải'});const b=mapLinks({name:'Cam Ranh',address:'KCN Suối Dầu'});assert.notEqual(a.search,b.search);assert.ok(a.directions.includes('destination='))});
+test('widget embed supports only safe public video/page URLs',()=>{assert.equal(validateWidget({platform:'tiktok',mode:'embed',url:'https://evil.test/video/123'}),'url');assert.equal(validateWidget({platform:'tiktok',mode:'embed',url:'https://www.tiktok.com/@brand/video/123456789'}),'');assert.equal(validateWidget({platform:'youtube',mode:'embed',url:'https://youtube.com/watch?v=dQw4w9WgXcQ'}),'')});
+const seed={version:1,products:products.map(p=>({...p,description:{vi:'',en:''}})),orders:[],articles:[],widgets:[],facilities:[],pages:{},drafts:{},cart:[],contacts:[]};
+test('corrupt and wrong-shaped storage falls back without rewriting',()=>{let writes=0;for(const raw of ['bad json','{"version":1,"products":null}',JSON.stringify({...seed,products:[{}]})]){const loaded=loadState({getItem:()=>raw,setItem:()=>writes++},seed);assert.ok(loaded.warning);assert.equal(loaded.state.products[0].id,'p1')}assert.equal(writes,0)});
+test('quota/storage failure cannot report save success',()=>{assert.throws(()=>saveState({setItem:()=>{throw new Error('quota')}},seed));let written;saveState({setItem:(key,value)=>written={key,value}},seed);assert.equal(written.key,STORAGE_KEY);assert.equal(JSON.parse(written.value).version,1)});
+test('malformed page sections and contact records invoke recovery',()=>{for(const mutate of [s=>s.pages.home.vi.sections=null,s=>s.contacts=[null],s=>s.products[0].description=null,s=>s.facilities[0].description=null]){const s=structuredClone(fullSeed);mutate(s);assert.ok(loadState({getItem:()=>JSON.stringify(s)},fullSeed).warning)}});
+

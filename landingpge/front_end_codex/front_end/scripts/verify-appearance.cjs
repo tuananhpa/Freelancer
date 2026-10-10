@@ -116,7 +116,7 @@ fs.mkdirSync(output, { recursive: true });
     await page.waitForLoadState("networkidle");
     assert.equal(
       await page
-        .locator(".site-header .brand-symbol img")
+        .locator(".site-header .brand-custom-logo img")
         .evaluate((el) => getComputedStyle(el).objectPosition),
       "80% 20%",
     );

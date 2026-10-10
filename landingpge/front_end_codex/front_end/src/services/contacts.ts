@@ -39,6 +39,9 @@ export function normalizeSettings(value: Partial<Settings>): Settings {
     chatGreeting: value.chatGreeting ?? structuredClone(defaultChatGreeting),
     quickReplies: value.quickReplies ?? structuredClone(defaultQuickReplies),
     brandLogo: value.brandLogo,
+    brandName: value.brandName ?? "HYTales",
+    brandTagline: value.brandTagline ?? "Chuyện quê trong từng thức quà",
+    brandLogoMode: value.brandLogoMode ?? "full",
     storyImages: value.storyImages ?? [
       {
         src: "/media/cam-duong-canh.webp",
@@ -72,6 +75,13 @@ export function visibleSocialLinks(settings?: Settings): SocialLink[] {
     : settings.socialLinks.filter((link) => link.enabled && isWebUrl(link.url));
 }
 export function validateContactSettings(settings: Settings) {
+  if (
+    settings.brandName !== undefined &&
+    (!settings.brandName.trim() || settings.brandName.length > 60)
+  )
+    throw new Error("Tên thương hiệu cần có từ 1 đến 60 ký tự.");
+  if ((settings.brandTagline?.length ?? 0) > 120)
+    throw new Error("Dòng mô tả tối đa 120 ký tự.");
   validateQuickReplies(settings.quickReplies);
   for (const link of settings.socialLinks) {
     if (link.url && !isWebUrl(link.url))

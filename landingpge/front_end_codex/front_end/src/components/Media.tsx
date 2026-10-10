@@ -64,6 +64,7 @@ export const MediaVideo = forwardRef<
   return (
     <video
       {...props}
+      controlsList="nodownload"
       ref={ref}
       style={{
         ...imageDisplayStyle(display ?? settings.imageDisplays[poster ?? ""]),

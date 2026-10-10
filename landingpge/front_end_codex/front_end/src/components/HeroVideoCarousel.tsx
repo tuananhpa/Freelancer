@@ -11,13 +11,11 @@ import {
   Minimize,
   X,
   ArrowUpRight,
-  Download,
 } from "lucide-react";
 import type { Product } from "../types/domain";
 import { useLanguage } from "../app/providers";
 import { MediaImage, useMediaSource } from "./Media";
 import { useVideoAspect } from "../hooks/useVideoAspect";
-import { originalVideoUrl } from "../utils/media";
 import { usePlayerFullscreen } from "../hooks/usePlayerFullscreen";
 
 export function HeroVideoCarousel({
@@ -249,16 +247,6 @@ export function HeroVideoCarousel({
       </div>
       {current && (
         <div className="hero-film-controls">
-          {originalVideoUrl(current?.video) && (
-            <a
-              href={originalVideoUrl(current?.video)}
-              download
-              aria-label={t("Tải video gốc", "Download original video")}
-              title={t("Tải video gốc", "Download original video")}
-            >
-              <Download size={19} />
-            </a>
-          )}
           <div className="hero-playback">
             <button
               type="button"

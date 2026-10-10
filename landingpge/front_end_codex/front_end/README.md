@@ -18,6 +18,8 @@ Kiểm tra các luồng trên browser: chạy server trước rồi `npm run tes
 
 ## Các trang
 
+Giá sản phẩm: trong Sản phẩm → Sửa → Thông tin lô, nhập “Giá trên một đơn vị (VND)” theo Đơn vị mặc định. Giá nguyên không âm; để trống để hiển thị “Liên hệ để biết giá”, 0 là giá 0. Giá/đơn vị xuất hiện trong bảng Thông tin lô hàng ở trang sản phẩm. Thiết lập có lối tắt “Tải file / thay logo HYTales” đến phần upload JPG/PNG/WebP, gỡ logo và chỉnh vùng hiển thị; logo được xem trước và tự lưu, thay toàn bộ ảnh thương hiệu hoặc biểu tượng tùy kiểu hiển thị. Tên thương hiệu và dòng mô tả cũng sửa được và tự lưu; mô tả trống sẽ ẩn. Các thiết lập khác vẫn cần Lưu thiết lập.
+
 - `/`: landing page dự án, kể chuyện và kết nối HTX.
 - `/p/nhan-long-pho-hien`: nhãn lồng.
 - `/p/vai-trung-phu-cu`: vải trứng.

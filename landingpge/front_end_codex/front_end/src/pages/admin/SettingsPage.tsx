@@ -1,4 +1,4 @@
-import { useState, useEffect, type FormEvent } from "react";
+import { useState, useEffect, useRef, type FormEvent } from "react";
 import { Save, Plug, MessageCircle } from "lucide-react";
 import { useResource } from "../../hooks/useResource";
 import { repository, isMock } from "../../services";
@@ -25,12 +25,55 @@ function SettingsForm() {
   const [form, setForm] = useState<Settings>(() => normalizeSettings({}));
   const [busy, setBusy] = useState(false);
   const [formError, setFormError] = useState("");
+  const [logoSaving, setLogoSaving] = useState(false);
+  const logoQueue = useRef(Promise.resolve());
+  const logoVersion = useRef(0);
   const notify = useNotice();
+  function updateAppearance(updates: Partial<Settings>) {
+    setForm((prev) => ({ ...prev, ...updates }));
+    if (
+      !["brandLogo", "brandName", "brandTagline", "brandLogoMode"].some(
+        (key) => key in updates,
+      )
+    )
+      return;
+    const version = ++logoVersion.current;
+    setLogoSaving(true);
+    setFormError("");
+    window.dispatchEvent(
+      new CustomEvent("hytales:brand-preview", {
+        detail: updates,
+      }),
+    );
+    logoQueue.current = logoQueue.current.then(async () => {
+      try {
+        const current = await repository.settings.get();
+        await repository.settings.save({
+          ...current,
+          ...updates,
+        });
+        if (version === logoVersion.current) {
+          window.dispatchEvent(new Event("hytales:settings-updated"));
+          notify("Đã lưu thông tin thương hiệu.");
+        }
+      } catch (error) {
+        if (version === logoVersion.current) {
+          setFormError(
+            `Không lưu được thương hiệu: ${(error as Error).message}`,
+          );
+          window.dispatchEvent(new Event("hytales:settings-updated"));
+        }
+      } finally {
+        if (version === logoVersion.current) setLogoSaving(false);
+      }
+    });
+  }
   useEffect(() => {
     if (data) setForm(data);
   }, [data]);
   async function save(e: FormEvent) {
     e.preventDefault();
+    if (logoSaving || uploads.busy) return;
     setBusy(true);
     setFormError("");
     try {
@@ -52,6 +95,9 @@ function SettingsForm() {
           <p className="eyebrow">Nền tảng cho những kết nối</p>
           <h1>Thiết lập</h1>
           <p>Thông tin liên hệ và trạng thái kết nối dữ liệu.</p>
+          <a href="#logo-thuong-hieu" className="underlined-link">
+            Tải file / thay logo HYTales
+          </a>
         </div>
       </div>
       <div className="settings-grid">
@@ -83,16 +129,17 @@ function SettingsForm() {
             settings={form}
             onChange={(updates) => setForm((prev) => ({ ...prev, ...updates }))}
           />
-          <AppearanceEditor
-            settings={form}
-            onChange={(updates) => setForm((prev) => ({ ...prev, ...updates }))}
-          />
+          <AppearanceEditor settings={form} onChange={updateAppearance} />
+          {logoSaving && <p role="status">Đang lưu thương hiệu…</p>}
           {formError && (
             <p className="form-error" role="alert">
               {formError}
             </p>
           )}
-          <button className="button" disabled={busy || uploads.busy}>
+          <button
+            className="button"
+            disabled={busy || uploads.busy || logoSaving}
+          >
             <Save size={17} />
             {busy
               ? "Đang lưu…"

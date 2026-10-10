@@ -20,7 +20,6 @@ import {
   MessageCircle,
   Expand,
   ScanLine,
-  Download,
 } from "lucide-react";
 import { useLanguage } from "../app/providers";
 import { useResource } from "../hooks/useResource";
@@ -29,7 +28,7 @@ import { Loading, ErrorState, NotFound, Modal } from "../components/common";
 import { InquiryModal } from "../components/InquiryModal";
 import { ReviewSection } from "../components/ReviewSection";
 import { useVideoAspect } from "../hooks/useVideoAspect";
-import { originalVideoUrl } from "../utils/media";
+import { formatUnitPrice } from "../services/productPrice";
 export default function ProductPage() {
   const { slug = "" } = useParams();
   const { lang, t } = useLanguage();
@@ -155,17 +154,6 @@ export default function ProductPage() {
                   {t("Phim từ miền vườn", "Film from the orchard")}
                 </span>
                 <div>
-                  {originalVideoUrl(p.video) && (
-                    <a
-                      className="glass-button"
-                      href={originalVideoUrl(p.video)}
-                      download
-                      aria-label={t("Tải video gốc", "Download original video")}
-                      title={t("Tải video gốc", "Download original video")}
-                    >
-                      <Download size={19} />
-                    </a>
-                  )}
                   <button
                     className="glass-button"
                     onClick={() => void togglePlay()}
@@ -223,6 +211,16 @@ export default function ProductPage() {
                 <strong>{t("Thông tin lô hàng", "Batch information")}</strong>
               </div>
               <dl>
+                <dt>{t("Giá / đơn vị", "Price / unit")}</dt>
+                <dd>
+                  {p.priceVnd === undefined
+                    ? t("Liên hệ để biết giá", "Contact for price")
+                    : formatUnitPrice(
+                        p.priceVnd,
+                        p.orderUnit,
+                        lang === "vi" ? "vi-VN" : "en-US",
+                      )}
+                </dd>
                 <dt>{t("Mã lô", "Batch code")}</dt>
                 <dd>{p.batchCode || t("Chưa cập nhật", "Awaiting update")}</dd>
                 <dt>
@@ -613,16 +611,6 @@ export default function ProductPage() {
               "Full film. Open fullscreen to enjoy the story.",
             )}
           </p>
-          {originalVideoUrl(film.src) && (
-            <a
-              className="text-button"
-              href={originalVideoUrl(film.src)}
-              download
-            >
-              <Download size={18} />
-              {t("Tải video gốc", "Download original video")}
-            </a>
-          )}
         </Modal>
       )}
       {inquiry && (
