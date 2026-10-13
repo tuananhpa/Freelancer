@@ -6,7 +6,7 @@ export function productCard(p){return `<article class="product-card"><a href="#p
 function productGrid(products){return products.length?`<div class="product-grid">${products.map(productCard).join('')}</div>`:'<div class="empty">Chưa có sản phẩm trong mục này.</div>';}
 export function storefront(data,route){
  const s=data.settings;const categories=visible(data.categories);const products=visible(data.products);const count=data.cart.reduce((n,l)=>n+l.quantity,0);
- const brand=s.logo?image(s.logo,s.name,'brand-logo'):`<span class="brand-mark">D<span>H</span></span><span class="brand-word">${esc(s.name)}<small>${esc(s.tagline)}</small></span>`;
+ const brand=`${s.logo?image(s.logo,s.name,'brand-logo'):'<span class="brand-mark">D<span>H</span></span>'}<span class="brand-word">${esc(s.name)}<small>${esc(s.tagline)}</small></span>`;
  let body='';const [path,query='']=route.split('?');const params=new URLSearchParams(query);
  if(path.startsWith('product/'))body=detail(data,decodeURIComponent(path.slice(8)));
  else if(path==='cart')body=cart(data);

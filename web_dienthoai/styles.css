@@ -109,4 +109,10 @@ a:focus-visible,button:focus-visible{outline-color:#aa8e00}
 .opening-message{background:var(--charcoal);color:var(--accent);text-align:center;font-size:14px;font-weight:600;padding:13px 18px;border-bottom:1px solid #414138;line-height:1.6}
 .closing-message{text-align:center;color:var(--accent);font-size:16px;font-weight:500;padding:8px 0 28px;line-height:1.8}
 .floating-widgets a[style*="#f3d51c"]{color:#171717}
+.brand{min-width:0;flex-shrink:0;max-width:350px}
+.brand-logo{width:62px;height:62px;flex:0 0 62px;object-fit:contain}
+.brand-word{white-space:normal;font-size:20px;line-height:1.25;min-width:0;max-width:250px;overflow-wrap:anywhere}
+.brand-word small{text-align:left;letter-spacing:.2px;line-height:1.5}
+@media(max-width:800px){.brand{flex:1;max-width:calc(100% - 85px)}.brand-logo{width:46px;height:46px;flex-basis:46px}.brand-word{font-size:18px}}
+@media(max-width:540px){.brand-logo{width:42px;height:42px;flex-basis:42px}.brand-word{font-size:15px}.brand-word small{font-size:9px;letter-spacing:0}}
 @media(max-width:540px){.opening-message{font-size:11px;padding:11px 18px}.closing-message{font-size:12px;padding:5px 16px 24px}}

@@ -11,3 +11,4 @@
 - Theo yêu cầu tiếp theo: danh mục có upload ảnh làm icon, chọn từ thư viện hoặc URL; menu và sidebar dùng ảnh đã chọn. Kiểm tra upload, cập nhật liên tab, reload và bỏ ảnh đều qua.
 - Chỉnh palette theo ảnh khách: xám bê tông, đỏ, vàng, đen; áp dụng storefront/admin, thêm trường màu vàng/nền/header trong admin. Thêm lời giới thiệu đầu trang và cảm ơn cuối trang, sửa được trong admin. Kiểm tra desktop/mobile và hai trường nội dung đều qua.
 - Tunnel cũ không còn hoạt động; khởi động lại server 5180 và tạo tunnel mới https://suzuki-duncan-connector-priorities.trycloudflare.com/.
+- Sửa lỗi upload logo làm mất tên cửa hàng/khẩu hiệu: ảnh logo chỉ thay biểu tượng, tên và khẩu hiệu luôn hiển thị cạnh ảnh. Giới hạn kích thước logo và wrap chữ trên mobile.
