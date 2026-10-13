@@ -79,10 +79,10 @@ export function createRepository(storage) {
       if([state.users,state.students,state.history,state.transactions,state.adjustments].some(list=>list.some(item=>item.classId===id))||state.snapshots.some(s=>s.id===id))throw Error('Lớp có học sinh hoặc dữ liệu tích điểm nên không thể xóa.');
       return mutate(()=>{state.classIds=state.classIds.filter(c=>c!==id);});
     },
-    previewStudents:rows=>prepareStudentImport(rows,state.students,state.classIds),
+    previewStudents:rows=>prepareStudentImport(rows,state.students,state.classIds,state.studentSequence),
     importStudents(rows){
-      const prepared=prepareStudentImport(rows,state.students,state.classIds);
-      return mutate(()=>{state.classIds=sortClasses([...state.classIds,...prepared.newClasses]);for(const s of prepared.students.filter(s=>s.importStatus==='new')){const {importStatus,...student}=s;state.students.push({...student,createdAt:new Date().toISOString()});}return {added:prepared.added,skipped:prepared.skipped,newClasses:prepared.newClasses};});
+      const prepared=prepareStudentImport(rows,state.students,state.classIds,state.studentSequence);
+      return mutate(()=>{state.studentSequence=prepared.nextSequence;state.classIds=sortClasses([...state.classIds,...prepared.newClasses]);for(const s of prepared.students.filter(s=>s.importStatus==='new')){const {importStatus,...student}=s;state.students.push({...student,createdAt:new Date().toISOString()});}return {added:prepared.added,skipped:prepared.skipped,newClasses:prepared.newClasses};});
     },
     history:(userId=currentUser()?.id)=>allEvents().filter(t=>t.userId===userId).sort((a,b)=>new Date(b.at)-new Date(a.at)),
     async register({studentCode,name,email,password}) {

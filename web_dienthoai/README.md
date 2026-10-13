@@ -42,6 +42,7 @@ Chạy kiểm tra trình duyệt (máy hiện tại có Playwright bundled): `no
 
 ## Tunnel hiện tại
 
-https://commonwealth-inns-encourages-suites.trycloudflare.com/
+https://suzuki-duncan-connector-priorities.trycloudflare.com/
 
 Admin thêm `/#admin`. Tunnel được tạo bằng cloudflared; link tạm thời và hoạt động khi máy, server và tiến trình cloudflared còn chạy. Không cài service tự khởi động.
+

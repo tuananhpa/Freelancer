@@ -1,5 +1,8 @@
 # File nào hỗ trợ việc làm backend?
 
+## Mã học sinh và xuất danh sách mới
+Backend cần cấp mã HS sáu chữ số tăng dần với bộ đếm nguyên tử khi thêm học sinh. studentSequence và roster phải được ghi cùng transaction; mã nguồn sourceCode phục vụ nhận diện import lặp, không thay mã đăng ký. Giữ mã đã cấp. Export tất cả trả toàn bộ học sinh trong một sheet Danh sách, không chỉ trang/lớp đang thấy.
+
 ## Bổ sung: danh sách lớp động
 `src/class-registry.js` chuẩn hóa tên và migration, `src/class-panel.js` quản lý lớp ở Cài đặt. Repository thêm `classes/addClass/renameClass/removeClass`, preview import có `newClasses`. Backend phải tạo lớp mới cùng import, giữ liên kết khi đổi tên, ngăn xóa lớp có dữ liệu và phân quyền server. Không còn whitelist ba lớp cố định trong nghiệp vụ.
 

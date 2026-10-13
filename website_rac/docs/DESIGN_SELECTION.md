@@ -1,5 +1,8 @@
 # Lựa chọn thiết kế
 
+## Bổ sung họa tiết theo yêu cầu
+Thêm cụm lá nhỏ, chấm và vòng tròn/nét gợn sóng SVG ở nền và các góc trống. Tông xanh hiện tại được giữ, các bảng và form có nền sáng rõ; không đưa họa tiết vào từng dòng dữ liệu. Trên mobile giảm kích thước và bỏ một số nền trang trí. Styles tách ở src/decorations.css, assets eco-flourish.svg và eco-ripple.svg. Build đạt, kiểm tra 10 bố cục desktop/mobile không tràn ngang hoặc lỗi browser. Ảnh đối chiếu mới ở docs/mockups/decorated-home.png và decorated-rankings.png.
+
 ## Bổ sung theo yêu cầu danh sách học sinh
 Giữ A3 và tông xanh. Trang admin Học sinh có import Excel, ba số tổng quan, bảng hàng xen kẽ xanh nhạt, mã xanh đậm, chip lớp/trạng thái. Đăng ký theo hai bước, nền lá cây SVG nguyên bản ở public/nature.svg. Viền nhẹ dưới header, bên cạnh menu ngang và cạnh sidebar phân tách thông tin; mobile giữ bố cục và table scroll. Ảnh người dùng gửi là tham khảo chức năng, không sao chép màu cam hoặc thương hiệu trong ảnh.
 

@@ -1,5 +1,6 @@
 import './styles.css';
 import './student-styles.css';
+import './decorations.css';
 import { createRepository } from './repository.js';
 import { readBinContext } from './bin-context.js';
 import { generateBinQR } from './qr.js';

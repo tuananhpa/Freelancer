@@ -21,17 +21,17 @@ async function main(){
     await page.reload();await expect(page.locator('.students-table tbody tr')).toHaveCount(8);
     await page.locator('h1').click();
     await page.screenshot({path:'docs/mockups/student-admin.png',fullPage:true});
-    const allExport=await readDownload('Xuất Excel tất cả lớp');expect(allExport.SheetNames).toEqual(['11T1','11T2','11T3']);
+    const allExport=await readDownload('Xuất Excel tất cả lớp');expect(allExport.SheetNames).toEqual(['Danh sách']);expect(XLSX.utils.sheet_to_json(allExport.Sheets['Danh sách'])).toHaveLength(8);
     await page.getByLabel('Lớp',{exact:true}).selectOption('11T3');await expect(page.locator('.students-table tbody tr')).toHaveCount(2);const classExport=await readDownload('Xuất Excel 11T3');expect(classExport.SheetNames).toEqual(['11T3']);const exportedRows=XLSX.utils.sheet_to_json(classExport.Sheets['11T3']);expect(exportedRows.find(row=>row['Họ và tên']==='Trần Bình')['Mã học sinh']).toBe(autoCode);
     await page.getByLabel('Tìm học sinh').fill('Trần Bình');await expect(page.locator('.students-table tbody tr')).toHaveCount(1);
     await go('admin/settings');await page.getByLabel('Tham gia lớp ngay khi đăng ký',{exact:false}).check();await page.getByRole('button',{name:'Lưu cài đặt'}).click();
     await go('account');await page.getByRole('button',{name:'Đăng xuất'}).click();await go('register');
     await page.screenshot({path:'docs/mockups/student-registration.png',fullPage:true});
     await page.getByLabel('Mã học sinh',{exact:true}).fill('UNKNOWN');await page.getByLabel('Họ và tên',{exact:true}).fill('Nguyễn An');await page.getByRole('button',{name:'Kiểm tra thông tin học sinh'}).click();await expect(page.locator('.form-error')).toContainText('danh sách');
-    await page.getByLabel('Mã học sinh',{exact:true}).fill('REG01');await page.getByLabel('Họ và tên',{exact:true}).fill('Sai tên');await page.getByRole('button',{name:'Kiểm tra thông tin học sinh'}).click();await expect(page.locator('.form-error')).toContainText('không khớp');
-    await register('REG01','Nguyễn An','an-ui@example.com');await expect(page.locator('.bin-info')).toContainText('Lớp 11T2');await expect(page.locator('.bin-info')).toContainText('Thùng R01');await expect(page.locator('.session-status')).toContainText('Đang chờ kết quả');
+    await page.getByLabel('Mã học sinh',{exact:true}).fill('HS000005');await page.getByLabel('Họ và tên',{exact:true}).fill('Sai tên');await page.getByRole('button',{name:'Kiểm tra thông tin học sinh'}).click();await expect(page.locator('.form-error')).toContainText('không khớp');
+    await register('HS000005','Nguyễn An','an-ui@example.com');await expect(page.locator('.bin-info')).toContainText('Lớp 11T2');await expect(page.locator('.bin-info')).toContainText('Thùng R01');await expect(page.locator('.session-status')).toContainText('Đang chờ kết quả');
     await go('classes');await expect(page.getByRole('radio')).toHaveCount(0);await expect(page.locator('main')).toContainText('Lớp 11T2');
-    await go('account');await page.getByRole('button',{name:'Đăng xuất'}).click();await go('register');await page.getByLabel('Mã học sinh',{exact:true}).fill('REG01');await page.getByLabel('Họ và tên',{exact:true}).fill('Nguyễn An');await page.getByRole('button',{name:'Kiểm tra thông tin học sinh'}).click();await expect(page.locator('.form-error')).toContainText('đã đăng ký');
+    await go('account');await page.getByRole('button',{name:'Đăng xuất'}).click();await go('register');await page.getByLabel('Mã học sinh',{exact:true}).fill('HS000005');await page.getByLabel('Họ và tên',{exact:true}).fill('Nguyễn An');await page.getByRole('button',{name:'Kiểm tra thông tin học sinh'}).click();await expect(page.locator('.form-error')).toContainText('đã đăng ký');
     await go('admin/settings');await page.getByLabel('Cần admin duyệt',{exact:false}).check();await page.getByRole('button',{name:'Lưu cài đặt'}).click();
     await register(autoCode,'Trần Bình','binh-ui@example.com');await expect(page.locator('.session-status')).toContainText('Đang chờ duyệt');
     await go('admin/members');await page.getByLabel('Tìm học sinh').fill('');await page.getByLabel('Lớp',{exact:true}).selectOption('all');const studentRow=page.locator('.students-table tbody tr').filter({hasText:'binh-ui@example.com'});await studentRow.getByRole('button',{name:'Từ chối',exact:true}).click();await studentRow.getByRole('button',{name:'Duyệt lại',exact:true}).click();await go('home');await expect(page.locator('.session-status')).toContainText('Đang chờ kết quả');
@@ -40,7 +40,7 @@ async function main(){
     await go('home');await page.getByRole('button',{name:'Xem hướng dẫn'}).click();await expect(page.getByRole('dialog')).toBeVisible();await page.getByRole('button',{name:'Mình đã hiểu'}).click();
     const tabs=[await context.newPage(),await context.newPage()];
     await Promise.all(tabs.map(async(tab,i)=>{
-      tab.on('pageerror',e=>errors.push(e.message));await tab.goto(`${base}/?bin=R01#/register`);await tab.getByLabel('Mã học sinh',{exact:true}).fill('REG04');await tab.getByLabel('Họ và tên',{exact:true}).fill('Hoàng Nam');await tab.getByRole('button',{name:'Kiểm tra thông tin học sinh'}).click();await tab.getByLabel('Email',{exact:true}).fill(`nam-tab-${i}@example.com`);await tab.getByLabel('Mật khẩu',{exact:true}).fill('testpassword123');await tab.getByLabel('Xác nhận mật khẩu').fill('testpassword123');
+      tab.on('pageerror',e=>errors.push(e.message));await tab.goto(`${base}/?bin=R01#/register`);await tab.getByLabel('Mã học sinh',{exact:true}).fill('HS000008');await tab.getByLabel('Họ và tên',{exact:true}).fill('Hoàng Nam');await tab.getByRole('button',{name:'Kiểm tra thông tin học sinh'}).click();await tab.getByLabel('Email',{exact:true}).fill(`nam-tab-${i}@example.com`);await tab.getByLabel('Mật khẩu',{exact:true}).fill('testpassword123');await tab.getByLabel('Xác nhận mật khẩu').fill('testpassword123');
     }));
     await Promise.all(tabs.map(tab=>tab.getByRole('button',{name:'Tạo tài khoản',exact:true}).click()));
     await expect.poll(async()=>{

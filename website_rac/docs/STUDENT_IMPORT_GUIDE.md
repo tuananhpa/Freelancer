@@ -3,14 +3,14 @@
 ## Admin nhập danh sách
 1. Vào **Quản trị → Học sinh**.
 2. Chọn **Tải file mẫu**. File có sheet danh sách và hướng dẫn; sửa/xóa hai dòng ví dụ trước khi nhập danh sách thật.
-3. Điền **Họ và tên**, **Lớp** (ví dụ 11T10, 12A1). Lớp mới sẽ được tự tạo khi xác nhận import. **Mã học sinh** tùy chọn, để trống để web tạo mã HS…; nếu dùng mã số sẵn có, đặt cột Excel là Text để giữ số 0 ở đầu.
+3. Điền **Họ và tên**, **Lớp** (ví dụ 11T10, 12A1). Lớp mới sẽ được tự tạo khi xác nhận import. **Mã học sinh** không cần điền; học sinh mới luôn được cấp HS000001, HS000002… tăng dần. Mã có sẵn trong file chỉ dùng nhận diện khi nhập lại; nếu dùng mã số sẵn có, đặt cột Excel là Text để giữ số 0 ở đầu.
 4. Chọn file .xlsx/.xls rồi **Xem trước danh sách**. Chưa có dữ liệu nào được nhập ở bước này.
 5. Kiểm tra mã, tên, lớp và số dòng thêm/bỏ qua rồi **Xác nhận nhập**.
 
 File tối đa 10 MB, tổng danh sách tối đa 5.000 học sinh. File có dòng lỗi sẽ bị từ chối toàn bộ để bạn sửa rồi nhập lại. Sheet Hướng dẫn được bỏ qua; những sheet danh sách còn lại đều được đọc và cần cột Họ và tên/Lớp. Không dùng công thức trong ba cột học sinh.
 
 ## Xuất mã để gửi học sinh
-Chọn bất kỳ lớp hiện có ở bộ lọc rồi **Xuất Excel**. File gồm mã, tên, lớp. Chọn tất cả lớp thì mỗi lớp nằm trong một sheet. Bộ lọc tìm kiếm chỉ ảnh hưởng bảng hiển thị; file xuất gồm toàn bộ học sinh của lớp được chọn, để tránh bỏ sót khi còn từ khóa tìm kiếm.
+Chọn bất kỳ lớp hiện có ở bộ lọc rồi **Xuất Excel**. File gồm mã, tên, lớp. Chọn tất cả lớp thì toàn bộ học sinh nằm trong một sheet Danh sách, không chỉ lớp đầu tiên. Bộ lọc tìm kiếm chỉ ảnh hưởng bảng hiển thị; file xuất gồm toàn bộ học sinh của lớp được chọn, để tránh bỏ sót khi còn từ khóa tìm kiếm.
 
 ## Admin quản lý lớp
 Vào **Cài đặt → Quản lý lớp** để thêm lớp, đổi tên hoặc xóa lớp trống. Đổi tên cập nhật đồng bộ lớp của học sinh, tài khoản, lịch sử và dữ liệu thi đua; mã học sinh/điểm được giữ. Không xóa lớp đã có học sinh, tài khoản hoặc dữ liệu điểm. Tên lớp tối đa 31 ký tự để xuất được thành tên sheet Excel.
@@ -28,7 +28,7 @@ Họ tên không phân biệt hoa/thường hoặc số khoảng trắng, nhưng
 ## Duyệt và trạng thái
 Trong Cài đặt, admin chọn **Cần admin duyệt** hoặc **Tham gia lớp ngay khi đăng ký**. Khi cần duyệt, tài khoản được tạo nhưng chưa được ghi điểm đến khi duyệt. Admin có thể từ chối và **Duyệt lại** sau khi kiểm tra; không cần cấp mã mới. Học sinh không tự đổi lớp khác với danh sách.
 
-Mã đã có cùng tên/lớp được bỏ qua khi nhập lại. Mã đã thuộc người/lớp khác báo lỗi. Nếu cùng tên trong cùng lớp mà không có mã, cần nhập mã riêng để phân biệt hai học sinh; không tự tạo bản trùng không kiểm soát.
+Mã đã có hoặc mã nguồn từ file cùng tên/lớp được bỏ qua khi nhập lại. Mã nguồn không được dùng để đăng ký; hãy gửi mã HS trong file xuất mới. Mã đã thuộc người/lớp khác báo lỗi. Nếu cùng tên trong cùng lớp mà không có mã, cần nhập mã riêng để phân biệt hai học sinh; không tự tạo bản trùng không kiểm soát.
 
 ## Dữ liệu cũ và giới hạn frontend
 Tài khoản cũ có lớp hợp lệ được bổ sung mã và giữ lại email, điểm, mật khẩu đã tạo và lịch sử. Bản frontend vẫn dùng localStorage: admin nhập ở máy này chưa đồng bộ sang điện thoại/máy khác. Luồng đầu cuối hiện thử được trên cùng trình duyệt; Cloudflare Tunnel chỉ chia sẻ giao diện, không chia sẻ database.
@@ -39,3 +39,5 @@ Tài khoản cũ có lớp hợp lệ được bổ sung mã và giữ lại ema
 Thêm bảng `students` chứa code, name, classId, userId/claimedAt, createdAt. Chỉ admin có quyền import/export; server xác minh mã/tên và claim mã trong một transaction cùng tạo hồ sơ tài khoản. Không cho học sinh tải toàn bộ danh sách qua client để tự kiểm tra. Sử dụng Firebase Auth hoặc hệ thống Auth tương thích cho mật khẩu, không chuyển passwordHash cục bộ làm Auth thật.
 
 API/realtime thay cho `students()`, `previewStudents()`, `importStudents()`, `verifyStudent()` và `register()` trong repository. Xuất Excel phải kiểm tra quyền server và dùng dữ liệu chung. Mức duyệt lấy từ settings server, lớp lấy từ roster, không tin classId do người đăng ký gửi lên.
+
+Mã đã cấp trước khi áp dụng dãy tăng dần được giữ nguyên để bảo toàn đăng ký. Bộ đếm được lưu, tiếp tục sau số HS sáu chữ số lớn nhất; xem trước hoặc import thất bại không tiêu thụ mã.

@@ -1,0 +1,81 @@
+/* Quiet botanical details sit in margins and tinted surfaces, away from data. */
+body{
+  background-color:#f5f9f5;
+  background-image:url('/eco-flourish.svg'),url('/eco-ripple.svg');
+  background-size:300px auto,330px auto;
+  background-position:left -110px top 80px,right -130px bottom 30px;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+}
+.site-shell{box-shadow:0 8px 32px #17422907}
+.site-header:after{
+  content:"";position:absolute;bottom:-1px;left:32px;right:32px;height:1px;
+  background:linear-gradient(90deg,transparent,#bad9c3 25%,#bad9c3 70%,transparent);
+  pointer-events:none;
+}
+.hero:before{
+  content:"";position:absolute;right:18px;bottom:-15px;width:300px;height:170px;
+  background:url('/eco-ripple.svg') center/contain no-repeat;pointer-events:none;
+}
+.points-strip{
+  background-image:url('/eco-ripple.svg'),linear-gradient(110deg,#effaf1,#f2fcf6);
+  background-repeat:no-repeat;background-size:280px auto,cover;
+  background-position:right -24px bottom -25px,center;
+}
+.page-content,.admin-body{
+  background-image:url('/nature.svg'),url('/eco-flourish.svg');
+  background-size:850px auto,330px auto;
+  background-position:right -50px top -30px,left -90px bottom -20px;
+  background-repeat:no-repeat;
+}
+.page-heading{position:relative}
+.page-heading:after{
+  content:"";position:absolute;left:0;bottom:-12px;width:62px;height:2px;
+  background:linear-gradient(90deg,#77af89,#d3e8d7);border-radius:2px;pointer-events:none;
+}
+.competition-banner{
+  background-image:url('/eco-ripple.svg');background-repeat:no-repeat;
+  background-size:340px auto;background-position:right 10px bottom -60px;
+  border:1px solid #deeee1;
+}
+.accepted{
+  background-image:url('/eco-flourish.svg'),linear-gradient(135deg,#f2fbf3,#f3faf7);
+  background-repeat:no-repeat;background-size:160px auto,cover;
+  background-position:right -70px top -10px,center;
+}
+.footer-note{
+  background-image:url('/eco-ripple.svg'),linear-gradient(110deg,#eff9f1,#f0fbf4);
+  background-repeat:no-repeat;background-size:270px auto,cover;
+  background-position:right 15% bottom -105px,center;
+}
+.footer-note>.leaf-art:last-child{opacity:.6}
+.admin-sidebar{
+  background-image:url('/eco-flourish.svg');background-repeat:no-repeat;
+  background-size:220px auto;background-position:left -60px bottom -10px;
+}
+.auth-layout{
+  background-image:url('/nature.svg'),url('/eco-flourish.svg');
+  background-size:680px auto,320px auto;
+  background-position:right -130px top -65px,left -45px bottom -30px;
+  background-repeat:no-repeat;
+}
+.auth-story{
+  background-image:url('/eco-ripple.svg');background-size:300px auto;
+  background-repeat:no-repeat;background-position:left -50px bottom 10px;
+}
+.enrollment-notice{background-image:url('/eco-ripple.svg');background-size:160px auto;background-repeat:no-repeat;background-position:right -50px bottom -60px}
+.site-footer{background-image:url('/eco-ripple.svg');background-size:190px auto;background-repeat:no-repeat;background-position:right 35px bottom -120px}
+@media(max-width:700px){
+  body{background-image:none;background-color:white}
+  .site-shell{box-shadow:none}
+  .site-header:after{left:18px;right:18px}
+  .hero:before{width:160px;height:100px;right:-15px;bottom:0;opacity:.6}
+  .points-strip{background-image:none}
+  .page-content,.admin-body{background-size:440px auto,200px auto;background-position:right -170px top -20px,left -85px bottom -15px}
+  .page-heading:after{width:45px;bottom:-10px}
+  .admin-sidebar{background-image:none}
+  .competition-banner{background-size:200px auto;background-position:right -55px bottom -45px}
+  .auth-layout{background-size:440px auto,200px auto;background-position:right -180px top -45px,left -90px bottom -15px}
+  .auth-story{background-image:none}
+  .site-footer{background-image:none}
+}

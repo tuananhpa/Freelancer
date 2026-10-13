@@ -1,5 +1,11 @@
 # Danh sách học sinh và đăng ký bằng mã
 
+## Sửa xuất Excel và dãy mã HS
+- Xuất tất cả lớp thành một sheet Danh sách chứa toàn bộ học sinh; xuất riêng lớp vẫn một sheet của lớp đó. Không dùng dữ liệu đang lọc tìm kiếm hoặc chỉ lớp đầu tiên.
+- Học sinh mới luôn có mã HS + 6 chữ số tăng dần. studentSequence được lưu cùng danh sách; preview/lỗi không tiêu thụ mã. Mã cũ đã cấp không đổi.
+- Mã nguồn từ Excel được lưu nội bộ làm sourceCode để nhận diện file nhập lại, không dùng để đăng ký; file xuất cung cấp mã HS thực tế.
+- Kiểm chứng: 33 unit tests đạt, build đạt. Browser tải file tất cả lớp sau import100: 104 học sinh (100 mới + 4 mẫu), một sheet, mã HS duy nhất đủ 6 số; vẫn đầy đủ khi bảng có từ khóa tìm kiếm. Luồng đăng ký và 36 responsive checks đạt.
+
 ## Cập nhật lớp động
 Yêu cầu mới thay thế giới hạn ba lớp ở phần quyết định cũ bên dưới. Runtime dùng state.classIds, khởi tạo/migrate các lớp có trong dữ liệu. Import báo newClasses khi xem trước và tạo lớp nguyên tử khi xác nhận. Cài đặt có thêm/đổi tên/xóa lớp chưa dùng, cập nhật toàn bộ liên kết khi đổi tên. File 100 học sinh / 10 lớp đã kiểm tra import thành công.
 

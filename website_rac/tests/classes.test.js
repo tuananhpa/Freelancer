@@ -13,14 +13,14 @@ test('Excel preview lists new classes without saving; confirmation creates them 
 });
 test('admin adds, renames, and removes only unused classes',()=>{
   const r=createRepository(null);r.addClass('12a1');assert.ok(r.classes().includes('12A1'));assert.throws(()=>r.addClass('12A1'),/đã/);
-  r.importStudents([{code:'NEWCLASS',name:'An',classId:'12A1'}]);r.renameClass('12A1','12A2');assert.equal(r.students().find(s=>s.code==='NEWCLASS').classId,'12A2');assert.ok(!r.classes().includes('12A1'));
+  r.importStudents([{code:'NEWCLASS',name:'An',classId:'12A1'}]);r.renameClass('12A1','12A2');assert.equal(r.students().find(s=>s.sourceCode==='NEWCLASS').classId,'12A2');assert.ok(!r.classes().includes('12A1'));
   assert.throws(()=>r.removeClass('12A2'),/học sinh|dữ liệu/);assert.throws(()=>r.renameClass('12A2','11T1'),/đã/);
   r.addClass('Lớp thử');r.removeClass('LỚP THỬ');assert.ok(!r.classes().includes('LỚP THỬ'));
 });
 test('class names similar to guide sheet never lose students in Excel roundtrip',()=>{
   const r=createRepository(null);r.importStudents([{code:'GUIDE-A',name:'Nguyễn An',classId:'HUONG DAN'},{code:'GUIDE-B',name:'Trần Bình',classId:'HƯỚNG-DẪN'}]);
-  const rows=r.students().filter(s=>s.code.startsWith('GUIDE-'));
-  const wb=makeStudentWorkbook(rows),parsed=parseStudentWorkbook(XLSX.write(wb,{type:'array',bookType:'xlsx'}));assert.equal(parsed.length,2);assert.deepEqual(parsed.map(s=>s.code).sort(),['GUIDE-A','GUIDE-B']);
+  const rows=r.students().filter(s=>s.sourceCode?.startsWith('GUIDE-'));
+  const wb=makeStudentWorkbook(rows),parsed=parseStudentWorkbook(XLSX.write(wb,{type:'array',bookType:'xlsx'}));assert.equal(parsed.length,2);assert.deepEqual(parsed.map(s=>s.code).sort(),rows.map(s=>s.code).sort());
 });
 test('rename preserves memberships, past transactions, class totals and codes',()=>{
   const r=createRepository(null);const before=r.rankings('all').find(c=>c.id==='11T1');
@@ -31,6 +31,6 @@ test('rename preserves memberships, past transactions, class totals and codes',(
 test('existing 100-student file imports all ten classes and registration uses new class',async()=>{
   const bytes=fs.readFileSync('outputs/01a13292-3361-7013-8a82-2a7bff858cbc/danh-sach-100-hoc-sinh-10-lop.xlsx');
   const r=createRepository(null),preview=r.previewStudents(parseStudentWorkbook(bytes));assert.equal(preview.added,100);assert.equal(preview.newClasses.length,7);
-  r.importStudents(preview.students);assert.equal(r.classes().length,10);assert.equal(r.students().filter(s=>s.code.startsWith('TEST-')).length,100);
-  r.updateSettings({approvalMode:'instant'});await r.register({studentCode:'TEST-100',name:'Đỗ Bảo Vy',email:'ten-classes@example.com',password:'12345678'});assert.equal(r.currentUser().classId,'11T10');
+  r.importStudents(preview.students);assert.equal(r.classes().length,10);assert.equal(r.students().filter(s=>s.sourceCode?.startsWith('TEST-')).length,100);
+  r.updateSettings({approvalMode:'instant'});await r.register({studentCode:r.students().find(s=>s.sourceCode==='TEST-100').code,name:'Đỗ Bảo Vy',email:'ten-classes@example.com',password:'12345678'});assert.equal(r.currentUser().classId,'11T10');
 });

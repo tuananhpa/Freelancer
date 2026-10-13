@@ -5,19 +5,19 @@ const repo = () => {const r=createRepository(null);r.importStudents([{code:'TEST
 test('instant membership setting applies to new requests, not pending ones',async()=>{
   const r=repo(); r.updateSettings({approvalMode:'instant'});
   assert.equal(r.users().find(u=>u.id==='student-4').membership,'pending');
-  await r.register({studentCode:'TEST-LAN',name:'Lan',email:'lan@example.com',password:'12345678'});
+  await r.register({studentCode:r.students().find(s=>s.sourceCode==='TEST-LAN').code,name:'Lan',email:'lan@example.com',password:'12345678'});
   assert.equal(r.currentUser().membership,'approved');
 });
 test('registration validates email, duplicates and login', async () => {
   const r=repo();
-  await assert.rejects(()=>r.register({studentCode:'TEST-AN',name:'An',email:'bad',password:'12345678'}),/Email/);
-  await r.register({studentCode:'TEST-AN',name:'An',email:'an@example.com',password:'12345678'});
-  await assert.rejects(()=>r.register({studentCode:'TEST-AN',name:'An',email:'AN@example.com',password:'12345678'}),/đã/);
+  await assert.rejects(()=>r.register({studentCode:r.students().find(s=>s.sourceCode==='TEST-AN').code,name:'An',email:'bad',password:'12345678'}),/Email/);
+  await r.register({studentCode:r.students().find(s=>s.sourceCode==='TEST-AN').code,name:'An',email:'an@example.com',password:'12345678'});
+  await assert.rejects(()=>r.register({studentCode:r.students().find(s=>s.sourceCode==='TEST-AN').code,name:'An',email:'AN@example.com',password:'12345678'}),/đã/);
   await assert.rejects(()=>r.login('an@example.com','wrong'),/không đúng/);
   await r.login('an@example.com','12345678'); assert.equal(r.currentUser().name,'An');
 });
 test('membership approval required and class validated',async()=>{
-  const r=repo(); await r.register({studentCode:'TEST-AN',name:'An',email:'an@example.com',password:'12345678'});
+  const r=repo(); await r.register({studentCode:r.students().find(s=>s.sourceCode==='TEST-AN').code,name:'An',email:'an@example.com',password:'12345678'});
   assert.throws(()=>r.requestClass('11T4'),/không hợp lệ/);
   r.requestClass('11T2'); const id=r.currentUser().id;
   assert.equal(r.currentUser().membership,'pending');
