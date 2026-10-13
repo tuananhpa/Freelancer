@@ -1,5 +1,7 @@
 # Tự chạy và đưa website lên Cloudflare
 
+**Người dùng đã làm rõ muốn Cloudflare Tunnel. Hướng dẫn phù hợp là [CLOUDFLARE_TUNNEL.md](CLOUDFLARE_TUNNEL.md). Tài liệu bên dưới chỉ là lựa chọn deploy Workers riêng, không cần làm khi chạy Tunnel.**
+
 Cấu hình trong dự án sử dụng **Cloudflare Workers Static Assets** để phục vụ frontend đã build từ Vite. Hiện chưa có Worker API hay Firebase thật. Deploy chỉ đưa giao diện lên Internet; tài khoản/điểm vẫn riêng trên từng trình duyệt đến khi nối backend.
 
 ## 1. Những gì đã được chuẩn bị

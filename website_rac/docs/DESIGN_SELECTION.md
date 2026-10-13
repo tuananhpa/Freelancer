@@ -1,5 +1,10 @@
 # Lựa chọn thiết kế
 
+## Bổ sung theo yêu cầu danh sách học sinh
+Giữ A3 và tông xanh. Trang admin Học sinh có import Excel, ba số tổng quan, bảng hàng xen kẽ xanh nhạt, mã xanh đậm, chip lớp/trạng thái. Đăng ký theo hai bước, nền lá cây SVG nguyên bản ở public/nature.svg. Viền nhẹ dưới header, bên cạnh menu ngang và cạnh sidebar phân tách thông tin; mobile giữ bố cục và table scroll. Ảnh người dùng gửi là tham khảo chức năng, không sao chép màu cam hoặc thương hiệu trong ảnh.
+
+Ảnh kiểm tra frontend: docs/mockups/student-admin.png, student-registration.png.
+
 ## Đã chốt để triển khai — 13/10/2026
 Người dùng gửi ảnh A3 và yêu cầu bắt đầu tạo web. Dùng `docs/mockups/A3-approved.png` làm tham chiếu; các ghi chú chờ chốt A2/A3 bên dưới là lịch sử.
 

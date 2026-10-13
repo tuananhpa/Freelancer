@@ -1,0 +1,10 @@
+# Implementation ledger — docs/FRONTEND_PLAN.md
+
+- Ruling: workspace has no Git repository or existing application; implement in provided workspace with no Git setup/worktree or commit.
+- Ruling: selected mockup A is visual approval under client-web-flow; no extra spec/plan approval loop. Actual backend is deferred.
+- Task 1 complete: tests written first, observed module-not-found failure, implemented repository and observed 4/4 pass. Search composes with filter, public lookup excludes drafts/client identity, form validates, blocked storage reports unsaved/unsent.
+- Task 2 complete: renderer exports HTML for 8 routes + 404, static assets, per-page metadata, optional canonical/sitemap when real SITE_URL is configured. Browser gets sanitized public fixture, not raw source data.
+- Task 3 complete: responsive A layout, mobile nav, light/dark, filtering/search, FAQ, form draft/export, image fallback. Initial browser run caught 10px horizontal overflow at 390px from hero-orbit pseudo-element; reproduced by disabling that element, constrained its geometry, observed 27 browser checks pass. Mobile project previews moved above text after screenshot review.
+- Whole-project review: fresh reviewer reported form submission without JS and insufficient dark validation contrast. Both reproduced with failing regression checks. Save/export now start disabled and enable only after local JS handlers install; noscript explanation added. Dark error foreground changed to #FFAAAA. Regression checks rerun.
+- Assets: ceramics generated via built-in image_gen; lossless WebP transcode reduces 2,266,181 bytes to 1,434,394 with original dimensions/pixels preserved. Share PNG rendered from code-native SVG for social previews.
+- Task 4 complete: README explains content, local draft, backend scope, hosting and domain. Final build, 4 logic tests, 43 browser checks and 2 regression checks pass. Configured-origin metadata/sitemap validated using reserved .invalid domain, then restored local build. Verification report and screenshots accompany delivery. Open-in-Codex preview request queued. No deployment requested/performed.

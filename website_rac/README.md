@@ -1,5 +1,11 @@
 # Trường học xanh
 
+## Luồng mới: học sinh đăng ký bằng mã đã nhập từ Excel
+Danh sách lớp được quản lý động. Admin có thể thêm/đổi tên/xóa lớp trống trong Cài đặt; import Excel tự tạo lớp chưa tồn tại khi xác nhận. Không giới hạn 11T1–11T3, đây chỉ là ba lớp minh họa ban đầu.
+Admin → Học sinh có tải file mẫu, xem trước/xác nhận import, tìm kiếm/lọc lớp và xuất Excel theo lớp. Chỉ mã trong danh sách kèm đúng họ tên mới được đăng ký, mỗi mã một tài khoản; lớp gắn tự động. Hướng dẫn chi tiết: [STUDENT_IMPORT_GUIDE.md](docs/STUDENT_IMPORT_GUIDE.md).
+
+Các mô tả chọn lớp tự do trước đây được thay bằng luồng này. Hai chế độ cần duyệt/tham gia ngay tiếp tục áp dụng khi tạo tài khoản. Dữ liệu hiện vẫn riêng trên từng trình duyệt, cần backend để admin nhập và học sinh đăng ký trên các thiết bị khác nhau.
+
 Frontend tiếng Việt theo thiết kế A3. Có trang chủ, tài khoản, chọn lớp, lịch sử, bảng thi đua và quản trị. Admin chỉnh điểm, nội dung, ảnh, duyệt thành viên và chọn chế độ gia nhập lớp.
 
 ## Chạy dự án
@@ -21,9 +27,11 @@ npm test
 Kiểm tra trình duyệt: bật server ở cổng 5173 rồi chạy `npm run test:ui`. Script dùng Google Chrome đã cài trên máy. Ảnh kiểm tra ở `docs/mockups/frontend-desktop.png` và `docs/mockups/frontend-mobile.png`.
 
 ## Các màn hình
+
+Trong **Admin → Cài đặt → Tạo mã QR cho thùng rác**, nhập địa chỉ web đang dùng và mã R01/R02… rồi tạo QR, tải PNG hoặc sao chép link. Địa chỉ mặc định là trang hiện tại. Khi chạy Quick Tunnel hãy dùng link Tunnel còn hoạt động; link đổi thì tạo lại QR. QR được tạo ngay trong trình duyệt, không cần dịch vụ tạo ảnh bên ngoài. Chức năng này tạo đường dẫn đến thùng, chưa đăng ký thiết bị với backend.
 - `#/home`: phiên bỏ rác, điểm cá nhân/lớp, rác được nhận, lịch sử gần nhất, thi đua tuần.
 - `#/register`, `#/login`: tạo/đăng nhập tài khoản cục bộ, giữ ngữ cảnh thùng từ QR.
-- `#/classes`: chọn 11T1/11T2/11T3, gửi yêu cầu hoặc tham gia ngay theo cài đặt.
+- `#/classes`: xem lớp được gắn từ danh sách học sinh và trạng thái phê duyệt.
 - `#/rankings`, `#/history`, `#/account`.
 - `#/admin`: tổng quan; `/members`, `/points`, `/content`, `/settings` là các trang quản trị.
 
@@ -41,7 +49,21 @@ Ban đầu hiển thị tài khoản học sinh đã được duyệt để xem 
 
 Hợp đồng dữ liệu và việc cần nối thiết bị: [docs/INTEGRATION_CONTRACT.md](docs/INTEGRATION_CONTRACT.md). Không có Firebase/ESP32 thật nào được xác nhận hoạt động trong giai đoạn frontend này.
 
-## Cloudflare và bàn giao backend
+## Cloudflare Tunnel — cách chạy được chọn
+
+Đọc [hướng dẫn Cloudflare Tunnel](docs/CLOUDFLARE_TUNNEL.md). Máy bạn chạy web và tunnel cấp URL để thiết bị khác truy cập.
+
+Mở hai terminal tại thư mục dự án:
+```sh
+# Terminal 1
+npm run tunnel:serve
+# Terminal 2
+npm run tunnel:open
+```
+
+Copy URL trycloudflare.com từ terminal 2. Giữ cả hai tiến trình đang chạy. Lệnh Tunnel dùng cổng 4173, không cần đăng nhập Wrangler hay deploy Workers. Link thay đổi khi tạo Quick Tunnel mới; link cố định dùng named tunnel/domain như tài liệu.
+
+## Workers (lựa chọn khác) và bàn giao backend
 - [Hướng dẫn tự setup/chạy/deploy Cloudflare](docs/CLOUDFLARE_SETUP.md).
 - [Bản đồ file hỗ trợ backend và thứ tự nối](docs/BACKEND_HANDOFF.md).
 - Cấu hình Cloudflare: `wrangler.json`, dùng Workers Static Assets phục vụ thư mục `dist`.

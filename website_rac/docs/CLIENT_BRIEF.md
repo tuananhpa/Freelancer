@@ -1,5 +1,16 @@
 # Website tích điểm phân loại rác học đường
 
+## Điều chỉnh mới nhất — lớp động
+Admin có quyền quản lý lớp. Excel có tên lớp chưa có sẽ tự tạo lớp cùng lúc xác nhận import. Bỏ giới hạn cứng 11T1–11T3; đây chỉ là dữ liệu khởi tạo. Bộ lọc lớp, đăng ký, thi đua và xuất Excel dùng danh sách lớp động. Đổi tên lớp bảo toàn liên kết học sinh và điểm; chỉ xóa lớp trống chưa có dữ liệu.
+
+## Cập nhật mới nhất — danh sách học sinh bằng Excel
+- Admin import Excel: mã học sinh tùy chọn, họ tên, lớp; xem trước rồi xác nhận. Mã trống tự sinh.
+- Bảng học sinh có mã/tên/lớp/tài khoản/trạng thái; lọc lớp và xuất mã/tên của từng lớp để gửi học sinh.
+- Chỉ học sinh có mã đã nhập được đăng ký bằng mã + đúng tên + email (giữ mật khẩu để đăng nhập). Mã dùng một lần, lớp tự gắn từ danh sách; thay thế đăng ký mở và chọn lớp tự do.
+- Chế độ cần admin duyệt hoặc tham gia ngay vẫn áp dụng khi đăng ký.
+- Ảnh tham khảo chỉ minh họa chức năng, không dùng nhận diện/màu cam của ảnh. Giữ tông xanh, thêm nền lá cây và viền nhẹ phân tách menu/nội dung.
+- Frontend tiếp tục dùng dữ liệu trình duyệt. Đồng bộ roster và quyền đăng ký trên thiết bị khác cần backend/Firebase.
+
 ## Quyết định mới nhất — triển khai frontend A3
 - Ngày 13/10/2026, người dùng gửi ảnh A3 và yêu cầu tiếp tục tạo web. Thiết kế A3 được chốt cho triển khai, thay thế các ghi chú đang chờ chốt bên dưới.
 - Người dùng xác nhận admin có thể chọn hai chế độ tại cài đặt: cần admin duyệt hoặc chọn lớp là tham gia ngay.

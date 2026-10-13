@@ -1,10 +1,16 @@
 # File nào hỗ trợ việc làm backend?
 
+## Bổ sung: danh sách lớp động
+`src/class-registry.js` chuẩn hóa tên và migration, `src/class-panel.js` quản lý lớp ở Cài đặt. Repository thêm `classes/addClass/renameClass/removeClass`, preview import có `newClasses`. Backend phải tạo lớp mới cùng import, giữ liên kết khi đổi tên, ngăn xóa lớp có dữ liệu và phân quyền server. Không còn whitelist ba lớp cố định trong nghiệp vụ.
+
+## Bổ sung mới: học sinh nhập từ Excel
+Đọc `STUDENT_IMPORT_GUIDE.md` và `STUDENT_IMPORT_PLAN.md`. `src/roster.js` chứa validation/mã tự sinh, `src/student-excel.js` đọc/ghi workbook, `src/student-views.js` có bảng roster và đăng ký hai bước. Repository có `students`, `previewStudents`, `importStudents`, `verifyStudent`; `register` hiện bắt buộc studentCode và claim một lần. Backend cần thực thi import/verify/claim dưới quyền server, dữ liệu roster dùng chung, classId từ roster; không giữ cách kiểm tra toàn danh sách ở client khi làm thật.
+
 ## Bắt đầu từ tài liệu
 1. `CLIENT_BRIEF.md`: nghiệp vụ đã chốt, đặc biệt hai chế độ gia nhập lớp và QR trước đăng nhập.
 2. `DESIGN_SELECTION.md`: bố cục A3 và các quyết định giao diện.
 3. `INTEGRATION_CONTRACT.md`: phiên bỏ rác, payload thiết bị, dữ liệu dự kiến, nguyên tắc cộng điểm và checklist kiểm tra đầu cuối.
-4. `CLOUDFLARE_SETUP.md`: chạy máy, kiểm tra build, deploy frontend và domain.
+4. `CLOUDFLARE_TUNNEL.md`: cách chạy được chọn, máy host web và Tunnel cho đường link truy cập. `CLOUDFLARE_SETUP.md` là lựa chọn deploy Workers riêng.
 
 Đây là tài liệu bàn giao phạm vi, không phải backend đang chạy. `FRONTEND_PLAN.md` là kế hoạch frontend đã thực hiện, không dùng thay kế hoạch backend.
 

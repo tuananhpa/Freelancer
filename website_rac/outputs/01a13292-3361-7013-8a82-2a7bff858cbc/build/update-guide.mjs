@@ -1,0 +1,11 @@
+import fs from 'node:fs/promises';
+import {SpreadsheetFile} from 'file:///C:/Users/buiti/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/@oai/artifact-tool/dist/artifact_tool.mjs';
+const folder=new URL('../',import.meta.url).pathname.replace(/^\/([A-Za-z]:)/,'$1'),path=folder+'danh-sach-100-hoc-sinh-10-lop.xlsx';
+const bytes=await fs.readFile(path),wb=await SpreadsheetFile.importXlsx(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength));
+const dataBefore=JSON.stringify(wb.worksheets.getItem('Danh sách').getRange('A1:C101').values);
+const guide=wb.worksheets.getItem('Hướng dẫn');
+guide.getRange('A6:A8').values=[['Lớp chưa tồn tại sẽ được tạo tự động khi admin xác nhận nhập Excel.'],['Admin có thể thêm, đổi tên và xóa lớp trống trong Cài đặt → Quản lý lớp.'],['File này kiểm tra 100 học sinh thuộc 10 lớp; không còn giới hạn ba lớp cố định.']];
+wb.recalculate();
+if(JSON.stringify(wb.worksheets.getItem('Danh sách').getRange('A1:C101').values)!==dataBefore)throw Error('Student data changed');
+const preview=await wb.render({sheetName:'Hướng dẫn',range:'A1:A9',scale:1.5,format:'png'});await fs.writeFile(folder+'guide-preview.png',new Uint8Array(await preview.arrayBuffer()));
+await (await SpreadsheetFile.exportXlsx(wb)).save(path);console.log('Updated guide only; all 100 student records unchanged.');
