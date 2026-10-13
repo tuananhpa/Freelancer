@@ -1,0 +1,22 @@
+{
+  "name": "truong-hoc-xanh",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "node --test tests/*.test.js",
+    "test:ui": "node tests/browser.cjs",
+    "cf:login": "wrangler login",
+    "cf:dev": "npm run build && wrangler dev --local --ip 127.0.0.1 --port 8787",
+    "cf:check": "npm run build && wrangler deploy --dry-run",
+    "cf:deploy": "npm run build && wrangler deploy"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "vite": "^7.1.0",
+    "wrangler": "^4.149.0"
+  }
+}

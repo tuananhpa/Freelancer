@@ -2,10 +2,10 @@
 
 Ngày kiểm tra: 10/10/2026.
 
-- Public: https://transportation-vessel-while-podcast.trycloudflare.com/
-- Admin: https://transportation-vessel-while-podcast.trycloudflare.com/admin
+- Public: https://lloyd-managers-jessica-networks.trycloudflare.com/
+- Admin: https://lloyd-managers-jessica-networks.trycloudflare.com/admin
 - Local: http://127.0.0.1:4180/
-- Server Node PID: 25364. Cloudflared PID: 34888.
+- Server Node PID: 30136. Cloudflared PID: 28244.
 
 Link public hoạt động khi máy có mạng và hai tiến trình trên còn chạy. Khởi động tunnel mới sẽ tạo link mới. Chỉ thư mục `dist` được phục vụ; tài liệu khách hàng, mã nguồn và file runtime không được công khai.
 

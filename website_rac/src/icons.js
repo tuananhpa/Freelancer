@@ -1,0 +1,22 @@
+const paths={
+  home:'<path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/>',
+  trophy:'<path d="M8 3h8v6a4 4 0 0 1-8 0zM8 5H4v3a4 4 0 0 0 4 4m8-7h4v3a4 4 0 0 1-4 4M12 13v6m-4 2h8m-6-2h4"/>',
+  clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v6l4 2"/>',
+  user:'<circle cx="12" cy="7" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/>',
+  users:'<circle cx="12" cy="8" r="3"/><path d="M6 21v-2a6 6 0 0 1 12 0v2zM5 6a3 3 0 0 0 0 6M19 6a3 3 0 0 1 0 6M4 15a4 4 0 0 0-3 4v2h3m16-6a4 4 0 0 1 3 4v2h-3"/>',
+  bin:'<path d="M5 6h14M9 6V3h6v3M7 6l1 15h8l1-15M10 10v7m4-7v7"/>',
+  bottle:'<path d="M10 2h4v5l3 4v10a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1V11l3-4zM10 5h4"/>',
+  can:'<ellipse cx="12" cy="5" rx="6" ry="3"/><path d="M6 5v14c0 4 12 4 12 0V5M6 8c2 3 10 3 12 0"/>',
+  leaf:'<path d="M4 16C2 7 12 3 21 3c0 10-5 19-14 16M3 22 16 9"/>',
+  image:'<rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="1.5"/><path d="m3 17 5-5 4 4 4-6 5 7"/>',
+  check:'<circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/>',
+  arrow:'<path d="M4 12h16m-6-6 6 6-6 6"/>',
+  qr:'<path d="M3 3h6v6H3zM15 3h6v6h-6zM3 15h6v6H3zM15 15h2v2h-2zM20 14v7h-5m-3-9h3m-3 5v4"/>',
+  settings:'<path d="m9 3-1 3-3 1v4l-2 1 2 1v4l3 1 1 3h6l1-3 3-1v-4l2-1-2-1V7l-3-1-1-3z"/><circle cx="12" cy="12" r="3"/>',
+  logout:'<path d="M9 3H4v18h5m5-14 5 5-5 5m-6-5h12"/>',
+  menu:'<path d="M4 6h16M4 12h16M4 18h16"/>',
+  shield:'<path d="m12 2 9 4v6c0 5-9 10-9 10S3 17 3 12V6z"/><path d="m8 12 3 3 5-6"/>',
+  close:'<path d="m6 6 12 12M6 18 18 6"/>',
+  search:'<circle cx="10" cy="10" r="7"/><path d="m15 15 6 6"/>',
+};
+export function icon(name,cls='') {return `<svg class="icon ${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[name]||paths.leaf}</svg>`;}
