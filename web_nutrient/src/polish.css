@@ -1,0 +1,90 @@
+.photo-food {
+  background-image: url("/images/food-grid.webp");
+  background-size: 200% 200%;
+  background-position: 100% 0;
+  aspect-ratio: 1/1;
+  height: auto !important;
+}
+.photo-food .food-plate {
+  display: none;
+}
+.photo-food.photo-bread {
+  background-position: 0 0;
+}
+.photo-food.photo-yogurt {
+  background-position: 0 100%;
+}
+.photo-food.photo-pho {
+  background-position: 100% 100%;
+}
+.photo-food.photo-rice {
+  background-position: 100% 0;
+}
+.content-body > p {
+  font-size: 13px;
+}
+.content-body h3 {
+  font-size: 18px;
+}
+.journal-row .slot-name {
+  font-size: 12px;
+}
+.meal-description strong {
+  font-size: 13px;
+}
+.meal-time,
+.meal-description p,
+.meal-description small {
+  font-size: 11px;
+}
+.roadmap-card > p,
+.assistant-card p {
+  font-size: 12px;
+}
+.roadmap-card .text-btn,
+.suggestion-chips button {
+  font-size: 11px;
+}
+.topbar-actions .icon-btn {
+  min-width: 40px;
+  min-height: 40px;
+}
+.row-actions .icon-btn {
+  min-width: 32px;
+  min-height: 36px;
+}
+@media (max-width: 760px) {
+  .content-body > p {
+    font-size: 11px;
+  }
+  .content-body h3 {
+    font-size: 15px;
+  }
+  .journal-row .slot-name {
+    font-size: 11px;
+  }
+  .meal-description strong {
+    font-size: 12px;
+  }
+  .meal-time,
+  .meal-description p,
+  .meal-description small {
+    font-size: 10px;
+  }
+  .roadmap-card > p,
+  .assistant-card p {
+    font-size: 11px;
+  }
+  .roadmap-card .text-btn,
+  .suggestion-chips button {
+    font-size: 10px;
+  }
+  .row-actions .icon-btn {
+    min-width: 27px;
+    min-height: 30px;
+  }
+  .topbar-actions .icon-btn {
+    min-width: 32px;
+    min-height: 40px;
+  }
+}

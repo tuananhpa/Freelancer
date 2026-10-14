@@ -1,0 +1,35 @@
+{
+  "name": "nutri-teens",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev --ip 127.0.0.1 --port 8787",
+    "build": "vite build",
+    "test": "node --test tests/*.test.mjs",
+    "check": "tsc --noEmit",
+    "db:local": "wrangler d1 migrations apply nutri-teens --local",
+    "db:remote": "wrangler d1 migrations apply nutri-teens --remote",
+    "deploy": "npm run build && wrangler deploy",
+    "setup": "node scripts/setup-local.mjs",
+    "tunnel": "cloudflared tunnel --url http://127.0.0.1:8788 --no-autoupdate",
+    "preview": "npm run build && npm run db:local && npm run dev",
+    "gateway": "node scripts/gateway.mjs"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "lucide-react": "^0.468.0",
+    "web-push": "^3.6.7"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@types/web-push": "^3.6.4",
+    "@cloudflare/workers-types": "^5.20261014.1",
+    "typescript": "^5.9.0",
+    "vite": "^7.1.0",
+    "wrangler": "^4.40.0",
+    "playwright": "^1.56.0"
+  }
+}

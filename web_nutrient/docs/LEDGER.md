@@ -1,0 +1,15 @@
+# Implementation ledger — plan: docs/FRONTEND_PLAN.md
+- C approved; user explicitly requested full Cloudflare backend and local tunnel.
+- Parent repository D:/Freelancer contains unrelated changes; only web_nutrient touched/staged.
+- Infrastructure/domain/crypto: complete; domain/security routes unit suite passed.
+- D1/R2 auth/records/images/plans/progress/backups/reminders API: complete; integration 35 checks local and public HTTPS.
+- Gemini server adapter/admin write-only: implemented; key unavailable, live calls unverified.
+- Frontend C/dashboard/onboarding/diary/profile: implemented and Chrome-tested.
+- Content/30-day plan/33 experiments/8 healthy recipes/4 care guides/3 country categories/simulations/challenges: implemented; original adapted content because source unavailable.
+- PWA/push scheduler/gateway/start-stop scripts: implemented; real device push/camera unverified.
+- Independent reviewer found 7 actionable issues. All addressed with code changes and regression checks; details in VERIFICATION.md.
+- User requested git add/commit/push in repo D:/Freelancer; will stage only this project after verification.
+- Ruling: return full own meal history for local trial scale, rather than 90-day truncation. Large production datasets will need pagination.
+- Ruling: profile AI analysis is server-owned; invalidate on relevant profile changes, preserve on cosmetic changes. Never accept analysis from client.
+- Ruling: tunnel targets protected gateway 8788; local scheduler uses secret token and raw worker port accessible only loopback.
+- Final checks: 16 unit tests, TypeScript, build, 35 API checks, full Chrome flows and responsive screenshots passed.

@@ -1,0 +1,17 @@
+{
+  "name": "NuTri Teens — Cân bằng mỗi ngày",
+  "short_name": "NuTri Teens",
+  "lang": "vi",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f2f7f8",
+  "theme_color": "#087f8c",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
