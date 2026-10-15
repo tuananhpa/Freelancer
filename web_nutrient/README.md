@@ -13,6 +13,7 @@ Script build, áp migration D1 local, tạo secret riêng nếu chưa có, chạ
 - Link công khai: xem .local/tunnel.err.log hoặc `Select-String .local/tunnel.err.log -Pattern 'https://.*trycloudflare.com'`.
 - Mật khẩu admin được tạo ngẫu nhiên trong **.local/admin-access.txt**, không được commit.
 - Đăng nhập admin ở **/admin**. Người dùng thường tự tạo tài khoản từ trang chính.
+- Sau cấu hình, **Về ứng dụng** mở nhật ký và giữ đăng nhập admin. Menu có **Quản trị Gemini** để quay lại. Nếu chưa có hồ sơ, bổ sung trong Hồ sơ; các mục tiêu ban đầu chỉ là tham khảo.
 - Giữ máy và mạng hoạt động khi người khác thử. Quick Tunnel đổi URL mỗi lần khởi động; không phải hosting production.
 - Dừng đúng các dịch vụ dự án: `powershell -ExecutionPolicy Bypass -File scripts/stop-local.ps1`.
 - Sau thay đổi source: stop, chạy start lại để build và cập nhật manifest asset của Wrangler.

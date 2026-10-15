@@ -32,13 +32,35 @@ try {
     fullPage: true,
   });
   await page.getByRole("button", { name: "Về ứng dụng", exact: true }).click();
-  await page
-    .getByRole("button", { name: "Tạo tài khoản", exact: true })
-    .waitFor();
+  await page.waitForURL(base + "/");
   assert.equal(new URL(page.url()).pathname, "/");
-  assert.equal((await context.request.get(base + "/api/state")).status(), 401);
+  assert.equal((await context.request.get(base + "/api/state")).status(), 200,
+    "returning to the app must preserve the admin session");
+  await page.getByRole("heading", { name: "Nhật ký dinh dưỡng", exact: true }).waitFor();
+  await page.reload();
+  await page.getByRole("heading", { name: "Nhật ký dinh dưỡng", exact: true }).waitFor();
+  assert.equal(await page.getByRole("button", { name: "Tạo tài khoản", exact: true }).count(), 0);
+  await page.screenshot({ path: "docs/screenshots/admin-home.png", fullPage: true });
+  const state = await (await context.request.get(base + "/api/state")).json();
+  assert.equal(state.user.role, "admin");
+  if (!state.profile) {
+    await page.getByRole("button", { name: "Hoàn tất hồ sơ", exact: true }).click();
+    assert.equal(await page.getByLabel("Tuổi", { exact: true }).inputValue(), "");
+    assert.equal(await page.getByLabel("Chiều cao (cm)", { exact: true }).inputValue(), "");
+    assert.equal(await page.getByLabel("Cân nặng (kg)", { exact: true }).first().inputValue(), "");
+    assert.equal((await (await context.request.get(base + "/api/state")).json()).profile, null,
+      "viewing the app must not persist fabricated profile details");
+  }
+  await page.getByRole("button", { name: "Mở menu", exact: true }).click();
+  await page.getByRole("button", { name: "Quản trị Gemini", exact: true }).click();
+  await page.getByRole("heading", { name: "Kết nối Gemini", exact: true }).waitFor();
+  assert.equal(new URL(page.url()).pathname, "/admin");
+  await page.setViewportSize({ width: 1440, height: 1000 });
+  await page.getByRole("button", { name: "Về ứng dụng", exact: true }).click();
+  await page.getByRole("heading", { name: "Nhật ký dinh dưỡng", exact: true }).waitFor();
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false);
   console.log(
-    "Admin next step passed: returns to public login and ends admin session.",
+    "Admin navigation passed: mobile/desktop diary, reload, blank unsaved profile and return to admin; session preserved.",
   );
 } finally {
   await browser.close();

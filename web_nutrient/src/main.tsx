@@ -17,6 +17,7 @@ import {
   LogOut,
   ArrowRight,
   RefreshCw,
+  ShieldCheck,
 } from "lucide-react";
 import Auth from "./Auth";
 import Dashboard, { Diary, Statistics } from "./Dashboard";
@@ -29,6 +30,7 @@ import MealEditor from "./MealEditor";
 import { Brand, Toast, Busy, Note } from "./components";
 import { api, ApiError } from "./api";
 import type { AppState, Meal } from "./types";
+import { defaultProfile } from "./types";
 import "./styles.css";
 import "./responsive.css";
 import "./polish.css";
@@ -42,7 +44,7 @@ const nav = [
   ["profile", "Hồ sơ", UserRound],
 ] as const;
 function App() {
-  const [data, setData] = useState<AppState | null>(null),
+  const [storedData, setData] = useState<AppState | null>(null),
     [loading, setLoading] = useState(true),
     [loadError, setLoadError] = useState(""),
     [page, setPage] = useState(location.hash.slice(1) || "dashboard"),
@@ -51,6 +53,11 @@ function App() {
     [menu, setMenu] = useState(false),
     [toast, setToast] = useState("");
   const adminPage = location.pathname === "/admin";
+  const needsProfile = storedData?.user.role === "admin" && !storedData.profile;
+  const data = needsProfile ? {
+    ...storedData!,
+    profile: { ...defaultProfile, name: storedData!.user.username, age: 0, height: 0, weight: 0 },
+  } : storedData;
   const notify = useCallback((s: string) => setToast(s), []);
   const closeToast = useCallback(() => setToast(""), []);
   const refresh = useCallback(async () => {
@@ -125,7 +132,7 @@ function App() {
       </div>
     );
   if (!data) return <Auth onSuccess={refresh} admin={adminPage} />;
-  if (adminPage || data.user.role === "admin")
+  if (adminPage)
     return (
       <>
         {data.user.role === "admin" ? (
@@ -191,6 +198,11 @@ function App() {
           ))}
         </nav>
         <div className="sidebar-bottom">
+          {data.user.role === "admin" && (
+            <button onClick={() => location.assign("/admin")}>
+              <ShieldCheck size={18} /> Quản trị Gemini
+            </button>
+          )}
           <div className="sidebar-leaf">
             <svg viewBox="0 0 80 100" aria-hidden="true">
               <path
@@ -266,6 +278,12 @@ function App() {
           <a href="#main-content" className="sr-only skip-link">
             Đến nội dung chính
           </a>
+          {needsProfile && (
+            <Note>
+              Bổ sung hồ sơ để cá nhân hóa nhật ký. Các mục tiêu hiện tại là tham khảo.{" "}
+              <button className="text-btn" onClick={() => go("profile")}>Hoàn tất hồ sơ</button>
+            </Note>
+          )}
           {["plan", "science", "world", "stats"].includes(page) && (
             <div className="mobile-subnav">
               <button

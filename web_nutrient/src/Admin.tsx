@@ -47,18 +47,6 @@ export default function Admin({
       setBusy(false);
     }
   }
-  async function openApp() {
-    setBusy(true);
-    setError("");
-    try {
-      await api("/auth/logout", "POST", {});
-      window.location.assign("/");
-    } catch (e) {
-      setError((e as Error).message);
-    } finally {
-      setBusy(false);
-    }
-  }
   return (
     <div className="admin-layout">
       <header>
@@ -94,14 +82,13 @@ export default function Admin({
             <button
               className="btn primary full"
               disabled={busy}
-              onClick={openApp}
+              onClick={() => window.location.assign("/")}
             >
               Về ứng dụng <ArrowRight size={17} />
             </button>
             <p className="muted small-text">
-              Khóa đã được lưu, không cần nhập lại. Nút này đóng phiên quản trị
-              và đưa bạn về trang đăng nhập hoặc tạo tài khoản người dùng để bắt
-              đầu nhật ký.
+              Khóa đã được lưu, không cần nhập lại. Về trang chủ nhật ký
+              bằng tài khoản hiện tại.
             </p>
           </>
         )}

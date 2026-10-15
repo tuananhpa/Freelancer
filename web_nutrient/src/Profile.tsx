@@ -32,7 +32,7 @@ export default function Profile(
     [passwordModal, setPasswordModal] = useState(false),
     [current, setCurrent] = useState(""),
     [next, setNext] = useState(""),
-    [weight, setWeight] = useState(String(data.profile!.weight)),
+    [weight, setWeight] = useState(String(data.profile!.weight || "")),
     [settings, setSettings] = useState({ ...data.settings });
   useEffect(() => {
     setSettings({ ...data.settings });
@@ -181,7 +181,7 @@ export default function Profile(
                 type="number"
                 min="10"
                 max="24"
-                value={p.age}
+                value={p.age || ""}
                 onChange={(e) => change("age", +e.target.value)}
               />
             </label>
@@ -192,7 +192,7 @@ export default function Profile(
                 type="number"
                 min="80"
                 max="230"
-                value={p.height}
+                value={p.height || ""}
                 onChange={(e) => change("height", +e.target.value)}
               />
             </label>
@@ -204,7 +204,7 @@ export default function Profile(
                 min="15"
                 max="220"
                 step=".1"
-                value={p.weight}
+                value={p.weight || ""}
                 onChange={(e) => change("weight", +e.target.value)}
               />
             </label>

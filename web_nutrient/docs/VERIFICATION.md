@@ -31,5 +31,6 @@ Restart tunnel sẽ đổi link. D1/R2 nằm trên máy này; giữ máy/mạng/
 
 ## Điều hướng sau cấu hình Gemini
 - Trang quản trị hiển thị nút Về ứng dụng khi đã cấu hình.
-- tests/admin-navigation.mjs: passed trên Chrome viewport 390px; về đúng trang /, hiển thị tạo tài khoản, và /api/state trả 401 sau khi đóng phiên admin.
+- tests/admin-navigation.mjs: passed trên Chrome 390px và 1440px; về đúng nhật ký ở /, tải lại vẫn giữ phiên admin (/api/state trả 200), mở lại quản trị từ menu.
+- Admin chưa có hồ sơ vẫn mở được nhật ký; hiển thị nhắc hoàn tất hồ sơ, mục tiêu tham khảo, tuổi/chiều cao/cân nặng để trống. Không tự lưu thông tin cá nhân giả.
 - Chỉ kiểm tra trạng thái cấu hình; không đọc hoặc thay khóa Gemini đã lưu.
