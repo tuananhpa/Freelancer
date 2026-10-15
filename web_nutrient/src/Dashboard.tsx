@@ -1,20 +1,17 @@
 import { useState } from "react";
 import {
-  Camera,
+  ChevronDown,
   Plus,
   ArrowUpRight,
   Droplets,
   Flame,
-  Utensils,
-  MessageCircle,
   Minus,
   Pencil,
   Trash2,
   CalendarDays,
-  Leaf,
   TrendingUp,
 } from "lucide-react";
-import { PageTitle, Meter, FoodImage, Empty, Note } from "./components";
+import { PageTitle, Meter, FoodImage, Empty } from "./components";
 import { api, today, n } from "./api";
 import { slots } from "./catalog";
 import type { ViewProps } from "./view-types";
@@ -340,114 +337,78 @@ export function MealJournal({
   );
 }
 export default function Dashboard(props: ViewProps) {
-  const { data, go, openMeal, chat } = props,
-    p = data.profile!;
-  const completed = data.progress.filter((x) => x.kind === "plan").length;
+  const { data, go, openMeal } = props;
+  const meals = data.meals.filter((meal) => meal.date === today());
+  const energy = meals.reduce((total, meal) => total + meal.kcal, 0);
+  const loggedSlots = new Set(meals.map((meal) => meal.slot)).size;
+
   return (
-    <>
+    <div className="journal-home">
       <PageTitle
-        title={"Chào " + p.name + "!"}
-        description={new Intl.DateTimeFormat("vi-VN", {
-          weekday: "long",
-          day: "numeric",
-          month: "long",
-          timeZone: "Asia/Saigon",
-        }).format(new Date())}
+        title="Nhật ký dinh dưỡng"
+        description={"Chào " + data.profile!.name + ", hôm nay bạn ăn gì?"}
         action={
-          <button className="btn primary scan-cta" onClick={() => openMeal()}>
-            <Camera size={22} />
-            <span>
-              Quét món AI<small>Chụp món ăn để ghi nhanh</small>
-            </span>
+          <button
+            className="text-btn journal-history"
+            onClick={() => go("diary")}
+          >
+            <CalendarDays size={17} />
+            Xem lịch sử
           </button>
         }
       />
-      <p className="welcome-note">
-        Hôm nay cũng là một ngày tuyệt vời để chăm sóc bản thân.
-      </p>
-      <Totals data={data} />
-      <div className="dashboard-grid">
-        <div className="dashboard-main">
-          <section className="panel">
-            <div className="section-head">
-              <h2>Năng lượng 7 ngày qua</h2>
-              <button className="text-btn" onClick={() => go("stats")}>
-                Xem thống kê <ArrowUpRight size={15} />
-              </button>
+      <div className="journal-dashboard">
+        <section
+          className="panel today-journal"
+          aria-labelledby="today-journal-title"
+        >
+          <div className="today-journal-heading">
+            <div>
+              <h2 id="today-journal-title">Bữa ăn hôm nay</h2>
+              <p>
+                {new Intl.DateTimeFormat("vi-VN", {
+                  weekday: "long",
+                  day: "numeric",
+                  month: "long",
+                  timeZone: "Asia/Saigon",
+                }).format(new Date())}
+              </p>
             </div>
-            <p className="muted small-text">
-              Mục tiêu tham khảo: {n(p.calorieTarget)} kcal/ngày
-            </p>
-            <WeeklyChart data={data} />
-          </section>
-          <section className="panel diary-panel">
-            <div className="section-head">
-              <h2>Nhật ký ăn uống hôm nay</h2>
-              <button className="btn soft compact" onClick={() => openMeal()}>
-                <Plus size={16} />
-                Thêm nhanh
-              </button>
+            <button className="btn primary" onClick={() => openMeal()}>
+              <Plus size={18} />
+              Ghi bữa ăn
+            </button>
+          </div>
+
+          <div className="daily-energy">
+            <div className="daily-energy-heading">
+              <span>
+                <Flame size={17} /> Năng lượng đã ghi
+              </span>
+              <span>
+                <strong>{n(energy)}</strong> / {n(data.profile!.calorieTarget)}{" "}
+                kcal
+              </span>
             </div>
-            <MealJournal {...props} date={today()} />
-          </section>
-        </div>
-        <aside className="dashboard-side">
+            <Meter value={energy} target={data.profile!.calorieTarget} />
+            <p>{loggedSlots} / 4 bữa đã ghi nhận</p>
+          </div>
+
+          <MealJournal {...props} date={today()} />
+
+          <details className="journal-nutrients">
+            <summary>
+              <span>Xem chi tiết dinh dưỡng</span>
+              <ChevronDown size={17} />
+            </summary>
+            <Totals data={data} />
+          </details>
+        </section>
+        <aside className="journal-support" aria-label="Theo dõi nước uống">
           <WaterCard {...props} />
-          <section className="panel roadmap-card">
-            <div className="section-head">
-              <h2>Lộ trình 30 ngày</h2>
-              <button
-                className="text-btn"
-                onClick={() => go("plan")}
-                aria-label="Xem lộ trình"
-              >
-                <ArrowUpRight size={17} />
-              </button>
-            </div>
-            <div className="roadmap-visual">
-              <Leaf size={74} />
-              <span className="roadmap-path" />
-            </div>
-            <h3>Xây dựng thói quen ăn uống cân bằng</h3>
-            <p>
-              Những thay đổi nhỏ tạo nên một phiên bản khỏe mạnh hơn của bạn.
-            </p>
-            <div className="section-head">
-              <span>{completed} / 30 ngày hoàn thành</span>
-              <strong>{Math.round((completed / 30) * 100)}%</strong>
-            </div>
-            <Meter value={completed} target={30} />
-            <button className="text-btn" onClick={() => go("plan")}>
-              Khám phá hôm nay <ArrowUpRight size={16} />
-            </button>
-          </section>
-          <section className="panel assistant-card">
-            <h2>
-              <MessageCircle size={21} />
-              Hỏi NuTri AI
-            </h2>
-            <p>
-              Đặt câu hỏi về dinh dưỡng, món ăn hay thói quen hằng ngày của bạn.
-            </p>
-            <button className="chat-entry" onClick={chat}>
-              <span>Bạn đang quan tâm điều gì?</span>
-              <ArrowUpRight size={18} />
-            </button>
-            <div className="suggestion-chips">
-              <button onClick={chat}>Bữa phụ lành mạnh</button>
-              <button onClick={chat}>Ăn đủ chất mỗi ngày</button>
-            </div>
-          </section>
-          <button className="explore-banner" onClick={() => go("science")}>
-            <span>
-              <strong>Một chút tò mò mỗi ngày</strong>
-              <small>33 thí nghiệm từ gian bếp</small>
-            </span>
-            <Leaf size={27} />
-          </button>
         </aside>
       </div>
-    </>
+    </div>
   );
 }
 export function Diary(props: ViewProps) {

@@ -35,13 +35,23 @@ try {
     .locator("form")
     .getByRole("button", { name: "Tạo tài khoản", exact: true })
     .click();
-  await page.getByRole("heading", { name: "Chào Bạn khám phá!" }).waitFor();
+  await page.locator(".page-title h1").waitFor();
+  assert.equal(
+    await page.locator(".page-title h1").textContent(),
+    "Nhật ký dinh dưỡng",
+    "home makes the nutrition diary the primary task",
+  );
+  assert.equal(
+    await page.locator(".weekly-chart").count(),
+    0,
+    "weekly chart stays in statistics",
+  );
   await page.screenshot({
     path: "docs/screenshots/dashboard-empty-desktop.png",
     fullPage: true,
   });
   await page
-    .getByRole("button", { name: /Quét món AI/ })
+    .getByRole("button", { name: "Ghi bữa ăn", exact: true })
     .first()
     .click();
   await page
@@ -58,6 +68,17 @@ try {
   await page.getByText("Bánh mì trứng", { exact: true }).waitFor();
   await page.getByRole("button", { name: "+250 ml", exact: true }).click();
   await page.getByRole("button", { name: "+250 ml", exact: true }).click();
+  await page
+    .locator(".water-value strong")
+    .getByText("500", { exact: true })
+    .waitFor();
+  await page.getByText("Xem chi tiết dinh dưỡng", { exact: true }).click();
+  assert.equal(
+    await page.locator(".journal-nutrients .macro").first().isVisible(),
+    true,
+    "macro details remain available",
+  );
+  await page.getByText("Xem chi tiết dinh dưỡng", { exact: true }).click();
   await page.screenshot({
     path: "docs/screenshots/dashboard-desktop.png",
     fullPage: true,
@@ -69,6 +90,11 @@ try {
   await page.getByRole("button", { name: "Lưu bữa ăn", exact: true }).click();
   await page.getByRole("dialog").waitFor({ state: "hidden" });
   await page.getByText("1 ổ nhỏ", { exact: true }).waitFor();
+  await page
+    .locator(".sidebar")
+    .getByRole("button", { name: "Thống kê", exact: true })
+    .click();
+  await page.locator(".weekly-chart").waitFor();
   await page
     .locator(".sidebar")
     .getByRole("button", { name: "Lộ trình", exact: true })
@@ -149,6 +175,27 @@ try {
   const overflows = [];
   for (const width of [1440, 1024, 768, 390, 320]) {
     await page.setViewportSize({ width, height: 900 });
+    if (width <= 390) {
+      assert.equal(
+        await page.locator(".mobile-subnav").count(),
+        0,
+        "home has no extra mobile navigation row",
+      );
+      assert.equal(
+        await page
+          .locator(".today-journal")
+          .evaluate((el) => el.getBoundingClientRect().top < 400),
+        true,
+        "meal diary starts in the first mobile screen",
+      );
+      assert.equal(
+        await page
+          .getByRole("button", { name: "Ghi bữa ăn", exact: true })
+          .isVisible(),
+        true,
+        "primary meal action is visible on mobile",
+      );
+    }
     await page.screenshot({
       path: "docs/screenshots/dashboard-" + width + ".png",
       fullPage: true,

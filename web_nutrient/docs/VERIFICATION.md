@@ -19,5 +19,12 @@ Trạng thái kiểm tra source hiện tại:
 
 ## Runtime dùng thử
 Local: http://127.0.0.1:8788
-Tunnel tại lần bàn giao: https://adams-outside-participant-jenny.trycloudflare.com
+Tunnel hiện tại: https://marketplace-fingers-struggle-healthy.trycloudflare.com
 Restart tunnel sẽ đổi link. D1/R2 nằm trên máy này; giữ máy/mạng/các tiến trình hoạt động để khách dùng.
+
+## Chỉnh giao diện 2026-10-15
+- npm test: 16/16 passed; TypeScript và Vite build passed.
+- Browser flows passed sau thay trang chủ. Kiểm tra thêm: tiêu đề nhật ký là trọng tâm, không có biểu đồ tuần ở home, nhật ký bắt đầu trong màn hình đầu mobile, không có hàng điều hướng phụ trên home.
+- Xác minh thêm nước 500ml sau 2 lần thêm, mở/đóng macros, thống kê vẫn truy cập được, các luồng ghi/sửa và tính năng khác vẫn qua.
+- Responsive 1440/1024/768/390/320; không tràn ngang hoặc lỗi JavaScript.
+- Backend không thay đổi trong lần chỉnh UI này. Chưa thử trên điện thoại thật.

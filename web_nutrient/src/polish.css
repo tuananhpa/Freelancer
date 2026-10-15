@@ -88,3 +88,282 @@
     min-height: 40px;
   }
 }
+.journal-home .page-title {
+  margin-bottom: 26px;
+}
+.journal-home .page-title h1 {
+  font-size: 32px;
+}
+.journal-home .page-title p {
+  font-size: 13px;
+}
+.journal-history {
+  gap: 8px;
+  font-size: 13px;
+}
+.journal-dashboard {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  gap: 24px;
+  align-items: start;
+}
+.today-journal {
+  padding: 26px;
+  margin: 0;
+}
+.today-journal-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.today-journal-heading h2 {
+  font-size: 21px;
+}
+.today-journal-heading p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+.daily-energy {
+  margin: 24px 0 14px;
+  padding: 17px 18px;
+  background: #f2f8f9;
+  border-radius: 9px;
+}
+.daily-energy-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 11px;
+  color: #5e7a83;
+  font-size: 12px;
+}
+.daily-energy-heading > span:first-child {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+.daily-energy-heading svg {
+  color: #d8a052;
+}
+.daily-energy-heading strong {
+  font-size: 19px;
+  font-family: Manrope, sans-serif;
+  color: var(--dark);
+}
+.daily-energy p {
+  margin: 9px 0 0;
+  font-size: 11px;
+  color: #6b858e;
+}
+.journal-home .journal-table-head,
+.journal-home .journal-row {
+  grid-template-columns: 85px 65px minmax(100px, 1fr) 65px 78px;
+}
+.journal-home .journal-table-head {
+  background: transparent;
+  margin-top: 13px;
+}
+.journal-home .journal-row {
+  min-height: 96px;
+  padding: 21px 0;
+}
+.journal-home .journal-slot:last-child .journal-row:last-child {
+  border-bottom: 0;
+}
+.journal-home .row-actions .icon-btn {
+  min-width: 38px;
+  min-height: 42px;
+}
+.journal-nutrients {
+  border-top: 1px solid var(--line);
+  margin-top: 7px;
+}
+.journal-nutrients summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px 0 0;
+  list-style: none;
+  cursor: pointer;
+  font-size: 12px;
+  color: var(--primary);
+}
+.journal-nutrients summary::-webkit-details-marker {
+  display: none;
+}
+.journal-nutrients summary:focus-visible {
+  outline: 3px solid #63b4bd;
+  outline-offset: 5px;
+}
+.journal-nutrients[open] summary svg {
+  transform: rotate(180deg);
+}
+.journal-nutrients .summary-strip {
+  margin-bottom: 0;
+}
+.journal-support .water-card {
+  margin-bottom: 0;
+}
+.journal-first .app-footer {
+  display: none;
+}
+@media (max-width: 1100px) {
+  .journal-dashboard {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+  .journal-support .water-card {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 8px 24px;
+    padding: 18px 24px;
+  }
+  .journal-support .section-head,
+  .journal-support .water-value {
+    margin: 0;
+  }
+  .journal-support .water-value {
+    grid-column: 1;
+  }
+  .journal-support .water-actions {
+    grid-column: 2;
+    grid-row: 1 / 4;
+    margin: 0;
+  }
+  .journal-support .glasses,
+  .journal-support .small-text {
+    display: none;
+  }
+}
+@media (max-width: 760px) {
+  .journal-first .main-content {
+    padding: 23px 16px 110px;
+  }
+  .journal-home .page-title {
+    margin: 0 0 23px;
+    display: block;
+  }
+  .journal-home .page-title h1 {
+    font-size: 26px;
+    letter-spacing: -0.8px;
+  }
+  .journal-home .page-title p {
+    font-size: 12px;
+    margin-top: 8px;
+  }
+  .journal-home .journal-history {
+    margin-top: 8px;
+    min-height: 28px;
+    font-size: 11px;
+  }
+  .today-journal {
+    padding: 18px 15px 17px;
+    border-radius: 12px;
+  }
+  .today-journal-heading {
+    gap: 10px;
+  }
+  .today-journal-heading h2 {
+    font-size: 17px;
+  }
+  .today-journal-heading p {
+    font-size: 10px;
+    margin-top: 4px;
+  }
+  .today-journal-heading .btn {
+    min-height: 42px;
+    padding: 10px 11px;
+    font-size: 11px;
+    gap: 5px;
+    white-space: nowrap;
+  }
+  .daily-energy {
+    padding: 13px 12px;
+    margin: 18px 0 2px;
+  }
+  .daily-energy-heading {
+    gap: 8px;
+    font-size: 10px;
+    margin-bottom: 9px;
+  }
+  .daily-energy-heading strong {
+    font-size: 16px;
+  }
+  .daily-energy-heading svg {
+    display: none;
+  }
+  .daily-energy p {
+    font-size: 10px;
+    margin-top: 8px;
+  }
+  .journal-home .journal-row {
+    grid-template-columns: 65px minmax(0, 1fr) 54px;
+    min-height: 91px;
+    padding: 17px 0;
+    column-gap: 7px;
+  }
+  .journal-home .journal-row .slot-name {
+    font-size: 11px;
+  }
+  .journal-home .meal-description {
+    gap: 8px;
+  }
+  .journal-home .meal-description .food-art.small,
+  .journal-home .meal-description .meal-image.small,
+  .journal-home .add-tile {
+    width: 36px;
+    height: 39px;
+  }
+  .journal-home .meal-description strong {
+    font-size: 12px;
+  }
+  .journal-home .meal-description small {
+    font-size: 10px;
+  }
+  .journal-home .row-actions .icon-btn {
+    min-width: 27px;
+    min-height: 32px;
+  }
+  .journal-nutrients summary {
+    font-size: 11px;
+    padding-top: 16px;
+  }
+  .journal-support .water-card {
+    padding: 17px;
+    gap: 6px 12px;
+  }
+  .journal-support .section-head h2 {
+    font-size: 13px;
+  }
+  .journal-support .section-head > svg,
+  .journal-support .droplet {
+    display: none;
+  }
+  .journal-support .water-value strong {
+    font-size: 20px;
+  }
+  .journal-support .water-actions {
+    flex-wrap: nowrap;
+    gap: 4px;
+  }
+  .journal-support .water-actions .btn {
+    min-height: 42px;
+    font-size: 12px;
+  }
+  .journal-support .water-actions .icon-btn {
+    width: 32px;
+    height: 42px;
+  }
+  .journal-first .topbar .xp-chip,
+  .journal-first .topbar-actions > .icon-btn {
+    display: none;
+  }
+  .journal-first .topbar {
+    height: 65px;
+  }
+}

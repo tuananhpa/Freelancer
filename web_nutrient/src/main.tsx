@@ -163,7 +163,13 @@ function App() {
       <span>{data.profile!.avatar}</span>
     );
   return (
-    <div className={"app theme-" + data.profile.theme}>
+    <div
+      className={
+        "app theme-" +
+        data.profile.theme +
+        (page === "dashboard" ? " journal-first" : "")
+      }
+    >
       <aside className={"sidebar " + (menu ? "open" : "")}>
         <Brand />
         <p className="sidebar-intro">
@@ -260,32 +266,34 @@ function App() {
           <a href="#main-content" className="sr-only skip-link">
             Đến nội dung chính
           </a>
-          <div className="mobile-subnav">
-            <button
-              className={page === "plan" ? "active" : ""}
-              onClick={() => go("plan")}
-            >
-              Lộ trình
-            </button>
-            <button
-              className={page === "science" ? "active" : ""}
-              onClick={() => go("science")}
-            >
-              Khoa học
-            </button>
-            <button
-              className={page === "world" ? "active" : ""}
-              onClick={() => go("world")}
-            >
-              Ẩm thực
-            </button>
-            <button
-              className={page === "stats" ? "active" : ""}
-              onClick={() => go("stats")}
-            >
-              Thống kê
-            </button>
-          </div>
+          {["plan", "science", "world", "stats"].includes(page) && (
+            <div className="mobile-subnav">
+              <button
+                className={page === "plan" ? "active" : ""}
+                onClick={() => go("plan")}
+              >
+                Lộ trình
+              </button>
+              <button
+                className={page === "science" ? "active" : ""}
+                onClick={() => go("science")}
+              >
+                Khoa học
+              </button>
+              <button
+                className={page === "world" ? "active" : ""}
+                onClick={() => go("world")}
+              >
+                Ẩm thực
+              </button>
+              <button
+                className={page === "stats" ? "active" : ""}
+                onClick={() => go("stats")}
+              >
+                Thống kê
+              </button>
+            </div>
+          )}
           {page === "diary" ? (
             <Diary {...props!} />
           ) : page === "stats" ? (

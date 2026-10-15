@@ -13,3 +13,4 @@
 - Ruling: profile AI analysis is server-owned; invalidate on relevant profile changes, preserve on cosmetic changes. Never accept analysis from client.
 - Ruling: tunnel targets protected gateway 8788; local scheduler uses secret token and raw worker port accessible only loopback.
 - Final checks: 16 unit tests, TypeScript, build, 35 API checks, full Chrome flows and responsive screenshots passed.
+- 2026-10-15: diary-first UI refinement requested. Reused MealJournal, Totals and WaterCard, removed dashboard chart/promotional panels, collapsed macros, simplified mobile header/subnav. TypeScript/build, 16 unit tests and full Chrome flows with new layout assertions passed. New trial URL recorded in VERIFICATION.md; no backend changes.
