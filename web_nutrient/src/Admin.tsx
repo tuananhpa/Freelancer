@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import {
-  KeyRound,
+  ArrowRight,
   ShieldCheck,
   Save,
   LogOut,
@@ -47,6 +47,18 @@ export default function Admin({
       setBusy(false);
     }
   }
+  async function openApp() {
+    setBusy(true);
+    setError("");
+    try {
+      await api("/auth/logout", "POST", {});
+      window.location.assign("/");
+    } catch (e) {
+      setError((e as Error).message);
+    } finally {
+      setBusy(false);
+    }
+  }
   return (
     <div className="admin-layout">
       <header>
@@ -63,7 +75,7 @@ export default function Admin({
         <span className="eyebrow">Quản trị NuTri Teens</span>
         <h1>Kết nối Gemini</h1>
         <p>Thay khóa dùng chung cho các chức năng AI của ứng dụng.</p>
-        <div className="integration-status">
+        <div className="integration-status" role="status">
           <span className={"status-dot " + (status?.configured ? "on" : "")} />
           <strong>
             {status?.configured ? "Đã cấu hình" : "Chưa cấu hình"}
@@ -77,6 +89,22 @@ export default function Admin({
               : "Chưa có lần cập nhật"}
           </small>
         </div>
+        {status?.configured && (
+          <>
+            <button
+              className="btn primary full"
+              disabled={busy}
+              onClick={openApp}
+            >
+              Về ứng dụng <ArrowRight size={17} />
+            </button>
+            <p className="muted small-text">
+              Khóa đã được lưu, không cần nhập lại. Nút này đóng phiên quản trị
+              và đưa bạn về trang đăng nhập hoặc tạo tài khoản người dùng để bắt
+              đầu nhật ký.
+            </p>
+          </>
+        )}
         <Note>
           Chỉ gửi khóa mới. Server không trả lại khóa đã lưu; không có chức năng
           xem hoặc sao chép khóa hiện tại.

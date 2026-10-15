@@ -28,3 +28,8 @@ Restart tunnel sẽ đổi link. D1/R2 nằm trên máy này; giữ máy/mạng/
 - Xác minh thêm nước 500ml sau 2 lần thêm, mở/đóng macros, thống kê vẫn truy cập được, các luồng ghi/sửa và tính năng khác vẫn qua.
 - Responsive 1440/1024/768/390/320; không tràn ngang hoặc lỗi JavaScript.
 - Backend không thay đổi trong lần chỉnh UI này. Chưa thử trên điện thoại thật.
+
+## Điều hướng sau cấu hình Gemini
+- Trang quản trị hiển thị nút Về ứng dụng khi đã cấu hình.
+- tests/admin-navigation.mjs: passed trên Chrome viewport 390px; về đúng trang /, hiển thị tạo tài khoản, và /api/state trả 401 sau khi đóng phiên admin.
+- Chỉ kiểm tra trạng thái cấu hình; không đọc hoặc thay khóa Gemini đã lưu.
