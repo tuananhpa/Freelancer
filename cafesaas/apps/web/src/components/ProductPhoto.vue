@@ -1,0 +1,1 @@
+<script setup lang="ts">defineProps<{photo:number;image?:string;name?:string}>();</script><template><div class="product-photo" :style="image?{backgroundImage:'url('+image+')',backgroundSize:'cover',backgroundPosition:'center'}:{backgroundPosition:(photo%3)*50+'% '+(photo<3?0:100)+'%'}" role="img" :aria-label="name??'Ảnh món'"></div></template>

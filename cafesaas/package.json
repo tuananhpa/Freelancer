@@ -1,0 +1,34 @@
+{
+  "name": "coffee-saas",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --config apps/web/vite.config.ts",
+    "typecheck": "vue-tsc --noEmit -p apps/web/tsconfig.json",
+    "build": "npm run typecheck && vite build --config apps/web/vite.config.ts",
+    "test": "vitest run",
+    "serve": "node scripts/serve.mjs",
+    "test:e2e": "python tests/browser.py"
+  },
+  "dependencies": {
+    "@fontsource/be-vietnam-pro": "^5.2.0",
+    "lucide-vue-next": "^0.468.0",
+    "pinia": "^3.0.0",
+    "qrcode": "^1.5.4",
+    "vue": "^3.5.0",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.0",
+    "@types/node": "^24.0.0",
+    "@types/qrcode": "^1.5.5",
+    "@vitejs/plugin-vue": "^6.0.0",
+    "tailwindcss": "^4.1.0",
+    "typescript": "^5.9.0",
+    "vite": "^7.1.0",
+    "vite-plugin-pwa": "^1.0.0",
+    "vitest": "5.0.4",
+    "vue-tsc": "^3.1.0"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "base": "http://127.0.0.1:4177",
+  "passed": [
+    "POS A initial basket115000 and desktop render",
+    "Size/topping/note pricing and item removal",
+    "Admin product create/edit/archive with reload persistence",
+    "Admin bank configuration preserves leading zero",
+    "VietQR exact115000 with no automatic Paid",
+    "Partial transfer plus cash/change and58mm receipt",
+    "Daily per-branch dashboard and CSV export",
+    "Bank owner-only controls and truthful offline connection",
+    "All19 staff/Admin/SaaS routes render without desktop overflow",
+    "Table QR preview and customer link",
+    "Fresh-browser table QR customer ordering mobile",
+    "Customer can recover own submitted orders after reload",
+    "Responsive320/390/768/1024 cashier/waiter/Admin/customer",
+    "Mobile cart drawer and navigation",
+    "Tunnel server denies source/secrets/API paths",
+    "No page JavaScript errors"
+  ],
+  "count": 16,
+  "errors": []
+}

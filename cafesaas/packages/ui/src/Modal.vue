@@ -1,0 +1,8 @@
+<script setup lang="ts">
+import {ref,onMounted,onUnmounted,nextTick} from 'vue';
+const p=defineProps<{title:string;wide?:boolean}>();const emit=defineEmits(['close']);const panel=ref<HTMLElement>();let previous:HTMLElement|null=null;
+function key(e:KeyboardEvent){if(e.key==='Escape')emit('close');if(e.key==='Tab'&&panel.value){const nodes=Array.from(panel.value.querySelectorAll<HTMLElement>('button:not(:disabled),input:not(:disabled),select:not(:disabled),textarea:not(:disabled),a[href]')).filter(n=>n.offsetParent!==null);if(!nodes.length){e.preventDefault();panel.value.focus();return}const first=nodes[0],last=nodes.at(-1)!;if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}}
+onMounted(async()=>{previous=document.activeElement as HTMLElement;document.body.style.overflow='hidden';window.addEventListener('keydown',key);await nextTick();(panel.value?.querySelector<HTMLElement>('input,select,textarea,button')??panel.value)?.focus()});
+onUnmounted(()=>{document.body.style.overflow='';window.removeEventListener('keydown',key);previous?.focus()});
+</script>
+<template><Teleport to="body"><div class="modal-backdrop" @click.self="emit('close')"><section ref="panel" class="modal" :class="{wide:p.wide}" role="dialog" aria-modal="true" aria-labelledby="dialog-heading" tabindex="-1"><header class="modal-heading"><h2 id="dialog-heading">{{title}}</h2><button class="icon-button" aria-label="Đóng cửa sổ" @click="emit('close')">×</button></header><div class="modal-body"><slot/></div></section></div></Teleport></template>

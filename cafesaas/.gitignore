@@ -1,0 +1,9 @@
+node_modules/
+apps/web/dist/
+.local/
+*.log
+.env*
+!.env.example
+
+__pycache__/
+*.pyc

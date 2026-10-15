@@ -1,0 +1,19 @@
+export type OrderState='pending'|'accepted'|'preparing'|'ready'|'served'|'completed'|'cancelled';
+export type Role='owner'|'manager'|'cashier'|'waiter'|'barista'|'platform';
+export interface Variant{id:string;name:string;delta:number}
+export interface Option{id:string;name:string;price:number}
+export interface Product{id:string;name:string;description?:string;category:string;price:number;active:boolean;available:boolean;photo:number;image?:string;variants:Variant[];options:Option[]}
+export interface CartLine{productId:string;quantity:number;variantId:string;optionIds:string[];note:string}
+export interface PricedLine extends CartLine{id:string;name:string;variant:string;optionNames:string[];unitPrice:number;total:number;photo:number;image?:string}
+export interface Branch{id:string;name:string;address:string;phone:string;active:boolean}
+export interface Table{id:string;branchId:string;name:string;area:string;seats:number;state:'available'|'occupied'|'ordering'|'waiting_payment'|'cleaning';token:string;active:boolean}
+export interface Order{id:string;number:string;branchId:string;tableId:string;tableName:string;source:'pos'|'qr'|'waiter';state:OrderState;lines:PricedLine[];total:number;discount:number;surcharge:number;createdAt:string;paid:number;refunded?:number;itemStates?:Record<string,string>;events:{state:string;at:string;note:string}[];key:string;receiptAt?:string;billGroup?:string}
+export interface Bank{id:string;branchId:string;bin:string;bankName:string;account:string;holder:string;active:boolean}
+export interface Transaction{id:string;orderId:string;branchId:string;at:string;kind:'collection'|'refund';method:'cash'|'transfer';amount:number;reference:string}
+export interface Staff{id:string;name:string;email:string;role:Role;branchIds:string[];active:boolean}
+export interface Printer{id:string;name:string;branchId:string;transport:'usb'|'lan';address:string;paper:'58'|'80';purpose:'cashier'|'bar';active:boolean}
+export interface PrintJob{id:string;orderId:string;branchId:string;purpose:string;state:'pending'|'failed'|'unknown';createdAt:string;reason:string}
+export interface Settings{name:string;phone:string;address:string;logo:string;allowCalls:boolean;allowPaymentRequests:boolean;currency:'VND';timezone:string;taxPercent:number}
+export interface PaymentIntent{id:string;orderId:string;amount:number;reference:string;bank:Bank;createdAt:string}
+export interface AppState{revision:number;writeVersion?:number;products:Product[];branches:Branch[];tables:Table[];orders:Order[];banks:Bank[];intents:PaymentIntent[];transactions:Transaction[];staff:Staff[];printers:Printer[];printJobs:PrintJob[];categories:{id:string;name:string}[];settings:Settings;calls:{id:string;tableId:string;kind:string;at:string;done:boolean}[];audit:{id:string;action:string;at:string;detail:string}[]}
+export interface BankDetails{bin:string;account:string;holder:string}
