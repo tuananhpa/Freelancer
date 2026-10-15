@@ -1,0 +1,24 @@
+{
+  "url": "https://freelance-portfolio.tuananhha1710.workers.dev",
+  "checkedAt": "2026-10-14T05:01:51.924Z",
+  "initialized": false,
+  "passed": 16,
+  "checks": [
+    "/: 200",
+    "/du-an/: 200",
+    "/du-an/lanh-house/: 200",
+    "/dich-vu/: 200",
+    "/ve-nhom/: 200",
+    "/lien-he/: 200",
+    "/admin/: 200",
+    "/src/admin.js: 200",
+    "/assets/ceramics.webp: 200",
+    "/api/admin/content: 401",
+    "/sitemap.xml: 200",
+    "/xem-thu/: 303",
+    "/khong-ton-tai/: 404",
+    "Public homepage renders in Edge",
+    "Admin login/setup renders at 390px",
+    "No browser JavaScript errors"
+  ]
+}

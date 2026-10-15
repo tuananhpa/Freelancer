@@ -3,3 +3,7 @@ node_modules/
 .env
 .env.*
 test-results/
+.wrangler/
+.dev.vars
+.dev.vars.*
+.cloudflare-setup.txt

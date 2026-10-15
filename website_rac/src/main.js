@@ -1,6 +1,9 @@
 import './styles.css';
 import './student-styles.css';
 import './decorations.css';
+import './home-visuals.css';
+import './page-visuals.css';
+import './school-branding.css';
 import { createRepository } from './repository.js';
 import { readBinContext } from './bin-context.js';
 import { generateBinQR } from './qr.js';

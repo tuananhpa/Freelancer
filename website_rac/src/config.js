@@ -1,6 +1,6 @@
 export const STORAGE_KEY = 'school-green.frontend.v1';
 export const defaults = {
-  schoolName: '[Tên trường]', productName: '[Tên sản phẩm]', schoolImage: '', logoImage: '',
+  schoolName: 'THPT Phạm Hùng', productName: 'Trường học xanh', schoolImage: '/images/truongthpt.jpg', logoImage: '/images/logo.jpg',
   points: { plastic: 10, metal: 20 }, approvalMode: 'required',
   waitingTitle: 'Đang chờ kết quả bỏ rác',
   waitingDescription: 'Hãy bỏ nhựa hoặc kim loại vào thùng. Điểm chỉ được cộng khi xác nhận rác đã vào thùng.',

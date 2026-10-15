@@ -1,0 +1,25 @@
+import {escape} from './utils.js';
+import {icon} from './icons.js';
+import {preview,teamArt} from './previews.js';
+import {services,process,faqs} from './data.js';
+import {getPublicProjects} from './repository.js';
+import {safeLinkUrl,safeMediaUrl} from './admin-model.js';
+const lines=text=>escape(text).replace(/\n/g,'<br>');
+const heading=(p,link=false)=>`<div class="section-heading"><h2>${lines(p.title)}</h2>${p.description?`<p>${escape(p.description)}</p>`:''}${link?`<a class="text-link" href="/du-an/">Xem tất cả dự án ${icon('arrow')}</a>`:''}</div>`;
+export function projectMedia(p,{priority=false}={}){if(p.cover&&safeMediaUrl(p.cover))return `<img class="custom-project-cover" src="${escape(p.cover)}" alt="${escape(p.title)} — ${escape(p.subtitle)}" width="1200" height="800" ${priority?'fetchpriority="high"':'loading="lazy"'}>`;if(p.preview==='image')return `<div class="image-placeholder">${icon('layers')}<span>Chưa có ảnh dự án</span></div>`;return preview(p.preview,{priority});}
+export function renderHome(doc,card){
+ const publicProjects=getPublicProjects(doc.projects);
+ return doc.sections.filter(s=>s.enabled).map(s=>{const p=s.props;const attrs=`data-block-id="${escape(s.id)}"`;
+ switch(s.type){
+ case 'hero':{const projectBlock=doc.sections.find(x=>x.type==='projects'&&x.enabled);const choice=projectBlock?.props;const heroWork=choice?(choice.useFeatured?publicProjects.filter(x=>x.featured):(choice.projectSlugs??[]).map(slug=>publicProjects.find(x=>x.slug===slug)).filter(Boolean)).slice(0,3):[];return `<section class="hero" ${attrs}><div class="hero-copy">${doc.site.sampleContent?'<span class="sample-note"><i></i>Nội dung và hình ảnh mẫu</span>':''}<h1>${lines(p.title)}</h1><p>${escape(p.description)}</p><div class="button-row"><a class="button" href="/du-an/">Xem dự án ${icon('arrow')}</a><a class="button button-secondary" href="/lien-he/">Trao đổi dự án ${icon('arrow')}</a></div></div><div class="hero-stage" aria-label="Hình ảnh dự án"><div class="hero-orbit"></div>${heroWork[0]?`<div class="hero-store">${projectMedia(heroWork[0],{priority:true})}</div>`:`<div class="hero-neutral">${teamArt()}</div>`}${heroWork[1]?`<div class="hero-phone">${projectMedia(heroWork[1])}</div>`:''}${heroWork[2]?`<div class="hero-dashboard">${projectMedia(heroWork[2])}</div>`:''}<span class="hero-spark">${icon('code')}</span></div></section>`;}
+ case 'projects':{const chosen=p.useFeatured?publicProjects.filter(x=>x.featured):(p.projectSlugs??[]).map(slug=>publicProjects.find(x=>x.slug===slug)).filter(Boolean);return `<section class="work-section" ${attrs}>${heading(p,true)}${chosen.length?`<div class="projects-grid">${chosen.map((x,i)=>card(x,{featured:i===0})).join('')}</div>`:'<div class="empty-state compact"><h3>Chưa có dự án để hiển thị.</h3><p>Thêm dự án công khai và chọn dự án cho khối này.</p></div>'}</section>`;}
+ case 'services':{const items=p.items??services;return `<section class="service-section" ${attrs}>${heading(p)}<div class="services-grid">${items.map((x,i)=>`<a class="service-card" href="/dich-vu/"><span class="service-icon">${icon(['globe','layers','pen'][i%3])}</span><div><h3>${escape(x.title)}</h3><p>${escape(x.description)}</p></div>${icon('arrow','service-arrow')}</a>`).join('')}</div></section>`;}
+ case 'process':{const items=p.items??process;return `<section class="process-section" ${attrs}>${heading(p)}<ol class="process-grid">${items.map((x,i)=>`<li><span class="step-number">${i+1}</span><div><h3>${escape(x.title)}</h3><p>${escape(x.description)}</p></div>${i<items.length-1?icon('arrow','step-arrow'):''}</li>`).join('')}</ol></section>`;}
+ case 'about':return `<section class="team-teaser" ${attrs}><div><h2>${lines(p.title)}</h2><p>${escape(p.description)}</p><a class="text-link" href="/ve-nhom/">Tìm hiểu về nhóm ${icon('arrow')}</a></div>${teamArt()}</section>`;
+ case 'faq':{const items=p.items??faqs.map(([title,description])=>({title,description}));return `<section class="faq-section" ${attrs}>${heading(p)}<div class="faq-list">${items.map(x=>`<details><summary>${escape(x.title)}${icon('chevron')}</summary><p>${escape(x.description)}</p></details>`).join('')}</div></section>`;}
+ case 'cta':return `<section class="contact-band" ${attrs}><div><h2>${lines(p.title)}</h2><p>${escape(p.description)}</p></div>${safeLinkUrl(p.buttonHref,{internal:true})&&p.buttonHref?`<a class="button" href="${escape(p.buttonHref)}">${escape(p.buttonLabel)} ${icon('arrow')}</a>`:''}${icon('diagonal','band-decoration')}</section>`;
+ case 'gallery':return `<section class="home-gallery" ${attrs}>${heading(p)}${p.images.length?`<div class="home-gallery-grid">${p.images.map(img=>`<figure><img src="${escape(img.src)}" alt="${escape(img.alt)}" width="1200" height="800" loading="lazy"><figcaption>${escape(img.caption)}</figcaption></figure>`).join('')}</div>`:'<div class="empty-state compact"><p>Chưa có hình ảnh.</p></div>'}</section>`;
+ case 'text':return `<section class="home-text" ${attrs}>${heading({...p,description:''})}<p>${lines(p.description)}</p></section>`;
+ default:return '';
+ }}).join('');
+}

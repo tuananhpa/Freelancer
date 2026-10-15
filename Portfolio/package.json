@@ -6,7 +6,20 @@
   "scripts": {
     "build": "node scripts/build.mjs",
     "dev": "node scripts/server.mjs",
-    "test": "node --test tests/logic.test.mjs"
+    "test": "node --test tests/logic.test.mjs tests/admin-model.test.mjs tests/backend.test.mjs tests/backend-extra.test.mjs",
+    "cf:dev": "npm run build && wrangler dev --port 8787",
+    "cf:deploy": "npm run build && wrangler deploy",
+    "db:local": "wrangler d1 migrations apply DB --local",
+    "db:remote": "wrangler d1 migrations apply DB --remote"
   },
-  "engines": {"node": ">=22"}
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "wrangler": "^4.150.0"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true,
+    "workerd@1.20261006.1": true
+  }
 }

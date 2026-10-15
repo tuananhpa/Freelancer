@@ -1,5 +1,7 @@
 # Verification — 2026-10-13
 
+Updated 2026-10-14: admin frontend added; current build and 12 logic tests pass, along with 28 admin browser checks, 5 review regressions and all previous browser regressions. See [ADMIN_VERIFICATION.md](ADMIN_VERIFICATION.md) for current admin scope/evidence. Original verification below is retained as the baseline.
+
 ## Executed checks
 - `npm run build`: success, 8 HTML routes + `404.html` generated.
 - `npm test`: 4 tests pass, covering public/draft filtering and private client fields, combined accent-insensitive search/category filter, contact validation, local storage success/failure.

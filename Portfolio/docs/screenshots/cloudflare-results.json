@@ -1,0 +1,19 @@
+{
+  "checks": [
+    "Owner setup/login on actual Wrangler D1",
+    "Server draft stays private before publication",
+    "Authenticated server preview loads saved draft",
+    "Publish updates public HTML and client data",
+    "Uploaded D1 image is readable by session and private before publish",
+    "Published image becomes public",
+    "Editor submits for review but cannot publish/manage users",
+    "Concurrent editor change rejects stale owner save and preserves input",
+    "Owner approves the submitted server revision",
+    "Real contact submission stored and managed in admin",
+    "Server admin responsive at 390px",
+    "Async import locks all editor/navigation controls",
+    "Anonymous admin access rejected; dynamic sitemap available",
+    "No Worker browser JavaScript errors"
+  ],
+  "errors": []
+}

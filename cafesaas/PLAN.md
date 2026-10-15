@@ -1,5 +1,7 @@
 # Coffee POS & QR Ordering SaaS — Architecture & Implementation Plan
 
+> Cập nhật bàn giao 15/10/2026: frontend A đã build; backend chưa triển khai. Xem [phạm vi thực tế](docs/FRONTEND_SCOPE.md), [bằng chứng kiểm tra](docs/FRONTEND_VERIFICATION.md) và [các việc PWA/backend cần xử lý](docs/PWA_BACKEND_HANDOFF.md). Các mục đề xuất và checklist cũ bên dưới không phải xác nhận đã thực thi.
+
 > Thực thi tại chat Codex hiện tại. Khi được duyệt, dùng executing-plans để triển khai từng task; không tự tạo chat khác hoặc chạy subagent.
 >
 > Trạng thái 14/10/2026: bản đề xuất để review. Chưa scaffold, chưa cài dependencies, chưa triển khai backend.

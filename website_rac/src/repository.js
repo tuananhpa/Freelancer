@@ -22,6 +22,10 @@ export function createRepository(storage) {
       if(!['plastic','metal'].every(key=>Number.isSafeInteger(data.settings.points[key])&&data.settings.points[key]>=1&&data.settings.points[key]<=1000))throw Error('points');
       if(data.users.some(u=>!u?.id||typeof u.name!=='string'||!Number.isSafeInteger(u.points)))throw Error('users');
       state=migrateStudentRoster(data);state.settings={...defaults,...data.settings};
+      // Replace the old empty branding while preserving images/text already set by admin.
+      for(const key of ['logoImage','schoolImage'])if(!state.settings[key])state.settings[key]=defaults[key];
+      if(state.settings.schoolName==='[Tên trường]')state.settings.schoolName=defaults.schoolName;
+      if(state.settings.productName==='[Tên sản phẩm]')state.settings.productName=defaults.productName;
     }
   }catch{storageError='Không đọc được dữ liệu đã lưu. Đang sử dụng dữ liệu ban đầu.';}
   const save=()=> {try {const serialized=JSON.stringify(state);storage?.setItem(STORAGE_KEY,serialized);storedVersion=storage?serialized:null;} catch { throw Error('Không lưu được thay đổi. Hãy kiểm tra dung lượng hoặc quyền lưu trữ của trình duyệt.');}};

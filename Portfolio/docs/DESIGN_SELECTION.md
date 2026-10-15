@@ -2,6 +2,8 @@
 
 Trạng thái: người dùng chọn A ngày 2026-10-13: “A đi”. Frontend dữ liệu tĩnh theo A đã triển khai và kiểm tra; xem VERIFICATION.md. Backend chưa triển khai.
 
+2026-10-14: bổ sung admin frontend cục bộ theo cùng palette A; có thư viện khối trang chủ và preview riêng. Người dùng xác nhận backend làm sau. Xem ADMIN_SCOPE.md và ADMIN_VERIFICATION.md.
+
 Tokens: trắng #FFFFFF, nền nhạt #F4F8FE, mực #10213D, xanh cobalt #2455E6, chữ phụ #52647F, border #DFE8F5. Heading Archivo; body Be Vietnam Pro, fallback sans-serif. Container 1280px; khoảng cách 8/16/24/32/48/72/96px; media radius 18px; button radius 8px. Không thêm thành tích hoặc đánh giá khách hàng giả.
 
 Ảnh đã tạo và lưu: `mockups/A-gallery.png`, `mockups/B-product.png`, `mockups/C-studio.png`. Prompt nằm trong `mockups/PROMPTS.md`; dùng công cụ image_gen tích hợp.

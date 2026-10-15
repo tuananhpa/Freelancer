@@ -1,0 +1,33 @@
+{
+  "checks": [
+    "Desktop admin fits viewport",
+    "Create published project with automatic slug, cover, link and featured flag",
+    "Small local image upload persists as portable data URL",
+    "Preview shows new project, own detail URL, cover and external link",
+    "Draft excluded from local public preview",
+    "Duplicate slug rejected without losing records",
+    "Select specific homepage projects and control their order",
+    "Add and edit homepage text component",
+    "Reorder homepage components",
+    "Hide homepage component",
+    "Site branding and contact fields apply across preview navigation",
+    "JSON backup includes projects and homepage blocks",
+    "Unsafe import rejected atomically",
+    "Valid JSON import roundtrip",
+    "Admin content persists after reload",
+    "Confirmed project deletion",
+    "390px admin Dự án",
+    "390px admin Trang chủ",
+    "390px admin Thông tin nhóm",
+    "390px admin Sao lưu & chuyển dữ liệu",
+    "768px admin Dự án",
+    "768px admin Trang chủ",
+    "768px admin Thông tin nhóm",
+    "768px admin Sao lưu & chuyển dữ liệu",
+    "Original public pages unaffected by local editing",
+    "Blocked local storage reports failure",
+    "Corrupt storage recovery notice",
+    "No JavaScript page errors"
+  ],
+  "errors": []
+}

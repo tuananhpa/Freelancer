@@ -1,0 +1,36 @@
+CREATE TABLE IF NOT EXISTS users (
+ id INTEGER PRIMARY KEY AUTOINCREMENT,
+ username TEXT NOT NULL UNIQUE COLLATE NOCASE,
+ password_hash TEXT NOT NULL,
+ salt TEXT NOT NULL,
+ role TEXT NOT NULL CHECK(role IN ('owner','admin','editor')),
+ active INTEGER NOT NULL DEFAULT 1,
+ created_at INTEGER NOT NULL
+);
+CREATE TABLE IF NOT EXISTS sessions (
+ id TEXT PRIMARY KEY, user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+ csrf TEXT NOT NULL, expires_at INTEGER NOT NULL
+);
+CREATE INDEX IF NOT EXISTS sessions_expiry ON sessions(expires_at);
+CREATE TABLE IF NOT EXISTS content (
+ id INTEGER PRIMARY KEY CHECK(id=1), draft TEXT NOT NULL, published TEXT NOT NULL,
+ revision INTEGER NOT NULL, published_revision INTEGER NOT NULL,
+ review_revision INTEGER, updated_by INTEGER REFERENCES users(id), updated_at INTEGER NOT NULL
+);
+CREATE TABLE IF NOT EXISTS media (
+ id TEXT PRIMARY KEY, mime TEXT NOT NULL, bytes BLOB NOT NULL,
+ created_by INTEGER NOT NULL REFERENCES users(id), created_at INTEGER NOT NULL
+);
+CREATE TABLE IF NOT EXISTS contacts (
+ id TEXT PRIMARY KEY, name TEXT NOT NULL, contact TEXT NOT NULL, service TEXT NOT NULL,
+ message TEXT NOT NULL, budget TEXT NOT NULL DEFAULT '', deadline TEXT NOT NULL DEFAULT '',
+ status TEXT NOT NULL DEFAULT 'new' CHECK(status IN ('new','in_progress','closed')),
+ created_at INTEGER NOT NULL
+);
+CREATE INDEX IF NOT EXISTS contacts_created ON contacts(created_at DESC);
+CREATE TABLE IF NOT EXISTS contact_tokens (id TEXT PRIMARY KEY, created_at INTEGER NOT NULL, expires_at INTEGER NOT NULL);
+CREATE TABLE IF NOT EXISTS rate_limits (id TEXT PRIMARY KEY, count INTEGER NOT NULL, expires_at INTEGER NOT NULL);
+CREATE TABLE IF NOT EXISTS audit (
+ id INTEGER PRIMARY KEY AUTOINCREMENT, actor INTEGER REFERENCES users(id), action TEXT NOT NULL,
+ detail TEXT NOT NULL, created_at INTEGER NOT NULL
+);

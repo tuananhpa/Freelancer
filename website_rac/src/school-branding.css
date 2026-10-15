@@ -1,0 +1,17 @@
+/* User-supplied school identity and team artwork. */
+.brand .logo{object-fit:contain;background:white;border:0;border-radius:0;padding:2px;flex-shrink:0}
+.home-intro.has-school-image{display:flex;flex-direction:column;gap:18px;align-items:stretch;min-height:0}
+.home-intro.has-school-image .home-copy{max-width:none;padding:0}
+.home-intro.has-school-image .home-copy h2{font-size:30px;margin-bottom:10px}
+.home-intro.has-school-image .home-copy p{max-width:none;font-size:14px}
+.home-hero .has-school-image .school-image{position:relative;right:auto;bottom:auto;width:100%;height:225px;min-height:225px;border:3px solid #fff;border-radius:12px;transform:none;overflow:hidden;background:#dae7db}
+.home-hero .school-image img{width:125%;max-width:none;height:100%;left:50%;transform:translateX(-50%);object-fit:cover;object-position:center}
+.school-team{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1fr);gap:32px;align-items:center;margin-top:22px;padding:20px;border:1px solid #dde8d6;border-radius:16px;background:#f4f8ee url('/flower-corner.svg') right -15px bottom -10px / 150px no-repeat}
+.school-team figure{margin:0;min-width:0}
+.school-team img{display:block;width:100%;height:auto;border-radius:10px;border:1px solid #e1e7dc}
+.school-team .team-copy{padding:8px 20px 35px 0}
+.school-team h2{font-size:25px;color:#2b553d;line-height:1.3;margin-bottom:12px}
+.school-team p{font-size:15px;line-height:1.75;color:#56705a;max-width:440px;margin:0}
+.school-team .team-school{font-size:12px;margin-top:18px;color:#687d68}
+@media(max-width:1000px){.home-intro.has-school-image .home-copy h2{font-size:27px}.home-hero .has-school-image .school-image{height:190px;min-height:190px}.school-team{gap:22px}.school-team h2{font-size:22px}}
+@media(max-width:700px){.home-intro.has-school-image{padding:20px;gap:16px}.home-intro.has-school-image .home-copy{max-width:none}.home-intro.has-school-image .home-copy h2{font-size:26px}.home-intro.has-school-image .home-copy p{font-size:13px}.home-hero .has-school-image .school-image{height:auto;min-height:0;aspect-ratio:16/9}.school-team{grid-template-columns:1fr;padding:14px;gap:16px;background-size:110px}.school-team .team-copy{padding:0 4px 28px}.school-team h2{font-size:21px;margin-bottom:8px}.school-team p{font-size:13px}.school-team .team-school{font-size:11px;margin-top:12px}}

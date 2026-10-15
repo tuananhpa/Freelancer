@@ -1,5 +1,17 @@
 # Lựa chọn thiết kế
 
+## Bổ sung ảnh trường, logo và đội STEM
+Người dùng cung cấp logo.jpg, truongthpt.jpg và team.jpg. Sao chép nguyên bản vào public/images. Logo ở header với tên THPT Phạm Hùng; ảnh trường ở banner trang chủ, căn khung bằng CSS để tránh hai dải đen; ảnh đội STEM KA One Top nằm trong khối giới thiệu cuối trang chủ và hiển thị toàn ảnh. Không chỉnh nội dung ảnh. Giá trị nhận diện mặc định thay placeholder cũ khi tải dữ liệu lưu, giữ nội dung/ảnh admin đã tùy chỉnh. Kiểu riêng src/school-branding.css. 33 unit tests, build và luồng học sinh 36 bố cục đạt. Trang chủ kiểm tra 1440/768/375 px; cả ba ảnh tải thành công và không tràn ngang. Ảnh đối chiếu docs/mockups/school-home.png và school-home-mobile.png.
+
+
+## Mở rộng màu sắc và họa tiết cho các trang còn lại
+Theo yêu cầu tiếp tục phong cách trang chủ: các trang thi đua, lịch sử, tài khoản, lớp, đăng nhập/đăng ký và admin có tiêu đề nền dịu; thống kê dùng xanh lá, xanh lam, vàng và tím nhạt. SVG nguyên bản school-garden.svg có cây, ghế sân trường, chậu cây, hoa và chim; flower-corner.svg tạo góc hoa vàng/hồng đất. Họa tiết nằm ở banner và góc khối, bảng/ô nhập giữ nền sáng. Mobile tách vùng minh họa khỏi nội dung chữ. CSS riêng src/page-visuals.css. Đã kiểm tra 11 trang tại 1440/768/375 px, không tràn ngang hay lỗi trình duyệt; luồng học sinh và Excel qua kiểm tra 36 bố cục. Build thành công. Ảnh mới lưu ở docs/mockups/fresh-rankings.png, fresh-account.png, fresh-admin-members.png, fresh-registration-mobile.png.
+
+
+## Trang chủ có minh họa và bố cục đầy hơn
+Theo ảnh tham khảo mới: dùng SVG thùng phân loại rác, cây xanh, chai nhựa và lon với nét phẳng, màu dịu ở public/recycling-garden.svg. Banner có thông điệp và phiên bỏ rác rõ ràng; khi admin đã tải ảnh trường, ảnh thật thay minh họa. Hai ô điểm tách thành xanh lá và xanh lam. Loại rác và lịch sử nằm bên trái, thi đua bên phải trên desktop; mobile xếp dọc. Thêm lời nhắc tích điểm dưới bảng thi đua. CSS riêng ở src/home-visuals.css. Build và luồng học sinh 36 bố cục đạt; kiểm tra riêng trang chủ tại 1440, 768, 375 px không tràn ngang, ảnh tải được, phiên giữ nguyên và không có lỗi trình duyệt. Ảnh ở docs/mockups/decorated-home.png và decorated-home-mobile.png.
+
+
 ## Bổ sung họa tiết theo yêu cầu
 Thêm cụm lá nhỏ, chấm và vòng tròn/nét gợn sóng SVG ở nền và các góc trống. Tông xanh hiện tại được giữ, các bảng và form có nền sáng rõ; không đưa họa tiết vào từng dòng dữ liệu. Trên mobile giảm kích thước và bỏ một số nền trang trí. Styles tách ở src/decorations.css, assets eco-flourish.svg và eco-ripple.svg. Build đạt, kiểm tra 10 bố cục desktop/mobile không tràn ngang hoặc lỗi browser. Ảnh đối chiếu mới ở docs/mockups/decorated-home.png và decorated-rankings.png.
 

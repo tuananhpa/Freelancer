@@ -1,6 +1,8 @@
 # Portfolio nhóm freelance
 
-Frontend dữ liệu tĩnh theo mockup A đã chọn. Chạy với Node.js 22+; không cần cài package cho website.
+**Cloudflare backend (2026-10-14):** đã triển khai mã Worker/D1, đăng nhập và phân quyền, lưu bản nháp/xuất bản, upload ảnh và nhận liên hệ thật. Xem [CLOUDFLARE_DEPLOYMENT.md](docs/CLOUDFLARE_DEPLOYMENT.md) để chạy/deploy và quản trị. Các mục “cục bộ” bên dưới mô tả chế độ static chạy bằng `npm run dev`; trên Worker, admin/form dùng server.
+
+Frontend dữ liệu tĩnh theo mockup A đã chọn, có admin cục bộ để quản lý nội dung và xem thử. Chạy với Node.js 22+; không cần cài package cho website.
 
 ## Chạy và build
 
@@ -20,7 +22,23 @@ npm test
 npm run build
 ```
 
-Build tạo `dist/` từ đầu, gồm 8 trang HTML và `404.html`. Có thể đưa `dist/` lên hosting static. Server local chỉ là preview, không phải backend ứng dụng.
+Build tạo `dist/` từ đầu, gồm 8 trang công khai, `/admin/`, `/xem-thu/` và `404.html`. Có thể đưa `dist/` lên hosting static. Server local chỉ là preview, không phải backend ứng dụng.
+
+## Dùng admin frontend
+
+Mở `/admin/` trên cùng host/cổng với portfolio; bản local hiện chạy ở http://127.0.0.1:5188/admin/.
+
+1. **Dự án:** thêm/sửa/xóa, chỉnh tên/slug, ảnh, gallery, video, link sản phẩm/GitHub, case study, vai trò. Chọn nháp/công khai trong bản xem thử, đánh dấu nổi bật và đổi thứ tự bằng nút lên/xuống.
+2. **Trang chủ:** thêm khối từ thư viện 9 loại: hero, dự án, dịch vụ, quy trình, giới thiệu nhóm, FAQ, CTA, gallery ảnh, văn bản. Sửa nội dung, bật/tắt và đổi thứ tự. Khối dự án dùng danh sách nổi bật hoặc lựa chọn/thứ tự riêng. Hero lấy hình từ các dự án công khai trong khối dự án đầu tiên đang hiển thị.
+3. **Thông tin nhóm:** sửa tên, mô tả, email và các kênh liên hệ. Ghi chú mẫu có thể bật/tắt; các project mẫu vẫn có nhãn riêng để phân biệt.
+4. Bấm **Lưu trên trình duyệt**, rồi **Xem thử**. Preview `/xem-thu/?path=...` dùng cấu hình cục bộ, kể cả dự án mới. Các liên kết nội bộ giữ chế độ này; nút mở sản phẩm thật ra ngoài vẫn hoạt động bình thường.
+5. **Sao lưu & chuyển dữ liệu:** xuất `portfolio-content.json` hoặc nhập lại một bản cấu hình. Tệp có cả dự án nháp, vì vậy chỉ chia sẻ khi phù hợp.
+
+Ảnh từ máy hỗ trợ PNG/JPEG/WebP, tối đa 1 MB mỗi tệp, lưu dạng data URL trong cấu hình. Gallery dùng URL ảnh. Video dùng URL tệp trực tiếp; chưa có upload server. Khi trình duyệt hết dung lượng hoặc chặn storage, admin báo lỗi và có thể xuất JSON để giữ nội dung trong bộ nhớ.
+
+Storage key nội dung: `portfolio.content.v1`. Dữ liệu tách theo origin (host + cổng); không tự đồng bộ giữa máy/trình duyệt. Xóa storage sẽ mất cấu hình nếu chưa sao lưu. `/admin/` không có cơ chế bảo vệ truy cập vì đây là frontend cục bộ, không phải khu vực quản trị server.
+
+Chỉnh sửa trong admin không sửa `src/data.js` và không thay bản HTML công khai. Bản xem thử có banner ghi rõ cục bộ; xuất bản thật, tài khoản, phân quyền và duyệt bài sẽ nối backend sau.
 
 ## Cập nhật nội dung
 
@@ -36,7 +54,7 @@ Build tạo `dist/` từ đầu, gồm 8 trang HTML và `404.html`. Có thể đ
 
 Form kiểm tra tên, email/điện thoại, dịch vụ, mô tả; ngân sách/thời hạn tùy chọn. Có lưu/khôi phục bản nháp cục bộ và tải yêu cầu `.txt`. Nội dung chưa được gửi đến nhóm. Khi JavaScript không chạy, hành động lưu/tải bị vô hiệu hóa để tránh gửi dữ liệu qua URL. LocalStorage keys: `portfolio.contact-draft.v1`, `portfolio.theme.v1`.
 
-Chưa triển khai API, database, auth, tài khoản quản trị, phân quyền, duyệt nội dung, xử lý yêu cầu liên hệ hoặc chống spam phía server. Các mục đó thuộc giai đoạn backend. Không có dashboard quản trị hay đăng nhập giả.
+Chưa triển khai API, database, auth, tài khoản quản trị, phân quyền, duyệt nội dung, xử lý yêu cầu liên hệ hoặc chống spam phía server. Các mục đó thuộc giai đoạn backend. Trang admin hiện chỉ quản lý cấu hình cục bộ; không có đăng nhập hoặc xuất bản giả.
 
 ## Hosting và tên miền
 
@@ -63,6 +81,8 @@ $env:PLAYWRIGHT_MODULE = 'C:\Users\buiti\.cache\codex-runtimes\codex-primary-run
 # Chạy preview ở cổng 5188 trước.
 node tests/browser.mjs
 node tests/regressions.mjs
+node tests/admin-browser.mjs
+node tests/admin-review-regressions.mjs
 ```
 
 Máy khác cài Playwright dev hoặc trỏ `PLAYWRIGHT_MODULE` vào module đã cài; dùng Microsoft Edge hoặc đổi channel theo browser có sẵn. Báo cáo: `docs/VERIFICATION.md`. Screenshot: `docs/screenshots/`.

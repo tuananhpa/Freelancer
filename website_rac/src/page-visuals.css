@@ -1,0 +1,107 @@
+/* Shared garden palette: illustrations frame content, never cover form controls. */
+.page-content,.admin-body{background-color:#f7faf6}
+.page-content>.page-heading,.admin-body>.page-heading{padding:24px 28px;min-height:130px;border:1px solid #dbe8d8;border-radius:16px;background:#eaf4e5 url('/school-garden.svg') right 20px bottom -15px / 205px no-repeat;gap:24px;align-items:center;margin-bottom:26px}
+.page-content>.page-heading:after,.admin-body>.page-heading:after{display:none}
+.page-heading>div{position:relative;z-index:1;max-width:70%}
+.page-heading h1{color:#194d37}
+.page-heading p{max-width:560px;line-height:1.65;color:#52715e}
+.page-heading>select,.page-heading>.button{position:relative;z-index:1;box-shadow:0 2px 8px #284d3110;background-color:#fff}
+.page-content>.panel.spacious,.admin-body>.panel.spacious{border-color:#dce8df}
+.page-content thead,.admin-body thead{background:#eef6ef;color:#325447}
+.page-content .filter-bar{background:#f6faf7;padding:14px;border-radius:12px;border:1px solid #e5eee5}
+.page-content .search-field{background:#fff;border-radius:8px}
+.page-content .table-note{padding-top:14px;border-top:1px solid #e6eee6}
+.competition-banner{position:relative;padding:30px 36px;background:#e7f4e6 url('/school-garden.svg') right 15px bottom -10px / 290px no-repeat;min-height:200px;overflow:hidden;gap:24px}
+.competition-banner>.icon{padding:18px;box-sizing:content-box;border:1px solid #cfe2c6;border-radius:24px;background:#f3f9dc;color:#938023;width:58px;height:58px}
+.competition-banner h2{color:#18713f}
+.competition-banner .banner-phrase{margin-right:250px;font-size:21px;line-height:1.5;color:#4d7455;max-width:180px}
+.class-summary .panel{background:#f0f7eb url('/eco-flourish.svg') right -48px bottom -52px / 150px no-repeat;border-color:#d7e8d0}
+.class-summary .panel:nth-child(3n+2){background-color:#edf7fa;border-color:#d6e8ed}
+.class-summary .panel:nth-child(3n){background-color:#fcf7e9;border-color:#eee1c4}
+.class-summary h3{color:#325a44}
+.class-summary strong{color:#226d46}
+.class-summary .panel:nth-child(3n+2) strong{color:#286a7b}
+.class-summary .panel:nth-child(3n) strong{color:#86652b}
+.account-grid>.panel:not(.profile-card){background:#fff url('/school-garden.svg') right 10px bottom 0 / 235px no-repeat;padding-bottom:135px}
+.account-grid{max-width:none;grid-template-columns:minmax(260px,.75fr) minmax(0,1.25fr)}
+.profile-card{position:relative;overflow:hidden;background:#eef7e9 url('/eco-flourish.svg') right -15px bottom -15px / 240px no-repeat;border-color:#d5e6ce}
+.profile-card>.circle{background:#d3ebc9;border:7px solid #ffffffb0}
+.profile-card dl{background:#ffffffd9;padding:8px 18px;border:1px solid #dce9d5;border-radius:12px;text-align:left}
+.profile-card dl>div:last-child{border-bottom:0}
+.profile-card h2{color:#255439}
+.account-guest{background:#edf6e9 url('/school-garden.svg') right 15px bottom -15px / 220px no-repeat;padding-bottom:155px}
+.class-option>span{background:#f0f7ea;border-color:#d9e8d1}
+.class-option:nth-child(3n+2)>span{background:#edf6fa;border-color:#d7e7ef}
+.class-option:nth-child(3n)>span{background:#fcf7e9;border-color:#eee2c7}
+.class-option input:checked+span{background:#e5f4df;border-color:#5a9e6c;box-shadow:0 0 0 3px #77b78a1a}
+.auth-layout{background-color:#f1f7ed;align-items:stretch;gap:40px}
+.auth-story{position:relative;isolation:isolate;padding:36px 24px 270px;background:none}
+.auth-story:after{content:'';position:absolute;z-index:-1;bottom:5px;left:0;right:0;height:260px;background:url('/school-garden.svg') center bottom / contain no-repeat;pointer-events:none}
+.auth-story>.leaf-art{display:none}
+.auth-story>.circle{background:#d9edca;color:#40714a;border:6px solid #ffffffb0}
+.auth-story h1{color:#214f37;line-height:1.25}
+.auth-story p{color:#50715a;line-height:1.75}
+.auth-types{display:inline-flex;background:#fff9;border:1px solid #d7e6d0;border-radius:12px;padding:12px 16px;color:#366449}
+.auth-form{border-color:#d6e4d2;box-shadow:0 8px 25px #254c3410;background:#fff;align-self:start}
+.auth-form h2{color:#24543c}
+.auth-form input{background:#fbfdfb;border-color:#ccdccc}
+.auth-form input:focus{border-color:#69a47b}
+.registration-story-note{background:#ffffffad;border:1px solid #d9e6d1;border-radius:12px;padding:16px;margin-top:24px;line-height:1.6}
+.enrollment-notice{background:#edf6e5;border-color:#d3e5c8}
+.verified-student{background:#edf7fa;border-color:#d5e8ed}
+.admin-sidebar{background-color:#f0f6ec;border-right:1px solid #d4e3ce}
+.admin-sidebar h2{color:#2d593e}
+.admin-sidebar nav a.active{background:#dcefd5;box-shadow:inset 3px 0 #529569;color:#24623c}
+.admin-sidebar nav a:hover{background:#e5f0e0}
+.admin-body>.page-heading{min-height:112px;padding:22px 26px;background-size:170px;background-position:right 12px bottom -17px}
+.admin-stats .panel,.roster-summary>div{border-color:#d6e6cf;background:#eef7e8 url('/eco-flourish.svg') right -50px bottom -60px / 155px no-repeat;box-shadow:none}
+.admin-stats .panel:nth-child(4n+2),.roster-summary>div:nth-child(2){background-color:#edf7fa;border-color:#d7e8ed}
+.admin-stats .panel:nth-child(4n+3),.roster-summary>div:nth-child(3){background-color:#fcf6e5;border-color:#ede1c5}
+.admin-stats .panel:nth-child(4n+4){background-color:#f3eff7;border-color:#e4dcec}
+.admin-stats .panel:nth-child(4n+2) .circle,.roster-summary>div:nth-child(2)>span{color:#34788a;background:#d9edf3}
+.admin-stats .panel:nth-child(4n+3) .circle,.roster-summary>div:nth-child(3)>span{color:#93732d;background:#f5e8bd}
+.admin-stats .panel:nth-child(4n+4) .circle{color:#7c6489;background:#e8ddf0}
+.admin-stats strong,.roster-summary strong{color:#28563d}
+.admin-stats .panel:nth-child(4n+2) strong,.roster-summary>div:nth-child(2) strong{color:#2b6677}
+.admin-stats .panel:nth-child(4n+3) strong,.roster-summary>div:nth-child(3) strong{color:#856528}
+.admin-columns>.panel:first-child{border-top:3px solid #a3c995}
+.admin-columns>.panel:nth-child(2){border-top:3px solid #a0c6d5}
+.roster-import{background:#fff url('/eco-flourish.svg') right -35px top -50px / 165px no-repeat}
+.import-description .circle{background:#e0f0d7;color:#497b49}
+.roster-list thead{background:#eaf4e5}
+.settings-panel,.class-panel,.qr-panel{border-color:#dce7d7}
+.settings-panel form>h2{color:#355e40}
+.setting-options label:has(input:checked){background:#edf7e7;border-color:#88b27a}
+.admin-body input:not([type=radio]):not([type=checkbox]),.admin-body textarea,.admin-body select{background-color:#fcfefb;border-color:#ccdccc}
+.admin-body input[type=file]{background-color:#f3f8ed}
+.admin-pending .panel-heading{padding-bottom:14px;border-bottom:1px solid #e2ecdd}
+.empty-state{background:url('/eco-flourish.svg') right -50px bottom -70px / 170px no-repeat;border-radius:12px}
+.page-content:has(.filter-bar)>.page-heading{background-color:#eaf4f7;border-color:#d7e6eb}
+.page-content:has(.competition-banner)>.page-heading{background-image:url('/flower-corner.svg');background-size:175px;background-position:right 20px bottom -30px}
+.page-content:has(.account-grid)>.page-heading{background-color:#f7f2e4;border-color:#e9dfc7}
+.page-content:has(.account-grid)>.page-heading{background-image:url('/flower-corner.svg');background-size:175px;background-position:right 20px bottom -30px}
+.page-content:has(.class-options)>.page-heading{background-color:#eef2fa;border-color:#dce3ee}
+.profile-card{background-image:url('/flower-corner.svg');background-size:220px;background-position:right -30px bottom -8px}
+.class-summary .panel:nth-child(3n){background-image:url('/flower-corner.svg');background-position:right -45px bottom -25px;background-size:130px}
+.admin-sidebar{background-image:url('/flower-corner.svg');background-size:210px;background-position:left -32px bottom 8px}
+.admin-body>.page-heading{background-image:url('/flower-corner.svg');background-size:175px;background-position:right 14px bottom -22px}
+.auth-form{position:relative;overflow:hidden}
+.auth-form:after{content:'';display:block;height:27px;margin:16px -12px -14px;background:url('/flower-corner.svg') right bottom -30px / 110px no-repeat;pointer-events:none}
+.admin-columns>.panel:nth-child(2){background:#fff url('/flower-corner.svg') right -10px bottom -20px / 150px no-repeat;padding-bottom:85px}
+.admin-stats .panel:nth-child(4n+3),.roster-summary>div:nth-child(3){background-image:url('/flower-corner.svg');background-size:135px;background-position:right -35px bottom -30px}
+.page-content>.panel.spacious{background-image:url('/flower-corner.svg');background-repeat:no-repeat;background-size:125px;background-position:right -32px bottom -32px}
+.dashboard-body .point-block:nth-child(2){background-image:url('/flower-corner.svg');background-size:155px;background-position:right -35px bottom -22px}
+@media(max-width:1100px){.competition-banner .banner-phrase{display:none}.competition-banner{background-size:230px}.auth-layout{gap:24px}.auth-story{padding-left:10px;padding-right:10px}.page-heading p{max-width:470px}}
+@media(max-width:700px){
+ .page-content>.page-heading,.admin-body>.page-heading{padding:20px 18px 40px;min-height:120px;gap:12px;border-radius:13px;background-size:110px;background-position:right -15px bottom -25px;align-items:flex-start;margin-bottom:20px}
+ .page-heading>div{max-width:100%;min-width:0}.page-heading h1{font-size:25px}.page-heading p{font-size:12px;line-height:1.65}.page-heading>select{width:102px}.page-heading>.button{padding:9px;font-size:10px}
+ .page-content>.page-heading:has(>select),.admin-body>.page-heading:has(>.button){flex-wrap:wrap}.page-content>.page-heading>select{margin-top:2px}.page-heading>.button{margin-top:0}
+ .competition-banner{min-height:168px;background-size:165px;background-position:right -30px bottom -15px;padding:24px 16px;gap:16px}
+ .competition-banner>.icon{width:32px;height:32px;padding:12px;border-radius:15px}.competition-banner>div:not(.banner-phrase){position:relative;z-index:1}.competition-banner small{font-size:11px}.competition-banner p{font-size:12px;max-width:175px;line-height:1.6}.competition-banner h2{font-size:29px}
+ .class-summary .panel{background-size:100px;background-position:right -50px bottom -40px}
+ .page-content .filter-bar{padding:10px}.page-content .segmented{display:flex;max-width:100%}.segmented button{padding:10px 14px}
+ .auth-layout{gap:16px;padding:18px 16px}.auth-story{padding:12px 4px 108px;min-height:0}.auth-story h1,.registration-layout .auth-story h1{font-size:24px;line-height:1.25;margin-top:0;margin-bottom:10px}.auth-story p{font-size:12px;line-height:1.6}.auth-story:after{height:100px;left:auto;right:0;bottom:0;width:205px;opacity:1}.auth-form{align-self:stretch;box-shadow:0 4px 16px #254c3408}.registration-story-note{margin-top:12px;padding:10px;font-size:11px;gap:7px}.registration-story-note .icon{flex-shrink:0;width:19px}
+ .admin-sidebar{background-image:none}.admin-sidebar nav a.active{box-shadow:inset 0 -3px #529569}.admin-body>.page-heading{padding-bottom:46px;background-size:110px;background-position:right -15px bottom -45px}.admin-stats .panel,.roster-summary>div{background-size:95px;background-position:right -45px bottom -40px}
+ .account-grid>.panel:not(.profile-card){background-size:185px;padding-bottom:125px}.profile-card{background-size:150px;background-position:right -45px bottom -15px}.account-guest{background-size:180px;padding-bottom:130px}
+ .account-grid{grid-template-columns:1fr}.page-content:has(.competition-banner)>.page-heading,.page-content:has(.account-grid)>.page-heading{background-size:105px;background-position:right -15px bottom -40px}.dashboard-body .point-block:nth-child(2){background-size:95px;background-position:right -28px bottom -22px}
+}
