@@ -4,7 +4,7 @@
 - Các mã keo tản nhiệt trên website cũ có dùng chung ảnh nguồn. Danh mục giữ đúng ảnh được nguồn công bố.
 - applications.png: ảnh minh họa bốn nhóm ứng dụng, tạo bằng image_gen tích hợp; không dùng như bằng chứng về cơ sở sản xuất của Tensan.
 - Các icon là SVG đồng bộ nét, viết trong src/icons.js.
-- Hero là bo mạch/chip/lớp keo/tản nhiệt nhôm dựng bằng hình học Three.js. Keo màu kem có viền không đều và vệt dàn keo; nhãn TS1001 chỉ đúng vị trí trong mô hình. Độ dày phóng đại để quan sát; không trình bày như bản vẽ kỹ thuật. Thẻ TS1001 dùng ảnh thật từ website nguồn. thermal-assembly-fallback.svg là sơ đồ vector viết trong dự án cho chế độ dự phòng.
+- Hero là bo mạch nhiều lớp/chip/keo màu xám/cụm 23 lá nhôm và ống đồng minh họa, dựng bằng hình học Three.js. Roughness texture kim loại được dựng bằng DataTexture trong mã, không tải ảnh ngoài. Keo có viền không đều và vệt dàn keo; nhãn TS1001 chỉ đúng vị trí trong mô hình. Độ dày phóng đại để quan sát; không trình bày như bản vẽ kỹ thuật. Thẻ TS1001 dùng ảnh thật từ website nguồn. thermal-assembly-fallback.svg là sơ đồ vector viết trong dự án cho chế độ dự phòng. Dải ứng dụng ở hero dùng lại applications.png, giữ ảnh minh họa riêng với ảnh sản phẩm thật.
 
 ## Prompt ảnh ứng dụng
 

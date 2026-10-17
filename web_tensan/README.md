@@ -18,6 +18,8 @@ Three.js dựng bo mạch, chip, lớp keo có bề mặt dàn keo và tản nhi
 
 ## Nội dung
 
+Hero hiện hành có PCB nhiều lớp, đầu nối, tụ điện, chân đế, cụm 23 lá nhôm và ống đồng minh họa. Bề mặt kim loại dùng roughness texture dựng bằng mã; lớp keo màu xám phù hợp nội dung TS1001. Phần đầu có thẻ sản phẩm thật và bốn liên kết ứng dụng; các thay đổi bố cục bên dưới chỉ áp dụng cho trang chủ.
+
 - 29 sản phẩm từ danh mục công khai của Tensan, lưu snapshot ở `docs/catalog-source.json`.
 - `src/data.js` chứa nội dung đã biên tập; `src/catalog-imported.json` chứa phần danh mục bổ sung.
 - Nguồn ảnh sản phẩm/logo/doanh nghiệp: `docs/ASSET_SOURCES.json` và `imageSource` trong dữ liệu nhập.

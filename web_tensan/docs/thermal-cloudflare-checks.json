@@ -1,27 +1,24 @@
 {
-  "version": "4170379b-31fd-455c-b865-34caf10171dd",
-  "checkedAt": "2026-10-17T10:03:02.176Z",
+  "version": "6c147b01-59fe-45c5-9e78-18a5a3293eb6",
+  "checkedAt": "2026-10-17T11:35:29.136Z",
   "checks": [
     {
       "pathname": "/",
       "status": 200,
-      "contentType": "text/html",
       "csp": true,
-      "ts1001": true
+      "modernHero": true
     },
     {
       "pathname": "/san-pham/ts1001",
       "status": 200,
-      "contentType": "text/html",
       "csp": true,
-      "ts1001": true
+      "modernHero": null
     },
     {
-      "pathname": "/assets/thermal-assembly-fallback.svg",
+      "pathname": "/ung-dung",
       "status": 200,
-      "contentType": "image/svg+xml",
       "csp": true,
-      "ts1001": true
+      "modernHero": null
     }
   ]
 }

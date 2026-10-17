@@ -2,6 +2,8 @@
 Cập nhật: 2026-10-17
 
 ## Điều chỉnh theo phản hồi mới nhất
+Người dùng tiếp tục yêu cầu mô hình và phần đầu hiện đại, đầy đủ hơn, đồng thời giữ cùng URL Cloudflare và push vào Git có sẵn tại D:/Freelancer. Đã tăng chi tiết PCB (vias, đường mạch, linh kiện, đầu nối, chân đế), cụm lá tản nhiệt cong và ống đồng, bề mặt kim loại có texture; vẫn giữ bố cục tách lớp và trọng tâm keo TS1001. Đầu trang dùng khung trưng bày, thẻ ảnh sản phẩm và dải liên kết ứng dụng. Phần danh mục/sản phẩm/giới thiệu được chỉnh đồng bộ trong phạm vi trang chủ.
+
 Người dùng đính kèm lại mô hình bo mạch và làm rõ: vẫn phải giữ thiết kế tách lớp, chỉ cải thiện độ rõ và cho thấy keo tản nhiệt trên chính mô hình. Phương án thay hero bằng bao bì bị bác bỏ. Thiết kế hiện hành giữ bo mạch + chip + lớp keo + tản nhiệt nhôm, nhãn nổi bật “Keo tản nhiệt TS1001” nối đúng vị trí khi xoay; có ảnh TS1001 thật bên cạnh. Lớp keo có viền mềm và vệt dàn, đặt giữa chip và đế tản nhiệt khi lắp ghép. Có kéo xoay, nút 30°, góc ban đầu, tự xoay tùy chọn và nút xem lớp keo. Phản hồi mới nhất này là yêu cầu đang thực hiện, không có thêm bước phê duyệt thiết kế của người dùng.
 
 ## Lựa chọn gốc

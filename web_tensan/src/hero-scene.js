@@ -84,7 +84,7 @@ export function createHeroScene(host) {
   }
   function focusPaste() {
     setAssembled(false); resetView();
-    hero.querySelector('#assembly-explanation').textContent = 'TS1001: lớp keo màu kem giữa chip và đế tản nhiệt nhôm.';
+    hero.querySelector('#assembly-explanation').textContent = 'TS1001: lớp keo màu xám giữa chip và đế tản nhiệt nhôm.';
     announce('Keo tản nhiệt TS1001 được làm nổi bật ở lớp giữa. Độ dày được phóng đại để dễ quan sát.');
     host.scrollIntoView({ block: 'center', behavior: media.matches ? 'instant' : 'smooth' });
   }
@@ -95,7 +95,9 @@ export function createHeroScene(host) {
     gsap.killTweensOf(state); controls?.dispose(); resizeObserver?.disconnect(); visibilityObserver?.disconnect();
     const geometry = new Set(), materials = new Set();
     scene?.traverse(object => { if (object.geometry) geometry.add(object.geometry); if (object.material) materials.add(object.material); });
-    geometry.forEach(item => item.dispose()); materials.forEach(item => item.dispose());
+    const maps = new Set();
+    materials.forEach(item => { if (item.roughnessMap) maps.add(item.roughnessMap); });
+    geometry.forEach(item => item.dispose()); materials.forEach(item => item.dispose()); maps.forEach(item => item.dispose());
     environment?.dispose(); pmrem?.dispose(); renderer?.dispose(); renderer?.domElement.remove(); renderer = null;
   }
   function fallbackView() {
@@ -129,12 +131,12 @@ export function createHeroScene(host) {
     const key = new THREE.DirectionalLight(0xfff8ef, 2.4); key.position.set(-3, 6, 4); key.castShadow = true;
     key.shadow.mapSize.set(1024, 1024); key.shadow.camera.left = key.shadow.camera.bottom = -5; key.shadow.camera.right = key.shadow.camera.top = 5; key.shadow.camera.far = 20; key.shadow.normalBias = 0.025; scene.add(key);
     assembly = buildThermalAssembly(); scene.add(assembly.root);
-    const ground = new THREE.Mesh(new THREE.PlaneGeometry(30, 30), new THREE.ShadowMaterial({ color: 0x000c14, opacity: 0.25 })); ground.rotation.x = -Math.PI / 2; ground.position.y = -0.07; ground.receiveShadow = true; scene.add(ground);
+    const ground = new THREE.Mesh(new THREE.PlaneGeometry(30, 30), new THREE.ShadowMaterial({ color: 0x000c14, opacity: 0.25 })); ground.rotation.x = -Math.PI / 2; ground.position.y = -0.225; ground.receiveShadow = true; scene.add(ground);
     function resize() {
       if (lost || disposed) return;
       const { width, height } = host.getBoundingClientRect(); if (!width || !height) return;
       const aspect = width / height, view = getAssemblyViewHeight(aspect);
-      const shift = aspect > 0.95 ? 0.4 : 0.25;
+      const shift = aspect > 0.95 ? 0.48 : 0.25;
       camera.left = -view * aspect / 2 + shift; camera.right = view * aspect / 2 + shift;
       camera.top = view / 2; camera.bottom = -view / 2; camera.updateProjectionMatrix();
       renderer.setSize(width, height); wake();

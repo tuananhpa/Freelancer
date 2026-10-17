@@ -32,22 +32,31 @@ test('thermal grease remains between the chip and heatsink in both assembly stat
 
 test('the full exploded assembly fits narrow and desktop viewports while rotating', () => {
   const { root } = buildThermalAssembly();
+  root.updateMatrixWorld(true);
+  // Batched component bounds contain empty corners; project actual surface vertices.
+  const unique = new Map();
+  root.traverse(object => {
+    if (!object.geometry) return;
+    const positions = object.geometry.attributes.position;
+    for (let index = 0; index < positions.count; index++) {
+      const point = new THREE.Vector3().fromBufferAttribute(positions, index).applyMatrix4(object.matrixWorld);
+      unique.set(point.toArray().map(value => value.toFixed(4)).join(','), point);
+    }
+  });
   for (const aspect of [0.72, 1, 1.5]) {
     const height = getAssemblyViewHeight(aspect);
-    const camera = new THREE.OrthographicCamera(-height * aspect / 2, height * aspect / 2, height / 2, -height / 2, 0.1, 50);
-    camera.position.set(6.4, 5.3, 7.2); camera.lookAt(0, 1.2, 0); camera.updateMatrixWorld();
-    for (let angle = 0; angle < Math.PI * 2; angle += Math.PI / 8) {
-      root.rotation.y = angle;
-      root.updateMatrixWorld(true);
-      root.traverse(object => {
-        if (!object.geometry) return;
-        object.geometry.computeBoundingBox();
-        const bounds = object.geometry.boundingBox;
-        for (const x of [bounds.min.x, bounds.max.x]) for (const y of [bounds.min.y, bounds.max.y]) for (const z of [bounds.min.z, bounds.max.z]) {
-          const point = new THREE.Vector3(x, y, z).applyMatrix4(object.matrixWorld).project(camera);
-          assert.ok(Math.abs(point.x) < 1 && Math.abs(point.y) < 1, `Clipped at aspect ${aspect}`);
+    const shift = aspect > 0.95 ? 0.48 : 0.25;
+    const camera = new THREE.OrthographicCamera(-height * aspect / 2 + shift, height * aspect / 2 + shift, height / 2, -height / 2, 0.1, 50);
+    for (const polar of [Math.PI / 4, Math.PI / 2.4]) {
+      camera.position.setFromSphericalCoords(10.47, polar, Math.atan2(6.4, 7.2)).add(new THREE.Vector3(0, 1.2, 0));
+      camera.lookAt(0, 1.2, 0); camera.updateMatrixWorld();
+      for (let angle = 0; angle < Math.PI * 2; angle += Math.PI / 8) {
+        const rotation = new THREE.Matrix4().makeRotationY(angle);
+        for (const vertex of unique.values()) {
+          const point = vertex.clone().applyMatrix4(rotation).project(camera);
+          assert.ok(Math.abs(point.x) < 1 && Math.abs(point.y) < 1, `Clipped at aspect ${aspect}, polar ${polar}`);
         }
-      });
+      }
     }
   }
 });

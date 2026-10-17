@@ -4,11 +4,11 @@ Ngày: 2026-10-17 (Asia/Saigon)
 ## Phiên bản hiện hành
 - URL: https://tensan-vietnam.tuananhha1710.workers.dev
 - Cloudflare Worker: tensan-vietnam.
-- Version: 4170379b-31fd-455c-b865-34caf10171dd.
+- Version: 6c147b01-59fe-45c5-9e78-18a5a3293eb6.
 - Người dùng yêu cầu giữ thiết kế bo mạch tách lớp, làm rõ lớp keo tản nhiệt. Phương án thay hero bằng bao bì đã được bỏ.
 - Hero hiện hành: bo mạch/chip/keo TS1001/tản nhiệt nhôm, có nhãn chỉ đúng vị trí trên mô hình, ảnh TS1001 thật và liên kết sản phẩm.
 - Wrangler xác nhận triển khai thành công; không đổi DNS hoặc website tên miền cũ.
-- HTTP trang chủ, TS1001 và sơ đồ dự phòng: 200, có CSP. Chi tiết: thermal-cloudflare-checks.json. cloudflare-checks.json thuộc lượt triển khai trước.
+- HTTP trang chủ hiện hành, TS1001 và trang ứng dụng: 200, có CSP; HTML trang chủ chứa dải ứng dụng mới. Chi tiết: thermal-cloudflare-checks.json. cloudflare-checks.json thuộc lượt triển khai trước.
 
 ## Kiểm tra đã thực hiện
 - npm test: 9/9 qua. Sáu kiểm tra nội dung/tìm kiếm/email; ba kiểm tra mới về gộp hình học, keo nằm giữa chip và tản nhiệt trong cả chuyển động lắp ghép, và toàn bộ mô hình nằm trong khung khi xoay ở các tỷ lệ màn hình.
@@ -32,3 +32,15 @@ Ngày: 2026-10-17 (Asia/Saigon)
 - Driver của môi trường QA có một cảnh báo shader về độ chính xác số; không có lỗi render trong lượt xác nhận cuối.
 - Form chỉ soạn email, chưa có API tiếp nhận/CRM/database/trang quản trị.
 - Ảnh ứng dụng là minh họa AI; ảnh sản phẩm/cơ sở từ website nguồn Tensan.
+
+## Lượt nâng cấp mô hình và phần đầu
+- PCB có thêm lớp cạnh, vias, silkscreen, tụ điện có nắp, đầu nối, linh kiện phụ và chân đế; tản nhiệt có 23 lá cong, ống đồng và texture kim loại.
+- Keo xám theo nội dung sản phẩm TS1001; mô hình vẫn minh họa nguyên lý, không phải bản vẽ sản xuất.
+- Đầu trang có khung trưng bày, thẻ ảnh thật TS1001, nhóm chức năng vật liệu và bốn liên kết ứng dụng. Bố cục danh mục/sản phẩm/giới thiệu bên dưới được chỉnh trong phạm vi .home-page.
+- npm test: 9/9 qua; kiểm tra hình học dùng đỉnh bề mặt thực ở cả hai giới hạn nghiêng và các góc xoay. npm run build: qua, 39 trang.
+- Desktop 1440×1100 và mobile 375×812: không tràn ngang, mô hình nhìn thấy rõ; đã xem ảnh kết quả.
+- Liên kết dải ứng dụng tới /ung-dung#den-led hoạt động; rời trang chủ không còn canvas, trở về tạo lại WebGL.
+- Reviewer không thấy blocker. Điểm cắt khung nhỏ ở góc nghiêng cực hạn được sửa bằng nới camera; bài kiểm tra bao gồm giới hạn đó đã qua.
+- Cloudflare hiện hành: renderer=webgl, bốn liên kết ứng dụng, lắp ghép rồi hotspot mở lại tách lớp; không có console error trong lượt cuối.
+- Ảnh đối chiếu bản công khai: tensan-modern-assembly.jpg trong thư mục visualizations của chat.
+- Giới hạn đo hiệu năng/thiết bị thật và backend bên trên vẫn áp dụng.
