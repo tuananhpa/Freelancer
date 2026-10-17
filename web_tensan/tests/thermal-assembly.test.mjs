@@ -3,6 +3,23 @@ import assert from 'node:assert/strict';
 import * as THREE from 'three';
 import { buildThermalAssembly, getAssemblyViewHeight } from '../src/thermal-assembly.js';
 
+test('fan rotor clears the fin bank and stays inside its circular housing', () => {
+  const { root, parts, fanRotor } = buildThermalAssembly();
+  assert.ok(fanRotor, 'Cooling assembly is missing its fan');
+  root.updateMatrixWorld(true);
+  const center = fanRotor.getWorldPosition(new THREE.Vector3());
+  const finTop = parts.heatsink.position.y + 1.11;
+  fanRotor.traverse(object => {
+    if (!object.geometry) return;
+    const positions = object.geometry.attributes.position;
+    for (let i = 0; i < positions.count; i++) {
+      const point = new THREE.Vector3().fromBufferAttribute(positions, i).applyMatrix4(object.matrixWorld);
+      assert.ok(point.y > finTop, 'Fan collides with fins');
+      assert.ok(Math.hypot(point.x - center.x, point.z - center.z) < 0.85, 'Blade touches fan housing');
+    }
+  });
+});
+
 test('static components are batched for rotation without losing valid shaded geometry', () => {
   const { root } = buildThermalAssembly();
   let meshes = 0;

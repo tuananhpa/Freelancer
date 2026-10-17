@@ -150,6 +150,37 @@ export function buildThermalAssembly() {
     screw.position.set(x, 0.185, Math.sign(z) * 0.96); parts.heatsink.add(screw);
     box(parts.heatsink, 0.055, 0.003, 0.01, black, x, 0.219, Math.sign(z) * 0.96, 0.001);
   }
+  const fanFrame = new THREE.Shape();
+  fanFrame.moveTo(-1.13, -0.98); fanFrame.lineTo(1.13, -0.98); fanFrame.lineTo(1.13, 0.98); fanFrame.lineTo(-1.13, 0.98); fanFrame.closePath();
+  const aperture = new THREE.Path(); aperture.absarc(0, 0, 0.87, 0, Math.PI * 2, true); fanFrame.holes.push(aperture);
+  const housing = new THREE.Mesh(new THREE.ExtrudeGeometry(fanFrame, { depth: 0.08, bevelEnabled: true, bevelSegments: 3, bevelSize: 0.02, bevelThickness: 0.02, curveSegments: 48 }), black);
+  housing.rotation.x = -Math.PI / 2; housing.position.y = 1.20; parts.heatsink.add(housing);
+  for (const angle of [-Math.PI / 4, Math.PI / 4]) {
+    const support = box(parts.heatsink, 1.83, 0.025, 0.045, black, 0, 1.16, 0, 0.008); support.rotation.y = angle;
+  }
+  const accent = new THREE.Mesh(new THREE.TorusGeometry(0.888, 0.012, 8, 96), new THREE.MeshBasicMaterial({ color: 0x6ebfba, transparent: true, opacity: 0.72 }));
+  accent.rotation.x = -Math.PI / 2; accent.position.y = 1.302; parts.heatsink.add(accent);
+  for (const x of [-0.97, 0.97]) for (const z of [-0.82, 0.82]) {
+    const bolt = new THREE.Mesh(new THREE.CylinderGeometry(0.058, 0.058, 0.035, 6), solder);
+    bolt.position.set(x, 1.31, z); parts.heatsink.add(bolt);
+    box(parts.heatsink, 0.061, 0.002, 0.011, black, x, 1.329, z, 0.001);
+  }
+  const fanRotor = new THREE.Group(); fanRotor.position.y = 1.24; parts.heatsink.add(fanRotor);
+  const fanMaterial = new THREE.MeshPhysicalMaterial({ color: 0x071216, roughness: 0.42, metalness: 0.12, clearcoat: 0.35, envMapIntensity: 0.4 });
+  const blade = new THREE.Shape();
+  blade.moveTo(0.18, -0.06); blade.bezierCurveTo(0.42, -0.12, 0.73, -0.33, 0.80, -0.16);
+  blade.bezierCurveTo(0.84, 0.01, 0.68, 0.25, 0.32, 0.21); blade.bezierCurveTo(0.26, 0.13, 0.20, 0.06, 0.18, -0.06);
+  for (let i = 0; i < 9; i++) {
+    const geometry = new THREE.ExtrudeGeometry(blade, { depth: 0.018, bevelEnabled: true, bevelSegments: 2, bevelSize: 0.006, bevelThickness: 0.006, curveSegments: 12 });
+    geometry.rotateX(-Math.PI / 2);
+    const positions = geometry.attributes.position;
+    for (let vertex = 0; vertex < positions.count; vertex++) positions.setY(vertex, positions.getY(vertex) + positions.getZ(vertex) * 0.22);
+    geometry.computeVertexNormals();
+    const vane = new THREE.Mesh(geometry, fanMaterial); vane.rotation.y = i * Math.PI * 2 / 9; fanRotor.add(vane);
+  }
+  const hub = new THREE.Mesh(new THREE.CylinderGeometry(0.225, 0.23, 0.085, 64), black); hub.position.y = 0.025; fanRotor.add(hub);
+  const hubCap = new THREE.Mesh(new THREE.CylinderGeometry(0.17, 0.17, 0.012, 64), silver); hubCap.position.y = 0.074; fanRotor.add(hubCap);
+  mergeStaticMeshes(fanRotor);
   const flow = new THREE.Group(); root.add(flow);
   for (const x of [-0.33, 0.33]) {
     const arrow = new THREE.ArrowHelper(new THREE.Vector3(0, 1, 0), new THREE.Vector3(x, 0.38, 0.76), 0.55, 0x57bfc2, 0.1, 0.065);
@@ -163,5 +194,5 @@ export function buildThermalAssembly() {
     flow.visible = value < 0.4;
   }
   setAssembly(0);
-  return { root, parts, flow, setAssembly };
+  return { root, parts, flow, fanRotor, setAssembly };
 }

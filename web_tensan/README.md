@@ -14,7 +14,7 @@ npm run preview
 
 ## 3D và animation
 
-Three.js dựng bo mạch, chip, lớp keo có bề mặt dàn keo và tản nhiệt nhôm. Nhãn TS1001 bám đúng vị trí lớp keo khi xoay; thẻ ảnh thật liên kết tới trang sản phẩm. Người dùng kéo xoay, xoay từng 30°, trở về góc ban đầu, lắp ghép/tách lớp hoặc bật tự xoay; mặc định dừng để dễ đọc. Nút xem lớp keo khôi phục góc nhìn tách lớp. Hình học tĩnh được gộp theo vật liệu để giảm số lượt vẽ. GSAP điều khiển chuyển cảnh và nội dung theo cuộn; có reduced motion, dừng khi ngoài màn hình/ẩn tab và dọn tài nguyên khi chuyển trang. Nếu WebGL hoặc tệp 3D lỗi tải, hiển thị sơ đồ SVG cùng liên kết sản phẩm. Mô hình minh họa nguyên lý, độ dày keo được phóng đại, không phải bản vẽ kỹ thuật sản xuất.
+Three.js dựng bo mạch, chip, lớp keo có bề mặt dàn keo, tản nhiệt nhôm và quạt chín cánh nghiêng có khung bảo vệ. Nhãn TS1001 bám đúng vị trí lớp keo khi xoay; thẻ ảnh thật liên kết tới trang sản phẩm. Mô hình tự xoay ngay khi vào trang, trừ khi thiết bị yêu cầu giảm chuyển động. Người dùng có thể tạm dừng, kéo xoay, xoay từng 30°, trở về góc ban đầu hoặc lắp ghép/tách lớp. Nút xem lớp keo dừng tự xoay và khôi phục góc nhìn tách lớp. Hình học tĩnh được gộp theo vật liệu để giảm số lượt vẽ. GSAP điều khiển chuyển cảnh và nội dung theo cuộn; có reduced motion, dừng khi ngoài màn hình/ẩn tab và dọn tài nguyên khi chuyển trang. Nếu WebGL hoặc tệp 3D lỗi tải, hiển thị sơ đồ SVG cùng liên kết sản phẩm. Mô hình minh họa nguyên lý, độ dày keo được phóng đại, không phải bản vẽ kỹ thuật sản xuất.
 
 ## Nội dung
 

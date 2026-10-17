@@ -35,6 +35,7 @@
 .assembly-label[data-label=heatsink]{top:21%}.assembly-label[data-label=paste]{top:49%}.assembly-label[data-label=chip]{top:67%}.assembly-label[data-label=board]{top:83%}
 .assembly-label-paste{pointer-events:auto;color:#a4f2ec;background:#0b3a43;border:1px solid #59b8bb;box-shadow:0 0 24px #35d6cc13;font-weight:600}
 .assembly-label-paste>span{color:#bbfffa;border-color:#73caca}.assembly-label strong{font-size:13px;display:block;letter-spacing:.04em;color:#fff}
+.assembly-label small{display:block;font-size:9px;color:#8ebbc4;margin-top:2px}
 .assembly-toolbar{display:flex;align-items:center;justify-content:flex-end;gap:7px;border-top:1px solid #335764;padding-top:12px}
 .assembly-drag-hint{display:flex;align-items:center;gap:7px;margin-right:auto;font-size:10px;color:#b8d2da}.assembly-drag-hint .icon{width:15px;height:15px}
 .assembly-control{display:flex;align-items:center;justify-content:center;gap:6px;min-height:40px;min-width:40px;border:1px solid #4c7481;background:#0c2b39;color:#d7eaef;border-radius:3px;padding:9px 10px;font-size:10px}

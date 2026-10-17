@@ -4,13 +4,19 @@ Ngày: 2026-10-17 (Asia/Saigon)
 ## Phiên bản hiện hành
 - URL: https://tensan-vietnam.tuananhha1710.workers.dev
 - Cloudflare Worker: tensan-vietnam.
-- Version: 6c147b01-59fe-45c5-9e78-18a5a3293eb6.
+- Version: df6a1aa8-d616-4aa1-8929-8e951c68a21c.
 - Người dùng yêu cầu giữ thiết kế bo mạch tách lớp, làm rõ lớp keo tản nhiệt. Phương án thay hero bằng bao bì đã được bỏ.
 - Hero hiện hành: bo mạch/chip/keo TS1001/tản nhiệt nhôm, có nhãn chỉ đúng vị trí trên mô hình, ảnh TS1001 thật và liên kết sản phẩm.
 - Wrangler xác nhận triển khai thành công; không đổi DNS hoặc website tên miền cũ.
 - HTTP trang chủ hiện hành, TS1001 và trang ứng dụng: 200, có CSP; HTML trang chủ chứa dải ứng dụng mới. Chi tiết: thermal-cloudflare-checks.json. cloudflare-checks.json thuộc lượt triển khai trước.
 
 ## Kiểm tra đã thực hiện
+- Lượt mới nhất: npm test 10/10 qua, npm run build qua và tạo 39 trang. Thêm kiểm tra cánh quạt không chạm cụm lá nhôm và nằm trong lỗ khung.
+- Mô hình có quạt chín cánh nghiêng, khung, trục, ốc và viền xanh nhẹ. Ánh sáng được chỉnh giảm cháy bề mặt kim loại. Quạt và góc xem tự xoay từ lúc vào trang; autoRotateSpeed=1.1, trước đây 0.22.
+- Bản Cloudflare mới: renderer=webgl; vị trí đường dẫn nhãn thay đổi khi tự xoay, đứng yên khi bấm dừng, bật lại được. Không có console error trong lượt kiểm tra này.
+- Desktop 1440×1050 và mobile 375×812 không tràn ngang; mobile vẫn render WebGL, nút xem keo dừng xoay và đưa mô hình về góc tách lớp.
+- Reviewer phát hiện khởi tạo gọi render trực tiếp sau khi đã lên lịch RAF có thể tạo hai vòng render. Đã sửa dùng wake() duy nhất; guard reduced motion được giữ và đồng bộ trạng thái nút.
+- Ảnh Cloudflare hiện hành: tensan-fan-autoplay.jpg trong thư mục visualizations của chat. Các mục bên dưới ghi lại các đợt kiểm tra trước.
 - npm test: 9/9 qua. Sáu kiểm tra nội dung/tìm kiếm/email; ba kiểm tra mới về gộp hình học, keo nằm giữa chip và tản nhiệt trong cả chuyển động lắp ghép, và toàn bộ mô hình nằm trong khung khi xoay ở các tỷ lệ màn hình.
 - npm run build: qua, tạo 39 trang HTML tĩnh và giữ 29 sản phẩm công khai.
 - Browser desktop 1440×1000, màn hình vừa 900×1000 và mobile 375×812: kiểm tra giao diện/mô hình, không tràn ngang.
