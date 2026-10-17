@@ -29,7 +29,7 @@ test('static components are batched for rotation without losing valid shaded geo
     assert.ok(object.geometry.attributes.normal);
     assert.ok(object.geometry.attributes.position.array.every(Number.isFinite));
   });
-  assert.ok(meshes < 25, 'Hundreds of separate component draws make rotation needlessly expensive');
+  assert.ok(meshes < 29, 'Keep the assembly and added product jar batched into a small draw budget');
 });
 
 test('thermal grease remains between the chip and heatsink in both assembly states', () => {

@@ -3,6 +3,7 @@ import './style.css';
 import './assembly-hero.css';
 import './hero-carousel.css';
 import { createHeroCarousel } from './hero-carousel.js';
+import { createBannerMotion } from './banner-motion.js';
 import * as pages from './pages.js';
 import { products, articles } from './data.js';
 import { createPageMotion, refreshPageMotion } from './motion.js';
@@ -10,7 +11,7 @@ import { buildInquiryMailto } from './inquiry.js';
 import { icon } from './icons.js';
 
 const app = document.querySelector('#app');
-let cleanupMotion = () => {}, cleanupScene = () => {}, cleanupCarousel = () => {}, generation = 0;
+let cleanupMotion = () => {}, cleanupScene = () => {}, cleanupProducts = () => {}, cleanupBannerMotion = () => {}, cleanupCarousel = () => {}, generation = 0;
 const pageTitles = { '/': 'Giải pháp vật liệu cho sản xuất điện tử', '/gioi-thieu': 'Giới thiệu', '/san-pham': 'Sản phẩm', '/ung-dung': 'Ứng dụng', '/tin-tuc': 'Kiến thức & tin tức', '/lien-he': 'Liên hệ', '/tuyen-dung': 'Tuyển dụng' };
 
 function currentPage(url) {
@@ -37,6 +38,8 @@ function currentPage(url) {
 function render({ focus = false, scroll = 0 } = {}) {
   const id = ++generation;
   cleanupCarousel(); cleanupCarousel = () => {};
+  cleanupProducts(); cleanupProducts = () => {};
+  cleanupBannerMotion(); cleanupBannerMotion = () => {};
   cleanupScene(); cleanupScene = () => {};
   cleanupMotion(); cleanupMotion = () => {};
   const url = new URL(window.location.href);
@@ -48,10 +51,15 @@ function render({ focus = false, scroll = 0 } = {}) {
   canonical.href = window.location.origin + (url.pathname.replace(/\/+$/, '') || '/');
   document.querySelector('meta[name="description"]').content = page.title === pageTitles['/'] ? 'TENSAN Việt Nam cung cấp keo công nghiệp, vật liệu tản nhiệt, silicone và giải pháp phụ trợ SMT cho sản xuất điện tử.' : `${page.title}. Khám phá giải pháp vật liệu và kết nối với đội ngũ kỹ thuật TENSAN Việt Nam.`;
   const carousel = document.querySelector('.hero-carousel');
-  if (carousel) cleanupCarousel = createHeroCarousel(carousel, refreshPageMotion);
+  if (carousel) { cleanupCarousel = createHeroCarousel(carousel, refreshPageMotion); cleanupBannerMotion = createBannerMotion(carousel); }
   cleanupMotion = createPageMotion(document.querySelector('main'));
   const host = document.querySelector('#hero-scene');
   if (host) {
+    import('./product-scene.js').then(module => {
+      if (generation !== id) return;
+      const cleanups = [...document.querySelectorAll('[data-product-scene]')].map(node => module.createProductScene(node));
+      cleanupProducts = () => cleanups.forEach(cleanup => cleanup());
+    }).catch(() => { if (generation === id) document.querySelectorAll('[data-product-scene]').forEach(node => { node.dataset.renderer = 'fallback'; }); });
     import('./hero-scene.js').then(module => {
     if (generation === id) {
       cleanupScene = module.createHeroScene(host);

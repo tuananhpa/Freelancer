@@ -20,7 +20,7 @@ export function createHeroCarousel(root, refreshLayout) {
       buttons[i].setAttribute('aria-pressed', String(i === active));
     });
     track.style.transform = `translateX(-${active * 100}%)`;
-    root.querySelector('.banner-count').textContent = `0${active + 1} / 03`;
+    root.querySelector('.banner-count').textContent = `0${active + 1} / 0${slides.length}`;
     root.querySelector('[data-banner-status]').textContent = slides[active].getAttribute('aria-label');
     fit();
     refreshLayout();
@@ -34,7 +34,7 @@ export function createHeroCarousel(root, refreshLayout) {
     buttons[active].focus();
   });
   on(viewport, 'pointerdown', event => {
-    if (!event.isPrimary || event.button !== 0 || event.target.closest('.assembly-view, button')) return;
+    if (!event.isPrimary || event.button !== 0 || event.target.closest('.assembly-view, .product-model-view, button')) return;
     swipe = { x: event.clientX, y: event.clientY, id: event.pointerId };
   });
   on(viewport, 'pointerup', event => {

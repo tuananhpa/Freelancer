@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
 import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
 
-function mergeStaticMeshes(group) {
+export function mergeStaticMeshes(group) {
   const batches = new Map();
   for (const object of [...group.children]) {
     if (!object.isMesh) continue;
@@ -22,10 +22,10 @@ function mergeStaticMeshes(group) {
 
 export function getAssemblyViewHeight(aspect) {
   if (!Number.isFinite(aspect) || aspect <= 0) throw new RangeError('Invalid viewport aspect');
-  return Math.max(5.3, 6.2 / aspect);
+  return Math.max(5.6, 6.7 / aspect);
 }
 
-export function buildThermalAssembly() {
+export function buildThermalAssembly(labelTexture) {
   const root = new THREE.Group();
   const parts = Object.fromEntries(['board', 'chip', 'paste', 'heatsink'].map(id => [id, new THREE.Group()]));
   Object.entries(parts).forEach(([id, group]) => { group.name = id; root.add(group); });
@@ -194,5 +194,11 @@ export function buildThermalAssembly() {
     flow.visible = value < 0.4;
   }
   setAssembly(0);
+  const jar = new THREE.Group(); jar.position.set(-2.15, -0.12, 0.4); root.add(jar);
+  const jarBody = new THREE.Mesh(new THREE.CylinderGeometry(.42,.42,.8,64),mat(0x05a3ae,.3,.2));jarBody.position.y=.4;jar.add(jarBody);
+  const jarCap = new THREE.Mesh(new THREE.CylinderGeometry(.45,.45,.16,64),black);jarCap.position.y=.87;jar.add(jarCap);
+  for(let i=0;i<48;i++){const angle=i*Math.PI/24;box(jar,.017,.13,.025,black,Math.sin(angle)*.45,.87,Math.cos(angle)*.45,.004);}
+  if(labelTexture){const label=new THREE.Mesh(new THREE.CylinderGeometry(.425,.425,.61,64,1,true),new THREE.MeshStandardMaterial({map:labelTexture,roughness:.5}));label.position.y=.4;label.rotation.y=Math.PI;jar.add(label);}
+  mergeStaticMeshes(jar);
   return { root, parts, flow, fanRotor, setAssembly };
 }

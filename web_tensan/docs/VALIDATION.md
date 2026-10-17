@@ -4,13 +4,20 @@ Ngày: 2026-10-17 (Asia/Saigon)
 ## Phiên bản hiện hành
 - URL: https://tensan-vietnam.tuananhha1710.workers.dev
 - Cloudflare Worker: tensan-vietnam.
-- Version: ed7c1afa-9e65-4eaa-8387-c90c3936679d.
+- Version: 7aca24c9-1314-4c75-b30c-68522b7e4701.
 - Người dùng yêu cầu giữ thiết kế bo mạch tách lớp, làm rõ lớp keo tản nhiệt. Phương án thay hero bằng bao bì đã được bỏ.
 - Hero hiện hành: bo mạch/chip/keo TS1001/tản nhiệt nhôm, có nhãn chỉ đúng vị trí trên mô hình, ảnh TS1001 thật và liên kết sản phẩm.
 - Wrangler xác nhận triển khai thành công; không đổi DNS hoặc website tên miền cũ.
 - HTTP trang chủ hiện hành, TS1001 và trang ứng dụng: 200, có CSP; HTML trang chủ chứa dải ứng dụng mới. Chi tiết: thermal-cloudflare-checks.json. cloudflare-checks.json thuộc lượt triển khai trước.
 
 ## Kiểm tra đã thực hiện
+- Bản năm concept hiện hành: npm test 16/16 qua; npm run build qua, 39 trang. Mười một kiểm tra trước được giữ; thêm kiểm tra ánh xạ ba model/hai ảnh hoạt ảnh, hai model có hình học hữu hạn/lắp ghép đảo chiều, và hai bài chiếu đỉnh thực vào camera tại hai trạng thái lắp ghép, hai giới hạn nghiêng, tám góc xoay, ba tỷ lệ màn hình.
+- LED và TS-350 là mesh Three.js, không dùng ảnh giả 3D; fallback ảnh tham chiếu bị ẩn sau lần render thành công. Mô hình tản nhiệt thêm hũ TS1001 bằng mesh và nhãn texture, giữ keo nằm đúng vị trí. Hình học được gộp theo vật liệu; ngân sách mesh tản nhiệt được tăng từ dưới25 lên dưới29 cho hũ mới.
+- Browser localhost: LED/TS350 renderer=webgl, có tự xoay, lắp ghép/tách lớp; factory motion-trace thay đổi theo thời gian, đứng yên sau nút dừng; SMT motion-trace thay đổi theo thời gian. Mobile375×812 không tràn ngang, cảnh LED vẫn WebGL và nhãn nhìn thấy. Chưa thử cảm ứng trên thiết bị thật.
+- Cloudflare: LED renderer=webgl; nhãn di chuyển theo tự xoay, kéo chuột đổi góc mô hình và vẫn giữ slideLED đang chọn; TS350 WebGL, nút về góc ban đầu hoạt động. Không có console error trong lượt cuối.
+- Reviewer phát hiện đế có thể bị cắt khi nghiêng45° ở desktop. Đã nới minimum camera height lên5.5; hai kiểm tra chiếu đỉnh thực qua. Rà soát không thấy vấn đề quan trọng khác về lifecycle/animation.
+- Đã thêm overflow:hidden trên từng slide sau khi QA resize phát hiện đường SVG của model cũ có thể vượt vào slide bên cạnh. Animation bị dừng khi ẩn tab/ngoài khung; reduced motion và mất context được rà soát source, chưa ép hai chế độ đó trong lượt này.
+- Ảnh bản công khai: tensan-led-real-3d.jpg và tensan-ts350-real-3d.jpg trong thư mục visualizations của chat. Các lượt ba banner/quạt bên dưới là lịch sử.
 - Lượt banner hiện hành: npm test 11/11 qua và npm run build tạo 39 trang. Bài kiểm tra điều hướng bao gồm quay vòng hai chiều và chỉ số không hợp lệ.
 - Ba slide: TS1001 3D, silicone LED 2D-03, kem hàn TS-350 2D-04. Desktop 1440×1050 và mobile 375×812 không tràn ngang; ảnh tải thành công. Đã kiểm tra nút chọn slide, trái/phải, phím mũi tên và kéo ngang bằng công cụ browser ở kích thước mobile. Không dùng thiết bị cảm ứng thật.
 - Liên kết banner TS350 mở đúng trang sản phẩm; slide ẩn có inert và aria-hidden. Source được reviewer độc lập rà soát, không có phát hiện quan trọng.

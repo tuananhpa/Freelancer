@@ -1,33 +1,45 @@
 {
-  "version": "ed7c1afa-9e65-4eaa-8387-c90c3936679d",
-  "checkedAt": "2026-10-17T14:58:33.244Z",
+  "version": "7aca24c9-1314-4c75-b30c-68522b7e4701",
+  "checkedAt": "2026-10-17T16:33:06.112Z",
   "checks": [
     {
       "pathname": "/",
       "status": 200,
       "contentType": "text/html",
-      "carousel": true,
-      "bannerCount": 3
+      "slides": 5,
+      "productModels": 2,
+      "animatedBanners": 2,
+      "thermalModel": true
     },
     {
-      "pathname": "/san-pham/keo-silicone-dan-den-led-ts6603",
-      "status": 200,
-      "contentType": "text/html"
-    },
-    {
-      "pathname": "/san-pham/kem-han-ts350",
-      "status": 200,
-      "contentType": "text/html"
-    },
-    {
-      "pathname": "/assets/banner-silicone-led.webp",
+      "pathname": "/assets/reference-led-3d.webp",
       "status": 200,
       "contentType": "image/webp"
     },
     {
-      "pathname": "/assets/banner-kem-han-ts350.webp",
+      "pathname": "/assets/reference-solder-3d.webp",
       "status": 200,
       "contentType": "image/webp"
+    },
+    {
+      "pathname": "/assets/reference-thermal-3d.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "pathname": "/assets/banner-factory-motion.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "pathname": "/assets/banner-red-smt-motion.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "pathname": "/san-pham/4109a",
+      "status": 200,
+      "contentType": "text/html"
     }
   ]
 }
