@@ -1,5 +1,7 @@
 # Tài sản hình ảnh
 
+- Banner silicone LED và kem hàn: người dùng cung cấp/chọn từ chat “Đề xuất banner hero 2D và 3D” (01a1498f-bc57-7952-a843-9378193ee504). Hai ảnh AI minh họa được chuyển định dạng WebP, không chỉnh nội dung: public/assets/banner-silicone-led.webp từ exec-f5f05940-9a9c-485a-9dfa-c848f61057e3.png (2D-03); public/assets/banner-kem-han-ts350.webp từ exec-6ee1ba81-c7aa-4f5b-b19d-3bee22e9ce9d.png (2D-04). Bản gốc 2172×724 ở C:/Users/buiti/.codex/generated_images/01a1498f-bc57-7952-a843-9378193ee504/. Bao bì trong banner là minh họa; liên kết đi tới sản phẩm thật TS6603 và TS350. Không dùng thông số/lot trên ảnh minh họa làm dữ liệu sản phẩm.
+
 - Logo, ảnh sản phẩm và ảnh cơ sở được tải từ nội dung công khai trên tensanvn.com. Danh sách nguồn: ASSET_SOURCES.json; sản phẩm nhập thêm có imageSource trong src/catalog-imported.json.
 - Các mã keo tản nhiệt trên website cũ có dùng chung ảnh nguồn. Danh mục giữ đúng ảnh được nguồn công bố.
 - applications.png: ảnh minh họa bốn nhóm ứng dụng, tạo bằng image_gen tích hợp; không dùng như bằng chứng về cơ sở sản xuất của Tensan.

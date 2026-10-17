@@ -4,6 +4,9 @@ import { applications } from './data.js';
 export function heroMarkup() {
   return `<section class="hero assembly-hero" aria-labelledby="hero-title">
     <div class="hero-atmosphere" aria-hidden="true"></div>
+    <div class="hero-carousel" aria-roledescription="băng chuyền" aria-label="Giải pháp vật liệu TENSAN">
+    <div class="hero-carousel-viewport"><div class="hero-carousel-track">
+    <div class="hero-slide" role="group" aria-roledescription="slide" aria-label="1 / 3: Keo tản nhiệt TS1001">
     <div class="container assembly-layout">
       <div class="hero-copy">
         <p class="hero-kicker"><span></span>TENSAN Việt Nam</p>
@@ -31,6 +34,18 @@ export function heroMarkup() {
         <div class="assembly-rotation"><button id="view-left" aria-label="Xoay mô hình sang trái 30 độ">${icon('chevron','rotate-left')}Xoay trái</button><p id="assembly-explanation">Lớp keo được tách ra để quan sát vị trí tiếp xúc.</p><button id="view-right" aria-label="Xoay mô hình sang phải 30 độ">Xoay phải ${icon('chevron')}</button></div>
         <p class="assembly-note">Mô phỏng nguyên lý truyền nhiệt · Độ dày lớp keo được phóng đại để dễ quan sát.</p>
       </div>
+    </div>
+    </div>
+    ${[
+      { title: 'Silicone cho đèn LED', image: 'banner-silicone-led.webp', href: '/san-pham/keo-silicone-dan-den-led-ts6603', text: 'Giải pháp kết dính trong lắp ráp đèn LED.', tags: ['Đèn LED', 'Kết dính linh kiện'] },
+      { title: 'Kem hàn TS-350', image: 'banner-kem-han-ts350.webp', href: '/san-pham/kem-han-ts350', text: 'Kết nối linh kiện. Hoàn thiện bo mạch.', tags: ['Lắp ráp SMT', 'Sản xuất điện tử'] }
+    ].map((slide, index) => `<div class="hero-slide hero-slide-2d" role="group" aria-roledescription="slide" aria-label="${index + 2} / 3: ${slide.title}" aria-hidden="true" inert>
+      <a class="banner-art" href="${slide.href}" data-link aria-label="Xem sản phẩm ${slide.title}"><img src="/assets/${slide.image}" alt="${slide.title} — ${slide.text}" width="2172" height="724" decoding="async"></a>
+      <div class="container banner-product-strip"><div><span class="banner-caption">Vật liệu cho sản xuất điện tử</span><h2>${slide.title}</h2><p>${slide.text}</p></div><div class="banner-product-actions"><div class="banner-tags">${slide.tags.map(tag => `<span>${tag}</span>`).join('')}</div><a class="button button-primary" href="${slide.href}" data-link>Xem sản phẩm ${icon('arrow')}</a><small>Hình minh họa ứng dụng</small></div></div>
+    </div>`).join('')}
+    </div></div>
+    <div class="container hero-carousel-nav"><div class="banner-selectors" aria-label="Chọn banner">${['Keo tản nhiệt', 'Silicone đèn LED', 'Kem hàn TS-350'].map((title, index) => `<button type="button" data-slide="${index}" aria-pressed="${index === 0}"><span>0${index + 1}</span>${title}</button>`).join('')}</div><div class="banner-arrows"><button type="button" data-banner-prev aria-label="Banner trước">${icon('arrow','banner-arrow-prev')}</button><span class="banner-count" aria-hidden="true">01 / 03</span><button type="button" data-banner-next aria-label="Banner tiếp theo">${icon('arrow')}</button></div></div>
+    <p class="sr-only" data-banner-status aria-live="polite" aria-atomic="true"></p>
     </div>
     <div class="container hero-industry-rail"><div class="hero-industry-heading"><p>Vật liệu cho từng ứng dụng</p><a href="/ung-dung" data-link>Khám phá giải pháp ${icon('arrow')}</a></div><div class="hero-industry-grid">${applications.map((application, index) => `<a class="hero-industry" href="/ung-dung#${application.id}" data-link><div class="application-photo photo-${index} hero-industry-photo" aria-hidden="true"></div><div class="hero-industry-copy">${icon(application.icon)}<span>${application.title}</span>${icon('arrow')}</div></a>`).join('')}</div></div>
     <p id="scene-status" class="sr-only" aria-live="polite"></p>

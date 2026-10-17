@@ -4,14 +4,18 @@ Ngày: 2026-10-17 (Asia/Saigon)
 ## Phiên bản hiện hành
 - URL: https://tensan-vietnam.tuananhha1710.workers.dev
 - Cloudflare Worker: tensan-vietnam.
-- Version: df6a1aa8-d616-4aa1-8929-8e951c68a21c.
+- Version: ed7c1afa-9e65-4eaa-8387-c90c3936679d.
 - Người dùng yêu cầu giữ thiết kế bo mạch tách lớp, làm rõ lớp keo tản nhiệt. Phương án thay hero bằng bao bì đã được bỏ.
 - Hero hiện hành: bo mạch/chip/keo TS1001/tản nhiệt nhôm, có nhãn chỉ đúng vị trí trên mô hình, ảnh TS1001 thật và liên kết sản phẩm.
 - Wrangler xác nhận triển khai thành công; không đổi DNS hoặc website tên miền cũ.
 - HTTP trang chủ hiện hành, TS1001 và trang ứng dụng: 200, có CSP; HTML trang chủ chứa dải ứng dụng mới. Chi tiết: thermal-cloudflare-checks.json. cloudflare-checks.json thuộc lượt triển khai trước.
 
 ## Kiểm tra đã thực hiện
-- Lượt mới nhất: npm test 10/10 qua, npm run build qua và tạo 39 trang. Thêm kiểm tra cánh quạt không chạm cụm lá nhôm và nằm trong lỗ khung.
+- Lượt banner hiện hành: npm test 11/11 qua và npm run build tạo 39 trang. Bài kiểm tra điều hướng bao gồm quay vòng hai chiều và chỉ số không hợp lệ.
+- Ba slide: TS1001 3D, silicone LED 2D-03, kem hàn TS-350 2D-04. Desktop 1440×1050 và mobile 375×812 không tràn ngang; ảnh tải thành công. Đã kiểm tra nút chọn slide, trái/phải, phím mũi tên và kéo ngang bằng công cụ browser ở kích thước mobile. Không dùng thiết bị cảm ứng thật.
+- Liên kết banner TS350 mở đúng trang sản phẩm; slide ẩn có inert và aria-hidden. Source được reviewer độc lập rà soát, không có phát hiện quan trọng.
+- Cloudflare: vòng 2D silicone → 2D TS350 → 3D hoạt động; nhãn mô hình đứng yên khi slide 3D bị ẩn; khi trở lại renderer=webgl, autoRotate=true. Không có console error trong lượt xác nhận. Ảnh: tensan-banner-carousel.jpg trong thư mục visualizations của chat.
+- Lượt quạt trước: npm test 10/10 qua, npm run build qua và tạo 39 trang. Thêm kiểm tra cánh quạt không chạm cụm lá nhôm và nằm trong lỗ khung.
 - Mô hình có quạt chín cánh nghiêng, khung, trục, ốc và viền xanh nhẹ. Ánh sáng được chỉnh giảm cháy bề mặt kim loại. Quạt và góc xem tự xoay từ lúc vào trang; autoRotateSpeed=1.1, trước đây 0.22.
 - Bản Cloudflare mới: renderer=webgl; vị trí đường dẫn nhãn thay đổi khi tự xoay, đứng yên khi bấm dừng, bật lại được. Không có console error trong lượt kiểm tra này.
 - Desktop 1440×1050 và mobile 375×812 không tràn ngang; mobile vẫn render WebGL, nút xem keo dừng xoay và đưa mô hình về góc tách lớp.

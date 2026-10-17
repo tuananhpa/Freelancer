@@ -1,6 +1,7 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
+export const refreshPageMotion = () => ScrollTrigger.refresh();
 
 export function createPageMotion(main) {
   const mm = gsap.matchMedia();

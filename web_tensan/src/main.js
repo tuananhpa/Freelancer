@@ -1,14 +1,16 @@
 import './fonts.css';
 import './style.css';
 import './assembly-hero.css';
+import './hero-carousel.css';
+import { createHeroCarousel } from './hero-carousel.js';
 import * as pages from './pages.js';
 import { products, articles } from './data.js';
-import { createPageMotion } from './motion.js';
+import { createPageMotion, refreshPageMotion } from './motion.js';
 import { buildInquiryMailto } from './inquiry.js';
 import { icon } from './icons.js';
 
 const app = document.querySelector('#app');
-let cleanupMotion = () => {}, cleanupScene = () => {}, generation = 0;
+let cleanupMotion = () => {}, cleanupScene = () => {}, cleanupCarousel = () => {}, generation = 0;
 const pageTitles = { '/': 'Giải pháp vật liệu cho sản xuất điện tử', '/gioi-thieu': 'Giới thiệu', '/san-pham': 'Sản phẩm', '/ung-dung': 'Ứng dụng', '/tin-tuc': 'Kiến thức & tin tức', '/lien-he': 'Liên hệ', '/tuyen-dung': 'Tuyển dụng' };
 
 function currentPage(url) {
@@ -34,6 +36,7 @@ function currentPage(url) {
 
 function render({ focus = false, scroll = 0 } = {}) {
   const id = ++generation;
+  cleanupCarousel(); cleanupCarousel = () => {};
   cleanupScene(); cleanupScene = () => {};
   cleanupMotion(); cleanupMotion = () => {};
   const url = new URL(window.location.href);
@@ -44,6 +47,8 @@ function render({ focus = false, scroll = 0 } = {}) {
   if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.append(canonical); }
   canonical.href = window.location.origin + (url.pathname.replace(/\/+$/, '') || '/');
   document.querySelector('meta[name="description"]').content = page.title === pageTitles['/'] ? 'TENSAN Việt Nam cung cấp keo công nghiệp, vật liệu tản nhiệt, silicone và giải pháp phụ trợ SMT cho sản xuất điện tử.' : `${page.title}. Khám phá giải pháp vật liệu và kết nối với đội ngũ kỹ thuật TENSAN Việt Nam.`;
+  const carousel = document.querySelector('.hero-carousel');
+  if (carousel) cleanupCarousel = createHeroCarousel(carousel, refreshPageMotion);
   cleanupMotion = createPageMotion(document.querySelector('main'));
   const host = document.querySelector('#hero-scene');
   if (host) {

@@ -1,27 +1,33 @@
 {
-  "version": "df6a1aa8-d616-4aa1-8929-8e951c68a21c",
-  "checkedAt": "2026-10-17T13:39:30.443Z",
+  "version": "ed7c1afa-9e65-4eaa-8387-c90c3936679d",
+  "checkedAt": "2026-10-17T14:58:33.244Z",
   "checks": [
     {
       "pathname": "/",
       "status": 200,
-      "csp": true,
-      "fanLabel": true,
-      "autoplayMarkup": true
+      "contentType": "text/html",
+      "carousel": true,
+      "bannerCount": 3
     },
     {
-      "pathname": "/san-pham/ts1001",
+      "pathname": "/san-pham/keo-silicone-dan-den-led-ts6603",
       "status": 200,
-      "csp": true,
-      "fanLabel": null,
-      "autoplayMarkup": null
+      "contentType": "text/html"
     },
     {
-      "pathname": "/ung-dung",
+      "pathname": "/san-pham/kem-han-ts350",
       "status": 200,
-      "csp": true,
-      "fanLabel": null,
-      "autoplayMarkup": null
+      "contentType": "text/html"
+    },
+    {
+      "pathname": "/assets/banner-silicone-led.webp",
+      "status": 200,
+      "contentType": "image/webp"
+    },
+    {
+      "pathname": "/assets/banner-kem-han-ts350.webp",
+      "status": 200,
+      "contentType": "image/webp"
     }
   ]
 }

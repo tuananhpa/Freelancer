@@ -14,6 +14,8 @@ npm run preview
 
 ## 3D và animation
 
+Hero có ba banner trượt ngang: keo tản nhiệt TS1001 dùng mô hình 3D tương tác; silicone LED và kem hàn TS-350 dùng hai ảnh 2D người dùng chọn. Chuyển bằng nút sản phẩm, trái/phải, phím mũi tên tại thanh điều hướng hoặc vuốt trên ảnh. Vùng mô hình giữ thao tác kéo để xoay. Slide ẩn không nhận focus; WebGL dừng khi slide 3D ra khỏi khung. Banner đổi theo thao tác người dùng, không tự chuyển.
+
 Three.js dựng bo mạch, chip, lớp keo có bề mặt dàn keo, tản nhiệt nhôm và quạt chín cánh nghiêng có khung bảo vệ. Nhãn TS1001 bám đúng vị trí lớp keo khi xoay; thẻ ảnh thật liên kết tới trang sản phẩm. Mô hình tự xoay ngay khi vào trang, trừ khi thiết bị yêu cầu giảm chuyển động. Người dùng có thể tạm dừng, kéo xoay, xoay từng 30°, trở về góc ban đầu hoặc lắp ghép/tách lớp. Nút xem lớp keo dừng tự xoay và khôi phục góc nhìn tách lớp. Hình học tĩnh được gộp theo vật liệu để giảm số lượt vẽ. GSAP điều khiển chuyển cảnh và nội dung theo cuộn; có reduced motion, dừng khi ngoài màn hình/ẩn tab và dọn tài nguyên khi chuyển trang. Nếu WebGL hoặc tệp 3D lỗi tải, hiển thị sơ đồ SVG cùng liên kết sản phẩm. Mô hình minh họa nguyên lý, độ dày keo được phóng đại, không phải bản vẽ kỹ thuật sản xuất.
 
 ## Nội dung
