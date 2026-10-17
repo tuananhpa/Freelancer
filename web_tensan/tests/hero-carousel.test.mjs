@@ -22,4 +22,6 @@ test('selected references become three interactive models and two animated image
   assert.equal((html.match(/data-animated-banner=/g)||[]).length,2);
   assert.match(html,/banner-factory-motion.webp/);
   assert.match(html,/banner-red-smt-motion.webp/);
+  const labels=[...html.matchAll(/aria-roledescription="slide" aria-label="([^\"]+)"/g)].map(match=>match[1]);
+  assert.deepEqual(labels,['1 / 5: Sản xuất tại Việt Nam','2 / 5: Keo tản nhiệt TS1001','3 / 5: Keo đỏ SMT 4109A','4 / 5: Silicone cho đèn LED','5 / 5: Kem hàn TS-350']);
 });

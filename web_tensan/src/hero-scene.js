@@ -50,7 +50,9 @@ export function createHeroScene(host) {
     assembly.setAssembly(state.assembly);
     scene.updateMatrixWorld();
     renderer.render(scene, camera); updateLabels();
+    const first = host.dataset.renderer !== 'webgl';
     fallback.hidden = true; host.dataset.renderer = 'webgl';
+    if (first) host.dispatchEvent(new CustomEvent('hero-model-ready', { bubbles: true }));
     rendering = false;
     if (controls.autoRotate || moving) wake();
   }
@@ -73,7 +75,7 @@ export function createHeroScene(host) {
       gsap.to(camera.position, { x: homePosition.x, y: homePosition.y, z: homePosition.z, duration: 0.65, ease: 'power2.inOut', onUpdate: () => { controls.update(); wake(); }, onComplete: () => { moving = false; wake(); } });
     } else { moving = false; camera.position.copy(homePosition); controls.update(); wake(); }
   }
-  function setAssembled(next) {
+  function setAssembled(next, animate = true, notify = true) {
     if (!ready || lost) return;
     assembled = next; pause();
     assembleButton.setAttribute('aria-pressed', String(next));
@@ -82,8 +84,8 @@ export function createHeroScene(host) {
     hero.querySelector('#assembly-explanation').textContent = next ? 'Keo nằm tại mặt tiếp xúc giữa chip và tản nhiệt nhôm.' : 'Lớp keo được tách ra để quan sát vị trí tiếp xúc.';
     host.dataset.assembled = String(next);
     moving = true;
-    gsap.to(state, { assembly: next ? 1 : 0, duration: media.matches ? 0 : 0.9, ease: 'power2.inOut', overwrite: true, onUpdate: wake, onComplete: () => { moving = false; wake(); } });
-    announce(next ? 'Đã lắp ghép. Keo tản nhiệt nằm giữa chip và tản nhiệt nhôm.' : 'Đã tách các lớp để quan sát keo tản nhiệt TS1001.');
+    gsap.to(state, { assembly: next ? 1 : 0, duration: media.matches || !animate ? 0 : 0.9, ease: 'power2.inOut', overwrite: true, onUpdate: wake, onComplete: () => { moving = false; wake(); } });
+    if (notify) announce(next ? 'Đã lắp ghép. Keo tản nhiệt nằm giữa chip và tản nhiệt nhôm.' : 'Đã tách các lớp để quan sát keo tản nhiệt TS1001.');
   }
   function focusPaste() {
     setAssembled(false); resetView();
@@ -106,6 +108,7 @@ export function createHeroScene(host) {
   function fallbackView() {
     lost = true; release(); fallback.hidden = false;
     host.dataset.renderer = 'fallback'; hero.classList.add('assembly-scene-unavailable');
+    host.dispatchEvent(new CustomEvent('hero-model-ready', { bubbles: true }));
     announce('Đang hiển thị sơ đồ keo tản nhiệt TS1001 nằm giữa chip và tản nhiệt nhôm.');
   }
   try {
@@ -148,6 +151,11 @@ export function createHeroScene(host) {
     listen(hero.querySelector('#focus-paste'), 'click', focusPaste); listen(hero.querySelector('#paste-hotspot'), 'click', focusPaste);
     listen(hero.querySelector('#view-reset'), 'click', () => { resetView(); announce('Đã trở về góc xem ban đầu.'); });
     listen(pauseButton, 'click', () => pause(autoRotate));
+    listen(host.closest('.hero-slide'), 'hero-demo', event => {
+      if (event.detail === 'reset') { setAssembled(false, false, false); resetView(false); pause(false); }
+      else if (event.detail === 'assemble') setAssembled(true, true, false);
+      else { pause(); gsap.killTweensOf(state); moving = false; }
+    });
     for (const [id, direction] of [['view-left', -1], ['view-right', 1]]) listen(hero.querySelector('#' + id), 'click', () => {
       if (lost) return;
       pause(); moving = true;

@@ -4,13 +4,20 @@ Ngày: 2026-10-17 (Asia/Saigon)
 ## Phiên bản hiện hành
 - URL: https://tensan-vietnam.tuananhha1710.workers.dev
 - Cloudflare Worker: tensan-vietnam.
-- Version: 7aca24c9-1314-4c75-b30c-68522b7e4701.
+- Version: 08059921-f6bb-4f51-9786-c220a078a258.
 - Người dùng yêu cầu giữ thiết kế bo mạch tách lớp, làm rõ lớp keo tản nhiệt. Phương án thay hero bằng bao bì đã được bỏ.
 - Hero hiện hành: bo mạch/chip/keo TS1001/tản nhiệt nhôm, có nhãn chỉ đúng vị trí trên mô hình, ảnh TS1001 thật và liên kết sản phẩm.
 - Wrangler xác nhận triển khai thành công; không đổi DNS hoặc website tên miền cũ.
 - HTTP trang chủ hiện hành, TS1001 và trang ứng dụng: 200, có CSP; HTML trang chủ chứa dải ứng dụng mới. Chi tiết: thermal-cloudflare-checks.json. cloudflare-checks.json thuộc lượt triển khai trước.
 
 ## Kiểm tra đã thực hiện
+- Lượt hiện hành: 18/18 test qua, build qua với39 trang. Hai kiểm tra timer mới xác nhận xoay3000ms → lắp ráp → chuyển sau1600ms; 2D chuyển sau3000ms; stop/restart hủy tác vụ cũ. Kiểm tra markup xác nhận thứ tự nhà máy → TS1001 → keo đỏSMT → siliconeLED → TS350.
+- Cloudflare hiện hành: tự trình chiếu=true, đã tự chuyển tới banner số3; cả LED và solder có aria-pressed lắp ráp=true từ vòng chạy trước. Chữ chọn16px, consoleerror rỗng. Đã bật lại trình chiếu sau khi lưu ảnh tensan-autoplay-order.jpg trong thư mục visualizations của chat. HTTP trang chủ200, thứ tự5slide và nút autoplay khớp thermal-cloudflare-checks.json.
+- Điều hướng được phóng lên16px desktop,13px mobile; khung mô hình600px desktop/460px mobile, cột mô hình rộng hơn. Mobile375×812: document.scrollWidth360, không tràn ngang; các nút chọn lớn cuộn ngang trong thanh riêng.
+- Browser localhost: đã thấy chu trình chạy qua cả5slide và lặp lại; thermal/LED/solder đều tự chuyển trạng thái lắp ráp. Nút global pause giữ nguyên slide; nút riêng thermal playtrue → pausefalse, nút hoạt ảnh2D cũng đổi qua lại được. Không có consoleerror ở lượt cuối.
+- Reviewer phát hiện pointerdown/focus của nút dừng riêng có thể bị globalpause ghi đè. Đã sửa chỉ dừng toàn bộ lần đầu, giữ nguyên trạng thái nút riêng trước click; không restart timer khi track transitionend nếu đãpause. Browser đã xác nhận play/pause riêng không làm trình chiếu tự chạy lại.
+- QA bắt lỗi IllegalInvocation của clearTimeout khi gán làm method trên objecttimer. Đã bọc hai hàm timer bằng arrow; bản browser sau sửa chạy hết vòng. Context mất/reducedmotion được giữguard; chưa ép hai chế độ trên thiết bị thật.
+- Các mục nămconcept/ba banner bên dưới là lịch sử trước thay đổi kích thước và tự trình chiếu này.
 - Bản năm concept hiện hành: npm test 16/16 qua; npm run build qua, 39 trang. Mười một kiểm tra trước được giữ; thêm kiểm tra ánh xạ ba model/hai ảnh hoạt ảnh, hai model có hình học hữu hạn/lắp ghép đảo chiều, và hai bài chiếu đỉnh thực vào camera tại hai trạng thái lắp ghép, hai giới hạn nghiêng, tám góc xoay, ba tỷ lệ màn hình.
 - LED và TS-350 là mesh Three.js, không dùng ảnh giả 3D; fallback ảnh tham chiếu bị ẩn sau lần render thành công. Mô hình tản nhiệt thêm hũ TS1001 bằng mesh và nhãn texture, giữ keo nằm đúng vị trí. Hình học được gộp theo vật liệu; ngân sách mesh tản nhiệt được tăng từ dưới25 lên dưới29 cho hũ mới.
 - Browser localhost: LED/TS350 renderer=webgl, có tự xoay, lắp ghép/tách lớp; factory motion-trace thay đổi theo thời gian, đứng yên sau nút dừng; SMT motion-trace thay đổi theo thời gian. Mobile375×812 không tràn ngang, cảnh LED vẫn WebGL và nhãn nhìn thấy. Chưa thử cảm ứng trên thiết bị thật.

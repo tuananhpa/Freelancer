@@ -59,7 +59,7 @@ function render({ focus = false, scroll = 0 } = {}) {
       if (generation !== id) return;
       const cleanups = [...document.querySelectorAll('[data-product-scene]')].map(node => module.createProductScene(node));
       cleanupProducts = () => cleanups.forEach(cleanup => cleanup());
-    }).catch(() => { if (generation === id) document.querySelectorAll('[data-product-scene]').forEach(node => { node.dataset.renderer = 'fallback'; }); });
+    }).catch(() => { if (generation === id) document.querySelectorAll('[data-product-scene]').forEach(node => { node.dataset.renderer = 'fallback'; node.dispatchEvent(new CustomEvent('hero-model-ready', { bubbles: true })); }); });
     import('./hero-scene.js').then(module => {
     if (generation === id) {
       cleanupScene = module.createHeroScene(host);
@@ -68,6 +68,7 @@ function render({ focus = false, scroll = 0 } = {}) {
     if (generation === id) {
       document.querySelector('.hero').classList.add('assembly-scene-unavailable');
       document.querySelector('#scene-status').textContent = 'Đang hiển thị sơ đồ lớp keo tản nhiệt.';
+      host.dataset.renderer = 'fallback'; host.dispatchEvent(new CustomEvent('hero-model-ready', { bubbles: true }));
     }
     });
   }

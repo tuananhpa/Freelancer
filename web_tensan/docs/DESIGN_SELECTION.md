@@ -2,6 +2,8 @@
 Cập nhật: 2026-10-17
 
 ## Điều chỉnh theo phản hồi mới nhất
+Người dùng yêu cầu phóng lớn phần chọn banner/mô hình và tự chạy: xoay3giây → lắp ráp → chuyển kế tiếp. Đã tăng chữ chọn lên16px desktop/13px mobile, stage600px desktop/460px mobile, mở rộng cột mô hình và giảm khoảng trống ngang an toàn trong camera. Chu trình3D: xoay3s, lắp ráp0,9s + giữ0,7s; 2D chạy3s. Có nút pause/play toàn bộ; tương tác thủ công dừng chu trình. Đính chính thứ tự mới nhất: banner04 cũ (nhà máy) lên đầu, banner05 cũ (keo đỏ) đứng thứ3. Thứ tự hiện hành: nhà máy → TS1001 → keo đỏSMT → siliconeLED → TS350.
+
 Người dùng đính chính ý nghĩa ảnh: ba ảnh 3D là concept để dựng mô hình tương tác thật, không phải ảnh chèn vào slide. Năm banner hiện hành: TS1001 (mô hình cũ giữ bo mạch/quạt/keo, thêm hũ keo theo concept), silicone LED (ống RTV + cụm đèn tách lớp), TS-350 (hũ kem + PCB + khuôn in/gạt kem), 2D nhà máy, 2D keo đỏ SMT. Hai banner 2D dùng đúng hai ảnh mới, thêm đường sáng/chi tiết quay/nhấp nháy bằng SVG và GSAP, có nút dừng. Ba cảnh 3D là hình học Three.js và nhãn texture dựng bằng mã; ảnh concept chỉ là fallback/tham chiếu. Các mô tả ba slide ở dưới là lịch sử đã bị thay thế bởi đính chính này.
 
 Banner được đổi thành băng chuyền ngang gồm ba slide: mô hình keo tản nhiệt TS1001 hiện có (3D tương tác, tự xoay), silicone đèn LED dùng ảnh 2D-03, kem hàn TS-350 dùng ảnh 2D-04 từ chat “Đề xuất banner hero 2D và 3D”. Người dùng chọn trực tiếp hai ảnh và yêu cầu làm thử trên website. Không dùng ảnh 3D-03/3D-04. Có nút chọn sản phẩm, trái/phải, phím mũi tên tại điều hướng và vuốt ngang ngoài vùng kéo mô hình. Chuyển slide theo thao tác người dùng; chiều cao theo nội dung từng banner. Giữ cùng URL Cloudflare và Git hiện có.

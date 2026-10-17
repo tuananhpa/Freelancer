@@ -4,7 +4,7 @@ import { mergeStaticMeshes } from './thermal-assembly.js';
 
 export function getProductViewHeight(aspect) {
   if(!Number.isFinite(aspect)||aspect<=0)throw new RangeError('Invalid viewport aspect');
-  return Math.max(5.5,6.1/aspect);
+  return Math.max(5.5,5.7/aspect);
 }
 
 export function buildProductModel(kind, labelTexture) {

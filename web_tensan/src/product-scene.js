@@ -30,7 +30,8 @@ export function createProductScene(host) {
     rendering=true;const delta=lastTime?Math.min((time-lastTime)/1000,.05):1/60;lastTime=time;
     controls.autoRotate=auto&&!media.matches&&!moving;controls.update(delta);
     model.setAssembly(state.assembly);scene.updateMatrixWorld();renderer.render(scene,camera);labels();
-    fallback.hidden=true;host.dataset.renderer='webgl';rendering=false;
+    const first=host.dataset.renderer!=='webgl';fallback.hidden=true;host.dataset.renderer='webgl';
+    if(first)host.dispatchEvent(new CustomEvent('hero-model-ready',{bubbles:true}));rendering=false;
     if(controls.autoRotate||moving)wake();
   }
   function resize(){
@@ -48,7 +49,7 @@ export function createProductScene(host) {
     geometries.forEach(item=>item.dispose());materials.forEach(item=>item.dispose());textures.forEach(item=>item.dispose());
     environment?.dispose();pmrem?.dispose();renderer?.dispose();renderer?.domElement.remove();renderer=null;
   }
-  function failed(){lost=true;release();fallback.hidden=false;host.dataset.renderer='fallback';view.classList.add('product-model-unavailable');view.querySelector('[data-model-status]').textContent='Mô hình 3D chưa khả dụng. Đang hiển thị hình minh họa tham chiếu.';}
+  function failed(){lost=true;release();fallback.hidden=false;host.dataset.renderer='fallback';view.classList.add('product-model-unavailable');view.querySelector('[data-model-status]').textContent='Mô hình 3D chưa khả dụng. Đang hiển thị hình minh họa tham chiếu.';host.dispatchEvent(new CustomEvent('hero-model-ready',{bubbles:true}));}
   function init(){
     try{
       renderer=new THREE.WebGLRenderer({antialias:true,alpha:true,preserveDrawingBuffer:true,powerPreference:'low-power'});renderer.setPixelRatio(Math.min(devicePixelRatio,1.75));renderer.setClearColor(0,0);renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=.94;
@@ -65,11 +66,19 @@ export function createProductScene(host) {
     }catch{failed();}
   }
   on(play,'click',()=>{auto=!auto&&!media.matches;syncPlay();wake();});
-  on(view.querySelector('[data-model-assemble]'),'click',event=>{
-    if(!model||lost)return;pause();assembled=!assembled;moving=true;
-    const button=event.currentTarget;button.setAttribute('aria-pressed',String(assembled));button.innerHTML=icon('layers')+`<span>${assembled?'Tách lớp':'Lắp ghép'}</span>`;
-    gsap.to(state,{assembly:assembled?1:0,duration:media.matches?0:.9,ease:'power2.inOut',overwrite:true,onUpdate:wake,onComplete:()=>{moving=false;wake();}});
-    view.querySelector('[data-model-status]').textContent=assembled?'Đã lắp ghép mô hình.':'Đã tách các lớp để quan sát vật liệu.';
+  function setAssembled(next,animate=true,notify=true){
+    if(!model||lost)return;pause();assembled=next;moving=true;
+    const button=view.querySelector('[data-model-assemble]');button.setAttribute('aria-pressed',String(assembled));button.innerHTML=icon('layers')+`<span>${assembled?'Tách lớp':'Lắp ghép'}</span>`;
+    gsap.to(state,{assembly:assembled?1:0,duration:media.matches||!animate?0:.9,ease:'power2.inOut',overwrite:true,onUpdate:wake,onComplete:()=>{moving=false;wake();}});
+    if(notify)view.querySelector('[data-model-status]').textContent=assembled?'Đã lắp ghép mô hình.':'Đã tách các lớp để quan sát vật liệu.';
+  }
+  on(view.querySelector('[data-model-assemble]'),'click',()=>setAssembled(!assembled));
+  on(host.closest('.hero-slide'),'hero-demo',event=>{
+    if(!model||lost)return;
+    if(event.detail==='reset'){
+      setAssembled(false,false,false);camera.position.set(4.7,3.6,7.5);controls.update();auto=!media.matches;syncPlay();wake();
+    }else if(event.detail==='assemble')setAssembled(true,true,false);
+    else{pause();gsap.killTweensOf(state);moving=false;}
   });
   on(view.querySelector('[data-model-reset]'),'click',()=>{
     if(!model||lost)return;pause();camera.position.set(4.7,3.6,7.5);controls.update();wake();

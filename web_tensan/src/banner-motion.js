@@ -20,6 +20,7 @@ export function createBannerMotion(root) {
       if(playing&&visible&&!document.hidden)timeline.play();else timeline.pause();
     }
     button.addEventListener('click',()=>{paused=!paused;sync();},{signal:abort.signal});
+    banner.addEventListener('hero-demo',event=>{paused=event.detail==='pause';if(event.detail==='reset')timeline.restart();sync();},{signal:abort.signal});
     media.addEventListener('change',sync,{signal:abort.signal});document.addEventListener('visibilitychange',sync,{signal:abort.signal});
     const observer=new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;sync();},{threshold:.01});observer.observe(banner);
     sync();cleanups.push(()=>{observer.disconnect();context.revert();});

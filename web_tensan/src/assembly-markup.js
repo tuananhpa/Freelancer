@@ -15,11 +15,16 @@ function productSlide(kind, index, title, description, id, reference, labels) {
 }
 
 export function heroMarkup() {
-  return `<section class="hero assembly-hero" aria-labelledby="hero-title">
-    <div class="hero-atmosphere" aria-hidden="true"></div>
-    <div class="hero-carousel" aria-roledescription="băng chuyền" aria-label="Giải pháp vật liệu TENSAN">
-    <div class="hero-carousel-viewport"><div class="hero-carousel-track">
-    <div class="hero-slide" role="group" aria-roledescription="slide" aria-label="1 / 5: Keo tản nhiệt TS1001">
+  const imageSlides = [
+      { title: 'Sản xuất tại Việt Nam', image: 'banner-factory-motion.webp', href: '/gioi-thieu', text: 'Đồng hành cùng sản xuất công nghiệp.', tags: ['Bắc Ninh', 'Vật liệu công nghiệp'], motion:'factory', cta:'Khám phá Tensan' },
+      { title: 'Keo đỏ SMT 4109A', image: 'banner-red-smt-motion.webp', href: '/san-pham/4109a', text: 'Cố định linh kiện trong quy trình lắp ráp điện tử.', tags: ['Lắp ráp SMT', 'Keo giữ linh kiện'], motion:'smt', cta:'Xem sản phẩm' }
+    ].map((slide, index) => `<div class="hero-slide hero-slide-2d motion-${slide.motion}" data-animated-banner="${slide.motion}" role="group" aria-roledescription="slide" aria-label="${index === 0 ? 1 : 3} / 5: ${slide.title}" ${index === 0 ? '' : 'aria-hidden="true" inert'}>
+      <div class="banner-motion-art"><a class="banner-art" href="${slide.href}" data-link aria-label="${slide.cta}: ${slide.title}"><img src="/assets/${slide.image}" alt="${slide.title} — ${slide.text}" width="2172" height="724" decoding="async"></a>
+      <svg class="banner-motion-overlay" viewBox="0 0 2172 724" aria-hidden="true">${slide.motion==='factory'?'<g class="factory-rotor" transform="translate(1155 420)"><circle r="38"/><path d="M-26 0h52M0-26v52"/></g><g class="factory-rotor" transform="translate(1760 450)"><circle r="30"/><path d="M-22 0h44M0-22v44"/></g><path class="motion-trace" d="M920 652H1410L1465 620H1980"/><g class="factory-status"><circle cx="1325" cy="436" r="7"/><circle cx="1850" cy="447" r="7"/></g>':'<path class="motion-trace" d="M1520 610 1580 550 1530 500 1640 390 1720 435 1850 305 2050 440"/><g class="smt-deposits"><circle cx="1630" cy="350" r="20"/><circle cx="1670" cy="388" r="20"/><circle cx="1710" cy="426" r="20"/><circle cx="1750" cy="464" r="20"/></g>'}</svg>
+      <button class="banner-animation-toggle" aria-label="Tạm dừng hoạt ảnh banner" aria-pressed="true">${icon('pause')}</button></div>
+      <div class="container banner-product-strip"><div><span class="banner-caption">Vật liệu cho sản xuất điện tử</span><h2>${slide.title}</h2><p>${slide.text}</p></div><div class="banner-product-actions"><div class="banner-tags">${slide.tags.map(tag => `<span>${tag}</span>`).join('')}</div><a class="button button-primary" href="${slide.href}" data-link>${slide.cta} ${icon('arrow')}</a><small>${slide.motion==='factory'?'Hình minh họa doanh nghiệp':'Hình minh họa ứng dụng'}</small></div></div>
+    </div>`);
+  const thermalSlide = `    <div class="hero-slide" role="group" aria-roledescription="slide" aria-label="2 / 5: Keo tản nhiệt TS1001" aria-hidden="true" inert>
     <div class="container assembly-layout">
       <div class="hero-copy">
         <p class="hero-kicker"><span></span>TENSAN Việt Nam</p>
@@ -49,19 +54,18 @@ export function heroMarkup() {
       </div>
     </div>
     </div>
-    ${productSlide('led',2,'Silicone cho đèn LED','Kết dính các chi tiết trong cụm đèn. Khám phá lớp silicone giữa thân tản nhiệt, bảng LED và bộ khuếch tán.','keo-silicone-dan-den-led-ts6603','reference-led-3d.webp',[['silicone','Lớp silicone kết dính'],['ledBoard','Bảng LED'],['package','Silicone RTV']])}
-    ${productSlide('solder',3,'Kem hàn TS-350','Từ lớp kem hàn đến vị trí kết nối linh kiện. Quan sát khuôn in, gạt kem và các điểm tiếp xúc trên bo mạch.','kem-han-ts350','reference-solder-3d.webp',[['stencil','Khuôn in kem hàn'],['squeegee','Gạt kem hàn'],['package','Kem hàn TS-350']])}
-    ${[
-      { title: 'Sản xuất tại Việt Nam', image: 'banner-factory-motion.webp', href: '/gioi-thieu', text: 'Đồng hành cùng sản xuất công nghiệp.', tags: ['Bắc Ninh', 'Vật liệu công nghiệp'], motion:'factory', cta:'Khám phá Tensan' },
-      { title: 'Keo đỏ SMT 4109A', image: 'banner-red-smt-motion.webp', href: '/san-pham/4109a', text: 'Cố định linh kiện trong quy trình lắp ráp điện tử.', tags: ['Lắp ráp SMT', 'Keo giữ linh kiện'], motion:'smt', cta:'Xem sản phẩm' }
-    ].map((slide, index) => `<div class="hero-slide hero-slide-2d motion-${slide.motion}" data-animated-banner="${slide.motion}" role="group" aria-roledescription="slide" aria-label="${index + 4} / 5: ${slide.title}" aria-hidden="true" inert>
-      <div class="banner-motion-art"><a class="banner-art" href="${slide.href}" data-link aria-label="${slide.cta}: ${slide.title}"><img src="/assets/${slide.image}" alt="${slide.title} — ${slide.text}" width="2172" height="724" decoding="async"></a>
-      <svg class="banner-motion-overlay" viewBox="0 0 2172 724" aria-hidden="true">${slide.motion==='factory'?'<g class="factory-rotor" transform="translate(1155 420)"><circle r="38"/><path d="M-26 0h52M0-26v52"/></g><g class="factory-rotor" transform="translate(1760 450)"><circle r="30"/><path d="M-22 0h44M0-22v44"/></g><path class="motion-trace" d="M920 652H1410L1465 620H1980"/><g class="factory-status"><circle cx="1325" cy="436" r="7"/><circle cx="1850" cy="447" r="7"/></g>':'<path class="motion-trace" d="M1520 610 1580 550 1530 500 1640 390 1720 435 1850 305 2050 440"/><g class="smt-deposits"><circle cx="1630" cy="350" r="20"/><circle cx="1670" cy="388" r="20"/><circle cx="1710" cy="426" r="20"/><circle cx="1750" cy="464" r="20"/></g>'}</svg>
-      <button class="banner-animation-toggle" aria-label="Tạm dừng hoạt ảnh banner" aria-pressed="true">${icon('pause')}</button></div>
-      <div class="container banner-product-strip"><div><span class="banner-caption">Vật liệu cho sản xuất điện tử</span><h2>${slide.title}</h2><p>${slide.text}</p></div><div class="banner-product-actions"><div class="banner-tags">${slide.tags.map(tag => `<span>${tag}</span>`).join('')}</div><a class="button button-primary" href="${slide.href}" data-link>${slide.cta} ${icon('arrow')}</a><small>${slide.motion==='factory'?'Hình minh họa doanh nghiệp':'Hình minh họa ứng dụng'}</small></div></div>
-    </div>`).join('')}
+`;
+  return `<section class="hero assembly-hero" aria-labelledby="hero-title">
+    <div class="hero-atmosphere" aria-hidden="true"></div>
+    <div class="hero-carousel" aria-roledescription="băng chuyền" aria-label="Giải pháp vật liệu TENSAN">
+    <div class="hero-carousel-viewport"><div class="hero-carousel-track">
+    ${imageSlides[0]}
+    ${thermalSlide}
+    ${imageSlides[1]}
+    ${productSlide('led',4,'Silicone cho đèn LED','Kết dính các chi tiết trong cụm đèn. Khám phá lớp silicone giữa thân tản nhiệt, bảng LED và bộ khuếch tán.','keo-silicone-dan-den-led-ts6603','reference-led-3d.webp',[['silicone','Lớp silicone kết dính'],['ledBoard','Bảng LED'],['package','Silicone RTV']])}
+    ${productSlide('solder',5,'Kem hàn TS-350','Từ lớp kem hàn đến vị trí kết nối linh kiện. Quan sát khuôn in, gạt kem và các điểm tiếp xúc trên bo mạch.','kem-han-ts350','reference-solder-3d.webp',[['stencil','Khuôn in kem hàn'],['squeegee','Gạt kem hàn'],['package','Kem hàn TS-350']])}
     </div></div>
-    <div class="container hero-carousel-nav"><div class="banner-selectors" aria-label="Chọn banner">${['Keo tản nhiệt', 'Silicone LED', 'Kem hàn TS-350', 'Tensan Việt Nam', 'Keo đỏ SMT'].map((title, index) => `<button type="button" data-slide="${index}" aria-pressed="${index === 0}"><span>0${index + 1}</span>${title}</button>`).join('')}</div><div class="banner-arrows"><button type="button" data-banner-prev aria-label="Banner trước">${icon('arrow','banner-arrow-prev')}</button><span class="banner-count" aria-hidden="true">01 / 05</span><button type="button" data-banner-next aria-label="Banner tiếp theo">${icon('arrow')}</button></div></div>
+    <div class="container hero-carousel-nav"><div class="banner-selectors" aria-label="Chọn banner">${['Tensan Việt Nam', 'Keo tản nhiệt', 'Keo đỏ SMT', 'Silicone LED', 'Kem hàn TS-350'].map((title, index) => `<button type="button" data-slide="${index}" aria-pressed="${index === 0}"><span>0${index + 1}</span>${title}</button>`).join('')}</div><div class="banner-arrows"><button type="button" data-carousel-play aria-label="Tạm dừng trình chiếu" aria-pressed="true">${icon('pause')}</button><button type="button" data-banner-prev aria-label="Banner trước">${icon('arrow','banner-arrow-prev')}</button><span class="banner-count" aria-hidden="true">01 / 05</span><button type="button" data-banner-next aria-label="Banner tiếp theo">${icon('arrow')}</button></div><p class="banner-demo-status" data-demo-status>Hoạt ảnh · 3 giây</p></div>
     <p class="sr-only" data-banner-status aria-live="polite" aria-atomic="true"></p>
     </div>
     <div class="container hero-industry-rail"><div class="hero-industry-heading"><p>Vật liệu cho từng ứng dụng</p><a href="/ung-dung" data-link>Khám phá giải pháp ${icon('arrow')}</a></div><div class="hero-industry-grid">${applications.map((application, index) => `<a class="hero-industry" href="/ung-dung#${application.id}" data-link><div class="application-photo photo-${index} hero-industry-photo" aria-hidden="true"></div><div class="hero-industry-copy">${icon(application.icon)}<span>${application.title}</span>${icon('arrow')}</div></a>`).join('')}</div></div>

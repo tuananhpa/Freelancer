@@ -1,45 +1,13 @@
 {
-  "version": "7aca24c9-1314-4c75-b30c-68522b7e4701",
-  "checkedAt": "2026-10-17T16:33:06.112Z",
-  "checks": [
-    {
-      "pathname": "/",
-      "status": 200,
-      "contentType": "text/html",
-      "slides": 5,
-      "productModels": 2,
-      "animatedBanners": 2,
-      "thermalModel": true
-    },
-    {
-      "pathname": "/assets/reference-led-3d.webp",
-      "status": 200,
-      "contentType": "image/webp"
-    },
-    {
-      "pathname": "/assets/reference-solder-3d.webp",
-      "status": 200,
-      "contentType": "image/webp"
-    },
-    {
-      "pathname": "/assets/reference-thermal-3d.webp",
-      "status": 200,
-      "contentType": "image/webp"
-    },
-    {
-      "pathname": "/assets/banner-factory-motion.webp",
-      "status": 200,
-      "contentType": "image/webp"
-    },
-    {
-      "pathname": "/assets/banner-red-smt-motion.webp",
-      "status": 200,
-      "contentType": "image/webp"
-    },
-    {
-      "pathname": "/san-pham/4109a",
-      "status": 200,
-      "contentType": "text/html"
-    }
-  ]
+  "version": "08059921-f6bb-4f51-9786-c220a078a258",
+  "checkedAt": "2026-10-17T16:48:56.991Z",
+  "status": 200,
+  "order": [
+    "1 / 5: Sản xuất tại Việt Nam",
+    "2 / 5: Keo tản nhiệt TS1001",
+    "3 / 5: Keo đỏ SMT 4109A",
+    "4 / 5: Silicone cho đèn LED",
+    "5 / 5: Kem hàn TS-350"
+  ],
+  "autoplayControl": true
 }
