@@ -1,0 +1,27 @@
+{
+  "version": "4170379b-31fd-455c-b865-34caf10171dd",
+  "checkedAt": "2026-10-17T10:03:02.176Z",
+  "checks": [
+    {
+      "pathname": "/",
+      "status": 200,
+      "contentType": "text/html",
+      "csp": true,
+      "ts1001": true
+    },
+    {
+      "pathname": "/san-pham/ts1001",
+      "status": 200,
+      "contentType": "text/html",
+      "csp": true,
+      "ts1001": true
+    },
+    {
+      "pathname": "/assets/thermal-assembly-fallback.svg",
+      "status": 200,
+      "contentType": "image/svg+xml",
+      "csp": true,
+      "ts1001": true
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+.assembly-hero{height:auto;min-height:730px;background:#061f29}
+.assembly-hero:before{background:linear-gradient(110deg,#041a25 4%,#06212c99 50%,#0a344080)}
+.assembly-hero .hero-atmosphere:after{display:none}
+.assembly-layout{display:grid;grid-template-columns:.85fr 1.3fr;gap:24px;align-items:center;padding-block:35px 30px}
+.assembly-hero .hero-copy{width:auto;max-width:490px;padding:0;position:relative;z-index:3}
+.assembly-hero h1{font-size:clamp(32px,2.85vw,43px);white-space:normal;line-height:1.25}
+.assembly-hero .hero-description{font-size:16px;line-height:1.85;color:#c6dbe2;margin-top:23px}
+.assembly-hero .hero-actions{gap:12px;margin-top:28px}
+.assembly-hero .button{font-size:11px;padding-inline:16px;gap:10px}
+.thermal-product-card{display:flex;gap:16px;align-items:center;border-top:1px solid #315360;padding-top:24px;margin-top:38px;max-width:445px}
+.thermal-product-card>a{background:white;flex-shrink:0;border-radius:3px;padding:5px;width:68px;height:88px;display:grid;place-items:center}
+.thermal-product-card img{width:100%;height:100%;object-fit:contain}
+.thermal-product-eyebrow{color:#83b7c3;font-size:9px}
+.thermal-product-card h2{font-size:19px;color:#eaf6f6;line-height:1.5;letter-spacing:-.025em;margin-top:3px}
+.thermal-product-card p{font-size:11px;color:#b2ccd4;line-height:1.7;margin-top:5px}
+.thermal-product-card div>a{display:inline-flex;gap:10px;align-items:center;font-size:10px;color:#6ed6dd;min-height:32px}
+.thermal-product-card .icon{width:14px;height:14px}
+.thermal-focus-button{display:flex;align-items:center;gap:10px;background:#123a47;border:1px solid #467984;color:#bde9eb;padding:11px 14px;min-height:44px;font-size:11px;margin-top:18px}
+.thermal-focus-button .icon{width:16px;height:16px}.thermal-focus-button:hover{border-color:#72d9d9;background:#194c58}
+.assembly-view{min-width:0;position:relative;background:radial-gradient(ellipse at 48% 40%,#285e6c66,transparent 70%)}
+.assembly-view-heading{display:flex;justify-content:space-between;align-items:center;gap:15px;font-size:11px;color:#b9d2db;padding-inline:12px}
+.assembly-mode{font-size:9px;color:#88cdd2;padding:7px 10px;border:1px solid #3c6975;border-radius:20px;white-space:nowrap}
+.assembly-stage{height:560px;position:relative;cursor:grab;isolation:isolate}
+.assembly-stage:active{cursor:grabbing}
+.assembly-stage canvas{position:absolute;inset:0;width:100%;height:100%;display:block;outline:none;z-index:1}
+.assembly-fallback{position:absolute;inset:0;z-index:0;display:grid;place-items:center}.assembly-fallback img{width:100%;height:100%;object-fit:contain}
+.assembly-leaders{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none;overflow:visible;fill:#67c8ce}
+.assembly-leaders path{fill:none;stroke:#5e9eaa;stroke-width:1;opacity:.8}
+.assembly-leaders [data-anchor=paste] path{stroke:#7ce5df;stroke-width:1.5}.assembly-leaders [data-anchor=paste]{fill:#90eee7}
+.assembly-label{position:absolute;right:1px;z-index:3;display:flex;align-items:center;gap:7px;width:126px;color:#c3dbe1;font-size:10px;line-height:1.5;padding:8px 5px;border:0;text-align:left;background:#082631dc;border-radius:3px;transform:translateY(-50%);pointer-events:none}
+.assembly-label>span{font-size:8px;color:#70b0bc;border:1px solid #466d78;border-radius:50%;width:19px;height:19px;display:grid;place-items:center;flex-shrink:0}
+.assembly-label[data-label=heatsink]{top:21%}.assembly-label[data-label=paste]{top:49%}.assembly-label[data-label=chip]{top:67%}.assembly-label[data-label=board]{top:83%}
+.assembly-label-paste{pointer-events:auto;color:#a4f2ec;background:#0b3a43;border:1px solid #59b8bb;box-shadow:0 0 24px #35d6cc13;font-weight:600}
+.assembly-label-paste>span{color:#bbfffa;border-color:#73caca}.assembly-label strong{font-size:11px;display:block;letter-spacing:.04em;color:#fff}
+.assembly-toolbar{display:flex;align-items:center;justify-content:flex-end;gap:7px;border-top:1px solid #335764;padding-top:12px}
+.assembly-drag-hint{display:flex;align-items:center;gap:7px;margin-right:auto;font-size:10px;color:#b8d2da}.assembly-drag-hint .icon{width:15px;height:15px}
+.assembly-control{display:flex;align-items:center;justify-content:center;gap:6px;min-height:40px;min-width:40px;border:1px solid #4c7481;background:#0c2b39;color:#d7eaef;border-radius:3px;padding:9px 10px;font-size:10px}
+.assembly-control .icon{width:16px;height:16px}.assembly-control:hover,.assembly-control[aria-pressed=true]{background:#164653;border-color:#74c8ce}
+.assembly-rotation{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:10px}.assembly-rotation button{display:flex;align-items:center;gap:3px;background:none;border:0;color:#92cdd5;padding:8px 0;min-height:32px;font-size:9px;white-space:nowrap}.assembly-rotation .icon{height:13px;width:13px}.rotate-left{transform:rotate(180deg)}
+.assembly-rotation p{font-size:9px;color:#a8c6cf;text-align:center;line-height:1.7;max-width:330px}
+.assembly-note{font-size:8px;line-height:1.6;text-align:center;color:#8daebc;margin-top:6px}
+.assembly-scene-unavailable .assembly-toolbar,.assembly-scene-unavailable .assembly-rotation,.assembly-scene-unavailable .assembly-label,.assembly-scene-unavailable .assembly-leaders,.assembly-scene-unavailable .thermal-focus-button{display:none}
+@media(min-width:1600px){.assembly-layout{gap:40px}.assembly-stage{height:610px}}
+@media(max-width:1150px){.assembly-layout{grid-template-columns:.85fr 1.2fr;gap:16px}.assembly-hero h1{font-size:34px}.assembly-hero .hero-description{font-size:14px}.assembly-stage{height:520px}.assembly-label{width:112px;font-size:9px}.assembly-toolbar{flex-wrap:wrap}.assembly-drag-hint{font-size:9px}.assembly-control{font-size:9px;padding:8px}.thermal-product-card h2{font-size:17px}}
+@media(max-width:900px) and (min-width:641px){.assembly-hero h1{font-size:28px}.assembly-hero .button{font-size:9px;padding:12px}.assembly-hero .hero-description{font-size:12px}.assembly-layout{grid-template-columns:.8fr 1.2fr;gap:15px}.assembly-stage{height:485px}.assembly-label{width:102px;font-size:8px}.assembly-label strong{font-size:10px}.assembly-label>span{display:none}.assembly-drag-hint{width:100%;margin-bottom:4px}.assembly-toolbar{justify-content:flex-start}.thermal-product-card{gap:10px;margin-top:24px}.thermal-product-card>a{width:48px;height:70px}.thermal-product-card p{font-size:9px}.thermal-product-card h2{font-size:14px}.thermal-focus-button{font-size:9px;padding-inline:8px}.assembly-rotation p{font-size:8px}}
+@media(max-width:640px){.assembly-hero{height:auto;min-height:0}.assembly-layout{grid-template-columns:1fr;padding-block:30px;gap:30px}.assembly-hero .hero-copy{padding:0;width:100%}.assembly-hero .hero-kicker{margin-bottom:15px}.assembly-hero h1{font-size:clamp(28px,7.5vw,38px)}.assembly-hero .hero-description{font-size:13px;line-height:1.8;margin-top:16px}.assembly-hero .hero-actions{margin-top:22px;gap:10px}.assembly-hero .button{font-size:10px;min-height:43px;padding-inline:13px}.thermal-product-card{margin-top:25px;padding-top:18px;gap:12px}.thermal-product-card>a{height:78px;width:57px}.thermal-product-card h2{font-size:18px}.thermal-product-card p{font-size:10px}.thermal-product-card div>a{font-size:10px}.thermal-focus-button{font-size:10px;margin-top:13px}.assembly-view{border-top:1px solid #325664;padding-top:20px}.assembly-view-heading{padding-inline:0;font-size:10px}.assembly-mode{font-size:8px}.assembly-stage{height:450px;margin-inline:-10px}.assembly-label{width:102px;font-size:8px;right:0;background:#092b35e8}.assembly-label>span{display:none}.assembly-label strong{font-size:10px}.assembly-label[data-label=heatsink]{top:20%}.assembly-label[data-label=paste]{top:46%}.assembly-label[data-label=chip]{top:71%}.assembly-label[data-label=board]{top:88%}.assembly-toolbar{gap:6px;justify-content:flex-start}.assembly-drag-hint{font-size:9px;width:100%;margin-bottom:3px}.assembly-control{min-height:42px;padding:9px 12px;font-size:10px}.assembly-rotation p{font-size:8px}.assembly-note{font-size:8px;max-width:300px;margin:6px auto 0}}

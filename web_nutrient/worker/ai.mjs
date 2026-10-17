@@ -56,6 +56,8 @@ export async function gemini(
     throw e;
   }
   if (!response.ok) {
+    const details = await response.clone().json().catch(() => ({}));
+    console.warn("Gemini failure", response.status, String(details.error?.message ?? "").replaceAll(key, "[redacted]"));
     const e = new Error(
       response.status === 429
         ? "Gemini đang hết hạn mức, hãy thử lại sau."
