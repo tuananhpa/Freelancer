@@ -1,0 +1,13 @@
+GOLDEN PHARMA/
+.work/
+.work_fix/
+scripts/
+docs/
+worker.mjs
+wrangler.jsonc
+package.json
+*.md
+.git/
+node_modules/
+.wrangler/
+.claude/

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Quản trị — ESER Fashion</title>
+<link rel="icon" href="/images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Be+Vietnam+Pro:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap&subset=vietnamese">
+<link rel="stylesheet" href="/admin/admin.css">
+</head>
+<body>
+<!-- Đăng nhập -->
+<main class="login" id="login" hidden>
+  <form class="login__card" id="login-form">
+    <div class="login__mark">ESER</div>
+    <p class="mono">Trang quản trị website</p>
+    <label class="f"><span>Mật khẩu</span><input type="password" name="password" autocomplete="current-password" required autofocus></label>
+    <button class="b b--dark" type="submit">Đăng nhập</button>
+    <p class="login__err" role="alert"></p>
+  </form>
+</main>
+
+<!-- Ứng dụng -->
+<div class="app" id="app" hidden>
+  <aside class="side" id="side">
+    <div class="side__brand"><b>ESER</b><span class="mono">Admin</span></div>
+    <nav class="side__nav" id="side-nav" aria-label="Mục quản trị"></nav>
+    <div class="side__foot">
+      <a class="side__link" href="/" target="_blank" rel="noopener">↗ Xem website</a>
+      <button class="side__link" type="button" id="logout">⎋ Đăng xuất</button>
+    </div>
+  </aside>
+  <div class="main">
+    <header class="top">
+      <button class="top__menu" type="button" id="menu-btn" aria-label="Mở menu">☰</button>
+      <div class="top__t"><h1 id="sec-title"></h1><p id="sec-desc"></p></div>
+      <div class="top__actions">
+        <span class="top__status mono" id="status"></span>
+        <button class="b b--dark" type="button" id="save" disabled>Lưu thay đổi</button>
+      </div>
+    </header>
+    <div class="content" id="content"></div>
+  </div>
+</div>
+
+<!-- Thư viện ảnh (modal) -->
+<div class="modal" id="media-modal" hidden>
+  <div class="modal__scrim" data-close></div>
+  <div class="modal__box" role="dialog" aria-modal="true" aria-labelledby="mm-t">
+    <div class="modal__head">
+      <h2 id="mm-t">Chọn ảnh</h2>
+      <div class="modal__tools">
+        <label class="b b--line"><input type="file" accept="image/*" multiple hidden id="mm-file">⤒ Tải ảnh lên</label>
+        <button class="b b--dark" type="button" id="mm-ok" disabled>Chọn</button>
+        <button class="x" type="button" data-close aria-label="Đóng">✕</button>
+      </div>
+    </div>
+    <p class="hint">Ảnh được tự động nén (tối đa 1600px) trước khi tải lên. Có thể kéo-thả ảnh vào đây.</p>
+    <div class="grid-media" id="mm-grid"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="/admin/admin.js"></script>
+</body>
+</html>

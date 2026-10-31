@@ -1,0 +1,10 @@
+CREATE TABLE notifications (
+    id UUID PRIMARY KEY,
+    user_id UUID NOT NULL,
+    title VARCHAR(255) NOT NULL,
+    message VARCHAR(500) NOT NULL,
+    is_read BOOLEAN NOT NULL DEFAULT FALSE,
+    link VARCHAR(255),
+    created_at TIMESTAMP WITHOUT TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT fk_notifications_user FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE
+);

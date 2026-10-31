@@ -1,0 +1,32 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  // Một Worker phục vụ cả frontend (dist) và /api — cùng origin, không cần CORS khi chạy thật
+  "name": "school-edu",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-10-17",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
+  "assets": {
+    "directory": "../URANUS-FrontEnd-main/URANUS-FrontEnd-main/dist",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*", "/ws"]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "school-edu-db",
+      "database_id": "73bf870c-3076-4cdf-ba4e-c0160b15fd0d",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "durable_objects": { "bindings": [{ "name": "REALTIME", "class_name": "RealtimeHub" }] },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["RealtimeHub"] }],
+  "kv_namespaces": [{ "binding": "SESSIONS", "id": "287e8bc29ebd44cfa13680f36f5c7cdb" }],
+  "vars": {
+    "FRONTEND_URL": "https://school-edu.edu-manage-ai.workers.dev",
+    "CORS_ALLOWED_ORIGINS": "http://localhost:5174,http://localhost:5175,https://school-edu.edu-manage-ai.workers.dev"
+  },
+  "triggers": { "crons": ["*/30 * * * *"] },
+  "observability": { "enabled": true }
+}

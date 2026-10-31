@@ -1,0 +1,32 @@
+{
+  "name": "school-edu-backend",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "schema:extract": "node tools/extract-schema.mjs",
+    "dev": "wrangler dev",
+    "db:migrate:local": "wrangler d1 migrations apply school-edu-db --local",
+    "db:migrate:remote": "wrangler d1 migrations apply school-edu-db --remote",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "hono": "^4.13.14",
+    "unpdf": "^1.4.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261029.1",
+    "@electric-sql/pglite": "^0.2.17",
+    "@types/node": "^24.19.2",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.7",
+    "wrangler": "^4.155.0"
+  },
+  "allowScripts": {
+    "workerd@1.20261023.1": true
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "env": { "browser": true, "es2020": true },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:tailwindcss/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "react-refresh", "tailwindcss"],
+  "rules": {
+    "@typescript-eslint/no-explicit-any": "error",
+    "react-refresh/only-export-components": ["warn", { "allowConstantExport": true }],
+    "tailwindcss/classnames-order": "warn",
+    "tailwindcss/no-custom-classname": "off"
+  }
+}

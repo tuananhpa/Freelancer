@@ -1,0 +1,33 @@
+/* ── Exam split view: thanh kéo chỉnh tỉ lệ đề thi / phiếu trả lời ── */
+.exam-split-divider {
+  display: none;
+}
+
+@media (min-width: 1280px) {
+  .exam-split > .exam-split-left {
+    flex: 1 1 var(--exam-split, 60%);
+    max-width: var(--exam-split, 60%);
+    /* Không để khung đề bị bóp quá hẹp */
+    min-width: 320px;
+  }
+  .exam-split > .exam-split-right {
+    flex: 1 1 0%;
+    width: auto;
+    max-width: none;
+    /* Phiếu trả lời luôn đủ rộng để đọc được đáp án */
+    min-width: 340px;
+  }
+  .exam-split-divider {
+    display: flex;
+  }
+}
+
+/* Trong lúc kéo: tắt transition để bám tay, khoá bôi đen chữ */
+.exam-split-dragging * {
+  transition: none !important;
+}
+body.exam-resizing,
+body.exam-resizing * {
+  cursor: col-resize !important;
+  user-select: none !important;
+}

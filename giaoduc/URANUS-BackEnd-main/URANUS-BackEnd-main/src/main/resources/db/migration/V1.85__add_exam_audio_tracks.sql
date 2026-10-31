@@ -1,0 +1,1 @@
+ALTER TABLE exams ADD COLUMN IF NOT EXISTS audio_tracks JSONB;

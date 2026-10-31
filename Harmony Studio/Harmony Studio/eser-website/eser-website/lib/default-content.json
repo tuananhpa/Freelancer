@@ -1,0 +1,127 @@
+{
+  "site": {
+    "name": "ESER Fashion",
+    "shortName": "ESER",
+    "slogan": "Dress for success",
+    "sloganVi": "Mặc đẹp để thành công",
+    "mission": "ESER khát khao giúp phụ nữ Việt nâng tầm phong cách.",
+    "logo": "/images/logo.png",
+    "seoTitle": "ESER Fashion — Dress for success | Thời trang công sở nữ Hà Nội",
+    "seoDescription": "ESER - dress for success - Mặc đẹp để thành công. Đầm công sở, đầm dự tiệc, set chân váy và áo dài thanh lịch cho phụ nữ Việt. Hoàng Quốc Việt, Cầu Giấy, Hà Nội.",
+    "ogImage": "/images/look-05.jpg"
+  },
+  "hero": {
+    "tagline": "Mặc đẹp *để thành công*",
+    "wordmark": "ESER",
+    "labels": ["( Hà Nội — từ 2020 )", "( Thời trang công sở nữ )", "( Dress for success )"],
+    "pitch": "Những thiết kế thanh lịch, vừa vặn và tự tin —\ndành cho người phụ nữ Việt hiện đại.",
+    "ctaText": "Xem bộ sưu tập",
+    "ctaLink": "#collection",
+    "images": ["/images/look-02.jpg", "/images/look-12.jpg", "/images/look-05.jpg"]
+  },
+  "marquee": {
+    "items": ["Đầm công sở", "Váy dự tiệc", "Sơ mi lụa", "Chân váy bút chì", "Áo dài", "Set công sở"]
+  },
+  "about": {
+    "eyebrow": "( 01 — Về ESER )",
+    "headline": "ESER khát khao giúp phụ nữ Việt *nâng tầm phong cách* — vì khi mặc đẹp, bạn bước vào mọi căn phòng *với sự tự tin.*",
+    "body": "Ra đời tại Hà Nội, ESER thiết kế trang phục công sở và dự tiệc với phom dáng tôn dáng người Việt, chất liệu chọn lọc và đường may tỉ mỉ. Mỗi thiết kế là một lời nhắc: thành công bắt đầu từ cách bạn xuất hiện.",
+    "stats": [
+      { "value": "2020", "label": "Năm thành lập" },
+      { "value": "200+", "label": "Thiết kế mỗi năm" },
+      { "value": "30K", "label": "Khách hàng tin chọn" },
+      { "value": "07", "label": "Ngày đổi size" }
+    ]
+  },
+  "collection": {
+    "eyebrow": "( 02 — Bộ sưu tập )",
+    "title": "Bộ sưu tập",
+    "intro": "Từ phòng họp đến bữa tối — mỗi mẫu được may để bạn chỉ cần mặc lên là sẵn sàng."
+  },
+  "categories": [
+    { "id": "cong-so", "name": "Đầm công sở", "short": "Đầm" },
+    { "id": "du-tiec", "name": "Đầm dự tiệc", "short": "Tiệc" },
+    { "id": "set", "name": "Set & chân váy", "short": "Set" },
+    { "id": "ao-dai", "name": "Áo dài", "short": "Áo dài" }
+  ],
+  "products": [
+    { "id": "audrey", "name": "Đầm Audrey phối cổ nơ", "category": "cong-so", "price": 690000, "oldPrice": 0, "badge": "Bán chạy", "sizes": ["S", "M", "L", "XL"], "description": "Thân đen dáng bút chì, phần ngực và tay phối trắng, cổ đức thắt nơ nhung — kinh điển cho ngày làm việc.", "details": "Chất liệu: tuýt-xi co giãn nhẹ\nDáng: bút chì qua gối\nKhoá kéo ẩn sau lưng", "images": ["/images/look-01.jpg", "/images/look-02.jpg"], "visible": true },
+    { "id": "linh-lan", "name": "Đầm Linh Lan cổ V", "category": "cong-so", "price": 650000, "oldPrice": 0, "badge": "", "sizes": ["S", "M", "L", "XL"], "description": "Vàng bơ dịu, cổ V vạt chéo, cài hoa trâm cùng tông — thanh lịch cho những ngày quan trọng.", "details": "Chất liệu: cotton lạnh đứng phom\nDáng: suông ôm nhẹ, qua gối\nTặng kèm hoa cài", "images": ["/images/look-04.jpg"], "visible": true },
+    { "id": "jade", "name": "Đầm Jade phối hoa", "category": "cong-so", "price": 620000, "oldPrice": 0, "badge": "", "sizes": ["S", "M", "L", "XL"], "description": "Thân áo voan hoa nền xanh ngọc, chân váy xanh cổ vịt dáng ôm — tươi tắn mà vẫn chuyên nghiệp.", "details": "Chất liệu: voan lót lụa, tuýt-xi\nDáng: ôm, ngang gối\nTay lửng bo chun", "images": ["/images/look-07.jpg"], "visible": true },
+    { "id": "nude", "name": "Đầm Nude tay voan", "category": "cong-so", "price": 650000, "oldPrice": 0, "badge": "", "sizes": ["S", "M", "L", "XL"], "description": "Tông be nude dịu mắt, tay bồng voan mỏng, eo nhấn nơ — nhẹ nhàng từ sáng đến tối.", "details": "Chất liệu: tuýt-xi, voan tơ\nDáng: bút chì qua gối\nXẻ sau tiện di chuyển", "images": ["/images/look-09.jpg"], "visible": true },
+    { "id": "sky", "name": "Đầm Sky xếp ly", "category": "cong-so", "price": 590000, "oldPrice": 0, "badge": "", "sizes": ["S", "M", "L", "XL"], "description": "Xanh baby, cổ sen, hàng cúc ngọc trai, chân váy xếp ly mềm bay.", "details": "Chất liệu: lụa đũi pha\nDáng: xoè xếp ly, qua gối\nCúc ngọc trai đính tay", "images": ["/images/look-10.jpg"], "visible": true },
+    { "id": "lavender", "name": "Đầm Lavender phối nẹp", "category": "cong-so", "price": 620000, "oldPrice": 0, "badge": "", "sizes": ["S", "M", "L", "XL"], "description": "Voan hoa nhí tím, nẹp tím than chạy dọc thân, chân váy ôm — nữ tính và gọn gàng.", "details": "Chất liệu: voan hoa, tuýt-xi\nDáng: ôm, ngang gối\nTay dài bo măng-sét", "images": ["/images/look-14.jpg"], "visible": true },
+    { "id": "rouge", "name": "Đầm Rouge đuôi cá", "category": "du-tiec", "price": 750000, "oldPrice": 0, "badge": "Mới", "sizes": ["S", "M", "L", "XL"], "description": "Đỏ rượu vang, tay phồng, đai da khoá vàng, chân váy đuôi cá tôn trọn đường cong.", "details": "Chất liệu: tuýt-xi Hàn dày dặn\nDáng: ôm đuôi cá, qua bắp chân\nKèm đai da", "images": ["/images/look-05.jpg", "/images/look-13.jpg"], "visible": true },
+    { "id": "pearl", "name": "Đầm Pearl tay bồng", "category": "du-tiec", "price": 790000, "oldPrice": 0, "badge": "", "sizes": ["S", "M", "L"], "description": "Vải ánh ngọc trai, tay bồng phồng, eo xếp ly, chân xoè ngắn — tỏa sáng mà không phô.", "details": "Chất liệu: gấm ánh nhũ\nDáng: xoè chữ A, trên gối\nLót lụa toàn thân", "images": ["/images/look-06.jpg", "/images/look-12.jpg"], "visible": true },
+    { "id": "may", "name": "Đầm Mây voan bèo", "category": "du-tiec", "price": 720000, "oldPrice": 0, "badge": "", "sizes": ["S", "M", "L"], "description": "Voan be ánh vàng, cổ bèo xếp ly, chân váy tầng mềm mại cho buổi hẹn cuối tuần.", "details": "Chất liệu: voan organza\nDáng: xoè tầng, qua gối\nĐai eo cùng vải", "images": ["/images/look-03.jpg"], "visible": true },
+    { "id": "camellia", "name": "Đầm Camellia voan hoa", "category": "du-tiec", "price": 780000, "oldPrice": 0, "badge": "", "sizes": ["S", "M", "L", "XL"], "description": "Voan đen in hoa trà trắng, tay dài, xẻ tà nhẹ — sâu lắng và cuốn hút.", "details": "Chất liệu: voan in, lót lụa\nDáng: xoè nhẹ, qua gối\nXẻ tà trước", "images": ["/images/look-08.jpg"], "visible": true },
+    { "id": "terracotta", "name": "Set Terracotta", "category": "set", "price": 720000, "oldPrice": 0, "badge": "", "sizes": ["S", "M", "L", "XL"], "description": "Sơ mi voan hoạ tiết nâu đất phối khăn cổ, chân váy đuôi cá màu gạch nung.", "details": "Gồm: áo + chân váy\nChất liệu: voan in, tuýt-xi\nCó bán lẻ từng món", "images": ["/images/look-11.jpg"], "visible": true },
+    { "id": "champagne", "name": "Set Champagne peplum", "category": "set", "price": 760000, "oldPrice": 0, "badge": "", "sizes": ["S", "M", "L"], "description": "Áo voan tay bồng nhấn peplum hoa hồng, chân váy bút chì be — trọn bộ cho ngày ký hợp đồng.", "details": "Gồm: áo + chân váy\nChất liệu: voan tơ, tuýt-xi\nCó bán lẻ từng món", "images": ["/images/look-15.jpg"], "visible": true },
+    { "id": "houndstooth", "name": "Set Houndstooth", "category": "set", "price": 680000, "oldPrice": 0, "badge": "", "sizes": ["S", "M", "L", "XL"], "description": "Sơ mi lụa trắng thắt nơ, chân váy kẻ răng sói đen trắng — cổ điển không bao giờ lỗi mốt.", "details": "Gồm: áo + chân váy\nChất liệu: lụa, dạ tweed mỏng\nCó bán lẻ từng món", "images": ["/images/look-18.jpg"], "visible": true },
+    { "id": "mau-don", "name": "Áo dài Mẫu Đơn", "category": "ao-dai", "price": 1150000, "oldPrice": 0, "badge": "", "sizes": ["S", "M", "L"], "description": "Áo dài lụa trắng vẽ hoa mẫu đơn đỏ, tay raglan, phối quần đỏ — nét Việt đương đại cho dịp lễ, Tết.", "details": "Gồm: áo + quần\nChất liệu: lụa tơ, vẽ tay\nMay đo theo số đo nếu cần", "images": ["/images/look-16.jpg", "/images/look-17.jpg"], "visible": true }
+  ],
+  "lines": {
+    "eyebrow": "( 03 — Chọn theo dịp )",
+    "title": "Mặc gì *hôm nay?*",
+    "items": [
+      { "name": "Đầm công sở", "qualifier": "thanh lịch mỗi ngày", "price": "từ 590K", "category": "cong-so" },
+      { "name": "Đầm dự tiệc", "qualifier": "cho buổi tối rực rỡ", "price": "từ 720K", "category": "du-tiec" },
+      { "name": "Set & chân váy", "qualifier": "phối linh hoạt", "price": "từ 680K", "category": "set" },
+      { "name": "Áo dài", "qualifier": "nét Việt đương đại", "price": "từ 1.150K", "category": "ao-dai" }
+    ]
+  },
+  "process": {
+    "eyebrow": "( 04 — Mua sắm cùng ESER )",
+    "title": "Đẹp từ *lúc chọn*\nđến *lúc mặc*",
+    "steps": [
+      { "title": "Chọn mẫu", "text": "Xem bộ sưu tập trên website hoặc ghé cửa hàng tại Hoàng Quốc Việt, Cầu Giấy để thử trực tiếp." },
+      { "title": "Tư vấn size", "text": "Gửi chiều cao, cân nặng qua Zalo — ESER gợi ý size và cách phối vừa vặn nhất với bạn." },
+      { "title": "Giao tận nơi", "text": "Nội thành Hà Nội nhận nhanh trong ngày, giao toàn quốc 2–4 ngày, kiểm tra hàng trước khi nhận." },
+      { "title": "Đổi size dễ dàng", "text": "Đổi size trong 7 ngày nếu sản phẩm còn nguyên tem mác, chưa qua sử dụng." }
+    ],
+    "noticeTitle": "Lưu ý",
+    "noticeText": "Sản phẩm đổi phải còn nguyên tem mác, chưa giặt. Hàng giảm giá không áp dụng đổi trả. Gọi hotline hoặc nhắn Zalo để được hỗ trợ nhanh nhất.",
+    "noticeCta": "Chat Zalo với ESER"
+  },
+  "lookbook": {
+    "eyebrow": "( 05 — Lookbook )",
+    "title": "Phố & *nàng*",
+    "items": [
+      { "image": "/images/look-08.jpg", "caption": "( Phố Hà Nội )" },
+      { "image": "/images/look-01.jpg", "caption": "( Giờ hành chính )" },
+      { "image": "/images/look-12.jpg", "caption": "( Chi tiết )" },
+      { "image": "/images/look-05.jpg", "caption": "( Hẹn tối )" },
+      { "image": "/images/look-17.jpg", "caption": "( Nét Việt )" },
+      { "image": "/images/look-11.jpg", "caption": "( Cuối tuần )" },
+      { "image": "/images/look-15.jpg", "caption": "( Ký hợp đồng )" }
+    ],
+    "quote": "Mặc đẹp không phải để được nhìn —",
+    "quoteMuted": "mà để được lắng nghe."
+  },
+  "cta": {
+    "eyebrow": "( 06 — Sẵn sàng? )",
+    "line1": "Mặc đẹp",
+    "line2": "để thành công",
+    "text": "Nhắn cho ESER chiều cao, cân nặng và dịp bạn cần — chúng tôi gợi ý trọn bộ phù hợp nhất, miễn phí.",
+    "buttonText": "Nhận tư vấn miễn phí",
+    "buttonLink": "#contact"
+  },
+  "contact": {
+    "eyebrow": "( 07 — Liên hệ )",
+    "headline": "Ghé ESER\n*hôm nay?*",
+    "address": "Hoàng Quốc Việt, Cầu Giấy, Hà Nội",
+    "phone": "0963053598",
+    "email": "eserfashion2020@gmail.com",
+    "zalo": "0963053598",
+    "facebook": "",
+    "instagram": "",
+    "tiktok": "",
+    "hours": "",
+    "mapQuery": "Hoàng Quốc Việt, Cầu Giấy, Hà Nội",
+    "formTitle": "Để lại lời nhắn",
+    "formNote": "ESER sẽ gọi lại cho bạn trong giờ làm việc."
+  },
+  "footer": {
+    "blurb": "ESER — dress for success. Mặc đẹp để thành công. ESER khát khao giúp phụ nữ Việt nâng tầm phong cách."
+  }
+}

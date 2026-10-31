@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex"><title>Quản trị website</title>
+<link rel="icon" href="assets/img/brand/mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body>
+<section id="login" class="login" hidden>
+  <form id="loginForm" class="panel" autocomplete="on">
+    <img src="assets/img/brand/logo-dark.svg" alt="" width="236" height="56" style="margin-bottom:18px">
+    <h1>Đăng nhập quản trị</h1>
+    <p class="demo-note" id="demoNote"></p>
+    <label>Tên đăng nhập<input name="u" autocomplete="username" required></label>
+    <label>Mật khẩu<input name="p" type="password" autocomplete="current-password" required></label>
+    <p class="err" id="loginErr" role="alert"></p>
+    <button class="btn primary">Đăng nhập</button>
+  </form>
+</section>
+<div id="app" class="app" hidden>
+  <aside class="side">
+    <b class="logo"><img src="assets/img/brand/mark.svg" alt="" width="28" height="28"> Quản trị website</b>
+    <nav id="tabs" aria-label="Mục quản trị"></nav>
+    <div class="side-foot">
+      <button class="btn" id="exportBtn">Sao lưu dữ liệu (JSON)</button>
+      <label class="btn">Khôi phục từ file<input type="file" id="importFile" accept="application/json" hidden></label>
+      <button class="btn danger" id="resetBtn">Đặt lại dữ liệu mẫu</button>
+      <button class="btn" id="logoutBtn">Đăng xuất</button>
+    </div>
+  </aside>
+  <main class="main">
+    <div class="pubbar" id="pubbar"></div>
+    <header class="bar"><h1 id="title"></h1><input id="search" type="search" placeholder="Tìm kiếm (không cần gõ dấu)" aria-label="Tìm kiếm"><button class="btn primary" id="addBtn">+ Thêm mới</button></header>
+    <div id="content"></div>
+  </main>
+</div>
+<dialog id="dlg"><form method="dialog" id="form" class="panel"><h2 id="dlgTitle"></h2><div id="fields" class="fields"></div><p class="err" id="formErr" role="alert"></p><div class="row sticky-row"><button class="btn" value="cancel" formnovalidate>Huỷ</button><button class="btn primary" value="ok">Lưu</button></div></form></dialog>
+<dialog id="lib" class="lib"><div class="panel"><div class="row" style="justify-content:space-between;margin-bottom:12px"><h2 style="margin:0">Chọn ảnh từ thư viện</h2><button class="btn" type="button" id="libClose">Đóng</button></div><div class="lib-grid" id="libGrid"></div></div></dialog>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script type="module" src="assets/js/admin.js"></script>
+</body>
+</html>

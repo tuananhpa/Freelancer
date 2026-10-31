@@ -1,0 +1,8 @@
+tools/
+docs/
+worker.mjs
+wrangler.jsonc
+*.md
+.git/
+node_modules/
+.wrangler/

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Đặt hàng & Thanh toán — GOLDEN PHARMA</title>
+  <link rel="icon" href="assets/brand/favicon.png" type="image/png">
+  <link rel="preload" href="assets/fonts/prata-normal-vietnamese.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/intertight-normal-vietnamese.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body data-page="checkout">
+  <main id="main">
+    <section class="sec">
+      <div class="wrap">
+        <span class="eyebrow"><span class="eyebrow__dot"></span>Đặt hàng trực tuyến · Giao toàn quốc</span>
+        <h1 class="h1" style="margin-bottom:28px">Thông tin nhận hàng & thanh toán</h1>
+
+        <div class="checkout-grid">
+          <form class="form-card" id="checkoutForm">
+            <h2 class="h3" style="margin-bottom:18px">1. Thông tin người nhận</h2>
+            <div class="field">
+              <label for="coName">Họ và tên người nhận / Tên trang trại *</label>
+              <input type="text" id="coName" name="fullname" required placeholder="Nhập họ tên hoặc tên đại lý / trang trại">
+            </div>
+            <div class="field">
+              <label for="coPhone">Số điện thoại nhận hàng (Zalo) *</label>
+              <input type="tel" id="coPhone" name="phone" required placeholder="Ví dụ: 0968486985">
+            </div>
+            <div class="field">
+              <label for="coAddr">Địa chỉ nhận hàng chi tiết *</label>
+              <input type="text" id="coAddr" name="address" required placeholder="Số nhà, thôn/xóm, xã/phường, quận/huyện, tỉnh/thành phố">
+            </div>
+            <div class="field">
+              <label for="coNote">Ghi chú đơn hàng / Nhu cầu tư vấn phác đồ</label>
+              <textarea id="coNote" name="note" rows="3" placeholder="Ghi chú giờ giao hàng hoặc đàn vật nuôi cần tư vấn thêm..."></textarea>
+            </div>
+
+            <h2 class="h3" style="margin:22px 0 12px">2. Phương thức thanh toán</h2>
+            <div style="display:grid;gap:10px;margin-bottom:24px">
+              <label style="display:flex;align-items:center;gap:10px;padding:14px;border:1.5px solid var(--emerald);background:rgba(14,107,58,0.06);border-radius:var(--r-sm);font-weight:600;cursor:pointer">
+                <input type="radio" name="payment" value="COD — Thanh toán tiền mặt khi nhận hàng" checked style="width:18px;height:18px;accent-color:var(--emerald)">
+                <span>Thanh toán khi nhận hàng (COD) — Được kiểm tra hàng trước khi thanh toán</span>
+              </label>
+              <label style="display:flex;align-items:center;gap:10px;padding:14px;border:1px solid var(--line);background:var(--ivory);border-radius:var(--r-sm);font-weight:600;cursor:pointer">
+                <input type="radio" name="payment" value="Chuyển khoản ngân hàng (chiết khấu đơn sỉ)" style="width:18px;height:18px;accent-color:var(--emerald)">
+                <span>Chuyển khoản ngân hàng (Áp dụng cho đại lý / đơn sỉ trang trại)</span>
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--full" style="height:54px;font-size:16px">
+              Xác nhận đặt hàng ngay →
+            </button>
+          </form>
+
+          <aside class="form-card">
+            <h2 class="h3" style="margin-bottom:14px">Tóm tắt đơn hàng</h2>
+            <div id="coSummaryList"></div>
+            <div style="display:flex;justify-content:space-between;padding-top:14px;font-size:14px;color:var(--ink-soft)">
+              <span>Phí vận chuyển:</span>
+              <strong style="color:var(--emerald)">Miễn phí vận chuyển</strong>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:baseline;padding-top:14px;margin-top:14px;border-top:1px solid var(--line)">
+              <span style="font-weight:700">Tổng thanh toán:</span>
+              <strong style="font-size:24px;color:var(--emerald)" id="coTotalValue">0đ</strong>
+            </div>
+            <div style="margin-top:20px;padding:14px;background:var(--ivory);border-radius:var(--r-sm);font-size:13px;color:var(--ink-soft)">
+              📞 Cần hỗ trợ gấp hoặc lấy giá sỉ số lượng lớn? Gọi trực tiếp Hotline/Zalo: <a href="tel:0968486985" style="color:var(--emerald);font-weight:700">0968 486 985</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="footer"></footer>
+
+  <script src="assets/js/vendor/gsap.min.js"></script>
+  <script src="assets/js/vendor/ScrollTrigger.min.js"></script>
+  <script src="assets/js/vendor/lenis.min.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>BM Global Spirits — Rượu mạnh nhập khẩu</title>
+  <meta name="description" content="BM Global Spirits nhập khẩu và phân phối hơn 600 nhãn whisky, cognac, gin, rum, tequila, sake và rượu Việt thủ công.">
+  <meta name="theme-color" content="#0e0b09">
+  <link rel="icon" href="assets/img/brand/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/img/brand/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Cormorant+Garamond:wght@500;600&display=swap&subset=vietnamese">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script src="assets/js/data.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body data-page="home">
+<main id="main">
+
+  <!-- HERO ------------------------------------------------------------- -->
+  <section class="hero" data-header-over aria-labelledby="heroTitle">
+    <span class="hero__beam" aria-hidden="true"></span>
+    <div class="hero__text">
+      <h1 id="heroTitle" data-hero>Rượu mạnh nhập khẩu, tuyển từng chai</h1>
+      <p class="lead" data-hero>BM Global Spirits nhập khẩu và phân phối hơn 600 nhãn whisky, cognac, gin, rum, tequila, sake và rượu Việt thủ công — báo giá riêng cho từng khách.</p>
+      <div class="hero__actions" data-hero>
+        <a class="btn" href="san-pham.html">Xem bộ sưu tập<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="link" id="heroLink" href="san-pham.html">Xem tất cả</a>
+      </div>
+    </div>
+    <div class="hero__stage" id="heroStage">
+      <div class="niche" data-tone="night" style="--glow:201 151 75">
+        <span class="niche__beam" aria-hidden="true"></span>
+        <img class="niche__mirror" src="assets/img/products/600/0352.webp" alt="" aria-hidden="true" width="600" height="800">
+        <span class="niche__shadow" aria-hidden="true"></span>
+        <img class="niche__img" src="assets/img/products/1200/0352.webp" sizes="(max-width: 960px) 70vw, 40vw" alt="" width="1200" height="1600" fetchpriority="high">
+      </div>
+      <div class="hero__menu">
+        <p class="hero__picker-label" id="pickerLabel">Soi một dòng rượu</p>
+        <div class="picker" id="heroPicker" role="group" aria-labelledby="pickerLabel"></div>
+      </div>
+      <div class="hero__dock">
+        <div class="hero__caption" aria-live="polite"><p class="hero__caption-name" id="heroName"></p><p class="hero__caption-meta" id="heroMeta"></p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DANH MỤC ------------------------------------------------------- -->
+  <section class="section cats" aria-labelledby="catsTitle">
+    <div class="wrap" data-reveal-group>
+      <div class="cats__head">
+        <h2 id="catsTitle" data-reveal>Chọn theo dòng rượu</h2>
+        <p class="cats__note" id="catNote" data-reveal></p>
+        <a class="link" href="san-pham.html" data-reveal>Toàn bộ danh mục<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="cats__run" id="catRun"></div>
+    </div>
+  </section>
+
+  <!-- TUYỂN CHỌN ----------------------------------------------------- -->
+  <section class="section feat" aria-labelledby="featTitle">
+    <div class="wrap" data-reveal-group>
+      <div class="feat__head">
+        <div>
+          <h2 id="featTitle" data-reveal>Tuyển chọn của BM</h2>
+          <p class="soft prose" data-reveal>Tám chai chúng tôi muốn giới thiệu trước. Giá thay đổi theo lô hàng — liên hệ để nhận báo giá và tình trạng hàng.</p>
+        </div>
+        <a class="btn btn--ghost" href="san-pham.html" data-reveal>Xem toàn bộ catalog</a>
+      </div>
+      <div class="feat__grid" id="featGrid"></div>
+    </div>
+  </section>
+
+  <!-- CÂU CHUYỆN ----------------------------------------------------- -->
+  <section class="section story on-paper" aria-labelledby="storyTitle">
+    <div class="wrap story__in">
+      <figure class="story__pin" id="storyPin"></figure>
+      <div>
+        <div class="story__intro" data-reveal-group>
+          <h2 id="storyTitle" data-reveal>Trước khi chai rượu đến tay bạn</h2>
+          <p class="lead" data-reveal>BM Global Spirits là nhà nhập khẩu và phân phối rượu mạnh. Chúng tôi không bán mọi thứ — chỉ những chai mình hiểu rõ nguồn gốc và có thể đứng sau giới thiệu.</p>
+        </div>
+        <article class="chapter" data-k="0" data-reveal-group>
+          <h3 data-reveal>Chọn vì người uống, không vì kệ hàng</h3>
+          <p data-reveal>Danh mục đi từ những chai quen thuộc cho quầy bar đến các bản giới hạn cho người sưu tầm: Single Malt từ Speyside và Islay, cognac Pháp, sake Nhật và cả những chai rượu Việt thủ công như Lady Triệu hay Halong.</p>
+        </article>
+        <article class="chapter" data-k="1" data-reveal-group>
+          <h3 data-reveal>Giữ chai như lúc rời nhà máy</h3>
+          <p data-reveal>Rượu mạnh không sợ thời gian, chỉ sợ nắng và nóng. Hàng được lưu kho <span class="tbc">[[CẦN XÁC NHẬN: điều kiện kho]]</span>, kiểm tem, nắp và hộp trước khi xuất — chai đến tay bạn còn nguyên như ngày đóng.</p>
+        </article>
+        <article class="chapter" data-k="2" data-reveal-group>
+          <h3 data-reveal>Báo giá riêng cho từng chai</h3>
+          <p data-reveal>Nhắn tên chai qua Zalo hoặc Messenger để nhận giá theo lô hàng hiện tại. Giao tận nơi tại <span class="tbc">[[CẦN XÁC NHẬN: khu vực giao]]</span>; nhà hàng, quầy bar và đại lý có chính sách riêng.</p>
+          <p data-reveal style="margin-top:32px"><a class="link" href="gioi-thieu.html">Về BM Global Spirits<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- XUẤT XỨ -------------------------------------------------------- -->
+  <section class="section origins" aria-labelledby="originsTitle">
+    <div class="wrap origins__head" data-reveal-group>
+      <h2 id="originsTitle" data-reveal>Thương hiệu &amp; xuất xứ</h2>
+      <p id="originLead" data-reveal></p>
+    </div>
+    <div class="origins__body">
+      <div class="origins__rider" id="originRider" aria-hidden="true"></div>
+      <div id="originList" data-reveal-group></div>
+    </div>
+  </section>
+  <section class="brandwall" aria-labelledby="brandsTitle">
+    <div class="wrap brandwall__head" data-reveal-group>
+      <h2 id="brandsTitle" data-reveal>Những cái tên trong kho</h2>
+      <p class="soft" data-reveal>Những nhà chưng cất có nhiều chai nhất trong kho. Bấm tên để xem từng chai.</p>
+    </div>
+    <div class="marquee" id="marquee1" aria-hidden="true"></div>
+    <div class="wrap brandwall__foot">
+      <ul class="brand-top" id="brandTop" aria-label="Thương hiệu có nhiều chai nhất"></ul>
+      <a class="btn btn--ghost" href="san-pham.html#fBrands" id="brandAll">Xem cả 171 thương hiệu</a>
+    </div>
+  </section>
+
+  <!-- LIÊN HỆ -------------------------------------------------------- -->
+  <section class="coupon-wrap" aria-labelledby="contactTitle">
+    <div class="wrap" data-reveal-group>
+      <div class="coupon">
+        <div class="coupon__left" data-reveal>
+          <h2 id="contactTitle">Hỏi giá một chai hay cả thùng</h2>
+          <p>Gửi tên chai bạn cần. Chúng tôi trả lời giá và tình trạng hàng qua kênh bạn chọn, thường trong giờ làm việc <span class="tbc">[[CẦN XÁC NHẬN]]</span>.</p>
+          <img class="coupon__stamp" src="assets/img/brand/mark-ivory.svg" alt="" aria-hidden="true">
+        </div>
+        <div class="coupon__right" data-reveal>
+          <div class="channels">
+            <a class="channel" href="#" data-site="zalo" target="_blank" rel="noopener"><b>Zalo</b><span>Nhắn tin, gửi ảnh chai</span></a>
+            <a class="channel" href="#" data-site="messenger" target="_blank" rel="noopener"><b>Messenger</b><span>Qua Facebook</span></a>
+            <a class="channel" href="#" data-site="hotline"><b>Hotline</b><span class="num" data-site-text="hotline"></span></a>
+          </div>
+          <form class="form form--2" data-fake novalidate>
+            <div class="field"><input id="cName" name="name" placeholder=" " required autocomplete="name"><label for="cName">Tên của bạn</label></div>
+            <div class="field"><input id="cPhone" name="phone" type="tel" placeholder=" " required autocomplete="tel" inputmode="tel"><label for="cPhone">Số điện thoại</label></div>
+            <div class="field full"><input id="cWant" name="want" placeholder=" "><label for="cWant">Chai quan tâm (nếu có)</label></div>
+            <button class="btn btn--block full" type="submit">Gửi yêu cầu báo giá</button>
+            <div class="form__ok full" role="status"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><div><b>Đã nhận yêu cầu.</b><br>Chúng tôi sẽ gọi lại cho bạn sớm. (Bản mockup — form chưa gửi dữ liệu.)</div></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+</body>
+</html>

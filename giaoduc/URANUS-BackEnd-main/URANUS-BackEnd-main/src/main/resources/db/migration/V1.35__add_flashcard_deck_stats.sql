@@ -1,0 +1,4 @@
+ALTER TABLE flashcard_decks
+ADD COLUMN views_count INTEGER DEFAULT 0,
+ADD COLUMN saves_count INTEGER DEFAULT 0,
+ADD COLUMN shares_count INTEGER DEFAULT 0;

@@ -1,0 +1,657 @@
+{
+  "entityCount": 58,
+  "migrations": [
+    {
+      "file": "V1.1__initial_setup.sql",
+      "statements": 1
+    },
+    {
+      "file": "V1.2__add_enrollment_progress.sql",
+      "statements": 2
+    },
+    {
+      "file": "V1.3__add_lesson_comments.sql",
+      "statements": 1
+    },
+    {
+      "file": "V1.4__add_notifications.sql",
+      "statements": 1
+    },
+    {
+      "file": "V1.5__add_auth_tokens.sql",
+      "statements": 2
+    },
+    {
+      "file": "V1.6__add_ai_feedback_column.sql",
+      "statements": 1
+    },
+    {
+      "file": "V1.7__add_missing_exam_columns.sql",
+      "statements": 6
+    },
+    {
+      "file": "V1.8__add_assignments_and_submissions.sql",
+      "statements": 2
+    },
+    {
+      "file": "V1.9__add_skill_tag_to_questions.sql",
+      "statements": 1
+    },
+    {
+      "file": "V1.10__add_classroom_tables.sql",
+      "statements": 3
+    },
+    {
+      "file": "V1.11__refactor_assignments_and_exams.sql",
+      "statements": 5
+    },
+    {
+      "file": "V1.12__add_attendance_tables.sql",
+      "statements": 1
+    },
+    {
+      "file": "V1.13__add_student_favorite_decks.sql",
+      "statements": 1
+    },
+    {
+      "file": "V1.15__add_gamification_placement_share.sql",
+      "statements": 6
+    },
+    {
+      "file": "V1.16__add_flashcard_metadata_columns.sql",
+      "statements": 7
+    },
+    {
+      "file": "V1.17__add_post_comments_and_classroom_courses.sql",
+      "statements": 4
+    },
+    {
+      "file": "V1.18__add_audit_logs.sql",
+      "statements": 4
+    },
+    {
+      "file": "V1.19__add_messages.sql",
+      "statements": 4
+    },
+    {
+      "file": "V1.20__add_course_discussions.sql",
+      "statements": 4
+    },
+    {
+      "file": "V1.21__add_calendar.sql",
+      "statements": 3
+    },
+    {
+      "file": "V1.22__add_certificates.sql",
+      "statements": 1
+    },
+    {
+      "file": "V1.23__add_classroom_meeting_link.sql",
+      "statements": 1
+    },
+    {
+      "file": "V1.24__add_classroom_thumbnail.sql",
+      "statements": 1
+    },
+    {
+      "file": "V1.25__add_class_post_attachments.sql",
+      "statements": 1
+    },
+    {
+      "file": "V1.26__add_class_post_likes.sql",
+      "statements": 1
+    },
+    {
+      "file": "V1.27__enhance_comments.sql",
+      "statements": 2
+    },
+    {
+      "file": "V1.28__refactor_attendance_to_week_session.sql",
+      "statements": 4
+    },
+    {
+      "file": "V1.29__add_student_profiles.sql",
+      "statements": 6
+    },
+    {
+      "file": "V1.30__add_mistake_vault.sql",
+      "statements": 4
+    },
+    {
+      "file": "V1.31__increase_avatar_url_length.sql",
+      "statements": 1
+    },
+    {
+      "file": "V1.32__add_tags_to_vocabulary.sql",
+      "statements": 1
+    },
+    {
+      "file": "V1.33__add_image_url_to_flashcard_decks.sql",
+      "statements": 1
+    },
+    {
+      "file": "V1.34__add_exam_classifications_and_favorites.sql",
+      "statements": 2
+    },
+    {
+      "file": "V1.35__add_flashcard_deck_stats.sql",
+      "statements": 1
+    },
+    {
+      "file": "V1.37__add_flashcard_deck_ratings.sql",
+      "statements": 5
+    },
+    {
+      "file": "V1.38__add_deck_type.sql",
+      "statements": 2
+    },
+    {
+      "file": "V1.39__fix_old_vocabulary_decks.sql",
+      "statements": 1
+    },
+    {
+      "file": "V1.40__add_text_response_to_draft_answers.sql",
+      "statements": 1
+    },
+    {
+      "file": "V1.41__add_access_password_to_exams.sql",
+      "statements": 1
+    },
+    {
+      "file": "V1.42__add_exam_type_and_pdf_url_to_exams.sql",
+      "statements": 2
+    },
+    {
+      "file": "V1.43__add_missing_exam_columns.sql",
+      "statements": 6
+    },
+    {
+      "file": "V1.44__add_is_public_to_exams.sql",
+      "statements": 1
+    },
+    {
+      "file": "V1.45__add_version_to_student_exam_results.sql",
+      "statements": 1
+    },
+    {
+      "file": "V1.46__add_exam_snapshot.sql",
+      "statements": 1
+    },
+    {
+      "file": "V1.47__fix_student_answers_fk.sql",
+      "statements": 2
+    },
+    {
+      "file": "V1.48__fix_student_exam_results_fk_cascade.sql",
+      "statements": 3
+    },
+    {
+      "file": "V1.49__force_drop_hibernate_fks.sql",
+      "statements": 9
+    },
+    {
+      "file": "V1.50__permanently_drop_hibernate_fks.sql",
+      "statements": 3
+    },
+    {
+      "file": "V1.51__fix_user_activity_log_fk.sql",
+      "statements": 3
+    },
+    {
+      "file": "V1.52__cascade_delete_users.sql",
+      "statements": 1
+    },
+    {
+      "file": "V1.53__cascade_delete_users_reliable.sql",
+      "statements": 1
+    },
+    {
+      "file": "V1.54__add_subject_to_flashcard_decks.sql",
+      "statements": 1
+    },
+    {
+      "file": "V1.55__format_student_names.sql",
+      "statements": 2
+    },
+    {
+      "file": "V1.56__add_admin_group_to_classrooms.sql",
+      "statements": 1
+    },
+    {
+      "file": "V1.57__update_users_role_check.sql",
+      "statements": 2
+    },
+    {
+      "file": "V1.58__add_scoring_config_to_questions.sql",
+      "statements": 1
+    },
+    {
+      "file": "V1.59__cascade_delete_exam_dependencies.sql",
+      "statements": 5
+    },
+    {
+      "file": "V1.60__drop_hibernate_fks_for_exams.sql",
+      "statements": 1
+    },
+    {
+      "file": "V1.61__make_question_id_nullable_in_student_answers.sql",
+      "statements": 3
+    },
+    {
+      "file": "V1.62__add_student_linking_constraints.sql",
+      "statements": 2
+    },
+    {
+      "file": "V1.63__make_classroom_teacher_nullable.sql",
+      "statements": 1
+    },
+    {
+      "file": "V1.64__migrate_visibility.sql",
+      "statements": 6
+    },
+    {
+      "file": "V1.65__add_activities.sql",
+      "statements": 3
+    },
+    {
+      "file": "V1.66__add_support_chat.sql",
+      "statements": 6
+    },
+    {
+      "file": "V1.67__archive_and_drop_messages.sql",
+      "statements": 1
+    },
+    {
+      "file": "V1.68__add_support_message_image.sql",
+      "statements": 2
+    },
+    {
+      "file": "V1.69__fix_support_message_content_nullable.sql",
+      "statements": 1
+    },
+    {
+      "file": "V1.70__add_last_active_at.sql",
+      "statements": 1
+    },
+    {
+      "file": "V1.71__sync_classroom_teachers.sql",
+      "statements": 1
+    },
+    {
+      "file": "V1.72__widen_course_url_columns.sql",
+      "statements": 2
+    },
+    {
+      "file": "V1.73__add_teaching_assistant_role.sql",
+      "statements": 2
+    },
+    {
+      "file": "V1.74__create_content_resources_tables.sql",
+      "statements": 7
+    },
+    {
+      "file": "V1.75__enhance_notifications_table.sql",
+      "statements": 4
+    },
+    {
+      "file": "V1.76__add_exam_audio_url.sql",
+      "statements": 2
+    },
+    {
+      "file": "V1.77__backfill_exam_audio_from_resource.sql",
+      "statements": 1
+    },
+    {
+      "file": "V1.78__fix_http_to_https_local_file_urls.sql",
+      "statements": 5
+    },
+    {
+      "file": "V1.79__fix_student_exam_result_is_passed.sql",
+      "statements": 1
+    },
+    {
+      "file": "V1.80__add_resource_writing_submissions.sql",
+      "statements": 4
+    },
+    {
+      "file": "V1.81__fix_resource_submissions_fk_cascade.sql",
+      "statements": 2
+    },
+    {
+      "file": "V1.82__add_essay_ai_review_columns.sql",
+      "statements": 2
+    },
+    {
+      "file": "V1.83__add_ai_writing_assessment.sql",
+      "statements": 13
+    },
+    {
+      "file": "V1.84__add_question_group_audio_url.sql",
+      "statements": 1
+    },
+    {
+      "file": "V1.85__add_exam_audio_tracks.sql",
+      "statements": 1
+    },
+    {
+      "file": "V1.86__add_parent_to_class_folders.sql",
+      "statements": 4
+    },
+    {
+      "file": "V1.87__enroll_student1_all_classrooms.sql",
+      "statements": 1
+    },
+    {
+      "file": "V1.88__retry_enroll_student1_all_classrooms.sql",
+      "statements": 1
+    }
+  ],
+  "duplicates": [
+    {
+      "file": "V1.2__add_enrollment_progress.sql",
+      "statement": 1,
+      "code": "42P07",
+      "message": "relation \"enrollments\" already exists",
+      "sql": "CREATE TABLE enrollments (\n    id UUID PRIMARY KEY,\n    student_id UUID NOT NULL,\n    course_id UUID NOT NULL,\n    enrolled_at TIMESTAMP NOT NULL,\n    CONSTRAINT uk_enrollment_student_course UNIQUE (student_id, course_id),\n    CONSTRAINT fk_enrollment_student FOREIGN KEY (student_id) REFERENCES users(id),\n    CONSTRAINT fk_enrollment_course FOREIGN KEY (course_id) REFERENCES courses(id)\n)"
+    },
+    {
+      "file": "V1.2__add_enrollment_progress.sql",
+      "statement": 2,
+      "code": "42P07",
+      "message": "relation \"lesson_progress\" already exists",
+      "sql": "CREATE TABLE lesson_progress (\n    id UUID PRIMARY KEY,\n    student_id UUID NOT NULL,\n    lesson_id UUID NOT NULL,\n    is_completed BOOLEAN NOT NULL DEFAULT FALSE,\n    completed_at TIMESTAMP,\n    CONSTRAINT uk_lessonprogress_student_lesson UNIQUE (student_id, lesson_id),\n    CONSTRAINT fk_lessonprogress_student FOREIGN KEY (student_id) REFERENCES users(id),\n    CONSTRAINT fk_lessonprogress_lesson FOREIGN KEY (lesson_id) REFERENCES lessons(id)\n)"
+    },
+    {
+      "file": "V1.3__add_lesson_comments.sql",
+      "statement": 1,
+      "code": "42P07",
+      "message": "relation \"lesson_comments\" already exists",
+      "sql": "CREATE TABLE lesson_comments (\n    id UUID PRIMARY KEY,\n    content VARCHAR(1000) NOT NULL,\n    lesson_id UUID NOT NULL,\n    user_id UUID NOT NULL,\n    parent_id UUID,\n    created_at TIMESTAMP WITHOUT TIME ZONE DEFAULT CURRENT_TIMESTAMP,\n    CONSTRAINT fk_lesson_comments_lesson FOREIGN KEY (lesson_id) REFERENCES lessons (id) ON DELETE CASCADE,\n    CONSTRAINT fk_lesson_comments_user FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE,\n    CONSTRAINT fk_lesson_comments_parent FOREIGN KEY (parent_id) REFERENCES lesson_comments (id) ON DELETE CASCADE\n)"
+    },
+    {
+      "file": "V1.4__add_notifications.sql",
+      "statement": 1,
+      "code": "42P07",
+      "message": "relation \"notifications\" already exists",
+      "sql": "CREATE TABLE notifications (\n    id UUID PRIMARY KEY,\n    user_id UUID NOT NULL,\n    title VARCHAR(255) NOT NULL,\n    message VARCHAR(500) NOT NULL,\n    is_read BOOLEAN NOT NULL DEFAULT FALSE,\n    link VARCHAR(255),\n    created_at TIMESTAMP WITHOUT TIME ZONE DEFAULT CURRENT_TIMESTAMP,\n    CONSTRAINT fk_notifications_user FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE\n)"
+    },
+    {
+      "file": "V1.8__add_assignments_and_submissions.sql",
+      "statement": 1,
+      "code": "42P07",
+      "message": "relation \"assignments\" already exists",
+      "sql": "CREATE TABLE assignments (\n    id UUID PRIMARY KEY,\n    title VARCHAR(255) NOT NULL,\n    description TEXT,\n    attachment_url VARCHAR(255),\n    due_date TIMESTAMP,\n    max_score DOUBLE PRECISION NOT NULL DEFAULT 100.0,\n    course_id UUID NOT NULL,\n    teacher_id UUID NOT NULL,\n    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n    CONSTRAINT fk_assignments_course FOREIGN KEY (course_id) REFERENCES courses (id) ON DELETE CASCADE,\n    CONSTRAINT fk_assignments_teacher FOREIGN KEY (teacher_id) REFERENCES users (id) ON DELETE CASCADE\n)"
+    },
+    {
+      "file": "V1.8__add_assignments_and_submissions.sql",
+      "statement": 2,
+      "code": "42P07",
+      "message": "relation \"assignment_submissions\" already exists",
+      "sql": "CREATE TABLE assignment_submissions (\n    id UUID PRIMARY KEY,\n    assignment_id UUID NOT NULL,\n    student_id UUID NOT NULL,\n    content TEXT,\n    file_url VARCHAR(255),\n    score DOUBLE PRECISION,\n    feedback TEXT,\n    status VARCHAR(20) DEFAULT 'PENDING',\n    submitted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n    graded_at TIMESTAMP,\n    CONSTRAINT fk_submissions_assignment FOREIGN KEY (assignment_id) REFERENCES assignments (id) ON DELETE CASCADE,\n    CONSTRAINT fk_submissions_student FOREIGN KEY (student_id) REFERENCES users (id) ON DELETE CASCADE,\n    CONSTRAINT uq_assignment_student UNIQUE (assignment_id, student_id)\n)"
+    },
+    {
+      "file": "V1.10__add_classroom_tables.sql",
+      "statement": 1,
+      "code": "42P07",
+      "message": "relation \"classrooms\" already exists",
+      "sql": "CREATE TABLE classrooms (\n    id UUID PRIMARY KEY,\n    name VARCHAR(255) NOT NULL,\n    section VARCHAR(255),\n    subject VARCHAR(255),\n    invite_code VARCHAR(10) UNIQUE NOT NULL,\n    teacher_id UUID NOT NULL,\n    status VARCHAR(20) DEFAULT 'ACTIVE',\n    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n    CONSTRAINT fk_classrooms_teacher FOREIGN KEY (teacher_id) REFERENCES users (id) ON DELETE CASCADE\n)"
+    },
+    {
+      "file": "V1.10__add_classroom_tables.sql",
+      "statement": 2,
+      "code": "42P07",
+      "message": "relation \"class_members\" already exists",
+      "sql": "CREATE TABLE class_members (\n    id UUID PRIMARY KEY,\n    classroom_id UUID NOT NULL,\n    user_id UUID NOT NULL,\n    role VARCHAR(20) DEFAULT 'STUDENT',\n    joined_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n    CONSTRAINT fk_class_members_classroom FOREIGN KEY (classroom_id) REFERENCES classrooms (id) ON DELETE CASCADE,\n    CONSTRAINT fk_class_members_user FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE,\n    CONSTRAINT uq_classroom_user UNIQUE (classroom_id, user_id)\n)"
+    },
+    {
+      "file": "V1.10__add_classroom_tables.sql",
+      "statement": 3,
+      "code": "42P07",
+      "message": "relation \"class_posts\" already exists",
+      "sql": "CREATE TABLE class_posts (\n    id UUID PRIMARY KEY,\n    classroom_id UUID NOT NULL,\n    author_id UUID NOT NULL,\n    type VARCHAR(30) DEFAULT 'ANNOUNCEMENT',\n    content TEXT NOT NULL,\n    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n    CONSTRAINT fk_class_posts_classroom FOREIGN KEY (classroom_id) REFERENCES classrooms (id) ON DELETE CASCADE,\n    CONSTRAINT fk_class_posts_author FOREIGN KEY (author_id) REFERENCES users (id) ON DELETE CASCADE\n)"
+    },
+    {
+      "file": "V1.11__refactor_assignments_and_exams.sql",
+      "statement": 2,
+      "code": "42701",
+      "message": "column \"classroom_id\" of relation \"assignments\" already exists",
+      "sql": "ALTER TABLE assignments ADD COLUMN classroom_id UUID REFERENCES classrooms(id)"
+    },
+    {
+      "file": "V1.11__refactor_assignments_and_exams.sql",
+      "statement": 3,
+      "code": "42P07",
+      "message": "relation \"class_exams\" already exists",
+      "sql": "CREATE TABLE class_exams (\n    id UUID PRIMARY KEY,\n    classroom_id UUID NOT NULL REFERENCES classrooms(id) ON DELETE CASCADE,\n    exam_id UUID NOT NULL REFERENCES exams(id) ON DELETE CASCADE,\n    open_time TIMESTAMP,\n    close_time TIMESTAMP,\n    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP\n)"
+    },
+    {
+      "file": "V1.12__add_attendance_tables.sql",
+      "statement": 1,
+      "code": "42P07",
+      "message": "relation \"attendances\" already exists",
+      "sql": "CREATE TABLE attendances (\n    id UUID PRIMARY KEY,\n    classroom_id UUID NOT NULL,\n    student_id UUID NOT NULL,\n    attendance_date DATE NOT NULL,\n    status VARCHAR(20) NOT NULL,\n    recorded_by UUID NOT NULL,\n    created_at TIMESTAMP WITHOUT TIME ZONE DEFAULT CURRENT_TIMESTAMP,\n    CONSTRAINT fk_attendance_classroom FOREIGN KEY (classroom_id) REFERENCES classrooms(id) ON DELETE CASCADE,\n    CONSTRAINT fk_attendance_student FOREIGN KEY (student_id) REFERENCES users(id) ON DELETE CASCADE,\n    CONSTRAINT fk_attendance_recorded_by FOREIGN KEY (recorded_by) REFERENCES users(id),\n    CONSTRAINT uq_attendance UNIQUE (classroom_id, student_id, attendance_date)\n)"
+    },
+    {
+      "file": "V1.18__add_audit_logs.sql",
+      "statement": 1,
+      "code": "42P07",
+      "message": "relation \"audit_logs\" already exists",
+      "sql": "CREATE TABLE audit_logs (\n    id UUID PRIMARY KEY,\n    user_id UUID,\n    action VARCHAR(50) NOT NULL,\n    entity_name VARCHAR(100) NOT NULL,\n    entity_id VARCHAR(100) NOT NULL,\n    previous_state JSONB,\n    new_state JSONB,\n    ip_address VARCHAR(45),\n    created_at TIMESTAMP WITHOUT TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP,\n    CONSTRAINT fk_audit_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE SET NULL\n)"
+    },
+    {
+      "file": "V1.20__add_course_discussions.sql",
+      "statement": 1,
+      "code": "42P07",
+      "message": "relation \"discussions\" already exists",
+      "sql": "CREATE TABLE discussions (\n    id UUID PRIMARY KEY,\n    course_id UUID NOT NULL,\n    author_id UUID NOT NULL,\n    title VARCHAR(255) NOT NULL,\n    content TEXT NOT NULL,\n    is_pinned BOOLEAN NOT NULL DEFAULT FALSE,\n    is_resolved BOOLEAN NOT NULL DEFAULT FALSE,\n    created_at TIMESTAMP WITHOUT TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP,\n    updated_at TIMESTAMP WITHOUT TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP,\n    CONSTRAINT fk_discussion_course FOREIGN KEY (course_id) REFERENCES courses(id) ON DELETE CASCADE,\n    CONSTRAINT fk_discussion_author FOREIGN KEY (author_id) REFERENCES users(id) ON DELETE CASCADE\n)"
+    },
+    {
+      "file": "V1.20__add_course_discussions.sql",
+      "statement": 2,
+      "code": "42P07",
+      "message": "relation \"discussion_replies\" already exists",
+      "sql": "CREATE TABLE discussion_replies (\n    id UUID PRIMARY KEY,\n    discussion_id UUID NOT NULL,\n    author_id UUID NOT NULL,\n    content TEXT NOT NULL,\n    is_accepted_answer BOOLEAN NOT NULL DEFAULT FALSE,\n    created_at TIMESTAMP WITHOUT TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP,\n    updated_at TIMESTAMP WITHOUT TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP,\n    CONSTRAINT fk_reply_discussion FOREIGN KEY (discussion_id) REFERENCES discussions(id) ON DELETE CASCADE,\n    CONSTRAINT fk_reply_author FOREIGN KEY (author_id) REFERENCES users(id) ON DELETE CASCADE\n)"
+    },
+    {
+      "file": "V1.21__add_calendar.sql",
+      "statement": 1,
+      "code": "42P07",
+      "message": "relation \"calendar_events\" already exists",
+      "sql": "CREATE TABLE calendar_events (\n    id UUID PRIMARY KEY,\n    course_id UUID,\n    title VARCHAR(255) NOT NULL,\n    description TEXT,\n    event_type VARCHAR(50) NOT NULL,\n    start_time TIMESTAMP WITHOUT TIME ZONE NOT NULL,\n    end_time TIMESTAMP WITHOUT TIME ZONE,\n    meeting_link VARCHAR(255),\n    created_at TIMESTAMP WITHOUT TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP,\n    updated_at TIMESTAMP WITHOUT TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP,\n    CONSTRAINT fk_event_course FOREIGN KEY (course_id) REFERENCES courses(id) ON DELETE CASCADE\n)"
+    },
+    {
+      "file": "V1.25__add_class_post_attachments.sql",
+      "statement": 1,
+      "code": "42701",
+      "message": "column \"attachments\" of relation \"class_posts\" already exists",
+      "sql": "ALTER TABLE class_posts ADD COLUMN attachments jsonb"
+    },
+    {
+      "file": "V1.26__add_class_post_likes.sql",
+      "statement": 1,
+      "code": "42P07",
+      "message": "relation \"class_post_likes\" already exists",
+      "sql": "CREATE TABLE class_post_likes (\n    id UUID PRIMARY KEY,\n    post_id UUID NOT NULL REFERENCES class_posts(id) ON DELETE CASCADE,\n    user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,\n    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n    CONSTRAINT uq_post_user_like UNIQUE (post_id, user_id)\n)"
+    },
+    {
+      "file": "V1.27__enhance_comments.sql",
+      "statement": 1,
+      "code": "42701",
+      "message": "column \"parent_id\" of relation \"class_post_comments\" already exists",
+      "sql": "ALTER TABLE class_post_comments ADD COLUMN parent_id UUID REFERENCES class_post_comments(id) ON DELETE CASCADE"
+    },
+    {
+      "file": "V1.27__enhance_comments.sql",
+      "statement": 2,
+      "code": "42P07",
+      "message": "relation \"class_post_comment_likes\" already exists",
+      "sql": "CREATE TABLE class_post_comment_likes (\n    id UUID PRIMARY KEY,\n    comment_id UUID NOT NULL REFERENCES class_post_comments(id) ON DELETE CASCADE,\n    user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,\n    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n    CONSTRAINT uq_comment_user_like UNIQUE (comment_id, user_id)\n)"
+    },
+    {
+      "file": "V1.28__refactor_attendance_to_week_session.sql",
+      "statement": 2,
+      "code": "42701",
+      "message": "column \"week_number\" of relation \"attendances\" already exists",
+      "sql": "ALTER TABLE attendances ADD COLUMN week_number INT NOT NULL DEFAULT 1"
+    },
+    {
+      "file": "V1.28__refactor_attendance_to_week_session.sql",
+      "statement": 3,
+      "code": "42701",
+      "message": "column \"session_number\" of relation \"attendances\" already exists",
+      "sql": "ALTER TABLE attendances ADD COLUMN session_number INT NOT NULL DEFAULT 1"
+    },
+    {
+      "file": "V1.29__add_student_profiles.sql",
+      "statement": 1,
+      "code": "42P07",
+      "message": "relation \"student_profiles\" already exists",
+      "sql": "CREATE TABLE student_profiles (\n    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),\n    student_code VARCHAR(20) NOT NULL UNIQUE,\n    full_name VARCHAR(255) NOT NULL,\n    date_of_birth DATE,\n    phone VARCHAR(20),\n    facility VARCHAR(100),\n    user_id UUID REFERENCES users(id) ON DELETE SET NULL,\n    status VARCHAR(20) NOT NULL DEFAULT 'PENDING',\n    created_at TIMESTAMP DEFAULT NOW(),\n    updated_at TIMESTAMP DEFAULT NOW()\n)"
+    },
+    {
+      "file": "V1.29__add_student_profiles.sql",
+      "statement": 2,
+      "code": "42P07",
+      "message": "relation \"student_class_enrollments\" already exists",
+      "sql": "CREATE TABLE student_class_enrollments (\n    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),\n    student_profile_id UUID NOT NULL REFERENCES student_profiles(id) ON DELETE CASCADE,\n    classroom_id UUID NOT NULL REFERENCES classrooms(id) ON DELETE CASCADE,\n    created_at TIMESTAMP DEFAULT NOW(),\n    UNIQUE(student_profile_id, classroom_id)\n)"
+    },
+    {
+      "file": "V1.34__add_exam_classifications_and_favorites.sql",
+      "statement": 1,
+      "code": "42701",
+      "message": "column \"subject\" of relation \"exams\" already exists",
+      "sql": "ALTER TABLE exams\n    ADD COLUMN subject VARCHAR(255),\n    ADD COLUMN grade VARCHAR(255)"
+    },
+    {
+      "file": "V1.34__add_exam_classifications_and_favorites.sql",
+      "statement": 2,
+      "code": "42P07",
+      "message": "relation \"user_favorite_exams\" already exists",
+      "sql": "CREATE TABLE user_favorite_exams (\n    id UUID PRIMARY KEY,\n    user_id UUID NOT NULL,\n    exam_id UUID NOT NULL,\n    created_at TIMESTAMP WITHOUT TIME ZONE DEFAULT CURRENT_TIMESTAMP,\n    CONSTRAINT fk_favorite_exam_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,\n    CONSTRAINT fk_favorite_exam_exam FOREIGN KEY (exam_id) REFERENCES exams(id) ON DELETE CASCADE,\n    CONSTRAINT uq_user_favorite_exam UNIQUE (user_id, exam_id)\n)"
+    },
+    {
+      "file": "V1.35__add_flashcard_deck_stats.sql",
+      "statement": 1,
+      "code": "42701",
+      "message": "column \"views_count\" of relation \"flashcard_decks\" already exists",
+      "sql": "ALTER TABLE flashcard_decks\nADD COLUMN views_count INTEGER DEFAULT 0,\nADD COLUMN saves_count INTEGER DEFAULT 0,\nADD COLUMN shares_count INTEGER DEFAULT 0"
+    },
+    {
+      "file": "V1.37__add_flashcard_deck_ratings.sql",
+      "statement": 1,
+      "code": "42701",
+      "message": "column \"average_rating\" of relation \"flashcard_decks\" already exists",
+      "sql": "ALTER TABLE flashcard_decks ADD COLUMN average_rating DECIMAL(3,2) DEFAULT 0.00"
+    },
+    {
+      "file": "V1.37__add_flashcard_deck_ratings.sql",
+      "statement": 2,
+      "code": "42701",
+      "message": "column \"rating_count\" of relation \"flashcard_decks\" already exists",
+      "sql": "ALTER TABLE flashcard_decks ADD COLUMN rating_count INT DEFAULT 0"
+    },
+    {
+      "file": "V1.37__add_flashcard_deck_ratings.sql",
+      "statement": 3,
+      "code": "42P07",
+      "message": "relation \"deck_ratings\" already exists",
+      "sql": "CREATE TABLE deck_ratings (\n    id UUID PRIMARY KEY,\n    deck_id UUID NOT NULL REFERENCES flashcard_decks(id) ON DELETE CASCADE,\n    student_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,\n    rating INT NOT NULL CHECK (rating BETWEEN 1 AND 5),\n    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n    UNIQUE(deck_id, student_id)\n)"
+    },
+    {
+      "file": "V1.38__add_deck_type.sql",
+      "statement": 1,
+      "code": "42701",
+      "message": "column \"deck_type\" of relation \"flashcard_decks\" already exists",
+      "sql": "ALTER TABLE flashcard_decks ADD COLUMN deck_type VARCHAR(20) DEFAULT 'FLASHCARD'"
+    },
+    {
+      "file": "V1.40__add_text_response_to_draft_answers.sql",
+      "statement": 1,
+      "code": "42701",
+      "message": "column \"text_response\" of relation \"draft_answers\" already exists",
+      "sql": "ALTER TABLE draft_answers ADD COLUMN text_response TEXT"
+    },
+    {
+      "file": "V1.42__add_exam_type_and_pdf_url_to_exams.sql",
+      "statement": 1,
+      "code": "42701",
+      "message": "column \"exam_type\" of relation \"exams\" already exists",
+      "sql": "ALTER TABLE exams ADD COLUMN exam_type VARCHAR(20) DEFAULT 'DETAILED'"
+    },
+    {
+      "file": "V1.42__add_exam_type_and_pdf_url_to_exams.sql",
+      "statement": 2,
+      "code": "42701",
+      "message": "column \"pdf_url\" of relation \"exams\" already exists",
+      "sql": "ALTER TABLE exams ADD COLUMN pdf_url VARCHAR(255)"
+    },
+    {
+      "file": "V1.45__add_version_to_student_exam_results.sql",
+      "statement": 1,
+      "code": "42701",
+      "message": "column \"version\" of relation \"student_exam_results\" already exists",
+      "sql": "ALTER TABLE student_exam_results ADD COLUMN version BIGINT DEFAULT 0"
+    },
+    {
+      "file": "V1.62__add_student_linking_constraints.sql",
+      "statement": 1,
+      "code": "42701",
+      "message": "column \"pending_student_code\" of relation \"users\" already exists",
+      "sql": "ALTER TABLE users ADD COLUMN pending_student_code VARCHAR(20)"
+    },
+    {
+      "file": "V1.65__add_activities.sql",
+      "statement": 1,
+      "code": "42P07",
+      "message": "relation \"activities\" already exists",
+      "sql": "CREATE TABLE activities (\n    id UUID PRIMARY KEY,\n    title VARCHAR(255) NOT NULL,\n    slug VARCHAR(280) NOT NULL UNIQUE,\n    summary TEXT,\n    content TEXT,\n    cover_image_url VARCHAR(1000),\n    images jsonb,\n    category VARCHAR(30) NOT NULL DEFAULT 'NEWS',\n    status VARCHAR(20) NOT NULL DEFAULT 'DRAFT',\n    pinned BOOLEAN NOT NULL DEFAULT FALSE,\n    author_id UUID NOT NULL,\n    reviewed_by UUID,\n    review_note TEXT,\n    published_at TIMESTAMP,\n    view_count BIGINT NOT NULL DEFAULT 0,\n    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n    CONSTRAINT fk_activities_author FOREIGN KEY (author_id) REFERENCES users (id) ON DELETE CASCADE,\n    CONSTRAINT fk_activities_reviewer FOREIGN KEY (reviewed_by) REFERENCES users (id) ON DELETE SET NULL\n)"
+    },
+    {
+      "file": "V1.80__add_resource_writing_submissions.sql",
+      "statement": 1,
+      "code": "42701",
+      "message": "column \"writing_prompt\" of relation \"content_resources\" already exists",
+      "sql": "ALTER TABLE content_resources\n    ADD COLUMN writing_prompt TEXT"
+    },
+    {
+      "file": "V1.80__add_resource_writing_submissions.sql",
+      "statement": 2,
+      "code": "42P07",
+      "message": "relation \"resource_submissions\" already exists",
+      "sql": "CREATE TABLE resource_submissions (\n    id UUID PRIMARY KEY,\n    resource_id UUID NOT NULL REFERENCES content_resources(id) ON DELETE CASCADE,\n    student_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,\n    content TEXT,\n    score DOUBLE PRECISION,\n    feedback TEXT,\n    status VARCHAR(20) NOT NULL DEFAULT 'PENDING',\n    submitted_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,\n    graded_at TIMESTAMP,\n    graded_by UUID REFERENCES users(id) ON DELETE SET NULL,\n    CONSTRAINT uk_resource_submission_student UNIQUE (resource_id, student_id)\n)"
+    }
+  ],
+  "errors": [],
+  "repairs": [
+    {
+      "file": "V1.51__fix_user_activity_log_fk.sql",
+      "sha256": "3c62a624ad9c4b4e528e6774f53f012de19a05b83ea1533ef0a45ed3183e921a",
+      "reason": "Bổ sung dollar-quote bị thiếu quanh thân DO; không sửa nguồn Java."
+    },
+    {
+      "file": "V1.53__cascade_delete_users_reliable.sql",
+      "sha256": "18f3c374b9df5cf285ca26a4a6bf2a6067689c2b83c0b5c1324e5b459dafbc99",
+      "reason": "Tra cột FK trước khi DROP constraint để tránh EXECUTE NULL; giữ ON DELETE CASCADE."
+    }
+  ],
+  "exclusions": [
+    {
+      "file": "V1.74__create_content_resources_tables.sql",
+      "statement": 7,
+      "reason": "Bỏ học liệu demo phụ thuộc tài khoản cũ; cài mới chỉ seed Admin theo PLAN §3."
+    }
+  ],
+  "migrationOnlyColumns": [
+    "exams.access_password",
+    "exams.is_public",
+    "messages_archived.id",
+    "messages_archived.sender_id",
+    "messages_archived.receiver_id",
+    "messages_archived.content",
+    "messages_archived.is_read",
+    "messages_archived.is_deleted_by_sender",
+    "messages_archived.is_deleted_by_receiver",
+    "messages_archived.sent_at"
+  ],
+  "missingEntityColumns": []
+}

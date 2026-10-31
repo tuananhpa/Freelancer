@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Liên hệ — BM Global Spirits</title>
+  <meta name="description" content="Hỏi giá và đặt hàng rượu nhập khẩu qua Zalo, Messenger, Hotline hoặc form liên hệ của BM Global Spirits.">
+  <meta name="theme-color" content="#0e0b09">
+  <link rel="icon" href="assets/img/brand/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/img/brand/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Cormorant+Garamond:wght@500;600&display=swap&subset=vietnamese">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script src="assets/js/data.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body data-page="contact">
+<main id="main">
+  <header class="page-head">
+    <span class="page-head__beam" aria-hidden="true"></span>
+    <div class="wrap" data-reveal-group>
+      <nav class="crumbs" aria-label="Đường dẫn" data-reveal><a href="index.html">Trang chủ</a><span aria-hidden="true">/</span><span>Liên hệ</span></nav>
+      <div class="page-head__row">
+        <div>
+          <h1 data-reveal>Liên hệ &amp; hỏi giá</h1>
+          <p class="lead soft" data-reveal>Nhắn tên chai, số lượng và nơi giao — chúng tôi báo giá theo lô hàng hiện tại qua kênh bạn chọn.</p>
+        </div>
+        <figure class="shelf shelf--sm" id="contactShelf" aria-label="Một số chai trong danh mục" data-reveal></figure>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap contact-grid">
+    <section aria-labelledby="chTitle" data-reveal-group>
+      <h2 id="chTitle" class="h3" style="margin-bottom:24px" data-reveal>Kênh trả lời nhanh nhất</h2>
+      <div class="contact-list">
+        <a class="contact-item" href="#" data-site="zalo" target="_blank" rel="noopener" data-reveal><svg class="icon" aria-hidden="true"><use href="#i-zalo"/></svg><div><b>Zalo</b><span>Gửi ảnh chai bạn đang tìm</span></div></a>
+        <a class="contact-item" href="#" data-site="messenger" target="_blank" rel="noopener" data-reveal><svg class="icon" aria-hidden="true"><use href="#i-messenger"/></svg><div><b>Messenger</b><span>Nhắn qua trang Facebook</span></div></a>
+        <a class="contact-item" href="#" data-site="hotline" data-reveal><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><div><b class="num" data-site-text="hotline"></b><span>Hotline — gọi trong giờ làm việc</span></div></a>
+        <a class="contact-item" href="#" data-site="email" data-reveal><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg><div><b data-site-text="email"></b><span>Hồ sơ năng lực, báo giá số lượng lớn</span></div></a>
+      </div>
+      <div class="contact-info" data-reveal>
+        <div><h3>Showroom</h3><p data-site-text="address"></p></div>
+        <div><h3>Giờ làm việc</h3><p id="hoursText"></p></div>
+      </div>
+      <p class="age-note" style="margin-top:32px" data-reveal>Chúng tôi không bán rượu cho người dưới 18 tuổi.</p>
+    </section>
+
+    <section class="contact-form" aria-labelledby="formTitle" data-reveal-group>
+      <h2 id="formTitle" data-reveal>Gửi yêu cầu</h2>
+      <p data-reveal>Điền vài dòng, chúng tôi gọi lại hoặc nhắn Zalo cho bạn.</p>
+      <form class="form form--2" data-fake novalidate data-reveal>
+        <div class="field"><input id="fName" name="name" placeholder=" " required autocomplete="name"><label for="fName">Họ và tên</label></div>
+        <div class="field"><input id="fPhone" name="phone" type="tel" placeholder=" " required autocomplete="tel" inputmode="tel"><label for="fPhone">Số điện thoại</label></div>
+        <div class="field full"><input id="fMail" name="email" type="email" placeholder=" " autocomplete="email"><label for="fMail">Email (không bắt buộc)</label></div>
+        <fieldset class="full who">
+          <legend>Bạn là</legend>
+          <label><input type="radio" name="who" value="ca-nhan" checked><span>Cá nhân</span></label>
+          <label><input type="radio" name="who" value="nha-hang"><span>Nhà hàng, quầy bar</span></label>
+          <label><input type="radio" name="who" value="dai-ly"><span>Đại lý, cửa hàng</span></label>
+          <label><input type="radio" name="who" value="qua-tang"><span>Quà tặng doanh nghiệp</span></label>
+        </fieldset>
+        <div class="field full"><input id="fWant" name="want" placeholder=" " list="productList"><label for="fWant">Chai bạn quan tâm</label><datalist id="productList"></datalist></div>
+        <div class="field full"><textarea id="fMsg" name="msg" placeholder=" " rows="4"></textarea><label for="fMsg">Số lượng, thời gian, nơi giao…</label></div>
+        <button class="btn btn--block full" type="submit">Gửi yêu cầu báo giá</button>
+        <div class="form__ok full" role="status"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><div><b>Cảm ơn bạn, chúng tôi đã nhận yêu cầu.</b><br>BM Global Spirits sẽ liên hệ lại sớm. (Bản mockup — form chưa gửi dữ liệu.)</div></div>
+      </form>
+    </section>
+  </div>
+
+  <section class="section on-paper" aria-labelledby="faqTitle">
+    <div class="wrap values">
+      <div class="values__head" data-reveal-group>
+        <h2 id="faqTitle" data-reveal>Câu hỏi thường gặp</h2>
+        <p class="soft" style="margin-top:16px;max-width:34ch" data-reveal>Câu trả lời đang chờ BM xác nhận trước khi đưa lên website chính thức.</p>
+      </div>
+      <div class="values__list faq" data-reveal-group>
+        <details class="value" data-reveal open><summary><h3>Vì sao website không ghi giá?</h3></summary><p>Giá rượu nhập khẩu thay đổi theo lô hàng và tỉ giá. Để bạn nhận đúng giá tại thời điểm mua, chúng tôi báo giá trực tiếp qua Zalo, Messenger hoặc điện thoại.</p></details>
+        <details class="value" data-reveal><summary><h3>Có bán lẻ từng chai không?</h3></summary><p>Có — bán lẻ từng chai và bán theo thùng. Quy cách thùng ghi trên trang từng sản phẩm. <span class="tbc">[[CẦN XÁC NHẬN]]</span></p></details>
+        <details class="value" data-reveal><summary><h3>Giao hàng ở đâu, mất bao lâu?</h3></summary><p><span class="tbc">[[CẦN XÁC NHẬN: khu vực giao, thời gian, phí]]</span></p></details>
+        <details class="value" data-reveal><summary><h3>Có xuất hoá đơn VAT không?</h3></summary><p><span class="tbc">[[CẦN XÁC NHẬN]]</span></p></details>
+      </div>
+    </div>
+  </section>
+</main>
+</body>
+</html>

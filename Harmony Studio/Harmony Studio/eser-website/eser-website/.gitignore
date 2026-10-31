@@ -1,0 +1,14 @@
+node_modules/
+.cloudflare/
+cf-*.log
+cf-*.tmp
+.demo-admin-password
+seed.tmp.json
+# dữ liệu chạy thật — không commit
+data/content.json
+data/inquiries.json
+data/auth.json
+data/backups/
+public/uploads/*
+!public/uploads/.gitkeep
+.DS_Store

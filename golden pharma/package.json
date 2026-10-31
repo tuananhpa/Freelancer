@@ -1,0 +1,11 @@
+{
+  "name": "golden-pharma-ecommerce",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Golden Pharma — Website Thương Mại Điện Tử Thuốc Thú Y & Chế Phẩm Sinh Học (Công Ty Cổ Phần Quốc Tế Thú Y Vàng)",
+  "scripts": {
+    "dev": "npx --yes serve -l 4173 .",
+    "build": "echo \"Static build ready at root directory (index.html, san-pham.html, chi-tiet-san-pham.html, thanh-toan.html, xac-nhan-don.html, gioi-thieu.html, lien-he.html, assets/)\"",
+    "preview": "npx --yes serve -l 4173 ."
+  }
+}

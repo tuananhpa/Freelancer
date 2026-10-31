@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="vi" class="js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>HARMONY.STUDIO — Thiết kế thời trang cho xưởng & may đo riêng</title>
+  <link rel="preload" href="assets/fonts/prata-normal-vietnamese.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/prata-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/intertight-normal-vietnamese.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/intertight-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body data-page="home">
+  <!-- Mở đầu kiểu D&G Alta Moda: chỉ chạy lần đầu mỗi phiên, bấm/cuộn là bỏ qua -->
+  <div class="intro" id="intro" aria-hidden="true">
+    <div class="intro__word">HARMONY.STUDIO</div>
+    <div class="intro__hint label">Chạm hoặc cuộn để vào</div>
+  </div>
+
+  <main class="page-main" id="main">
+    <!-- 1. HERO VIDEO TOÀN MÀN HÌNH + CO KHUNG KHI CUỘN -->
+    <section class="hero" id="hero" aria-label="Mở đầu">
+      <div class="hero__pin">
+        <div class="hero__behind" aria-hidden="true"><span class="mega">HARMONY</span></div>
+        <div class="hero__frame">
+          <img class="hero__poster" id="heroPoster" src="assets/video/hero-poster.webp" alt="" width="1600" height="900">
+          <video class="hero__video" id="heroVideo" autoplay muted loop playsinline preload="auto" poster="assets/video/hero-poster.webp"></video>
+          <div class="hero__shade-top"></div>
+          <div class="hero__shade"></div>
+          <div class="hero__ui">
+            <div class="hero__season">
+              <span class="dot"></span>
+              <span class="label">Bộ sưu tập Thu Đông — Đường may thủ công, dáng đứng chuẩn</span>
+            </div>
+            <p class="hero__tag">Nhà mốt thiết kế cho xưởng và may đo theo số đo riêng.</p>
+            <div class="hero__word">
+              <h1 class="sr-only">HARMONY.STUDIO — Bộ sưu tập Thu Đông, thiết kế cho xưởng và may đo riêng</h1>
+              <span class="mega" aria-hidden="true">HARMONY</span>
+              <span class="mega-sub" aria-hidden="true">STUDIO</span>
+            </div>
+            <div class="hero__scroll"><span class="label">Cuộn để khám phá</span><i></i></div>
+            <div class="hero__ctrl">
+              <button type="button" id="heroSource" title="Đổi nguồn video"><span>Lookbook chuyển động</span></button>
+              <button type="button" id="heroPlay"><svg viewBox="0 0 10 10"><rect x="1" y="1" width="3" height="8" fill="currentColor"/><rect x="6" y="1" width="3" height="8" fill="currentColor"/></svg><span>Tạm dừng</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. TUYÊN NGÔN THƯƠNG HIỆU (sáng dần theo cuộn + đường chỉ khâu) -->
+    <section class="manifesto wrap" aria-labelledby="maniHead">
+      <svg class="stitch" viewBox="0 0 1440 160" aria-hidden="true">
+        <path d="M0 110 C 360 10, 720 150, 1080 40 C 1240 -5, 1360 80, 1440 60"/>
+      </svg>
+      <div class="grid">
+        <div class="manifesto__lbl">
+          <h2 class="label" id="maniHead">Tuyên ngôn</h2>
+          <p class="small" style="color:var(--ink-soft);margin-top:10px">Bộ sưu tập Thu Đông – Đường may thủ công, dáng đứng chuẩn.</p>
+        </div>
+        <p class="manifesto__txt" id="manifestoTxt">
+          Từ bản rập cho xưởng đến chiếc đầm may theo số đo riêng, Harmony giữ trọn độ đứng của vai, nét chiết ở eo và nhịp rủ của tà vải khi người mặc bước đi.
+        </p>
+        <div class="manifesto__meta" data-reveal>
+          <a class="btn" href="bo-suu-tap.html"><span>Xem 4 bộ sưu tập (18 mẫu)</span><svg class="arr" viewBox="0 0 24 10" fill="none"><path d="M0 5H22M17 1L22 5L17 9" stroke="currentColor" stroke-width="1.3"/></svg></a>
+          <a class="link-u" href="dich-vu.html#xuong"><span>Thuê thiết kế cho xưởng</span><svg class="arr" viewBox="0 0 24 10" fill="none"><path d="M0 5H22M17 1L22 5L17 9" stroke="currentColor" stroke-width="1.3"/></svg></a>
+          <a class="link-u" href="dich-vu.html#may-do"><span>Đặt may theo số đo</span><svg class="arr" viewBox="0 0 24 10" fill="none"><path d="M0 5H22M17 1L22 5L17 9" stroke="currentColor" stroke-width="1.3"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. BỘ SƯU TẬP NỔI BẬT (4 chương chồng toàn màn hình + người mẫu tách nền chồng lên chữ lớn) -->
+    <section aria-labelledby="collHead">
+      <div class="wrap sec-head" data-reveal>
+        <div>
+          <span class="label">04 chương · 18 mẫu thiết kế</span>
+          <h2 id="collHead">Các bộ sưu tập nổi bật</h2>
+        </div>
+        <a class="link-u" href="bo-suu-tap.html"><span>Xem tất cả bộ sưu tập</span><svg class="arr" viewBox="0 0 24 10" fill="none"><path d="M0 5H22M17 1L22 5L17 9" stroke="currentColor" stroke-width="1.3"/></svg></a>
+      </div>
+      <div class="chapters" id="chapters"></div>
+    </section>
+
+    <!-- Marquee chuyển nhịp sang sàn diễn tối -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track" id="marqueeTrack">
+        <div class="marquee__item"><span>HARMONY.STUDIO</span><span class="d"></span><span class="o">RUNWAY</span><span class="d"></span><span>LOOK 01—18</span><span class="d"></span><span class="o">ATELIER</span><span class="d"></span></div>
+        <div class="marquee__item"><span>HARMONY.STUDIO</span><span class="d"></span><span class="o">RUNWAY</span><span class="d"></span><span>LOOK 01—18</span><span class="d"></span><span class="o">ATELIER</span><span class="d"></span></div>
+      </div>
+    </div>
+
+    <!-- 4. RUNWAY EXPERIENCE (xếp hàng theo chiều sâu, cuộn để đẩy từng look lên trước) -->
+    <section class="runway" id="runway" aria-labelledby="rwHead">
+      <div class="runway__stage">
+        <div class="runway__lights"></div>
+        <div class="runway__floor"></div>
+        <div class="runway__title">
+          <span class="label">Sàn diễn trực tuyến · Cuộn hoặc chọn chấm màu</span>
+          <h2 id="rwHead">Mười mẫu bước ra từ phòng mẫu</h2>
+        </div>
+        <div class="runway__line" id="rwLine"></div>
+        <div class="runway__no">
+          <div class="mega" id="rwNo">LOOK 04 <small>01 / 10</small></div>
+          <div class="runway__name" id="rwName">Đầm đỏ tay bồng đuôi cá</div>
+          <div class="runway__niche" id="rwNiche">Đầm dự tiệc — Màu: Đỏ son</div>
+          <div class="runway__btns">
+            <a class="btn btn--accent" id="rwOrder" href="lien-he.html?nhu-cau=dat-may&look=04"><span>Đặt may mẫu này</span><svg class="arr" viewBox="0 0 24 10" fill="none"><path d="M0 5H22M17 1L22 5L17 9" stroke="currentColor" stroke-width="1.3"/></svg></a>
+            <button class="btn btn--ghost" type="button" id="rwQuick" data-open-look="04"><span>Xem chi tiết</span></button>
+          </div>
+        </div>
+        <aside class="runway__items" aria-label="Chi tiết trang phục đang xem">
+          <h4>Chi tiết trên mẫu</h4>
+          <ul id="rwPieces"></ul>
+          <div class="runway__swatch"><b id="rwSwDot"></b><span id="rwSwTxt">Đỏ son</span></div>
+        </aside>
+        <div class="runway__dots" id="rwDots" role="tablist" aria-label="Chọn look trên sàn diễn"></div>
+      </div>
+    </section>
+
+    <!-- 5. CÁC NGÁCH THỜI TRANG HARMONY KINH DOANH -->
+    <section class="niches wrap" aria-labelledby="nicheHead">
+      <div class="sec-head" data-reveal>
+        <div>
+          <span class="label">04 dòng sản phẩm chủ lực</span>
+          <h2 id="nicheHead">Các ngách thời trang Harmony kinh doanh</h2>
+        </div>
+        <p class="lead">Di chuột để xem ảnh trên máy tính, hoặc chạm vào từng dòng trên điện thoại.</p>
+      </div>
+      <div class="niche-list" id="nicheList" data-stagger></div>
+      <div class="niche-float" id="nicheFloat" aria-hidden="true"></div>
+    </section>
+
+    <!-- 6. DỊCH VỤ: THIẾT KẾ CHO XƯỞNG (B2B) & MAY ĐO RIÊNG -->
+    <section class="services" aria-label="Dịch vụ của Harmony Studio">
+      <article class="svc svc--dark">
+        <div class="svc__lbl label"><span>Dành cho xưởng may · B2B</span><span>01</span></div>
+        <figure class="svc__figure"><img src="assets/img/photo/look-00-800.webp" alt="Đầm đen cổ sơ mi tay trắng" width="600" height="800" loading="lazy"></figure>
+        <div class="svc__body" data-reveal>
+          <h2>Thuê thiết kế theo mùa cho xưởng</h2>
+          <p class="lead">Harmony nhận phát triển mẫu lẻ hoặc trọn bộ sưu tập theo ngách hàng của xưởng: đầm công sở, đầm dự tiệc, set phối và áo dài.</p>
+          <ul>
+            <li><i>01</i><span>Thiết kế đúng tệp khách và khung giá nguyên liệu của xưởng</span></li>
+            <li><i>02</i><span>Dựng phom, may mẫu đầu và tinh chỉnh đường may dễ lên chuyền</span></li>
+            <li><i>03</i><span>Bàn giao mẫu gốc theo thỏa thuận bảo mật <b class="tbc">[[CẦN XÁC NHẬN]]</b></span></li>
+          </ul>
+        </div>
+        <div>
+          <a class="btn btn--accent" href="dich-vu.html#xuong"><span>Thuê thiết kế</span><svg class="arr" viewBox="0 0 24 10" fill="none"><path d="M0 5H22M17 1L22 5L17 9" stroke="currentColor" stroke-width="1.3"/></svg></a>
+        </div>
+      </article>
+      <article class="svc svc--stone">
+        <div class="svc__lbl label"><span>Dành cho khách lẻ · Bespoke</span><span>02</span></div>
+        <figure class="svc__figure"><img src="assets/img/photo/look-04-800.webp" alt="Đầm đỏ tay bồng đuôi cá" width="600" height="800" loading="lazy"></figure>
+        <div class="svc__body" data-reveal>
+          <h2>Đặt may riêng theo số đo</h2>
+          <p class="lead">Chọn bất kỳ mẫu nào trong lookbook hoặc gửi ý tưởng riêng; Harmony dựng rập và căn chỉnh theo đúng số đo cơ thể của bạn.</p>
+          <ul>
+            <li><i>01</i><span>Giữ phom mẫu gốc, điều chỉnh độ dài tay, tà và độ ôm theo người mặc</span></li>
+            <li><i>02</i><span>Tư vấn màu sắc và chất vải phù hợp với buổi tiệc hoặc môi trường làm việc</span></li>
+            <li><i>03</i><span>Hẹn thử đồ và chỉnh phom tại studio trước khi bàn giao</span></li>
+          </ul>
+        </div>
+        <div>
+          <a class="btn" href="dich-vu.html#may-do"><span>Đặt may mẫu riêng</span><svg class="arr" viewBox="0 0 24 10" fill="none"><path d="M0 5H22M17 1L22 5L17 9" stroke="currentColor" stroke-width="1.3"/></svg></a>
+        </div>
+      </article>
+    </section>
+
+    <!-- 7. QUY TRÌNH LÀM VIỆC (ghim + đường chỉ đỏ chạy theo thanh cuộn) -->
+    <section class="process" id="process" aria-labelledby="procHead">
+      <div class="process__stage">
+        <div class="process__top">
+          <div>
+            <span class="label">Từ ý tưởng đến thành phẩm</span>
+            <h2 id="procHead">Quy trình bốn bước tại phòng mẫu</h2>
+          </div>
+          <div class="process__tabs" role="tablist" aria-label="Chọn quy trình">
+            <button type="button" role="tab" data-proc-tab="b2b" aria-selected="true">Thiết kế cho xưởng</button>
+            <button type="button" role="tab" data-proc-tab="bespoke" aria-selected="false">May đo riêng</button>
+          </div>
+        </div>
+        <div class="process__body" id="procBody">
+          <div class="process__word mega" id="procWord" aria-hidden="true">BREEF</div>
+        </div>
+        <div class="process__thread">
+          <svg viewBox="0 0 1200 56" preserveAspectRatio="none" aria-hidden="true">
+            <path class="base" d="M 28 28 L 1172 28"/>
+            <path class="run" d="M 28 28 L 1172 28"/>
+          </svg>
+          <div class="process__nodes">
+            <span class="is-on">01</span><span>02</span><span>03</span><span>04</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. KHỐI KÊU GỌI LIÊN HỆ -->
+    <section class="cta on-dark" aria-labelledby="ctaHead">
+      <div class="cta__giant mega" aria-hidden="true">ATELIER</div>
+      <figure class="cta__model"><img src="assets/img/cut/look-15-1100.webp" alt="Áo dài hoa quần đỏ" width="333" height="1100" loading="lazy"></figure>
+      <div class="cta__head" data-reveal>
+        <span class="label" style="display:block;margin-bottom:18px;color:var(--stage-soft)">Bắt đầu cuộc trò chuyện</span>
+        <h2 id="ctaHead">Đặt may một mẫu bạn thích, hoặc cùng làm bộ sưu tập mới.</h2>
+      </div>
+      <div class="cta__foot" data-reveal>
+        <p class="lead">Gửi mã look bạn ưng, hoặc mô tả dòng hàng xưởng đang cần thiết kế.</p>
+        <div class="cta__btns">
+          <a class="btn btn--accent" href="lien-he.html?nhu-cau=dat-may"><span>Đặt may mẫu này</span><svg class="arr" viewBox="0 0 24 10" fill="none"><path d="M0 5H22M17 1L22 5L17 9" stroke="currentColor" stroke-width="1.3"/></svg></a>
+          <a class="btn btn--light" href="lien-he.html?nhu-cau=thue-thiet-ke"><span>Thuê thiết kế</span></a>
+          <a class="btn btn--ghost" data-site-href="zalo" href="#zalo"><span>Nhắn Zalo</span></a>
+          <a class="btn btn--ghost" data-site-href="messenger" href="#messenger"><span>Nhắn Messenger</span></a>
+          <a class="btn btn--ghost" data-site-href="phoneHref" href="tel:0900000000"><span>Gọi Hotline</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="footer"></footer>
+
+  <script src="assets/js/vendor/gsap.min.js"></script>
+  <script src="assets/js/vendor/ScrollTrigger.min.js"></script>
+  <script src="assets/js/vendor/CustomEase.min.js"></script>
+  <script src="assets/js/vendor/lenis.min.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

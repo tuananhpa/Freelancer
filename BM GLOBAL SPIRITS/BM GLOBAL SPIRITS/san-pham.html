@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Bộ sưu tập — BM Global Spirits</title>
+  <meta name="description" content="Toàn bộ catalog rượu nhập khẩu của BM Global Spirits: whisky, cognac, gin, rum, vodka, tequila, sake, umeshu, liqueur và rượu Việt.">
+  <meta name="theme-color" content="#0e0b09">
+  <link rel="icon" href="assets/img/brand/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/img/brand/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Cormorant+Garamond:wght@500;600&display=swap&subset=vietnamese">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script src="assets/js/data.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/catalog.js" defer></script>
+</head>
+<body data-page="catalog">
+<main id="main">
+  <header class="page-head">
+    <span class="page-head__beam" aria-hidden="true"></span>
+    <div class="wrap page-head__in" data-reveal-group>
+      <nav class="crumbs" aria-label="Đường dẫn" data-reveal><a href="index.html">Trang chủ</a><span aria-hidden="true">/</span><span id="crumbCur">Bộ sưu tập</span></nav>
+      <div class="page-head__row">
+        <div>
+          <h1 id="catTitle" data-reveal>Bộ sưu tập rượu nhập khẩu</h1>
+          <p class="lead soft" id="catLead" data-reveal>615 chai từ 171 thương hiệu. Giá theo từng lô hàng — bấm vào chai để hỏi giá.</p>
+        </div>
+        <div class="page-head__cats" id="headCats" data-reveal></div>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap cat-page">
+    <aside class="filters" id="filters" aria-label="Bộ lọc">
+      <div class="filters__head"><span class="h3">Bộ lọc</span><button class="icon-btn" type="button" data-close-filters aria-label="Đóng bộ lọc"><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg></button></div>
+      <div class="fgroup"><p class="fgroup__title">Danh mục</p><div id="fCats"></div></div>
+      <div class="fgroup"><p class="fgroup__title">Thương hiệu</p>
+        <label class="sr-only" for="fBrandSearch">Tìm thương hiệu</label>
+        <input class="fbrand-search" id="fBrandSearch" type="search" placeholder="Tìm thương hiệu…" autocomplete="off">
+        <div class="fbrands" id="fBrands"></div>
+      </div>
+      <div class="fgroup"><p class="fgroup__title">Dung tích</p><div id="fVols"></div></div>
+      <div class="filters__apply"><button class="btn btn--block" type="button" data-close-filters id="applyBtn">Xem kết quả</button></div>
+    </aside>
+    <div class="scrim" id="scrim" data-close-filters></div>
+
+    <section aria-labelledby="catTitle">
+      <div class="toolbar">
+        <button class="btn btn--ghost btn--sm filter-btn" type="button" id="openFilters" aria-controls="filters" aria-expanded="false"><svg class="icon" aria-hidden="true"><use href="#i-filter"/></svg>Bộ lọc <span id="fCount"></span></button>
+        <p class="toolbar__count" id="resCount" aria-live="polite"></p>
+        <div class="searchbox">
+          <svg class="icon" aria-hidden="true"><use href="#i-search"/></svg>
+          <label class="sr-only" for="q">Tìm trong catalog</label>
+          <input id="q" type="search" placeholder="Tìm tên chai, thương hiệu…" autocomplete="off">
+        </div>
+        <div class="select">
+          <label class="sr-only" for="sort">Sắp xếp</label>
+          <select id="sort">
+            <option value="">Nổi bật</option>
+            <option value="name">Tên A → Z</option>
+            <option value="name-desc">Tên Z → A</option>
+            <option value="brand">Thương hiệu</option>
+            <option value="vol">Dung tích tăng dần</option>
+            <option value="vol-desc">Dung tích giảm dần</option>
+          </select>
+          <svg class="icon" aria-hidden="true"><use href="#i-down"/></svg>
+        </div>
+      </div>
+      <div class="chips" id="chips"></div>
+      <h2 class="sr-only">Danh sách sản phẩm</h2>
+      <div class="pgrid" id="grid"></div>
+      <div class="more" id="more">
+        <p class="small soft" id="moreText"></p>
+        <div class="more__bar" aria-hidden="true"><i id="moreBar"></i></div>
+        <button class="btn btn--ghost" type="button" id="moreBtn">Xem thêm</button>
+      </div>
+    </section>
+  </div>
+
+  <div class="modal" id="quick" role="dialog" aria-modal="true" aria-labelledby="quickTitle">
+    <div class="modal__box" id="quickBox"></div>
+  </div>
+</main>
+</body>
+</html>

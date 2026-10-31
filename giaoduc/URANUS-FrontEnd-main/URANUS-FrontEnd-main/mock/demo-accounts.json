@@ -1,0 +1,5 @@
+[
+  { "email": "giaovien@demo.local", "password": "Demo@123", "id": "u-teacher", "fullName": "Cô Lê Hạnh (demo)", "role": "TEACHER" },
+  { "email": "hocsinh@demo.local", "password": "Demo@123", "id": "u-student", "fullName": "Trần Minh Anh (demo)", "role": "STUDENT", "studentCode": "HS0001" },
+  { "email": "admin@demo.local", "password": "Demo@123", "id": "u-admin", "fullName": "Quản trị (demo)", "role": "ADMIN" }
+]

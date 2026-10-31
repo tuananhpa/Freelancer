@@ -1,0 +1,1 @@
+ALTER TABLE classrooms ADD COLUMN IF NOT EXISTS meeting_link TEXT;

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Danh sách 30 Sản phẩm Chính hãng — GOLDEN PHARMA</title>
+  <link rel="icon" href="assets/brand/favicon.png" type="image/png">
+  <link rel="preload" href="assets/fonts/prata-normal-vietnamese.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/intertight-normal-vietnamese.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body data-page="shop">
+  <main id="main">
+    <section class="sec" style="padding-bottom:24px">
+      <div class="wrap">
+        <span class="eyebrow"><span class="eyebrow__dot"></span>Danh mục chính hãng Golden Pharma</span>
+        <h1 class="h1" style="margin-bottom:10px">Trọn bộ 30 sản phẩm thuốc & chế phẩm thú y</h1>
+        <p class="lead">Tất cả hình ảnh sản phẩm đều được chuẩn hóa từ bao bì thực tế, đầy đủ quy cách và giá niêm yết chính hãng.</p>
+
+        <!-- Thanh lọc danh mục + tìm kiếm + sắp xếp -->
+        <div style="margin-top:26px;background:var(--surface);padding:18px;border-radius:var(--r-lg);border:1px solid var(--line);box-shadow:var(--sh-card)">
+          <div class="filter-pills" id="shopCatBar" style="margin-bottom:16px"></div>
+          <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding-top:14px;border-top:1px solid var(--line)">
+            <div style="flex:1;min-width:240px;display:flex;align-items:center;background:var(--ivory);border:1px solid var(--line);border-radius:var(--r-pill);padding:8px 16px">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:8px;opacity:0.6"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+              <input type="search" id="shopSearchInput" placeholder="Nhập tên sản phẩm, triệu chứng hoặc vật nuôi..." style="width:100%;outline:none;font-size:14px" aria-label="Tìm kiếm sản phẩm">
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+              <span id="shopResultCount" style="font-size:13.5px;color:var(--ink-soft);font-weight:600">Hiển thị 30 / 30 sản phẩm</span>
+              <select id="shopSortSelect" aria-label="Sắp xếp theo" style="padding:9px 14px;border-radius:var(--r-pill);border:1px solid var(--line);background:var(--ivory);font-size:13.5px;font-weight:600">
+                <option value="popular">Sắp xếp: Bán chạy nhất</option>
+                <option value="price-asc">Giá: Thấp đến Cao</option>
+                <option value="price-desc">Giá: Cao đến Thấp</option>
+                <option value="rating">Đánh giá cao nhất</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" style="padding-top:16px">
+      <div class="wrap">
+        <div class="prod-grid" id="shopProdGrid"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="footer"></footer>
+
+  <script src="assets/js/vendor/gsap.min.js"></script>
+  <script src="assets/js/vendor/ScrollTrigger.min.js"></script>
+  <script src="assets/js/vendor/lenis.min.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

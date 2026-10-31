@@ -1,0 +1,87 @@
+
+> school-edu-backend@0.1.0 test
+> vitest run
+
+
+ RUN  v3.2.7 D:/Freelancer/giaoduc/school-edu-backend
+
+ ❯ tests/contract.test.ts (12 tests | 12 skipped) 54ms
+   ↓ 1. Đăng nhập > Admin/admin123@ đăng nhập được
+   ↓ 1. Đăng nhập > sai mật khẩu -> 400 BAD_CREDENTIALS
+   ↓ 1. Đăng nhập > tự đăng ký bị tắt -> 403
+   ↓ 1. Đăng nhập > không token -> 401
+   ↓ 2–3. Tài khoản do admin quản lý > admin tạo giáo viên có username, giáo viên đăng nhập bằng username
+   ↓ 2–3. Tài khoản do admin quản lý > giáo viên không tạo được tài khoản -> 403
+   ↓ 2–3. Tài khoản do admin quản lý > đổi mật khẩu sai mật khẩu hiện tại -> 400
+   ↓ 2–3. Tài khoản do admin quản lý > admin không tự khóa chính mình
+   ↓ 4–6. Bài kiểm tra 15 phút -> chấm -> sổ điểm -> Excel > đúng/sai 4 ý: đúng 3/4 ý được 50% điểm câu
+   ↓ 4–6. Bài kiểm tra 15 phút -> chấm -> sổ điểm -> Excel > điểm tự vào sổ điểm lớp ở cột TX (thang 10)
+   ↓ 4–6. Bài kiểm tra 15 phút -> chấm -> sổ điểm -> Excel > export-excel trả file xlsx
+   ↓ 9. Cài đặt AI > lưu khóa nhưng GET không trả khóa
+ ✓ tests/password.test.ts (4 tests) 233ms
+ ✓ tests/migrations.test.ts (7 tests) 454ms
+   ✓ Seed generator > requires a process password, generates a valid seed, and never prints the password  325ms
+ ✓ tests/schema.test.ts (7 tests) 15583ms
+   ✓ Schema từ entity Java > dựng đủ 58 bảng, kể cả quan hệ dùng chung cột khóa chính  1954ms
+   ✓ Áp migration an toàn > áp đủ 86 migration thật, xuất SQLite đủ cột, unique, check và cascade  3497ms
+   ✓ Áp migration an toàn > giữ DO, chuỗi chứa dấu chấm phẩy, version số và câu lệnh sau lỗi trùng  2067ms
+   ✓ Áp migration an toàn > báo rõ lỗi khác trùng và không xuất schema chưa hoàn chỉnh  1719ms
+   ✓ Áp migration an toàn > sửa riêng dấu bao thân DO bị thiếu của V1.51 và ghi dấu vết  1846ms
+   ✓ Áp migration an toàn > đọc metadata FK của V1.53 trước khi xóa constraint  2053ms
+   ✓ Áp migration an toàn > không tạo học liệu mẫu V1.74 phụ thuộc tài khoản demo trên DB mới  2442ms
+
+⎯⎯⎯⎯⎯⎯ Failed Suites 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/contract.test.ts [ tests/contract.test.ts ]
+TypeError: fetch failed
+{
+  stack: 'AggregateError: \n' +
+    '    at internalConnectMultiple (node:net:1430:18)\n' +
+    '    at afterConnectMultiple (node:net:2099:7)',
+  errors: [
+    {
+      stack: 'Error: connect ECONNREFUSED ::1:8787\n' +
+        '    at createConnectionError (node:net:2062:14)\n' +
+        '    at afterConnectMultiple (node:net:2092:16)',
+      message: 'connect ECONNREFUSED ::1:8787',
+      errno: -4078,
+      code: 'ECONNREFUSED',
+      syscall: 'connect',
+      address: '::1',
+      port: 8787,
+      constructor: 'Function<Error>',
+      name: 'Error',
+      toString: 'Function<toString>'
+    },
+    {
+      stack: 'Error: connect ECONNREFUSED 127.0.0.1:8787\n' +
+        '    at createConnectionError (node:net:2062:14)\n' +
+        '    at afterConnectMultiple (node:net:2092:16)',
+      message: 'connect ECONNREFUSED 127.0.0.1:8787',
+      errno: -4078,
+      code: 'ECONNREFUSED',
+      syscall: 'connect',
+      address: '127.0.0.1',
+      port: 8787,
+      constructor: 'Function<Error>',
+      name: 'Error',
+      toString: 'Function<toString>'
+    }
+  ],
+  code: 'ECONNREFUSED',
+  message: '',
+  constructor: 'Function<AggregateError>',
+  name: 'Caused by: AggregateError',
+  toString: 'Function<toString>',
+  stacks: []
+}
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { errors: [ { stack: 'Error: connect ECONNREFUSED ::1:8787\n    at createConnectionError (node:net:2062:14)\n    at afterConnectMultiple (node:net:2092:16)', message: 'connect ECONNREFUSED ::1:8787', errno: -4078, code: 'ECONNREFUSED', syscall: 'connect', address: '::1', port: 8787, constructor: 'Function<Error>', name: 'Error', toString: 'Function<toString>' }, { stack: 'Error: connect ECONNREFUSED 127.0.0.1:8787\n    at createConnectionError (node:net:2062:14)\n    at afterConnectMultiple (node:net:2092:16)', message: 'connect ECONNREFUSED 127.0.0.1:8787', errno: -4078, code: 'ECONNREFUSED', syscall: 'connect', address: '127.0.0.1', port: 8787, constructor: 'Function<Error>', name: 'Error', toString: 'Function<toString>' } ], code: 'ECONNREFUSED' }
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 3 passed (4)
+      Tests  18 passed | 12 skipped (30)
+   Start at  16:16:17
+   Duration  16.72s (transform 198ms, setup 0ms, collect 573ms, tests 16.32s, environment 1ms, prepare 1.22s)
+

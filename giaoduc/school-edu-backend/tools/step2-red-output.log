@@ -1,0 +1,83 @@
+
+> school-edu-backend@0.1.0 test
+> vitest run tests/migrations.test.ts tests/password.test.ts
+
+
+ RUN  v3.2.7 D:/Freelancer/giaoduc/school-edu-backend
+
+ ❯ tests/password.test.ts (4 tests | 4 skipped) 9ms
+   ↓ Password hashing > creates interoperable PBKDF2-SHA256 hashes and verifies correct/wrong passwords
+   ↓ Password hashing > uses a different random salt for each hash
+   ↓ Password hashing > fails closed for malformed hashes, invalid encoding, or unsupported iteration counts
+   ↓ Password hashing > verifies legacy bcrypt hashes without changing their format
+ ❯ tests/migrations.test.ts (7 tests | 7 failed) 71ms
+   × All four migrations > seeds only the requested Admin with a hash and required first password change 27ms
+     → 0003_new_features.sql must exist: expected false to be true // Object.is equality
+   × All four migrations > never overwrites a changed existing admin when the seed is applied again 8ms
+     → 0003_new_features.sql must exist: expected false to be true // Object.is equality
+   × All four migrations > enforces usernames without case sensitivity and allows multiple NULL usernames 7ms
+     → 0003_new_features.sql must exist: expected false to be true // Object.is equality
+   × All four migrations > accepts only TX/GK/CK or NULL assessment types 7ms
+     → 0003_new_features.sql must exist: expected false to be true // Object.is equality
+   × All four migrations > stores one global settings row with editable branding and no seeded key/contact details 7ms
+     → 0003_new_features.sql must exist: expected false to be true // Object.is equality
+   × All four migrations > defaults grade weights to 1/2/3 and cascades them when the classroom is deleted 7ms
+     → 0003_new_features.sql must exist: expected false to be true // Object.is equality
+   × Seed generator > requires a process password, generates a valid seed, and never prints the password 7ms
+     → 0003_new_features.sql must exist: expected false to be true // Object.is equality
+
+⎯⎯⎯⎯⎯⎯ Failed Suites 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/password.test.ts [ tests/password.test.ts ]
+AssertionError: password helper must exist: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/password.test.ts:10:60
+      8| beforeAll(async () => {
+      9|   const source = new URL('../src/lib/password.ts', import.meta.url);
+     10|   expect(existsSync(source), 'password helper must exist').toBe(true);
+       |                                                            ^
+     11|   ({ hashPassword, verifyPassword } = await import(source.href));
+     12| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/8]⎯
+
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 7 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/migrations.test.ts > All four migrations > seeds only the requested Admin with a hash and required first password change
+ FAIL  tests/migrations.test.ts > All four migrations > never overwrites a changed existing admin when the seed is applied again
+ FAIL  tests/migrations.test.ts > All four migrations > enforces usernames without case sensitivity and allows multiple NULL usernames
+ FAIL  tests/migrations.test.ts > All four migrations > accepts only TX/GK/CK or NULL assessment types
+ FAIL  tests/migrations.test.ts > All four migrations > stores one global settings row with editable branding and no seeded key/contact details
+ FAIL  tests/migrations.test.ts > All four migrations > defaults grade weights to 1/2/3 and cascades them when the classroom is deleted
+ FAIL  tests/migrations.test.ts > Seed generator > requires a process password, generates a valid seed, and never prints the password
+AssertionError: 0003_new_features.sql must exist: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/migrations.test.ts:27:52
+     25|   for (const name of migrations) {
+     26|     const path = new URL('../migrations/' + name, import.meta.url);
+     27|     expect(existsSync(path), name + ' must exist').toBe(true);
+       |                                                    ^
+     28|     db.exec(readFileSync(path, 'utf8'));
+     29|   }
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/8]⎯
+
+
+ Test Files  2 failed (2)
+      Tests  7 failed | 4 skipped (11)
+   Start at  16:10:45
+   Duration  1.35s (transform 96ms, setup 0ms, collect 135ms, tests 80ms, environment 0ms, prepare 1.14s)
+

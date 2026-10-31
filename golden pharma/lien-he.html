@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Liên hệ & Đăng ký Đại lý — GOLDEN PHARMA</title>
+  <link rel="icon" href="assets/brand/favicon.png" type="image/png">
+  <link rel="preload" href="assets/fonts/prata-normal-vietnamese.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/intertight-normal-vietnamese.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body data-page="contact">
+  <main id="main">
+    <section class="sec">
+      <div class="wrap">
+        <span class="eyebrow"><span class="eyebrow__dot"></span>Hỗ trợ kỹ thuật thú y & Hợp tác đại lý</span>
+        <h1 class="h1" style="margin-bottom:28px">Liên hệ Công Ty Cổ Phần Quốc Tế Thú Y Vàng</h1>
+
+        <div class="checkout-grid">
+          <form class="form-card" id="contactForm">
+            <h2 class="h3" style="margin-bottom:16px">Gửi yêu cầu tư vấn phác đồ hoặc báo giá đại lý</h2>
+            <div id="contactSuccessMsg" style="display:none;background:rgba(14,107,58,0.1);border:1px solid var(--emerald);color:var(--emerald);padding:14px;border-radius:var(--r-sm);font-weight:600;margin-bottom:16px">
+              ✓ Cảm ơn bạn! Yêu cầu đã được ghi nhận. Bác sĩ thú y Golden Pharma sẽ liên hệ lại ngay qua số điện thoại của bạn.
+            </div>
+            <div class="field">
+              <label for="ctName">Họ và tên *</label>
+              <input type="text" id="ctName" required placeholder="Nhập họ và tên của bạn">
+            </div>
+            <div class="field">
+              <label for="ctPhone">Số điện thoại / Zalo *</label>
+              <input type="tel" id="ctPhone" required placeholder="Ví dụ: 0968486985">
+            </div>
+            <div class="field">
+              <label for="ctType">Nhu cầu liên hệ</label>
+              <select id="ctType">
+                <option>Tư vấn phác đồ phòng & trị bệnh cho trang trại</option>
+                <option>Đăng ký làm đại lý phân phối Golden Pharma</option>
+                <option>Báo giá đơn hàng số lượng lớn</option>
+                <option>Khác</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="ctMsg">Nội dung chi tiết</label>
+              <textarea id="ctMsg" rows="4" placeholder="Mô tả quy mô đàn vật nuôi hoặc các dòng sản phẩm bạn quan tâm..."></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">Gửi thông tin liên hệ →</button>
+          </form>
+
+          <div style="display:grid;gap:20px">
+            <div class="form-card">
+              <h2 class="h3" style="margin-bottom:14px">Thông tin liên hệ chính thức</h2>
+              <ul style="display:grid;gap:12px;font-size:14.5px">
+                <li>🏢 <b>Đơn vị:</b> Công Ty Cổ Phần Quốc Tế Thú Y Vàng (Golden Pharma)</li>
+                <li>📍 <b>Địa chỉ:</b> Tầng 4, lô 30-31 Liền kề 2, khu đô thị Đại Thanh, Xã Đại Thanh, TP Hà Nội</li>
+                <li>📞 <b>Hotline / Zalo:</b> <a href="tel:0968486985" style="color:var(--emerald);font-weight:700">0968 486 985</a></li>
+                <li>✉️ <b>Email:</b> <a href="mailto:goldenvet10@gmail.com">goldenvet10@gmail.com</a></li>
+                <li>🛒 <b>Shopee:</b> <a href="https://vn.shp.ee/ghozM3PF" target="_blank" rel="noopener" style="color:#EE4D2D;font-weight:700">Gian hàng Shopee Chính Hãng ↗</a></li>
+                <li>🎵 <b>TikTok Shop:</b> <a href="https://www.tiktok.com/@thuyvanghanoi" target="_blank" rel="noopener" style="color:var(--emerald);font-weight:600">@thuyvanghanoi (Dược Phẩm Vàng)</a></li>
+              </ul>
+            </div>
+
+            <div class="form-card" style="padding:10px;overflow:hidden">
+              <iframe
+                title="Bản đồ Khu đô thị Đại Thanh, Hà Nội"
+                src="https://www.google.com/maps?q=Khu+do+thi+Dai+Thanh+Ha+Noi&output=embed"
+                width="100%"
+                height="280"
+                style="border:0;border-radius:16px"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="footer"></footer>
+
+  <script src="assets/js/vendor/gsap.min.js"></script>
+  <script src="assets/js/vendor/ScrollTrigger.min.js"></script>
+  <script src="assets/js/vendor/lenis.min.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

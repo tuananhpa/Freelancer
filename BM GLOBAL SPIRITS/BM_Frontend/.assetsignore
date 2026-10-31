@@ -1,0 +1,14 @@
+node_modules/
+src/
+scripts/
+docs/
+worker.mjs
+wrangler.jsonc
+package.json
+package-lock.json
+vite.config.js
+*.md
+.git/
+.wrangler/
+.claude/
+.DS_Store

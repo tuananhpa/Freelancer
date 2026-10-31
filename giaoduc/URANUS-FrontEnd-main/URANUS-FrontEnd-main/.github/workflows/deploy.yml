@@ -1,0 +1,88 @@
+name: Deploy Frontend to VM
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  REGISTRY: ghcr.io
+
+jobs:
+  # ─── JOB 1: Build trên GitHub hosted runner ───
+  build-and-push:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    outputs:
+      image: ${{ steps.image.outputs.name }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Compute lowercase image name
+        id: image
+        run: |
+          OWNER=$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')
+          echo "name=ghcr.io/${OWNER}/uranus-frontend" >> $GITHUB_OUTPUT
+
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build and push image to GHCR
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./Dockerfile
+          push: true
+          tags: ${{ steps.image.outputs.name }}:latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+  # ─── JOB 2: Deploy trên server (chỉ pull image) ───
+  deploy:
+    runs-on: self-hosted
+    needs: build-and-push
+    env:
+      IMAGE: ${{ needs.build-and-push.outputs.image }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Show disk usage
+        run: df -h || true
+
+      - name: Prune old Docker resources
+        run: |
+          docker system prune -af || true
+          df -h || true
+
+      - name: Log in to GHCR and pull image
+        run: |
+          echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
+          docker pull ${{ env.IMAGE }}:latest
+          docker tag ${{ env.IMAGE }}:latest uranus-frontend:latest
+
+      - name: Deploy Frontend
+        run: |
+          echo "Updating files..."
+          rm -rf $HOME/uranus/URANUS-FrontEnd
+          mkdir -p $HOME/uranus/URANUS-FrontEnd
+          cp -r . $HOME/uranus/URANUS-FrontEnd/
+          
+          cd $HOME/uranus
+          echo "Restarting frontend container only..."
+          docker compose up -d --no-build --no-deps frontend || \
+          docker compose up -d --no-build --no-deps uranus_frontend || \
+          docker compose restart frontend || true
+          
+          echo "Deployment Successful!"
+          docker ps --filter "name=uranus" --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"

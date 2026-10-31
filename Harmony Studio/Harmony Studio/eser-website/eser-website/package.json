@@ -1,0 +1,22 @@
+{
+  "name": "eser-fashion-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ESER Fashion — Dress for success. Landing page scroll-motion + trang quản trị nội dung.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "deploy": "cf deploy",
+    "test": "node --test worker.test.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "^2.0.0-beta.v.0",
+    "cf": "^1.0.0-beta.17",
+    "vite": "^8.3.4"
+  }
+}

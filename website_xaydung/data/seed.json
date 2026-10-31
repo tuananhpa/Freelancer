@@ -1,0 +1,223 @@
+{
+  "version": 1,
+  "docs": {
+    "site": {
+      "legalName": "Công ty TNHH Xây dựng ABC",
+      "name": "Xây dựng ABC",
+      "tagline": "Thiết kế · Thi công · Bàn giao trọn gói",
+      "logo": "assets/img/brand/logo-dark.svg",
+      "logoLight": "assets/img/brand/logo-light.svg",
+      "phone": "0900 000 000",
+      "hotline": "0900 000 000",
+      "email": "lienhe@example.com",
+      "zalo": "0900000000",
+      "facebook": "https://www.facebook.com/",
+      "tiktok": "https://www.tiktok.com/",
+      "youtube": "",
+      "address": "[Địa chỉ trụ sở – doanh nghiệp cung cấp]",
+      "taxCode": "[Mã số thuế]",
+      "workingHours": "Thứ 2 – Thứ 7: 7:30 – 17:30",
+      "areas": "TP. Hồ Chí Minh và các tỉnh lân cận",
+      "mapEmbed": "",
+      "recruitPhone": "0900 000 001",
+      "recruitEmail": "tuyendung@example.com",
+      "footerAbout": "Đơn vị thiết kế và thi công công trình dân dụng, thương mại và công nghiệp. Minh bạch chi phí, cam kết tiến độ, bàn giao đúng chất lượng.",
+      "showDemoRibbon": true,
+      "projectCategories": ["Nhà ở dân dụng", "Biệt thự", "Thương mại – dịch vụ", "Công nghiệp", "Công trình công cộng"],
+      "menu": [
+        { "label": "Trang chủ", "href": "index.html", "visible": true },
+        { "label": "Giới thiệu", "href": "gioi-thieu.html", "visible": true },
+        { "label": "Dịch vụ", "href": "dich-vu.html", "visible": true },
+        { "label": "Công trình", "href": "cong-trinh.html", "visible": true },
+        { "label": "Tuyển dụng", "href": "tuyen-dung.html", "visible": true },
+        { "label": "Liên hệ", "href": "lien-he.html", "visible": true }
+      ],
+      "seo": {
+        "home": { "title": "Xây dựng ABC – Thiết kế & thi công nhà ở, công trình trọn gói", "description": "Xây dựng ABC nhận thiết kế, thi công nhà ở dân dụng, nhà phố, biệt thự, nhà xưởng và công trình thương mại. Báo giá minh bạch, cam kết tiến độ." },
+        "about": { "title": "Giới thiệu – Xây dựng ABC", "description": "Quá trình hình thành, năng lực thi công, đội ngũ kỹ sư và khu vực hoạt động của Xây dựng ABC." },
+        "services": { "title": "Dịch vụ xây dựng – Xây dựng ABC", "description": "Xây nhà dân dụng, thi công trọn gói, phần thô, sửa chữa cải tạo, công trình thương mại và công nghiệp." },
+        "projects": { "title": "Công trình đã thực hiện – Xây dựng ABC", "description": "Hình ảnh và thông tin các công trình nhà ở, biệt thự, văn phòng, nhà xưởng do Xây dựng ABC thi công." },
+        "jobs": { "title": "Tuyển dụng – Xây dựng ABC", "description": "Các vị trí kỹ sư, chỉ huy trưởng, công nhân xây dựng đang tuyển tại Xây dựng ABC." },
+        "contact": { "title": "Liên hệ – Xây dựng ABC", "description": "Hotline, Zalo, email, địa chỉ và biểu mẫu nhận tư vấn xây dựng miễn phí." }
+      }
+    },
+    "home": {
+      "sections": [
+        { "key": "hero", "label": "Banner đầu trang", "enabled": true },
+        { "key": "intro", "label": "Giới thiệu doanh nghiệp", "enabled": true },
+        { "key": "services", "label": "Dịch vụ nổi bật", "enabled": true },
+        { "key": "process", "label": "Quy trình thi công (3D)", "enabled": true },
+        { "key": "projects", "label": "Công trình tiêu biểu", "enabled": true },
+        { "key": "capability", "label": "Năng lực & kinh nghiệm", "enabled": true },
+        { "key": "jobs", "label": "Tuyển dụng", "enabled": true },
+        { "key": "contact", "label": "Khu vực liên hệ", "enabled": true }
+      ],
+      "slides": [
+        { "image": "assets/img/photos/hero-1.webp", "eyebrow": "Thiết kế & thi công trọn gói", "title": "Xây ngôi nhà bền vững cho gia đình bạn", "text": "Từ bản vẽ đến ngày nhận chìa khoá: một đầu mối, một bảng giá minh bạch, một tiến độ cam kết bằng hợp đồng.", "btn1": "Nhận tư vấn miễn phí", "btn1Href": "lien-he.html#tu-van", "btn2": "Xem công trình", "btn2Href": "cong-trinh.html" },
+        { "image": "assets/img/photos/hero-2.webp", "eyebrow": "Năng lực thi công", "title": "Đội ngũ kỹ sư có mặt tại công trường mỗi ngày", "text": "Giám sát từng mẻ bê tông, từng lớp thép. Báo cáo tiến độ bằng hình ảnh cho chủ đầu tư hằng tuần.", "btn1": "Về chúng tôi", "btn1Href": "gioi-thieu.html", "btn2": "Quy trình thi công", "btn2Href": "#quy-trinh" },
+        { "image": "assets/img/photos/hero-3.webp", "eyebrow": "Thương mại & công nghiệp", "title": "Nhà xưởng, văn phòng đúng tiến độ đưa vào vận hành", "text": "Kết cấu thép, bê tông cốt thép và hệ thống kỹ thuật được triển khai đồng bộ, an toàn lao động đặt lên hàng đầu.", "btn1": "Dịch vụ của chúng tôi", "btn1Href": "dich-vu.html", "btn2": "Gọi tư vấn", "btn2Href": "tel" }
+      ],
+      "intro": {
+        "eyebrow": "Về chúng tôi",
+        "title": "Đơn vị xây dựng đặt chất lượng và sự minh bạch lên trước",
+        "text": "Xây dựng ABC nhận thiết kế và thi công nhà ở dân dụng, biệt thự, công trình thương mại và nhà xưởng. Mỗi công trình đều có kỹ sư phụ trách riêng, dự toán chi tiết theo hạng mục và lịch nghiệm thu rõ ràng để chủ đầu tư yên tâm từ ngày khởi công đến ngày bàn giao.",
+        "image1": "assets/img/photos/about-site.webp",
+        "image2": "assets/img/photos/team-engineer.webp",
+        "badgeValue": "12+",
+        "badgeLabel": "năm kinh nghiệm",
+        "fields": ["Nhà ở dân dụng", "Biệt thự", "Thi công trọn gói", "Nhà xưởng", "Cải tạo, sửa chữa"]
+      },
+      "process": {
+        "eyebrow": "Quy trình thi công",
+        "title": "Cuộn để xem một công trình được dựng lên",
+        "text": "Năm giai đoạn, mỗi giai đoạn đều có nghiệm thu và biên bản rõ ràng.",
+        "steps": [
+          { "title": "Khảo sát & thiết kế", "text": "Khảo sát hiện trạng, lên phương án kiến trúc, kết cấu và dự toán chi tiết." },
+          { "title": "Thi công móng", "text": "Định vị, đào móng, cốt thép và đổ bê tông móng theo bản vẽ được duyệt." },
+          { "title": "Kết cấu phần thô", "text": "Cột, dầm, sàn từng tầng; xây tường và đi hệ thống điện nước âm." },
+          { "title": "Hoàn thiện", "text": "Mặt dựng, cửa kính, chống thấm, sơn bả, ốp lát và lắp đặt thiết bị." },
+          { "title": "Nghiệm thu & bàn giao", "text": "Kiểm tra tổng thể, vệ sinh công trình, bàn giao hồ sơ và bảo hành." }
+        ],
+        "finalTitle": "Sẵn sàng bàn giao chìa khoá",
+        "finalText": "Bạn đang có kế hoạch xây dựng? Gửi thông tin để kỹ sư liên hệ khảo sát miễn phí."
+      },
+      "stats": [
+        { "value": 12, "suffix": "+", "label": "Năm kinh nghiệm thi công" },
+        { "value": 250, "suffix": "+", "label": "Công trình đã bàn giao" },
+        { "value": 80, "suffix": "+", "label": "Kỹ sư & công nhân lành nghề" },
+        { "value": 98, "suffix": "%", "label": "Công trình đúng tiến độ hợp đồng" }
+      ],
+      "capability": {
+        "eyebrow": "Năng lực & kinh nghiệm",
+        "title": "Vì sao chủ đầu tư chọn Xây dựng ABC",
+        "text": "Kinh nghiệm thực tế từ hàng trăm công trình giúp chúng tôi lường trước rủi ro và kiểm soát chi phí cho bạn.",
+        "image": "assets/img/photos/hero-2.webp",
+        "strengths": [
+          { "icon": "receipt", "title": "Báo giá minh bạch", "text": "Dự toán chi tiết theo từng hạng mục, vật tư ghi rõ chủng loại, không phát sinh mập mờ." },
+          { "icon": "calendar", "title": "Tiến độ cam kết", "text": "Tiến độ ghi trong hợp đồng, báo cáo hình ảnh hằng tuần cho chủ đầu tư." },
+          { "icon": "hardhat", "title": "Kỹ sư giám sát thường trực", "text": "Mỗi công trình có kỹ sư phụ trách, nghiệm thu từng giai đoạn trước khi làm tiếp." },
+          { "icon": "layers", "title": "Vật tư rõ nguồn gốc", "text": "Thép, xi măng, gạch, ống… từ nhà cung cấp uy tín, có chứng từ đi kèm." },
+          { "icon": "shield", "title": "Bảo hành rõ ràng", "text": "Chính sách bảo hành kết cấu và hoàn thiện ghi rõ trong hợp đồng." },
+          { "icon": "file", "title": "Hỗ trợ thủ tục", "text": "Hỗ trợ hồ sơ xin phép xây dựng, hoàn công theo quy định." }
+        ]
+      },
+      "cta": { "title": "Bạn đang có kế hoạch xây dựng?", "text": "Để lại số điện thoại, kỹ sư của chúng tôi sẽ gọi lại tư vấn và hẹn lịch khảo sát miễn phí." }
+    },
+    "pages": {
+      "about": { "title": "Xây dựng bằng tâm, giữ chữ tín bằng chất lượng", "lead": "Câu chuyện, năng lực và con người phía sau mỗi công trình của Xây dựng ABC.", "image": "assets/img/photos/about-office.webp",
+        "storyTitle": "Hành trình hình thành và phát triển",
+        "story": "Xây dựng ABC khởi đầu từ một đội thi công nhỏ chuyên nhà ở dân dụng. Qua từng công trình, chúng tôi xây dựng đội ngũ kỹ sư, công nhân lành nghề và quy trình quản lý chất lượng bài bản.\n\nNgày nay, chúng tôi nhận thi công từ nhà phố, biệt thự đến văn phòng và nhà xưởng, nhưng nguyên tắc vẫn không đổi: làm đúng bản vẽ, nói đúng chi phí, giao đúng tiến độ.",
+        "statement": "Mỗi công trình chúng tôi bàn giao là một lời hứa được giữ: đúng bản vẽ, đúng chi phí và đúng ngày hẹn với gia đình bạn.",
+        "areasTitle": "Khu vực nhận thi công",
+        "areas": ["TP. Hồ Chí Minh", "Bình Dương", "Đồng Nai", "Long An", "Bà Rịa – Vũng Tàu", "Tây Ninh"] },
+      "services": { "title": "Dịch vụ xây dựng trọn vẹn từ móng đến mái", "lead": "Chọn đúng gói dịch vụ cho công trình của bạn. Mỗi gói đều có báo giá chi tiết và phạm vi công việc rõ ràng.", "image": "assets/img/photos/sv-phan-tho.webp" },
+      "projects": { "title": "Công trình đã thực hiện", "lead": "Năng lực của chúng tôi được thể hiện rõ nhất qua những công trình đã bàn giao và đang triển khai.", "image": "assets/img/photos/ct-van-phong.webp" },
+      "jobs": { "title": "Cùng chúng tôi xây những công trình bền vững", "lead": "Môi trường làm việc an toàn, thu nhập rõ ràng và cơ hội phát triển cho kỹ sư, chỉ huy trưởng và công nhân lành nghề.", "image": "assets/img/photos/tuyen-dung.webp",
+        "perks": [
+          { "icon": "wallet", "title": "Thu nhập rõ ràng", "text": "Lương thoả thuận theo năng lực, trả đúng hạn, thưởng theo công trình." },
+          { "icon": "shield", "title": "An toàn lao động", "text": "Trang bị bảo hộ đầy đủ, huấn luyện an toàn định kỳ." },
+          { "icon": "users", "title": "Đội ngũ gắn bó", "text": "Làm việc cùng kỹ sư giàu kinh nghiệm, hỗ trợ người mới." },
+          { "icon": "trend", "title": "Lộ trình phát triển", "text": "Cơ hội lên giám sát, chỉ huy trưởng theo năng lực." }
+        ] },
+      "contact": { "title": "Liên hệ với chúng tôi", "lead": "Gọi hotline, nhắn Zalo hoặc để lại thông tin, chúng tôi phản hồi trong giờ làm việc.", "image": "assets/img/photos/lien-he.webp" }
+    },
+    "chatbot": {
+      "enabled": true,
+      "name": "Trợ lý Xây dựng ABC",
+      "greeting": "Xin chào! Tôi là trợ lý tự động của Xây dựng ABC.\nAnh/chị cần hỗ trợ điều gì ạ?",
+      "fallback": "Xin lỗi, tôi chưa hiểu câu hỏi này. Anh/chị chọn một mục bên dưới hoặc gọi hotline {phone} để gặp nhân viên tư vấn nhé.",
+      "options": [
+        { "label": "Tìm hiểu dịch vụ xây dựng", "keywords": "dich vu, xay nha, tron goi, phan tho, sua chua, cai tao, bao gia, gia, chi phi, thiet ke", "answer": "Chúng tôi nhận xây nhà dân dụng, thi công trọn gói, phần thô, sửa chữa cải tạo và công trình thương mại – công nghiệp.\nAnh/chị có thể xem chi tiết từng dịch vụ hoặc để lại số điện thoại để được báo giá.", "links": [ { "label": "Xem dịch vụ", "href": "dich-vu.html" }, { "label": "Nhận báo giá", "href": "lien-he.html#tu-van" } ] },
+        { "label": "Xem công trình đã thực hiện", "keywords": "cong trinh, du an, mau nha, hinh anh, biet thu, nha pho, nha xuong", "answer": "Mời anh/chị xem các công trình đã hoàn thành và đang thi công, có hình ảnh thực tế và thông tin quy mô từng công trình.", "links": [ { "label": "Danh sách công trình", "href": "cong-trinh.html" } ] },
+        { "label": "Tìm kiếm việc làm", "keywords": "tuyen dung, viec lam, xin viec, tim viec, ung tuyen, ky su, cong nhan, tho, luong, cv", "answer": "Chúng tôi đang tuyển kỹ sư, chỉ huy trưởng và công nhân xây dựng.\nAnh/chị xem vị trí phù hợp và nộp hồ sơ trực tuyến, hoặc gọi tuyển dụng: {recruitPhone}.", "links": [ { "label": "Vị trí đang tuyển", "href": "tuyen-dung.html" } ] },
+        { "label": "Liên hệ nhân viên", "keywords": "lien he, nhan vien, tu van, goi, zalo, facebook, hotline, dia chi, so dien thoai", "answer": "Anh/chị có thể gọi hotline {phone}, nhắn Zalo hoặc Facebook. Nhân viên phản hồi trong giờ làm việc ({workingHours}).", "links": [ { "label": "Gọi ngay", "href": "tel" }, { "label": "Chat Zalo", "href": "zalo" }, { "label": "Facebook", "href": "facebook" } ] }
+      ]
+    }
+  },
+  "collections": {
+    "services": [
+      { "id": "s1", "slug": "xay-nha-o-dan-dung", "name": "Xây dựng nhà ở dân dụng", "icon": "home", "image": "assets/img/photos/sv-nha-o.webp", "summary": "Nhà phố, nhà ống, nhà vườn 1–7 tầng, thiết kế phù hợp diện tích và ngân sách gia đình.", "description": "Chúng tôi thi công nhà ở dân dụng với quy trình rõ ràng: khảo sát, lên phương án, dự toán chi tiết và triển khai có kỹ sư giám sát thường trực.", "scope": ["Nhà phố, nhà ống 1–7 tầng", "Nhà vườn, nhà cấp 4 hiện đại", "Nhà liền kề, nhà phố thương mại", "Giám sát và nghiệm thu từng giai đoạn"], "featured": true, "published": true, "order": 0 },
+      { "id": "s2", "slug": "thi-cong-nha-tron-goi", "name": "Thi công nhà trọn gói", "icon": "key", "image": "assets/img/photos/sv-tron-goi.webp", "summary": "Một đầu mối từ thiết kế, xin phép, phần thô đến hoàn thiện và bàn giao chìa khoá.", "description": "Gói trọn gói giúp chủ nhà không phải tự quản lý nhiều nhà thầu. Mọi hạng mục, vật tư và chi phí được chốt trong hợp đồng.", "scope": ["Thiết kế kiến trúc – kết cấu – điện nước", "Hỗ trợ hồ sơ xin phép xây dựng", "Thi công phần thô và hoàn thiện", "Bàn giao chìa khoá, bảo hành"], "featured": true, "published": true, "order": 1 },
+      { "id": "s3", "slug": "thi-cong-phan-tho", "name": "Thi công phần thô", "icon": "layers", "image": "assets/img/photos/sv-phan-tho.webp", "summary": "Móng, khung bê tông cốt thép, xây tường và hệ thống điện nước âm đúng kỹ thuật.", "description": "Phần thô quyết định độ bền của công trình. Chúng tôi kiểm soát chặt chẽ cốt thép, cốp pha, mác bê tông và thời gian bảo dưỡng.", "scope": ["Móng đơn, móng băng, móng cọc", "Cột, dầm, sàn bê tông cốt thép", "Xây tường bao, tường ngăn", "Đi ống điện nước âm, chống thấm"], "featured": true, "published": true, "order": 2 },
+      { "id": "s4", "slug": "sua-chua-cai-tao", "name": "Sửa chữa, cải tạo công trình", "icon": "wrench", "image": "assets/img/photos/sv-cai-tao.webp", "summary": "Nâng tầng, cải tạo mặt tiền, chống thấm, làm mới nội thất cho nhà cũ.", "description": "Khảo sát kỹ hiện trạng kết cấu trước khi đưa ra phương án cải tạo an toàn và tiết kiệm.", "scope": ["Nâng tầng, mở rộng diện tích", "Cải tạo mặt tiền, mái", "Xử lý thấm dột, nứt tường", "Làm mới ốp lát, sơn bả"], "featured": true, "published": true, "order": 3 },
+      { "id": "s5", "slug": "cong-trinh-thuong-mai-cong-nghiep", "name": "Công trình thương mại & công nghiệp", "icon": "factory", "image": "assets/img/photos/sv-cong-nghiep.webp", "summary": "Nhà xưởng kết cấu thép, kho bãi, văn phòng, showroom, nhà hàng.", "description": "Năng lực thi công kết cấu thép và bê tông quy mô lớn, phối hợp hệ thống kỹ thuật để công trình sớm đưa vào vận hành.", "scope": ["Nhà xưởng, nhà kho khung thép", "Văn phòng, showroom", "Nhà hàng, quán cà phê", "Hạ tầng sân bãi, đường nội bộ"], "featured": true, "published": true, "order": 4 },
+      { "id": "s6", "slug": "thiet-ke-kien-truc", "name": "Thiết kế kiến trúc & xin phép", "icon": "ruler", "image": "assets/img/photos/sv-thiet-ke.webp", "summary": "Bản vẽ kiến trúc, kết cấu, phối cảnh 3D và hồ sơ xin phép xây dựng.", "description": "Đội ngũ kiến trúc sư đưa ra phương án công năng hợp lý, phối cảnh 3D trực quan trước khi thi công.", "scope": ["Phương án mặt bằng công năng", "Phối cảnh 3D mặt tiền, nội thất", "Hồ sơ kết cấu, điện nước", "Hồ sơ xin phép xây dựng"], "featured": true, "published": true, "order": 5 }
+    ],
+    "projects": [
+      { "id": "c1", "slug": "biet-thu-vuon-hien-dai", "name": "Biệt thự vườn hiện đại", "category": "Biệt thự", "location": "TP. Thủ Đức, TP.HCM", "scale": "2 tầng · 420 m² sàn", "type": "Biệt thự có hồ bơi", "client": "Chủ đầu tư tư nhân", "status": "done", "time": "2025", "items": ["Thiết kế kiến trúc", "Thi công phần thô", "Hoàn thiện nội ngoại thất", "Hồ bơi & sân vườn"], "cover": "assets/img/photos/ct-biet-thu.webp", "gallery": ["assets/img/photos/ct-biet-thu.webp", "assets/img/photos/album-villa-interior.webp", "assets/img/photos/sv-tron-goi.webp"], "video": "", "summary": "Biệt thự hai tầng mái bằng, mặt đứng kết hợp đá tự nhiên và lam gỗ, mở rộng tầm nhìn ra hồ bơi.", "description": "Công trình được thiết kế theo hướng nhiệt đới hiện đại: nhiều mảng kính lớn, đón gió tự nhiên, phòng khách thông tầng nối ra hồ bơi và sân vườn.\n\nĐơn vị đảm nhận trọn gói từ thiết kế, phần thô đến hoàn thiện và cảnh quan.", "featured": true, "published": true, "order": 0 },
+      { "id": "c2", "slug": "nha-pho-5-tang-mat-tien-xanh", "name": "Nhà phố 5 tầng mặt tiền xanh", "category": "Nhà ở dân dụng", "location": "Quận 7, TP.HCM", "scale": "5 tầng · 5 × 20 m", "type": "Nhà phố ở kết hợp kinh doanh", "client": "Chủ đầu tư tư nhân", "status": "done", "time": "2024", "items": ["Thi công trọn gói", "Mặt dựng lam gỗ & cây xanh", "Hệ thống điện chiếu sáng mặt tiền"], "cover": "assets/img/photos/hero-1.webp", "gallery": ["assets/img/photos/hero-1.webp", "assets/img/photos/album-facade-night.webp", "assets/img/photos/sv-tron-goi.webp"], "video": "", "summary": "Nhà phố năm tầng với hệ lam gỗ và bồn cây theo phương đứng, ban công kính mỗi tầng.", "description": "Mặt tiền được xử lý bằng hệ lam gỗ và bồn cây xanh giúp giảm nắng hướng Tây, tạo dấu ấn riêng trên tuyến phố.\n\nTầng trệt linh hoạt cho kinh doanh, các tầng trên là không gian ở cho gia đình ba thế hệ.", "featured": true, "published": true, "order": 1 },
+      { "id": "c3", "slug": "toa-van-phong-9-tang", "name": "Tòa văn phòng 9 tầng", "category": "Thương mại – dịch vụ", "location": "Quận Bình Thạnh, TP.HCM", "scale": "9 tầng + 1 hầm · 3.600 m² sàn", "type": "Văn phòng cho thuê", "client": "Doanh nghiệp tư nhân", "status": "done", "time": "2023 – 2024", "items": ["Kết cấu bê tông cốt thép", "Vách kính mặt dựng", "Hoàn thiện sảnh và văn phòng"], "cover": "assets/img/photos/ct-van-phong.webp", "gallery": ["assets/img/photos/ct-van-phong.webp", "assets/img/photos/album-office-lobby.webp", "assets/img/photos/about-office.webp"], "video": "", "summary": "Tòa văn phòng vách kính xanh với hệ lam nhôm đứng, sảnh đá và ốp gỗ ấm áp.", "description": "Công trình chín tầng một hầm, kết cấu bê tông cốt thép toàn khối. Mặt dựng kính hộp kết hợp lam nhôm giúp giảm bức xạ nhiệt.\n\nSảnh chính hoàn thiện đá tự nhiên, trần gỗ và chiếu sáng gián tiếp.", "featured": true, "published": true, "order": 2 },
+      { "id": "c4", "slug": "nha-xuong-ket-cau-thep", "name": "Nhà xưởng sản xuất khung thép", "category": "Công nghiệp", "location": "KCN tỉnh Bình Dương", "scale": "12.000 m² · khẩu độ 36 m", "type": "Nhà xưởng & kho", "client": "Doanh nghiệp sản xuất", "status": "done", "time": "2024", "items": ["Móng & nền bê tông chịu tải", "Kết cấu thép tiền chế", "Mái tôn cách nhiệt, dock xuất hàng", "Sân bãi, đường nội bộ"], "cover": "assets/img/photos/ct-nha-xuong.webp", "gallery": ["assets/img/photos/ct-nha-xuong.webp", "assets/img/photos/hero-3.webp", "assets/img/photos/sv-cong-nghiep.webp"], "video": "", "summary": "Nhà xưởng kết cấu thép tiền chế, nền bê tông chịu tải nặng, hệ thống dock xuất nhập hàng.", "description": "Công trình được triển khai song song nhiều mũi thi công để kịp tiến độ đưa vào sản xuất.\n\nNền xưởng xử lý chống bụi, chịu tải xe nâng; mái tôn có lớp cách nhiệt và hệ thông gió tự nhiên.", "featured": true, "published": true, "order": 3 },
+      { "id": "c5", "slug": "chung-cu-12-tang", "name": "Khu chung cư 12 tầng", "category": "Nhà ở dân dụng", "location": "TP. Biên Hoà, Đồng Nai", "scale": "12 tầng · 96 căn hộ", "type": "Chung cư", "client": "Chủ đầu tư dự án", "status": "ongoing", "time": "Dự kiến hoàn thành 2027", "items": ["Thi công kết cấu phần thô", "Xây tô, chống thấm", "Hệ thống kỹ thuật âm"], "cover": "assets/img/photos/ct-chung-cu.webp", "gallery": ["assets/img/photos/ct-chung-cu.webp", "assets/img/photos/album-concrete-pour.webp", "assets/img/photos/hero-2.webp"], "video": "", "summary": "Đang thi công phần thô, đã hoàn thành kết cấu đến tầng 10.", "description": "Gói thầu kết cấu phần thô cho khối chung cư mười hai tầng. Công trường áp dụng nghiêm ngặt quy định an toàn: lưới bao che, giàn giáo kiểm định, huấn luyện định kỳ.", "featured": true, "published": true, "order": 4 },
+      { "id": "c6", "slug": "truong-tieu-hoc-3-tang", "name": "Trường tiểu học 3 tầng", "category": "Công trình công cộng", "location": "Tỉnh Long An", "scale": "3 tầng · 24 phòng học", "type": "Trường học", "client": "Chủ đầu tư công", "status": "done", "time": "2023", "items": ["Kết cấu & hoàn thiện khối phòng học", "Sân trường, cây xanh"], "cover": "assets/img/photos/ct-truong-hoc.webp", "gallery": ["assets/img/photos/ct-truong-hoc.webp"], "video": "", "summary": "Khối phòng học ba tầng hành lang rộng, sân trường nhiều bóng mát.", "description": "Công trình bàn giao trước năm học mới, đảm bảo an toàn và thông thoáng cho học sinh.", "featured": false, "published": true, "order": 5 },
+      { "id": "c7", "slug": "nha-hang-ca-phe-san-vuon", "name": "Nhà hàng – cà phê sân vườn", "category": "Thương mại – dịch vụ", "location": "TP. Vũng Tàu", "scale": "2 tầng · 650 m²", "type": "Nhà hàng, cà phê", "client": "Chủ đầu tư tư nhân", "status": "done", "time": "2025", "items": ["Khung thép & gạch trần", "Cửa kính lớn, cây xanh treo", "Chiếu sáng trang trí"], "cover": "assets/img/photos/ct-cafe.webp", "gallery": ["assets/img/photos/ct-cafe.webp"], "video": "", "summary": "Gạch trần, khung thép đen và cây xanh treo tạo không gian ấm cúng.", "description": "Công trình kết hợp khung thép và tường gạch trần, mở lớn ra phía sân vườn.", "featured": false, "published": true, "order": 6 },
+      { "id": "c8", "slug": "nha-pho-4-tang-dang-thi-cong", "name": "Nhà phố 4 tầng", "category": "Nhà ở dân dụng", "location": "Quận Gò Vấp, TP.HCM", "scale": "4 tầng · 6 × 18 m", "type": "Nhà ở gia đình", "client": "Chủ đầu tư tư nhân", "status": "ongoing", "time": "Dự kiến bàn giao 2026", "items": ["Thi công phần thô", "Hệ thống điện nước âm"], "cover": "assets/img/photos/sv-phan-tho.webp", "gallery": ["assets/img/photos/sv-phan-tho.webp", "assets/img/photos/team-engineer.webp", "assets/img/photos/album-concrete-pour.webp"], "video": "", "summary": "Đã hoàn thành kết cấu, đang xây tường và đi hệ thống điện nước.", "description": "Công trình đang trong giai đoạn phần thô. Chủ đầu tư nhận báo cáo hình ảnh tiến độ hằng tuần.", "featured": false, "published": true, "order": 7 }
+    ],
+    "jobs": [
+      { "id": "j1", "slug": "ky-su-giam-sat-cong-trinh", "title": "Kỹ sư xây dựng – giám sát công trình", "quantity": 2, "location": "TP.HCM và các tỉnh lân cận", "salary": "15 – 25 triệu/tháng", "type": "Toàn thời gian", "postedAt": "2026-10-15", "deadline": "2026-11-30", "status": "open", "description": "Giám sát thi công tại công trường, kiểm tra chất lượng, khối lượng và an toàn lao động; lập nhật ký và báo cáo tiến độ.", "requirements": ["Tốt nghiệp Đại học ngành Xây dựng dân dụng & công nghiệp", "Đọc hiểu bản vẽ kiến trúc, kết cấu", "Sử dụng AutoCAD, Excel"], "experience": "Từ 2 năm kinh nghiệm giám sát", "benefits": ["Lương thoả thuận theo năng lực, thưởng theo công trình", "Đóng BHXH, BHYT đầy đủ", "Hỗ trợ đi lại, điện thoại"], "contact": "Phòng nhân sự", "published": true, "order": 0 },
+      { "id": "j2", "slug": "chi-huy-truong-cong-trinh", "title": "Chỉ huy trưởng công trình", "quantity": 1, "location": "TP.HCM", "salary": "Thoả thuận", "type": "Toàn thời gian", "postedAt": "2026-10-10", "deadline": "2026-11-20", "status": "open", "description": "Điều hành toàn bộ công trường, lập kế hoạch thi công, quản lý nhân lực, vật tư và làm việc với chủ đầu tư.", "requirements": ["Có chứng chỉ chỉ huy trưởng", "Kỹ năng quản lý đội nhóm", "Chịu được áp lực tiến độ"], "experience": "Từ 5 năm, đã làm chỉ huy trưởng công trình dân dụng", "benefits": ["Thu nhập cạnh tranh", "Thưởng hoàn thành công trình", "Chế độ phúc lợi đầy đủ"], "contact": "Phòng nhân sự", "published": true, "order": 1 },
+      { "id": "j3", "slug": "tho-ne-tho-ho", "title": "Thợ nề / thợ hồ", "quantity": 10, "location": "Theo công trình", "salary": "450.000 – 600.000 đ/ngày", "type": "Theo công trình", "postedAt": "2026-10-18", "deadline": "2026-12-15", "status": "open", "description": "Xây tô, ốp lát, hoàn thiện theo phân công của tổ trưởng và kỹ sư công trình.", "requirements": ["Sức khoẻ tốt", "Tuân thủ quy định an toàn lao động"], "experience": "Ưu tiên có tay nghề từ 1 năm", "benefits": ["Lương trả đúng hạn", "Có chỗ ở tại công trình (tuỳ công trình)", "Trang bị bảo hộ lao động"], "contact": "Tổ tuyển dụng công trường", "published": true, "order": 2 },
+      { "id": "j4", "slug": "ke-toan-cong-trinh", "title": "Kế toán công trình", "quantity": 1, "location": "Văn phòng công ty", "salary": "10 – 14 triệu/tháng", "type": "Toàn thời gian", "postedAt": "2026-09-01", "deadline": "2026-09-30", "status": "closed", "description": "Theo dõi chi phí, vật tư, thanh quyết toán công trình.", "requirements": ["Tốt nghiệp Cao đẳng/Đại học Kế toán"], "experience": "Từ 1 năm kế toán xây dựng", "benefits": ["Làm giờ hành chính", "Chế độ phúc lợi đầy đủ"], "contact": "Phòng nhân sự", "published": true, "order": 3 }
+    ],
+    "team": [
+      { "id": "t1", "title": "Kỹ sư & giám sát", "text": "Kỹ sư kết cấu, giám sát thường trực tại mỗi công trình.", "image": "assets/img/photos/team-engineer.webp", "published": true, "order": 0 },
+      { "id": "t2", "title": "Đội thi công", "text": "Thợ nề, thợ sắt, cốp pha, điện nước lành nghề, làm việc lâu năm.", "image": "assets/img/photos/team-workers.webp", "published": true, "order": 1 },
+      { "id": "t3", "title": "Kiến trúc & thiết kế", "text": "Kiến trúc sư lên phương án, phối cảnh 3D và hồ sơ xin phép.", "image": "assets/img/photos/about-office.webp", "published": true, "order": 2 }
+    ],
+    "milestones": [
+      { "id": "m1", "year": "2014", "title": "Thành lập đội thi công", "text": "Bắt đầu với những công trình nhà ở dân dụng đầu tiên.", "published": true, "order": 0 },
+      { "id": "m2", "year": "2017", "title": "Thành lập công ty", "text": "Chuẩn hoá quy trình dự toán, giám sát và nghiệm thu.", "published": true, "order": 1 },
+      { "id": "m3", "year": "2020", "title": "Mở rộng sang công nghiệp", "text": "Thi công những nhà xưởng kết cấu thép đầu tiên.", "published": true, "order": 2 },
+      { "id": "m4", "year": "2023", "title": "Cột mốc 200 công trình", "text": "Đội ngũ vượt 80 kỹ sư và công nhân lành nghề.", "published": true, "order": 3 },
+      { "id": "m5", "year": "2026", "title": "Chuyển đổi số", "text": "Báo cáo tiến độ trực tuyến, website và kênh tư vấn mới.", "published": true, "order": 4 }
+    ],
+    "certs": [
+      { "id": "k1", "title": "Chứng chỉ năng lực hoạt động xây dựng", "text": "[Hạng, số chứng chỉ – doanh nghiệp cung cấp]", "icon": "award", "published": true, "order": 0 },
+      { "id": "k2", "title": "Giấy chứng nhận đăng ký doanh nghiệp", "text": "[Mã số thuế, ngày cấp]", "icon": "file", "published": true, "order": 1 },
+      { "id": "k3", "title": "Hồ sơ năng lực", "text": "[File PDF – tải lên trong quản trị]", "icon": "layers", "published": true, "order": 2 }
+    ],
+    "partners": [
+      { "id": "pa1", "name": "[Logo đối tác 1]", "image": "", "published": true, "order": 0 },
+      { "id": "pa2", "name": "[Logo đối tác 2]", "image": "", "published": true, "order": 1 },
+      { "id": "pa3", "name": "[Nhà cung cấp thép]", "image": "", "published": true, "order": 2 },
+      { "id": "pa4", "name": "[Nhà cung cấp xi măng]", "image": "", "published": true, "order": 3 },
+      { "id": "pa5", "name": "[Ngân hàng đối tác]", "image": "", "published": true, "order": 4 }
+    ],
+    "media": [
+      { "id": "md1", "name": "Banner – nhà phố hoàng hôn", "url": "assets/img/photos/hero-1.webp", "order": 0 },
+      { "id": "md2", "name": "Banner – công trường", "url": "assets/img/photos/hero-2.webp", "order": 1 },
+      { "id": "md3", "name": "Banner – nhà xưởng", "url": "assets/img/photos/hero-3.webp", "order": 2 },
+      { "id": "md4", "name": "Kỹ sư xem bản vẽ", "url": "assets/img/photos/about-site.webp", "order": 3 },
+      { "id": "md5", "name": "Phòng họp thiết kế", "url": "assets/img/photos/about-office.webp", "order": 4 },
+      { "id": "md6", "name": "Đội thi công", "url": "assets/img/photos/team-workers.webp", "order": 5 },
+      { "id": "md7", "name": "Kỹ sư kiểm tra thép", "url": "assets/img/photos/team-engineer.webp", "order": 6 },
+      { "id": "md8", "name": "Nhà dân dụng", "url": "assets/img/photos/sv-nha-o.webp", "order": 7 },
+      { "id": "md9", "name": "Nội thất bàn giao", "url": "assets/img/photos/sv-tron-goi.webp", "order": 8 },
+      { "id": "md10", "name": "Phần thô", "url": "assets/img/photos/sv-phan-tho.webp", "order": 9 },
+      { "id": "md11", "name": "Cải tạo", "url": "assets/img/photos/sv-cai-tao.webp", "order": 10 },
+      { "id": "md12", "name": "Khung thép", "url": "assets/img/photos/sv-cong-nghiep.webp", "order": 11 },
+      { "id": "md13", "name": "Bàn thiết kế", "url": "assets/img/photos/sv-thiet-ke.webp", "order": 12 },
+      { "id": "md14", "name": "Biệt thự", "url": "assets/img/photos/ct-biet-thu.webp", "order": 13 },
+      { "id": "md15", "name": "Văn phòng", "url": "assets/img/photos/ct-van-phong.webp", "order": 14 },
+      { "id": "md16", "name": "Nhà xưởng", "url": "assets/img/photos/ct-nha-xuong.webp", "order": 15 },
+      { "id": "md17", "name": "Trường học", "url": "assets/img/photos/ct-truong-hoc.webp", "order": 16 },
+      { "id": "md18", "name": "Nhà hàng cà phê", "url": "assets/img/photos/ct-cafe.webp", "order": 17 },
+      { "id": "md19", "name": "Chung cư đang thi công", "url": "assets/img/photos/ct-chung-cu.webp", "order": 18 },
+      { "id": "md20", "name": "Nội thất biệt thự", "url": "assets/img/photos/album-villa-interior.webp", "order": 19 },
+      { "id": "md21", "name": "Mặt tiền ban đêm", "url": "assets/img/photos/album-facade-night.webp", "order": 20 },
+      { "id": "md22", "name": "Đổ bê tông sàn", "url": "assets/img/photos/album-concrete-pour.webp", "order": 21 },
+      { "id": "md23", "name": "Sảnh văn phòng", "url": "assets/img/photos/album-office-lobby.webp", "order": 22 },
+      { "id": "md24", "name": "Tuyển dụng", "url": "assets/img/photos/tuyen-dung.webp", "order": 23 },
+      { "id": "md25", "name": "Văn phòng công ty", "url": "assets/img/photos/lien-he.webp", "order": 24 },
+      { "id": "md26", "name": "Logo (nền sáng)", "url": "assets/img/brand/logo-dark.svg", "order": 25 },
+      { "id": "md27", "name": "Logo (nền tối)", "url": "assets/img/brand/logo-light.svg", "order": 26 }
+    ],
+    "leads": [
+      { "id": "l-demo1", "name": "Nguyễn Văn A (mẫu)", "phone": "0900 111 222", "email": "", "service": "Thi công nhà trọn gói", "message": "Tôi có lô đất 5x20m, muốn xây nhà 4 tầng, cần tư vấn chi phí.", "source": "Trang liên hệ", "status": "new", "createdAt": "2026-10-24T08:30:00.000Z" },
+      { "id": "l-demo2", "name": "Trần Thị B (mẫu)", "phone": "0900 333 444", "email": "", "service": "Sửa chữa, cải tạo công trình", "message": "Nhà bị thấm sàn mái, cần khảo sát.", "source": "Trang chủ", "status": "done", "createdAt": "2026-10-20T03:10:00.000Z" }
+    ],
+    "applications": [
+      { "id": "a-demo1", "jobId": "j1", "jobTitle": "Kỹ sư xây dựng – giám sát công trình", "name": "Lê Văn C (mẫu)", "phone": "0900 555 666", "email": "ungvien@example.com", "note": "3 năm kinh nghiệm giám sát nhà phố.", "cvName": "", "cvData": "", "status": "new", "createdAt": "2026-10-23T02:00:00.000Z" }
+    ]
+  }
+}

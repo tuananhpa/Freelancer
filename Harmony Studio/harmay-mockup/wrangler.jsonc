@@ -1,0 +1,21 @@
+{
+  "name": "harmony-studio",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-10-17",
+  "workers_dev": true,
+  "assets": {
+    "directory": ".",
+    "binding": "ASSETS",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page",
+    "run_worker_first": ["/api/*"]
+  },
+  "vars": {
+    "CLOUDINARY_CLOUD_NAME": "dlw6jmsyf",
+    "CLOUDINARY_API_KEY": "345882647239966",
+    "CLOUDINARY_API_SECRET": "otltJttDEOtTd3eRvV3IxbcCKaY"
+  },
+  "observability": {
+    "enabled": true
+  }
+}

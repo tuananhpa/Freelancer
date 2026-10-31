@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /exam/take/
+
+Sitemap: https://uranuscenter.com/sitemap.xml

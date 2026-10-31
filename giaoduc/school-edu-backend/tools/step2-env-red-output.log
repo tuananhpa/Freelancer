@@ -1,0 +1,42 @@
+
+> school-edu-backend@0.1.0 test
+> vitest run tests/migrations.test.ts tests/password.test.ts
+
+
+ RUN  v3.2.7 D:/Freelancer/giaoduc/school-edu-backend
+
+ ✓ tests/password.test.ts (4 tests) 230ms
+ ❯ tests/migrations.test.ts (7 tests | 1 failed) 606ms
+   × All four migrations > seeds only the requested Admin with a hash and required first password change 55ms
+     → Set ADMIN_INITIAL_PASSWORD in the test process to verify the saved bootstrap hash: expected 'undefined' to be 'string' // Object.is equality
+   ✓ All four migrations > never overwrites a changed existing admin when the seed is applied again 18ms
+   ✓ All four migrations > enforces usernames without case sensitivity and allows multiple NULL usernames 18ms
+   ✓ All four migrations > accepts only TX/GK/CK or NULL assessment types 15ms
+   ✓ All four migrations > stores one global settings row with editable branding and no seeded key/contact details 17ms
+   ✓ All four migrations > defaults grade weights to 1/2/3 and cascades them when the classroom is deleted 14ms
+   ✓ Seed generator > requires a process password, generates a valid seed, and never prints the password  467ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/migrations.test.ts > All four migrations > seeds only the requested Admin with a hash and required first password change
+AssertionError: Set ADMIN_INITIAL_PASSWORD in the test process to verify the saved bootstrap hash: expected 'undefined' to be 'string' // Object.is equality
+
+Expected: "string"
+Received: "undefined"
+
+ ❯ tests/migrations.test.ts:44:114
+     42|     expect(rows[0]).toMatchObject({ id: adminId, username: 'Admin', em…
+     43|     const password = process.env.ADMIN_INITIAL_PASSWORD;
+     44|     expect(typeof password, 'Set ADMIN_INITIAL_PASSWORD in the test pr…
+       |                                                                                                                  ^
+     45|     expect(password!.length).toBeGreaterThan(0);
+     46|     expect(readFileSync(new URL('../migrations/0004_seed_admin.sql', i…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  1 failed | 10 passed (11)
+   Start at  16:15:45
+   Duration  1.85s (transform 152ms, setup 0ms, collect 269ms, tests 837ms, environment 0ms, prepare 1.03s)
+

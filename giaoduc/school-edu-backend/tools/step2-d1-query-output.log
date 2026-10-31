@@ -1,0 +1,37 @@
+[
+  {
+    "results": [
+      {
+        "username": "Admin",
+        "role": "ADMIN",
+        "must_change_password": 1
+      }
+    ],
+    "success": true,
+    "meta": {
+      "duration": 0
+    }
+  },
+  {
+    "results": [
+      {
+        "id": 1,
+        "provider": "GEMINI",
+        "brand_name": "Điểm Sáng",
+        "api_key_enc": null,
+        "contact_email": null
+      }
+    ],
+    "success": true,
+    "meta": {
+      "duration": 0
+    }
+  },
+  {
+    "results": [],
+    "success": true,
+    "meta": {
+      "duration": 0
+    }
+  }
+]

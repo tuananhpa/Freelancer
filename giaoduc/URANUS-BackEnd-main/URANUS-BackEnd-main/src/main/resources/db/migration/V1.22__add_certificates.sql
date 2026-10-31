@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS certificates (
+    id UUID PRIMARY KEY,
+    user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+    course_id UUID NOT NULL REFERENCES courses(id) ON DELETE CASCADE,
+    issue_date TIMESTAMP WITHOUT TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    unique_code VARCHAR(50) NOT NULL UNIQUE,
+    pdf_url TEXT,
+    UNIQUE(user_id, course_id)
+);

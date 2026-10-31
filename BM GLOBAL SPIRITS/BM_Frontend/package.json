@@ -1,0 +1,23 @@
+{
+  "name": "bm-global-spirits-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "BM Global Spirits — Rượu mạnh nhập khẩu, tuyển từng chai (615 sản phẩm, 171 thương hiệu, 26 quốc gia)",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5173",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 4173",
+    "deploy": "npm run build && npx --yes wrangler deploy"
+  },
+  "dependencies": {
+    "gsap": "^3.13.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^6.2.0",
+    "wrangler": "^4.40.0"
+  }
+}

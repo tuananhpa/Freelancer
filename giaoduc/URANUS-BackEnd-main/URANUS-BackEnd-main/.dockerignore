@@ -1,0 +1,10 @@
+# Docker ignore for backend
+target/
+.mvn/
+mvnw
+mvnw.cmd
+.git/
+.idea/
+*.iml
+.DS_Store
+*.log

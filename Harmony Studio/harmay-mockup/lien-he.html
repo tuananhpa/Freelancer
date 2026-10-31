@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="vi" class="js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Liên hệ — HARMONY.STUDIO</title>
+  <link rel="preload" href="assets/fonts/prata-normal-vietnamese.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/prata-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/intertight-normal-vietnamese.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/intertight-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body data-page="contact" data-header="dark">
+  <main class="page-main" id="main">
+    <section class="pagehead">
+      <div class="pagehead__giant mega" aria-hidden="true">CONTACT</div>
+      <span class="label" style="display:block;margin-bottom:16px">Kết nối trực tiếp cùng phòng mẫu</span>
+      <h1>Đặt may mẫu riêng hoặc thuê thiết kế cho xưởng</h1>
+      <p class="lead">Chọn nhu cầu bên dưới hoặc nhắn trực tiếp qua Zalo, Messenger hay Hotline.</p>
+    </section>
+
+    <section class="contact" aria-label="Form và thông tin liên hệ">
+      <div class="contact__form" data-reveal>
+        <form class="form" data-mock-form>
+          <fieldset class="field">
+            <legend>01 · Chọn nhu cầu của bạn *</legend>
+            <div class="needs">
+              <label class="need"><input type="radio" name="need" value="dat-may" checked><span>Đặt may sản phẩm riêng<small>May theo số đo từ mẫu trong lookbook hoặc ý tưởng riêng</small></span></label>
+              <label class="need"><input type="radio" name="need" value="thue-thiet-ke"><span>Thuê thiết kế cho xưởng<small>Phát triển mẫu lẻ hoặc trọn bộ sưu tập B2B</small></span></label>
+              <label class="need"><input type="radio" name="need" value="hoi-bst"><span>Hỏi về bộ sưu tập<small>Tư vấn kiểu dáng, màu sắc và lịch hẹn tại studio</small></span></label>
+            </div>
+          </fieldset>
+          <div class="row">
+            <div class="field"><label for="fName">Họ và tên / Tên xưởng *</label><input id="fName" required placeholder="Nhập tên của bạn"></div>
+            <div class="field"><label for="fPhone">Số điện thoại / Zalo *</label><input id="fPhone" type="tel" required placeholder="09xx xxx xxx"></div>
+          </div>
+          <div class="row">
+            <div class="field"><label for="fEmail">Email (không bắt buộc)</label><input id="fEmail" type="email" placeholder="ten@domain.com"></div>
+            <div class="field"><label for="fLook">Mẫu / bộ sưu tập quan tâm</label><input id="fLook" placeholder="VD: LOOK 04 hoặc Chương ROUGE"></div>
+          </div>
+          <div class="field"><label for="fMsg">Nội dung trao đổi</label><textarea id="fMsg" placeholder="Cho Harmony biết thêm về dịp mặc, số đo hoặc nhu cầu thiết kế của xưởng..."></textarea></div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <button class="btn btn--accent" type="submit"><span>Gửi yêu cầu</span><svg class="arr" viewBox="0 0 24 10" fill="none"><path d="M0 5H22M17 1L22 5L17 9" stroke="currentColor" stroke-width="1.3"/></svg></button>
+            <a class="btn btn--ghost" data-site-href="zalo" href="#zalo"><span>Nhắn Zalo</span></a>
+            <a class="btn btn--ghost" data-site-href="messenger" href="#messenger"><span>Nhắn Messenger</span></a>
+          </div>
+        </form>
+        <div class="form-ok" role="status">
+          <h3>Đã gửi thông tin thành công</h3>
+          <p>Cảm ơn bạn đã liên hệ HARMONY.STUDIO. Đội ngũ sẽ phản hồi qua số điện thoại/Zalo bạn đã cung cấp trong thời gian sớm nhất.</p>
+        </div>
+      </div>
+
+      <aside class="contact__info" data-reveal>
+        <div>
+          <span class="label">Kênh liên hệ nhanh</span>
+          <ul class="contact__list" style="margin-top:12px">
+            <li>Hotline: <a data-site-href="phoneHref" href="tel:0900000000"><strong data-site="phone">0900 000 000</strong></a> <b class="tbc">[[CẦN XÁC NHẬN]]</b></li>
+            <li>Zalo: <a data-site-href="zalo" href="#zalo">Nhắn Zalo trực tiếp</a> <b class="tbc">[[CẦN XÁC NHẬN]]</b></li>
+            <li>Messenger: <a data-site-href="messenger" href="#messenger">Nhắn qua Facebook</a> <b class="tbc">[[CẦN XÁC NHẬN]]</b></li>
+            <li>Email: <a href="mailto:contact@harmony.studio" data-site="email">contact@harmony.studio</a> <b class="tbc">[[CẦN XÁC NHẬN]]</b></li>
+          </ul>
+        </div>
+        <div>
+          <span class="label">Phòng mẫu & lịch hẹn</span>
+          <p style="margin-top:12px"><span data-site="address">Studio tại Việt Nam</span> <b class="tbc">[[CẦN XÁC NHẬN]]</b></p>
+          <p class="small" style="color:var(--ink-soft);margin-top:6px">Đón khách thử đồ và làm việc cùng xưởng theo lịch hẹn trước.</p>
+        </div>
+        <div class="pic-tall pic-tall--cut" style="background:#E6D6BD;max-width:300px">
+          <img src="assets/img/cut/look-03-1100.webp" alt="Đầm kem cổ V ôm dáng" width="352" height="1100" loading="lazy">
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="footer" id="footer"></footer>
+
+  <script src="assets/js/vendor/gsap.min.js"></script>
+  <script src="assets/js/vendor/ScrollTrigger.min.js"></script>
+  <script src="assets/js/vendor/CustomEase.min.js"></script>
+  <script src="assets/js/vendor/lenis.min.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

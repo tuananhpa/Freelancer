@@ -1,0 +1,16 @@
+
+> school-edu-backend@0.1.0 test
+> vitest run tests/migrations.test.ts tests/password.test.ts
+
+
+ RUN  v3.2.7 D:/Freelancer/giaoduc/school-edu-backend
+
+ ✓ tests/password.test.ts (4 tests) 193ms
+ ✓ tests/migrations.test.ts (7 tests) 430ms
+   ✓ Seed generator > requires a process password, generates a valid seed, and never prints the password  328ms
+
+ Test Files  2 passed (2)
+      Tests  11 passed (11)
+   Start at  16:16:14
+   Duration  1.26s (transform 87ms, setup 0ms, collect 144ms, tests 623ms, environment 0ms, prepare 550ms)
+

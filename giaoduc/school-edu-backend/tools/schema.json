@@ -1,0 +1,4235 @@
+{
+  "activities": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "title",
+        "pgType": "varchar",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "slug",
+        "pgType": "varchar",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "summary",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "content",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "cover_image_url",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "images",
+        "pgType": "jsonb",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "category",
+        "pgType": "varchar",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "status",
+        "pgType": "varchar",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "pinned",
+        "pgType": "bool",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "author_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "reviewed_by",
+        "pgType": "uuid",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "review_note",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "published_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "view_count",
+        "pgType": "int8",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "created_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "updated_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (author_id) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (reviewed_by) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      },
+      {
+        "type": "u",
+        "def": "UNIQUE (slug)"
+      }
+    ]
+  },
+  "assignment_submissions": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "assignment_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "student_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "content",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "file_url",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "score",
+        "pgType": "float8",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "feedback",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "status",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "submitted_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "graded_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (assignment_id) REFERENCES assignments(id)"
+      },
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (student_id) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      },
+      {
+        "type": "u",
+        "def": "UNIQUE (assignment_id, student_id)"
+      }
+    ]
+  },
+  "assignments": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "title",
+        "pgType": "varchar",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "description",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "attachment_url",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "due_date",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "max_score",
+        "pgType": "float8",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "assignment_type",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "instructions",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "min_word_count",
+        "pgType": "int4",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "max_word_count",
+        "pgType": "int4",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "expected_answer",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "language_level",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "rubric_config",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "course_id",
+        "pgType": "uuid",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "classroom_id",
+        "pgType": "uuid",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "teacher_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "created_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (classroom_id) REFERENCES classrooms(id)"
+      },
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (course_id) REFERENCES courses(id)"
+      },
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (teacher_id) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      }
+    ]
+  },
+  "attendances": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "classroom_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "student_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "attendance_date",
+        "pgType": "date",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "week_number",
+        "pgType": "int4",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "session_number",
+        "pgType": "int4",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "status",
+        "pgType": "varchar",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "recorded_by",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "created_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (classroom_id) REFERENCES classrooms(id)"
+      },
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (recorded_by) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (student_id) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      },
+      {
+        "type": "u",
+        "def": "UNIQUE (classroom_id, student_id, week_number, session_number)"
+      },
+      {
+        "type": "u",
+        "def": "UNIQUE (classroom_id, student_id, week_number, session_number)"
+      }
+    ]
+  },
+  "audit_logs": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "user_id",
+        "pgType": "uuid",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "action",
+        "pgType": "varchar",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "entity_name",
+        "pgType": "varchar",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "entity_id",
+        "pgType": "varchar",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "previous_state",
+        "pgType": "jsonb",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "new_state",
+        "pgType": "jsonb",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "ip_address",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "created_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      }
+    ]
+  },
+  "calendar_events": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "course_id",
+        "pgType": "uuid",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "title",
+        "pgType": "varchar",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "description",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "event_type",
+        "pgType": "varchar",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "start_time",
+        "pgType": "timestamp",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "end_time",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "meeting_link",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "created_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "updated_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (course_id) REFERENCES courses(id)"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      }
+    ]
+  },
+  "certificates": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "user_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "course_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "issue_date",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "unique_code",
+        "pgType": "varchar",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "pdf_url",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (course_id) REFERENCES courses(id)"
+      },
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      },
+      {
+        "type": "u",
+        "def": "UNIQUE (unique_code)"
+      },
+      {
+        "type": "u",
+        "def": "UNIQUE (user_id, course_id)"
+      }
+    ]
+  },
+  "class_exams": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "classroom_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "exam_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "open_time",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "close_time",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "folder_id",
+        "pgType": "uuid",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "created_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (classroom_id) REFERENCES classrooms(id)"
+      },
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (exam_id) REFERENCES exams(id)"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      }
+    ]
+  },
+  "class_folders": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "name",
+        "pgType": "varchar",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "classroom_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "parent_id",
+        "pgType": "uuid",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "created_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (classroom_id) REFERENCES classrooms(id)"
+      },
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (parent_id) REFERENCES class_folders(id)"
+      },
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (parent_id) REFERENCES class_folders(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      }
+    ]
+  },
+  "class_members": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "classroom_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "user_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "role",
+        "pgType": "varchar",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "joined_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (classroom_id) REFERENCES classrooms(id)"
+      },
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      },
+      {
+        "type": "u",
+        "def": "UNIQUE (classroom_id, user_id)"
+      }
+    ]
+  },
+  "class_post_comment_likes": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "comment_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "user_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "created_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (comment_id) REFERENCES class_post_comments(id)"
+      },
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      }
+    ]
+  },
+  "class_post_comments": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "post_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "author_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "content",
+        "pgType": "text",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "created_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "parent_id",
+        "pgType": "uuid",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (author_id) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (parent_id) REFERENCES class_post_comments(id)"
+      },
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (post_id) REFERENCES class_posts(id)"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      }
+    ]
+  },
+  "class_post_likes": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "post_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "user_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "created_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (post_id) REFERENCES class_posts(id)"
+      },
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      }
+    ]
+  },
+  "class_posts": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "classroom_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "author_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "type",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "content",
+        "pgType": "text",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "created_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "attachments",
+        "pgType": "jsonb",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (author_id) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (classroom_id) REFERENCES classrooms(id)"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      }
+    ]
+  },
+  "class_resources": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "classroom_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "folder_id",
+        "pgType": "uuid",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "resource_type",
+        "pgType": "varchar",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "resource_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "created_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (classroom_id) REFERENCES classrooms(id)"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      }
+    ]
+  },
+  "classroom_courses": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "classroom_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "course_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "linked_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (classroom_id) REFERENCES classrooms(id)"
+      },
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (course_id) REFERENCES courses(id)"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      }
+    ]
+  },
+  "classrooms": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "name",
+        "pgType": "varchar",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "section",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "subject",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "invite_code",
+        "pgType": "varchar",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "teacher_id",
+        "pgType": "uuid",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "is_admin_group",
+        "pgType": "bool",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "status",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "leaderboard_enabled",
+        "pgType": "bool",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "meeting_link",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "thumbnail",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "created_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (teacher_id) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      },
+      {
+        "type": "u",
+        "def": "UNIQUE (invite_code)"
+      }
+    ]
+  },
+  "content_folders": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "name",
+        "pgType": "varchar",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "description",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "color",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "owner_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "created_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (owner_id) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      }
+    ]
+  },
+  "content_resources": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "title",
+        "pgType": "varchar",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "description",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "resource_type",
+        "pgType": "varchar",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "grade",
+        "pgType": "varchar",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "subject",
+        "pgType": "varchar",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "curriculum_book",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "author_name",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "uploader_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "folder_id",
+        "pgType": "uuid",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "file_url",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "external_url",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "file_name",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "file_size",
+        "pgType": "int8",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "file_format",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "attached_exam_id",
+        "pgType": "uuid",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "audio_transcript",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "learning_outcomes",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "writing_prompt",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "tags",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "is_public",
+        "pgType": "bool",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "view_count",
+        "pgType": "int8",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "like_count",
+        "pgType": "int8",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "bookmark_count",
+        "pgType": "int8",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "created_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "updated_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (attached_exam_id) REFERENCES exams(id)"
+      },
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (folder_id) REFERENCES content_folders(id)"
+      },
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (uploader_id) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      }
+    ]
+  },
+  "content_shares": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "resource_type",
+        "pgType": "varchar",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "resource_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "share_token",
+        "pgType": "varchar",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "created_by",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "expires_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "created_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (created_by) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      },
+      {
+        "type": "u",
+        "def": "UNIQUE (share_token)"
+      }
+    ]
+  },
+  "courses": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "title",
+        "pgType": "varchar",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "description",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "thumbnail_url",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "teacher_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "status",
+        "pgType": "varchar",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "created_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "updated_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (teacher_id) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      }
+    ]
+  },
+  "deck_ratings": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "deck_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "student_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "rating",
+        "pgType": "int4",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "created_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "updated_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (deck_id) REFERENCES flashcard_decks(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (student_id) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      },
+      {
+        "type": "u",
+        "def": "UNIQUE (deck_id, student_id)"
+      }
+    ]
+  },
+  "discussion_replies": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "discussion_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "author_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "content",
+        "pgType": "text",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "is_accepted_answer",
+        "pgType": "bool",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "created_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "updated_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (author_id) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (discussion_id) REFERENCES discussions(id)"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      }
+    ]
+  },
+  "discussions": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "course_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "author_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "title",
+        "pgType": "varchar",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "content",
+        "pgType": "text",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "is_pinned",
+        "pgType": "bool",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "is_resolved",
+        "pgType": "bool",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "created_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "updated_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (author_id) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (course_id) REFERENCES courses(id)"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      }
+    ]
+  },
+  "draft_answers": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "result_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "question_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "selected_option_id",
+        "pgType": "uuid",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "text_response",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "saved_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (selected_option_id) REFERENCES question_options(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (question_id) REFERENCES questions(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (result_id) REFERENCES student_exam_results(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      },
+      {
+        "type": "u",
+        "def": "UNIQUE (result_id, question_id)"
+      }
+    ]
+  },
+  "enrollments": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "student_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "course_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "enrolled_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (course_id) REFERENCES courses(id)"
+      },
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (student_id) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      },
+      {
+        "type": "u",
+        "def": "UNIQUE (student_id, course_id)"
+      }
+    ]
+  },
+  "exams": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "title",
+        "pgType": "varchar",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "description",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "subject",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "grade",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "exam_code",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "exam_type",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "pdf_url",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "audio_url",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "audio_tracks",
+        "pgType": "jsonb",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "access_code",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "duration_minutes",
+        "pgType": "int4",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "start_time",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "end_time",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "passing_score",
+        "pgType": "float8",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "is_published",
+        "pgType": "bool",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "visibility",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "shuffle_questions",
+        "pgType": "bool",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "review_policy",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "max_attempts",
+        "pgType": "int4",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "teacher_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "folder_id",
+        "pgType": "uuid",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "created_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "access_password",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "is_public",
+        "pgType": "bool",
+        "nullable": true,
+        "default": "true"
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (folder_id) REFERENCES content_folders(id) ON DELETE SET NULL"
+      },
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (teacher_id) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      },
+      {
+        "type": "u",
+        "def": "UNIQUE (exam_code)"
+      }
+    ]
+  },
+  "flashcard_decks": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "title",
+        "pgType": "varchar",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "description",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "visibility",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "access_code",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "owner_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "folder_id",
+        "pgType": "uuid",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "created_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "tags",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "deck_type",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "subject",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "views_count",
+        "pgType": "int4",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "saves_count",
+        "pgType": "int4",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "shares_count",
+        "pgType": "int4",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "image_url",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "average_rating",
+        "pgType": "numeric",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "rating_count",
+        "pgType": "int4",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (folder_id) REFERENCES content_folders(id) ON DELETE SET NULL"
+      },
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (owner_id) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      }
+    ]
+  },
+  "flashcards": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "front_content",
+        "pgType": "text",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "back_content",
+        "pgType": "text",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "image_url",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "audio_url",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "word_type",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "definition_en",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "definition_vi",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "example",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "phonetic",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "example_translation",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "created_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "deck_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (deck_id) REFERENCES flashcard_decks(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      }
+    ]
+  },
+  "lesson_comments": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "content",
+        "pgType": "varchar",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "lesson_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "user_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "parent_id",
+        "pgType": "uuid",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "created_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (lesson_id) REFERENCES lessons(id)"
+      },
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (parent_id) REFERENCES lesson_comments(id)"
+      },
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      }
+    ]
+  },
+  "lesson_progress": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "student_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "lesson_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "is_completed",
+        "pgType": "bool",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "completed_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (lesson_id) REFERENCES lessons(id)"
+      },
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (student_id) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      },
+      {
+        "type": "u",
+        "def": "UNIQUE (student_id, lesson_id)"
+      }
+    ]
+  },
+  "lessons": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "title",
+        "pgType": "varchar",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "content",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "resource_url",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "content_type",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "duration_minutes",
+        "pgType": "int4",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "order_index",
+        "pgType": "int4",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "is_free",
+        "pgType": "bool",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "section_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (section_id) REFERENCES sections(id)"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      }
+    ]
+  },
+  "messages_archived": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "sender_id",
+        "pgType": "uuid",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "receiver_id",
+        "pgType": "uuid",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "content",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "is_read",
+        "pgType": "bool",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "is_deleted_by_sender",
+        "pgType": "bool",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "is_deleted_by_receiver",
+        "pgType": "bool",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "sent_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": []
+  },
+  "mistake_vault_items": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "student_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "item_type",
+        "pgType": "varchar",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "question_id",
+        "pgType": "uuid",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "flashcard_id",
+        "pgType": "uuid",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "content",
+        "pgType": "text",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "correct_answer",
+        "pgType": "text",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "wrong_answer",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "skill_tag",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "source_title",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "wrong_count",
+        "pgType": "int4",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "repetitions",
+        "pgType": "int4",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "interval_days",
+        "pgType": "int4",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "ease_factor",
+        "pgType": "float8",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "next_review_date",
+        "pgType": "date",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "last_reviewed_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "created_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "updated_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (student_id) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      }
+    ]
+  },
+  "notifications": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "user_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "title",
+        "pgType": "varchar",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "message",
+        "pgType": "varchar",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "is_read",
+        "pgType": "bool",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "link",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "type",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "actor_id",
+        "pgType": "uuid",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "actor_name",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "actor_avatar",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "entity_type",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "entity_id",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "created_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      }
+    ]
+  },
+  "password_reset_tokens": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "token",
+        "pgType": "varchar",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "user_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "expiry_date",
+        "pgType": "timestamp",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "created_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      },
+      {
+        "type": "u",
+        "def": "UNIQUE (token)"
+      }
+    ]
+  },
+  "placement_results": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "user_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "skill_scores",
+        "pgType": "text",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "recommended_level",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "completed_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      },
+      {
+        "type": "u",
+        "def": "UNIQUE (user_id)"
+      }
+    ]
+  },
+  "question_groups": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "exam_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "group_title",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "passage_text",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "audio_url",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "order_index",
+        "pgType": "int4",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "created_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (exam_id) REFERENCES exams(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      }
+    ]
+  },
+  "question_options": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "content",
+        "pgType": "text",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "is_correct",
+        "pgType": "bool",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "question_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (question_id) REFERENCES questions(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      }
+    ]
+  },
+  "questions": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "content",
+        "pgType": "text",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "image_url",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "question_type",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "group_id",
+        "pgType": "uuid",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "explanation",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "sheet_answer_type",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "order_index",
+        "pgType": "int4",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "points",
+        "pgType": "float8",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "skill_tag",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "scoring_config",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "exam_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (exam_id) REFERENCES exams(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      }
+    ]
+  },
+  "resource_bookmarks": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "user_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "resource_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "folder_id",
+        "pgType": "uuid",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "saved_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (folder_id) REFERENCES content_folders(id)"
+      },
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (resource_id) REFERENCES content_resources(id)"
+      },
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      },
+      {
+        "type": "u",
+        "def": "UNIQUE (user_id, resource_id)"
+      }
+    ]
+  },
+  "resource_likes": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "user_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "resource_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "created_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (resource_id) REFERENCES content_resources(id)"
+      },
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      },
+      {
+        "type": "u",
+        "def": "UNIQUE (user_id, resource_id)"
+      }
+    ]
+  },
+  "resource_submissions": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "resource_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "student_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "content",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "score",
+        "pgType": "float8",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "feedback",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "status",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "submitted_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "graded_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "graded_by",
+        "pgType": "uuid",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (graded_by) REFERENCES users(id) ON DELETE SET NULL"
+      },
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (resource_id) REFERENCES content_resources(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (student_id) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      },
+      {
+        "type": "u",
+        "def": "UNIQUE (resource_id, student_id)"
+      }
+    ]
+  },
+  "sections": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "title",
+        "pgType": "varchar",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "order_index",
+        "pgType": "int4",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "course_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (course_id) REFERENCES courses(id)"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      }
+    ]
+  },
+  "student_answers": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "result_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "question_id",
+        "pgType": "uuid",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "selected_option_id",
+        "pgType": "uuid",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "is_correct",
+        "pgType": "bool",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "points_earned",
+        "pgType": "float8",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "text_response",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "ai_feedback",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "ai_suggested_score",
+        "pgType": "float8",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "reviewed",
+        "pgType": "bool",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (selected_option_id) REFERENCES question_options(id) ON DELETE SET NULL"
+      },
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (question_id) REFERENCES questions(id) ON DELETE SET NULL"
+      },
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (result_id) REFERENCES student_exam_results(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      }
+    ]
+  },
+  "student_card_progress": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "student_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "card_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "box_level",
+        "pgType": "int4",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "next_review_date",
+        "pgType": "date",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "times_reviewed",
+        "pgType": "int4",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "is_mastered",
+        "pgType": "bool",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (card_id) REFERENCES flashcards(id)"
+      },
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (student_id) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      }
+    ]
+  },
+  "student_class_enrollments": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "student_profile_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "classroom_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "created_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (classroom_id) REFERENCES classrooms(id)"
+      },
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (student_profile_id) REFERENCES student_profiles(id)"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      },
+      {
+        "type": "u",
+        "def": "UNIQUE (student_profile_id, classroom_id)"
+      }
+    ]
+  },
+  "student_exam_results": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "version",
+        "pgType": "int8",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "student_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "exam_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "started_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "submitted_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "total_score",
+        "pgType": "float8",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "is_passed",
+        "pgType": "bool",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "cheat_warning_count",
+        "pgType": "int4",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "cheat_details",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "notify_email",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "exam_snapshot",
+        "pgType": "jsonb",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "created_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (exam_id) REFERENCES exams(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (student_id) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      }
+    ]
+  },
+  "student_favorite_decks": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "student_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "deck_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "created_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (deck_id) REFERENCES flashcard_decks(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (student_id) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      },
+      {
+        "type": "u",
+        "def": "UNIQUE (student_id, deck_id)"
+      }
+    ]
+  },
+  "student_profiles": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "student_code",
+        "pgType": "varchar",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "full_name",
+        "pgType": "varchar",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "date_of_birth",
+        "pgType": "date",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "phone",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "facility",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "user_id",
+        "pgType": "uuid",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "status",
+        "pgType": "varchar",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "created_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "updated_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      },
+      {
+        "type": "u",
+        "def": "UNIQUE (student_code)"
+      },
+      {
+        "type": "u",
+        "def": "UNIQUE (user_id)"
+      },
+      {
+        "type": "u",
+        "def": "UNIQUE (user_id)"
+      }
+    ]
+  },
+  "support_conversations": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "requester_id",
+        "pgType": "uuid",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "guest_token",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "guest_name",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "guest_contact",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "assignee_id",
+        "pgType": "uuid",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "status",
+        "pgType": "varchar",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "subject",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "created_at",
+        "pgType": "timestamp",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "last_message_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "closed_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (assignee_id) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (requester_id) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      },
+      {
+        "type": "u",
+        "def": "UNIQUE (guest_token)"
+      }
+    ]
+  },
+  "support_messages": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "conversation_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "sender_id",
+        "pgType": "uuid",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "sender_role",
+        "pgType": "varchar",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "content",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "image_url",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "sent_at",
+        "pgType": "timestamp",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "read_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (conversation_id) REFERENCES support_conversations(id)"
+      },
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (sender_id) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      }
+    ]
+  },
+  "user_activity_log": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "user_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "activity_type",
+        "pgType": "varchar",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "activity_date",
+        "pgType": "date",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "xp_earned",
+        "pgType": "int4",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "created_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      }
+    ]
+  },
+  "user_favorite_exams": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "user_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "exam_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "created_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (exam_id) REFERENCES exams(id)"
+      },
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      },
+      {
+        "type": "u",
+        "def": "UNIQUE (user_id, exam_id)"
+      }
+    ]
+  },
+  "user_gamification": {
+    "columns": [
+      {
+        "name": "user_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "total_xp",
+        "pgType": "int4",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "current_streak",
+        "pgType": "int4",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "longest_streak",
+        "pgType": "int4",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "last_activity_date",
+        "pgType": "date",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "badges",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (user_id)"
+      }
+    ]
+  },
+  "users": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "email",
+        "pgType": "varchar",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "password",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "full_name",
+        "pgType": "varchar",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "phone",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "avatar_url",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "role",
+        "pgType": "varchar",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "status",
+        "pgType": "varchar",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "auth_provider",
+        "pgType": "varchar",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "created_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "updated_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "last_active_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "pending_student_code",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "c",
+        "def": "CHECK (((role)::text = ANY (ARRAY['ADMIN'::text, 'TEACHER'::text, 'STUDENT'::text, 'OFFICE'::text, 'TEACHING_ASSISTANT'::text])))"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      },
+      {
+        "type": "u",
+        "def": "UNIQUE (email)"
+      }
+    ]
+  },
+  "verification_tokens": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "token",
+        "pgType": "varchar",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "user_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "expiry_date",
+        "pgType": "timestamp",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "created_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      },
+      {
+        "type": "u",
+        "def": "UNIQUE (token)"
+      }
+    ]
+  },
+  "writing_assessment_versions": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "assessment_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "version",
+        "pgType": "int4",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "source",
+        "pgType": "varchar",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "result_json",
+        "pgType": "text",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "overall_score",
+        "pgType": "float8",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "created_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "created_by",
+        "pgType": "uuid",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "note",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (assessment_id) REFERENCES writing_assessments(id)"
+      },
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (created_by) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      }
+    ]
+  },
+  "writing_assessments": {
+    "columns": [
+      {
+        "name": "id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": "gen_random_uuid()"
+      },
+      {
+        "name": "submission_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "assignment_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "student_id",
+        "pgType": "uuid",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "status",
+        "pgType": "varchar",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "overall_score",
+        "pgType": "float8",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "max_score",
+        "pgType": "float8",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "word_count",
+        "pgType": "int4",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "expected_level",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "estimated_level",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "original_ai_result_json",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "current_result_json",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "version",
+        "pgType": "int4",
+        "nullable": false,
+        "default": null
+      },
+      {
+        "name": "ai_model",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "prompt_version",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "schema_version",
+        "pgType": "varchar",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "error_message",
+        "pgType": "text",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "created_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "completed_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "last_edited_at",
+        "pgType": "timestamp",
+        "nullable": true,
+        "default": null
+      },
+      {
+        "name": "last_edited_by",
+        "pgType": "uuid",
+        "nullable": true,
+        "default": null
+      }
+    ],
+    "constraints": [
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (assignment_id) REFERENCES assignments(id)"
+      },
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (last_edited_by) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (student_id) REFERENCES users(id) ON DELETE CASCADE"
+      },
+      {
+        "type": "f",
+        "def": "FOREIGN KEY (submission_id) REFERENCES assignment_submissions(id)"
+      },
+      {
+        "type": "p",
+        "def": "PRIMARY KEY (id)"
+      },
+      {
+        "type": "u",
+        "def": "UNIQUE (submission_id)"
+      }
+    ]
+  }
+}

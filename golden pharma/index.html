@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>GOLDEN PHARMA — Công Ty Cổ Phần Quốc Tế Thú Y Vàng | Thuốc & Chế Phẩm Thú Y</title>
+  <link rel="icon" href="assets/brand/favicon.png" type="image/png">
+  <link rel="preload" href="assets/fonts/prata-normal-vietnamese.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/intertight-normal-vietnamese.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body data-page="home">
+  <!-- Intro thương hiệu nhẹ & nhanh (chỉ chạy lần đầu mỗi phiên, bấm/cuộn bỏ qua ngay) -->
+  <div class="intro" id="intro" aria-hidden="true">
+    <div class="intro__logo">
+      <img src="assets/brand/logo-mark-white.png" alt="Golden Pharma" width="56" height="56">
+    </div>
+    <div class="intro__word">GOLDEN PHARMA</div>
+    <div class="intro__sub">Công Ty Cổ Phần Quốc Tế Thú Y Vàng</div>
+  </div>
+
+  <main id="main">
+    <!-- 1. HERO: SÂN KHẤU SẢN PHẨM 3D NỔI & TÌM KIẾM NHANH -->
+    <section class="hero" aria-label="Giới thiệu sản phẩm chủ lực">
+      <div class="hero__bg-word" aria-hidden="true">GOLDEN PHARMA</div>
+      <div class="wrap hero__grid">
+        <div>
+          <span class="eyebrow">
+            <span class="eyebrow__dot"></span>
+            <span data-i18n="hero_eyebrow">Công Ty Cổ Phần Quốc Tế Thú Y Vàng · Chuẩn GMP-WHO</span>
+          </span>
+          <h1 class="hero__title" data-i18n="hero_title">
+            Dược phẩm & chế phẩm sinh học <em>vì sức khỏe vật nuôi</em>
+          </h1>
+          <p class="hero__desc" data-i18n="hero_desc">
+            Trọn bộ 30 dòng men vi sinh sống, vitamin khoáng đậm đặc, thảo dược giải độc và kháng sinh đặc trị chính hãng Golden Pharma — được tin dùng bởi hàng chục nghìn trang trại trên toàn quốc.
+          </p>
+
+          <form class="hero__search" action="san-pham.html" method="get" role="search">
+            <input type="search" name="q" placeholder="Tìm tên thuốc, công dụng (vd: GP-Guard, hen khẹc, vỗ béo, tiêu chảy)..." data-i18n-ph="hero_search_ph" aria-label="Tìm sản phẩm">
+            <button type="submit" class="btn btn--primary btn--sm" data-i18n="hero_search_btn">Tìm kiếm</button>
+          </form>
+
+          <div class="hero__tags">
+            <span>Tìm nhanh:</span>
+            <a class="hero__tag" href="san-pham.html?q=GP-GUARD">Bột rắc chuồng GP-GUARD</a>
+            <a class="hero__tag" href="san-pham.html?q=B-Complex">Vitamin B-Complex</a>
+            <a class="hero__tag" href="san-pham.html?q=ES12">ES12 Liquid Gà Chọi</a>
+            <a class="hero__tag" href="san-pham.html?cat=tang-trong-sinh-san">Siêu Vỗ Béo</a>
+            <a class="hero__tag" href="san-pham.html?cat=khang-sinh-dac-tri">Đặc trị hen & tiêu chảy</a>
+          </div>
+
+          <div class="hero__metrics">
+            <div class="hero__metric">
+              <b>68.500+</b>
+              <small data-i18n="hero_m1">Đơn hàng trên TikTok Shop</small>
+            </div>
+            <div class="hero__metric">
+              <b>30 dòng</b>
+              <small data-i18n="hero_m2">Sản phẩm chủ lực chính hãng</small>
+            </div>
+            <div class="hero__metric">
+              <b>4.7 ★</b>
+              <small data-i18n="hero_m3">Đánh giá thực tế từ nhà chăn nuôi</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sân khấu sản phẩm chính tách nền bo góc tròn chuẩn mẫu sample-product.png -->
+        <div class="hero-stage">
+          <div class="hero-stage__card" id="heroStageCard">
+            <div class="hero-stage__aura" aria-hidden="true"></div>
+            <div class="hero-stage__top">
+              <span class="hero-stage__pill">★ TOP BÁN CHẠY TIKTOK SHOP</span>
+              <span class="hero-stage__sold" id="heroStageSold">★ 4.7 · Đã bán 53.2K</span>
+            </div>
+            <a href="chi-tiet-san-pham.html?id=01" class="hero-stage__visual" id="heroStageLink" aria-label="Xem chi tiết sản phẩm">
+              <img class="hero-stage__img" id="heroStageImg" src="assets/img/cut/prod-01-cut-1000.webp" alt="GP-GUARD Bột Rắc Chuồng" width="380" height="440">
+            </a>
+            <div class="hero-stage__foot">
+              <div style="min-width:0">
+                <div class="hero-stage__name" id="heroStageName">GP-GUARD – Bột Rắc Chuồng Men Vi Sinh</div>
+                <div class="hero-stage__price" id="heroStagePrice">38.999đ <del>39.000đ</del></div>
+              </div>
+              <button type="button" class="btn btn--primary btn--sm" id="heroStageAdd">
+                <span>+ Thêm vào giỏ</span>
+              </button>
+            </div>
+          </div>
+          <div class="hero-thumbs" id="heroThumbs" role="tablist" aria-label="Chọn nhanh sản phẩm nổi bật"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. DANH MỤC THEO NHÓM CÔNG DỤNG -->
+    <section class="sec" aria-labelledby="catHead">
+      <div class="wrap">
+        <div class="sec-head" data-reveal>
+          <div>
+            <span class="eyebrow"><span class="eyebrow__dot"></span><span data-i18n="sec_cat_eyebrow">Danh mục chuyên biệt</span></span>
+            <h2 class="h2" id="catHead" data-i18n="sec_cat_title">Giải pháp theo nhóm công dụng & vật nuôi</h2>
+          </div>
+          <a href="san-pham.html" class="btn btn--outline btn--sm">Xem trọn bộ 30 sản phẩm →</a>
+        </div>
+        <div class="cat-strip" id="homeCatGrid" data-reveal></div>
+      </div>
+    </section>
+
+    <!-- 3. SÂN KHẤU 3D SẢN PHẨM BÁN CHẠY (Interactive Depth Stage) -->
+    <section class="sec sec--dark showcase" id="spotSection" aria-labelledby="spotHead">
+      <div class="wrap">
+        <div class="sec-head" data-reveal>
+          <div>
+            <span class="eyebrow"><span class="eyebrow__dot"></span><span data-i18n="sec_spot_eyebrow">Sân khấu sản phẩm bán chạy · Chạm để xoay & xem</span></span>
+            <h2 class="h2" id="spotHead" data-i18n="sec_spot_title">Top chế phẩm dẫn đầu doanh số của Golden Pharma</h2>
+          </div>
+          <div style="display:flex;gap:10px">
+            <button type="button" class="btn btn--ghost-light btn--sm" id="spotPrev" aria-label="Sản phẩm trước">← Trước</button>
+            <button type="button" class="btn btn--ghost-light btn--sm" id="spotNext" aria-label="Sản phẩm tiếp">Tiếp →</button>
+          </div>
+        </div>
+
+        <div class="showcase__wrap" data-reveal>
+          <div class="showcase__stage">
+            <div class="showcase__glow" aria-hidden="true"></div>
+            <div class="showcase__pedestal" aria-hidden="true"></div>
+            <div class="showcase__lineup" id="spotLineup"></div>
+          </div>
+
+          <div class="showcase__info">
+            <div class="showcase__meta">
+              <span class="showcase__rank" id="spotRank">TOP 01 BÁN CHẠY · MÃ GP-01</span>
+              <span class="showcase__sold" id="spotSold">★ 4.7 · 53.2K đã bán</span>
+            </div>
+            <h3 class="showcase__title" id="spotTitle">GP-GUARD Bột Rắc Chuồng</h3>
+            <p class="showcase__fullname" id="spotFullname"></p>
+            <div class="showcase__price" id="spotPrice">38.999đ</div>
+            <ul class="showcase__bullets" id="spotBullets"></ul>
+            <div class="showcase__btns">
+              <button type="button" class="btn btn--gold" id="spotAddBtn">+ Thêm vào giỏ hàng</button>
+              <a href="chi-tiet-san-pham.html?id=01" class="btn btn--ghost-light" id="spotDetailLink">Xem chi tiết & quy cách →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="showcase__dots" id="spotDots" aria-label="Chọn sản phẩm trên sân khấu"></div>
+      </div>
+    </section>
+
+    <!-- 4. LƯỚI SẢN PHẨM NỔI BẬT (Ảnh chính tách nền bo tròn góc chuẩn mẫu) -->
+    <section class="sec sec--white" aria-labelledby="bestHead">
+      <div class="wrap">
+        <div class="sec-head" data-reveal>
+          <div>
+            <span class="eyebrow"><span class="eyebrow__dot"></span><span data-i18n="sec_best_eyebrow">Sản phẩm chính hãng · Ảnh chuẩn bao bì thật</span></span>
+            <h2 class="h2" id="bestHead" data-i18n="sec_best_title">Danh mục sản phẩm nổi bật</h2>
+          </div>
+          <div class="filter-pills" id="homeAnimalFilters" role="tablist" aria-label="Lọc theo loài vật nuôi"></div>
+        </div>
+
+        <div class="prod-grid" id="homeProdGrid"></div>
+
+        <div style="text-align:center;margin-top:36px">
+          <a href="san-pham.html" class="btn btn--primary">Xem tất cả 30 sản phẩm Golden Pharma →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. KHỐI TẠO NIỀM TIN & CAM KẾT CHẤT LƯỢNG -->
+    <section class="sec sec--sage" aria-labelledby="trustHead">
+      <div class="wrap">
+        <div class="sec-head" data-reveal>
+          <div>
+            <span class="eyebrow"><span class="eyebrow__dot"></span><span data-i18n="sec_trust_eyebrow">Tiêu chuẩn chất lượng</span></span>
+            <h2 class="h2" id="trustHead" data-i18n="sec_trust_title">Vì sao trang trại & đại lý chọn Golden Pharma?</h2>
+          </div>
+        </div>
+
+        <div class="trust-grid" data-reveal>
+          <article class="trust-card">
+            <div class="trust-card__ic">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <h3>Chuẩn công bố TCCS & GMP-WHO</h3>
+            <p>Mỗi lô sản phẩm đều kiểm nghiệm hàm lượng vi sinh sống, vitamin và hoạt chất rõ ràng, không chứa chất cấm hay hormone độc hại.</p>
+          </article>
+          <article class="trust-card">
+            <div class="trust-card__ic">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3>68.500+ đơn hàng kiểm chứng</h3>
+            <p>Top thương hiệu thuốc và chế phẩm thú y bán chạy trên TikTok Shop <b>@thuyvanghanoi</b> với hơn 53.200 lượt bán riêng dòng GP-GUARD.</p>
+          </article>
+          <article class="trust-card">
+            <div class="trust-card__ic">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <h3>Tối ưu chi phí thức ăn (FCR)</h3>
+            <p>Hệ enzyme và chủng men Bacillus đậm đặc giúp vật nuôi hấp thu triệt để khẩu phần cám, rút ngắn thời gian nuôi và xuất bán sớm.</p>
+          </article>
+          <article class="trust-card">
+            <div class="trust-card__ic">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+            </div>
+            <h3>Bác sĩ thú y đồng hành 24/7</h3>
+            <p>Tư vấn phác đồ úm, phòng dịch và điều trị trực tiếp qua Zalo/Hotline <b>0968 486 985</b> cùng chính sách chiết khấu hấp dẫn cho đại lý.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. KHỐI KÊU GỌI LIÊN HỆ NHANH & ĐẠI LÝ -->
+    <section class="sec" aria-label="Tư vấn nhanh">
+      <div class="wrap">
+        <div style="background:linear-gradient(135deg,var(--forest) 0%,var(--forest-deep) 100%);color:#fff;border-radius:var(--r-xl);padding:clamp(28px,5vw,56px);display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;align-items:center;box-shadow:var(--sh-float)" data-reveal>
+          <div>
+            <span class="eyebrow" style="color:var(--gold-bright);background:rgba(240,185,41,0.16)">Hỗ trợ trang trại & đại lý thú y</span>
+            <h2 class="h2" style="margin-bottom:12px">Cần tư vấn phác đồ hoặc báo giá sỉ toàn quốc?</h2>
+            <p style="color:rgba(255,255,255,0.8);font-size:15.5px">Đội ngũ kỹ sư và bác sĩ thú y của Công Ty Cổ Phần Quốc Tế Thú Y Vàng luôn sẵn sàng hỗ trợ tận nơi và gửi bảng giá chiết khấu đại lý tốt nhất.</p>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:flex-end">
+            <a href="tel:0968486985" class="btn btn--gold">📞 Gọi 0968 486 985</a>
+            <a href="https://zalo.me/0968486985" target="_blank" rel="noopener" class="btn btn--ghost-light">💬 Nhắn Zalo ngay</a>
+            <a href="lien-he.html" class="btn btn--ghost-light">Đăng ký đại lý →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="footer"></footer>
+
+  <script src="assets/js/vendor/gsap.min.js"></script>
+  <script src="assets/js/vendor/ScrollTrigger.min.js"></script>
+  <script src="assets/js/vendor/lenis.min.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
