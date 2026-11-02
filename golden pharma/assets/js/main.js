@@ -24,8 +24,16 @@ const SITE = window.SITE = {
 };
 
 const DATA = window.GOLDEN_DATA || { categories: [], animals: [], products: [] };
-const prodById = Object.fromEntries(DATA.products.map(p => [p.id, p]));
-const catById = Object.fromEntries(DATA.categories.map(c => [c.id, c]));
+let prodById = Object.fromEntries(DATA.products.map(p => [p.id, p]));
+let catById = Object.fromEntries(DATA.categories.map(c => [c.id, c]));
+
+function resolveImg(path, size = 400) {
+  if (!path) return 'assets/brand/logo-mark.png';
+  if (path.startsWith('data:') || path.startsWith('http://') || path.startsWith('https://') || path.startsWith('/api/images/') || /\.(webp|png|jpe?g|gif|svg)$/i.test(path)) {
+    return path;
+  }
+  return `${path}-${size}.webp`;
+}
 
 const fmtVND = n => Number(n || 0).toLocaleString('vi-VN') + 'đ';
 const reduced = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -143,7 +151,7 @@ function addToCart(prodId, varLabel = null, qty = 1, openDrawer = false) {
       varLabel: v.label,
       price: v.price,
       sku: v.sku,
-      img: `${p.gallery[0]}-400.webp`,
+      img: resolveImg(p.gallery?.[0], 400),
       qty: Number(qty || 1),
     });
   }
@@ -375,10 +383,11 @@ function mountChrome() {
             <h4>Điều hướng</h4>
             <ul>
               <li><a href="index.html">Trang chủ</a></li>
-              <li><a href="san-pham.html">Tất cả 30 sản phẩm</a></li>
+              <li><a href="san-pham.html">Tất cả sản phẩm</a></li>
               <li><a href="thanh-toan.html">Giỏ hàng & Đặt hàng</a></li>
               <li><a href="gioi-thieu.html">Về Golden Pharma</a></li>
               <li><a href="lien-he.html">Đăng ký đại lý phân phối</a></li>
+              <li><a href="admin.html" style="color:var(--gold-bright);font-weight:700">🔐 Quản trị hệ thống</a></li>
             </ul>
           </div>
           <div>
@@ -523,7 +532,7 @@ function renderProductCard(p) {
             ${salePct >= 1 ? `<span class="p-badge p-badge--sale">-${salePct}%</span>` : ''}
           </div>
           <a href="chi-tiet-san-pham.html?id=${p.id}" style="width:100%;height:100%;display:grid;place-items:center" aria-label="${p.name}">
-            <img class="p-card__img" src="${p.gallery[0]}-400.webp" srcset="${p.gallery[0]}-400.webp 400w, ${p.gallery[0]}-800.webp 800w" sizes="(max-width:600px) 46vw, 280px" alt="${p.name}" width="360" height="360" loading="lazy" decoding="async">
+            <img class="p-card__img" src="${resolveImg(p.gallery?.[0], 400)}" alt="${p.name}" width="360" height="360" loading="lazy" decoding="async">
           </a>
           <button type="button" class="p-card__qv" data-open-qv="${p.id}" title="Xem nhanh" aria-label="Xem nhanh ${p.shortName}">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
@@ -605,7 +614,7 @@ function openQuickView(prodId) {
     <button type="button" class="modal__close" data-close-qv aria-label="Đóng">✕</button>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;align-items:center">
       <div style="background:#fff;border:1px solid var(--line);border-radius:20px;padding:16px;aspect-ratio:1/1;display:grid;place-items:center">
-        <img src="${p.gallery[0]}-800.webp" alt="${p.name}" style="max-height:300px;object-fit:contain;border-radius:14px">
+        <img src="${resolveImg(p.gallery?.[0], 800)}" alt="${p.name}" style="max-height:300px;object-fit:contain;border-radius:14px">
       </div>
       <div>
         <span class="eyebrow" style="margin-bottom:8px">${p.code} · ★ ${p.rating} (${p.soldText} đã bán)</span>
@@ -660,7 +669,7 @@ function openLightbox(prodId, startIdx = 0) {
 
   const setSlide = idx => {
     const base = p.gallery[idx] || p.gallery[0];
-    mainImg.src = `${base}-1000.webp`;
+    mainImg.src = resolveImg(base, 1000);
     mainImg.alt = p.name;
     cap.textContent = `${p.shortName} — ${labels[idx] || ''}`;
     thumbs.querySelectorAll('button').forEach((b, i) => {
@@ -670,7 +679,7 @@ function openLightbox(prodId, startIdx = 0) {
 
   thumbs.innerHTML = p.gallery.map((g, i) => `
     <button type="button" style="width:64px;height:64px;border-radius:12px;border:2px solid var(--line);padding:4px;background:#fff">
-      <img src="${g}-400.webp" alt="" style="width:100%;height:100%;object-fit:contain;border-radius:8px">
+      <img src="${resolveImg(g, 400)}" alt="" style="width:100%;height:100%;object-fit:contain;border-radius:8px">
     </button>
   `).join('');
   thumbs.querySelectorAll('button').forEach((b, i) => b.addEventListener('click', () => setSlide(i)));
@@ -732,7 +741,7 @@ function initHomePage() {
       if (window.gsap && !reduced()) {
         gsap.fromTo(stageImg, { opacity: 0, scale: 0.88, y: 14 }, { opacity: 1, scale: 1, y: 0, duration: 0.42, ease: 'power3.out' });
       }
-      stageImg.src = `${p.cut}-1000.webp`;
+      stageImg.src = resolveImg(p.cut, 1000);
       stageImg.alt = p.name;
       stageSold.textContent = `★ ${p.rating} · Đã bán ${p.soldText}`;
       stageName.textContent = p.name;
@@ -744,8 +753,9 @@ function initHomePage() {
 
     thumbsWrap.innerHTML = heroIds.map((id, i) => {
       const p = prodById[id];
+      if (!p) return '';
       return `<button type="button" class="hero-thumb${i === 0 ? ' is-active' : ''}" aria-label="Xem ${p.shortName}">
-        <img src="${p.gallery[0]}-400.webp" alt="${p.shortName}" width="48" height="48">
+        <img src="${resolveImg(p.gallery?.[0], 400)}" alt="${p.shortName}" width="48" height="48">
       </button>`;
     }).join('');
 
@@ -795,7 +805,7 @@ function initHomePage() {
           <div>
             <div class="cat-card__top">
               <div class="cat-card__thumb">
-                <img src="${p.gallery[0]}-400.webp" alt="${c.name}" width="60" height="60" loading="lazy">
+                <img src="${resolveImg(p.gallery?.[0], 400)}" alt="${c.name}" width="60" height="60" loading="lazy">
               </div>
               <span class="cat-card__cnt">${c.count} SP</span>
             </div>
@@ -818,13 +828,13 @@ function initHomePage() {
 
     spotLineup.innerHTML = spotProds.map((p, i) => `
       <div class="spot-item" data-spot-idx="${i}">
-        <img src="${p.gallery[0]}-800.webp" alt="${p.name}" width="280" height="280" loading="lazy">
+        <img src="${resolveImg(p.gallery?.[0], 800)}" alt="${p.name}" width="280" height="280" loading="lazy">
       </div>
     `).join('');
 
     spotDots.innerHTML = spotProds.map((p, i) => `
       <button type="button" class="spot-dot${i === 0 ? ' is-active' : ''}" data-spot-dot="${i}" title="${p.shortName}">
-        <img src="${p.gallery[0]}-400.webp" alt="${p.shortName}" width="44" height="44" loading="lazy">
+        <img src="${resolveImg(p.gallery?.[0], 400)}" alt="${p.shortName}" width="44" height="44" loading="lazy">
       </button>
     `).join('');
 
@@ -1014,7 +1024,7 @@ function initProductDetailPage() {
       <!-- Cột trái: Bộ ảnh chuẩn sample-product.png (Ảnh chính lớn bo góc + nút Play 3D + hàng thumbnail bo góc) -->
       <div class="pdp-gallery">
         <div class="pdp-main" id="pdpMainBox" title="Bấm vào ảnh để phóng to Lightbox">
-          <img class="pdp-main__img" id="pdpMainImg" src="${p.gallery[0]}-1000.webp" alt="${p.name}" width="640" height="640">
+          <img class="pdp-main__img" id="pdpMainImg" src="${resolveImg(p.gallery?.[0], 1000)}" alt="${p.name}" width="640" height="640">
           <button type="button" class="pdp-play-btn" id="pdpPlayBtn" title="Bấm để xem hiệu ứng chuyển động 3D sản phẩm" aria-label="Xem chuyển động sản phẩm">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7L8 5Z"/></svg>
           </button>
@@ -1023,7 +1033,7 @@ function initProductDetailPage() {
         <div class="pdp-thumbs">
           ${p.gallery.map((g, idx) => `
             <button type="button" class="pdp-thumb${idx === 0 ? ' is-active' : ''}" data-pdp-thumb="${idx}" aria-label="Ảnh góc ${idx + 1}">
-              <img src="${g}-400.webp" alt="${p.shortName} góc ${idx + 1}" width="120" height="120">
+              <img src="${resolveImg(g, 400)}" alt="${p.shortName} góc ${idx + 1}" width="120" height="120">
             </button>
           `).join('')}
           <button type="button" class="pdp-thumb pdp-thumb--more" id="pdpOpenLightbox">
@@ -1139,7 +1149,7 @@ function initProductDetailPage() {
       curImgIdx = Number(btn.dataset.pdpThumb);
       root.querySelectorAll('[data-pdp-thumb]').forEach(b => b.classList.remove('is-active'));
       btn.classList.add('is-active');
-      mainImg.src = `${p.gallery[curImgIdx]}-1000.webp`;
+      mainImg.src = resolveImg(p.gallery?.[curImgIdx], 1000);
     });
   });
 
@@ -1296,9 +1306,83 @@ function initSmoothAndReveal() {
 }
 
 /* ==========================================================================
+   Đồng bộ dữ liệu động từ Server / KV (hoặc Cache)
+   ========================================================================== */
+async function syncDynamicData() {
+  try {
+    const res = await fetch('/api/data');
+    if (res.ok) {
+      const data = await res.json();
+      if (data.products && Array.isArray(data.products) && data.products.length) {
+        DATA.products = data.products;
+        Object.keys(prodById).forEach(k => delete prodById[k]);
+        DATA.products.forEach(p => { prodById[p.id] = p; });
+      }
+      if (data.categories && Array.isArray(data.categories)) {
+        DATA.categories = data.categories;
+        Object.keys(catById).forEach(k => delete catById[k]);
+        DATA.categories.forEach(c => { catById[c.id] = c; });
+      }
+      if (data.site) {
+        Object.assign(SITE, data.site);
+      }
+      if (data.content) {
+        applyDynamicContent(data.content);
+      }
+      return;
+    }
+  } catch (e) {}
+
+  // Fallback từ localStorage nếu xem offline / static
+  try {
+    const cachedProds = JSON.parse(localStorage.getItem('gp_custom_products') || 'null');
+    if (cachedProds && Array.isArray(cachedProds) && cachedProds.length) {
+      DATA.products = cachedProds;
+      Object.keys(prodById).forEach(k => delete prodById[k]);
+      DATA.products.forEach(p => { prodById[p.id] = p; });
+    }
+    const cachedSite = JSON.parse(localStorage.getItem('gp_custom_site') || 'null');
+    if (cachedSite) Object.assign(SITE, cachedSite);
+    const cachedContent = JSON.parse(localStorage.getItem('gp_custom_content') || 'null');
+    if (cachedContent) applyDynamicContent(cachedContent);
+  } catch (err) {}
+}
+
+function applyDynamicContent(c) {
+  if (!c) return;
+  const eyebrowEl = document.querySelector('[data-i18n="hero_eyebrow"]');
+  if (eyebrowEl && c.heroEyebrow) eyebrowEl.textContent = c.heroEyebrow;
+  const titleEl = document.querySelector('[data-i18n="hero_title"]');
+  if (titleEl && c.heroTitle) titleEl.innerHTML = c.heroTitle;
+  const descEl = document.querySelector('[data-i18n="hero_desc"]');
+  if (descEl && c.heroDesc) descEl.textContent = c.heroDesc;
+  const searchEl = document.querySelector('[data-i18n-ph="hero_search_ph"]');
+  if (searchEl && c.heroSearchPh) searchEl.placeholder = c.heroSearchPh;
+
+  // Thống kê metrics
+  const m1 = document.querySelector('[data-i18n="hero_m1"]')?.previousElementSibling;
+  if (m1 && c.heroM1Value) m1.textContent = c.heroM1Value;
+  const m2 = document.querySelector('[data-i18n="hero_m2"]')?.previousElementSibling;
+  if (m2 && c.heroM2Value) m2.textContent = c.heroM2Value;
+  const m3 = document.querySelector('[data-i18n="hero_m3"]')?.previousElementSibling;
+  if (m3 && c.heroM3Value) m3.textContent = c.heroM3Value;
+
+  // Tiêu đề các phần
+  const catTitle = document.querySelector('[data-i18n="sec_cat_title"]');
+  if (catTitle && c.secCatTitle) catTitle.textContent = c.secCatTitle;
+  const spotTitle = document.querySelector('[data-i18n="sec_spot_title"]');
+  if (spotTitle && c.secSpotTitle) spotTitle.textContent = c.secSpotTitle;
+  const bestTitle = document.querySelector('[data-i18n="sec_best_title"]');
+  if (bestTitle && c.secBestTitle) bestTitle.textContent = c.secBestTitle;
+  const trustTitle = document.querySelector('[data-i18n="sec_trust_title"]');
+  if (trustTitle && c.secTrustTitle) trustTitle.textContent = c.secTrustTitle;
+}
+
+/* ==========================================================================
    Boot
    ========================================================================== */
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
+  await syncDynamicData();
   mountChrome();
   const page = document.body.dataset.page || '';
   if (page === 'home') initHomePage();

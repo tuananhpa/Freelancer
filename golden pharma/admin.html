@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Bảng Điều Khiển Quản Trị — GOLDEN PHARMA</title>
+  <link rel="icon" href="assets/brand/favicon.png" type="image/png">
+  <link rel="preload" href="assets/fonts/prata-normal-vietnamese.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/intertight-normal-vietnamese.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body>
+
+  <!-- ==================== MÀN HÌNH ĐĂNG NHẬP ADMIN ==================== -->
+  <div class="admin-login-overlay" id="loginOverlay">
+    <div class="admin-login-box">
+      <div class="admin-login-logo">
+        <img src="assets/brand/logo-mark-white.png" alt="Golden Pharma">
+      </div>
+      <h2 class="admin-login-title">GOLDEN PHARMA</h2>
+      <p class="admin-login-sub">Cổng Quản Trị Hệ Thống Dược Thú Y Vàng</p>
+
+      <div class="admin-alert admin-alert--error" id="loginAlert"></div>
+
+      <form class="admin-login-form" id="loginForm">
+        <div class="admin-form-group">
+          <label for="loginUser">Tài khoản quản trị</label>
+          <div class="admin-input-wrap">
+            <input type="text" id="loginUser" class="admin-input" required placeholder="Nhập tài khoản" value="Admin" autocomplete="username">
+          </div>
+        </div>
+
+        <div class="admin-form-group">
+          <label for="loginPass">Mật khẩu</label>
+          <div class="admin-input-wrap">
+            <input type="password" id="loginPass" class="admin-input" required placeholder="Nhập mật khẩu" autocomplete="current-password">
+            <button type="button" class="admin-input-btn" id="togglePassBtn" title="Hiện/ẩn mật khẩu">👁️</button>
+          </div>
+        </div>
+
+        <div style="font-size:12px;color:var(--admin-ink-muted);background:#F7F9F6;padding:8px 12px;border-radius:8px">
+          🔒 Yêu cầu tài khoản & mật khẩu nội bộ để truy cập.
+        </div>
+
+        <button type="submit" class="admin-btn admin-btn--primary admin-btn--block" id="loginSubmitBtn">
+          <span>Đăng nhập hệ thống</span> →
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==================== GIAO DIỆN QUẢN TRỊ CHÍNH ==================== -->
+  <div class="admin-app" id="adminApp" style="display:none">
+    
+    <!-- SIDEBAR -->
+    <aside class="admin-sidebar">
+      <div class="admin-brand">
+        <img src="assets/brand/logo-mark-white.png" alt="Golden Pharma">
+        <div class="admin-brand-text">
+          <h1>GOLDEN PHARMA</h1>
+          <small>Hệ Thống Quản Trị Web</small>
+        </div>
+      </div>
+
+      <nav class="admin-nav">
+        <button type="button" class="admin-nav-item is-active" data-tab="dashboard">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>
+          <span>Tổng quan</span>
+        </button>
+
+        <button type="button" class="admin-nav-item" data-tab="products">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+          <span>Quản lý Sản phẩm</span>
+          <span class="admin-nav-badge" id="navProdCount">30</span>
+        </button>
+
+        <button type="button" class="admin-nav-item" data-tab="media">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          <span>Thư viện Hình ảnh</span>
+          <span class="admin-nav-badge" id="navMediaCount">0</span>
+        </button>
+
+        <button type="button" class="admin-nav-item" data-tab="content">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          <span>Nội dung Website</span>
+        </button>
+
+        <button type="button" class="admin-nav-item" data-tab="settings">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          <span>Cài đặt & Dữ liệu</span>
+        </button>
+      </nav>
+
+      <div class="admin-sidebar-footer">
+        <div class="admin-user-info">
+          <div class="admin-avatar">A</div>
+          <div>
+            <div class="admin-user-name">Admin</div>
+            <div class="admin-user-role">Quản trị viên</div>
+          </div>
+        </div>
+        <button type="button" class="admin-icon-btn admin-icon-btn--danger" id="logoutBtn" title="Đăng xuất">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+        </button>
+      </div>
+    </aside>
+
+    <!-- KHU VỰC NỘI DUNG CHÍNH -->
+    <main class="admin-main">
+      <header class="admin-topbar">
+        <div class="admin-topbar-title" id="pageTitle">Tổng quan hệ thống</div>
+        <div class="admin-topbar-actions">
+          <a href="index.html" target="_blank" class="admin-btn admin-btn--outline admin-btn--sm">
+            <span>🌐 Xem Website</span> ↗
+          </a>
+          <button type="button" class="admin-btn admin-btn--primary admin-btn--sm" id="topAddProdBtn">
+            <span>+ Thêm sản phẩm</span>
+          </button>
+        </div>
+      </header>
+
+      <div class="admin-content">
+        
+        <!-- ==================== TAB 1: TỔNG QUAN ==================== -->
+        <section class="admin-tab-pane" id="tab-dashboard">
+          <div class="admin-stats-grid">
+            <div class="admin-stat-card">
+              <div class="admin-stat-icon admin-stat-icon--green">📦</div>
+              <div>
+                <div class="admin-stat-val" id="statTotalProducts">30</div>
+                <div class="admin-stat-lbl">Sản phẩm đang kinh doanh</div>
+              </div>
+            </div>
+            <div class="admin-stat-card">
+              <div class="admin-stat-icon admin-stat-icon--gold">🏷️</div>
+              <div>
+                <div class="admin-stat-val" id="statTotalCategories">6</div>
+                <div class="admin-stat-lbl">Danh mục chuyên biệt</div>
+              </div>
+            </div>
+            <div class="admin-stat-card">
+              <div class="admin-stat-icon admin-stat-icon--blue">🛒</div>
+              <div>
+                <div class="admin-stat-val" id="statTotalSold">68.5K+</div>
+                <div class="admin-stat-lbl">Lượt bán trên TikTok Shop</div>
+              </div>
+            </div>
+            <div class="admin-stat-card">
+              <div class="admin-stat-icon admin-stat-icon--purple">🖼️</div>
+              <div>
+                <div class="admin-stat-val" id="statTotalMedia">30+</div>
+                <div class="admin-stat-lbl">Hình ảnh & chế phẩm</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bảng sản phẩm nổi bật trên dashboard -->
+          <div class="admin-card">
+            <div class="admin-card-head">
+              <div class="admin-card-title">
+                <span>🔥 Sản phẩm dẫn đầu doanh số Golden Pharma</span>
+              </div>
+              <button type="button" class="admin-btn admin-btn--outline admin-btn--sm" data-goto-tab="products">
+                Xem tất cả sản phẩm →
+              </button>
+            </div>
+            <div class="admin-table-wrap">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th>Ảnh</th>
+                    <th>Mã SP</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Danh mục</th>
+                    <th>Giá niêm yết</th>
+                    <th>Đã bán</th>
+                    <th>Thao tác</th>
+                  </tr>
+                </thead>
+                <tbody id="dashTopProductsTable"></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== TAB 2: QUẢN LÝ SẢN PHẨM ==================== -->
+        <section class="admin-tab-pane" id="tab-products" style="display:none">
+          <div class="admin-card">
+            <div class="admin-card-head">
+              <div class="admin-card-title">
+                <span>📦 Danh sách sản phẩm Golden Pharma</span>
+                <span class="admin-badge admin-badge--green" id="prodListBadge">30 sản phẩm</span>
+              </div>
+              <button type="button" class="admin-btn admin-btn--primary" id="openAddProdModalBtn">
+                <span>+ Thêm sản phẩm mới</span>
+              </button>
+            </div>
+
+            <!-- Bộ lọc & Tìm kiếm -->
+            <div class="admin-filter-bar">
+              <input type="text" class="admin-search-input" id="prodSearchInput" placeholder="🔍 Tìm theo tên sản phẩm, mã SKU (vd: GP-01, B-Complex)...">
+              <select class="admin-select" id="prodCategoryFilter">
+                <option value="all">Tất cả danh mục</option>
+              </select>
+              <select class="admin-select" id="prodAnimalFilter">
+                <option value="all">Tất cả vật nuôi</option>
+              </select>
+              <button type="button" class="admin-btn admin-btn--outline admin-btn--sm" id="resetFilterBtn">Đặt lại lọc</button>
+            </div>
+
+            <!-- Bảng danh sách sản phẩm -->
+            <div class="admin-table-wrap">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th style="width:60px">Ảnh</th>
+                    <th style="width:90px">Mã SP</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Danh mục</th>
+                    <th>Giá bán</th>
+                    <th>Đã bán</th>
+                    <th>Đánh giá</th>
+                    <th style="width:130px;text-align:right">Thao tác</th>
+                  </tr>
+                </thead>
+                <tbody id="prodTableBody"></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== TAB 3: THƯ VIỆN HÌNH ẢNH ==================== -->
+        <section class="admin-tab-pane" id="tab-media" style="display:none">
+          <div class="admin-card">
+            <div class="admin-card-head">
+              <div class="admin-card-title">
+                <span>🖼️ Tải lên & Quản lý Hình ảnh</span>
+              </div>
+            </div>
+
+            <!-- Vùng Kéo Thả / Tải File -->
+            <div class="admin-upload-dropzone" id="mediaDropzone">
+              <input type="file" id="mediaFileInput" accept="image/*" multiple style="display:none">
+              <div style="font-size:36px;margin-bottom:8px">📤</div>
+              <div style="font-size:16px;font-weight:700;color:var(--admin-forest);margin-bottom:4px">
+                Kéo thả hình ảnh vào đây hoặc bấm để chọn tệp
+              </div>
+              <div style="font-size:13px;color:var(--admin-ink-soft);margin-bottom:14px">
+                Hỗ trợ định dạng PNG, JPG, WEBP, SVG (tối ưu tự động)
+              </div>
+              <button type="button" class="admin-btn admin-btn--primary admin-btn--sm" onclick="document.getElementById('mediaFileInput').click()">
+                Chọn ảnh từ máy tính
+              </button>
+            </div>
+
+            <!-- Danh sách ảnh -->
+            <div class="admin-card-title" style="margin-bottom:14px">
+              <span>Thư viện ảnh đã tải lên (<span id="mediaCountText">0</span>)</span>
+            </div>
+            <div class="admin-media-grid" id="mediaGrid"></div>
+          </div>
+        </section>
+
+        <!-- ==================== TAB 4: NỘI DUNG WEBSITE ==================== -->
+        <section class="admin-tab-pane" id="tab-content" style="display:none">
+          <form id="siteContentForm">
+            <!-- 1. THÔNG TIN CÔNG TY & LIÊN HỆ -->
+            <div class="admin-card">
+              <div class="admin-card-title" style="margin-bottom:16px">
+                <span>🏢 1. Thông tin thương hiệu & Kênh liên hệ chính thức</span>
+              </div>
+              <div class="admin-grid-2">
+                <div class="admin-form-group">
+                  <label for="cfg_brand">Tên thương hiệu</label>
+                  <input type="text" id="cfg_brand" class="admin-input" required>
+                </div>
+                <div class="admin-form-group">
+                  <label for="cfg_company">Tên pháp nhân công ty</label>
+                  <input type="text" id="cfg_company" class="admin-input" required>
+                </div>
+                <div class="admin-form-group">
+                  <label for="cfg_phone">Số Hotline / Zalo hiển thị</label>
+                  <input type="text" id="cfg_phone" class="admin-input" placeholder="0968 486 985" required>
+                </div>
+                <div class="admin-form-group">
+                  <label for="cfg_email">Email liên hệ</label>
+                  <input type="email" id="cfg_email" class="admin-input" required>
+                </div>
+                <div class="admin-form-group">
+                  <label for="cfg_tiktok">Link TikTok Shop</label>
+                  <input type="url" id="cfg_tiktok" class="admin-input">
+                </div>
+                <div class="admin-form-group">
+                  <label for="cfg_tiktokHandle">Tên TikTok Shop (Handle)</label>
+                  <input type="text" id="cfg_tiktokHandle" class="admin-input" placeholder="@thuyvanghanoi">
+                </div>
+                <div class="admin-form-group">
+                  <label for="cfg_shopee">Link Shopee Chính Hãng</label>
+                  <input type="url" id="cfg_shopee" class="admin-input">
+                </div>
+                <div class="admin-form-group">
+                  <label for="cfg_zalo">Link Zalo tư vấn</label>
+                  <input type="url" id="cfg_zalo" class="admin-input">
+                </div>
+              </div>
+              <div class="admin-form-group" style="margin-top:14px">
+                <label for="cfg_address">Địa chỉ trụ sở công ty</label>
+                <input type="text" id="cfg_address" class="admin-input">
+              </div>
+              <div class="admin-form-group" style="margin-top:14px">
+                <label for="cfg_mapEmbed">Link nhúng bản đồ Google Maps (Embed URL)</label>
+                <input type="text" id="cfg_mapEmbed" class="admin-input">
+              </div>
+            </div>
+
+            <!-- 2. NỘI DUNG TRANG CHỦ (HERO & BANNER) -->
+            <div class="admin-card">
+              <div class="admin-card-title" style="margin-bottom:16px">
+                <span>🌟 2. Nội dung Trang Chủ (Hero Banner & Thống Kê)</span>
+              </div>
+              <div class="admin-form-group" style="margin-bottom:14px">
+                <label for="cfg_heroEyebrow">Dòng nhãn nhỏ đầu trang (Eyebrow)</label>
+                <input type="text" id="cfg_heroEyebrow" class="admin-input">
+              </div>
+              <div class="admin-form-group" style="margin-bottom:14px">
+                <label for="cfg_heroTitle">Tiêu đề chính Hero (hỗ trợ &lt;em&gt;chữ vàng&lt;/em&gt;)</label>
+                <input type="text" id="cfg_heroTitle" class="admin-input">
+              </div>
+              <div class="admin-form-group" style="margin-bottom:14px">
+                <label for="cfg_heroDesc">Mô tả Hero</label>
+                <textarea id="cfg_heroDesc" class="admin-textarea" rows="3"></textarea>
+              </div>
+              <div class="admin-form-group" style="margin-bottom:14px">
+                <label for="cfg_heroSearchPh">Gợi ý tìm kiếm (Placeholder)</label>
+                <input type="text" id="cfg_heroSearchPh" class="admin-input">
+              </div>
+
+              <div class="admin-card-title" style="font-size:14px;margin-block:14px 10px">
+                <span>3 Khối số liệu thống kê Hero:</span>
+              </div>
+              <div class="admin-grid-3">
+                <div class="admin-form-group">
+                  <label for="cfg_heroM1Value">Chỉ số 1 (Giá trị)</label>
+                  <input type="text" id="cfg_heroM1Value" class="admin-input" placeholder="68.500+">
+                  <label for="cfg_heroM1Label" style="margin-top:4px">Chỉ số 1 (Mô tả)</label>
+                  <input type="text" id="cfg_heroM1Label" class="admin-input" placeholder="Đơn hàng trên TikTok Shop">
+                </div>
+                <div class="admin-form-group">
+                  <label for="cfg_heroM2Value">Chỉ số 2 (Giá trị)</label>
+                  <input type="text" id="cfg_heroM2Value" class="admin-input" placeholder="30 dòng">
+                  <label for="cfg_heroM2Label" style="margin-top:4px">Chỉ số 2 (Mô tả)</label>
+                  <input type="text" id="cfg_heroM2Label" class="admin-input" placeholder="Sản phẩm chủ lực chính hãng">
+                </div>
+                <div class="admin-form-group">
+                  <label for="cfg_heroM3Value">Chỉ số 3 (Giá trị)</label>
+                  <input type="text" id="cfg_heroM3Value" class="admin-input" placeholder="4.7 ★">
+                  <label for="cfg_heroM3Label" style="margin-top:4px">Chỉ số 3 (Mô tả)</label>
+                  <input type="text" id="cfg_heroM3Label" class="admin-input" placeholder="Đánh giá từ nhà chăn nuôi">
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. TIÊU ĐỀ CÁC PHÂN ĐOẠN TRÊN WEBSITE -->
+            <div class="admin-card">
+              <div class="admin-card-title" style="margin-bottom:16px">
+                <span>📌 3. Tiêu đề các mục trên Trang Chủ</span>
+              </div>
+              <div class="admin-grid-2">
+                <div class="admin-form-group">
+                  <label for="cfg_secCatTitle">Mục Danh mục (Tiêu đề)</label>
+                  <input type="text" id="cfg_secCatTitle" class="admin-input">
+                </div>
+                <div class="admin-form-group">
+                  <label for="cfg_secSpotTitle">Mục Sân khấu 3D Spotlight (Tiêu đề)</label>
+                  <input type="text" id="cfg_secSpotTitle" class="admin-input">
+                </div>
+                <div class="admin-form-group">
+                  <label for="cfg_secBestTitle">Mục Sản phẩm nổi bật (Tiêu đề)</label>
+                  <input type="text" id="cfg_secBestTitle" class="admin-input">
+                </div>
+                <div class="admin-form-group">
+                  <label for="cfg_secTrustTitle">Mục Tiêu chuẩn chất lượng (Tiêu đề)</label>
+                  <input type="text" id="cfg_secTrustTitle" class="admin-input">
+                </div>
+              </div>
+            </div>
+
+            <div style="position:sticky;bottom:20px;z-index:90;display:flex;justify-content:flex-end;gap:12px">
+              <button type="submit" class="admin-btn admin-btn--primary" style="padding:14px 28px;font-size:15px;box-shadow:var(--sh-md)">
+                <span>💾 Lưu toàn bộ nội dung website</span>
+              </button>
+            </div>
+          </form>
+        </section>
+
+        <!-- ==================== TAB 5: CÀI ĐẶT & SAO LƯU ==================== -->
+        <section class="admin-tab-pane" id="tab-settings" style="display:none">
+          <div class="admin-grid-2">
+            <!-- Đổi mật khẩu -->
+            <div class="admin-card">
+              <div class="admin-card-title" style="margin-bottom:16px">
+                <span>🔒 Đổi mật khẩu quản trị</span>
+              </div>
+              <form id="changePasswordForm">
+                <div class="admin-form-group" style="margin-bottom:12px">
+                  <label for="pwdCurrent">Mật khẩu hiện tại</label>
+                  <input type="password" id="pwdCurrent" class="admin-input" required placeholder="Nhập mật khẩu đang dùng">
+                </div>
+                <div class="admin-form-group" style="margin-bottom:12px">
+                  <label for="pwdNew">Mật khẩu mới</label>
+                  <input type="password" id="pwdNew" class="admin-input" required placeholder="Tối thiểu 6 ký tự">
+                </div>
+                <div class="admin-form-group" style="margin-bottom:16px">
+                  <label for="pwdConfirm">Xác nhận mật khẩu mới</label>
+                  <input type="password" id="pwdConfirm" class="admin-input" required placeholder="Nhập lại mật khẩu mới">
+                </div>
+                <button type="submit" class="admin-btn admin-btn--primary">
+                  Cập nhật mật khẩu
+                </button>
+              </form>
+            </div>
+
+            <!-- Sao lưu & Phục hồi dữ liệu -->
+            <div class="admin-card">
+              <div class="admin-card-title" style="margin-bottom:16px">
+                <span>💾 Sao lưu & Đồng bộ dữ liệu</span>
+              </div>
+              <p style="font-size:13.5px;color:var(--admin-ink-soft);margin-bottom:16px">
+                Bạn có thể xuất toàn bộ sản phẩm và cài đặt website ra tệp JSON để lưu trữ hoặc khôi phục bất cứ khi nào.
+              </p>
+              <div style="display:grid;gap:10px">
+                <button type="button" class="admin-btn admin-btn--outline" id="exportDataBtn">
+                  📥 Xuất dữ liệu ra file JSON
+                </button>
+                <label class="admin-btn admin-btn--outline" style="cursor:pointer">
+                  📤 Nhập dữ liệu từ file JSON
+                  <input type="file" id="importDataInput" accept=".json" style="display:none">
+                </label>
+                <hr style="border:none;border-top:1px solid var(--admin-line);margin-block:6px">
+                <button type="button" class="admin-btn admin-btn--danger admin-btn--sm" id="resetDefaultBtn">
+                  ⚠️ Khôi phục dữ liệu gốc ban đầu (30 sản phẩm)
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- ==================== MODAL THÊM / SỬA SẢN PHẨM ==================== -->
+  <div class="admin-modal-overlay" id="productModal">
+    <div class="admin-modal-box">
+      <div class="admin-modal-head">
+        <h3 id="productModalTitle">Thêm sản phẩm mới</h3>
+        <button type="button" class="admin-icon-btn" onclick="closeProductModal()">✕</button>
+      </div>
+
+      <form id="productForm">
+        <div class="admin-modal-body">
+          <input type="hidden" id="prodEditId">
+
+          <!-- Hàng 1: Mã SP, Tên ngắn, Danh mục -->
+          <div class="admin-grid-3" style="margin-bottom:14px">
+            <div class="admin-form-group">
+              <label for="prodCode">Mã sản phẩm *</label>
+              <input type="text" id="prodCode" class="admin-input" placeholder="GP-31" required>
+            </div>
+            <div class="admin-form-group">
+              <label for="prodCategory">Danh mục chính *</label>
+              <select id="prodCategory" class="admin-select" required></select>
+            </div>
+            <div class="admin-form-group">
+              <label for="prodAccent">Màu viền sản phẩm</label>
+              <div style="display:flex;gap:8px;align-items:center">
+                <input type="color" id="prodAccent" value="#0E6B3A" style="width:42px;height:42px;border:none;border-radius:8px;cursor:pointer;padding:0">
+                <span id="prodAccentHex" style="font-family:monospace;font-size:13px">#0E6B3A</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hàng 2: Tên đầy đủ -->
+          <div class="admin-form-group" style="margin-bottom:14px">
+            <label for="prodName">Tên sản phẩm đầy đủ *</label>
+            <input type="text" id="prodName" class="admin-input" placeholder="Ví dụ: GP-GUARD – Bột Rắc Chuồng Men Vi Sinh..." required>
+          </div>
+
+          <!-- Hàng 3: Tên ngắn gọn -->
+          <div class="admin-form-group" style="margin-bottom:14px">
+            <label for="prodShortName">Tên hiển thị ngắn gọn *</label>
+            <input type="text" id="prodShortName" class="admin-input" placeholder="Ví dụ: GP-GUARD Bột Rắc Chuồng" required>
+          </div>
+
+          <!-- Hàng 4: Giá bán, Giá gốc, Đã bán, Đánh giá -->
+          <div class="admin-grid-2" style="margin-bottom:14px">
+            <div class="admin-form-group">
+              <label for="prodPrice">Giá bán hiển thị (VND) *</label>
+              <input type="number" id="prodPrice" class="admin-input" placeholder="38999" required min="0">
+            </div>
+            <div class="admin-form-group">
+              <label for="prodOriginalPrice">Giá gốc niêm yết (VND)</label>
+              <input type="number" id="prodOriginalPrice" class="admin-input" placeholder="39000" min="0">
+            </div>
+            <div class="admin-form-group">
+              <label for="prodSoldCount">Lượt đã bán</label>
+              <input type="number" id="prodSoldCount" class="admin-input" placeholder="1000" min="0">
+            </div>
+            <div class="admin-form-group">
+              <label for="prodRating">Điểm đánh giá (1.0 - 5.0)</label>
+              <input type="number" id="prodRating" class="admin-input" placeholder="5.0" step="0.1" min="1" max="5">
+            </div>
+          </div>
+
+          <!-- Hàng 5: Nhóm vật nuôi (Checkboxes) -->
+          <div class="admin-form-group" style="margin-bottom:16px">
+            <label>Phù hợp cho vật nuôi:</label>
+            <div id="prodAnimalsList" style="display:flex;flex-wrap:wrap;gap:14px;padding:8px 0"></div>
+          </div>
+
+          <!-- Hàng 6: Ảnh tách nền 3D & Gallery -->
+          <div class="admin-card" style="padding:16px;margin-bottom:16px;background:#F9FAF8">
+            <div class="admin-card-title" style="font-size:15px;margin-bottom:12px">
+              <span>🖼️ Hình ảnh sản phẩm</span>
+            </div>
+            <div class="admin-grid-2" style="margin-bottom:12px">
+              <div class="admin-form-group">
+                <label for="prodCutImg">Ảnh tách nền nổi 3D (Đường dẫn hoặc chọn ảnh)</label>
+                <div style="display:flex;gap:6px">
+                  <input type="text" id="prodCutImg" class="admin-input" placeholder="assets/img/cut/prod-01-cut hoặc link tải lên">
+                  <button type="button" class="admin-btn admin-btn--outline admin-btn--sm" onclick="pickImageFor('prodCutImg')">Chọn</button>
+                </div>
+              </div>
+              <div class="admin-form-group">
+                <label>Xem trước ảnh 3D</label>
+                <div style="width:56px;height:56px;border-radius:10px;border:1px solid var(--admin-line);background:#fff;display:grid;place-items:center;overflow:hidden">
+                  <img id="prodCutPreview" src="assets/brand/logo-mark.png" style="max-width:100%;max-height:100%;object-fit:contain">
+                </div>
+              </div>
+            </div>
+
+            <div class="admin-form-group">
+              <label>Bộ ảnh chi tiết (Gallery) — <i>Mỗi ảnh một dòng hoặc chọn ảnh</i></label>
+              <div id="prodGalleryList" style="display:grid;gap:8px;margin-bottom:8px"></div>
+              <div style="display:flex;gap:8px">
+                <button type="button" class="admin-btn admin-btn--outline admin-btn--sm" id="addGalleryRowBtn">+ Thêm ảnh vào bộ sưu tập</button>
+                <label class="admin-btn admin-btn--outline admin-btn--sm" style="cursor:pointer">
+                  📤 Tải ảnh trực tiếp từ máy
+                  <input type="file" id="prodDirectUploadInput" accept="image/*" style="display:none">
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hàng 7: Đặc điểm nổi bật (Highlights) -->
+          <div class="admin-card" style="padding:16px;margin-bottom:16px;background:#F9FAF8">
+            <div class="admin-card-title" style="font-size:15px;margin-bottom:12px">
+              <span>✨ Đặc điểm nổi bật (Highlights)</span>
+            </div>
+            <div id="prodHighlightsList" style="display:grid;gap:8px;margin-bottom:8px"></div>
+            <button type="button" class="admin-btn admin-btn--outline admin-btn--sm" id="addHighlightRowBtn">+ Thêm dòng nổi bật</button>
+          </div>
+
+          <!-- Hàng 8: Quy cách & Giá (Variations) -->
+          <div class="admin-card" style="padding:16px;margin-bottom:16px;background:#F9FAF8">
+            <div class="admin-card-title" style="font-size:15px;margin-bottom:12px">
+              <span>⚖️ Quy cách đóng gói & Giá bán</span>
+            </div>
+            <div id="prodVariationsList" style="display:grid;gap:8px;margin-bottom:8px"></div>
+            <button type="button" class="admin-btn admin-btn--outline admin-btn--sm" id="addVariationRowBtn">+ Thêm quy cách đóng gói</button>
+          </div>
+
+          <!-- Hàng 9: Mô tả chi tiết HTML -->
+          <div class="admin-form-group">
+            <label for="prodDescHtml">Mô tả chi tiết sản phẩm (Hỗ trợ định dạng HTML)</label>
+            <textarea id="prodDescHtml" class="admin-textarea" rows="6" placeholder="Nhập công dụng, thành phần, liều lượng sử dụng..."></textarea>
+          </div>
+        </div>
+
+        <div class="admin-modal-foot">
+          <button type="button" class="admin-btn admin-btn--outline" onclick="closeProductModal()">Hủy bỏ</button>
+          <button type="submit" class="admin-btn admin-btn--primary" id="saveProdBtn">
+            <span>Lưu sản phẩm</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL CHỌN ẢNH TỪ THƯ VIỆN ==================== -->
+  <div class="admin-modal-overlay" id="imagePickerModal">
+    <div class="admin-modal-box" style="max-width:700px">
+      <div class="admin-modal-head">
+        <h3>Chọn ảnh từ thư viện</h3>
+        <button type="button" class="admin-icon-btn" onclick="closeImagePicker()">✕</button>
+      </div>
+      <div class="admin-modal-body">
+        <div class="admin-media-grid" id="pickerMediaGrid"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST THÔNG BÁO -->
+  <div class="admin-toast" id="adminToast">
+    <span style="font-size:18px">✓</span>
+    <span id="toastMsg">Thao tác thành công</span>
+  </div>
+
+  <script src="assets/js/admin.js"></script>
+</body>
+</html>

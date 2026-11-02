@@ -10,6 +10,12 @@
     "not_found_handling": "404-page",
     "run_worker_first": ["/api/*"]
   },
+  "kv_namespaces": [
+    {
+      "binding": "GOLDEN_DATA_KV",
+      "id": "0a42cb6e602048a1bbc291ad81c5488f"
+    }
+  ],
   "observability": {
     "enabled": true
   }

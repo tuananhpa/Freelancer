@@ -1,0 +1,1604 @@
+export default {
+  "categories": [
+    {
+      "id": "all",
+      "name": "Tất cả sản phẩm",
+      "nameEn": "All Products",
+      "count": 30,
+      "desc": "Trọn bộ 30 chế phẩm dinh dưỡng, men vi sinh và thuốc thú y chuẩn GMP-WHO."
+    },
+    {
+      "id": "men-tieu-hoa",
+      "name": "Men Vi Sinh & Tiêu Hóa",
+      "nameEn": "Probiotics & Digestion",
+      "count": 6,
+      "desc": "Ổn định đường ruột, chịu kháng sinh, tạo khuôn phân khô và giảm mùi hôi chuồng."
+    },
+    {
+      "id": "vitamin-khoang",
+      "name": "Vitamin, Khoáng & Điện Giải",
+      "nameEn": "Vitamins & Minerals",
+      "count": 12,
+      "desc": "Bồi bổ thể lực, chống nóng giải độc, cứng khung xương và tăng tỷ lệ đẻ trứng."
+    },
+    {
+      "id": "tang-trong-sinh-san",
+      "name": "Vỗ Béo & Sinh Sản",
+      "nameEn": "Growth & Reproduction",
+      "count": 5,
+      "desc": "Bung đùi nở mông, dày lườn đẹp mã, giảm FCR và kích thích lên giống nhanh."
+    },
+    {
+      "id": "khang-sinh-dac-tri",
+      "name": "Đặc Trị Hô Hấp & Tiêu Chảy",
+      "nameEn": "Veterinary Treatment",
+      "count": 4,
+      "desc": "Phác đồ chuyên sâu xử lý hen khẹc, ORT, viêm phổi dính sườn và tiêu chảy cấp."
+    },
+    {
+      "id": "sat-trung-chuong-trai",
+      "name": "Rắc Chuồng & Khử Mùi",
+      "nameEn": "Bedding & Biosecurity",
+      "count": 3,
+      "desc": "Men rắc chuồng hút ẩm, giữ ấm heo sơ sinh, khử khí độc NH3 và xua đuổi côn trùng."
+    }
+  ],
+  "animals": [
+    {
+      "id": "all",
+      "name": "Mọi vật nuôi",
+      "nameEn": "All Livestock"
+    },
+    {
+      "id": "gia-cam",
+      "name": "Gia cầm (Gà, Vịt, Ngan, Cút)",
+      "nameEn": "Poultry"
+    },
+    {
+      "id": "heo",
+      "name": "Heo (Heo con, Heo nái, Heo thịt)",
+      "nameEn": "Swine"
+    },
+    {
+      "id": "trau-bo",
+      "name": "Gia súc (Trâu, Bò, Dê)",
+      "nameEn": "Cattle & Goats"
+    },
+    {
+      "id": "ga-choi",
+      "name": "Gà chọi / Chiến kê",
+      "nameEn": "Gamefowl"
+    }
+  ],
+  "products": [
+    {
+      "id": "01",
+      "code": "GP-01",
+      "slug": "gp-guard",
+      "productId": "1735562104312006470",
+      "name": "GP-GUARD – Bột Rắc Chuồng Men Vi Sinh Khử Mùi, Hút Ẩm Cho Heo Sơ Sinh, Heo Nái, Gà, Gia Súc Gia Cầm - GOLDEN PHARMA",
+      "shortName": "GP-GUARD Bột Rắc Chuồng",
+      "brand": "Golden Pharma",
+      "category": "sat-trung-chuong-trai",
+      "animals": [
+        "heo",
+        "gia-cam"
+      ],
+      "price": 38999,
+      "originalPrice": 39000,
+      "rating": 4.7,
+      "reviews": 2500,
+      "soldCount": 53200,
+      "soldText": "53.2K",
+      "accent": "#0E6B3A",
+      "highlights": [
+        "Khử mùi hôi chuồng trại nhanh",
+        "Hút ẩm mạnh, giữ ấm heo sơ sinh",
+        "Xua đuổi ruồi muỗi, côn trùng",
+        "Chủng men Bacillus & tinh dầu quế hồi"
+      ],
+      "variations": [
+        {
+          "label": "1kg",
+          "price": 38999,
+          "sku": "DPV000",
+          "weight_g": "1000",
+          "originalPrice": 39000
+        },
+        {
+          "label": "3kg",
+          "price": 115000,
+          "sku": "DPV001",
+          "weight_g": "3000"
+        },
+        {
+          "label": "5kg",
+          "price": 190000,
+          "sku": "DPV002",
+          "weight_g": "5000"
+        },
+        {
+          "label": "10kg",
+          "price": 380000,
+          "sku": "DPV003",
+          "weight_g": "10000"
+        }
+      ],
+      "descriptionHtml": "<p><strong>GP-GUARD – BỘT RẮC CHUỒNG MEN VI SINH & THẢO DƯỢC</strong></p><p>GP-GUARD là sản phẩm dạng bột dùng trong chăn nuôi, kết hợp <strong>Lactobacillus spp, Bacillus spp, thảo dược, tinh dầu thảo dược và khoáng đặc biệt</strong>.</p><p>Sản phẩm có khả năng hút ẩm, giúp nền chuồng khô thoáng, giảm mùi hôi và hỗ trợ duy trì môi trường chăn nuôi sạch sẽ. Đặc biệt phù hợp sử dụng cho heo sơ sinh, heo nái, heo thịt, gia súc và gia cầm.</p><img src=\"https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/a92b1458cd7d4a4bb71ea0b7212409a6~tplv-aphluv4xwc-origin-jpeg.jpeg?dr=15568&t=555f072d&ps=933b5bde&shp=1c65f68b&shcp=9b759fb9&idc=my&from=476444299\" width=\"1254\" height=\"1254\"><p><strong>THÀNH PHẦN – Trong 1kg có:</strong></p><ul><li>Lactobacillus spp</li><li>Bacillus spp</li><li>Thảo dược và tinh dầu thảo dược: <strong>quế, hồi, hương nhu, sả</strong></li><li>Khoáng đặc biệt vừa đủ 1kg</li><li>Không có hoocmon và hóa chất độc hại</li></ul><img src=\"https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/97c0d3a49bbe4d0f8951ae360a8d9f82~tplv-aphluv4xwc-origin-jpeg.jpeg?dr=15568&t=555f072d&ps=933b5bde&shp=1c65f68b&shcp=9b759fb9&idc=my&from=476444299\" width=\"1254\" height=\"1254\"><p><strong>CÔNG DỤNG:</strong></p><ul><li>Hút ẩm mạnh, giúp nền chuồng <strong>khô và thông thoáng</strong>.</li><li>Hỗ trợ <strong>giảm mùi hôi và khí độc</strong> trong chuồng nuôi.</li><li>Hỗ trợ vệ sinh chuồng và hạn chế điều kiện thuận lợi cho mầm bệnh phát triển.</li><li>Với gia cầm: hỗ trợ giảm stress, hạn chế hiện tượng cắn nhau khi nhập đàn, giảm mùi chuồng.</li><li>Với heo sơ sinh: giúp <strong>giữ ấm, nhanh khô da</strong>, hạn chế mất nhiệt và tạo sự thoải mái cho heo con.</li><li>Hỗ trợ heo con nhanh biết bú, tận dụng sữa đầu và chăm sóc vùng rốn sau sinh.</li><li>Với heo nái: dùng sau sinh để hỗ trợ làm khô sản dịch và giữ nền chuồng khô, giảm trơn trượt.</li></ul><h3 style=\"text-align: left;\">CÁCH DÙNG VÀ LIỀU LƯỢNG</h3><img src=\"https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/c40e51edcf4244cd87828f2ee7d8f673~tplv-aphluv4xwc-origin-jpeg.jpeg?dr=15568&t=555f072d&ps=933b5bde&shp=1c65f68b&shcp=9b759fb9&idc=my&from=476444299\" width=\"1254\" height=\"1254\"><p><strong>Heo sơ sinh:</strong><br><strong>1kg / 10–12 heo con</strong></p><p>Cách dùng: xoa GP-GUARD trực tiếp lên heo sơ sinh.</p><p><strong>Heo nái:</strong><br>Sử dụng GP-GUARD sau sinh theo hướng dẫn trên bao bì; có thể rắc tại khu vực chuồng nuôi và khu vực cần giữ khô.</p><p><strong>Heo thịt, gia súc và gia cầm khác:</strong><br><strong>1kg / 40m² chuồng, 1–2 lần/tuần</strong></p><p>Có thể sử dụng bằng cách:</p><ul><li>Rắc vào chuồng úm.</li><li>Rắc trực tiếp lên nền chuồng nuôi.</li><li>Xoa lên heo sơ sinh theo hướng dẫn.</li><li>Sử dụng cho khu vực heo nái sau sinh theo hướng dẫn trên bao bì.</li></ul><h3 style=\"text-align: left;\">BẢO QUẢN</h3><p>Để nơi <strong>khô ráo, tránh ánh sáng chiếu trực tiếp</strong>.<br>Sau khi mở túi, nên sử dụng hết hoặc bảo quản kín.</p><h3 style=\"text-align: left;\">THÔNG TIN SẢN PHẨM</h3><p><strong>Tên:</strong> GP-GUARD<br><strong>Thương hiệu:</strong> Golden Pharma<br><strong>Dạng:</strong> Bột rắc chuồng<br><strong>Khối lượng tịnh:</strong> 1KG/ 3KG/ 5KG/ 10KG<br><strong>Đối tượng:</strong> Heo, gia súc, gia cầm<br><strong>Chỉ dùng trong chăn nuôi</strong></p><h3 style=\"text-align: left;\"><br></h3><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p>GP Guard, GP Guard 1kg, bột rắc chuồng, bột khử mùi chuồng heo, bột hút ẩm chuồng nuôi, men vi sinh rắc chuồng, men vi sinh chuồng heo, bột rắc chuồng gà, giữ ấm heo con, khử mùi chuồng trại, men vi sinh cho heo, sản phẩm vệ sinh chuồng nuôi, Golden Pharma.</p><p><br>#GPGuard #BotRacChuong #MenViSinhRacChuong #KhuMuiChuong #HutAmChuong #HeoSoSinh #ChanNuoiHeo #ChanNuoiGa #GoldenPharma</p>",
+      "cutRatio": 0.6801,
+      "cut": "assets/img/cut/prod-01-cut",
+      "gallery": [
+        "assets/img/studio/prod-01-1",
+        "assets/img/studio/prod-01-2"
+      ]
+    },
+    {
+      "id": "02",
+      "code": "GP-02",
+      "slug": "b-complex",
+      "productId": "1736154746253838150",
+      "name": "B-Complex - Bổ sung Vitamin, Kích thích tăng cường ăn uống, bổ sung năng lượng, tăng trưởng nhanh chóng cho vật nuôi",
+      "shortName": "B-COMPLEX Bổ Sung Vitamin",
+      "brand": "Golden Pharma",
+      "category": "vitamin-khoang",
+      "animals": [
+        "gia-cam",
+        "heo",
+        "trau-bo"
+      ],
+      "price": 45000,
+      "originalPrice": 52000,
+      "rating": 4.7,
+      "reviews": 521,
+      "soldCount": 9765,
+      "soldText": "9.7K",
+      "accent": "#E05314",
+      "highlights": [
+        "Kích thích tính thèm ăn mạnh",
+        "Bổ dưỡng, tăng lực, phục hồi nhanh",
+        "Chống stress khi chuyển đàn, thời tiết",
+        "Tăng sản lượng trứng & tốc độ lớn"
+      ],
+      "variations": [
+        {
+          "label": "500g",
+          "price": 45000,
+          "sku": "TYVTT040",
+          "weight_g": "510"
+        },
+        {
+          "label": "1kg",
+          "price": 90000,
+          "sku": "TYVTT041",
+          "weight_g": "1020"
+        },
+        {
+          "label": "3kg",
+          "price": 270000,
+          "sku": "TYVTT042",
+          "weight_g": "3040"
+        },
+        {
+          "label": "5kg",
+          "price": 450000,
+          "sku": "TYV007",
+          "weight_g": "5060"
+        }
+      ],
+      "descriptionHtml": "<p><strong>B-COMPLEX GOLDENVET  – BỔ SUNG VITAMIN NHÓM B CHO GIA SÚC, GIA CẦM</strong></p><img src=\"https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/27aa4e3f942f4d74bb5c9aa97760b0d2~tplv-aphluv4xwc-origin-jpeg.jpeg?dr=15568&t=555f072d&ps=933b5bde&shp=1c65f68b&shcp=9b759fb9&idc=my&from=476444299\" width=\"1254\" height=\"1254\"><p>B-COMPLEX là sản phẩm dạng bột dùng trong chăn nuôi, cung cấp <strong>Vitamin B1, B2, B6 và Glucose</strong>, thích hợp bổ sung vào nước uống cho gia súc, gia cầm trong quá trình nuôi dưỡng.</p><p>Sản phẩm hỗ trợ vật nuôi ăn tốt hơn, bổ sung năng lượng và vitamin cần thiết, hỗ trợ tăng trưởng, phát triển thể trạng và duy trì năng suất.</p><h3 style=\"text-align: left;\">THÀNH PHẦN</h3><img src=\"https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/b3ec6b8592d7444e933fe9040dae96f6~tplv-aphluv4xwc-origin-jpeg.jpeg?dr=15568&t=555f072d&ps=933b5bde&shp=1c65f68b&shcp=9b759fb9&idc=my&from=476444299\" width=\"1254\" height=\"1254\"><ul><li><strong>Vitamin B1</strong></li><li><strong>Vitamin B2</strong></li><li><strong>Vitamin B6</strong></li><li><strong>Glucose vừa đủ</strong></li></ul><h3 style=\"text-align: left;\">CÔNG DỤNG</h3><p><strong>Kích thích tính thèm ăn</strong>, hỗ trợ tiêu hóa tốt.<br> Hỗ trợ <strong>tăng trọng nhanh, tăng độ đồng đều</strong>, nâng cao năng suất chăn nuôi.<br> Hỗ trợ <strong>mọc lông nhanh</strong>, hạn chế tình trạng mổ cắn.<br> <strong>Chống stress</strong>, bổ sung dinh dưỡng và năng lượng cho cơ thể.<br> Hỗ trợ vật nuôi <strong>phục hồi thể trạng</strong> trong các giai đoạn sức khỏe giảm sút.<br> Hỗ trợ <strong>tăng sản lượng trứng cho gà đẻ</strong>.<br> Sử dụng được cho <strong>cả gia súc và gia cầm</strong>.</p><h3 style=\"text-align: left;\">LIỀU LƯỢNG & CÁCH DÙNG</h3><img src=\"https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/cf49883eea444ddc917335ca67cb70cc~tplv-aphluv4xwc-origin-jpeg.jpeg?dr=15568&t=555f072d&ps=933b5bde&shp=1c65f68b&shcp=9b759fb9&idc=my&from=476444299\" width=\"1254\" height=\"1254\"><p><strong>Pha nước uống.</strong></p><p><strong>Gia cầm:</strong><br><strong>1g / 2 – 4 lít nước</strong></p><p><strong>Gia súc:</strong><br><strong>1g / 2 lít nước</strong></p><p>Nên pha lượng vừa đủ để vật nuôi sử dụng trong ngày.</p><h3 style=\"text-align: left;\">BẢO QUẢN</h3><ul><li>Để nơi <strong>khô ráo</strong>.</li><li>Tránh ánh sáng chiếu trực tiếp.</li><li>Đóng kín bao sau khi sử dụng.</li></ul><h3 style=\"text-align: left;\">THÔNG TIN SẢN PHẨM</h3><ul><li><strong>Tên sản phẩm:</strong> B-COMPLEX</li><li><strong>Thương hiệu:</strong> GoldenVet</li><li><strong>Dạng sản phẩm:</strong> Dạng bột</li><li><strong>Khối lượng đa dạng: 500g/ 1kg/ 3kg/ 5kg</strong></li><li><strong>Đối tượng sử dụng:</strong> Gia súc, gia cầm</li><li><strong>Chỉ dùng trong chăn nuôi</strong></li></ul><h3 style=\"text-align: left;\"><br></h3><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p>B Complex cho gà, B Complex cho heo, vitamin B cho gà, vitamin cho gia súc gia cầm, vitamin B1 B2 B6, bổ sung vitamin cho gà, kích thích ăn cho gà, hỗ trợ tăng trọng, vitamin cho gà đẻ, bổ sung dinh dưỡng gia cầm, B Complex 1kg, GoldenVet.</p><p><br>#BComplex #GoldenVet #VitaminChoGa #VitaminChoHeo #GiaSucGiaCam #BoSungVitamin #ChamSocVatNuoi #DinhDuongVatNuoi</p>",
+      "cutRatio": 0.7886,
+      "cut": "assets/img/cut/prod-02-cut",
+      "gallery": [
+        "assets/img/studio/prod-02-1"
+      ]
+    },
+    {
+      "id": "03",
+      "code": "GP-03",
+      "slug": "es12-liquid",
+      "productId": "1735927005250094918",
+      "name": "ES12 LIQUID - Tăng Đề Kháng Phục Hồi Thể Trạng Gà Chọi Giải Độc, Chống Nóng, Tăng Khung Nở Cơ Gà Đá Gia Cầm Vật Nuôi - GOLDEN PHARMA",
+      "shortName": "ES12 LIQUID Thảo Dược Gà Chọi",
+      "brand": "Golden Pharma",
+      "category": "vitamin-khoang",
+      "animals": [
+        "ga-choi",
+        "gia-cam"
+      ],
+      "price": 50000,
+      "originalPrice": 58000,
+      "rating": 4.1,
+      "reviews": 243,
+      "soldCount": 8433,
+      "soldText": "8.4K",
+      "accent": "#135D33",
+      "highlights": [
+        "Tăng sức đề kháng, phục hồi thể trạng",
+        "Giải độc gan thận, chống nóng",
+        "Tăng khung nở cơ cho gà đá, gia cầm",
+        "Dạng nhỏ giọt & xịt tiện lợi"
+      ],
+      "variations": [
+        {
+          "label": "20ml - chai thủy tinh",
+          "price": 50000,
+          "sku": "DPV008",
+          "weight_g": "200"
+        },
+        {
+          "label": "50ml - chai thủy tinh",
+          "price": 80000,
+          "sku": "DPV009",
+          "weight_g": "200"
+        },
+        {
+          "label": "100ml - chai nhựa dạng xịt",
+          "price": 98000,
+          "sku": "DPV010",
+          "weight_g": "200"
+        }
+      ],
+      "descriptionHtml": "<p><strong>ES12 LIQUID - GIẢI PHÁP DINH DƯỠNG TOÀN DIỆN CHO VẬT NUÔI KHỎE MẠNH, SUNG SỨC</strong></p><img src=\"https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/787867fb899e48249ea3dc5b96870106~tplv-aphluv4xwc-origin-jpeg.jpeg?dr=15568&t=555f072d&ps=933b5bde&shp=1c65f68b&shcp=9b759fb9&idc=my2&from=476444299\" width=\"1254\" height=\"1254\"><p>Sản phẩm cao cấp từ Golden Pharma, sử dụng <strong>100% nguyên liệu nhập khẩu từ Bỉ</strong>. Đây là giải pháp hoàn hảo để chăm sóc sức khỏe, phục hồi thể trạng cho các dòng gà cảnh, gà chọi và gia cầm.</p><p><br></p><p><strong>CÔNG DỤNG NỔI BẬT:</strong> ️ </p><p><strong>Phục hồi thể trạng nhanh chóng:</strong> Hấp thụ cực nhanh, giúp vật nuôi tỉnh táo, giảm mệt mỏi sau khi ốm, vận động nhiều hoặc thay đổi thời tiết. ️ </p><p><strong>Bổ sung năng lượng:</strong> Cung cấp nguồn dưỡng chất dồi dào, giúp vật nuôi luôn sung mãn, lanh lợi và khỏe mạnh. ️ </p><p><strong>Giải độc & Tăng đề kháng:</strong> Hỗ trợ đào thải độc tố khi sử dụng kháng dài ngày, bảo vệ gan thận. ️ </p><p><strong>Chống sốc nhiệt (Chống nóng):</strong> Kết hợp bù điện giải cực tốt, giúp vật nuôi vượt qua những ngày nắng nóng khắc nghiệt một cách an toàn. ️️ </p><p><strong>Phát triển khung bệ:</strong> Hỗ trợ quá trình tăng cơ, nở khung, giúp vật nuôi có ngoại hình săn chắc, đẹp mắt.</p><p><br></p><p><strong>HƯỚNG DẪN SỬ DỤNG LÚC CẦN THIẾT HOẶC MỖI NGÀY:</strong></p><p><em>(1ml tương đương khoảng 20 giọt)</em></p><p><strong>Dùng trực tiếp:</strong> Nhỏ trực tiếp để có hiệu quả nhanh nhất.</p><p>Gà nòi/gà trọng lượng lớn: 10 giọt/con/ngày (chia 2 lần).</p><p>Gà tre/gà cảnh cỡ nhỏ: 5 giọt/con/ngày (chia 2 lần).</p><p>Gà tơ: 3 giọt/con/ngày (chia 2 lần).</p><p><strong>Pha nước uống (Dùng cho cả đàn):</strong> Pha 2ml cho 1 lít nước uống (ngày 2 lần, mỗi lần cho uống trong 2 giờ). Dùng liên tục từ 5 - 7 ngày để đạt hiệu quả tốt nhất</p><img src=\"https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/629aefe8736844cf9475068136a99cb3~tplv-aphluv4xwc-origin-jpeg.jpeg?dr=15568&t=555f072d&ps=933b5bde&shp=1c65f68b&shcp=9b759fb9&idc=my2&from=476444299\" width=\"1254\" height=\"1254\"><p><strong>THÔNG TIN SẢN PHẨM:</strong></p><p><strong>Thể tích:</strong> Chai 20ml/ 50ml/ 100ml.</p><p><strong>Thương hiệu:</strong> Golden Pharma.</p><p><strong>Sản xuất tại:</strong> Công ty Cổ phần Quốc tế Thú Y Vàng.</p><p>Sản phẩm chỉ dùng trong chăn nuôi.</p><p><br></p><p><strong>CHĂM SÓC VẬT NUÔI TOÀN DIỆN - ĐẶT HÀNG NGAY HÔM NAY!</strong></p><p><br></p><p>#ES12Liquid #GoldenPharma #NuoiGaCanh #GaTre #GaSerama #PhucHoiTheTrang #DinhDuongVatNuoi #GiaiDocGan #ChongNongChoGa #ThuY #ChamSocGiaCam</p>",
+      "cutRatio": 0.7131,
+      "cut": "assets/img/cut/prod-03-cut",
+      "gallery": [
+        "assets/img/studio/prod-03-1",
+        "assets/img/studio/prod-03-2"
+      ]
+    },
+    {
+      "id": "04",
+      "code": "GP-04",
+      "slug": "um-ga-ngan-vit",
+      "productId": "1735562848031901510",
+      "name": "ÚM GÀ NGAN VỊT – Bổ Sung Vitamin, Khoáng Vi Lượng Cho Gia Cầm Non, Hỗ Trợ Phục Hồi Sức Khỏe - GOLDEN PHARMA",
+      "shortName": "ÚM GÀ - NGAN - VỊT",
+      "brand": "Golden Pharma",
+      "category": "vitamin-khoang",
+      "animals": [
+        "gia-cam"
+      ],
+      "price": 21999,
+      "originalPrice": 25000,
+      "rating": 4.6,
+      "reviews": 149,
+      "soldCount": 3311,
+      "soldText": "3.3K",
+      "accent": "#1F4488",
+      "highlights": [
+        "Tiêu lòng đỏ nhanh, chống khô chân",
+        "Hỗ trợ úm đồng đều, khỏe mạnh",
+        "Bổ sung đủ Vitamin A, D3, E, K3, B1, C",
+        "Tăng sức đề kháng giai đoạn 1–21 ngày"
+      ],
+      "variations": [
+        {
+          "label": "Golden Pharma - gói 100g",
+          "price": 21999,
+          "sku": "DPV028",
+          "weight_g": "150",
+          "originalPrice": 22000
+        },
+        {
+          "label": "Golden Vet - gói 100g",
+          "price": 22000,
+          "sku": "TYV026",
+          "weight_g": "150"
+        },
+        {
+          "label": "Golden Pharma - 1kg",
+          "price": 200000,
+          "sku": "DPV029",
+          "weight_g": "1000"
+        },
+        {
+          "label": "Golden Vet - 1 gói 1kg",
+          "price": 200000,
+          "sku": "TYV027",
+          "weight_g": "1000"
+        }
+      ],
+      "descriptionHtml": "<p><strong>ÚM GÀ – NGAN – VỊT GOLDEN PHARMA</strong> là sản phẩm dạng bột bổ sung <strong>vitamin, khoáng vi lượng và acid amin</strong> cho gà, vịt, ngan, cút trong giai đoạn úm.</p><p>Sản phẩm hỗ trợ bổ sung dinh dưỡng, giúp gia cầm non duy trì thể trạng tốt, uống nước tốt hơn và phát triển đồng đều trong giai đoạn đầu nuôi.</p><img src=\"https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/1c50f44a6da747e5ad88f7c819fe90ee~tplv-aphluv4xwc-origin-jpeg.jpeg?dr=15568&t=555f072d&ps=933b5bde&shp=1c65f68b&shcp=9b759fb9&idc=my&from=476444299\" width=\"1254\" height=\"1254\"><p><strong>THÀNH PHẦN CHÍNH</strong></p><ul><li>Vitamin K3</li><li>Vitamin B1, B2, B6</li><li>Vitamin C, E, A, D3</li><li>Canxi gluconat</li><li>Methionine</li><li>Lysine</li><li>Glucose</li></ul><p><strong>CÔNG DỤNG</strong></p><p> Bổ sung <strong>vitamin và khoáng vi lượng</strong> cho gia cầm non.<br> Hỗ trợ <strong>phục hồi thể trạng</strong>, chăm sóc sức khỏe trong giai đoạn úm.<br> Hỗ trợ <strong>kích thích uống nước</strong>, bổ sung dinh dưỡng cho cơ thể.<br> Giúp đàn gia cầm <strong>phát triển đồng đều, khỏe mạnh</strong>.<br> Hỗ trợ hạn chế tình trạng <strong>khô chân do mất nước</strong>, giúp gia cầm có ngoại hình tốt hơn.</p><p><br></p><p><strong>CÁCH DÙNG – LIỀU LƯỢNG</strong></p><p>Hòa nước uống hoặc trộn thức ăn.</p><p><strong>Gà, vịt, ngan, cút:</strong></p><ul><li><strong>1g / 2kg thức ăn</strong>hoặc</li><li><strong>1g / 2 lít nước uống</strong></li></ul><p><strong>BẢO QUẢN</strong></p><p>Để nơi <strong>khô mát</strong>, tránh ánh nắng mặt trời chiếu trực tiếp, nhiệt độ dưới <strong>30°C</strong>.</p><p><strong>THÔNG TIN SẢN PHẨM</strong></p><ul><li>Dạng sản phẩm: <strong>Dạng bột</strong></li><li>Khối lượng tịnh: 100g và <strong>1KG</strong></li><li>Thương hiệu: <strong>Golden Pharma</strong></li><li>Đối tượng sử dụng: <strong>Gà, vịt, ngan, cút</strong></li><li><strong>Chỉ dùng trong chăn nuôi</strong></li></ul><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p>úm gà, úm vịt, úm ngan, úm cút, vitamin cho gà con, vitamin gia cầm non, khoáng vi lượng cho gia cầm, bột úm gia cầm, Golden Pharma, bổ sung vitamin cho gia cầm.</p>",
+      "cutRatio": 0.6516,
+      "cut": "assets/img/cut/prod-04-cut",
+      "gallery": [
+        "assets/img/studio/prod-04-1"
+      ]
+    },
+    {
+      "id": "05",
+      "code": "GP-05",
+      "slug": "gv-calphos-powder",
+      "productId": "1736154291102910278",
+      "name": "Bột Khoáng & Vitamin Tổng Hợp GV CALPHOS POWDER - Hỗ trợ khung xương cứng cáp, tăng năng suất vật nuôi, hỗ trợ nái nhiều sữa, gia cầm đẻ tốt, vỏ trứng dày",
+      "shortName": "GV CALPHOS POWDER Khoáng Sữa",
+      "brand": "Golden Pharma",
+      "category": "vitamin-khoang",
+      "animals": [
+        "heo",
+        "gia-cam",
+        "trau-bo"
+      ],
+      "price": 57800,
+      "originalPrice": 68000,
+      "rating": 4.6,
+      "reviews": 128,
+      "soldCount": 2939,
+      "soldText": "2.9K",
+      "accent": "#19529B",
+      "highlights": [
+        "Chống yếu chân, bại liệt sau đẻ",
+        "Tăng tỷ lệ đẻ, vỏ trứng dày bóng đẹp",
+        "Kích thích tiết sữa nhiều ở heo nái",
+        "Khung xương cứng cáp, tăng năng suất"
+      ],
+      "variations": [
+        {
+          "label": "1kg",
+          "price": 57800,
+          "sku": "TYVTT002",
+          "weight_g": "1000",
+          "originalPrice": 68000
+        },
+        {
+          "label": "3kg",
+          "price": 204000,
+          "sku": "GP-0278",
+          "weight_g": "3000"
+        },
+        {
+          "label": "5kg",
+          "price": 340000,
+          "sku": "TYVTT003",
+          "weight_g": "5000"
+        }
+      ],
+      "descriptionHtml": "<p><strong>BỘT DINH DƯỠNG GV CALPHOS POWDER GOLDENVET – BÍ QUYẾT CHO KHUNG XƯƠNG VỮNG CHẮC & NĂNG SUẤT ĐỈNH CAO!</strong></p><p><br></p><p>Đàn gia cầm đẻ kém, trứng mỏng vỏ dễ vỡ? Heo nái, bò cái sau sinh gầy mòn, ít sữa? Vật nuôi phát triển khung xương kém, hay đứng xêu vẹo? Giải quyết ngay bài toán thiếu hụt khoáng chất với <strong>GV CALPHOS POWDER</strong> - Công thức hoàn hảo kết hợp Canxi, Phospho và Vitamin tổng hợp từ thương hiệu GOLDENVET!</p><img src=\"https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/aee6d4f429e04499af874a13ccdcac04~tplv-aphluv4xwc-origin-jpeg.jpeg?dr=15568&t=555f072d&ps=933b5bde&shp=1c65f68b&shcp=9b759fb9&idc=my&from=476444299\" width=\"1254\" height=\"1254\"><p><br></p><p><strong>CÔNG DỤNG VƯỢT TRỘI GIÚP BÀ CON CHĂN NUÔI THẮNG LỚN:</strong></p><p><strong>Khung xương cứng cáp, Dáng đứng vững vàng:</strong> Cung cấp nguồn Calcium và Phospho dồi dào, hỗ trợ phát triển hệ xương khớp, giúp vật nuôi (đặc biệt là nái và gia cầm đẻ) giảm thiểu tối đa tình trạng sập bàn, khụy gối, yếu chân.</p><p><strong>Tối ưu năng suất sinh sản:</strong> Kích thích gia cầm đẻ khỏe, tăng tỷ lệ trứng, đặc biệt giúp vỏ trứng dày dặn, bóng đẹp. Hỗ trợ nái duy trì chu kỳ sinh sản đều đặn.</p><p><strong>Kích thích tiết sữa:</strong> Là \"trợ thủ đắc lực\" cho lợn nái, bò sữa, giúp tăng sản lượng sữa, nuôi con khỏe mạnh, hồng hào.</p><p><strong>Kích thích tiêu hóa & Làm đẹp ngoại hình:</strong> Hệ Vitamin (A, D3, E) giúp vật nuôi ăn khỏe, tiêu hóa tốt, lớn nhanh, đồng thời mang lại ngoại hình bắt mắt: trơn lông, mượt da.</p><p><br></p><p>THÀNH PHẦN ƯU VIỆT (Trong 1kg sản phẩm):</p><p>Calcium (min-max): 9.000 - 10.000 mg</p><p>Phospho (min-max): 335 - 355 mg</p><p>Vitamin D3 (min): 880.000 UI</p><p>Vitamin A (min): 4.000.000 UI</p><p>Vitamin E (min): 250</p><p><strong>HƯỚNG DẪN SỬ DỤNG TIẾT KIỆM:</strong> Sản phẩm dạng bột dễ trộn, khuyến khích dùng liên tục trong suốt thời gian chăn nuôi.</p><p><strong>Đối với Gia cầm:</strong> Trộn 100g bột với 50 - 100 kg thức ăn hỗn hợp.</p><p><strong>Đối với Gia súc:</strong> Trộn 100g bột với 100 - 250 kg thức ăn.</p><p><strong>THÔNG TIN CHI TIẾT:</strong></p><p><strong>Quy cách:</strong> Gói 1KG/ 3KG/ 5KG</p><p><strong>Thương hiệu:</strong> Công ty Cổ phần Quốc tế Thú Y Vàng (GOLDENVET).</p><p><strong>Bảo quản:</strong> Để nơi khô ráo, tránh ánh sáng trực tiếp.</p><p><em>Lưu ý: Chỉ dùng trong chăn nuôi. Hạn chế dùng cho động vật mẫn cảm với các thành phần dinh dưỡng trên</em>.</p><p><strong>Chăm sóc nền tảng sức khỏe hôm nay - Thu lãi chăn nuôi lớn ngày mai! Thêm ngay sản phẩm vào giỏ hàng nhé bà con!</strong></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p>#GoldenVet #CalphosPowder #BoSungCanxi #KhoeXuongKhop #TangTyLeDe #VoTrungDay #NhieuSua #DinhDuongChanNuoi #ThucAnBoSung #ChanNuoiHieuQua</p>",
+      "cutRatio": 0.6667,
+      "cut": "assets/img/cut/prod-05-cut",
+      "gallery": [
+        "assets/img/studio/prod-05-1"
+      ]
+    },
+    {
+      "id": "06",
+      "code": "GP-06",
+      "slug": "chong-bai-liet",
+      "productId": "1736154003091392326",
+      "name": "Chống Bại Liệt Golden Pharma - Bổ sung Canxi, Vitamin giúp vật nuôi cứng cáp, chắc khỏe xương",
+      "shortName": "CHỐNG BẠI LIỆT Canxi Khoáng",
+      "brand": "Golden Pharma",
+      "category": "vitamin-khoang",
+      "animals": [
+        "gia-cam",
+        "heo",
+        "trau-bo"
+      ],
+      "price": 40000,
+      "originalPrice": 48000,
+      "rating": 4.8,
+      "reviews": 81,
+      "soldCount": 2700,
+      "soldText": "2.7K",
+      "accent": "#8F241E",
+      "highlights": [
+        "Giảm thiếu canxi, yếu chân, bại liệt",
+        "Tăng chất lượng trứng & tỷ lệ ấp nở",
+        "Ngừa cắn mổ lông, cắn đuôi",
+        "Hấp thu thức ăn tốt, ngoại hình đẹp"
+      ],
+      "variations": [
+        {
+          "label": "200g",
+          "price": 40000,
+          "sku": "DPV011",
+          "weight_g": "200"
+        },
+        {
+          "label": "1kg",
+          "price": 140000,
+          "sku": "DPV012",
+          "weight_g": "1000"
+        }
+      ],
+      "descriptionHtml": "<p><strong>BỘT KHOÁNG ĐA VI LƯỢNG GOLDEN PHARMA – BÍ QUYẾT CHO ĐÀN VẬT NUÔI CỨNG CÁP, ĐẸP MÃ, NĂNG SUẤT CAO!</strong></p><p><br></p><p>Đàn gia súc, gia cầm của bạn đang gặp tình trạng chậm lớn, yếu chân, lông da xơ xác hay tỷ lệ đẻ trứng thấp? Hãy bổ sung ngay <strong>Bột Khoáng Đa Vi Lượng từ Golden Pharma</strong> – Giải pháp cung cấp hệ dưỡng chất toàn diện, giúp vật nuôi phát triển tối đa vóc dáng và duy trì thể trạng sung mãn nhất!</p><p><br></p><p><strong>4 LỢI ÍCH VÀNG CHO TRANG TRẠI CỦA BẠN:</strong></p><p><br></p><p><strong>Hỗ trợ khung xương chắc khỏe:</strong> Cung cấp hàm lượng Canxi, Đồng, Kẽm và Vitamin D3 dồi dào, giúp vật nuôi hình thành khung xương vững chắc, giảm thiểu tối đa tình trạng còi cọc, yếu chân hay sập bàn trong quá trình phát triển.</p><p><br></p><p><strong>Ngoại hình bắt mắt, Đạt cân nhanh:</strong> Bổ sung các axit amin (Methionine, Lysine) và Vitamin giúp kích thích phát triển vóc dáng: da vàng, lông mượt, mào đỏ tươi, lườn dày thịt, ngoại hình đẹp dễ xuất bán với giá cao.</p><p><br></p><p><strong>Tối ưu hệ tiêu hóa:</strong> Kích thích khả năng tiêu hóa, hỗ trợ cơ thể vật nuôi hấp thu và chuyển hóa trọn vẹn thức ăn, từ đó thúc đẩy đà tăng trọng tự nhiên.</p><p><br></p><p><strong>Tăng năng suất sinh sản:</strong> Đối với gia cầm, sản phẩm hỗ trợ tăng tỷ lệ đẻ, cải thiện độ dày vỏ trứng và nâng cao tỷ lệ ấp nở thành công.</p><p>THÀNH PHẦN ƯU VIỆT TRONG 1KG (Cam kết không chứa chất cấm):</p><p>Canxi (min-max): 10.000 - 20.000 mg</p><p>Hệ khoáng chất đa vi lượng: Đồng, Kẽm, Selen</p><p>Hệ Vitamin thiết yếu: Vitamin A (10.000 UI), Vitamin D3 (60.000 UI), Vitamin E, Vitamin B1</p><p>Axit amin: Methionine, Lysine tổng số</p><p><br></p><p><strong>HƯỚNG DẪN SỬ DỤNG:</strong> Dễ dàng sử dụng hàng ngày bằng cách pha vào nước uống hoặc trộn chung với thức ăn.</p><p><strong>Pha nước uống:</strong> Tỷ lệ 1g bột / 1 lít nước.</p><p><strong>Trộn thức ăn:</strong> Tỷ lệ 1g bột / 1 kg thức ăn.</p><p><br></p><p><strong>THÔNG TIN SẢN PHẨM:</strong></p><p><strong>Quy cách:</strong> 2 loại Gói 200g và 1KG</p><p><strong>Thương hiệu:</strong> Công ty Cổ phần Quốc tế Golden Pharma.</p><p><strong>Bảo quản:</strong> Nơi khô mát, nhiệt độ dưới 30°C, tránh ánh nắng mặt trời trực tiếp.</p><p><br></p><p><em>Lưu ý: Chỉ dùng trong chăn nuôi</em>.</p><p><strong>Chăm sóc nền tảng sức khỏe hôm nay - Thu lợi nhuận lớn ngày mai! Thêm ngay sản phẩm vào giỏ hàng để nhận ưu đãi từ shop!</strong></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p>#GoldenPharma #KhoangDaViLuong #BoSungCanxiVatNuoi #VatNuoiKhoeManh #GaDepMa #TangTyLeTrung #DinhDuongChanNuoi #ThucAnBoSung #ChanNuoiHieuQua</p>",
+      "cutRatio": 0.7412,
+      "cut": "assets/img/cut/prod-06-cut",
+      "gallery": [
+        "assets/img/studio/prod-06-1",
+        "assets/img/studio/prod-06-2"
+      ]
+    },
+    {
+      "id": "07",
+      "code": "GP-07",
+      "slug": "len-giong-sieu-nhanh",
+      "productId": "1736154844020377414",
+      "name": "Bột Dinh Dưỡng LÊN GIỐNG SIÊU NHANH GoldenVet - Kích Sữa, Dưỡng Nái, An Thai, Chống Bại Liệt",
+      "shortName": "LÊN GIỐNG SIÊU NHANH",
+      "brand": "GoldenVet",
+      "category": "tang-trong-sinh-san",
+      "animals": [
+        "heo",
+        "trau-bo"
+      ],
+      "price": 38000,
+      "originalPrice": 45000,
+      "rating": 4.6,
+      "reviews": 60,
+      "soldCount": 2045,
+      "soldText": "2.0K",
+      "accent": "#0D55A6",
+      "highlights": [
+        "Kích thích lên giống nhanh, động dục rõ",
+        "Dưỡng nái, an thai, tăng số con đẻ ra",
+        "Kích sữa dồi dào, chống bại liệt sau đẻ",
+        "Bổ sung Selen, Vitamin E, A, D3 cao cấp"
+      ],
+      "variations": [
+        {
+          "label": "200g",
+          "price": 38000,
+          "sku": "TYV030",
+          "weight_g": "200"
+        },
+        {
+          "label": "1kg",
+          "price": 103000,
+          "sku": "TYVTT020",
+          "weight_g": "1000"
+        }
+      ],
+      "descriptionHtml": "<p>Vấn đề nái chậm lên giống sau cai sữa, thiếu sữa nuôi con hay suy kiệt thể trạng sau sinh luôn làm bà con đau đầu? Bột bổ sung dinh dưỡng LÊN GIỐNG SIÊU NHANH chính hãng từ Công ty Cổ phần Quốc tế Thú Y Vàng (GoldenVet) chính là bí quyết vàng giúp bảo vệ sức khỏe sinh sản và nâng cao năng suất cho cả bầy đàn!</p><p><br></p><p><strong>BẢNG THÀNH PHẦN SIÊU DINH DƯỠNG:</strong> Sản phẩm cung cấp hệ dưỡng chất hoàn hảo với hàm lượng cao:</p><p><strong>Hệ Vitamin thiết yếu:</strong> Vitamin A (min 1.000.000 UI), Vitamin D3 (min 188.000 UI), Vitamin E, B1, B3, B6.</p><p><strong>Hệ khoáng chất đa vi lượng:</strong> Bổ sung dồi dào Canxi gluconat (1.000 - 1.500 mg), Kẽm, Selen, Đồng, Sắt, Mangan, Cobalt.</p><p><br></p><p><strong>CÔNG DỤNG VƯỢT TRỘI - HIỆU QUẢ RÕ RỆT:</strong></p><p><strong>Lên giống nhạy & Tăng đậu thai:</strong> Bổ sung kịp thời Vitamin và khoáng chất cần thiết, giúp heo nhanh chóng lên giống trở lại sau khi cai sữa và gia tăng tỷ lệ đậu thai thành công.</p><p><strong>Dưỡng nái, An thai & Chống bại liệt:</strong> Nâng cao sức đề kháng cho thai non (bê, nghé), chống tình trạng hư thai, giúp nái bền bỉ. Đồng thời hỗ trợ phòng ngừa hội chứng bại liệt sau đẻ vô cùng hiệu quả.</p><p><strong>Kích sữa & Phục hồi:</strong> Giúp vật mẹ phục hồi thể trạng nhanh chóng sau sinh, kích thích tuyến sữa hoạt động mạnh mẽ, từ đó làm giảm tỷ lệ hao hụt ở heo con và bê nghé sơ sinh.</p><p><strong>Tốt cho cả con đực:</strong> Sản phẩm còn có tác dụng tăng khả năng sản xuất và nâng cao chất lượng tinh dịch trên con đực, giúp cải thiện chất lượng con giống toàn diện.</p><p><br></p><p><strong>HƯỚNG DẪN SỬ DỤNG TIỆN LỢI:</strong> Sản phẩm dạng bột dễ hòa tan, bà con có thể linh hoạt trộn cùng thức ăn hoặc hòa vào nước cho uống:</p><p><strong>Đối với Heo:</strong> Trộn 1kg sản phẩm cho 500kg thức ăn.</p><p><strong>Đối với Trâu, Bò, Dê:</strong> Trộn 1kg sản phẩm cho 1 tấn thức ăn.</p><p><br></p><p><strong>️ LƯU Ý BẢO QUẢN:</strong></p><p>Chỉ sử dụng trong chăn nuôi.</p><p>Bảo quản túi bột ở nơi khô ráo, thoáng mát, nhiệt độ dưới 30ºC và tránh ánh nắng mặt trời chiếu trực tiếp.</p><p><strong>Bấm \"Thêm vào giỏ hàng\" ngay góc trái màn hình để sở hữu ngay giải pháp dinh dưỡng giúp nái khỏe, con ngoan, trang trại chăn nuôi thắng lớn cùng GoldenVet!</strong></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><em>#LenGiongSieuNhanh #GoldenVet #DinhDuongVatNuoi #KichSua #AnThai #ChongBaiLiet</em></p>",
+      "cutRatio": 0.803,
+      "cut": "assets/img/cut/prod-07-cut",
+      "gallery": [
+        "assets/img/studio/prod-07-1",
+        "assets/img/studio/prod-07-2"
+      ]
+    },
+    {
+      "id": "08",
+      "code": "GP-08",
+      "slug": "men-vi-sinh-cao-cap",
+      "productId": "1736154011159529286",
+      "name": "Men Vi Sinh Cao Cấp GoldenVet - Hỗ trợ vật nuôi ăn khỏe, lớn nhanh, giảm tiêu tốn thức ăn (FCR), tăng đề kháng tự nhiên",
+      "shortName": "MEN VI SINH CAO CẤP GoldenVet",
+      "brand": "GoldenVet",
+      "category": "men-tieu-hoa",
+      "animals": [
+        "gia-cam",
+        "heo",
+        "trau-bo"
+      ],
+      "price": 65000,
+      "originalPrice": 75000,
+      "rating": 4.6,
+      "reviews": 45,
+      "soldCount": 1993,
+      "soldText": "2.0K",
+      "accent": "#0F6839",
+      "highlights": [
+        "Vật nuôi ăn khỏe, ngủ nhiều, lớn nhanh",
+        "Giảm hệ số tiêu tốn thức ăn (FCR)",
+        "Tạo phân khuôn khô, giảm mùi hôi chuồng",
+        "Tăng cường miễn dịch đường ruột tự nhiên"
+      ],
+      "variations": [
+        {
+          "label": "Mặc định",
+          "price": 65000,
+          "sku": "TYVTT005",
+          "weight_g": "1000"
+        }
+      ],
+      "descriptionHtml": "<p>MEN VI SINH CAO CẤP GOLDENVET – BÍ QUYẾT BẢO VỆ ĐƯỜNG RUỘT, TỐI ƯU CHI PHÍ CHĂN NUÔI</p><p>Vật nuôi ăn nhiều nhưng chậm lớn? Hệ tiêu hóa kém, đường ruột không ổn định khiến chi phí thức ăn tăng cao? Đừng lo, <strong>Men Vi Sinh Cao Cấp từ thương hiệu GOLDENVET</strong> chính là giải pháp dinh dưỡng an toàn, hiệu quả dành cho trang trại của bạn!</p><p><br></p><p><strong>4 LỢI ÍCH VƯỢT TRỘI CHO ĐÀN VẬT NUÔI:</strong></p><p><strong>Ăn Khỏe, Tiêu Hóa Tốt:</strong> Kích thích gia súc, gia cầm thèm ăn, hỗ trợ hệ tiêu hóa phân giải và hấp thu triệt để nguồn dưỡng chất từ thức ăn.</p><p><strong>Tối Ưu Chi Phí, Năng Suất Đạt Đỉnh:</strong> Nhờ khả năng hấp thu tốt, sản phẩm giúp giảm tỷ lệ tiêu tốn thức ăn (FCR), hỗ trợ đà tăng trưởng tự nhiên giúp vật nuôi nhanh đạt vóc dáng xuất chuồng.</p><p><strong>Bảo Vệ Đường Ruột Khỏe Mạnh:</strong> Bổ sung hàng tỷ lợi khuẩn giúp cân bằng hệ vi sinh, ức chế sự phát triển của các tác nhân gây hại (như E.coli, Salmonella), từ đó hỗ trợ giảm thiểu các rủi ro về rối loạn tiêu hóa.</p><p><strong>Tăng Cường Đề Kháng:</strong> Xây dựng hàng rào miễn dịch vững chắc từ bên trong đường ruột, giúp vật nuôi luôn khỏe mạnh, dẻo dai.</p><p><br></p><p><strong>THÀNH PHẦN CHẤT LƯỢNG CAO:</strong></p><p>Chứa hệ đa chủng lợi khuẩn siêu hoạt tính:</p><p><em>Lactobacillus acidophilus & Lactobacillus Reuteri</em></p><p><em>Bacillus subtilis</em></p><p><em>Saccharomyces cerevisiae</em></p><p><br></p><p>(Quy cách: Gói bột 1kg tiện dụng)</p><p><strong>HƯỚNG DẪN SỬ DỤNG TIẾT KIỆM:</strong></p><p><strong>Liều lượng:</strong> Trộn đều 1g men vi sinh với 1-2kg thức ăn (tương đương dùng cho 5-10kg thể trọng/ngày).</p><p><strong>Liệu trình:</strong> An toàn để sử dụng liên tục trong suốt quá trình chăn nuôi để duy trì phong độ tốt nhất cho đàn vật nuôi.</p><p><strong>THÔNG TIN THƯƠNG HIỆU:</strong></p><p><strong>Sản xuất tại:</strong> Công ty Cổ phần Quốc tế Thú Y Vàng.</p><p><strong>Lưu ý:</strong> Chỉ dùng trong chăn nuôi. Bảo quản nơi khô ráo, tránh ánh sáng trực tiếp.</p><p><br></p><p><strong>Chăm sóc đường ruột hôm nay - Tối ưu lợi nhuận ngày mai! Thêm ngay vào giỏ hàng để nhận ưu đãi mới nhất!</strong></p><p><br></p><p>#Goldenvet #MenViSinhCaoCap #MenViSinhChanNuoi #TieuHoaKhoe #GiamChiPhiThucAn #HoTroTangTrong #VatNuoiKhoeManh #ThuYVang #ChanNuoiHieuQua</p>",
+      "cutRatio": 0.6812,
+      "cut": "assets/img/cut/prod-08-cut",
+      "gallery": [
+        "assets/img/studio/prod-08-1"
+      ]
+    },
+    {
+      "id": "09",
+      "code": "GP-09",
+      "slug": "sieu-vo-beo",
+      "productId": "1735563114946660166",
+      "name": "SIÊU VỖ BÉO – Bổ Sung Acid Amin, Vitamin, Men Vi Sinh Cho Heo Trâu Bò Dê, Hỗ Trợ Tăng Trọng, Tăng Cường Miễn Dịch, Giảm Chi Phí Thức Ăn - GOLDEN",
+      "shortName": "SIÊU VỖ BÉO Heo - Trâu Bò - Gà",
+      "brand": "Golden Pharma",
+      "category": "tang-trong-sinh-san",
+      "animals": [
+        "heo",
+        "trau-bo",
+        "gia-cam"
+      ],
+      "price": 60000,
+      "originalPrice": 72000,
+      "rating": 4.4,
+      "reviews": 87,
+      "soldCount": 1929,
+      "soldText": "1.9K",
+      "accent": "#C7371D",
+      "highlights": [
+        "Bung đùi, nở mông, nở vai nhanh",
+        "Nhiều nạc, chắc thịt, ít mỡ thừa",
+        "Rút ngắn thời gian nuôi, xuất bán sớm",
+        "Bổ sung Acid Amin, Vitamin & Men vi sinh"
+      ],
+      "variations": [
+        {
+          "label": "Siêu vỗ béo gà 1kg",
+          "price": 60000,
+          "sku": "DPV032",
+          "weight_g": "1000"
+        },
+        {
+          "label": "Siêu vỗ béo heo 1kg",
+          "price": 98000,
+          "sku": "DPV016",
+          "weight_g": "1000"
+        },
+        {
+          "label": "Siêu vỗ béo gà 5kg",
+          "price": 280000,
+          "sku": "DPV033",
+          "weight_g": "5010"
+        },
+        {
+          "label": "Siêu vỗ béo heo 5kg",
+          "price": 480000,
+          "sku": "DPV018",
+          "weight_g": "5010"
+        }
+      ],
+      "descriptionHtml": "<p><strong>SIÊU VỖ BÉO – BỔ SUNG DINH DƯỠNG CHO GIA SÚC</strong></p><p>Sản phẩm bổ sung <strong>acid amin, vitamin, khoáng chất, men vi sinh và các thành phần dinh dưỡng</strong> dùng trong chăn nuôi. Phù hợp bổ sung khẩu phần cho <strong>heo, trâu, bò, dê</strong>, hỗ trợ vật nuôi ăn tốt, tiêu hóa và hấp thu dinh dưỡng hiệu quả hơn trong giai đoạn nuôi tăng trọng.</p><img src=\"https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/1f9faca4b1b542fc9c2f3e74223d38f2~tplv-aphluv4xwc-origin-jpeg.jpeg?dr=15568&t=555f072d&ps=933b5bde&shp=1c65f68b&shcp=9b759fb9&idc=my&from=476444299\" width=\"1254\" height=\"1254\"><h3 style=\"text-align: left;\">THÀNH PHẦN</h3><p>Trong 1kg có các thành phần chính:</p><ul><li>Methionine</li><li>Lysine</li><li>Vitamin B1</li><li>Vitamin B2</li><li>Vitamin A</li><li>Vitamin D3</li><li>Vitamin E</li><li>Lactobacillus acidophilus</li><li>Bacillus subtilis</li><li>Saccharomyces cerevisiae</li><li>Citric acid</li><li>Sắt (Fe)</li><li>Kẽm (Zn)</li><li>Đồng</li><li>Selen</li><li>Tinh chất sâm</li><li>Chất mang vừa đủ 1kg</li></ul><h3 style=\"text-align: left;\">CÔNG DỤNG HỖ TRỢ</h3><p> Hỗ trợ <strong>tăng tính thèm ăn</strong>, giúp vật nuôi sử dụng thức ăn tốt hơn.<br> Hỗ trợ <strong>tiêu hóa và hấp thu dinh dưỡng</strong> nhờ hệ men vi sinh.<br> Hỗ trợ <strong>tăng trọng, phát triển cơ bắp và thể trạng</strong>.<br> Hỗ trợ duy trì <strong>thịt săn chắc, cơ thể cân đối</strong>.<br> Hỗ trợ <strong>da và lông khỏe, bóng mượt</strong>.<br> Hỗ trợ <strong>rút ngắn thời gian nuôi</strong> khi kết hợp khẩu phần và chăm sóc phù hợp.<br> Hỗ trợ <strong>tối ưu hiệu quả sử dụng thức ăn, FCR</strong>.</p><h3 style=\"text-align: left;\">CÁCH DÙNG VÀ LIỀU LƯỢNG</h3><p><strong>Trộn thức ăn hoặc hòa nước cho uống.</strong></p><p><strong>Heo:</strong><br><strong>1kg / 500kg thức ăn</strong><br>Sử dụng liên tục đến khi xuất bán.</p><p><strong>Trâu, bò, dê:</strong><br><strong>1kg / 1 tấn thức ăn</strong></p><h3 style=\"text-align: left;\">BẢO QUẢN</h3><ul><li>Để nơi khô ráo.</li><li>Tránh ánh sáng chiếu trực tiếp.</li><li>Đóng kín bao sau khi sử dụng.</li></ul><h3 style=\"text-align: left;\">THÔNG TIN SẢN PHẨM</h3><ul><li><strong>Tên sản phẩm:</strong> SIÊU VỖ BÉO</li><li><strong>Thương hiệu:</strong> Golden Pharma</li><li><strong>Dạng:</strong> Bột bổ sung dùng trong chăn nuôi</li><li><strong>Khối lượng:</strong> 1KG/ 5KG</li><li><strong>Đối tượng:</strong> Heo, trâu, bò, dê</li><li><strong>Chỉ dùng trong chăn nuôi</strong></li></ul><h3 style=\"text-align: left;\"><br></h3><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p>siêu vỗ béo, bổ sung dinh dưỡng cho heo, tăng trọng cho heo, vitamin cho heo, men vi sinh cho heo, acid amin cho heo, methionine lysine cho heo, bổ sung dinh dưỡng gia súc, thức ăn bổ sung cho bò, vitamin cho bò dê, Golden Pharma, hỗ trợ tăng trọng vật nuôi.</p><p><br>#SieuVoBeo #TangTrong #DinhDuongChoHeo #MenViSinh #VitaminChoHeo #GiaSuc #ChanNuoi #GoldenPharma</p>",
+      "cutRatio": 0.5499,
+      "cut": "assets/img/cut/prod-09-cut",
+      "gallery": [
+        "assets/img/studio/prod-09-1"
+      ]
+    },
+    {
+      "id": "10",
+      "code": "GP-10",
+      "slug": "max-growth-gia-cam",
+      "productId": "1735561121562855238",
+      "name": "Bột Dinh Dưỡng MAX GROWTH GoldenVet 1kg - Hỗ Trợ Gia Cầm Nở Ức, Dày Lườn, Mượt Lông, Lớn Nhanh Nặng Cân",
+      "shortName": "MAX GROWTH Vỗ Béo Gia Cầm",
+      "brand": "GoldenVet",
+      "category": "tang-trong-sinh-san",
+      "animals": [
+        "gia-cam"
+      ],
+      "price": 65000,
+      "originalPrice": 75000,
+      "rating": 4.0,
+      "reviews": 42,
+      "soldCount": 1633,
+      "soldText": "1.6K",
+      "accent": "#D1431B",
+      "highlights": [
+        "Nở ức, dày lườn, nặng cân vượt trội",
+        "Bung lông, mượt lông, kích mào đỏ đẹp",
+        "Kích thích thèm ăn, tiêu hóa triệt để",
+        "An toàn, không chứa chất cấm"
+      ],
+      "variations": [
+        {
+          "label": "1kg",
+          "price": 65000,
+          "sku": "DPV032",
+          "weight_g": "1000"
+        },
+        {
+          "label": "5kg",
+          "price": 320000,
+          "sku": "GP-5238",
+          "weight_g": "5000"
+        }
+      ],
+      "descriptionHtml": "<p><strong>MAX GROWTH GOLDENVET – BÍ QUYẾT CHO ĐÀN GIA CẦM ĐẸP MÃ, CHẮC THỊT, NHANH XUẤT CHUỒNG!</strong></p><p><br></p><p>Bà con đang lo lắng vì đàn gà, vịt nhà mình ăn nhiều nhưng lườn mỏng, lông xơ xác, thời gian chăn nuôi bị kéo dài làm đội chi phí cám? <strong>Sản phẩm dạng bột MAX GROWTH từ GoldenVet</strong> chính là giải pháp dinh dưỡng toàn diện, giúp bà con rút ngắn thời gian chăm sóc và tối ưu lợi nhuận!</p><p><strong>CÔNG DỤNG VƯỢT TRỘI GIÚP BÀ CON THẮNG LỚN:</strong></p><p><strong>Phát triển vóc dáng tối đa:</strong> Hỗ trợ kích lườn, nở ức, bung đùi, giúp gia cầm đạt form chuẩn, săn chắc và nặng cân.</p><p><strong>Ngoại hình bắt mắt, dễ bán giá cao:</strong> Cung cấp dưỡng chất hỗ trợ kích mọc lông, giúp bộ lông luôn bóng mượt, ngoại hình đẹp mã khi xuất bán.</p><p><strong>Kích thích ăn uống, hấp thu tốt:</strong> Giúp gia cầm ham ăn, hỗ trợ cải thiện tình trạng còi cọc, chậm lớn, từ đó giúp rút ngắn thời gian chăn nuôi hiệu quả.</p><p><strong>Bảo vệ sức khỏe, tiết kiệm chi phí:</strong> Hỗ trợ tăng cường hệ miễn dịch tự nhiên, giúp vật nuôi luôn khỏe mạnh, đồng thời tối ưu khả năng hấp thu để giảm thiểu chi phí thức ăn dư thừa.</p><p><br></p><p><strong>BẢNG THÀNH PHẦN VÀNG TRONG 1KG SẢN PHẨM:</strong></p><p>Sự kết hợp hoàn hảo giữa các dưỡng chất cao cấp:</p><p><strong>Bộ ba men vi sinh:</strong> <em>Lactobacillus acidophilus, Bacillus subtilis, Saccharomyces cerevisiae</em> giúp đường ruột luôn khỏe mạnh.</p><p><strong>Khoáng chất & Thảo dược:</strong> Bổ sung Selen, Đồng, Kẽm (Zn), Sắt (Fe) và đặc biệt là <strong>Tinh chất sâm</strong> hỗ trợ phục hồi và tăng lực.</p><p><strong>Acid amin & Vitamin:</strong> Chứa Methionine, Lysine cùng hệ Vitamin phong phú (A, D3, E, B1, B2).</p><p><br></p><p><strong>HƯỚNG DẪN SỬ DỤNG TIẾT KIỆM & HIỆU QUẢ:</strong></p><p><strong>Cách dùng:</strong> Trộn đều trực tiếp vào thức ăn của gia cầm.</p><p><strong>Liều lượng:</strong> Sử dụng 1g bột trộn với 0,5 - 1kg thức ăn (tương đương phục vụ cho 5 - 10kg thể trọng/ngày).</p><p><strong>Liệu trình:</strong> An toàn và khuyến khích dùng liên tục trong suốt thời gian nuôi để duy trì đà tăng trưởng tốt nhất.</p><p><strong>THÔNG TIN CHI TIẾT:</strong></p><p><strong>Trọng lượng tịnh:</strong> 1KG.</p><p><strong>Thương hiệu:</strong> Công ty Cổ phần Quốc tế Thú Y Vàng (GoldenVet) / Golden Pharma.</p><p><strong>Bảo quản:</strong> Để nơi khô ráo, tránh ánh sáng chiếu trực tiếp.</p><p><em>Lưu ý: Chỉ dùng trong chăn nuôi</em>.</p><p><strong>Chăm sóc đúng cách, chốt lời nhanh gọn! Nhấn \"Thêm vào giỏ hàng\" ngay để sở hữu bí quyết chăn nuôi nhàn hạ từ GoldenVet!</strong></p><p><br></p><p>#GoldenVet #MaxGrowth #VoBeoGiaCam #KichLuonBungDui #GaDepMa #DinhDuongGiaCam #ThucAnBoSung #ChanNuoiGa #ChanNuoiHieuQua #VatNuoiKhoeManh</p>",
+      "cutRatio": 0.6501,
+      "cut": "assets/img/cut/prod-10-cut",
+      "gallery": [
+        "assets/img/studio/prod-10-1"
+      ]
+    },
+    {
+      "id": "11",
+      "code": "GP-11",
+      "slug": "vitamin-khoang",
+      "productId": "1735562304156895046",
+      "name": "Vitamin khoáng 1kg trộn thức ăn, tăng khung, ra lông, chống bại liệt, mổ lông, căn đuôi gà, vịt,heo",
+      "shortName": "VITAMIN KHOÁNG Trộn Thức Ăn",
+      "brand": "Golden Pharma",
+      "category": "vitamin-khoang",
+      "animals": [
+        "gia-cam",
+        "heo"
+      ],
+      "price": 40000,
+      "originalPrice": 46000,
+      "rating": 4.5,
+      "reviews": 35,
+      "soldCount": 1618,
+      "soldText": "1.6K",
+      "accent": "#1B5E3A",
+      "highlights": [
+        "Tăng khung xương, bung lông nhanh",
+        "Chống bại liệt, mổ lông, cắn đuôi",
+        "Bổ sung khoáng đa - vi lượng thiết yếu",
+        "Dùng trộn thức ăn hàng ngày"
+      ],
+      "variations": [
+        {
+          "label": "200g",
+          "price": 40000,
+          "sku": "030",
+          "weight_g": "100"
+        },
+        {
+          "label": "1kg",
+          "price": 132000,
+          "sku": "029",
+          "weight_g": "1000"
+        }
+      ],
+      "descriptionHtml": "<p>Đàn vật nuôi còi cọc, chậm lớn, yếu chân, bại liệt hay mào lông kém sắc khiến hiệu quả chăn nuôi sụt giảm? Đừng lo, Bột CHỐNG BẠI LIỆT chính hãng Golden Pharma là giải pháp bổ sung dinh dưỡng toàn diện, cung cấp vitamin và khoáng đa vi lượng thiết yếu để đánh bay mọi nỗi lo này, giúp bầy đàn phát triển vượt bậc!</p><p><br></p><p><strong>BẢNG THÀNH PHẦN SIÊU DINH DƯỠNG:</strong> Sản phẩm là sự kết hợp hoàn hảo của các nguyên liệu chính như Canxi gluconat, đồng sunfate, kẽm gluconat cùng các dưỡng chất:</p><p><br></p><p>Hệ khoáng chất thiết yếu: Giàu Canxi (10.000 - 20.000 mg), Đồng, Kẽm và Selen.</p><p><br></p><p>Hệ Vitamin dồi dào: Cung cấp Vitamin A (min 10.000 UI), Vitamin D3 (min 60.000 UI), Vitamin B1 (min 1.500 mg) và Vitamin E.</p><p><br></p><p>Bổ sung các acid amin quan trọng: Methionine và Lysine.</p><p><br></p><p><strong>CÔNG DỤNG VƯỢT TRỘI - THẤY RÕ HIỆU QUẢ:</strong></p><p><br></p><p><strong>Phát triển khung xương & Thể trạng:</strong> Giảm thiểu tối đa tỷ lệ còi cọc, chậm lớn, yếu chân và đặc trị tình trạng bại liệt trên vật nuôi.</p><p><br></p><p><strong>Bật tung ngoại hình (Siêu đẹp mã):</strong> Giúp da vàng, mượt lông, kích mào, đỏ má, đặc biệt hỗ trợ dày lườn, bung đùi cho vóc dáng thương phẩm cực chuẩn.</p><p><br></p><p><strong>Tối ưu tiêu hóa & Tăng trọng:</strong> Kích thích hệ tiêu hóa khỏe mạnh, tăng khả năng hấp thụ và chuyển hóa thức ăn, từ đó giúp vật nuôi tăng trọng nhanh chóng.</p><p><br></p><p><strong>Tăng năng suất sinh sản:</strong> Kích thích tăng tỷ lệ đẻ, nâng cao chất lượng trứng và đảm bảo tỷ lệ ấp nở cao cho đàn gia cầm sinh sản.</p><p><br></p><p><strong>HƯỚNG DẪN SỬ DỤNG TIỆN LỢI:</strong> Sản phẩm dạng bột cực kỳ dễ dùng, bà con có thể pha trực tiếp vào nước uống hoặc trộn đều cùng thức ăn theo liều lượng chuẩn:</p><p><br></p><p><strong>Pha vào nước uống:</strong> Tỷ lệ 1 g / 1 lít nước.</p><p><br></p><p><strong>Trộn vào thức ăn:</strong> Tỷ lệ 1 g / 1 kg thức ăn.</p><p><br></p><p><strong>LƯU Ý BẢO QUẢN:</strong></p><p>Bảo quản ở nơi khô mát, nhiệt độ dưới 30°C và tuyệt đối tránh ánh nắng mặt trời chiếu trực tiếp.</p><p><strong>Quy cách đóng gói:</strong> Gói 1KG siêu tiết kiệm, lý tưởng cho quy mô chăn nuôi trang trại.</p><p><strong>Bấm \"Thêm vào giỏ hàng\" ngay góc trái màn hình để nạp đầy dinh dưỡng, giúp đàn vật nuôi khỏe mạnh, bung đùi nở mào cùng Golden Pharma!</strong></p><p><br></p><p><br></p><p><br></p><p><em>#ChongBaiLiet #GoldenPharma #ThuocThuY #DinhDuongVatNuoi #TangTrongNhanh #KichMao</em></p>",
+      "cutRatio": 0.7512,
+      "cut": "assets/img/cut/prod-11-cut",
+      "gallery": [
+        "assets/img/studio/prod-11-1"
+      ]
+    },
+    {
+      "id": "12",
+      "code": "GP-12",
+      "slug": "gp-guard-3kg",
+      "productId": "1737850321768253254",
+      "name": "GP-GUARD – Bột Rắc Chuồng Men Vi Sinh Khử Mùi 3KG, 5KG, 10KG, Hút Ẩm Cho Heo Sơ Sinh, Heo Nái, Gà, Gia Súc Gia Cầm - GOLDEN PHARMA",
+      "shortName": "GP-GUARD Bột Rắc Chuồng (3KG–10KG)",
+      "brand": "Golden Pharma",
+      "category": "sat-trung-chuong-trai",
+      "animals": [
+        "heo",
+        "gia-cam",
+        "trau-bo"
+      ],
+      "price": 39000,
+      "originalPrice": 45000,
+      "rating": 4.8,
+      "reviews": 15,
+      "soldCount": 433,
+      "soldText": "433",
+      "accent": "#0E6B3A",
+      "highlights": [
+        "Quy cách tiết kiệm cho trang trại lớn",
+        "Khử mùi khí độc NH3, H2S trong chuồng",
+        "Hút ẩm nền chuồng, ngừa tiêu chảy heo con",
+        "Tinh dầu thảo dược xua đuổi côn trùng"
+      ],
+      "variations": [
+        {
+          "label": "1KG",
+          "price": 39000,
+          "sku": "GP-3254",
+          "weight_g": "1050"
+        },
+        {
+          "label": "3KG",
+          "price": 115000,
+          "sku": "DPV001",
+          "weight_g": "3000"
+        },
+        {
+          "label": "5KG",
+          "price": 190000,
+          "sku": "DPV002",
+          "weight_g": "5000"
+        },
+        {
+          "label": "10KG",
+          "price": 380000,
+          "sku": "DPV003",
+          "weight_g": "10000"
+        }
+      ],
+      "descriptionHtml": "<p>Môi trường chuồng trại ẩm thấp, mùi hôi và khí độc là nguyên nhân hàng đầu làm giảm sức đề kháng của vật nuôi. Bột rắc chuồng sinh học GP-GUARD từ Golden Pharma chính là \"lá chắn\" bảo vệ toàn diện, mang lại không gian chăn nuôi khô thoáng, sạch mầm bệnh với chi phí siêu tiết kiệm nhờ thiết kế đặc biệt: CÁC PHÂN LOẠI TÚI LỚN 3KG, 5KG và 10KG.</p><img src=\"https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/3c9de3c6170241edbed8d8fc6d25edba~tplv-aphluv4xwc-origin-jpeg.jpeg?dr=15568&t=555f072d&ps=933b5bde&shp=1c65f68b&shcp=9b759fb9&idc=my&from=476444299\" width=\"1254\" height=\"1254\"><p><br></p><p><strong>THÀNH PHẦN TỰ NHIÊN - AN TOÀN </strong></p><p>Chứa hàm lượng lớn lợi khuẩn: Lactobacillus spp (min 10^6 CFU) và Bacillus spp (min 10^6 CFU).</p><p>Kết hợp hoàn hảo với các tinh dầu thảo dược thiên nhiên: Quế, hồi, hương nhu, xả và các khoáng chất đặc biệt.</p><p>Cam kết 3 KHÔNG: Không hoocmon, KHÔNG KS, không hóa chất độc hại. Tuyệt đối an toàn cho vật nuôi, kể cả thú sơ sinh.</p><p><br></p><p><strong>CÔNG DỤNG ĐA NĂNG - HIỆU QUẢ TỨC THÌ</strong></p><p><strong>Vệ sinh & Khử mùi:</strong> Bản chất là men vi sinh kết hợp thảo dược giúp hút ẩm cực mạnh, sát trùng chuồng trại, làm sạch sẽ, khô thoáng và hạn chế tối đa sự phát triển của mầm bệnh. Hỗ trợ xua đuổi côn trùng hiệu quả.</p><p><strong>Dành cho heo sơ sinh:</strong> Xoa trực tiếp lên mình heo giúp nhanh khô da, giữ ấm, tạo lớp áo chống mất nhiệt để heo thoải mái, nhanh biết bú và hạn chế tình trạng viêm rốn.</p><p><strong>Dành cho heo nái:</strong> Hỗ trợ sát trùng âm hộ sau sinh, làm khô nhanh sản dịch và rắc lên nền chuồng giúp chống trơn trượt.</p><p><strong>Dành cho gia cầm:</strong> Giảm mạnh khí độc, chống stress, trị dứt điểm mùi hôi và đặc biệt giúp chống cắn mổ nhau khi nhập đàn.</p><p><strong>HƯỚNG DẪN SỬ DỤNG CHUẨN TỪ NHÀ SẢN XUẤT</strong></p><p><strong>Đối với heo sơ sinh:</strong> Sử dụng 1kg bột xoa đều cho từ 10 đến 12 heo con.</p><p><strong>Đối với heo nái:</strong> Lấy lượng bột còn dư lại sau khi đẻ để rắc cho heo con.</p><p><strong>Đối với heo thịt, gia cầm và gia súc khác:</strong> Rắc đều 1kg bột cho diện tích 40m2 nền chuồng. Duy trì sử dụng 1 đến 2 lần mỗi tuần để đạt hiệu quả khử mùi và phòng bệnh tốt nhất.</p><p><br></p><p><strong>TÚI TO, GIÁ TỐT - TỐI ƯU CHI PHÍ CHĂN NUÔI</strong> Sản phẩm phù hợp cho mọi mô hình từ hộ chăn nuôi nhỏ lẻ đến trang trại quy mô công nghiệp với 3 tùy chọn trọng lượng cực kỳ kinh tế:</p><p><strong>Túi 3KG:</strong> Phù hợp cho hộ chăn nuôi gia đình nhỏ, tiện lợi và dễ bảo quản.</p><p><strong>Túi 5KG:</strong> Tối ưu chi phí hơn cho các mô hình trang trại quy mô vừa.</p><p><strong>Túi 10KG (Siêu tiết kiệm):</strong> Lựa chọn thông minh nhất để tiết kiệm tối đa ngân sách chăn nuôi dài hạn cho các trang trại lớn.</p><p><br></p><p><strong>Lưu ý bảo quản:</strong> Để sản phẩm ở nơi khô ráo, tránh ánh sáng chiếu trực tiếp. Cần sử dụng hết sau khi mở hoặc buộc bao thật kín để bảo quản lượng bột còn thừa.</p><p><br></p><p><strong>Thêm ngay phân loại phù hợp (3KG, 5KG hoặc 10KG) vào giỏ hàng để bảo vệ sức khỏe đàn vật nuôi và tăng năng suất ngay hôm nay!</strong></p>",
+      "cutRatio": 1.2285,
+      "cut": "assets/img/cut/prod-12-cut",
+      "gallery": [
+        "assets/img/studio/prod-12-1",
+        "assets/img/studio/prod-12-2"
+      ]
+    },
+    {
+      "id": "13",
+      "code": "GP-13",
+      "slug": "calci-oral",
+      "productId": "1737244173896091462",
+      "name": "CALCI-ORAL – Bổ Sung Canxi, Khoáng Chất & Điện Giải Cho Gà, Hỗ Trợ Xương Chắc Khỏe, Kích Thích Mọc Lông, Phát Triển Tốt",
+      "shortName": "CALCI-ORAL Dung Dịch Canxi Khoáng",
+      "brand": "Golden Pharma",
+      "category": "vitamin-khoang",
+      "animals": [
+        "ga-choi",
+        "gia-cam"
+      ],
+      "price": 46000,
+      "originalPrice": 55000,
+      "rating": 4.6,
+      "reviews": 8,
+      "soldCount": 379,
+      "soldText": "379",
+      "accent": "#B51E23",
+      "highlights": [
+        "Tăng cường sức mạnh cơ bắp & khung xương",
+        "Kích thích mọc lông, cứng mỏ, chắc cựa",
+        "Bổ sung Canxi, Magie, Kẽm, Đồng, Cobalt",
+        "Dạng dung dịch uống hấp thu cực nhanh"
+      ],
+      "variations": [
+        {
+          "label": "20ML",
+          "price": 46000,
+          "sku": "GP-1462",
+          "weight_g": "50"
+        },
+        {
+          "label": "50ML",
+          "price": 70000,
+          "sku": "GP-1462",
+          "weight_g": "100"
+        },
+        {
+          "label": "100ML",
+          "price": 92000,
+          "sku": "GP-1462",
+          "weight_g": "150"
+        }
+      ],
+      "descriptionHtml": "<p><strong>CALCI-ORAL – Bổ sung khoáng chất & điện giải cho gà</strong></p><img src=\"https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/68863e6222f646158317f7b48fdc0d59~tplv-aphluv4xwc-origin-jpeg.jpeg?dr=15568&t=555f072d&ps=933b5bde&shp=1c65f68b&shcp=9b759fb9&idc=my&from=476444299\" width=\"1254\" height=\"1254\"><p>CALCI-ORAL là sản phẩm bổ sung dinh dưỡng dùng trong chăn nuôi, cung cấp <strong>Canxi và các khoáng chất thiết yếu</strong>, phù hợp sử dụng trong quá trình chăm sóc và nuôi dưỡng gà.</p><p><br></p><p><strong>CÔNG DỤNG:</strong></p><ul><li>Bổ sung khoáng đa vi lượng, hỗ trợ gà phát triển <strong>khung xương vững chắc, gân dai chắc</strong>.</li><li>Hỗ trợ mọc lông, hạn chế tình trạng cắn mổ lông, giúp gà có <strong>bộ lông bóng khỏe</strong>.</li><li>Theo thông tin trên bao bì, sản phẩm bổ sung Fe, B12, hỗ trợ quá trình hình thành hồng cầu và <strong>tăng sức bền khi vận động</strong>.</li><li>Hỗ trợ phục hồi sức khỏe và phát triển thể trạng toàn diện.</li></ul><p><strong>Thành phần nổi bật:</strong></p><ul><li>Phosphoric acid</li><li>Calcium chloride</li><li>Magnesium chloride</li><li>Sodium chloride</li><li>Manganese sulfate</li><li>Zinc sulfate</li><li>Copper sulfate</li><li>Cobalt sulfate</li></ul><h3 style=\"text-align: left;\">LIỀU DÙNG VÀ CÁCH DÙNG</h3><p><strong>Nhỏ trực tiếp:</strong><br><em>(1ml = 20 giọt)</em></p><ul><li><strong>Gà tơ:</strong> 3 giọt/con/ngày, <strong>2 lần</strong></li><li><strong>Gà nhỏ:</strong> 10 giọt/con/ngày, <strong>2 lần</strong></li><li><strong>Gà tre:</strong> 5 giọt/con/ngày, <strong>2 lần</strong></li></ul><p><strong>Pha nước uống:</strong></p><ul><li><strong>2ml/1 lít nước</strong></li></ul><p><strong>QUY CÁCH:</strong> Chai 20ml/ 50ml/ <strong>100ml</strong><br><strong>DẠNG SẢN PHẨM:</strong> Dung dịch uống<br><strong>CHỈ DÙNG TRONG CHĂN NUÔI</strong></p><p><br></p><p><br></p><p><br></p><h3 style=\"text-align: left;\"><br></h3><p><br></p><p>CALCI-ORAL, canxi cho gà, khoáng cho gà, điện giải cho gà, bổ sung khoáng gà, canxi khoáng cho gà, hỗ trợ khung xương gà, khoáng chất gia cầm, dung dịch uống cho gà, Golden Pharma.</p><p><strong>Hashtag:</strong> #CalciOral #CanxiChoGa #KhoangChoGa #DienGiaiChoGa #ChamSocGa #DinhDuongChoGa #GoldenPharma</p>",
+      "cutRatio": 0.6361,
+      "cut": "assets/img/cut/prod-13-cut",
+      "gallery": [
+        "assets/img/studio/prod-13-1",
+        "assets/img/studio/prod-13-2"
+      ]
+    },
+    {
+      "id": "14",
+      "code": "GP-14",
+      "slug": "gluco-k-c",
+      "productId": "1735559199520753478",
+      "name": "Bột Hòa Tan GLUCO K-C Golden Pharma - Hỗ trợ giải nhiệt, chống nóng, giảm mệt mỏi cho vật nuôi",
+      "shortName": "GLUCO K-C Giải Nhiệt Chống Nóng",
+      "brand": "Golden Pharma",
+      "category": "vitamin-khoang",
+      "animals": [
+        "gia-cam",
+        "heo",
+        "trau-bo"
+      ],
+      "price": 29000,
+      "originalPrice": 35000,
+      "rating": 4.8,
+      "reviews": 25,
+      "soldCount": 294,
+      "soldText": "294",
+      "accent": "#C9242B",
+      "highlights": [
+        "Giải nhiệt, chống nóng, chống sốc nhiệt",
+        "Cung cấp năng lượng Glucose tức thì",
+        "Kết hợp Vitamin K + Vitamin C tăng sức bền",
+        "Hỗ trợ hồi phục nhanh khi mắc bệnh"
+      ],
+      "variations": [
+        {
+          "label": "200g",
+          "price": 29000,
+          "sku": "DPV024",
+          "weight_g": "200"
+        },
+        {
+          "label": "1kg",
+          "price": 105999,
+          "sku": "DPV025",
+          "weight_g": "1000"
+        }
+      ],
+      "descriptionHtml": "<p><strong>BỘT HÒA TAN GLUCO K-C GOLDEN PHARMA – BÍ QUYẾT LÀM MÁT, PHỤC HỒI THỂ LỰC CẤP TỐC CHO VẬT NUÔI</strong></p><p><br></p><p>Thời tiết nắng nóng oi bức, mật độ chuồng nuôi đông, hay quá trình vận chuyển xa khiến đàn gia súc, gia cầm của bà con mệt mỏi, lờ đờ và giảm ăn? Đã có <strong>GLUCO K-C từ Golden Pharma</strong> – Giải pháp cung cấp năng lượng và vitamin thiết yếu, giúp đàn vật nuôi nhanh chóng lấy lại phong độ!</p><p><br></p><img src=\"https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/4f4ec63c3d764f4cba62a96facd26e5b~tplv-aphluv4xwc-origin-jpeg.jpeg?dr=15568&t=555f072d&ps=933b5bde&shp=1c65f68b&shcp=9b759fb9&idc=my&from=476444299\" width=\"1254\" height=\"1254\"><p><strong>CÔNG DỤNG VƯỢT TRỘI (Được bà con chăn nuôi tin dùng):</strong></p><p><strong>Giải Nhiệt & Thanh Lọc:</strong> Hỗ trợ làm mát cơ thể, xua tan tình trạng sốc nhiệt, chống nóng hiệu quả trong những ngày hè oi ả.</p><p><strong>Giảm Stress Tối Ưu:</strong> Hỗ trợ ổn định thần kinh, giảm thiểu các tác nhân gây căng thẳng (stress) khi vật nuôi phải chuyển chuồng, vận chuyển đi xa hoặc khi thời tiết thay đổi đột ngột.</p><p><strong>Phục Hồi Năng Lượng:</strong> Bổ sung lượng lớn Glucose giúp cung cấp năng lượng tức thì, vật nuôi tỉnh táo và ăn uống trở lại bình thường.</p><p><strong>Nâng Cao Sức Đề Kháng:</strong> Sự kết hợp của hệ Vitamin giúp tăng cường hàng rào bảo vệ tự nhiên, duy trì thể trạng dẻo dai, khỏe mạnh.</p><p><br></p><p><strong>THÀNH PHẦN VÀNG TRONG 1KG:</strong></p><p>Vitamin C (min): 5.000 mg (Hỗ trợ giải nhiệt, tăng đề kháng)</p><p>Vitamin K (min): 3.000 mg (Hỗ trợ phục hồi thể trạng)</p><p>Glucose (vừa đủ 1kg) (Cung cấp năng lượng nhanh)</p><p><strong>HƯỚNG DẪN SỬ DỤNG:</strong> Sản phẩm dạng bột mịn, cực kỳ dễ hòa tan trong nước.</p><p><strong>Liều lượng chung cho gia súc, gia cầm:</strong> Chỉ cần pha 1g bột GLUCO K-C với 2 lít nước uống.</p><p>Cho uống tự do trong ngày, đặc biệt hiệu quả khi dùng trước và sau khi vận chuyển hoặc trong những ngày nắng gắt.</p><p><strong>THÔNG TIN SẢN PHẨM:</strong></p><p><strong>Quy cách:</strong> Gói 1KG tiết kiệm.</p><p><strong>Sản xuất tại:</strong> Công ty Cổ phần Quốc tế Golden Pharma.</p><p><strong>Bảo quản:</strong> Để nơi khô mát, nhiệt độ dưới 30°C, tránh ánh nắng trực tiếp.</p><p><em>Lưu ý: Chỉ dùng trong chăn nuôi</em>.</p><p><strong>Bảo vệ đàn vật nuôi khỏi thời tiết khắc nghiệt ngay hôm nay! Bấm \"Thêm vào giỏ hàng\" để mua hàng chính hãng với giá tốt nhất!</strong></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p>#GoldenPharma #GlucoKC #ChongNongVatNuoi #GiaiNhietGiaCam #DinhDuongChanNuoi #GiamStressVatNuoi #BoSungNangLuong #ChanNuoiGiaCam #VatNuoiKhoeManh</p>",
+      "cutRatio": 0.7409,
+      "cut": "assets/img/cut/prod-14-cut",
+      "gallery": [
+        "assets/img/studio/prod-14-1"
+      ]
+    },
+    {
+      "id": "15",
+      "code": "GP-15",
+      "slug": "men-song-tieu-hoa",
+      "productId": "1735561593705170758",
+      "name": "Men Sống Tiêu Hóa Golden Pharma (1kg) - Hỗ trợ vật nuôi ăn nhiều, mau lớn, phân khuôn khô, giảm mùi hôi chuồng",
+      "shortName": "MEN SỐNG TIÊU HÓA Siêu Tăng Trọng",
+      "brand": "Golden Pharma",
+      "category": "men-tieu-hoa",
+      "animals": [
+        "gia-cam",
+        "heo",
+        "trau-bo"
+      ],
+      "price": 85000,
+      "originalPrice": 98000,
+      "rating": 4.2,
+      "reviews": 19,
+      "soldCount": 268,
+      "soldText": "268",
+      "accent": "#0F6B42",
+      "highlights": [
+        "Hỗ trợ tiêu hóa tốt, hấp thu thức ăn tối đa",
+        "Kiểm soát tiêu chảy, ổn định đường ruột",
+        "Phân khuôn khô, giảm mùi hôi chuồng",
+        "Tăng tỷ lệ đẻ, tỷ lệ phôi và ấp nở"
+      ],
+      "variations": [
+        {
+          "label": "Men sống vi sinh 1kg",
+          "price": 85000,
+          "sku": "024",
+          "weight_g": "1000"
+        },
+        {
+          "label": "Siêu tăng trọng 1kg",
+          "price": 125000,
+          "sku": "025",
+          "weight_g": "1000"
+        }
+      ],
+      "descriptionHtml": "<p><strong>MEN SỐNG GOLDEN PHARMA – BỘ BA HOÀN HẢO: TIÊU HÓA TỐT - LỚN NHANH - CHUỒNG TRẠI SẠCH THƠM!</strong></p><p><br></p><p>Bà con chăn nuôi đang đau đầu vì vật nuôi ăn nhiều nhưng chậm lớn? Chuồng trại bốc mùi hôi thối ảnh hưởng môi trường? Đường ruột vật nuôi kém, phân lỏng? Giải pháp toàn diện nằm trong gói <strong>Men Sống Golden Pharma 1kg</strong> - Chế phẩm sinh học cao cấp giúp tối ưu hóa lợi nhuận chăn nuôi!</p><p><br></p><p><strong>4 CÔNG DỤNG VƯỢT TRỘI TRONG 1 SẢN PHẨM:</strong></p><p><strong>Tối ưu hấp thu, Lớn nhanh vượt trội:</strong> Bổ sung hệ vi sinh và enzyme giúp tăng khả năng tiêu hóa, hấp thu triệt để lượng thức ăn nạp vào, giúp vật nuôi phát triển vóc dáng nhanh chóng.</p><p><strong>Bảo vệ đường ruột, Phân khuôn khô:</strong> Cung cấp hàng tỷ lợi khuẩn hỗ trợ đường tiêu hóa khỏe mạnh, hạn chế tình trạng phân lỏng, rối loạn đường ruột do vi khuẩn có hại gây ra.</p><p><strong>Khử mùi hôi chuồng trại:</strong> Nhờ khả năng tiêu hóa triệt để thức ăn, sản phẩm giúp phân thải ra khô, tạo khuôn đẹp, từ đó giảm thiểu tối đa mùi hôi và ô nhiễm chuồng nuôi.</p><p><strong>Tăng năng suất sinh sản:</strong> Kích thích tăng chất lượng trứng, tỷ lệ đẻ, tỷ lệ phôi và nâng cao tỷ lệ ấp nở cho gia cầm.</p><p>THÀNH PHẦN CHẤT LƯỢNG CAO (Cam kết 3 KHÔNG: Không hoocmon, không hóa chất độc hại):</p><p><strong>Hệ lợi khuẩn:</strong> <em>Bacillus licheniformis, Bacillus subtilis, Saccharomyces cerevisiae</em>...</p><p><strong>Hệ Enzyme:</strong> Protease, Amylase, Xylanase, Cellulase, Phytase...</p><p><strong>Hệ Vitamin thiết yếu:</strong> Vitamin A, E, C, B1, B2, B6, B12...</p><p><br></p><p><strong>HƯỚNG DẪN SỬ DỤNG:</strong> Có thể pha nước hoặc trộn thức ăn (sử dụng liên tục trong suốt thời gian nuôi):</p><p><strong>Pha nước uống:</strong> 1g / 1 lít nước.</p><p><strong>Heo con:</strong> Trộn 1kg bột / 200kg thức ăn.</p><p><strong>Gà, vịt, cút:</strong> Trộn 1kg bột / 400kg thức ăn.</p><p><strong>Heo nái, heo thịt:</strong> Trộn 1kg bột / 500kg thức ăn.</p><p><strong>Trâu, bò:</strong> Trộn 1kg bột / 1000kg thức ăn (1 tấn cám).</p><p><br></p><p><strong>THÔNG TIN SẢN PHẨM:</strong></p><p><strong>Quy cách:</strong> Gói 1KG tiện dụng.</p><p><strong>Thương hiệu:</strong> Công ty Cổ phần Quốc tế Golden Pharma.</p><p><strong>Bảo quản:</strong> Để nơi khô ráo, tránh ánh sáng chiếu trực tiếp.</p><p><br></p><p><em>Lưu ý: Sản phẩm dạng bột, chỉ dùng trong chăn nuôi</em>.</p><p><strong>Chăn nuôi nhàn tênh - Lợi nhuận tăng vọt! Thêm ngay Men Sống Golden Pharma vào giỏ hàng để trải nghiệm hiệu quả!</strong></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p>#GoldenPharma #MenSongTieuHoa #GiamMuiHoiChuongTrai #PhanKhuonKho #TieuHoaKhoe #DinhDuongVatNuoi #ChanNuoiHeo #ChanNuoiGa #ChanNuoiHieuQua</p>",
+      "cutRatio": 0.7409,
+      "cut": "assets/img/cut/prod-15-cut",
+      "gallery": [
+        "assets/img/studio/prod-15-1"
+      ]
+    },
+    {
+      "id": "16",
+      "code": "GP-16",
+      "slug": "canxi-ad3e",
+      "productId": "1735561478837012294",
+      "name": "Golden Pharma Bột Bổ Sung CANXI - AD3E 1KG Hỗ trợ tăng tỷ lệ đẻ vỏ trứng dày lòng đỏ đẹp phát triển khung xương tăng năng suất cho vật nuôi",
+      "shortName": "CANXI - AD3E Tăng Sản Lượng Trứng",
+      "brand": "Golden Pharma",
+      "category": "vitamin-khoang",
+      "animals": [
+        "gia-cam",
+        "heo",
+        "trau-bo"
+      ],
+      "price": 39000,
+      "originalPrice": 45000,
+      "rating": 4.3,
+      "reviews": 17,
+      "soldCount": 196,
+      "soldText": "196",
+      "accent": "#A63422",
+      "highlights": [
+        "Tăng khả năng sản xuất trứng rõ rệt",
+        "Vỏ trứng dày, lòng đỏ đẹp, tỷ lệ phôi cao",
+        "Tăng sản lượng sữa cho gia súc nuôi con",
+        "Phát triển khung xương vững chắc"
+      ],
+      "variations": [
+        {
+          "label": "200g",
+          "price": 39000,
+          "sku": "DPV034",
+          "weight_g": "200"
+        },
+        {
+          "label": "1kg",
+          "price": 150000,
+          "sku": "DPV035",
+          "weight_g": "1000"
+        }
+      ],
+      "descriptionHtml": "<p><strong>BỘT DINH DƯỠNG CANXI - AD3E GOLDEN PHARMA – BÍ QUYẾT TĂNG NĂNG SUẤT TRỨNG & PHÁT TRIỂN KHUNG XƯƠNG TOÀN DIỆN</strong></p><p><br></p><p>Gà vịt đẻ thưa, vỏ trứng mỏng dễ vỡ? Heo con chậm lớn, heo nái yếu chân sau sinh? Giải quyết ngay bài toán dinh dưỡng với <strong>CANXI - AD3E từ thương hiệu Golden Pharma</strong> – Công thức hoàn hảo kết hợp khoáng chất và vitamin thiết yếu, giúp tối ưu hóa năng suất chăn nuôi của bà con!</p><img src=\"https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/f39b7ab893474f299b83a24e52c69e37~tplv-aphluv4xwc-origin-jpeg.jpeg?dr=15568&t=555f072d&ps=933b5bde&shp=1c65f68b&shcp=9b759fb9&idc=my&from=476444299\" width=\"1254\" height=\"1254\"><p><strong>CÔNG DỤNG NỔI BẬT KHÔNG THỂ BỎ QUA:</strong></p><p><strong>Tối ưu năng suất đẻ trứng (Gia cầm):</strong> Cung cấp hệ dưỡng chất giúp tăng khả năng sản xuất trứng, vỏ trứng dày dặn, lòng đỏ đẹp màu. Đồng thời hỗ trợ tăng tỷ lệ đậu phôi và ấp nở thành công.</p><p><strong>Phát triển vóc dáng, khung xương:</strong> Bổ sung lượng lớn Canxi và Vitamin D3 giúp vật nuôi hình thành khung xương vững chắc, mau lớn, hỗ trợ hạn chế tình trạng còi cọc, chậm lớn do thiếu hụt dinh dưỡng.</p><p><strong>Bảo vệ heo nái, gia súc sinh sản:</strong> Hỗ trợ tăng cường tiết sữa cho gia súc đang nuôi con. Giúp nái duy trì thể trạng tốt, đôi chân khỏe mạnh, hạn chế rủi ro yếu chân trước và sau khi sinh.</p><p><strong>Kích thích tiêu hóa:</strong> Hỗ trợ đường ruột khỏe mạnh, giúp vật nuôi ham ăn, hấp thu tốt dưỡng chất.</p><p><br></p><p><strong>THÀNH PHẦN ƯU VIỆT TRONG 1KG:</strong> </p><p>Sự kết hợp hoàn hảo từ các nguyên liệu cao cấp: <em>Canxi gluconate, Vitamin E, D3, A, Kẽm gluconate, Glucose</em>.</p><p>Vitamin A (min): 1.000.000 UI</p><p>Vitamin D3 (min): 180.000 UI</p><p>Vitamin E (min): 250 UI</p><p>Canxi (min-max): 1.000 - 1.500 mg</p><p>Kẽm (min-max): 900 - 1.400 mg</p><p><br></p><p><strong>HƯỚNG DẪN SỬ DỤNG HIỆU QUẢ:</strong> Rất tiện lợi, có thể trộn chung với thức ăn hoặc pha vào nước uống (Dùng liên tục trong suốt quá trình nuôi).</p><p><strong>Gia cầm:</strong> Pha 1g vào 2 lít nước uống hoặc trộn 1g với 1kg thức ăn.</p><p><strong>Heo con tập ăn:</strong> Trộn 1kg bột với 500kg thức ăn.</p><p><strong>Heo nái, heo thịt:</strong> Trộn 1kg bột với 1000kg thức ăn (1 tấn cám).</p><p><strong>THÔNG TIN SẢN PHẨM:</strong></p><p><strong>Quy cách:</strong> Gói 200g/ 1KG.</p><p><strong>Thương hiệu:</strong> Công ty Cổ phần Quốc tế Golden Pharma.</p><p><strong>Bảo quản:</strong> Nơi khô mát, nhiệt độ dưới 30°C, tránh ánh nắng mặt trời trực tiếp.</p><p><em>Lưu ý: Chỉ dùng trong chăn nuôi</em>.</p><p><strong>Đầu tư dinh dưỡng chuẩn - Thu lãi chăn nuôi cao! Thêm ngay CANXI - AD3E vào giỏ hàng hôm nay để nhận mức giá ưu đãi nhất!</strong></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p>#GoldenPharma #CanxiAD3E #TangSanLuongTrung #GaDeTrung #VoTrungDay #DinhDuongChanNuoi #PhatTrienKhungXuong #BoSungCanxi #ChanNuoiHieuQua #ThucAnBoSung</p>",
+      "cutRatio": 0.7409,
+      "cut": "assets/img/cut/prod-16-cut",
+      "gallery": [
+        "assets/img/studio/prod-16-1"
+      ]
+    },
+    {
+      "id": "17",
+      "code": "GP-17",
+      "slug": "b-complex-1kg",
+      "productId": "1737851412838647622",
+      "name": "B-Complex 1KG, 3KG, 5KG - Bổ sung Vitamin, Kích thích tăng cường ăn uống, bổ sung năng lượng, tăng trưởng nhanh chóng cho vật nuôi",
+      "shortName": "B-COMPLEX Túi Lớn (1KG / 3KG / 5KG)",
+      "brand": "Golden Pharma",
+      "category": "vitamin-khoang",
+      "animals": [
+        "gia-cam",
+        "heo",
+        "trau-bo"
+      ],
+      "price": 45000,
+      "originalPrice": 52000,
+      "rating": 5.0,
+      "reviews": 2,
+      "soldCount": 62,
+      "soldText": "62",
+      "accent": "#E05314",
+      "highlights": [
+        "Túi lớn giá tốt cho hộ chăn nuôi & trang trại",
+        "Kích thích thèm ăn, bồi bổ cơ thể",
+        "Chống stress, hỗ trợ tăng sản lượng trứng",
+        "Không có kháng sinh và гормон"
+      ],
+      "variations": [
+        {
+          "label": "500g",
+          "price": 45000,
+          "sku": "GP-7622",
+          "weight_g": "550"
+        },
+        {
+          "label": "1kg",
+          "price": 90000,
+          "sku": "TYVTT041",
+          "weight_g": "1020"
+        },
+        {
+          "label": "3kg",
+          "price": 270000,
+          "sku": "TYVTT042",
+          "weight_g": "3040"
+        },
+        {
+          "label": "5kg",
+          "price": 450000,
+          "sku": "TYV007",
+          "weight_g": "5060"
+        }
+      ],
+      "descriptionHtml": "<p><strong>B-COMPLEX GOLDENVET  – BỔ SUNG VITAMIN NHÓM B CHO GIA SÚC, GIA CẦM</strong></p><img src=\"https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/27aa4e3f942f4d74bb5c9aa97760b0d2~tplv-aphluv4xwc-origin-jpeg.jpeg?dr=15568&t=555f072d&ps=933b5bde&shp=1c65f68b&shcp=9b759fb9&idc=my&from=476444299\" width=\"1254\" height=\"1254\"><p>B-COMPLEX là sản phẩm dạng bột dùng trong chăn nuôi, cung cấp <strong>Vitamin B1, B2, B6 và Glucose</strong>, thích hợp bổ sung vào nước uống cho gia súc, gia cầm trong quá trình nuôi dưỡng.</p><p>Sản phẩm hỗ trợ vật nuôi ăn tốt hơn, bổ sung năng lượng và vitamin cần thiết, hỗ trợ tăng trưởng, phát triển thể trạng và duy trì năng suất.</p><h3 style=\"text-align: left;\">THÀNH PHẦN</h3><img src=\"https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/b3ec6b8592d7444e933fe9040dae96f6~tplv-aphluv4xwc-origin-jpeg.jpeg?dr=15568&t=555f072d&ps=933b5bde&shp=1c65f68b&shcp=9b759fb9&idc=my&from=476444299\" width=\"1254\" height=\"1254\"><ul><li><strong>Vitamin B1</strong></li><li><strong>Vitamin B2</strong></li><li><strong>Vitamin B6</strong></li><li><strong>Glucose vừa đủ</strong></li></ul><h3 style=\"text-align: left;\">CÔNG DỤNG</h3><p><strong>Kích thích tính thèm ăn</strong>, hỗ trợ tiêu hóa tốt.<br> Hỗ trợ <strong>tăng trọng nhanh, tăng độ đồng đều</strong>, nâng cao năng suất chăn nuôi.<br> Hỗ trợ <strong>mọc lông nhanh</strong>, hạn chế tình trạng mổ cắn.<br> <strong>Chống stress</strong>, bổ sung dinh dưỡng và năng lượng cho cơ thể.<br> Hỗ trợ vật nuôi <strong>phục hồi thể trạng</strong> trong các giai đoạn sức khỏe giảm sút.<br> Hỗ trợ <strong>tăng sản lượng trứng cho gà đẻ</strong>.<br> Sử dụng được cho <strong>cả gia súc và gia cầm</strong>.</p><h3 style=\"text-align: left;\">LIỀU LƯỢNG & CÁCH DÙNG</h3><img src=\"https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/cf49883eea444ddc917335ca67cb70cc~tplv-aphluv4xwc-origin-jpeg.jpeg?dr=15568&t=555f072d&ps=933b5bde&shp=1c65f68b&shcp=9b759fb9&idc=my&from=476444299\" width=\"1254\" height=\"1254\"><p><strong>Pha nước uống.</strong></p><p><strong>Gia cầm:</strong><br><strong>1g / 2 – 4 lít nước</strong></p><p><strong>Gia súc:</strong><br><strong>1g / 2 lít nước</strong></p><p>Nên pha lượng vừa đủ để vật nuôi sử dụng trong ngày.</p><h3 style=\"text-align: left;\">BẢO QUẢN</h3><ul><li>Để nơi <strong>khô ráo</strong>.</li><li>Tránh ánh sáng chiếu trực tiếp.</li><li>Đóng kín bao sau khi sử dụng.</li></ul><h3 style=\"text-align: left;\">THÔNG TIN SẢN PHẨM</h3><ul><li><strong>Tên sản phẩm:</strong> B-COMPLEX</li><li><strong>Thương hiệu:</strong> GoldenVet</li><li><strong>Dạng sản phẩm:</strong> Dạng bột</li><li><strong>Khối lượng đa dạng:  1kg/ 3kg/ 5kg</strong></li><li><strong>Đối tượng sử dụng:</strong> Gia súc, gia cầm</li><li><strong>Chỉ dùng trong chăn nuôi</strong></li></ul><h3 style=\"text-align: left;\"><br></h3><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p>B Complex cho gà, B Complex cho heo, vitamin B cho gà, vitamin cho gia súc gia cầm, vitamin B1 B2 B6, bổ sung vitamin cho gà, kích thích ăn cho gà, hỗ trợ tăng trọng, vitamin cho gà đẻ, bổ sung dinh dưỡng gia cầm, B Complex 1kg, GoldenVet.</p><p><br>#BComplex #GoldenVet #VitaminChoGa #VitaminChoHeo #GiaSucGiaCam #BoSungVitamin #ChamSocVatNuoi #DinhDuongVatNuoi</p>",
+      "cutRatio": 1.227,
+      "cut": "assets/img/cut/prod-17-cut",
+      "gallery": [
+        "assets/img/studio/prod-17-1",
+        "assets/img/studio/prod-17-2"
+      ]
+    },
+    {
+      "id": "18",
+      "code": "GP-18",
+      "slug": "gp-prozime",
+      "productId": "1736437471527536454",
+      "name": "GP-PROZIME 1Kg - Men Vi Sinh Tiêu Hóa Cho Gà Vịt Ngan Cút Heo, Hỗ Trợ Giảm Tiêu Chảy, Giảm Mùi Hôi Chuồng Nuôi Golden Pharma",
+      "shortName": "GP-PROZIME Men Sống Chịu Kháng Sinh",
+      "brand": "Golden Pharma",
+      "category": "men-tieu-hoa",
+      "animals": [
+        "gia-cam",
+        "heo"
+      ],
+      "price": 85000,
+      "originalPrice": 99000,
+      "rating": 4.5,
+      "reviews": 2,
+      "soldCount": 48,
+      "soldText": "48",
+      "accent": "#126838",
+      "highlights": [
+        "Men sống chịu kháng sinh cao cấp",
+        "Dùng song song trong phác đồ kháng sinh",
+        "Giảm tiêu chảy, cân bằng hệ vi sinh",
+        "Khử mùi hôi phân và nền chuồng"
+      ],
+      "variations": [
+        {
+          "label": "Mặc định",
+          "price": 85000,
+          "sku": "GP-6454",
+          "weight_g": "1000"
+        }
+      ],
+      "descriptionHtml": "<p><strong>GP-PROZIME GOLDEN PHARMA 1KG – MEN VI SINH HỖ TRỢ TIÊU HÓA CHO GIA SÚC, GIA CẦM</strong></p><p>GP-PROZIME là sản phẩm men sống cao cấp của Golden Pharma, bổ sung các chủng vi sinh vật có lợi và enzyme tiêu hóa, giúp vật nuôi tiêu hóa thức ăn tốt hơn, hỗ trợ giảm tiêu chảy, giảm mùi hôi chuồng trại và cân bằng hệ vi sinh đường ruột.</p><p>Sản phẩm phù hợp sử dụng cho gà, vịt, ngan, cút, heo và các đối tượng chăn nuôi theo hướng dẫn trên bao bì.</p><p><strong>1. CÔNG DỤNG</strong></p><p>Kích thích hoạt động tiêu hóa, hỗ trợ hấp thu và tận dụng dinh dưỡng từ thức ăn.</p><p>Hỗ trợ giảm tình trạng tiêu chảy ở gia súc, gia cầm.</p><p>Bổ sung vi sinh vật có lợi, giúp cân bằng hệ vi sinh đường ruột.</p><p>Hỗ trợ cải thiện hoạt động đường tiêu hóa, hạn chế tình trạng rối loạn tiêu hóa ở vật nuôi.</p><p>Hỗ trợ giảm mùi hôi chuồng nuôi, góp phần cải thiện môi trường chăn nuôi.</p><p>Bổ sung enzyme tiêu hóa giúp phân giải các thành phần trong thức ăn, hỗ trợ vật nuôi hấp thu dinh dưỡng.</p><p>Góp phần nâng cao hiệu quả sử dụng thức ăn trong quá trình chăn nuôi.</p><p><strong>2. THÀNH PHẦN</strong></p><p>Trong 1kg sản phẩm có chứa:</p><p>Bacillus subtilis (min): 7 x 10⁸ CFU</p><p>Bacillus coagulans (min): 5 x 10⁷ CFU</p><p>Amylase (min): 120.000 UI</p><p>Lipase (min): 1.050 UI</p><p>Xylanase (min): 1.650.000 UI</p><p>Cellulase (min): 240.000 UI</p><p>Beta-Glucanase (min): 48.000 UI</p><p>Chất mang gồm Protease, Mannanase, Glucose vừa đủ 1kg.</p><p>Nguyên liệu chính: Bacillus coagulans, Bacillus subtilis, Amylase, Pectinase, Alpha galactosidase, Lipase, Xylanase, Cellulase, Beta-Glucanase, Protease, Mannanase, Glucose.</p><p><strong>3. CÁCH DÙNG VÀ LIỀU LƯỢNG</strong></p><p>Sản phẩm sử dụng bằng cách pha với nước uống hoặc trộn đều vào thức ăn.</p><p><strong>ĐỐI VỚI GÀ, VỊT, NGAN, CÚT</strong></p><p>Liều dùng: 1g pha với 1 lít nước uống.</p><p>Thời gian sử dụng: Liên tục 3–5 ngày.</p><p><strong>ĐỐI VỚI HEO</strong></p><p>Liều dùng: 1kg trộn với 1 tấn thức ăn.</p><p>Thời gian sử dụng: 3–5 ngày.</p><p>Sử dụng theo đúng hướng dẫn trên bao bì và nhu cầu chăm sóc vật nuôi.</p><p><strong>4. BẢO QUẢN</strong></p><p>Bảo quản sản phẩm ở nơi khô ráo, thoáng mát.</p><p>Tránh ánh sáng mặt trời chiếu trực tiếp.</p><p>Đóng kín bao bì sau khi sử dụng.</p><p><strong>5. THÔNG TIN SẢN PHẨM</strong></p><p>Tên sản phẩm: GP-PROZIME</p><p>Thương hiệu: Golden Pharma</p><p>Loại sản phẩm: Men vi sinh và enzyme hỗ trợ tiêu hóa</p><p>Đối tượng sử dụng: Gà, vịt, ngan, cút, heo</p><p>Khối lượng tịnh: 1Kg</p><p>Quy cách đóng gói: Túi 1Kg</p><p>Đơn vị thương hiệu: Công ty Cổ phần Quốc tế Golden Pharma</p><p>Chỉ dùng trong chăn nuôi.</p>",
+      "cutRatio": 0.7409,
+      "cut": "assets/img/cut/prod-18-cut",
+      "gallery": [
+        "assets/img/studio/prod-18-1"
+      ]
+    },
+    {
+      "id": "19",
+      "code": "GP-19",
+      "slug": "sua-non-heo-con",
+      "productId": "1735562728289699654",
+      "name": "Sữa Non Cho Heo Con, Bổ Sung Sữa Thay Thế Sữa Mẹ, Vitamin B1, Men Tiêu Hóa, Hỗ Trợ Tăng Sức Đề Kháng Golden Pharma",
+      "shortName": "SỮA NON Cho Heo Con",
+      "brand": "Golden Pharma",
+      "category": "men-tieu-hoa",
+      "animals": [
+        "heo"
+      ],
+      "price": 45000,
+      "originalPrice": 55000,
+      "rating": 5.0,
+      "reviews": 1,
+      "soldCount": 17,
+      "soldText": "17",
+      "accent": "#14663A",
+      "highlights": [
+        "Thay thế sữa mẹ khi heo nái mất sữa, ít sữa",
+        "Bổ sung Vitamin B1 và men tiêu hóa sống",
+        "Tăng tỷ lệ nuôi sống, heo con hồng hào",
+        "Giảm nguy cơ tiêu chảy do E.Coli ở lợn con"
+      ],
+      "variations": [
+        {
+          "label": "200g",
+          "price": 45000,
+          "sku": "DPV036",
+          "weight_g": "200"
+        },
+        {
+          "label": "1KG",
+          "price": 160000,
+          "sku": "DPV037",
+          "weight_g": "1000"
+        }
+      ],
+      "descriptionHtml": "<p><strong>SỮA NON GOLDEN PHARMA 1KG – BỔ SUNG DINH DƯỠNG CHO HEO CON</strong></p><img src=\"https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/20c76c3183d14562b89e1358af6e04ac~tplv-aphluv4xwc-origin-jpeg.jpeg?dr=15568&t=555f072d&ps=933b5bde&shp=1c65f68b&shcp=9b759fb9&idc=my&from=476444299\" width=\"1254\" height=\"1254\"><p>Sữa Non Golden Pharma là sản phẩm thức ăn bổ sung sữa, vitamin, khoáng và men tiêu hóa dành cho heo con. Sản phẩm giúp bổ sung nguồn dinh dưỡng cần thiết trong giai đoạn sơ sinh, trước và sau cai sữa, đặc biệt khi heo mẹ ít sữa, mất sữa hoặc không cho con bú.</p><p><strong>1. CÔNG DỤNG</strong></p><p>Bổ sung sữa thay thế sữa mẹ cho heo con trong giai đoạn sơ sinh khi heo mẹ mất sữa, ít sữa hoặc không cho con bú.</p><p>Hỗ trợ kích thích sinh trưởng, phát triển và tăng cường sức khỏe cho heo con.</p><p>Hỗ trợ nâng cao sức đề kháng, giảm nguy cơ còi cọc, chậm lớn.</p><p>Hỗ trợ nâng cao tỷ lệ nuôi sống của heo con trong giai đoạn sau cai sữa.</p><p>Hỗ trợ giảm nguy cơ tiêu chảy do E.coli và tình trạng phù đầu ở heo con theo thông tin trên bao bì.</p><p>Bổ sung men tiêu hóa có lợi, hỗ trợ hoạt động đường ruột và khả năng hấp thu dinh dưỡng.</p><p>Góp phần nâng cao hiệu quả chăm sóc và chăn nuôi heo con.</p><p><strong>2. THÀNH PHẦN</strong></p><p>Trong 1kg sản phẩm có chứa:</p><p>Vitamin B1 (min): 5g</p><p>Lactobacillus acidophilus (min): 7 x 10⁷ CFU</p><p>Saccharomyces cerevisiae (min): 5 x 10⁷ CFU</p><p>Chất mang gồm sữa bột, bơ, Lactose vừa đủ 1kg.</p><p>Nguyên liệu chính: Vitamin B1, Lactobacillus acidophilus, Saccharomyces cerevisiae, Lactose.</p><p><strong>3. CÁCH DÙNG VÀ LIỀU LƯỢNG</strong></p><p><strong>Cách pha sữa</strong></p><p>Pha Sữa Non với nồng độ 150g bột trong 1 lít nước ấm.</p><p>Lấy lượng bột cần thiết, cho thêm 1/3 lượng nước vào khuấy kỹ, sau đó tiếp tục thêm nước ấm đến đủ lượng yêu cầu.</p><p><strong>Heo con trước cai sữa</strong></p><p>Cho heo con uống 30–50g/heo con/ngày, sử dụng liên tục trong 7 ngày.</p><p><strong>Heo con giai đoạn tập ăn và sau cai sữa</strong></p><p>Pha theo tỷ lệ ghi trên bao bì: 150g/lít sữa.</p><p><strong>Heo con không có mẹ bú</strong></p><p>Ban đầu cho heo con uống từng lượng nhỏ, sau đó tăng dần lượng sữa, tối đa 2 lít/heo con/ngày theo hướng dẫn trên nhãn.</p><p>Sau khi uống sữa nên cho heo con uống thêm nước.</p><p>Thức ăn rắn có thể bắt đầu cho ăn vào ngày thứ 10 theo hướng dẫn trên bao bì.</p><p><strong>4. BẢO QUẢN</strong></p><p>Bảo quản nơi khô ráo, thoáng mát.</p><p>Tránh ánh nắng mặt trời chiếu trực tiếp.</p><p>Nhiệt độ bảo quản dưới 30°C.</p><p>Đóng kín bao bì sau khi sử dụng.</p><p><strong>5. THÔNG TIN SẢN PHẨM</strong></p><p>Tên sản phẩm: Sữa Non</p><p>Thương hiệu: Golden Pharma</p><p>Loại sản phẩm: Thức ăn bổ sung sữa, vitamin, khoáng và men tiêu hóa</p><p>Dạng sản phẩm: Dạng hạt</p><p>Đối tượng sử dụng: Heo con</p><p><br></p><p>Chỉ dùng trong chăn nuôi.</p>",
+      "cutRatio": 0.7466,
+      "cut": "assets/img/cut/prod-19-cut",
+      "gallery": [
+        "assets/img/studio/prod-19-1",
+        "assets/img/studio/prod-19-2"
+      ]
+    },
+    {
+      "id": "20",
+      "code": "GP-20",
+      "slug": "men-song-cao-toi",
+      "productId": "1735710676108478278",
+      "name": "Men Sống Siêu Tăng Trọng Siêu Men Cao Tỏi Cao Cấp 500g",
+      "shortName": "SIÊU MEN CAO TỎI Cao Cấp 500g",
+      "brand": "Golden Pharma",
+      "category": "men-tieu-hoa",
+      "animals": [
+        "gia-cam",
+        "heo",
+        "trau-bo"
+      ],
+      "price": 99999,
+      "originalPrice": 115000,
+      "rating": 5.0,
+      "reviews": 4,
+      "soldCount": 15,
+      "soldText": "15",
+      "accent": "#0E6B3A",
+      "highlights": [
+        "Kết hợp men sống đậm đặc & tinh chất tỏi",
+        "Kháng khuẩn tự nhiên, hạn chế tiêu chảy",
+        "Thèm ăn, mau lớn, tiêu hóa triệt để",
+        "Tăng sức đề kháng hô hấp & đường ruột"
+      ],
+      "variations": [
+        {
+          "label": "Mặc định",
+          "price": 99999,
+          "sku": "DPV054",
+          "weight_g": "500"
+        }
+      ],
+      "descriptionHtml": "<p>MEN SỐNG SIÊU TĂNG TRỌNG – SIÊU MEN CAO TỎI CAO CẤP 500G</p><p>Men sống dạng bột hòa tan, phù hợp sử dụng trong chăn nuôi gà, vịt, heo và gia súc, gia cầm.</p><p>Công dụng nổi bật:</p><p>* Hỗ trợ vật nuôi tăng trưởng, phát triển tốt</p><p>* Hỗ trợ hệ tiêu hóa, hạn chế tình trạng tiêu chảy</p><p>* Hỗ trợ vật nuôi ăn khỏe, mau lớn</p><p>* Hỗ trợ tăng sức đề kháng</p><p>* Dạng bột hòa tan, thuận tiện khi sử dụng</p><p>Phù hợp: Gà, vịt, heo và các vật nuôi trong chăn nuôi.</p><p>Quy cách: Gói 500g</p><p>️ Thương hiệu: Golden Pharma</p><p>Sản phẩm phù hợp cho bà con chăn nuôi muốn bổ sung men vi sinh vào khẩu phần chăm sóc vật nuôi hằng ngày.</p>",
+      "cutRatio": 0.7125,
+      "cut": "assets/img/cut/prod-20-cut",
+      "gallery": [
+        "assets/img/studio/prod-20-1"
+      ]
+    },
+    {
+      "id": "21",
+      "code": "GP-21",
+      "slug": "doctor-hen-liquid",
+      "productId": "1735708435413894982",
+      "name": "DOCTOR HEN LIQUID Golden Pharma – Dung Dịch Uống Thú Y Cho Gà, Gia Cầm, Lợn, Hen Khẹc, Coryza, Viêm Phổi, Viêm Ruột",
+      "shortName": "DOCTOR HEN LIQUID Đặc Trị Hen Khẹc",
+      "brand": "Golden Pharma",
+      "category": "khang-sinh-dac-tri",
+      "animals": [
+        "ga-choi",
+        "gia-cam",
+        "heo"
+      ],
+      "price": 65000,
+      "originalPrice": 78000,
+      "rating": 5.0,
+      "reviews": 4,
+      "soldCount": 12,
+      "soldText": "12",
+      "accent": "#B81D22",
+      "highlights": [
+        "Hỗ trợ đặc trị hen khẹc, vảy mỏ, hen rít",
+        "Long đờm, thông khí quản nhanh chóng",
+        "Xử lý sưng phù đầu (Coryza), Mycoplasma",
+        "Hỗ trợ tiêu chảy, thương hàn, viêm ruột"
+      ],
+      "variations": [
+        {
+          "label": "10ml",
+          "price": 65000,
+          "sku": "DPV038",
+          "weight_g": "20"
+        },
+        {
+          "label": "20ml",
+          "price": 89000,
+          "sku": "DPV039",
+          "weight_g": "30"
+        },
+        {
+          "label": "100ml",
+          "price": 235000,
+          "sku": "GP-4982",
+          "weight_g": "120"
+        }
+      ],
+      "descriptionHtml": "<p><strong>DOCTOR HEN LIQUID GOLDEN PHARMA – DÙNG CHO GIA CẦM, LỢN</strong></p><p>DOCTOR HEN LIQUID là sản phẩm thú y dạng dung dịch uống của Golden Pharma, có ký hiệu Rx – kê đơn trên bao bì. Sản phẩm có chỉ định đối với các bệnh đường hô hấp, tiêu hóa và nhiễm khuẩn ở gia cầm, lợn theo hướng dẫn của bác sĩ thú y.</p><p><strong>1. CÔNG DỤNG</strong></p><p>Theo thông tin trên bao bì, sản phẩm được chỉ định trong các trường hợp:</p><p>Hen khẹc, hen rít, hen do Mycoplasma ở gia cầm.</p><p>Bệnh sổ mũi truyền nhiễm Coryza.</p><p>Các trường hợp viêm đường hô hấp, viêm phổi và hen kéo màng.</p><p>Các bệnh đường tiêu hóa do vi khuẩn nhạy cảm với thành phần sản phẩm.</p><p>Tiêu chảy do E.coli và thương hàn do Salmonella.</p><p>Viêm ruột hoại tử ở gia cầm.</p><p>Viêm khớp, sưng khớp do nhiễm khuẩn.</p><p>Các bệnh nhiễm khuẩn đường hô hấp và tiêu hóa ở gia cầm, lợn thuộc chỉ định trên bao bì.</p><p><strong>2. THÀNH PHẦN</strong></p><p>Trong 1ml sản phẩm chứa:</p><p>Florfenicol: 200mg</p><p>Doxycycline: 100mg</p><p><strong>3. VAI TRÒ CỦA CÁC THÀNH PHẦN</strong></p><p><strong>Florfenicol</strong></p><p>Là hoạt chất có khả năng ức chế sự phát triển của nhiều loại vi khuẩn nhạy cảm.</p><p>Có vai trò trong kiểm soát các bệnh nhiễm khuẩn đường hô hấp và đường tiêu hóa theo chỉ định thú y.</p><p><strong>Doxycycline</strong></p><p>Là hoạt chất có phổ tác động trên nhiều loại vi khuẩn nhạy cảm và một số tác nhân gây bệnh đường hô hấp như Mycoplasma.</p><p>Được sử dụng trong các trường hợp bệnh đường hô hấp và tiêu hóa do tác nhân nhạy cảm.</p><p><strong>4. CÁCH DÙNG</strong></p><p>Sản phẩm được sử dụng theo đường uống, có thể dùng trực tiếp hoặc pha với nước uống theo hướng dẫn trên nhãn.</p><p>Liều lượng cần được bác sĩ thú y xác định theo loài vật nuôi, thể trọng và tình trạng bệnh.</p><p>Không tự ý thay đổi liều lượng hoặc thời gian sử dụng.</p><p><strong>5. THỜI GIAN NGỪNG SỬ DỤNG</strong></p><p>Trước khi lấy thịt lợn: 30 ngày.</p><p>Trước khi lấy thịt gia cầm: 30 ngày.</p><p><strong>6. CHỐNG CHỈ ĐỊNH</strong></p><p>Không sử dụng cho vật nuôi mẫn cảm với các thành phần của sản phẩm.</p><p>Không sử dụng cho vật nuôi bị rối loạn chức năng gan, thận theo chống chỉ định trên bao bì.</p><p><strong>7. BẢO QUẢN</strong></p><p>Bảo quản trong lọ, can kín.</p><p>Để nơi khô ráo, thoáng mát.</p><p>Tránh ánh sáng trực tiếp.</p><p>Nhiệt độ bảo quản dưới 30°C.</p><p><strong>8. THÔNG TIN SẢN PHẨM</strong></p><p>Tên sản phẩm: DOCTOR HEN LIQUID</p><p>Thương hiệu: Golden Pharma</p><p>Dạng sản phẩm: Dung dịch uống</p><p>Đối tượng sử dụng: Gia cầm, lợn</p><p>Đơn vị phân phối: Công ty Cổ phần Quốc tế Golden Pharma</p><p>Chỉ dùng trong thú y.</p>",
+      "cutRatio": 0.3682,
+      "cut": "assets/img/cut/prod-21-cut",
+      "gallery": [
+        "assets/img/studio/prod-21-1"
+      ]
+    },
+    {
+      "id": "22",
+      "code": "GP-22",
+      "slug": "max-growth-heo",
+      "productId": "1735710672879519558",
+      "name": "MAX GROWTH Golden Pharma 1Kg – Siêu Tăng Trọng Heo, Bung Đùi Nở Mông, Kích Thích Ăn Nhiều, Chống Còi Cọc, Bổ Sung Vitamin Khoáng",
+      "shortName": "MAX GROWTH Siêu Tăng Trọng Heo",
+      "brand": "Golden Pharma",
+      "category": "tang-trong-sinh-san",
+      "animals": [
+        "heo"
+      ],
+      "price": 70000,
+      "originalPrice": 85000,
+      "rating": 5.0,
+      "reviews": 4,
+      "soldCount": 11,
+      "soldText": "11",
+      "accent": "#D47A17",
+      "highlights": [
+        "Công thức chuyên biệt vỗ béo cho heo thịt",
+        "Bung đùi, nở mông, phát triển khung xương",
+        "Kích thích ăn nhiều, chống còi cọc",
+        "Giảm FCR, tiết kiệm chi phí thức ăn"
+      ],
+      "variations": [
+        {
+          "label": "1kg",
+          "price": 70000,
+          "sku": "DPV055",
+          "weight_g": "1000"
+        }
+      ],
+      "descriptionHtml": "<p><strong>MAX GROWTH GOLDEN PHARMA 1KG – SIÊU TĂNG TRỌNG HEO, BUNG ĐÙI, NỞ MÔNG, KÍCH THÍCH TĂNG TRƯỞNG</strong></p><p>MAX GROWTH là sản phẩm bổ sung dinh dưỡng dành cho heo, kết hợp các axit amin, vitamin, khoáng chất, men vi sinh và tinh chất sâm. Sản phẩm giúp kích thích heo ăn nhiều, hỗ trợ tiêu hóa, cải thiện khả năng hấp thu dinh dưỡng, hạn chế còi cọc và thúc đẩy tăng trưởng trong quá trình chăn nuôi.</p><p><strong>1. CÔNG DỤNG</strong></p><p>Kích thích heo ăn nhiều, ăn ngon miệng, hỗ trợ tăng trọng nhanh và phát triển đồng đều.</p><p>Hỗ trợ hạn chế tình trạng heo còi cọc, chậm lớn, kém hấp thu dinh dưỡng.</p><p>Hỗ trợ bung đùi, nở mông, nở ngực, phát triển cơ bắp và thể trạng.</p><p>Giúp heo bóng da, mông lông, cải thiện ngoại hình và thể trạng trong quá trình nuôi.</p><p>Bổ sung các axit amin thiết yếu như Methionine và Lysine, hỗ trợ tổng hợp protein và phát triển cơ bắp.</p><p>Bổ sung men vi sinh có lợi, hỗ trợ cân bằng hệ vi sinh đường ruột, tăng khả năng tiêu hóa và hấp thu thức ăn.</p><p>Hỗ trợ tăng cường miễn dịch, nâng cao sức khỏe và sức đề kháng cho heo.</p><p>Bổ sung vitamin và khoáng chất giúp duy trì quá trình chuyển hóa năng lượng, hỗ trợ tăng trưởng ổn định.</p><p>Góp phần cải thiện hiệu quả chăn nuôi, hỗ trợ rút ngắn thời gian nuôi khi kết hợp khẩu phần dinh dưỡng và chăm sóc phù hợp.</p><p><strong>2. THÀNH PHẦN</strong></p><p>Trong 1kg sản phẩm có chứa:</p><p>Methionine (min): 4.000mg</p><p>Lysine (min): 2.000mg</p><p>Vitamin B1 (min): 1.000mg</p><p>Lactobacillus acidophilus (min): 6 x 10⁸ CFU</p><p>Bacillus subtilis (min): 8 x 10⁸ CFU</p><p>Saccharomyces cerevisiae (min): 5 x 10⁸ CFU</p><p>Citric acid (min): 9.000mg</p><p>Sắt Fe (min-max): 200–300mg</p><p>Kẽm Zn (min-max): 900–1.000mg</p><p>Tinh chất sâm: 500mg</p><p>Selen: 120mg</p><p>Đồng: 30mg</p><p>Vitamin B2: 15mg</p><p>Vitamin D3: 600 UI</p><p>Vitamin A: 450 UI</p><p>Vitamin E: 180 UI</p><p>Chất mang vừa đủ: 1kg</p><p><strong>3. VAI TRÒ CÁC THÀNH PHẦN</strong></p><p><strong>Methionine và Lysine</strong></p><p>Là các axit amin thiết yếu giúp hỗ trợ tổng hợp protein, phát triển cơ bắp, tăng trưởng và nâng cao hiệu quả sử dụng dinh dưỡng.</p><p><strong>Lactobacillus acidophilus, Bacillus subtilis và Saccharomyces cerevisiae</strong></p><p>Bổ sung vi sinh vật có lợi, hỗ trợ cân bằng hệ vi sinh đường ruột, cải thiện tiêu hóa và khả năng hấp thu dưỡng chất.</p><p><strong>Vitamin B1 và B2</strong></p><p>Tham gia quá trình chuyển hóa năng lượng, hỗ trợ hoạt động tiêu hóa và tăng trưởng của vật nuôi.</p><p><strong>Vitamin A, D3 và E</strong></p><p>Hỗ trợ sức khỏe xương, khả năng miễn dịch, chống oxy hóa và duy trì sự phát triển bình thường của heo.</p><p><strong>Sắt, Kẽm, Đồng và Selen</strong></p><p>Bổ sung khoáng chất thiết yếu, hỗ trợ tạo máu, hoạt động enzyme, sức khỏe da và quá trình phát triển.</p><p><strong>Tinh chất sâm</strong></p><p>Thành phần bổ sung theo công thức, góp phần hỗ trợ thể trạng và sức khỏe vật nuôi.</p><p><strong>Citric Acid</strong></p><p>Hỗ trợ môi trường tiêu hóa, góp phần cải thiện khả năng sử dụng thức ăn.</p><p><strong>4. CÁCH DÙNG VÀ LIỀU LƯỢNG</strong></p><p>Sử dụng bằng cách trộn đều vào thức ăn cho heo.</p><p>Liều dùng: 1kg MAX GROWTH trộn với 1 tấn thức ăn.</p><p>Trộn đều sản phẩm với thức ăn trước khi cho heo sử dụng.</p><p>Dùng liên tục trong suốt thời gian nuôi theo hướng dẫn trên bao bì.</p><p><strong>5. BẢO QUẢN</strong></p><p>Bảo quản nơi khô ráo, thoáng mát.</p><p>Tránh ánh nắng mặt trời chiếu trực tiếp.</p><p>Đóng kín bao bì sau khi sử dụng.</p><p><strong>6. THÔNG TIN SẢN PHẨM</strong></p><p>Tên sản phẩm: MAX GROWTH</p><p>Thương hiệu: Golden Pharma</p><p>Tên gọi: Siêu Tăng Trọng Heo</p><p>Dạng sản phẩm: Bột bổ sung dinh dưỡng</p><p>Đối tượng sử dụng: Heo</p><p>Quy cách đóng gói: Túi 1Kg</p><p>Đơn vị thương hiệu: Công ty Cổ phần Quốc tế Golden Pharma</p><p>Chỉ dùng trong chăn nuôi.</p>",
+      "cutRatio": 0.6938,
+      "cut": "assets/img/cut/prod-22-cut",
+      "gallery": [
+        "assets/img/studio/prod-22-1",
+        "assets/img/studio/prod-22-2"
+      ]
+    },
+    {
+      "id": "23",
+      "code": "GP-23",
+      "slug": "sieu-tang-trong-gia-cam",
+      "productId": "1735710024962770758",
+      "name": "Siêu Tăng Trọng Gia Cầm - Vỗ Béo Nhanh, Vàng Da, Dày Lườn",
+      "shortName": "SIÊU TĂNG TRỌNG GIA CẦM",
+      "brand": "Golden Pharma",
+      "category": "tang-trong-sinh-san",
+      "animals": [
+        "gia-cam"
+      ],
+      "price": 70000,
+      "originalPrice": 85000,
+      "rating": 5.0,
+      "reviews": 4,
+      "soldCount": 11,
+      "soldText": "11",
+      "accent": "#C4261D",
+      "highlights": [
+        "Vỗ béo nhanh, dày lườn, nặng cân",
+        "Vàng da, vàng chân, kích mào đẹp mã",
+        "Tăng tỷ lệ đồng đều toàn đàn",
+        "Bổ sung đầy đủ Vitamin và Acid Amin"
+      ],
+      "variations": [
+        {
+          "label": "1kg",
+          "price": 70000,
+          "sku": "S001",
+          "weight_g": "1000"
+        }
+      ],
+      "descriptionHtml": "<p style=\"text-align: left;\"><span>Siêu Tăng Trọng Gia Cầm Golden Pharma là giải pháp dinh dưỡng cao cấp (Premium Quality) dạng Premix dành riêng cho chăn nuôi gia cầm. Với khối lượng tịnh 1kg, sản phẩm cung cấp hệ dưỡng chất dồi dào bao gồm các vitamin và acid amin thiết yếu, giúp đàn gia cầm vỗ béo nhanh, đạt cân chuẩn, ngoại hình đẹp mã với lớp da vàng, lông mượt và lườn dày thịt.</span></p><p>Đặc điểm nổi bật & Công dụng chính:</p><ul><li>Vỗ béo siêu tốc: Kích thích tăng trọng nhanh ở gà thịt, giúp gia cầm tăng nhanh khối lượng cơ thể.</li><li>Cải thiện chất lượng thịt: Tăng cường chất dinh dưỡng, tạo cơ thịt săn chắc, giúp gia cầm dày lườn, nở ức.</li><li>Ngoại hình đẹp, dễ xuất bán: Hỗ trợ gia cầm đỏ tích, kích màu, vàng da, mượt lông và đẹp mã.</li><li>Tăng sức đề kháng: Chống stress hiệu quả, bồi bổ và phục hồi sức khỏe cho vật nuôi, giúp gia cầm đạt cân khi xuất bán.</li></ul><p>Thành phần dinh dưỡng (Trong 1kg có chứa):</p><ul><li>Vitamin: Vitamin A (min) 1.000.000 UI, Vitamin D3 (min) 5.000 UI, Vitamin E (min) 200 UI, Vitamin B1 (min) 2.500 mg, Vitamin PP (min) 300 mg.</li><li>Enzyme & Acid amin thiết yếu: Lipase (min) 15 UI, Lysine (min) 200 mg, Methionine (min) 400 mg.</li><li>Thành phần khác: B-Glucan (min) 100 mg, Glucose vừa đủ 1000g.</li></ul><p>Hướng dẫn sử dụng: Rất tiện lợi và dễ dàng sử dụng cho các trang trại chăn nuôi:</p><ul><li>Pha nước uống: Dùng tỷ lệ 1g pha với 2 lít nước.</li><li>Trộn thức ăn (cám): Dùng tỷ lệ 2g trộn với 1kg thức ăn.</li></ul><p>Thông tin sản phẩm & Bảo quản:</p><ul><li>Thương hiệu/Phân phối bởi: Công ty Cổ phần Quốc tế Golden Pharma.</li><li>Sản xuất tại: Công ty Cổ phần Quốc tế Thú Y Vàng.</li><li>Bảo quản: Để nơi khô ráo, tránh ánh sáng chiếu trực tiếp.</li></ul><p>Lưu ý: Chỉ dùng trong chăn nuôi.</p>",
+      "cutRatio": 0.66,
+      "cut": "assets/img/cut/prod-23-cut",
+      "gallery": [
+        "assets/img/studio/prod-23-1"
+      ]
+    },
+    {
+      "id": "24",
+      "code": "GP-24",
+      "slug": "linco-spec-250",
+      "productId": "1735710375948027718",
+      "name": "LINCO SPEC 250 Golden Pharma 100g – Bột Cho Heo, Gia Cầm, Hen Khẹc, Hen Rít, Viêm Đường Hô Hấp, Viêm Ruột, Tiêu Chảy, Hội Chứng MMA",
+      "shortName": "LINCO - SPEC 250 Đặc Trị Hen Ghép Tiêu Chảy",
+      "brand": "Golden Pharma",
+      "category": "khang-sinh-dac-tri",
+      "animals": [
+        "heo",
+        "gia-cam"
+      ],
+      "price": 85000,
+      "originalPrice": 98000,
+      "rating": 5.0,
+      "reviews": 4,
+      "soldCount": 11,
+      "soldText": "11",
+      "accent": "#C41E24",
+      "highlights": [
+        "Phối hợp Lincomycin & Spectinomycin",
+        "Đặc trị hen khẹc, hen rít, viêm phổi",
+        "Đặc trị phân xanh, phân trắng, phân nhầy máu",
+        "Hiệu quả trên hội chứng MMA ở heo nái"
+      ],
+      "variations": [
+        {
+          "label": "100g",
+          "price": 85000,
+          "sku": "DPV061",
+          "weight_g": "1000"
+        }
+      ],
+      "descriptionHtml": "<p><strong>LINCO-SPEC 250 GOLDEN PHARMA 100G – DẠNG BỘT DÙNG CHO LỢN, GIA CẦM</strong></p><p>LINCO-SPEC 250 là sản phẩm thú y dạng bột của Golden Pharma, có chỉ định đối với một số bệnh đường hô hấp, đường tiêu hóa và nhiễm khuẩn ở lợn, gia cầm theo thông tin trên bao bì.</p><p><strong>1. CÔNG DỤNG</strong></p><p>Dùng trong các trường hợp hen khò khè, hen rít, hen ngáp ở vật nuôi.</p><p>Các bệnh viêm đường hô hấp và viêm phổi do vi khuẩn nhạy cảm.</p><p>Các trường hợp tiêu chảy, phân xanh, phân trắng, phân nhầy có bọt liên quan đến nhiễm khuẩn đường ruột.</p><p>Viêm ruột, viêm hồi manh tràng và bệnh lỵ ở lợn.</p><p>Viêm vú, viêm khớp và hội chứng MMA ở lợn.</p><p><strong>2. THÀNH PHẦN</strong></p><p>Trong 1g sản phẩm chứa:</p><p>Lincomycin: 22mg</p><p>Spectinomycin: 22mg</p><p><strong>3. VAI TRÒ CỦA THÀNH PHẦN</strong></p><p>Lincomycin: Hoạt chất có tác dụng với một số vi khuẩn nhạy cảm, được sử dụng trong các bệnh nhiễm khuẩn đường hô hấp và một số bệnh nhiễm khuẩn khác.</p><p>Spectinomycin: Hoạt chất có tác dụng với một số vi khuẩn nhạy cảm, được phối hợp với Lincomycin trong các chỉ định thú y liên quan đến đường hô hấp và tiêu hóa.</p><p><strong>4. CÁCH DÙNG</strong></p><p>Dạng bột trộn thức ăn.</p><p>Liều lượng và thời gian sử dụng cần tuân thủ hướng dẫn trên nhãn và chỉ định của bác sĩ thú y.</p><p>Trộn đều sản phẩm với một lượng thức ăn nhỏ trước khi phối trộn vào khẩu phần lớn.</p><p><strong>5. BẢO QUẢN</strong></p><p>Để sản phẩm trong bao bì kín.</p><p>Bảo quản nơi khô ráo, thoáng mát.</p><p>Tránh ánh sáng trực tiếp.</p><p><strong>6. THÔNG TIN SẢN PHẨM</strong></p><p>Tên sản phẩm: LINCO-SPEC 250</p><p>Thương hiệu: Golden Pharma</p><p>Dạng sản phẩm: Bột trộn thức ăn</p><p>Đối tượng theo nhãn: Lợn, gia cầm</p><p>Quy cách: Gói 100g</p><p>Chỉ dùng trong thú y.</p><p>Không sử dụng cho vật nuôi mẫn cảm với thành phần sản phẩm.</p><p>Động vật dùng làm thực phẩm phải tuân thủ thời gian ngừng sử dụng theo nhãn và hướng dẫn của bác sĩ thú y.</p>",
+      "cutRatio": 0.669,
+      "cut": "assets/img/cut/prod-24-cut",
+      "gallery": [
+        "assets/img/studio/prod-24-1"
+      ]
+    },
+    {
+      "id": "25",
+      "code": "GP-25",
+      "slug": "men-tang-trong",
+      "productId": "1735710762221078342",
+      "name": "Men Tăng Trọng Cho Gà Vịt Heo Bò – Golden Pharma",
+      "shortName": "MEN SỐNG SIÊU TĂNG TRỌNG 500g",
+      "brand": "Golden Pharma",
+      "category": "men-tieu-hoa",
+      "animals": [
+        "gia-cam",
+        "heo",
+        "trau-bo"
+      ],
+      "price": 99999,
+      "originalPrice": 115000,
+      "rating": 5.0,
+      "reviews": 4,
+      "soldCount": 11,
+      "soldText": "11",
+      "accent": "#16589E",
+      "highlights": [
+        "Tăng trọng nhanh, hấp thu dinh dưỡng tối đa",
+        "Chống rối loạn tiêu hóa khi đổi cám",
+        "Hạn chế tiêu chảy, phân sống",
+        "Khử mùi hôi, tạo khuôn phân đẹp"
+      ],
+      "variations": [
+        {
+          "label": "Mặc định",
+          "price": 99999,
+          "sku": "GP-8342",
+          "weight_g": "500"
+        }
+      ],
+      "descriptionHtml": "<h2 style=\"text-align: left;\">MEN SỐNG SIÊU TĂNG TRỌNG GOLDEN PHARMA – 500G</h2><p>Hỗ trợ chăm sóc vật nuôi, cải thiện tiêu hóa và tăng trọng</p><p>Công dụng nổi bật:</p><p>* Hỗ trợ vật nuôi ăn uống tốt, tăng trọng nhanh và đồng đều.</p><p>* Hỗ trợ hệ tiêu hóa, giúp hấp thu dinh dưỡng tốt hơn.</p><p>* Hỗ trợ hạn chế rối loạn tiêu hóa, tiêu chảy.</p><p>* Hỗ trợ giảm mùi hôi chuồng trại, tạo khuôn phân.</p><p>* Phù hợp sử dụng cho gà, vịt, heo, bò.</p><p>Dạng bột hòa tan – dễ sử dụng, có thể pha với nước hoặc trộn cùng thức ăn theo hướng dẫn trên bao bì.</p><p>Quy cách: Gói 500g</p><p>️ Thương hiệu: Golden Pharma</p><p>Sản phẩm phù hợp cho bà con chăn nuôi muốn hỗ trợ tiêu hóa và nâng cao hiệu quả chăm sóc vật nuôi.</p>",
+      "cutRatio": 0.7063,
+      "cut": "assets/img/cut/prod-25-cut",
+      "gallery": [
+        "assets/img/studio/prod-25-1"
+      ]
+    },
+    {
+      "id": "26",
+      "code": "GP-26",
+      "slug": "ceftiofur-hcl",
+      "productId": "1735710902108784454",
+      "name": "Huyền Dịch Tiêm CEFTIOFUR HCL - Đặc Trị Viêm Phổi, Tai Xanh, ORT, Bại Huyết, E.Coli Kéo Màng - Hàng Công Ty Sông Hồng",
+      "shortName": "CEFOXIM (Ceftiofur HCl 100ml) Huyền Dịch Tiêm",
+      "brand": "Golden Pharma",
+      "category": "khang-sinh-dac-tri",
+      "animals": [
+        "heo",
+        "trau-bo",
+        "gia-cam"
+      ],
+      "price": 345000,
+      "originalPrice": 385000,
+      "rating": 5.0,
+      "reviews": 4,
+      "soldCount": 11,
+      "soldText": "11",
+      "accent": "#0D7A3B",
+      "highlights": [
+        "Huyền dịch tiêm kháng sinh thế hệ mới",
+        "Đặc trị viêm phổi dính sườn, tai xanh kế phát",
+        "Hỗ trợ điều trị ORT, bại huyết, E.Coli kéo màng",
+        "Trị viêm vú, viêm tử cung, viêm khớp"
+      ],
+      "variations": [
+        {
+          "label": "1 lọ",
+          "price": 345000,
+          "sku": "DPV068",
+          "weight_g": "100"
+        }
+      ],
+      "descriptionHtml": "<p>Đàn vật nuôi đang đối mặt với các tình trạng nguy cấp như hội chứng tai xanh, viêm phổi dính sườn hay ORT, bại huyết? Đừng để thiệt hại kéo dài! Huyền dịch tiêm CEFTIOFUR HCL (Sản xuất bởi Công ty CP Thuốc Thú Y Sông Hồng) chính là giải pháp tiêm chuyên biệt, cực kỳ mạnh mẽ giúp dập tắt nhanh chóng các mầm bệnh cứng đầu nhất mà không gây giảm sút thể trạng!</p><p><br></p><p><strong>THÀNH PHẦN ĐẬM ĐẶC - TÁC DỤNG KÉO DÀI:</strong></p><p><br></p><p>Trong 100ml dung dịch chứa hàm lượng cao Ceftiofur HCl lên đến 10.000 mg cùng hệ dung môi đặc biệt.</p><p><br></p><p>Đặc biệt: Thuốc có tác dụng kéo dài lên đến 48 giờ chỉ sau một lần tiêm, giúp bà con tiết kiệm tối đa thời gian và công sức chăm sóc</p><p><br></p><p><strong>CÔNG DỤNG ĐẶC TRỊ - HIỆU QUẢ TỨC THÌ:</strong></p><p><br></p><p><strong>Đối với Heo, Trâu, Bò:</strong> Đặc trị dứt điểm viêm phổi dính sườn, viêm phế quản, viêm phổi và hội chứng hô hấp do bệnh tai xanh. Xử lý triệt để các ca tiêu chảy nặng do <em>E.Coli, Salmonella</em>. Hỗ trợ phục hồi nhanh các bệnh viêm tử cung, viêm vú, viêm khớp, viêm móng, viêm da, viêm não, viêm màng não và tụ huyết trùng cấp.</p><p><br></p><p><strong>Đối với Gia Cầm:</strong> Là \"khắc tinh\" đặc trị tận gốc bệnh ORT, E.Coli kéo màng, bại huyết và tình trạng hen khẹc kéo dài.</p><p><strong>HƯỚNG DẪN SỬ DỤNG CHUẨN KHOA HỌC:</strong> Sản phẩm được đưa vào cơ thể vật nuôi thông qua đường <strong>tiêm bắp thịt</strong>:</p><p><br></p><p><strong>Gà, vịt:</strong> Dùng 1 ml / 7-10 kg thể trọng / lần.</p><p><br></p><p><strong>Heo:</strong> Dùng 1 ml / 10-15 kg thể trọng / lần.</p><p><br></p><p><strong>Trâu, bò:</strong> Dùng 1 ml / 15-20 kg thể trọng / lần.</p><p><br></p><p><strong>️ CHÚ Ý CỰC KỲ QUAN TRỌNG KHI TIÊM:</strong></p><p><br></p><p><strong>Bắt buộc:</strong> Phải lắc kỹ chai trước khi sử dụng và <strong>CHỈ sử dụng kim tiêm khô</strong> (nếu kim tiêm có dính nước sẽ gây hỏng sản phẩm bên trong).</p><p><br></p><p><strong>Thời gian ngưng thuốc:</strong> Cần ngừng sử dụng trước khi giết mổ 15 ngày để đảm bảo an toàn chất lượng thịt.</p><p><br></p><p><strong>Bảo quản:</strong> Đặt lọ thuốc ở nơi khô mát, nhiệt độ không quá 30ºC và tránh ánh sáng chiếu trực tiếp.</p><p><strong>Bấm \"Thêm vào giỏ hàng\" ngay góc trái màn hình để sở hữu ngay giải pháp tiêm chuyên biệt, bảo vệ an toàn cho cả trang trại!</strong></p><p><br></p><p><br></p><p><br></p><p><br></p><p><em>#ThuocThuY #Ceftiofur #DacTriTaiXanh #ViemPhoiDinhSuon #EcoliKeoMang #BaiHuyet #ChanNuoi</em></p>",
+      "cutRatio": 0.5787,
+      "cut": "assets/img/cut/prod-26-cut",
+      "gallery": [
+        "assets/img/studio/prod-26-1"
+      ]
+    },
+    {
+      "id": "27",
+      "code": "GP-27",
+      "slug": "dac-tri-tieu-chay",
+      "productId": "1735710272020318022",
+      "name": "Điều trị tiêu chảy cho vật nuôi",
+      "shortName": "ĐẶC TRỊ TIÊU CHẢY Cho Heo Con Sau Sinh",
+      "brand": "Golden Pharma",
+      "category": "khang-sinh-dac-tri",
+      "animals": [
+        "heo",
+        "gia-cam",
+        "trau-bo"
+      ],
+      "price": 350000,
+      "originalPrice": 390000,
+      "rating": 5.0,
+      "reviews": 4,
+      "soldCount": 11,
+      "soldText": "11",
+      "accent": "#9E2A22",
+      "highlights": [
+        "Phối hợp Colistin & Berberin công hiệu",
+        "Phòng và trị tiêu chảy heo con sau sinh",
+        "Xử lý nhiễm khuẩn đường tiêu hóa cấp",
+        "An toàn, dễ trộn thức ăn hoặc pha nước"
+      ],
+      "variations": [
+        {
+          "label": "1kg",
+          "price": 350000,
+          "sku": "GP-8022",
+          "weight_g": "1000"
+        },
+        {
+          "label": "3kg",
+          "price": 1000000,
+          "sku": "GP-8022",
+          "weight_g": "3000"
+        }
+      ],
+      "descriptionHtml": "<h2><strong>Điều trị tiêu chảy cho vật nuôi</strong></h2><p>✨ <strong>Giải pháp cho tiêu chảy ở thú cưng</strong> ✨</p><ul><li>Sản phẩm này được thiết kế đặc biệt để giúp điều trị tiêu chảy cho các loại vật nuôi. Giúp thú cưng của bạn nhanh chóng phục hồi sức khỏe. </li></ul><p>✨ <strong>Thông tin sản phẩm</strong> ✨</p><ul><li>Sản phẩm không cung cấp thông tin chi tiết về thành phần hoặc cách sử dụng. Hãy liên hệ với nhà sản xuất để biết thêm thông tin. </li></ul><p>✨ <strong>Lưu ý</strong> ✨</p><ul><li>Đảm bảo tuân thủ hướng dẫn sử dụng để đạt hiệu quả tốt nhất. Nếu có bất kỳ câu hỏi nào, vui lòng liên hệ với chúng tôi.</li></ul>",
+      "cutRatio": 1.1106,
+      "cut": "assets/img/cut/prod-27-cut",
+      "gallery": [
+        "assets/img/studio/prod-27-1"
+      ]
+    },
+    {
+      "id": "28",
+      "code": "GP-28",
+      "slug": "gp-guard-1kg",
+      "productId": "1737992756694910790",
+      "name": "Bột Rắc Chuồng Men Vi Sinh Khử Mùi GP - GUARD 1KG, 3KG, 5KG, 10KG, Hút Ẩm Cho Heo Sơ Sinh, Heo Nái, Gà, Gia Súc Gia Cầm - GOLDEN PHARMA",
+      "shortName": "GP-GUARD Bột Rắc Chuồng Đa Quy Cách",
+      "brand": "Golden Pharma",
+      "category": "sat-trung-chuong-trai",
+      "animals": [
+        "heo",
+        "gia-cam",
+        "trau-bo"
+      ],
+      "price": 39000,
+      "originalPrice": 45000,
+      "rating": 5.0,
+      "reviews": 1,
+      "soldCount": 8,
+      "soldText": "8",
+      "accent": "#0E6B3A",
+      "highlights": [
+        "Đủ quy cách 1kg, 3kg, 5kg, 10kg tiện chọn",
+        "Sát trùng ẩm hộ sau sinh, làm khô nền chuồng",
+        "Giữ ấm heo sơ sinh, không cần lau rửa",
+        "Giảm mầm bệnh hô hấp và tiêu chảy"
+      ],
+      "variations": [
+        {
+          "label": "1KG",
+          "price": 39000,
+          "sku": "GP-0790",
+          "weight_g": "1050"
+        },
+        {
+          "label": "3KG",
+          "price": 115000,
+          "sku": "DPV001",
+          "weight_g": "3000"
+        },
+        {
+          "label": "5KG",
+          "price": 190000,
+          "sku": "DPV002",
+          "weight_g": "5000"
+        },
+        {
+          "label": "10KG",
+          "price": 380000,
+          "sku": "DPV003",
+          "weight_g": "10000"
+        }
+      ],
+      "descriptionHtml": "<p>Môi trường chuồng trại ẩm thấp, mùi hôi và khí độc là nguyên nhân hàng đầu làm giảm sức đề kháng của vật nuôi. Bột rắc chuồng sinh học GP-GUARD từ Golden Pharma chính là \"lá chắn\" bảo vệ toàn diện, mang lại không gian chăn nuôi khô thoáng, sạch mầm bệnh với chi phí siêu tiết kiệm nhờ thiết kế đặc biệt: CÁC PHÂN LOẠI TÚI LỚN 3KG, 5KG và 10KG.</p><p><br></p><p><strong>THÀNH PHẦN TỰ NHIÊN - AN TOÀN </strong></p><p>Chứa hàm lượng lớn lợi khuẩn: Lactobacillus spp (min 10^6 CFU) và Bacillus spp (min 10^6 CFU).</p><p>Kết hợp hoàn hảo với các tinh dầu thảo dược thiên nhiên: Quế, hồi, hương nhu, xả và các khoáng chất đặc biệt.</p><p>Cam kết 3 KHÔNG: Không hoocmon, KHÔNG KS, không hóa chất độc hại. Tuyệt đối an toàn cho vật nuôi, kể cả thú sơ sinh.</p><p><br></p><p><strong>CÔNG DỤNG ĐA NĂNG - HIỆU QUẢ TỨC THÌ</strong></p><p><strong>Vệ sinh & Khử mùi:</strong> Bản chất là men vi sinh kết hợp thảo dược giúp hút ẩm cực mạnh, sát trùng chuồng trại, làm sạch sẽ, khô thoáng và hạn chế tối đa sự phát triển của mầm bệnh. Hỗ trợ xua đuổi côn trùng hiệu quả.</p><p><strong>Dành cho heo sơ sinh:</strong> Xoa trực tiếp lên mình heo giúp nhanh khô da, giữ ấm, tạo lớp áo chống mất nhiệt để heo thoải mái, nhanh biết bú và hạn chế tình trạng viêm rốn.</p><p><strong>Dành cho heo nái:</strong> Hỗ trợ sát trùng amho sau sinh, làm khô nhanh sản dịch và rắc lên nền chuồng giúp chống trơn trượt.</p><p><strong>Dành cho gia cầm:</strong> Giảm mạnh khí độc, chống stress, trị dứt điểm mùi hôi và đặc biệt giúp chống cắn mổ nhau khi nhập đàn.</p><p><strong>HƯỚNG DẪN SỬ DỤNG CHUẨN TỪ NHÀ SẢN XUẤT</strong></p><p><strong>Đối với heo sơ sinh:</strong> Sử dụng 1kg bột xoa đều cho từ 10 đến 12 heo con.</p><p><strong>Đối với heo nái:</strong> Lấy lượng bột còn dư lại sau khi đẻ để rắc cho heo con.</p><p><strong>Đối với heo thịt, gia cầm và gia súc khác:</strong> Rắc đều 1kg bột cho diện tích 40m2 nền chuồng. Duy trì sử dụng 1 đến 2 lần mỗi tuần để đạt hiệu quả khử mùi và phòng bệnh tốt nhất.</p><p><br></p><p><strong>TÚI TO, GIÁ TỐT - TỐI ƯU CHI PHÍ CHĂN NUÔI</strong> Sản phẩm phù hợp cho mọi mô hình từ hộ chăn nuôi nhỏ lẻ đến trang trại quy mô công nghiệp với 3 tùy chọn trọng lượng cực kỳ kinh tế:</p><p><strong>Túi 1KG</strong></p><p><strong>Túi 3KG:</strong> Phù hợp cho hộ chăn nuôi gia đình nhỏ, tiện lợi và dễ bảo quản.</p><p><strong>Túi 5KG:</strong> Tối ưu chi phí hơn cho các mô hình trang trại quy mô vừa.</p><p><strong>Túi 10KG (Siêu tiết kiệm):</strong> Lựa chọn thông minh nhất để tiết kiệm tối đa ngân sách chăn nuôi dài hạn cho các trang trại lớn.</p><p><br></p><p><strong>Lưu ý bảo quản:</strong> Để sản phẩm ở nơi khô ráo, tránh ánh sáng chiếu trực tiếp. Cần sử dụng hết sau khi mở hoặc buộc bao thật kín để bảo quản lượng bột còn thừa.</p>",
+      "cutRatio": 0.6317,
+      "cut": "assets/img/cut/prod-28-cut",
+      "gallery": [
+        "assets/img/studio/prod-28-1",
+        "assets/img/studio/prod-28-2"
+      ]
+    },
+    {
+      "id": "29",
+      "code": "GP-29",
+      "slug": "es12-giai-doc",
+      "productId": "1735708078935738182",
+      "name": "Es12-Liquid Giải độc cấp cho vật nuôi, tăng đề kháng",
+      "shortName": "ES12 - LIQUID Giải Độc Cấp & Tăng Đề Kháng",
+      "brand": "Golden Pharma",
+      "category": "vitamin-khoang",
+      "animals": [
+        "gia-cam",
+        "heo",
+        "trau-bo"
+      ],
+      "price": 63000,
+      "originalPrice": 75000,
+      "rating": 5.0,
+      "reviews": 1,
+      "soldCount": 7,
+      "soldText": "7",
+      "accent": "#1F4B8E",
+      "highlights": [
+        "Hấp phụ và bẻ gãy độc tố nấm mốc nhanh",
+        "Giải độc gan thận cấp tính cho vật nuôi",
+        "Tăng lực nhanh, kích thích miễn dịch chủ động",
+        "Phù hợp cho trang trại quy mô lớn"
+      ],
+      "variations": [
+        {
+          "label": "100ml",
+          "price": 63000,
+          "sku": "GP-8182",
+          "weight_g": "200"
+        },
+        {
+          "label": "1 lít",
+          "price": 600000,
+          "sku": "GP-8182",
+          "weight_g": "1000"
+        }
+      ],
+      "descriptionHtml": "<h2><strong>Es12-Liquid Giải độc cấp cho vật nuôi, tăng đề kháng</strong></h2><p>✨ <strong>Sản phẩm Es12-Liquid</strong> là giải pháp cấp thiết cho vật nuôi. Nó giúp giải độc và tăng cường đề kháng cho thú cưng. Sản phẩm này là lựa chọn lý tưởng cho những chủ nuôi muốn bảo vệ sức khỏe của thú cưng.</p><ul><li><strong>Giải độc cấp</strong>: Es12-Liquid giúp loại bỏ độc tố trong cơ thể vật nuôi.</li><li><strong>Tăng đề kháng</strong>: Sản phẩm này hỗ trợ tăng cường hệ miễn dịch, giúp thú cưng khỏe mạnh hơn.</li></ul><p>✨ Với Es12-Liquid, bạn có thể yên tâm về sức khỏe của thú cưng. Sản phẩm này là giải pháp hiệu quả cho việc chăm sóc thú cưng.</p>",
+      "cutRatio": 0.475,
+      "cut": "assets/img/cut/prod-29-cut",
+      "gallery": [
+        "assets/img/studio/prod-29-1"
+      ]
+    },
+    {
+      "id": "30",
+      "code": "GP-30",
+      "slug": "b-glucan-b12",
+      "productId": "1737243373378570054",
+      "name": "B-Glucan B12 Golden Pharma 1KG – Bổ Sung Vitamin & Beta-Glucan Hỗ Trợ Tăng Sức Đề Kháng Vật Nuôi",
+      "shortName": "β-GLUCAN B12 Tăng Miễn Dịch Sớm 1KG",
+      "brand": "Golden Pharma",
+      "category": "vitamin-khoang",
+      "animals": [
+        "gia-cam",
+        "heo",
+        "trau-bo"
+      ],
+      "price": 158000,
+      "originalPrice": 180000,
+      "rating": 5.0,
+      "reviews": 1,
+      "soldCount": 7,
+      "soldText": "7",
+      "accent": "#18499E",
+      "highlights": [
+        "Tạo miễn dịch sớm trước và sau khi làm vaccine",
+        "Nâng cao sức đề kháng, hỗ trợ giai đoạn điều trị",
+        "Bổ sung Beta-Glucan & Vitamin B12 hàm lượng cao",
+        "Hỗ trợ tăng trưởng, giảm hao hụt đầu con"
+      ],
+      "variations": [
+        {
+          "label": "Mặc định",
+          "price": 158000,
+          "sku": "DPV044",
+          "weight_g": "1000"
+        }
+      ],
+      "descriptionHtml": "<h3 style=\"text-align: left;\">Mô tả sản phẩm B-Glucan B12 – Golden Pharma 1kg</h3><p><strong>B-Glucan B12 – Golden Pharma</strong> là sản phẩm bổ sung dùng trong chăn nuôi, kết hợp <strong>Beta-Glucan, vitamin nhóm B, vitamin C cùng Bacillus subtilis và Saccharomyces sp.</strong> Hỗ trợ nâng cao sức khỏe đàn vật nuôi, đặc biệt trong các giai đoạn cần tăng cường sức đề kháng.</p><p><br></p><p><strong>Công dụng nổi bật:</strong></p><ul><li>Hỗ trợ kích thích vật nuôi tăng trưởng và phát triển tốt.</li><li>Hỗ trợ tăng cường sức đề kháng, nâng cao khả năng miễn dịch.</li><li>Hỗ trợ vật nuôi trong giai đoạn thay đổi thời tiết, stress hoặc sức khỏe kém.</li><li>Hỗ trợ tiêu hóa và nâng cao hiệu quả chăn nuôi.</li><li>Phù hợp sử dụng cho <strong>gia cầm, heo, trâu bò và thủy sản</strong>.</li></ul><p><strong>Thành phần trong 1kg bột:</strong></p><ul><li>Beta-Glucan tổng số ≥ 12.000 mg</li><li>Vitamin B1: 50 mg</li><li>Vitamin B6: 60 mg</li><li>Vitamin B12: 1.000 mcg</li><li>Vitamin C: 40 mg</li><li>Vitamin B2: 30 mg</li><li>Bacillus subtilis: 3×10⁶ CFU</li><li>Saccharomyces sp.: 3×10⁶ CFU</li><li>Glucose vừa đủ 1kg</li></ul><p><strong>Cách dùng tham khảo:</strong></p><ul><li><strong>Gia cầm:</strong> 1g/1 lít nước uống hoặc 1g/1kg thức ăn, dùng liên tục 5–7 ngày.</li><li><strong>Heo:</strong> 1g/1 lít nước uống hoặc 1g/1kg thức ăn, dùng liên tục 5–7 ngày.</li><li><strong>Trâu, bò:</strong> 1g/10–20 lít nước uống hoặc 1g/2–5kg thức ăn.</li><li><strong>Thủy sản:</strong> 1g/1–2kg thức ăn, sử dụng liên tục trong quá trình nuôi.</li></ul><p><strong>Quy cách:</strong> Túi <strong>1kg</strong><br><strong>️ Thương hiệu:</strong> Golden Pharma<br><strong>️ Lưu ý:</strong> Bảo quản nơi khô ráo, tránh ánh nắng trực tiếp. <strong>Chỉ dùng trong chăn nuôi.</strong></p>",
+      "cutRatio": 0.7409,
+      "cut": "assets/img/cut/prod-30-cut",
+      "gallery": [
+        "assets/img/studio/prod-30-1"
+      ]
+    }
+  ],
+  "site": {
+    "brand": "GOLDEN PHARMA",
+    "company": "Công Ty Cổ Phần Quốc Tế Thú Y Vàng",
+    "companyEn": "Golden Veterinary International JSC",
+    "tagline": "Chế phẩm sinh học & thuốc thú y chuẩn GMP-WHO — Vì sức khỏe vật nuôi",
+    "taglineEn": "GMP-WHO Veterinary Pharmaceuticals & Probiotics — For Animal Health",
+    "phone": "0968 486 985",
+    "phoneRaw": "0968486985",
+    "phoneHref": "tel:0968486985",
+    "zalo": "https://zalo.me/0968486985",
+    "tiktok": "https://www.tiktok.com/@thuyvanghanoi",
+    "tiktokHandle": "@thuyvanghanoi",
+    "shopee": "https://vn.shp.ee/ghozM3PF",
+    "messenger": "https://m.me/thuyvanghanoi",
+    "email": "goldenvet10@gmail.com",
+    "address": "Tầng 4, lô 30-31 Liền kề 2, khu đô thị Đại Thanh, Xã Đại Thanh, TP Hà Nội",
+    "addressEn": "4th Floor, Lot 30-31 LK2, Dai Thanh Urban Area, Dai Thanh, Hanoi",
+    "mapEmbed": "https://www.google.com/maps?q=Khu+do+thi+Dai+Thanh+Ha+Noi&output=embed"
+  },
+  "content": {
+    "heroEyebrow": "Công Ty Cổ Phần Quốc Tế Thú Y Vàng · Chuẩn GMP-WHO",
+    "heroTitle": "Dược phẩm & chế phẩm sinh học <em>vì sức khỏe vật nuôi</em>",
+    "heroDesc": "Trọn bộ 30 dòng men vi sinh sống, vitamin khoáng đậm đặc, thảo dược giải độc và kháng sinh đặc trị chính hãng Golden Pharma — được tin dùng bởi hàng chục nghìn trang trại trên toàn quốc.",
+    "heroSearchPh": "Tìm tên thuốc, công dụng (vd: GP-Guard, hen khẹc, vỗ béo, tiêu chảy)...",
+    "heroM1Value": "68.500+",
+    "heroM1Label": "Đơn hàng trên TikTok Shop",
+    "heroM2Value": "30 dòng",
+    "heroM2Label": "Sản phẩm chủ lực chính hãng",
+    "heroM3Value": "4.7 ★",
+    "heroM3Label": "Đánh giá thực tế từ nhà chăn nuôi",
+    "secCatEyebrow": "Danh mục chuyên biệt",
+    "secCatTitle": "Giải pháp theo nhóm công dụng & vật nuôi",
+    "secSpotEyebrow": "Sân khấu sản phẩm bán chạy · Chạm để xoay & xem",
+    "secSpotTitle": "Top chế phẩm dẫn đầu doanh số của Golden Pharma",
+    "secBestEyebrow": "Sản phẩm chính hãng · Ảnh chuẩn bao bì thật",
+    "secBestTitle": "Danh mục sản phẩm nổi bật",
+    "secTrustEyebrow": "Tiêu chuẩn chất lượng",
+    "secTrustTitle": "Vì sao trang trại & đại lý chọn Golden Pharma?"
+  }
+};
