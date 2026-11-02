@@ -639,10 +639,19 @@ body {
   font-weight: 700;
   color: var(--admin-forest);
 }
+/* Form bọc body + foot: cần flex để body được cuộn trong khung 90vh */
+.admin-modal-box > form {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
 .admin-modal-body {
   padding: 24px;
   overflow-y: auto;
   flex: 1;
+  min-height: 0;
+  overscroll-behavior: contain;
 }
 .admin-modal-foot {
   padding: 16px 24px;
