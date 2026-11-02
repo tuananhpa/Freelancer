@@ -1,0 +1,669 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Bảng Quản Trị Atelier — HARMONY.STUDIO</title>
+  <link rel="preload" href="assets/fonts/prata-normal-vietnamese.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/intertight-normal-vietnamese.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body>
+
+  <!-- ==================== MÀN HÌNH ĐĂNG NHẬP ADMIN ==================== -->
+  <div class="admin-login-overlay" id="loginOverlay">
+    <div class="admin-login-box">
+      <div class="admin-login-logo">
+        <span>H</span>
+      </div>
+      <h2 class="admin-login-title">HARMONY.STUDIO</h2>
+      <p class="admin-login-sub">Cổng Quản Trị Hệ Thống Phòng Mẫu & Website</p>
+
+      <div class="admin-alert admin-alert--error" id="loginAlert" style="display:none"></div>
+
+      <form class="admin-login-form" id="loginForm">
+        <div class="admin-form-group">
+          <label for="loginUser">Tài khoản quản trị</label>
+          <div class="admin-input-wrap">
+            <input type="text" id="loginUser" class="admin-input" required placeholder="Nhập tài khoản" value="Admin" autocomplete="username">
+          </div>
+        </div>
+
+        <div class="admin-form-group">
+          <label for="loginPass">Mật khẩu</label>
+          <div class="admin-input-wrap">
+            <input type="password" id="loginPass" class="admin-input" required placeholder="Nhập mật khẩu" autocomplete="current-password">
+            <button type="button" class="admin-input-btn" id="togglePassBtn" title="Hiện/ẩn mật khẩu">👁️</button>
+          </div>
+        </div>
+
+        <div class="admin-login-hint">
+          🔒 Mặc định truy cập: <b>Admin</b> / <b>admin123@</b> (Có thể đổi mật khẩu bên trong).
+        </div>
+
+        <button type="submit" class="admin-btn admin-btn--primary admin-btn--block" id="loginSubmitBtn">
+          <span>Đăng nhập hệ thống</span> →
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==================== GIAO DIỆN QUẢN TRỊ CHÍNH ==================== -->
+  <div class="admin-app" id="adminApp" style="display:none">
+    
+    <!-- SIDEBAR -->
+    <aside class="admin-sidebar">
+      <div class="admin-brand">
+        <div class="admin-brand-logo">H</div>
+        <div class="admin-brand-text">
+          <h1>HARMONY</h1>
+          <small>Atelier Management</small>
+        </div>
+      </div>
+
+      <nav class="admin-nav">
+        <button type="button" class="admin-nav-item is-active" data-tab="dashboard">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>
+          <span>Tổng quan</span>
+        </button>
+
+        <button type="button" class="admin-nav-item" data-tab="looks">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+          <span>Quản lý Mẫu (Lookbook)</span>
+          <span class="admin-nav-badge" id="navLookCount">18</span>
+        </button>
+
+        <button type="button" class="admin-nav-item" data-tab="studio-ai">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <span>Studio Tách Nền AI</span>
+          <span class="admin-nav-badge admin-nav-badge--accent">Auto</span>
+        </button>
+
+        <button type="button" class="admin-nav-item" data-tab="collections">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+          <span>Bộ sưu tập & Ngách</span>
+        </button>
+
+        <button type="button" class="admin-nav-item" data-tab="content">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          <span>Nội dung & Liên hệ</span>
+        </button>
+
+        <button type="button" class="admin-nav-item" data-tab="settings">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          <span>Cài đặt & Mật khẩu</span>
+        </button>
+      </nav>
+
+      <div class="admin-sidebar-footer">
+        <div class="admin-user-info">
+          <div class="admin-avatar">A</div>
+          <div>
+            <div class="admin-user-name">Admin</div>
+            <div class="admin-user-role">Quản trị viên Atelier</div>
+          </div>
+        </div>
+        <div class="admin-sidebar-actions">
+          <a href="/" target="_blank" class="admin-btn-icon" title="Xem website live">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+          <button type="button" class="admin-btn-icon" id="logoutBtn" title="Đăng xuất">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="admin-main">
+      
+      <!-- TOPBAR -->
+      <header class="admin-topbar">
+        <div class="admin-topbar-title">
+          <h2 id="pageTitle">Tổng quan hệ thống</h2>
+          <span class="admin-topbar-breadcrumb" id="pageBreadcrumb">Harmony Studio / Dashboard</span>
+        </div>
+        <div class="admin-topbar-actions">
+          <button type="button" class="admin-btn admin-btn--accent" id="topAddLookBtn">
+            <span>+ Thêm Mẫu Mới</span>
+          </button>
+          <a href="/" target="_blank" class="admin-btn admin-btn--secondary">
+            <span>Xem Website</span> ↗
+          </a>
+        </div>
+      </header>
+
+      <div class="admin-body">
+        
+        <!-- ==================== TAB 1: DASHBOARD ==================== -->
+        <section class="admin-tab-pane is-active" id="tab-dashboard">
+          
+          <div class="admin-stat-grid">
+            <div class="admin-stat-card">
+              <div class="admin-stat-label">Tổng số Look / Mẫu</div>
+              <div class="admin-stat-val" id="statTotalLooks">18</div>
+              <div class="admin-stat-desc">Được phân bổ trong 4 bộ sưu tập</div>
+            </div>
+
+            <div class="admin-stat-card">
+              <div class="admin-stat-label">Bộ sưu tập mùa</div>
+              <div class="admin-stat-val" id="statTotalColls">4</div>
+              <div class="admin-stat-desc">Rouge, Creme, Noir, Flora</div>
+            </div>
+
+            <div class="admin-stat-card">
+              <div class="admin-stat-label">Ngách hàng thời trang</div>
+              <div class="admin-stat-val" id="statTotalNiches">4</div>
+              <div class="admin-stat-desc">Công sở, Dự tiệc, Set váy, Áo dài</div>
+            </div>
+
+            <div class="admin-stat-card admin-stat-card--status">
+              <div class="admin-stat-label">Trạng thái hệ thống</div>
+              <div class="admin-stat-status">
+                <span class="admin-dot-green"></span> <b>Cloudflare KV:</b> Kết nối sẵn sàng
+              </div>
+              <div class="admin-stat-status" style="margin-top:6px">
+                <span class="admin-dot-green"></span> <b>Cloudinary CDN:</b> Sẵn sàng
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Actions & Studio AI Spotlight -->
+          <div class="admin-grid-2" style="margin-top:24px">
+            
+            <div class="admin-card">
+              <div class="admin-card-head">
+                <h3>Studio Tách Nền Mẫu Tự Động (AI Automation)</h3>
+                <span class="admin-badge admin-badge--accent">Không cần Photoshop</span>
+              </div>
+              <div class="admin-card-body">
+                <p style="color:var(--admin-ink-soft);font-size:14px;line-height:1.6">
+                  Tải lên bất kỳ ảnh người mẫu nào (chụp tại studio hoặc xưởng). Hệ thống AI trên trình duyệt tự động nhận diện và bóc tách phom người mẫu trong suốt để đưa vào Lookbook ngay lập tức!
+                </p>
+                <div style="margin-top:16px;display:flex;gap:12px">
+                  <button type="button" class="admin-btn admin-btn--accent" onclick="switchTab('studio-ai')">
+                    Mở Studio Tách Nền AI →
+                  </button>
+                  <button type="button" class="admin-btn admin-btn--secondary" onclick="openAddLookModal()">
+                    + Thêm Mẫu Mới Thủ Công
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="admin-card">
+              <div class="admin-card-head">
+                <h3>Thông Tin Thương Hiệu & Liên Hệ</h3>
+                <button type="button" class="admin-btn admin-btn--sm" onclick="switchTab('content')">Chỉnh sửa</button>
+              </div>
+              <div class="admin-card-body">
+                <div class="admin-info-list" id="dashInfoList">
+                  <!-- Rendered dynamically -->
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Mẫu thiết kế mới nhất -->
+          <div class="admin-card" style="margin-top:24px">
+            <div class="admin-card-head">
+              <h3>Danh Sách Mẫu Thiết Kế Hiện Tại</h3>
+              <button type="button" class="admin-btn admin-btn--sm admin-btn--primary" onclick="switchTab('looks')">Xem tất cả</button>
+            </div>
+            <div class="admin-table-wrap">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th>Ảnh mẫu</th>
+                    <th>Mã look</th>
+                    <th>Tên mẫu thiết kế</th>
+                    <th>Bộ sưu tập</th>
+                    <th>Ngách hàng</th>
+                    <th>Màu sắc</th>
+                    <th>Thao tác</th>
+                  </tr>
+                </thead>
+                <tbody id="dashLooksTable">
+                  <!-- Rendered via JS -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- ==================== TAB 2: QUẢN LÝ MẪU (LOOKS) ==================== -->
+        <section class="admin-tab-pane" id="tab-looks">
+          
+          <div class="admin-filter-bar">
+            <div class="admin-search-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <input type="text" id="lookSearchInput" placeholder="Tìm kiếm theo tên mẫu, mã look, màu sắc...">
+            </div>
+
+            <div class="admin-filter-group">
+              <select id="filterCollSelect">
+                <option value="">Tất cả Bộ sưu tập</option>
+              </select>
+
+              <select id="filterNicheSelect">
+                <option value="">Tất cả Ngách hàng</option>
+              </select>
+
+              <button type="button" class="admin-btn admin-btn--accent" onclick="openAddLookModal()">
+                + Thêm Mẫu Mới
+              </button>
+            </div>
+          </div>
+
+          <div class="admin-card" style="margin-top:16px">
+            <div class="admin-table-wrap">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th style="width:70px">Ảnh tách</th>
+                    <th style="width:70px">Ảnh gốc</th>
+                    <th>Mã</th>
+                    <th>Tên mẫu thiết kế</th>
+                    <th>Bộ sưu tập</th>
+                    <th>Ngách</th>
+                    <th>Màu sắc</th>
+                    <th>Chi tiết trang phục</th>
+                    <th style="text-align:right">Hành động</th>
+                  </tr>
+                </thead>
+                <tbody id="looksTableBody">
+                  <!-- Rendered dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- ==================== TAB 3: STUDIO TÁCH NỀN AI ==================== -->
+        <section class="admin-tab-pane" id="tab-studio-ai">
+          
+          <div class="admin-card">
+            <div class="admin-card-head">
+              <div>
+                <h3>Studio Tự Động Tách Nền Mẫu (AI Model Background Removal)</h3>
+                <p style="color:var(--admin-ink-soft);font-size:13px;margin-top:4px">
+                  Tải ảnh người mẫu lên, mô hình AI chạy trực tiếp trên trình duyệt sẽ tự động bóc tách nền trong suốt chuẩn xác, không cần qua bất kỳ ai!
+                </p>
+              </div>
+            </div>
+            
+            <div class="admin-card-body">
+              
+              <!-- Drop Zone -->
+              <div class="admin-dropzone" id="aiDropzone">
+                <input type="file" id="aiFileInput" accept="image/png,image/jpeg,image/webp" style="display:none">
+                <div class="admin-dropzone-icon">✨</div>
+                <h4>Kéo thả ảnh người mẫu vào đây hoặc bấm để chọn ảnh</h4>
+                <p>Hỗ trợ ảnh JPG, PNG, WebP (Ảnh mẫu mặc đồ chụp toàn thân hoặc bán thân)</p>
+                <button type="button" class="admin-btn admin-btn--primary" onclick="document.getElementById('aiFileInput').click()">
+                  Chọn ảnh từ máy tính
+                </button>
+              </div>
+
+              <!-- Processing State -->
+              <div class="admin-progress-box" id="aiProgressBox" style="display:none">
+                <div class="admin-progress-header">
+                  <span id="aiProgressText">Đang tải mô hình AI và phân tích ảnh...</span>
+                  <span id="aiProgressPercent">0%</span>
+                </div>
+                <div class="admin-progress-bar">
+                  <div class="admin-progress-fill" id="aiProgressFill"></div>
+                </div>
+              </div>
+
+              <!-- Preview Comparison Area -->
+              <div class="admin-preview-area" id="aiPreviewArea" style="display:none">
+                
+                <div class="admin-preview-controls">
+                  <span>Màu nền xem trước mẫu tách:</span>
+                  <div class="admin-preview-colors">
+                    <button type="button" class="admin-color-chip is-active" data-bg="checkerboard" title="Lưới trong suốt"></button>
+                    <button type="button" class="admin-color-chip" data-bg="#E7B2A8" style="background:#E7B2A8" title="Rouge (Hồng phấn)"></button>
+                    <button type="button" class="admin-color-chip" data-bg="#E6D6BD" style="background:#E6D6BD" title="Creme (Kem nắng)"></button>
+                    <button type="button" class="admin-color-chip" data-bg="#BCD6D1" style="background:#BCD6D1" title="Flora (Xanh ngọc)"></button>
+                    <button type="button" class="admin-color-chip" data-bg="#17171A" style="background:#17171A" title="Noir (Đen sân khấu)"></button>
+                    <button type="button" class="admin-color-chip" data-bg="#FFFFFF" style="background:#FFFFFF" title="Trắng tinh"></button>
+                  </div>
+                </div>
+
+                <div class="admin-compare-grid">
+                  <div class="admin-compare-col">
+                    <div class="admin-compare-badge">Ảnh Gốc</div>
+                    <div class="admin-compare-box">
+                      <img id="aiOriginalImg" src="" alt="Ảnh gốc">
+                    </div>
+                  </div>
+
+                  <div class="admin-compare-col">
+                    <div class="admin-compare-badge admin-compare-badge--accent">Ảnh Tách Nền AI (Trong suốt)</div>
+                    <div class="admin-compare-box admin-compare-box--cut" id="aiCutBox">
+                      <img id="aiCutImg" src="" alt="Ảnh đã tách nền">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="admin-preview-actions">
+                  <button type="button" class="admin-btn admin-btn--secondary" id="aiDownloadBtn">
+                    ⬇ Tải file PNG tách nền về máy
+                  </button>
+                  <button type="button" class="admin-btn admin-btn--secondary" id="aiUploadCloudinaryBtn">
+                    ☁ Tải lên Cloudinary
+                  </button>
+                  <button type="button" class="admin-btn admin-btn--accent" id="aiCreateLookBtn">
+                    ✨ Tạo Look mới với ảnh này ngay →
+                  </button>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </section>
+
+        <!-- ==================== TAB 4: BỘ SƯU TẬP & NGÁCH ==================== -->
+        <section class="admin-tab-pane" id="tab-collections">
+          
+          <!-- Quản lý 4 Bộ sưu tập -->
+          <div class="admin-card">
+            <div class="admin-card-head">
+              <h3>Các Chương Bộ Sưu Tập (Collections)</h3>
+              <button type="button" class="admin-btn admin-btn--sm admin-btn--primary" id="saveCollsBtn">Lưu thay đổi</button>
+            </div>
+            <div class="admin-card-body">
+              <div class="admin-colls-grid" id="collsContainer">
+                <!-- Rendered dynamically -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Quản lý 4 Ngách hàng -->
+          <div class="admin-card" style="margin-top:24px">
+            <div class="admin-card-head">
+              <h3>Các Ngách Thời Trang Kinh Doanh (Niches)</h3>
+              <button type="button" class="admin-btn admin-btn--sm admin-btn--primary" id="saveNichesBtn">Lưu thay đổi</button>
+            </div>
+            <div class="admin-card-body">
+              <div class="admin-niches-grid" id="nichesContainer">
+                <!-- Rendered dynamically -->
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- ==================== TAB 5: NỘI DUNG & LIÊN HỆ ==================== -->
+        <section class="admin-tab-pane" id="tab-content">
+          
+          <form id="contentForm">
+            <div class="admin-card">
+              <div class="admin-card-head">
+                <h3>Thông Tin Liên Hệ & Kênh Kết Nối</h3>
+                <button type="submit" class="admin-btn admin-btn--primary">Lưu nội dung</button>
+              </div>
+              <div class="admin-card-body">
+                <div class="admin-form-grid-2">
+                  <div class="admin-form-group">
+                    <label>Tên thương hiệu</label>
+                    <input type="text" id="siteBrand" class="admin-input" required>
+                  </div>
+
+                  <div class="admin-form-group">
+                    <label>Mùa / Bộ sưu tập chính</label>
+                    <input type="text" id="siteSeason" class="admin-input" required>
+                  </div>
+
+                  <div class="admin-form-group">
+                    <label>Hotline / Điện thoại</label>
+                    <input type="text" id="sitePhone" class="admin-input" required>
+                  </div>
+
+                  <div class="admin-form-group">
+                    <label>Email liên hệ</label>
+                    <input type="email" id="siteEmail" class="admin-input" required>
+                  </div>
+
+                  <div class="admin-form-group">
+                    <label>Link Zalo</label>
+                    <input type="text" id="siteZalo" class="admin-input">
+                  </div>
+
+                  <div class="admin-form-group">
+                    <label>Link Messenger</label>
+                    <input type="text" id="siteMessenger" class="admin-input">
+                  </div>
+
+                  <div class="admin-form-group">
+                    <label>Link Instagram</label>
+                    <input type="text" id="siteInstagram" class="admin-input">
+                  </div>
+
+                  <div class="admin-form-group">
+                    <label>Link Facebook</label>
+                    <input type="text" id="siteFacebook" class="admin-input">
+                  </div>
+
+                  <div class="admin-form-group">
+                    <label>Địa chỉ Studio</label>
+                    <input type="text" id="siteAddress" class="admin-input">
+                  </div>
+
+                  <div class="admin-form-group">
+                    <label>Giờ đón khách / Làm việc</label>
+                    <input type="text" id="siteHours" class="admin-input">
+                  </div>
+                </div>
+
+                <div class="admin-form-group" style="margin-top:16px">
+                  <label>Slogan thương hiệu (Tagline)</label>
+                  <input type="text" id="siteTagline" class="admin-input">
+                </div>
+              </div>
+            </div>
+
+            <!-- Tuyên ngôn & Đoạn giới thiệu -->
+            <div class="admin-card" style="margin-top:24px">
+              <div class="admin-card-head">
+                <h3>Tuyên Ngôn Thương Hiệu & Giới Thiệu Dịch Vụ</h3>
+              </div>
+              <div class="admin-card-body">
+                <div class="admin-form-group">
+                  <label>Tuyên ngôn thương hiệu (Trang chủ)</label>
+                  <textarea id="contentManifesto" class="admin-textarea" rows="3"></textarea>
+                </div>
+
+                <div class="admin-form-grid-2" style="margin-top:16px">
+                  <div class="admin-form-group">
+                    <label>Tiêu đề Dịch vụ B2B (Thiết kế cho xưởng)</label>
+                    <input type="text" id="contentB2bTitle" class="admin-input">
+                  </div>
+                  <div class="admin-form-group">
+                    <label>Mô tả Dịch vụ B2B</label>
+                    <textarea id="contentB2bDesc" class="admin-textarea" rows="2"></textarea>
+                  </div>
+
+                  <div class="admin-form-group">
+                    <label>Tiêu đề Dịch vụ May đo riêng (Bespoke)</label>
+                    <input type="text" id="contentBespokeTitle" class="admin-input">
+                  </div>
+                  <div class="admin-form-group">
+                    <label>Mô tả Dịch vụ May đo riêng</label>
+                    <textarea id="contentBespokeDesc" class="admin-textarea" rows="2"></textarea>
+                  </div>
+                </div>
+
+                <div style="margin-top:20px;text-align:right">
+                  <button type="submit" class="admin-btn admin-btn--primary">Lưu nội dung trang web</button>
+                </div>
+              </div>
+            </div>
+          </form>
+
+        </section>
+
+        <!-- ==================== TAB 6: CÀI ĐẶT & MẬT KHẨU ==================== -->
+        <section class="admin-tab-pane" id="tab-settings">
+          
+          <div class="admin-grid-2">
+            
+            <!-- Đổi mật khẩu Admin -->
+            <div class="admin-card">
+              <div class="admin-card-head">
+                <h3>Đổi Mật Khẩu Trang Quản Trị</h3>
+              </div>
+              <div class="admin-card-body">
+                <form id="changePasswordForm">
+                  <div class="admin-form-group">
+                    <label for="currPass">Mật khẩu hiện tại</label>
+                    <input type="password" id="currPass" class="admin-input" required placeholder="Nhập mật khẩu hiện tại">
+                  </div>
+
+                  <div class="admin-form-group" style="margin-top:12px">
+                    <label for="newPass">Mật khẩu mới (ít nhất 6 ký tự)</label>
+                    <input type="password" id="newPass" class="admin-input" required minlength="6" placeholder="Nhập mật khẩu mới">
+                  </div>
+
+                  <div class="admin-form-group" style="margin-top:12px">
+                    <label for="confirmPass">Xác nhận mật khẩu mới</label>
+                    <input type="password" id="confirmPass" class="admin-input" required minlength="6" placeholder="Nhập lại mật khẩu mới">
+                  </div>
+
+                  <div style="margin-top:20px">
+                    <button type="submit" class="admin-btn admin-btn--accent">Cập nhật mật khẩu</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <!-- Sao lưu & Dữ liệu -->
+            <div class="admin-card">
+              <div class="admin-card-head">
+                <h3>Sao Lưu & Đồng Bộ Dữ Liệu</h3>
+              </div>
+              <div class="admin-card-body">
+                <p style="color:var(--admin-ink-soft);font-size:14px;line-height:1.6">
+                  Bạn có thể tải về file JSON lưu trữ toàn bộ mẫu thiết kế, bộ sưu tập và nội dung để dự phòng, hoặc nạp lại khi cần thiết.
+                </p>
+
+                <div style="margin-top:20px;display:flex;flex-direction:column;gap:12px">
+                  <button type="button" class="admin-btn admin-btn--secondary" id="exportBackupBtn">
+                    📥 Tải về bản sao lưu dữ liệu (.JSON)
+                  </button>
+
+                  <label class="admin-btn admin-btn--secondary" style="cursor:pointer;text-align:center">
+                    📤 Nạp dữ liệu từ file JSON
+                    <input type="file" id="importBackupInput" accept=".json" style="display:none">
+                  </label>
+
+                  <hr style="border:0;border-top:1px solid var(--admin-line);margin:12px 0">
+
+                  <button type="button" class="admin-btn admin-btn--danger" id="resetDataBtn">
+                    ⚠️ Khôi phục dữ liệu gốc ban đầu
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </section>
+
+      </div>
+    </main>
+
+  </div>
+
+  <!-- ==================== MODAL THÊM / SỬA LOOK ==================== -->
+  <div class="admin-modal" id="lookModal" style="display:none">
+    <div class="admin-modal-backdrop" onclick="closeLookModal()"></div>
+    <div class="admin-modal-content">
+      <div class="admin-modal-head">
+        <h3 id="lookModalTitle">Thêm Mẫu Mới</h3>
+        <button type="button" class="admin-modal-close" onclick="closeLookModal()">✕</button>
+      </div>
+      <form id="lookForm">
+        <input type="hidden" id="editLookId">
+        <div class="admin-modal-body">
+          <div class="admin-form-grid-2">
+            <div class="admin-form-group">
+              <label>Tên mẫu thiết kế *</label>
+              <input type="text" id="lookName" class="admin-input" required placeholder="VD: Đầm đỏ tay bồng đuôi cá">
+            </div>
+
+            <div class="admin-form-group">
+              <label>Mã Look / Số thứ tự *</label>
+              <input type="text" id="lookNo" class="admin-input" required placeholder="VD: 18">
+            </div>
+
+            <div class="admin-form-group">
+              <label>Bộ sưu tập *</label>
+              <select id="lookCollection" class="admin-select" required></select>
+            </div>
+
+            <div class="admin-form-group">
+              <label>Ngách thời trang *</label>
+              <select id="lookNiche" class="admin-select" required></select>
+            </div>
+
+            <div class="admin-form-group">
+              <label>Màu sắc</label>
+              <input type="text" id="lookColor" class="admin-input" placeholder="VD: Đỏ son, Cam đất">
+            </div>
+
+            <div class="admin-form-group">
+              <label>Tỷ lệ phom (cutRatio)</label>
+              <input type="number" step="0.001" id="lookCutRatio" class="admin-input" value="0.44">
+            </div>
+          </div>
+
+          <div class="admin-form-group" style="margin-top:14px">
+            <label>Đường dẫn ảnh tách nền (cut URL / Cloudinary) *</label>
+            <div class="admin-input-group">
+              <input type="text" id="lookCutUrl" class="admin-input" required placeholder="https://res.cloudinary.com/... hoặc assets/img/cut/look-04">
+              <button type="button" class="admin-btn admin-btn--sm" onclick="switchTab('studio-ai'); closeLookModal();">Dùng Studio AI</button>
+            </div>
+          </div>
+
+          <div class="admin-form-group" style="margin-top:14px">
+            <label>Đường dẫn ảnh chụp gốc (photo URL / tùy chọn)</label>
+            <input type="text" id="lookPhotoUrl" class="admin-input" placeholder="https://res.cloudinary.com/... hoặc assets/img/photo/look-04">
+          </div>
+
+          <div class="admin-form-group" style="margin-top:14px">
+            <label>Chi tiết trang phục trên mẫu (mỗi dòng một chi tiết)</label>
+            <textarea id="lookPieces" class="admin-textarea" rows="3" placeholder="Đầm tay bồng&#10;Chân váy đuôi cá&#10;Thắt lưng đen"></textarea>
+          </div>
+        </div>
+
+        <div class="admin-modal-foot">
+          <button type="button" class="admin-btn admin-btn--secondary" onclick="closeLookModal()">Hủy bỏ</button>
+          <button type="submit" class="admin-btn admin-btn--accent">Lưu Mẫu Thiết Kế</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="admin-toast" id="adminToast">
+    <span class="admin-toast-icon">✓</span>
+    <span id="toastMsg">Thao tác thành công</span>
+  </div>
+
+  <!-- AI Background Removal Library via WebAssembly (100% Client-side Automated) -->
+  <script type="module">
+    import imglyRemoveBackground from 'https://unpkg.com/@imgly/background-removal@1.7.0/dist/index.mjs';
+    window.__imglyRemoveBackground = imglyRemoveBackground;
+  </script>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/admin.js"></script>
+</body>
+</html>

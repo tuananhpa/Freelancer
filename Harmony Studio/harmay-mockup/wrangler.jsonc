@@ -10,6 +10,12 @@
     "not_found_handling": "404-page",
     "run_worker_first": ["/api/*"]
   },
+  "kv_namespaces": [
+    {
+      "binding": "HARMONY_DATA_KV",
+      "id": "637e364d9c704a8e88e43eb2ae3377f3"
+    }
+  ],
   "vars": {
     "CLOUDINARY_CLOUD_NAME": "dlw6jmsyf",
     "CLOUDINARY_API_KEY": "345882647239966",

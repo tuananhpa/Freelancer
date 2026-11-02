@@ -4,11 +4,11 @@
    ========================================================================== */
 const SITE = window.SITE = {
   brand: 'HARMONY.STUDIO',
-  brandConfirm: '[[CẦN XÁC NHẬN]]',
+  brandConfirm: '',
   tagline: 'Nhà mốt thiết kế cho xưởng và may đo theo số đo riêng.',
   season: 'Bộ sưu tập Thu Đông',
   phone: '0900 000 000',
-  phoneNote: '[[CẦN XÁC NHẬN]]',
+  phoneNote: '',
   phoneHref: 'tel:0900000000',
   zalo: '#zalo-can-xac-nhan',
   messenger: '#messenger-can-xac-nhan',
@@ -16,9 +16,9 @@ const SITE = window.SITE = {
   facebook: '#facebook-can-xac-nhan',
   tiktok: '#tiktok-can-xac-nhan',
   email: 'contact@harmony.studio',
-  emailNote: '[[CẦN XÁC NHẬN]]',
+  emailNote: '',
   address: 'Studio tại Việt Nam',
-  addressNote: '[[CẦN XÁC NHẬN]]',
+  addressNote: '',
   hours: 'Đón khách theo lịch hẹn',
   /* Đổi video hero chỉ cần sửa 1 chỗ này (Cloudinary dlw6jmsyf + fallback local) */
   cloudinaryCloud: 'dlw6jmsyf',
@@ -47,14 +47,22 @@ const IC_PHONE = `<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path 
 const IC_MSG = `<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3Z" stroke="currentColor" stroke-width="1.5"/><path d="M7.5 13.5 10.8 10l2.2 2.2 3.5-2.2-3.3 3.5-2.2-2.2-3.5 2.2Z" fill="currentColor"/></svg>`;
 
 const cutPicture = (l, sizes = '50vw', alt = '') => {
-  const b = l.cut;
-  const w = Math.round(1100 * l.cutRatio);
+  if (!l) return '';
+  const b = l.cut || '';
+  const w = Math.round(1100 * (l.cutRatio || 0.44));
+  if (b.startsWith('http') || b.startsWith('data:') || b.startsWith('blob:') || /\.(webp|png|jpe?g)$/i.test(b)) {
+    return `<img src="${b}" sizes="${sizes}" width="${w}" height="1100" alt="${alt || l.name}" decoding="async">`;
+  }
   return `<img src="${b}-1100.webp" srcset="${b}-600.webp 600w, ${b}-1100.webp 1100w, ${b}-1800.webp 1800w" sizes="${sizes}" width="${w}" height="1100" alt="${alt || l.name}" decoding="async">`;
 };
 const photoImg = (l, sizes = '40vw', alt = '') => {
+  if (!l) return '';
   if (!l.photo) return cutPicture(l, sizes, alt);
-  const b = l.photo;
-  const h = Math.round(800 / l.photoRatio);
+  const b = l.photo || '';
+  const h = Math.round(800 / (l.photoRatio || 0.75));
+  if (b.startsWith('http') || b.startsWith('data:') || b.startsWith('blob:') || /\.(webp|png|jpe?g)$/i.test(b)) {
+    return `<img src="${b}" sizes="${sizes}" width="800" height="${h}" alt="${alt || l.name}" decoding="async">`;
+  }
   return `<img src="${b}-800.webp" srcset="${b}-400.webp 400w, ${b}-800.webp 800w, ${b}-1365.webp 1365w" sizes="${sizes}" width="800" height="${h}" alt="${alt || l.name}" decoding="async">`;
 };
 
@@ -164,9 +172,9 @@ function mountChrome() {
       <div class="footer__cols">
         <ul>
           <li><h4>Thương hiệu</h4></li>
-          <li>${SITE.brand} <b class="tbc">${SITE.brandConfirm}</b></li>
+          <li style="font-weight:600">${SITE.brand}</li>
           <li>${SITE.tagline}</li>
-          <li>${SITE.address} <b class="tbc">${SITE.addressNote}</b></li>
+          <li>${SITE.address}</li>
           <li>${SITE.hours}</li>
         </ul>
         <ul>
@@ -184,21 +192,18 @@ function mountChrome() {
         </ul>
         <ul>
           <li><h4>Liên hệ trực tiếp</h4></li>
-          <li><a href="${SITE.phoneHref}">Hotline: ${SITE.phone}</a> <b class="tbc">${SITE.phoneNote}</b></li>
-          <li><a href="mailto:${SITE.email}">${SITE.email}</a> <b class="tbc">${SITE.emailNote}</b></li>
+          <li><a href="${SITE.phoneHref}">Hotline: ${SITE.phone}</a></li>
+          <li><a href="mailto:${SITE.email}">${SITE.email}</a></li>
           <li><a href="${SITE.zalo}">Nhắn Zalo</a> · <a href="${SITE.messenger}">Messenger</a></li>
           <li><a href="${SITE.facebook}">Facebook</a> · <a href="${SITE.instagram}">Instagram</a> · <a href="${SITE.tiktok}">TikTok</a></li>
         </ul>
       </div>
-      <div></div>
-      <div>
-        <div class="footer__big" aria-hidden="true">
-          <svg viewBox="0 0 1700 205"><text x="0" y="178" font-size="196" textLength="1700" lengthAdjust="spacing">HARMONY.STUDIO</text></svg>
-        </div>
-        <div class="footer__legal">
-          <span>© ${SITE.brand} — Bản thiết kế giao diện gửi duyệt. Các mục có nhãn <b class="tbc">[[CẦN XÁC NHẬN]]</b> chờ khách bổ sung.</span>
-          <span>Video mở đầu: Mixkit Free License · Ảnh: bộ ảnh khách cung cấp</span>
-        </div>
+      <div class="footer__big" aria-hidden="true">
+        <svg viewBox="0 0 1700 205"><text x="0" y="178" font-size="196" textLength="1700" lengthAdjust="spacing">HARMONY.STUDIO</text></svg>
+      </div>
+      <div class="footer__legal">
+        <span>© ${SITE.brand} — Thiết kế thời trang cho xưởng & may đo riêng.</span>
+        <span><a href="admin.html" style="color:inherit;opacity:.7;text-decoration:underline">Quản trị Atelier</a></span>
       </div>`;
   }
 
@@ -256,10 +261,8 @@ function initHeaderAndMenu() {
     const y = window.scrollY;
     const solid = y > window.innerHeight * 0.72 || document.body.dataset.header === 'dark';
     header.classList.toggle('is-solid', solid);
+    header.classList.remove('is-hidden');
     if (svcTabs) {
-      const rect = svcTabs.getBoundingClientRect();
-      const passedSubMenu = rect.top <= 4 && y > 120;
-      header.classList.toggle('is-hidden', !open && passedSubMenu);
       const mayDo = document.getElementById('may-do');
       if (mayDo) {
         const isMayDo = mayDo.getBoundingClientRect().top <= 160;
@@ -267,8 +270,6 @@ function initHeaderAndMenu() {
         if (chips[0]) chips[0].setAttribute('aria-pressed', String(!isMayDo));
         if (chips[1]) chips[1].setAttribute('aria-pressed', String(isMayDo));
       }
-    } else {
-      header.classList.remove('is-hidden');
     }
   };
   window.addEventListener('scroll', onScroll, { passive: true });
@@ -553,7 +554,7 @@ function initManifesto() {
 function initChapters() {
   const root = document.getElementById('chapters');
   if (!root) return;
-  const sidePos = ['left:9%', 'right:9%', 'left:10%', 'right:10%'];
+  const sidePos = ['right:10%', 'right:10%', 'right:10%', 'right:10%'];
   root.innerHTML = DATA.collections.map((c, idx) => {
     const hero = lookById[c.hero];
     const second = lookById[c.looks[1] || c.hero];
@@ -576,7 +577,7 @@ function initChapters() {
           </figure>
         </div>
         <div class="chapter__info">
-          <h3>${c.name} <b class="tbc">[[CẦN XÁC NHẬN]]</b></h3>
+          <h3>${c.name}</h3>
           <p>${c.blurb}</p>
           <a class="btn" href="chi-tiet-bo-suu-tap.html?id=${c.id}"><span>Xem ${c.looks.length} mẫu</span>${ARR}</a>
         </div>
@@ -913,7 +914,7 @@ function initCollectionsPage() {
           </div>
           <div class="cl-item__info">
             <div class="cl-item__tags">${niches.map(n => `<span>${n}</span>`).join('')}</div>
-            <h2>${c.name} <b class="tbc">[[CẦN XÁC NHẬN]]</b></h2>
+            <h2>${c.name}</h2>
             <p>${c.blurb}</p>
             <div style="display:flex;gap:10px;flex-wrap:wrap">
               <a class="btn" href="chi-tiet-bo-suu-tap.html?id=${c.id}"><span>Mở lookbook (${c.looks.length} mẫu)</span>${ARR}</a>
@@ -963,7 +964,7 @@ function initCollectionDetailPage() {
       <div class="cd-hero__meta">
         <div>
           <span class="label">${c.tag} · ${looks.length} mẫu</span>
-          <h1>${c.name} <b class="tbc">[[CẦN XÁC NHẬN]]</b></h1>
+          <h1>${c.name}</h1>
           <p>${c.blurb}</p>
         </div>
         <div style="display:flex;gap:10px;flex-wrap:wrap">
@@ -1080,6 +1081,31 @@ function initForms() {
 /* ==========================================================================
    Khởi chạy
    ========================================================================== */
+async function syncLiveHarmonyData() {
+  try {
+    const res = await fetch('/api/data');
+    if (res.ok) {
+      const d = await res.json();
+      if (d.looks && Array.isArray(d.looks)) {
+        DATA.looks = d.looks;
+        d.looks.forEach(l => { lookById[l.id] = l; });
+      }
+      if (d.collections && Array.isArray(d.collections)) {
+        DATA.collections = d.collections;
+        d.collections.forEach(c => { collById[c.id] = c; });
+      }
+      if (d.niches && Array.isArray(d.niches)) {
+        DATA.niches = d.niches;
+        d.niches.forEach(n => { nicheById[n.id] = n; });
+      }
+      if (d.site && typeof d.site === 'object') {
+        Object.assign(SITE, d.site);
+      }
+    }
+  } catch (e) {}
+}
+syncLiveHarmonyData();
+
 mountChrome();
 initScrollEngine();
 initHeaderAndMenu();
