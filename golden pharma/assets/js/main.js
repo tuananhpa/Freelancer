@@ -32,6 +32,8 @@ function resolveImg(path, size = 400) {
   if (path.startsWith('data:') || path.startsWith('http://') || path.startsWith('https://') || path.startsWith('/api/images/') || /\.(webp|png|jpe?g|gif|svg)$/i.test(path)) {
     return path;
   }
+  // Ảnh tách nền chỉ có bản 600/1000
+  if (path.includes('/cut/') && size < 600) size = 600;
   return `${path}-${size}.webp`;
 }
 

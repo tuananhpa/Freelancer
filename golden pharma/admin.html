@@ -523,33 +523,31 @@
             <div class="admin-card-title" style="font-size:15px;margin-bottom:12px">
               <span>🖼️ Hình ảnh sản phẩm</span>
             </div>
-            <div class="admin-grid-2" style="margin-bottom:12px">
+            <div class="prod-img-layout">
+              <!-- Ảnh nổi 3D -->
               <div class="admin-form-group">
-                <label for="prodCutImg">Ảnh tách nền nổi 3D (Đường dẫn hoặc chọn ảnh)</label>
-                <div style="display:flex;gap:6px">
-                  <input type="text" id="prodCutImg" class="admin-input" placeholder="assets/img/cut/prod-01-cut hoặc link tải lên">
-                  <button type="button" class="admin-btn admin-btn--outline admin-btn--sm" onclick="pickImageFor('prodCutImg')">Chọn</button>
+                <label for="prodCutImg">Ảnh tách nền (nổi 3D)</label>
+                <div class="prod-cut-box" id="prodCutBox">
+                  <img id="prodCutPreview" src="assets/brand/logo-mark.png" alt="Ảnh tách nền">
                 </div>
-              </div>
-              <div class="admin-form-group">
-                <label>Xem trước ảnh 3D</label>
-                <div style="width:56px;height:56px;border-radius:10px;border:1px solid var(--admin-line);background:#fff;display:grid;place-items:center;overflow:hidden">
-                  <img id="prodCutPreview" src="assets/brand/logo-mark.png" style="max-width:100%;max-height:100%;object-fit:contain">
+                <div style="display:flex;gap:6px;margin-top:8px">
+                  <button type="button" class="admin-btn admin-btn--outline admin-btn--sm" style="flex:1" onclick="pickImageFor('prodCutImg')">Thư viện</button>
+                  <label class="admin-btn admin-btn--outline admin-btn--sm" style="flex:1;cursor:pointer;justify-content:center">
+                    Tải lên
+                    <input type="file" id="prodCutUploadInput" accept="image/*" hidden>
+                  </label>
                 </div>
+                <input type="text" id="prodCutImg" class="admin-input" style="margin-top:6px;font-size:12px" placeholder="Đường dẫn ảnh (tự điền)">
               </div>
-            </div>
 
-            <div class="admin-form-group">
-              <label>Bộ ảnh chi tiết (Gallery) — <i>Mỗi ảnh một dòng hoặc chọn ảnh</i></label>
-              <div id="prodGalleryList" style="display:grid;gap:8px;margin-bottom:8px"></div>
-              <div style="display:flex;gap:8px">
-                <button type="button" class="admin-btn admin-btn--outline admin-btn--sm" id="addGalleryRowBtn">+ Thêm ảnh vào bộ sưu tập</button>
-                <label class="admin-btn admin-btn--outline admin-btn--sm" style="cursor:pointer">
-                  📤 Tải ảnh trực tiếp từ máy
-                  <input type="file" id="prodDirectUploadInput" accept="image/*" style="display:none">
-                </label>
+              <!-- Bộ ảnh chi tiết -->
+              <div class="admin-form-group">
+                <label>Bộ ảnh chi tiết <span id="prodGalleryCount" style="color:var(--admin-ink-muted);font-weight:500"></span> — <i>ảnh đầu tiên là ảnh bìa trên website</i></label>
+                <div class="prod-gallery-grid" id="prodGalleryList"></div>
+                <small style="color:var(--admin-ink-muted)">Kéo thả ảnh từ máy vào khung để tải lên. Dùng ◀ ▶ để sắp xếp, ★ để đặt làm ảnh bìa.</small>
               </div>
             </div>
+            <input type="file" id="prodDirectUploadInput" accept="image/*" multiple hidden>
           </div>
 
           <!-- Hàng 7: Đặc điểm nổi bật (Highlights) -->
@@ -595,7 +593,12 @@
         <button type="button" class="admin-icon-btn" onclick="closeImagePicker()">✕</button>
       </div>
       <div class="admin-modal-body">
+        <input type="search" id="pickerSearch" class="admin-input" placeholder="Lọc theo tên ảnh (vd: 05, studio, 3D)..." style="margin-bottom:12px">
         <div class="admin-media-grid" id="pickerMediaGrid"></div>
+      </div>
+      <div class="admin-modal-foot" id="pickerFoot" hidden>
+        <button type="button" class="admin-btn admin-btn--outline" onclick="closeImagePicker()">Hủy</button>
+        <button type="button" class="admin-btn admin-btn--primary" id="pickerAddBtn" onclick="confirmPickedImages()">Thêm ảnh đã chọn</button>
       </div>
     </div>
   </div>

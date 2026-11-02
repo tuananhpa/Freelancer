@@ -1,6 +1,7 @@
 {
   "version": "0.0.1",
   "configurations": [
-    { "name": "golden-pharma", "runtimeExecutable": "python", "runtimeArgs": ["-m", "http.server", "4173"], "port": 4173 }
+    { "name": "golden-pharma", "runtimeExecutable": "python", "runtimeArgs": ["-m", "http.server", "4173"], "port": 4173 },
+    { "name": "golden-pharma-worker", "runtimeExecutable": "npx", "runtimeArgs": ["--no-install", "wrangler", "dev", "--local", "--port", "8787"], "port": 8787 }
   ]
 }

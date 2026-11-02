@@ -13,6 +13,9 @@ const STATE = {
   content: {},
   media: [],
   targetImgInput: null,
+  gallery: [],
+  pickerImages: [],
+  pickerSelected: null,
 };
 
 // Hàm tiện ích phân giải URL hình ảnh
@@ -21,6 +24,8 @@ function resolveImg(path, size = 400) {
   if (path.startsWith('data:') || path.startsWith('http://') || path.startsWith('https://') || path.startsWith('/api/images/') || /\.(webp|png|jpe?g|gif|svg)$/i.test(path)) {
     return path;
   }
+  // Ảnh tách nền chỉ có bản 600/1000
+  if (path.includes('/cut/') && size < 600) size = 600;
   return `${path}-${size}.webp`;
 }
 
@@ -386,7 +391,7 @@ function openAddProductModal() {
 
   renderHighlightsList([]);
   renderVariationsList([{ label: '1kg', price: 0, sku: `GP-${nextId}`, weight_g: '1000' }]);
-  renderGalleryList(['assets/img/studio/prod-01-1']);
+  renderGalleryList([]);
 
   document.getElementById('productModal').classList.add('is-open');
 }
@@ -525,29 +530,63 @@ document.getElementById('addVariationRowBtn')?.addEventListener('click', () => {
   box.appendChild(div);
 });
 
-// Gallery list builder
+// Bộ ảnh chi tiết: lưới thumbnail, thứ tự trong STATE.gallery (ảnh đầu = ảnh bìa)
 function renderGalleryList(gallery) {
+  if (gallery) STATE.gallery = [...gallery];
   const box = document.getElementById('prodGalleryList');
   if (!box) return;
-  box.innerHTML = gallery.map((g, i) => `
-    <div class="admin-tag-row">
-      <input type="text" class="admin-input prod-gallery-item" value="${g}" placeholder="assets/img/studio/... hoặc link ảnh">
-      <button type="button" class="admin-btn admin-btn--outline admin-btn--sm" onclick="pickImageFor(this.previousElementSibling)">Chọn</button>
-      <button type="button" class="admin-icon-btn admin-icon-btn--danger" onclick="this.parentElement.remove()" title="Xóa">✕</button>
+  const g = STATE.gallery;
+  document.getElementById('prodGalleryCount').textContent = `(${g.length} ảnh)`;
+  box.innerHTML = g.map((src, i) => `
+    <div class="prod-gallery-tile">
+      <img src="${resolveImg(src, 400)}" alt="Ảnh ${i + 1}" loading="lazy">
+      ${i === 0 ? '<span class="prod-gallery-cover">Ảnh bìa</span>' : `<span class="prod-gallery-num">${i + 1}</span>`}
+      <div class="prod-gallery-tools">
+        <button type="button" onclick="moveGalleryImg(${i}, -1)" ${i === 0 ? 'disabled' : ''} title="Lên trước" aria-label="Lên trước">◀</button>
+        <button type="button" onclick="moveGalleryImg(${i}, -${i})" ${i === 0 ? 'disabled' : ''} title="Đặt làm ảnh bìa" aria-label="Đặt làm ảnh bìa">★</button>
+        <button type="button" onclick="moveGalleryImg(${i}, 1)" ${i === g.length - 1 ? 'disabled' : ''} title="Ra sau" aria-label="Ra sau">▶</button>
+        <button type="button" class="is-danger" onclick="removeGalleryImg(${i})" title="Bỏ khỏi bộ ảnh" aria-label="Bỏ ảnh">✕</button>
+      </div>
     </div>
-  `).join('');
+  `).join('') + `
+    <button type="button" class="prod-gallery-add" onclick="pickImageFor('gallery')"><b>＋</b>Chọn từ thư viện</button>
+    <label class="prod-gallery-add" for="prodDirectUploadInput"><b>⬆</b>Tải ảnh từ máy</label>
+  `;
 }
 
-document.getElementById('addGalleryRowBtn')?.addEventListener('click', () => {
-  const box = document.getElementById('prodGalleryList');
-  const div = document.createElement('div');
-  div.className = 'admin-tag-row';
-  div.innerHTML = `
-    <input type="text" class="admin-input prod-gallery-item" placeholder="Đường dẫn ảnh...">
-    <button type="button" class="admin-btn admin-btn--outline admin-btn--sm" onclick="pickImageFor(this.previousElementSibling)">Chọn</button>
-    <button type="button" class="admin-icon-btn admin-icon-btn--danger" onclick="this.parentElement.remove()" title="Xóa">✕</button>
-  `;
-  box.appendChild(div);
+window.moveGalleryImg = function(i, delta) {
+  const [img] = STATE.gallery.splice(i, 1);
+  STATE.gallery.splice(i + delta, 0, img);
+  renderGalleryList();
+};
+
+window.removeGalleryImg = function(i) {
+  STATE.gallery.splice(i, 1);
+  renderGalleryList();
+};
+
+async function addGalleryFiles(files) {
+  const imgs = Array.from(files).filter(f => f.type.startsWith('image/'));
+  if (!imgs.length) return;
+  showToast(`Đang tải lên ${imgs.length} ảnh...`);
+  for (const file of imgs) {
+    const url = await uploadImageFile(file);
+    if (url) STATE.gallery.push(url);
+  }
+  renderGalleryList();
+  renderMediaGrid();
+  updateDashboardStats();
+  showToast(`Đã thêm ${imgs.length} ảnh vào bộ ảnh sản phẩm!`);
+}
+
+// Kéo thả ảnh từ máy vào lưới
+const galleryDrop = document.getElementById('prodGalleryList');
+galleryDrop?.addEventListener('dragover', e => { e.preventDefault(); galleryDrop.classList.add('is-dragover'); });
+galleryDrop?.addEventListener('dragleave', () => galleryDrop.classList.remove('is-dragover'));
+galleryDrop?.addEventListener('drop', e => {
+  e.preventDefault();
+  galleryDrop.classList.remove('is-dragover');
+  addGalleryFiles(e.dataTransfer.files);
 });
 
 // Preview ảnh khi đổi link hoặc màu sắc
@@ -560,21 +599,20 @@ document.getElementById('prodAccent')?.addEventListener('input', e => {
 
 // Tải ảnh trực tiếp trong modal sản phẩm
 document.getElementById('prodDirectUploadInput')?.addEventListener('change', async (e) => {
+  await addGalleryFiles(e.target.files);
+  e.target.value = '';
+});
+
+document.getElementById('prodCutUploadInput')?.addEventListener('change', async (e) => {
   const file = e.target.files[0];
   if (!file) return;
   const url = await uploadImageFile(file);
-  if (url) {
-    const box = document.getElementById('prodGalleryList');
-    const div = document.createElement('div');
-    div.className = 'admin-tag-row';
-    div.innerHTML = `
-      <input type="text" class="admin-input prod-gallery-item" value="${url}">
-      <button type="button" class="admin-btn admin-btn--outline admin-btn--sm" onclick="pickImageFor(this.previousElementSibling)">Chọn</button>
-      <button type="button" class="admin-icon-btn admin-icon-btn--danger" onclick="this.parentElement.remove()" title="Xóa">✕</button>
-    `;
-    box.appendChild(div);
-    showToast('Đã tải ảnh lên và thêm vào bộ sưu tập!');
-  }
+  const input = document.getElementById('prodCutImg');
+  input.value = url;
+  input.dispatchEvent(new Event('input'));
+  e.target.value = '';
+  renderMediaGrid();
+  showToast('Đã tải lên ảnh tách nền!');
 });
 
 // Submit Form Sản Phẩm (Thêm / Sửa)
@@ -596,9 +634,11 @@ document.getElementById('productForm')?.addEventListener('submit', async (e) => 
     };
   });
 
-  const gallery = Array.from(document.querySelectorAll('.prod-gallery-item'))
-    .map(input => input.value.trim())
-    .filter(Boolean);
+  const gallery = [...STATE.gallery];
+  if (!gallery.length) {
+    alert('Vui lòng thêm ít nhất 1 ảnh vào bộ ảnh chi tiết của sản phẩm.');
+    return;
+  }
 
   const checkedAnimals = Array.from(document.querySelectorAll('input[name="prodAnimalCheck"]:checked'))
     .map(cb => cb.value);
@@ -618,7 +658,7 @@ document.getElementById('productForm')?.addEventListener('submit', async (e) => 
     rating: Number(document.getElementById('prodRating').value) || 5.0,
     accent: document.getElementById('prodAccent').value || '#0E6B3A',
     cut: document.getElementById('prodCutImg').value.trim() || (gallery[0] || ''),
-    gallery: gallery.length ? gallery : ['assets/img/studio/prod-01-1'],
+    gallery,
     highlights: highlights.length ? highlights : ['Chế phẩm chuẩn GMP-WHO Golden Pharma'],
     variations: variations.length ? variations : [{ label: '1kg', price: Number(document.getElementById('prodPrice').value) || 0, sku: document.getElementById('prodCode').value.trim(), weight_g: '1000' }],
     descriptionHtml: document.getElementById('prodDescHtml').value.trim(),
@@ -856,46 +896,89 @@ window.copyToClipboard = function(text) {
 /* ==========================================================================
    Modal Chọn Ảnh từ Thư Viện (Image Picker)
    ========================================================================== */
+// 'gallery' = chọn nhiều ảnh thêm vào bộ ảnh; còn lại = chọn 1 ảnh cho ô input
 window.pickImageFor = function(inputElOrId) {
-  const target = typeof inputElOrId === 'string' ? document.getElementById(inputElOrId) : inputElOrId;
-  STATE.targetImgInput = target;
+  const multi = inputElOrId === 'gallery';
+  STATE.targetImgInput = multi ? null : (typeof inputElOrId === 'string' ? document.getElementById(inputElOrId) : inputElOrId);
+  STATE.pickerSelected = multi ? new Set() : null;
 
-  const pickerGrid = document.getElementById('pickerMediaGrid');
-  const allImages = [
-    ...STATE.media.map(m => ({ url: m.url, name: m.filename })),
-    ...Array.from({ length: 30 }, (_, i) => {
-      const num = String(i + 1).padStart(2, '0');
-      return { url: `assets/img/cut/prod-${num}-cut`, name: `Ảnh 3D SP ${num}` };
-    }),
-    ...Array.from({ length: 30 }, (_, i) => {
-      const num = String(i + 1).padStart(2, '0');
-      return { url: `assets/img/studio/prod-${num}-1`, name: `Ảnh Studio SP ${num}` };
-    }),
+  // shortcut: ảnh studio đoán theo mẫu prod-XX-1/-2, ảnh không tồn tại sẽ tự ẩn (onerror)
+  const builtIn = Array.from({ length: 30 }, (_, i) => {
+    const num = String(i + 1).padStart(2, '0');
+    return [
+      { url: `assets/img/cut/prod-${num}-cut`, name: `SP ${num} · Tách nền 3D` },
+      { url: `assets/img/studio/prod-${num}-1`, name: `SP ${num} · Studio 1` },
+      { url: `assets/img/studio/prod-${num}-2`, name: `SP ${num} · Studio 2` },
+    ];
+  }).flat();
+
+  // Ảnh của sản phẩm đang sửa lên đầu
+  const editId = document.getElementById('prodEditId').value;
+  const own = editId ? `prod-${editId}-` : null;
+  const all = [
+    ...STATE.media.map(m => ({ url: m.url, name: m.filename || 'Ảnh tải lên' })),
+    ...builtIn,
   ];
+  STATE.pickerImages = own ? [...all.filter(m => m.url.includes(own)), ...all.filter(m => !m.url.includes(own))] : all;
 
-  pickerGrid.innerHTML = allImages.map(img => `
-    <div class="admin-media-item" style="cursor:pointer" onclick="selectPickedImage('${img.url}')">
-      <img src="${resolveImg(img.url, 400)}" alt="${img.name}">
+  const inGallery = new Set(STATE.gallery);
+  document.getElementById('pickerMediaGrid').innerHTML = STATE.pickerImages.map((img, i) => `
+    <div class="admin-media-item picker-item ${multi && inGallery.has(img.url) ? 'is-used' : ''}" data-name="${img.name.toLowerCase()}" onclick="selectPickedImage(${i}, this)">
+      <img src="${resolveImg(img.url, 400)}" alt="${img.name}" loading="lazy" onerror="this.closest('.picker-item').remove()">
       <div class="admin-media-meta">
-        <div class="admin-media-name">${img.name}</div>
+        <div class="admin-media-name">${own && img.url.includes(own) ? '★ ' : ''}${img.name}</div>
       </div>
     </div>
   `).join('');
 
+  document.getElementById('pickerSearch').value = '';
+  document.getElementById('pickerFoot').hidden = !multi;
+  updatePickerBtn();
   document.getElementById('imagePickerModal').classList.add('is-open');
 };
+
+function updatePickerBtn() {
+  const n = STATE.pickerSelected?.size || 0;
+  const btn = document.getElementById('pickerAddBtn');
+  btn.textContent = n ? `Thêm ${n} ảnh đã chọn` : 'Chọn ảnh để thêm';
+  btn.disabled = !n;
+}
+
+document.getElementById('pickerSearch')?.addEventListener('input', e => {
+  const q = e.target.value.toLowerCase().trim();
+  document.querySelectorAll('#pickerMediaGrid .picker-item').forEach(el => {
+    el.hidden = q && !el.dataset.name.includes(q);
+  });
+});
 
 window.closeImagePicker = function() {
   document.getElementById('imagePickerModal').classList.remove('is-open');
 };
 
-window.selectPickedImage = function(url) {
+window.selectPickedImage = function(i, el) {
+  const url = STATE.pickerImages[i]?.url;
+  if (!url) return;
+  if (STATE.pickerSelected) {
+    if (el.classList.contains('is-used')) return showToast('Ảnh này đã có trong bộ ảnh.');
+    STATE.pickerSelected.has(url) ? STATE.pickerSelected.delete(url) : STATE.pickerSelected.add(url);
+    el.classList.toggle('is-picked', STATE.pickerSelected.has(url));
+    updatePickerBtn();
+    return;
+  }
   if (STATE.targetImgInput) {
     STATE.targetImgInput.value = url;
     STATE.targetImgInput.dispatchEvent(new Event('input'));
   }
   closeImagePicker();
   showToast('Đã chọn hình ảnh!');
+};
+
+window.confirmPickedImages = function() {
+  const picked = [...(STATE.pickerSelected || [])];
+  STATE.gallery.push(...picked);
+  renderGalleryList();
+  closeImagePicker();
+  showToast(`Đã thêm ${picked.length} ảnh vào bộ ảnh sản phẩm!`);
 };
 
 /* ==========================================================================
