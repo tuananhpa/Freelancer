@@ -996,6 +996,7 @@ function populateContentForm() {
   setVal('cfg_tiktok', s.tiktok || 'https://www.tiktok.com/@thuyvanghanoi');
   setVal('cfg_tiktokHandle', s.tiktokHandle || '@thuyvanghanoi');
   setVal('cfg_shopee', s.shopee || 'https://vn.shp.ee/ghozM3PF');
+  setVal('cfg_facebook', s.facebook || 'https://www.facebook.com/share/1KKv1jN3iG/?mibextid=wwXIfr');
   setVal('cfg_zalo', s.zalo || 'https://zalo.me/0968486985');
   setVal('cfg_address', s.address || 'Tầng 4, lô 30-31 Liền kề 2, khu đô thị Đại Thanh, Xã Đại Thanh, TP Hà Nội');
   setVal('cfg_mapEmbed', s.mapEmbed || 'https://www.google.com/maps?q=Khu+do+thi+Dai+Thanh+Ha+Noi&output=embed');
@@ -1038,6 +1039,7 @@ document.getElementById('siteContentForm')?.addEventListener('submit', async (e)
     tiktok: document.getElementById('cfg_tiktok').value.trim(),
     tiktokHandle: document.getElementById('cfg_tiktokHandle').value.trim(),
     shopee: document.getElementById('cfg_shopee').value.trim(),
+    facebook: document.getElementById('cfg_facebook')?.value.trim() || 'https://www.facebook.com/share/1KKv1jN3iG/?mibextid=wwXIfr',
     zalo: document.getElementById('cfg_zalo').value.trim(),
     address: document.getElementById('cfg_address').value.trim(),
     mapEmbed: document.getElementById('cfg_mapEmbed').value.trim(),

@@ -1797,6 +1797,7 @@ h1, h2, h3, h4, p, figure { margin: 0; }
 }
 
 /* Nút chat nổi (Zalo, Hotline, TikTok, Messenger) */
+/* Nút chat nổi (Facebook, Shopee, Zalo, Hotline, TikTok, Messenger) & Nút Mở/Đóng */
 .float-chat {
   position: fixed;
   right: 18px;
@@ -1804,14 +1805,74 @@ h1, h2, h3, h4, p, figure { margin: 0; }
   z-index: 150;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  align-items: flex-end;
+  gap: 8px;
 }
+.float-chat__list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  transition: all 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+  transform-origin: bottom right;
+}
+.float-chat.is-collapsed .float-chat__list {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.7) translateY(18px);
+  pointer-events: none;
+  height: 0;
+  overflow: hidden;
+  margin: 0;
+  gap: 0;
+}
+.float-chat__toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 44px;
+  padding: 0 16px;
+  border-radius: var(--r-pill);
+  background: var(--forest);
+  color: #fff;
+  border: 2px solid var(--gold-bright);
+  box-shadow: 0 10px 28px rgba(7, 32, 20, 0.35);
+  font-size: 13.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.22s var(--ease-out);
+}
+.float-chat__toggle:hover {
+  background: var(--emerald);
+  transform: scale(1.05);
+}
+.float-chat__toggle-icon {
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1;
+}
+.float-chat .float-chat__toggle-icon--open { display: none; }
+.float-chat .float-chat__toggle-icon--close { display: inline-block; }
+.float-chat.is-collapsed .float-chat__toggle-icon--open { display: inline-block; font-size: 16px; }
+.float-chat.is-collapsed .float-chat__toggle-icon--close { display: none; }
+.float-chat.is-collapsed .float-chat__toggle {
+  background: var(--emerald);
+  border-color: var(--gold-bright);
+  box-shadow: 0 8px 24px rgba(14, 107, 58, 0.45);
+  animation: floatPulse 2.8s infinite;
+}
+@keyframes floatPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+}
+
 .f-btn {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  height: 44px;
-  padding: 0 15px;
+  height: 42px;
+  padding: 0 14px;
   border-radius: var(--r-pill);
   background: var(--surface);
   color: var(--ink);
@@ -1819,9 +1880,21 @@ h1, h2, h3, h4, p, figure { margin: 0; }
   box-shadow: 0 8px 24px rgba(7, 32, 20, 0.16);
   font-size: 13px;
   font-weight: 700;
-  transition: transform var(--d-fast), background var(--d-fast), color var(--d-fast);
+  transition: transform var(--d-fast), background var(--d-fast), color var(--d-fast), box-shadow var(--d-fast);
 }
 .f-btn:hover { transform: translateX(-4px); background: var(--emerald); color: #fff; }
+.f-btn--fb {
+  background: #1877F2;
+  color: #fff;
+  border-color: #1877F2;
+  box-shadow: 0 8px 22px rgba(24, 119, 242, 0.35);
+}
+.f-btn--fb:hover {
+  background: #0E65D9;
+  color: #fff;
+  transform: translateX(-4px);
+  box-shadow: 0 10px 26px rgba(24, 119, 242, 0.45);
+}
 .f-btn--shopee {
   background: linear-gradient(135deg, #FF6633 0%, #EE4D2D 100%);
   color: #fff;
@@ -1846,6 +1919,10 @@ h1, h2, h3, h4, p, figure { margin: 0; }
 }
 .f-btn--zalo { background: #0068FF; color: #fff; border-color: #0068FF; }
 .f-btn--phone { background: var(--emerald); color: #fff; border-color: var(--emerald); }
+.f-btn--tiktok { background: #111111; color: #fff; border-color: #333333; }
+.f-btn--tiktok:hover { background: #000; color: #fff; }
+.f-btn--msg { background: linear-gradient(135deg, #00B2FF 0%, #006AFF 50%, #A033FF 100%); color: #fff; border: none; }
+.f-btn--msg:hover { opacity: 0.95; }
 
 .m-bottom-bar {
   display: none;
@@ -1873,7 +1950,10 @@ h1, h2, h3, h4, p, figure { margin: 0; }
   border-radius: 10px;
 }
 @media (max-width: 768px) {
-  .float-chat { display: none; }
+  .float-chat {
+    bottom: 74px;
+    right: 12px;
+  }
   .m-bottom-bar { display: grid; }
   body { padding-bottom: 68px; }
 }

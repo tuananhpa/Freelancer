@@ -17,6 +17,7 @@ const SITE = window.SITE = {
   tiktokHandle: '@thuyvanghanoi',
   shopee: 'https://vn.shp.ee/ghozM3PF',
   messenger: 'https://m.me/thuyvanghanoi',
+  facebook: 'https://www.facebook.com/share/1KKv1jN3iG/?mibextid=wwXIfr',
   email: 'goldenvet10@gmail.com',
   address: 'Tầng 4, lô 30-31 Liền kề 2, khu đô thị Đại Thanh, Xã Đại Thanh, TP Hà Nội',
   addressEn: '4th Floor, Lot 30-31 LK2, Dai Thanh Urban Area, Dai Thanh, Hanoi',
@@ -264,6 +265,7 @@ function mountChrome() {
         </div>
         <div style="padding-top:16px;border-top:1px solid var(--line);font-size:13.5px;display:grid;gap:8px">
           <div>Hotline/Zalo: <a href="${SITE.phoneHref}" style="font-weight:700;color:var(--emerald)">${SITE.phone}</a></div>
+          <div>Facebook: <a href="${SITE.facebook}" target="_blank" rel="noopener" style="font-weight:700;color:#1877F2">Fanpage Golden Pharma ↗</a></div>
           <div>Shopee: <a href="${SITE.shopee}" target="_blank" rel="noopener" style="font-weight:700;color:#EE4D2D">Gian hàng Shopee Chính Hãng ↗</a></div>
           <div>TikTok: <a href="${SITE.tiktok}" target="_blank" rel="noopener" style="font-weight:600">${SITE.tiktokHandle}</a></div>
         </div>
@@ -314,16 +316,41 @@ function mountChrome() {
       </div>
     </div>
 
-    <!-- Nút Chat & Gian Hàng Nổi Desktop -->
-    <div class="float-chat" aria-label="Liên hệ nhanh">
-      <a class="f-btn f-btn--shopee" href="${SITE.shopee}" target="_blank" rel="noopener">
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7V5a3 3 0 0 1 6 0v2"/><path d="M9.5 12.5c.3 1.2 1.3 2 2.5 2s2.2-.8 2.5-2"/></svg>
-        <span>Shopee Chính Hãng</span>
-      </a>
-      <a class="f-btn f-btn--zalo" href="${SITE.zalo}" target="_blank" rel="noopener"><span>Zalo: ${SITE.phone}</span></a>
-      <a class="f-btn f-btn--phone" href="${SITE.phoneHref}"><span>Gọi: ${SITE.phone}</span></a>
-      <a class="f-btn" href="${SITE.tiktok}" target="_blank" rel="noopener"><span>TikTok Shop</span></a>
-      <a class="f-btn" href="${SITE.messenger}" target="_blank" rel="noopener"><span>Messenger</span></a>
+    <!-- Nút Chat & Gian Hàng Nổi (Có thể Mở/Đóng) -->
+    <div class="float-chat" id="floatChat" aria-label="Liên hệ nhanh">
+      <div class="float-chat__list" id="floatChatList">
+        <a class="f-btn f-btn--fb" href="${SITE.facebook}" target="_blank" rel="noopener" title="Trang Facebook Golden Pharma">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          <span>Facebook Fanpage</span>
+        </a>
+        <a class="f-btn f-btn--shopee" href="${SITE.shopee}" target="_blank" rel="noopener">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7V5a3 3 0 0 1 6 0v2"/><path d="M9.5 12.5c.3 1.2 1.3 2 2.5 2s2.2-.8 2.5-2"/></svg>
+          <span>Shopee Chính Hãng</span>
+        </a>
+        <a class="f-btn f-btn--zalo" href="${SITE.zalo}" target="_blank" rel="noopener">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.03 2 11c0 2.87 1.5 5.43 3.84 7.07L5 22l4.3-1.43C10.13 20.81 11.04 21 12 21c5.52 0 10-4.03 10-9s-4.48-9-10-9z"/></svg>
+          <span>Zalo: ${SITE.phone}</span>
+        </a>
+        <a class="f-btn f-btn--phone" href="${SITE.phoneHref}">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+          <span>Gọi: ${SITE.phone}</span>
+        </a>
+        <a class="f-btn f-btn--tiktok" href="${SITE.tiktok}" target="_blank" rel="noopener">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+          <span>TikTok Shop</span>
+        </a>
+        <a class="f-btn f-btn--msg" href="${SITE.messenger}" target="_blank" rel="noopener">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.145 2 11.258c0 2.909 1.455 5.503 3.734 7.158.196.141.317.367.319.608l.055 2.247c.023.953.993 1.572 1.859 1.168l2.507-1.168a1.01 1.01 0 0 1 .593-.06c.928.261 1.916.402 2.933.402 5.523 0 10-4.145 10-9.258C22 6.145 17.523 2 12 2zm1.064 12.383l-2.582-2.754a.75.75 0 0 0-1.07-.024l-3.52 3.328a.45.45 0 0 1-.676-.532l3.473-5.505a.75.75 0 0 1 1.063-.207l2.585 1.939a.75.75 0 0 0 .95-.03l3.754-3.136a.45.45 0 0 1 .69.497l-3.667 5.894z"/></svg>
+          <span>Messenger</span>
+        </a>
+      </div>
+
+      <!-- Nút Mở ra / Đóng vào -->
+      <button type="button" class="float-chat__toggle" id="floatChatToggle" aria-label="Mở hoặc đóng danh sách liên hệ" title="Mở / đóng liên hệ">
+        <span class="float-chat__toggle-icon float-chat__toggle-icon--close">✕</span>
+        <span class="float-chat__toggle-icon float-chat__toggle-icon--open">💬</span>
+        <span class="float-chat__toggle-txt">Hỗ trợ</span>
+      </button>
     </div>
 
     <!-- Thanh Đáy Mobile -->
@@ -396,6 +423,7 @@ function mountChrome() {
             <h4>Liên hệ & Kênh chính thức</h4>
             <ul>
               <li>📞 Hotline/Zalo: <a href="${SITE.phoneHref}" style="color:var(--gold-bright);font-weight:700">${SITE.phone}</a></li>
+              <li>🌐 Facebook: <a href="${SITE.facebook}" target="_blank" rel="noopener" style="color:#66B2FF;font-weight:700">Fanpage Golden Pharma ↗</a></li>
               <li>✉️ Email: <a href="mailto:${SITE.email}">${SITE.email}</a></li>
               <li>🛒 Shopee: <a href="${SITE.shopee}" target="_blank" rel="noopener" style="color:#FF8566;font-weight:700">Gian hàng Shopee Chính Hãng ↗</a></li>
               <li>🎵 TikTok Shop: <a href="${SITE.tiktok}" target="_blank" rel="noopener">${SITE.tiktokHandle} (Dược Phẩm Vàng)</a></li>
@@ -441,6 +469,21 @@ function mountChrome() {
       mMenu?.classList.remove('is-open');
     }
   });
+
+  // Nút Mở / Đóng thanh liên hệ nổi
+  const floatChat = document.getElementById('floatChat');
+  const floatChatToggle = document.getElementById('floatChatToggle');
+  if (floatChat && floatChatToggle) {
+    const isClosed = localStorage.getItem('gp_float_chat_closed') === 'true';
+    if (isClosed) floatChat.classList.add('is-collapsed');
+
+    floatChatToggle.addEventListener('click', () => {
+      const collapsed = floatChat.classList.toggle('is-collapsed');
+      localStorage.setItem('gp_float_chat_closed', String(collapsed));
+      const txt = floatChatToggle.querySelector('.float-chat__toggle-txt');
+      if (txt) txt.textContent = collapsed ? 'Liên hệ' : 'Đóng';
+    });
+  }
 
   document.querySelectorAll('[data-lang-btn]').forEach(btn => {
     btn.addEventListener('click', () => setLang(btn.dataset.langBtn));
