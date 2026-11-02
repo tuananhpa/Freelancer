@@ -523,7 +523,7 @@ function initHeroVideo() {
   const ui = hero.querySelector('.hero__ui');
   const behind = hero.querySelector('.hero__behind .mega');
   const tl = gsap.timeline({
-    scrollTrigger: { trigger: hero, start: 'top top', end: '+=95%', pin: true, scrub: .5 },
+    scrollTrigger: { trigger: hero, start: 'top top', end: '+=95%', pin: true, scrub: true, anticipatePin: 1 },
   });
   tl.to(frame, { clipPath: isMob ? 'inset(12% 7% 16% 7%)' : 'inset(11% 16% 13% 16%)', ease: 'none' }, 0)
     .to(video, { scale: 1.12, ease: 'none' }, 0)

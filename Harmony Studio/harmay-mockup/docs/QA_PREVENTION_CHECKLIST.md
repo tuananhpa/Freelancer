@@ -41,3 +41,12 @@ Khi tạo mới trang hoặc chỉnh sửa bất kỳ giao diện nào sau này,
 - [ ] **Xóa 100% nhãn nháp**: Không để sót bất kỳ chữ `[[CẦN XÁC NHẬN]]`, `TBC`, hay ghi chú nội bộ nào hiển thị ra giao diện người dùng cuối.
 - [ ] **UTF-8 sạch sẽ**: Mọi ký tự tiếng Việt có dấu, dấu gạch ngang em-dash (`—`), ký hiệu bản quyền (`©`) phải hiển thị đúng chuẩn, không bị biến thành dấu hỏi chấm `?` hay ký tự lạ.
 - [ ] Đường link Zalo, Hotline, Messenger, Hotline click vào phải mở đúng ứng dụng hoặc thực hiện cuộc gọi.
+
+### 6. Kiểm tra Video 'Lookbook chuyển động' (Video Pan/Zoom Shake Prevention)
+- [ ] **Tuyệt đối không dùng filter zoompan nội suy số nguyên**: FFmpeg zoompan làm tròn tọa độ x/y sang integer pixel khiến mỗi giây hình ảnh bị giật 1-2 pixel liên tục (tạo cảm giác rung lắc dữ dội).
+- [ ] **Chuẩn lookbook thời trang cao cấp**: Giữ khung hình tĩnh sắc nét trên nền tint, sử dụng hiệu ứng chuyển cảnh mềm (xfade=fade:0.8s), đảm bảo hình người mẫu và đường may đứng yên tĩnh lặng sang trọng.
+- [ ] **Đồng bộ ScrollTrigger + Lenis**: Trên section pin (như Hero), dùng scrub: true, anticipatePin: 1 thay vì đặt scrub: 0.5 đè lên lerp của Lenis để tránh hiện tượng rung lắc cao su (rubber-banding).
+
+### 7. Kiểm tra Khoảng cách Phân tầng (Section Spacing & Absolute Children)
+- [ ] **Không dính sát tiêu đề**: Các thẻ con tuyệt đối (position: absolute) trong section phân bước không được để 	op: 0 sát rạt tiêu đề cha.
+- [ ] Luôn có margin-bottom: clamp(36px, 5vh, 64px) và đường viền phân cách mỏng (order-bottom) để nội dung các bước có không gian thở thoải mái, không bị cảm giác chật chội ('sát quá').
