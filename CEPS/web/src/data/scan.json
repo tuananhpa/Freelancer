@@ -1,0 +1,1131 @@
+[
+ {
+  "id": "scan-spectro-lyser-v3-spectrometer-probe",
+  "brand": "s::can",
+  "name": "spectro::lyser V3 Spectrometer Probe",
+  "category": "spectrometer",
+  "categoryLabel": "Đầu dò quang phổ",
+  "parameters": [
+   "BOD",
+   "Chl-a",
+   "Chloramine",
+   "CLD",
+   "COD",
+   "Color",
+   "DOC",
+   "Dissolved Ozone",
+   "Fingerprint",
+   "HS-",
+   "NO3-N/NO3",
+   "Pressure",
+   "Temperature",
+   "TOC",
+   "TSS/TS",
+   "Turbidity",
+   "UV254"
+  ],
+  "description": "spectro::lyser V3 phân tích các chỉ tiêu chất lượng nước theo thời gian thực bằng công nghệ quang phổ tiên tiến. Kết nối với thiết bị di động để truy cập và quản lý dữ liệu thuận tiện. Thiết kế bền chắc, giao diện dễ dùng, cung cấp thông tin giá trị cho quản lý nguồn nước và quan trắc môi trường.",
+  "markets": [
+   "Xử lý nước thải công nghiệp",
+   "Xử lý nước cấp",
+   "Quan trắc môi trường",
+   "Xử lý nước thải",
+   "Quy trình công nghiệp",
+   "Giám sát mạng lưới thu gom",
+   "Trung tâm dữ liệu"
+  ],
+  "image": "/img/scan/spectro-lyser-v3-spectrometer-probe.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/spectrometer-probes/spectrolyser-v3/"
+ },
+ {
+  "id": "scan-ammo-lyser-eco-ammonium-physical-sensor",
+  "brand": "s::can",
+  "name": "ammo::lyser Eco Ammonium Physical Sensor",
+  "category": "sensor",
+  "categoryLabel": "Cảm biến vật lý",
+  "parameters": [
+   "Ammonium",
+   "NO3-N/NO3",
+   "pH",
+   "Temperature"
+  ],
+  "description": "Đầu dò đa chỉ tiêu đo amoni trực tuyến. Thiết bị tin cậy, vượt trội so với máy phân tích truyền thống về độ ổn định phép đo và tuổi thọ. Độ chính xác được đảm bảo nhờ bù giá trị amoni theo thời gian thực với nhiệt độ, kali và điện cực tham chiếu hiệu năng cao.",
+  "markets": [
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp"
+  ],
+  "image": "/img/scan/ammo-lyser-eco-ammonium-physical-sensor.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/physical-sensors/ammolyser-eco/"
+ },
+ {
+  "id": "scan-spectro-lyser-uv-wavelengths-spectrometer-probe",
+  "brand": "s::can",
+  "name": "spectro::lyser UV-Wavelengths Spectrometer Probe",
+  "category": "spectrometer",
+  "categoryLabel": "Đầu dò quang phổ",
+  "parameters": [
+   "COD",
+   "Dissolved Ozone",
+   "Fingerprint",
+   "HS-/H2S",
+   "NO2-N/NO2",
+   "NO3-N/NO3",
+   "Temperature",
+   "TOC",
+   "TSS/TS",
+   "UVT",
+   "UV254"
+  ],
+  "description": "spectro::lyser UV đo các bước sóng UV riêng biệt để xác định từng loại ô nhiễm cụ thể. Phù hợp cho nước thải, nước mặt và nước uống.",
+  "markets": [
+   "Quan trắc môi trường",
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp",
+   "Quy trình công nghiệp",
+   "Xử lý nước cấp",
+   "Trung tâm dữ liệu"
+  ],
+  "image": "/img/scan/spectro-lyser-uv-wavelengths-spectrometer-probe.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/spectrometer-probes/spectrolyser-uv-wavelengths/"
+ },
+ {
+  "id": "scan-spectro-lyser-v3-atex",
+  "brand": "s::can",
+  "name": "spectro::lyser V3 ATEX",
+  "category": "spectrometer",
+  "categoryLabel": "Đầu dò quang phổ",
+  "parameters": [
+   "BOD",
+   "Chl-A",
+   "Chloramine",
+   "CLD",
+   "COD",
+   "Color",
+   "Dissolved Ozone",
+   "DOC",
+   "Fingerprint",
+   "HS-/H2S",
+   "NO3-N/NO3",
+   "Temperature",
+   "TOC",
+   "TSS/TS",
+   "Turbidity",
+   "UVT",
+   "UV254"
+  ],
+  "description": "spectro::lyser V3 Industrial ATEX được thiết kế cho độ chính xác và độ bền. Từ nhà máy lọc dầu, cống thoát đến nhà máy xử lý nước thải, thiết bị giám sát tin cậy cho những ứng dụng công nghiệp khắc nghiệt nhất.",
+  "markets": [
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp",
+   "Quy trình công nghiệp",
+   "Trung tâm dữ liệu"
+  ],
+  "image": "/img/scan/spectro-lyser-v3-atex.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/spectrometer-probes/spectrolyser-industrial-atex/"
+ },
+ {
+  "id": "scan-spectro-lyser-v3-titanium",
+  "brand": "s::can",
+  "name": "spectro::lyser V3 Titanium",
+  "category": "spectrometer",
+  "categoryLabel": "Đầu dò quang phổ",
+  "parameters": [
+   "BOD",
+   "COD",
+   "Color",
+   "DOC",
+   "Dissolved Ozone",
+   "Fingerprint",
+   "HS-/H2S",
+   "NO3-N/NO3",
+   "Temperature",
+   "TOC",
+   "TSS/TS",
+   "Turbidity",
+   "UVT",
+   "UV254"
+  ],
+  "description": "spectro::lyser V3 Titanium phù hợp cho các ứng dụng công nghiệp có tính ăn mòn cao và lắp đặt trong nước biển.",
+  "markets": [
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp",
+   "Quy trình công nghiệp",
+   "Quan trắc môi trường",
+   "Trung tâm dữ liệu"
+  ],
+  "image": "/img/scan/spectro-lyser-v3-titanium.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/spectrometer-probes/spectrolyser-titanium-pro/"
+ },
+ {
+  "id": "scan-carbo-lyser-v3-organic-carbon-spectrometer-probe",
+  "brand": "s::can",
+  "name": "carbo::lyser V3 Organic Carbon Spectrometer Probe",
+  "category": "spectrometer",
+  "categoryLabel": "Đầu dò quang phổ",
+  "parameters": [
+   "BOD",
+   "COD",
+   "DOC",
+   "Temperature",
+   "TOC",
+   "TSS/TS",
+   "Turbidity",
+   "UV254"
+  ],
+  "description": "carbo::lyser đo các chỉ tiêu carbon hữu cơ như UV254, TOC, DOC, COD, BOD, cùng độ đục và chất rắn (TSS/TS). Dùng được từ nước tinh khiết đến nước thải công nghiệp. Hiệu chuẩn sẵn cho từng loại nước và ứng dụng giúp sử dụng dễ dàng.",
+  "markets": [
+   "Xử lý nước cấp",
+   "Quan trắc môi trường",
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp",
+   "Quy trình công nghiệp"
+  ],
+  "image": "/img/scan/carbo-lyser-v3-organic-carbon-spectrometer-probe.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/spectrometer-probes/carbolyser-v3/"
+ },
+ {
+  "id": "scan-chlodi-lyser-chlorine-dioxide-physical-sensor",
+  "brand": "s::can",
+  "name": "chlodi::lyser Chlorine Dioxide Physical Sensor",
+  "category": "sensor",
+  "categoryLabel": "Cảm biến vật lý",
+  "parameters": [
+   "Chlorine Dioxide",
+   "Temperature"
+  ],
+  "description": "chlodi::lyser là cảm biến ampe đo chlorine dioxide. Phù hợp mọi loại xử lý nước, cho kết quả ổn định kể cả khi pH, nhiệt độ và lưu lượng dao động mạnh.",
+  "markets": [
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp",
+   "Quy trình công nghiệp"
+  ],
+  "image": "/img/scan/chlodi-lyser-chlorine-dioxide-physical-sensor.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/physical-sensors/chlodilyser-chlorine-dioxide-sensor/"
+ },
+ {
+  "id": "scan-chlori-lyser-free-total-chlorine-physical-sensor",
+  "brand": "s::can",
+  "name": "chlori::lyser Free & Total Chlorine Physical Sensor",
+  "category": "sensor",
+  "categoryLabel": "Cảm biến vật lý",
+  "parameters": [
+   "FCl or TCl",
+   "Temperature"
+  ],
+  "description": "chlori::lyser là cảm biến đo clo tự do hoặc clo tổng không phụ thuộc pH và lưu lượng. Dung dịch điện phân đệm bên trong cho phép đo độc lập pH trong khoảng pH 4–9; hệ 3 điện cực cho kết quả cực kỳ ổn định. Độ chính xác cao kể cả khi pH, nhiệt độ và lưu lượng dao động mạnh.",
+  "markets": [
+   "Xử lý nước cấp",
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp",
+   "Quy trình công nghiệp"
+  ],
+  "image": "/img/scan/chlori-lyser-free-total-chlorine-physical-sensor.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/physical-sensors/chlorilyser-free-total-chlorine-sensor/"
+ },
+ {
+  "id": "scan-condu-lyser-conductivity-physical-sensor",
+  "brand": "s::can",
+  "name": "condu::lyser Conductivity Physical Sensor",
+  "category": "sensor",
+  "categoryLabel": "Cảm biến vật lý",
+  "parameters": [
+   "Conductivity",
+   "Salinity",
+   "TDS",
+   "Temperature"
+  ],
+  "description": "condu::lyser là đầu dò không cần bảo trì, ổn định lâu dài, đo độ dẫn điện trực tuyến có bù nhiệt tự động. Lắp trực tiếp trong môi trường đo hoặc trong buồng dòng chảy, đo theo nguyên lý tiếp xúc hoặc cảm ứng với độ chính xác cao.",
+  "markets": [
+   "Xử lý nước cấp",
+   "Quan trắc môi trường",
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp",
+   "Quy trình công nghiệp",
+   "Giám sát mạng lưới thu gom",
+   "Trung tâm dữ liệu"
+  ],
+  "image": "/img/scan/condu-lyser-conductivity-physical-sensor.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/physical-sensors/condulyser-conductivity-physical-sensor/"
+ },
+ {
+  "id": "scan-hyper-lyser-hydrogen-peroxide-sensor",
+  "brand": "s::can",
+  "name": "hyper::lyser Hydrogen Peroxide Sensor",
+  "category": "sensor",
+  "categoryLabel": "Cảm biến vật lý",
+  "parameters": [
+   "Hydrogen Peroxide",
+   "Temperature"
+  ],
+  "description": "hyper::lyser là cảm biến ampe đo hydrogen peroxide (H2O2). Phù hợp mọi loại xử lý nước, cho kết quả ổn định kể cả khi pH, nhiệt độ và lưu lượng dao động mạnh. Chịu được chất hoạt động bề mặt mạnh.",
+  "markets": [
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp",
+   "Quy trình công nghiệp"
+  ],
+  "image": "/img/scan/hyper-lyser-hydrogen-peroxide-sensor.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/physical-sensors/hyperlyser-h2o2-physical-sensor/"
+ },
+ {
+  "id": "scan-nitro-lyser-v3-nitrate-turbidity-spectrometer-probe",
+  "brand": "s::can",
+  "name": "nitro::lyser V3 Nitrate & Turbidity Spectrometer Probe",
+  "category": "spectrometer",
+  "categoryLabel": "Đầu dò quang phổ",
+  "parameters": [
+   "NO3-N/NO3",
+   "Temperature",
+   "TSS/TS",
+   "Turbidity"
+  ],
+  "description": "nitro::lyser đo nồng độ nitrat, độ đục và chất rắn. Giá trị nitrat hiển thị không bị ảnh hưởng chéo bởi các nhóm chất khác như carbon hữu cơ hay tổng chất rắn.",
+  "markets": [
+   "Xử lý nước cấp",
+   "Quan trắc môi trường",
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp",
+   "Quy trình công nghiệp"
+  ],
+  "image": "/img/scan/nitro-lyser-v3-nitrate-turbidity-spectrometer-probe.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/spectrometer-probes/nitrolyser-v3/"
+ },
+ {
+  "id": "scan-oxi-lyser-dissolved-oxygen-physical-sensor",
+  "brand": "s::can",
+  "name": "oxi::lyser Dissolved Oxygen Physical Sensor",
+  "category": "sensor",
+  "categoryLabel": "Cảm biến vật lý",
+  "parameters": [
+   "Dissolved Oxygen",
+   "Temperature"
+  ],
+  "description": "oxi::lyser là đầu dò quang học đa chỉ tiêu đo oxy hoà tan (DO) và nhiệt độ trực tiếp trong nước. Không cần lưu lượng tối thiểu để đo chính xác, tích hợp đo nhiệt độ để hiệu chỉnh trực tuyến. Hầu như không cần hiệu chuẩn và bảo trì.",
+  "markets": [
+   "Xử lý nước cấp",
+   "Quan trắc môi trường",
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp",
+   "Quy trình công nghiệp"
+  ],
+  "image": "/img/scan/oxi-lyser-dissolved-oxygen-physical-sensor.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/physical-sensors/oxilyser-do-physical-sensor/"
+ },
+ {
+  "id": "scan-ozo-lyser-v3-ozone-spectrometer-probe",
+  "brand": "s::can",
+  "name": "ozo::lyser V3 Ozone Spectrometer Probe",
+  "category": "spectrometer",
+  "categoryLabel": "Đầu dò quang phổ",
+  "parameters": [
+   "Dissolved Ozone",
+   "Temperature",
+   "TSS/TS",
+   "Turbidity"
+  ],
+  "description": "ozo::lyser được tối ưu để đo nồng độ ozone hoà tan trong nước trực tuyến và tại chỗ (in situ). Là giải pháp thay thế cho cảm biến ozone điện hoá truyền thống.",
+  "markets": [
+   "Xử lý nước cấp",
+   "Quan trắc môi trường",
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp",
+   "Quy trình công nghiệp"
+  ],
+  "image": "/img/scan/ozo-lyser-v3-ozone-spectrometer-probe.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/spectrometer-probes/ozolyser-v3/"
+ },
+ {
+  "id": "scan-peroxy-lyser-peracetic-acid-physical-sensor",
+  "brand": "s::can",
+  "name": "peroxy::lyser Peracetic Acid Physical Sensor",
+  "category": "sensor",
+  "categoryLabel": "Cảm biến vật lý",
+  "parameters": [
+   "PAA",
+   "Temperature"
+  ],
+  "description": "peroxy::lyser là cảm biến ampe đo axit peracetic. Phù hợp nhiều loại xử lý nước, cho kết quả ổn định kể cả khi pH, nhiệt độ và lưu lượng dao động mạnh.",
+  "markets": [
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp",
+   "Quy trình công nghiệp"
+  ],
+  "image": "/img/scan/peroxy-lyser-peracetic-acid-physical-sensor.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/physical-sensors/peroxylyser-paa-physical-sensor/"
+ },
+ {
+  "id": "scan-ph-lyser-ph-and-temperature-physical-sensor",
+  "brand": "s::can",
+  "name": "pH::lyser pH and Temperature Physical Sensor",
+  "category": "sensor",
+  "categoryLabel": "Cảm biến vật lý",
+  "parameters": [
+   "pH",
+   "Temperature"
+  ],
+  "description": "pH::lyser đo pH và nhiệt độ theo thời gian thực, trực tiếp trong môi trường hoặc trong buồng dòng chảy. Hoạt động trong điều kiện khắc nghiệt và trong nước có độ dẫn điện rất thấp.",
+  "markets": [
+   "Xử lý nước cấp",
+   "Quan trắc môi trường",
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp",
+   "Quy trình công nghiệp",
+   "Giám sát mạng lưới thu gom",
+   "Trung tâm dữ liệu"
+  ],
+  "image": "/img/scan/ph-lyser-ph-and-temperature-physical-sensor.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/physical-sensors/phlyser-physical-sensor/"
+ },
+ {
+  "id": "scan-uv-lyser-v3-turbidity-total-suspended-solids-spectrometer-probe",
+  "brand": "s::can",
+  "name": "uv::lyser V3 Turbidity & Total Suspended Solids Spectrometer Probe",
+  "category": "spectrometer",
+  "categoryLabel": "Đầu dò quang phổ",
+  "parameters": [
+   "Temperature",
+   "TSS/TS",
+   "Turbidity",
+   "UVT",
+   "UV254"
+  ],
+  "description": "uv::lyser giám sát độ đục, tổng chất rắn lơ lửng và tối đa 4 bước sóng riêng trong khoảng 200–720 nm. Phù hợp cho nước mặt, nước ngầm, nước uống và nước thải.",
+  "markets": [
+   "Xử lý nước cấp",
+   "Quan trắc môi trường",
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp",
+   "Quy trình công nghiệp"
+  ],
+  "image": "/img/scan/uv-lyser-v3-turbidity-total-suspended-solids-spectrometer-probe.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/spectrometer-probes/uvlyser-v3/"
+ },
+ {
+  "id": "scan-multi-lyser-v3-spectrometer-probe",
+  "brand": "s::can",
+  "name": "multi::lyser V3 Spectrometer Probe",
+  "category": "spectrometer",
+  "categoryLabel": "Đầu dò quang phổ",
+  "parameters": [
+   "BOD",
+   "COD",
+   "TOC",
+   "DOC",
+   "UV254",
+   "NO3-N/NO3",
+   "TSS/TS",
+   "Turbidity",
+   "Temperature"
+  ],
+  "description": "multi::lyser kết hợp carbo::lyser và nitro::lyser, đo carbon hữu cơ và nitrat (NO3-N/NO3) cho nước mặt, nước ngầm, nước uống và nước thải.",
+  "markets": [
+   "Xử lý nước cấp",
+   "Quan trắc môi trường",
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp",
+   "Quy trình công nghiệp"
+  ],
+  "image": "/img/scan/multi-lyser-v3-spectrometer-probe.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/spectrometer-probes/multilyser-v3/"
+ },
+ {
+  "id": "scan-ammo-lyser-pro-ammonium-physical-sensor",
+  "brand": "s::can",
+  "name": "ammo::lyser Pro Ammonium Physical Sensor",
+  "category": "sensor",
+  "categoryLabel": "Cảm biến vật lý",
+  "parameters": [
+   "Ammonium",
+   "NO3-N/NO3",
+   "pH",
+   "TemperatureWith potassium compensation"
+  ],
+  "description": "Đầu dò đa chỉ tiêu đo amoni trực tuyến. Thiết bị tin cậy, vượt trội so với máy phân tích truyền thống về độ ổn định phép đo và tuổi thọ. Độ chính xác được đảm bảo nhờ bù giá trị amoni theo thời gian thực với nhiệt độ, pH, kali và điện cực tham chiếu hiệu năng cao.",
+  "markets": [
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp"
+  ],
+  "image": "/img/scan/ammo-lyser-pro-ammonium-physical-sensor.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/physical-sensors/ammolyser-pro/"
+ },
+ {
+  "id": "scan-redo-lyser-orp-physical-sensor",
+  "brand": "s::can",
+  "name": "redo::lyser ORP Physical Sensor",
+  "category": "sensor",
+  "categoryLabel": "Cảm biến vật lý",
+  "parameters": [
+   "ORP",
+   "Temperature"
+  ],
+  "description": "redo::lyser là cảm biến ổn định lâu dài, không cần bảo trì, đo thế oxy hoá–khử (ORP) trực tuyến, nhúng trong môi trường đo hoặc lắp trong buồng dòng chảy.",
+  "markets": [
+   "Xử lý nước cấp",
+   "Quan trắc môi trường",
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp",
+   "Quy trình công nghiệp"
+  ],
+  "image": "/img/scan/redo-lyser-orp-physical-sensor.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/physical-sensors/redolyser-redox-physical-sensor/"
+ },
+ {
+  "id": "scan-soli-lyser-suspended-solids-physical-sensor",
+  "brand": "s::can",
+  "name": "soli::lyser Suspended Solids Physical Sensor",
+  "category": "sensor",
+  "categoryLabel": "Cảm biến vật lý",
+  "parameters": [
+   "TSS/TS"
+  ],
+  "description": "soli::lyser là đầu dò quang học đo nồng độ chất rắn lơ lửng trực tiếp trong nước. Đo theo nguyên lý hấp thụ hồng ngoại nên kết quả không bị ảnh hưởng bởi màu nước.",
+  "markets": [
+   "Xử lý nước cấp",
+   "Quan trắc môi trường",
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp",
+   "Quy trình công nghiệp"
+  ],
+  "image": "/img/scan/soli-lyser-suspended-solids-physical-sensor.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/physical-sensors/solilyser-physical-sensor/"
+ },
+ {
+  "id": "scan-i-scan-spectrophotometer-probe",
+  "brand": "s::can",
+  "name": "i::scan Spectrophotometer Probe",
+  "category": "spectrometer",
+  "categoryLabel": "Đầu dò quang phổ",
+  "parameters": [
+   "COD",
+   "Color",
+   "DOC",
+   "Temperature",
+   "TOC",
+   "TSS/TS",
+   "Turbidity",
+   "UV254"
+  ],
+  "description": "Từ ứng dụng cần tối ưu chi phí đến mạng lưới nước thông minh độ phân giải cao, đầu dò quang phổ đa chỉ tiêu i::scan kết hợp hiệu năng của máy quang phổ đa bước sóng với chi phí thấp của quang kế đơn giản.",
+  "markets": [
+   "Xử lý nước cấp",
+   "Quan trắc môi trường",
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp",
+   "Quy trình công nghiệp",
+   "Trung tâm dữ liệu"
+  ],
+  "image": "/img/scan/i-scan-spectrophotometer-probe.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/spectrometer-probes/iscan/"
+ },
+ {
+  "id": "scan-air-compressor-for-spectrometer-probes-and-sensors",
+  "brand": "s::can",
+  "name": "Air Compressor for Spectrometer Probes and Sensors",
+  "category": "accessory",
+  "categoryLabel": "Phụ kiện",
+  "parameters": [],
+  "description": "Cấp khí nén cho oxi::lyser, soli::lyser, ammo::lyser và các đầu dò quang phổ.\n- Làm sạch cặn bám bằng khí nén\n- Vỏ nhôm IP65, gắn tường\n- Tuỳ chọn phiên bản 12 VDC hoặc 110 VAC\n- Có bộ gá lắp lên lan can",
+  "markets": [
+   "Xử lý nước cấp",
+   "Quan trắc môi trường",
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp"
+  ],
+  "image": "/img/scan/air-compressor-for-spectrometer-probes-and-sensors.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/air-compressor/"
+ },
+ {
+  "id": "scan-ammonium-electrode-for-ammo-lyser",
+  "brand": "s::can",
+  "name": "Ammonium Electrode for ammo::lyser",
+  "category": "accessory",
+  "categoryLabel": "Phụ kiện",
+  "parameters": [],
+  "description": "Điện cực chọn lọc ion đo nồng độ amoni dùng cho ammo::lyser.\n- Cấp bảo vệ: IP68 (khi lắp trong vỏ)\n- Ứng dụng: nước thải, nước mặt và nước uống",
+  "markets": [
+   "Xử lý nước cấp",
+   "Quan trắc môi trường",
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp"
+  ],
+  "image": "/img/scan/ammonium-electrode-for-ammo-lyser.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/ammolyser-ammonium-electrode/"
+ },
+ {
+  "id": "scan-ana-tool-event-detection-software",
+  "brand": "s::can",
+  "name": "ana::tool Event Detection Software",
+  "category": "accessory",
+  "categoryLabel": "Phụ kiện",
+  "parameters": [],
+  "description": "ana::tool phát hiện điều kiện bất thường, giúp người vận hành phản ứng kịp thời với sự cố trong hệ thống giám sát; xác định trạng thái bình thường của dữ liệu và phát cảnh báo khi có sai lệch đáng kể.\n- Giao diện mở cho mọi loại cảm biến và thiết bị đo\n- Kiểm tra dữ liệu trực tuyến trước khi phát hiện sự kiện, giảm đáng kể cảnh báo giả\n- Giao diện đồ hoạ cho cái nhìn tổng quan toàn trạm\n- Giao diện web, truy cập mọi lúc mọi nơi\n- Tận dụng tối đa dữ liệu phổ\n- Có chỉ báo độ nhạy cảnh báo hiện tại\n- Tự học theo cửa sổ thời gian trượt, tự thích nghi với thay đổi chậm của nền nước\n- Tự giảm độ nhạy khi thành phần nước thay đổi liên tục",
+  "markets": [
+   "Xử lý nước cấp",
+   "Quan trắc môi trường",
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp"
+  ],
+  "image": "/img/scan/ana-tool-event-detection-software.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/anatool-event-detection-software/"
+ },
+ {
+  "id": "scan-auto-blade-mechanical-cleaning-for-spectrometer-probes",
+  "brand": "s::can",
+  "name": "auto::blade Mechanical Cleaning for Spectrometer Probes",
+  "category": "accessory",
+  "categoryLabel": "Phụ kiện",
+  "parameters": [],
+  "description": "auto::blade là phụ kiện làm sạch cơ học cho đầu dò quang phổ.\n- Lắp trên buồng dòng chảy nước thải F-48-V3\n- Lưỡi gạt thay thế được\n- Bộ làm sạch kèm cụm van\n- Quang trình: 5 mm",
+  "markets": [
+   "Xử lý nước cấp",
+   "Quan trắc môi trường",
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp"
+  ],
+  "image": "/img/scan/auto-blade-mechanical-cleaning-for-spectrometer-probes.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/autoblade-mechanical-cleaning/"
+ },
+ {
+  "id": "scan-carrier-for-submersed-sensors",
+  "brand": "s::can",
+  "name": "Carrier for Submersed Sensors",
+  "category": "accessory",
+  "categoryLabel": "Phụ kiện",
+  "parameters": [],
+  "description": "Giá đỡ giúp lắp đặt chìm cảm biến Badger Meter đúng cách và dễ dàng.\n- Tương thích cáp cảm biến và ống khí nén\n- Lắp bằng ống: 50 mm\n- Vật liệu: PVC và thép không gỉ",
+  "markets": [
+   "Xử lý nước cấp",
+   "Quan trắc môi trường",
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp"
+  ],
+  "image": "/img/scan/carrier-for-submersed-sensors.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/submersed-sensor-carrier/"
+ },
+ {
+  "id": "scan-cleaning-agent-for-spectrometer-probes",
+  "brand": "s::can",
+  "name": "Cleaning Agent for Spectrometer Probes",
+  "category": "accessory",
+  "categoryLabel": "Phụ kiện",
+  "parameters": [],
+  "description": "Dung dịch hỗ trợ làm sạch cửa sổ đo của các đầu dò quang phổ.\n- Tẩy cặn bám cứng đầu trên cửa sổ đo bằng hoá chất\n- Hiệu quả với dầu mỡ và cặn hữu cơ",
+  "markets": [
+   "Xử lý nước cấp",
+   "Quan trắc môi trường",
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp"
+  ],
+  "image": "/img/scan/cleaning-agent-for-spectrometer-probes.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/probe-cleaning-agent/"
+ },
+ {
+  "id": "scan-cleaning-valve-for-spectrometer-probes-sensors",
+  "brand": "s::can",
+  "name": "Cleaning Valve for Spectrometer Probes & Sensors",
+  "category": "accessory",
+  "categoryLabel": "Phụ kiện",
+  "parameters": [],
+  "description": "Hỗ trợ làm sạch tự động phần tử đo của oxi::lyser, soli::lyser, ammo::lyser và đầu dò quang phổ.\n- Loại bỏ cặn bám, trầm tích và tắc nghẽn bằng khí nén hoặc nước\n- Dùng cùng máy nén khí cho đầu dò quang phổ và cảm biến",
+  "markets": [
+   "Xử lý nước cấp",
+   "Quan trắc môi trường",
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp"
+  ],
+  "image": "/img/scan/cleaning-valve-for-spectrometer-probes-sensors.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/cleaning-valve/"
+ },
+ {
+  "id": "scan-con-nect-power-supply-for-spectro-lyser",
+  "brand": "s::can",
+  "name": "con::nect Power Supply for spectro::lyser",
+  "category": "accessory",
+  "categoryLabel": "Phụ kiện",
+  "parameters": [],
+  "description": "Biến máy tính thành trạm đầu cuối cho spectro::lyser. Hộp giao tiếp kết nối đầu dò với máy tính, nguồn khí nén và nguồn điện.\n- Cấp nguồn và kết nối cho đầu dò quang phổ và cảm biến\n- Cổng USB tới máy tính để truyền dữ liệu và cấu hình\n- Cổng RS485 tới SCADA, tích hợp Modbus RTU\n- Điều khiển van làm sạch cho bảo trì tự động\n- Nguồn 12/24 VDC và 110/230 VAC",
+  "markets": [
+   "Xử lý nước cấp",
+   "Quan trắc môi trường",
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp"
+  ],
+  "image": "/img/scan/con-nect-power-supply-for-spectro-lyser.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/connect-power-supply/"
+ },
+ {
+  "id": "scan-con-nect-v3-for-spectro-lyser-v3",
+  "brand": "s::can",
+  "name": "con::nect V3 for spectro::lyser V3",
+  "category": "accessory",
+  "categoryLabel": "Phụ kiện",
+  "parameters": [],
+  "description": "Kết nối spectro::lyser V3 qua WLAN, dùng giao diện web Io-Tool để cấu hình đầu dò và hiển thị dữ liệu.\n- Kết nối một đầu dò spectro::lyser V3 và một thiết bị làm sạch\n- Mở rộng mạng cảm biến con::cube và con::lyte cho khoảng cách xa hơn, nhiều cảm biến hơn\n- Cổng RJ45 cho mạng có dây",
+  "markets": [
+   "Xử lý nước cấp",
+   "Quan trắc môi trường",
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp"
+  ],
+  "image": "/img/scan/con-nect-v3-for-spectro-lyser-v3.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/connect-v3/"
+ },
+ {
+  "id": "scan-extension-cable-for-physical-sensors",
+  "brand": "s::can",
+  "name": "Extension Cable for Physical Sensors",
+  "category": "accessory",
+  "categoryLabel": "Phụ kiện",
+  "parameters": [],
+  "description": "Cáp nối dài cho cảm biến với đầu nối IP68, linh hoạt theo điều kiện lắp đặt.\n- Ba chiều dài: 10 m, 20 m hoặc 30 m",
+  "markets": [
+   "Xử lý nước cấp",
+   "Quan trắc môi trường",
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp"
+  ],
+  "image": "/img/scan/extension-cable-for-physical-sensors.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/physical-sensor-extension-cable/"
+ },
+ {
+  "id": "scan-extension-cable-for-spectrometer-probes",
+  "brand": "s::can",
+  "name": "Extension Cable for Spectrometer Probes",
+  "category": "accessory",
+  "categoryLabel": "Phụ kiện",
+  "parameters": [],
+  "description": "Cáp nối dài cho đầu dò quang phổ với đầu nối IP67, linh hoạt theo điều kiện lắp đặt.\n- Ba chiều dài: 10 m, 20 m hoặc 30 m",
+  "markets": [
+   "Xử lý nước cấp",
+   "Quan trắc môi trường",
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp"
+  ],
+  "image": "/img/scan/extension-cable-for-spectrometer-probes.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/probe-extension-cable/"
+ },
+ {
+  "id": "scan-field-case-for-spectrometer-probes",
+  "brand": "s::can",
+  "name": "Field Case for Spectrometer Probes",
+  "category": "accessory",
+  "categoryLabel": "Phụ kiện",
+  "parameters": [],
+  "description": "Vali hiện trường cấp nguồn và giám sát từ xa cho đầu dò quang phổ.\n- Hoạt động độc lập\n- Không cần nguồn điện ngoài\n- Dùng từ xa",
+  "markets": [
+   "Xử lý nước cấp",
+   "Quan trắc môi trường",
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp"
+  ],
+  "image": "/img/scan/field-case-for-spectrometer-probes.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/probe-field-case/"
+ },
+ {
+  "id": "scan-flow-cell-autobrush-for-spectro-lyser-pathlength-100-mm",
+  "brand": "s::can",
+  "name": "Flow Cell Autobrush for spectro::lyser - Pathlength: 100 mm",
+  "category": "accessory",
+  "categoryLabel": "Phụ kiện",
+  "parameters": [],
+  "description": "Buồng dòng chảy có chổi tự động cho spectro::lyser, quang trình 100 mm, giúp lắp đặt dạng dòng chảy qua dễ dàng.\n- Cho ứng dụng cần làm sạch tự động thường xuyên\n- Chổi xoay làm sạch cửa sổ quang mà không cần tháo đầu dò\n- Quang trình: 100 mm",
+  "markets": [
+   "Xử lý nước cấp",
+   "Quan trắc môi trường",
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp"
+  ],
+  "image": "/img/scan/flow-cell-autobrush-for-spectro-lyser-pathlength-100-mm.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/flow-cell-autobrush-100mm/"
+ },
+ {
+  "id": "scan-flow-cell-autobrush-for-spectro-lyser-pathlength-35-mm",
+  "brand": "s::can",
+  "name": "Flow Cell Autobrush for spectro::lyser - Pathlength: 35 mm",
+  "category": "accessory",
+  "categoryLabel": "Phụ kiện",
+  "parameters": [],
+  "description": "Buồng dòng chảy có chổi tự động cho spectro::lyser, quang trình 35 mm.\n- Cho ứng dụng cần làm sạch tự động thường xuyên\n- Chổi xoay làm sạch cửa sổ quang mà không cần tháo đầu dò\n- Vật liệu: POM-C\n- Quang trình: 35 mm",
+  "markets": [
+   "Xử lý nước cấp",
+   "Quan trắc môi trường",
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp"
+  ],
+  "image": "/img/scan/flow-cell-autobrush-for-spectro-lyser-pathlength-35-mm.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/flow-cell-autobrush-35mm/"
+ },
+ {
+  "id": "scan-flow-cell-for-condu-lyser-chlori-lyser-redo-lyser-and-ph-lyser",
+  "brand": "s::can",
+  "name": "Flow Cell for condu::lyser, chlori::lyser, redo::lyser and pH::lyser",
+  "category": "accessory",
+  "categoryLabel": "Phụ kiện",
+  "parameters": [],
+  "description": "Buồng dòng chảy để lắp condu::lyser, chlori::lyser, redo::lyser và pH::lyser dạng dòng chảy qua.\n- Cho ứng dụng nước uống không cần làm sạch tự động\n- Vật liệu: POM-C",
+  "markets": [
+   "Xử lý nước cấp",
+   "Quan trắc môi trường",
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp"
+  ],
+  "image": "/img/scan/flow-cell-for-condu-lyser-chlori-lyser-redo-lyser-and-ph-lyser.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/flow-cell/"
+ },
+ {
+  "id": "scan-flow-cell-for-i-scan-and-three-more-probes",
+  "brand": "s::can",
+  "name": "Flow Cell for i::scan and Three More Probes",
+  "category": "accessory",
+  "categoryLabel": "Phụ kiện",
+  "parameters": [],
+  "description": "Buồng dòng chảy cho một i::scan và tối đa ba đầu dò vật lý.\n- Tuỳ chọn chổi tự động làm sạch cho i::scan\n- Vật liệu: POM-C",
+  "markets": [
+   "Xử lý nước cấp",
+   "Quan trắc môi trường",
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp"
+  ],
+  "image": "/img/scan/flow-cell-for-i-scan-and-three-more-probes.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/4-probe-flow-cell/"
+ },
+ {
+  "id": "scan-flow-cell-for-ise-probe",
+  "brand": "s::can",
+  "name": "Flow Cell for ISE Probe",
+  "category": "accessory",
+  "categoryLabel": "Phụ kiện",
+  "parameters": [],
+  "description": "Khớp dòng chảy bằng PVC để đo nước thải hoặc nước mặt ở nhánh rẽ (by-pass) với ammo::lyser.\n- Ứng dụng: nước thải và nước mặt\n- Vật liệu: PVC",
+  "markets": [
+   "Xử lý nước cấp",
+   "Quan trắc môi trường",
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp"
+  ],
+  "image": "/img/scan/flow-cell-for-ise-probe.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/ise-probe-flow-cell/"
+ },
+ {
+  "id": "scan-flow-cell-for-ph-lyser-redo-lyser-condu-lyser-sensors",
+  "brand": "s::can",
+  "name": "Flow Cell for pH::lyser, redo::lyser & condu::lyser Sensors",
+  "category": "accessory",
+  "categoryLabel": "Phụ kiện",
+  "parameters": [],
+  "description": "Buồng dòng chảy để lắp pH::lyser, redo::lyser và condu::lyser.\n- Ứng dụng: nước thải\n- Vật liệu: PVC\n- Cho ứng dụng không cần làm sạch tự động",
+  "markets": [
+   "Xử lý nước cấp",
+   "Quan trắc môi trường",
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp"
+  ],
+  "image": "/img/scan/flow-cell-for-ph-lyser-redo-lyser-condu-lyser-sensors.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/sensor-flow-cell/"
+ },
+ {
+  "id": "scan-flow-cell-for-spectrometer-probes-pathlength-100-mm",
+  "brand": "s::can",
+  "name": "Flow Cell for Spectrometer Probes - Pathlength: 100 mm",
+  "category": "accessory",
+  "categoryLabel": "Phụ kiện",
+  "parameters": [],
+  "description": "Buồng dòng chảy để lắp đầu dò quang phổ dạng dòng chảy qua.\n- Vật liệu: POM-C\n- Quang trình: 100 mm\n- Đầu nối ống: 1/2 inch (12 mm)\n- Cho ứng dụng không cần làm sạch tự động",
+  "markets": [
+   "Xử lý nước cấp",
+   "Quan trắc môi trường",
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp"
+  ],
+  "image": "/img/scan/flow-cell-for-spectrometer-probes-pathlength-100-mm.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/probe-flow-cell-100mm/"
+ },
+ {
+  "id": "scan-flow-cell-for-spectrometer-probes-pathlength-up-to-35-mm",
+  "brand": "s::can",
+  "name": "Flow Cell for Spectrometer Probes - Pathlength Up to 35 mm",
+  "category": "accessory",
+  "categoryLabel": "Phụ kiện",
+  "parameters": [],
+  "description": "Buồng dòng chảy để lắp đầu dò quang phổ dạng dòng chảy qua.\n- Vật liệu: POM-C\n- Quang trình: 0,5–35 mm\n- Đầu nối ống: 1/2 inch (12 mm)",
+  "markets": [
+   "Xử lý nước cấp",
+   "Quan trắc môi trường",
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp"
+  ],
+  "image": "/img/scan/flow-cell-for-spectrometer-probes-pathlength-up-to-35-mm.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/probe-flow-cell-35mm/"
+ },
+ {
+  "id": "scan-flow-cell-for-spectrometer-probes-for-wastewater",
+  "brand": "s::can",
+  "name": "Flow Cell for Spectrometer Probes for Wastewater",
+  "category": "accessory",
+  "categoryLabel": "Phụ kiện",
+  "parameters": [],
+  "description": "Buồng dòng chảy để lắp một đầu dò quang phổ trong ứng dụng nước thải.\n- Ứng dụng: nước thải\n- Vật liệu: PVC",
+  "markets": [
+   "Xử lý nước cấp",
+   "Quan trắc môi trường",
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp"
+  ],
+  "image": "/img/scan/flow-cell-for-spectrometer-probes-for-wastewater.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/wastewater-probe-flow-cell/"
+ },
+ {
+  "id": "scan-i-scan-carrier-housings",
+  "brand": "s::can",
+  "name": "i::scan Carrier Housings",
+  "category": "accessory",
+  "categoryLabel": "Phụ kiện",
+  "parameters": [],
+  "description": "Giá đỡ kết nối với đầu dò quang phổ i::scan.\n- Vật liệu: PVC, POM-C\n- Lắp đặt chìm\n- Ba hướng gá: ngang, dọc và nghiêng 45°",
+  "markets": [
+   "Xử lý nước cấp",
+   "Quan trắc môi trường",
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp"
+  ],
+  "image": "/img/scan/i-scan-carrier-housings.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/iscan-carrier-housing/"
+ },
+ {
+  "id": "scan-multifunctional-slide-for-spectrometer-probes-pathlength-100-mm",
+  "brand": "s::can",
+  "name": "Multifunctional Slide for Spectrometer Probes - Pathlength: 100 mm",
+  "category": "accessory",
+  "categoryLabel": "Phụ kiện",
+  "parameters": [],
+  "description": "Ống trượt đa năng giúp định tâm đầu dò quang phổ, quang trình 100 mm.\n- Dùng cho đầu dò quang phổ\n- Đo phổ trong phòng thí nghiệm\n- Quang trình: 100 mm",
+  "markets": [
+   "Xử lý nước cấp",
+   "Quan trắc môi trường",
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp"
+  ],
+  "image": "/img/scan/multifunctional-slide-for-spectrometer-probes-pathlength-100-mm.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/probe-multifunctional-slide-100mm/"
+ },
+ {
+  "id": "scan-multifunctional-slide-for-spectrometer-probes-pathlength-35-mm",
+  "brand": "s::can",
+  "name": "Multifunctional Slide for Spectrometer Probes - Pathlength: 35 mm",
+  "category": "accessory",
+  "categoryLabel": "Phụ kiện",
+  "parameters": [],
+  "description": "Ống trượt đa năng giúp định tâm đầu dò quang phổ, quang trình tới 35 mm.\n- Dùng cho đầu dò quang phổ\n- Đo phổ trong phòng thí nghiệm\n- Quang trình: 0,5–35 mm",
+  "markets": [
+   "Xử lý nước cấp",
+   "Quan trắc môi trường",
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp"
+  ],
+  "image": "/img/scan/multifunctional-slide-for-spectrometer-probes-pathlength-35-mm.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/probe-multifunctional-slide-35mm/"
+ },
+ {
+  "id": "scan-ph-electrode-for-ammo-lyser",
+  "brand": "s::can",
+  "name": "pH Electrode for ammo::lyser",
+  "category": "accessory",
+  "categoryLabel": "Phụ kiện",
+  "parameters": [],
+  "description": "Điện cực chọn lọc ion đo pH dùng cho ammo::lyser.\n- Ứng dụng: nước thải, nước mặt và nước uống\n- Dùng với: cảm biến ammo::lyser\n- Đo: pH",
+  "markets": [
+   "Xử lý nước cấp",
+   "Quan trắc môi trường",
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp"
+  ],
+  "image": "/img/scan/ph-electrode-for-ammo-lyser.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/ammolyser-ph-electrode/"
+ },
+ {
+  "id": "scan-potassium-electrode-for-ammo-lyser",
+  "brand": "s::can",
+  "name": "Potassium Electrode for ammo::lyser",
+  "category": "accessory",
+  "categoryLabel": "Phụ kiện",
+  "parameters": [],
+  "description": "Điện cực chọn lọc ion đo nồng độ kali dùng cho ammo::lyser.\n- Ứng dụng: nước thải, nước mặt và nước uống\n- Dùng với: cảm biến ammo::lyser\n- Đo: nồng độ kali",
+  "markets": [
+   "Xử lý nước cấp",
+   "Quan trắc môi trường",
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp"
+  ],
+  "image": "/img/scan/potassium-electrode-for-ammo-lyser.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/ammolyser-potassium-electrode/"
+ },
+ {
+  "id": "scan-pressure-mounting-for-i-scan-in-pipe-installation",
+  "brand": "s::can",
+  "name": "Pressure Mounting for i::scan In-Pipe Installation",
+  "category": "accessory",
+  "categoryLabel": "Phụ kiện",
+  "parameters": [],
+  "description": "Cho phép lắp và tháo đầu dò i::scan khi đường ống đang có áp, không cần ngắt dòng chảy.\n- Dùng với: đầu dò quang phổ i::scan\n- Khoan có áp cho ống PE, PVC, DCI, thép và AC\n- Vật liệu: thép\n- Kết nối: đai khởi thuỷ có van và gioăng (DN50–DN300, kích thước khác theo yêu cầu)",
+  "markets": [
+   "Xử lý nước cấp",
+   "Quan trắc môi trường",
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp"
+  ],
+  "image": "/img/scan/pressure-mounting-for-i-scan-in-pipe-installation.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/iscan-pressure-mounting/"
+ },
+ {
+  "id": "scan-reference-electrode-for-ammo-lyser",
+  "brand": "s::can",
+  "name": "Reference Electrode for ammo::lyser",
+  "category": "accessory",
+  "categoryLabel": "Phụ kiện",
+  "parameters": [],
+  "description": "Điện cực tham chiếu bền, ổn định cho ammo::lyser, đo nhiều chỉ tiêu trong nước thải, nước mặt hoặc nước uống.\n- Tuổi thọ dài (khoảng 3 năm)\n- Điện cực rắn, không xốp\n- Độ trôi nhỏ hơn điện cực thông thường\n- Cấp bảo vệ: IP68 (khi lắp trong vỏ)",
+  "markets": [
+   "Xử lý nước cấp",
+   "Quan trắc môi trường",
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp"
+  ],
+  "image": "/img/scan/reference-electrode-for-ammo-lyser.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/ammolyser-reference-electrode/"
+ },
+ {
+  "id": "scan-ruck-sack-submersible-autobrush-for-spectrometer-probes",
+  "brand": "s::can",
+  "name": "ruck::sack Submersible Autobrush for Spectrometer Probes",
+  "category": "accessory",
+  "categoryLabel": "Phụ kiện",
+  "parameters": [],
+  "description": "ruck::sack là phụ kiện gắn cho đầu dò quang phổ và i::scan, có chổi tự động chìm và chổi thay thế được.\n- Chổi tự động chìm cho đầu dò quang phổ và i::scan\n- Chổi thay thế được\n- Vỏ che chống tắc chổi\n- Nhiều quang trình: 5 mm, 15 mm và 35 mm",
+  "markets": [
+   "Xử lý nước cấp",
+   "Quan trắc môi trường",
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp"
+  ],
+  "image": "/img/scan/ruck-sack-submersible-autobrush-for-spectrometer-probes.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/rucksack-submersible-autobrush/"
+ },
+ {
+  "id": "scan-single-i-scan-flow-cell",
+  "brand": "s::can",
+  "name": "Single i::scan Flow Cell",
+  "category": "accessory",
+  "categoryLabel": "Phụ kiện",
+  "parameters": [],
+  "description": "Buồng dòng chảy để lắp i::scan trong nước thải.\n- Ứng dụng: nước thải\n- Vật liệu: PVC",
+  "markets": [
+   "Xử lý nước cấp",
+   "Quan trắc môi trường",
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp"
+  ],
+  "image": "/img/scan/single-i-scan-flow-cell.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/single-iscan-flow-cell/"
+ },
+ {
+  "id": "scan-single-i-scan-flow-cell-bypass-fitting",
+  "brand": "s::can",
+  "name": "Single i::scan Flow Cell Bypass Fitting",
+  "category": "accessory",
+  "categoryLabel": "Phụ kiện",
+  "parameters": [],
+  "description": "Khớp nhánh rẽ (bypass) cho một đầu dò i::scan.\n- Tuỳ chọn chổi tự động làm sạch cho i::scan\n- Vật liệu: POM-C\n- Có loại kèm hoặc không kèm chổi tự động",
+  "markets": [
+   "Xử lý nước cấp",
+   "Quan trắc môi trường",
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp"
+  ],
+  "image": "/img/scan/single-i-scan-flow-cell-bypass-fitting.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/single-iscan-flow-cell-bypass-fitting/"
+ },
+ {
+  "id": "scan-spectrometer-probe-carrier",
+  "brand": "s::can",
+  "name": "Spectrometer Probe Carrier",
+  "category": "accessory",
+  "categoryLabel": "Phụ kiện",
+  "parameters": [],
+  "description": "Giá đỡ giúp lắp chìm đầu dò quang phổ dễ dàng.\n- Đi kèm được cả cáp đầu dò và ống khí nén\n- Vật liệu: PVC và POM-C\n- Hai hướng gá: ngang và dọc",
+  "markets": [
+   "Xử lý nước cấp",
+   "Quan trắc môi trường",
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp"
+  ],
+  "image": "/img/scan/spectrometer-probe-carrier.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/probe-carrier/"
+ },
+ {
+  "id": "scan-spectrometer-probe-cleaning-brush",
+  "brand": "s::can",
+  "name": "Spectrometer Probe Cleaning Brush",
+  "category": "accessory",
+  "categoryLabel": "Phụ kiện",
+  "parameters": [],
+  "description": "Chổi làm sạch cửa sổ đo quang của đầu dò quang phổ, loại bỏ cặn bám và giữ cửa sổ quang trong suốt.",
+  "markets": [
+   "Xử lý nước cấp",
+   "Quan trắc môi trường",
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp"
+  ],
+  "image": "/img/scan/spectrometer-probe-cleaning-brush.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/probe-cleaning-brush/"
+ },
+ {
+  "id": "scan-stainless-steel-fixing-adapter",
+  "brand": "s::can",
+  "name": "Stainless Steel Fixing Adapter",
+  "category": "accessory",
+  "categoryLabel": "Phụ kiện",
+  "parameters": [],
+  "description": "Đầu gá thép không gỉ giúp lắp và tháo nhanh đầu dò quang phổ và cảm biến lắp tại chỗ.\n- Vật liệu: thép không gỉ",
+  "markets": [
+   "Xử lý nước cấp",
+   "Quan trắc môi trường",
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp"
+  ],
+  "image": "/img/scan/stainless-steel-fixing-adapter.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/stainless-steel-fixing-adapter/"
+ },
+ {
+  "id": "scan-stainless-steel-inserts-for-spectrometer-probes",
+  "brand": "s::can",
+  "name": "Stainless Steel Inserts for Spectrometer Probes",
+  "category": "accessory",
+  "categoryLabel": "Phụ kiện",
+  "parameters": [],
+  "description": "Miếng chèn giúp thay đổi quang trình của đầu dò quang phổ V2.\n- Vật liệu: thép không gỉ\n- Kèm gioăng, cửa sổ đo sapphire và dụng cụ bảo dưỡng\n- Năm quang trình: 0,5 mm, 1 mm, 2 mm, 5 mm và 15 mm",
+  "markets": [
+   "Xử lý nước cấp",
+   "Quan trắc môi trường",
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp"
+  ],
+  "image": "/img/scan/stainless-steel-inserts-for-spectrometer-probes.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/probe-stainless-steel-inserts/"
+ },
+ {
+  "id": "scan-weather-shield-for-con-cube-and-con-lyte",
+  "brand": "s::can",
+  "name": "Weather Shield for con::cube and con::lyte",
+  "category": "accessory",
+  "categoryLabel": "Phụ kiện",
+  "parameters": [],
+  "description": "Mái che bảo vệ trạm con::cube và con::lyte khỏi thời tiết khắc nghiệt.\n- Gá cho con::cube hoặc con::lyte\n- Lắp lên tường hoặc lan can\n- Kèm phụ kiện gá lắp\n- Vật liệu: thép không gỉ",
+  "markets": [
+   "Xử lý nước cấp",
+   "Quan trắc môi trường",
+   "Xử lý nước thải",
+   "Xử lý nước thải công nghiệp"
+  ],
+  "image": "/img/scan/weather-shield-for-con-cube-and-con-lyte.webp",
+  "source": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/weather-shield/"
+ }
+]

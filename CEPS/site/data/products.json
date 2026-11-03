@@ -1,0 +1,1885 @@
+[
+  {
+    "id": "539",
+    "name": "spectro::lyser V3 Spectrometer Probe",
+    "name_vi": "spectro::lyser V3 Spectrometer Probe (Đầu dò quang phổ)",
+    "category": "Đầu dò quang phổ",
+    "category_en": "Spectrometer Probes",
+    "category_slug": "spectrometer",
+    "parameters": "BOD, Chl-a, Chloramine, CLD, COD, Color, DOC, Dissolved Ozone, Fingerprint, HS-, NO3-N/NO3, Pressure, Temperature, TOC, TSS/TS, Turbidity, UV254",
+    "description_vi": "Phụ kiện chính hãng chất lượng cao của hệ thống giám sát nước s::can (Badger Meter), đảm bảo độ đồng bộ và độ bền vận hành tối đa.",
+    "description_en": "The spectro-lyser V3 utilizes advanced technology to analyze water parameters in real-time. Seamlessly connects to mobile devices for convenient data access and management. With its robust design and user-friendly interface, the spectrolyser V3 offers invaluable insights for water management and environmental monitoring applications.",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước thải công nghiệp",
+      "Xử lý nước cấp & nước uống",
+      "Quan trắc môi trường sông hồ",
+      "Xử lý nước thải đô thị",
+      "Industrial Process",
+      "Collection System Monitoring",
+      "Data Centers"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/aiu24monno/png/spectrolyser-UV-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/spectrometer-probes/spectrolyser-v3/",
+    "brand": "s::can"
+  },
+  {
+    "id": "480",
+    "name": "ammo::lyser Eco Ammonium Physical Sensor",
+    "name_vi": "ammo::lyser Eco Ammonium Physical Sensor (Cảm biến điện hóa & vật lý)",
+    "category": "Cảm biến điện hóa & vật lý",
+    "category_en": "Physical Sensors",
+    "category_slug": "sensor",
+    "parameters": "Ammonium, NO3-N/NO3, pH, Temperature",
+    "description_vi": "Phụ kiện chính hãng chất lượng cao của hệ thống giám sát nước s::can (Badger Meter), đảm bảo độ đồng bộ và độ bền vận hành tối đa.",
+    "description_en": "A multiparameter probe for the online measurement of ammonium. It is a reliable device outclassing conventional analyzers in terms of measurement stability and lifetime. Precision is guaranteed by real-time compensation of the ammonium value with temperature, potassium and a high-performance reference electrode.",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/z88e2qd4ns/png/ammolyser-eco-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/physical-sensors/ammolyser-eco/",
+    "brand": "s::can"
+  },
+  {
+    "id": "527",
+    "name": "spectro::lyser UV-Wavelengths Spectrometer Probe",
+    "name_vi": "spectro::lyser UV-Wavelengths Spectrometer Probe (Đầu dò quang phổ)",
+    "category": "Đầu dò quang phổ",
+    "category_en": "Spectrometer Probes",
+    "category_slug": "spectrometer",
+    "parameters": "COD, Dissolved Ozone, Fingerprint, HS-/H2S, NO2-N/NO2, NO3-N/NO3, Temperature, TOC, TSS/TS, UVT, UV254",
+    "description_vi": "Phụ kiện chính hãng chất lượng cao của hệ thống giám sát nước s::can (Badger Meter), đảm bảo độ đồng bộ và độ bền vận hành tối đa.",
+    "description_en": "The spectro-lyser UV measures distinct UV-Wavelengths for determining specific pollutions. Ideal for wastewater, surface water and drinking water applications.",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Quan trắc môi trường sông hồ",
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp",
+      "Industrial Process",
+      "Xử lý nước cấp & nước uống",
+      "Data Centers"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/aiu24monno/png/spectrolyser-UV-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/spectrometer-probes/spectrolyser-uv-wavelengths/",
+    "brand": "s::can"
+  },
+  {
+    "id": "525",
+    "name": "spectro::lyser V3 ATEX",
+    "name_vi": "spectro::lyser V3 ATEX (Đầu dò quang phổ)",
+    "category": "Đầu dò quang phổ",
+    "category_en": "Spectrometer Probes",
+    "category_slug": "spectrometer",
+    "parameters": "BOD, Chl-A, Chloramine, CLD, COD, Color, Dissolved Ozone, DOC, Fingerprint, HS-/H2S, NO3-N/NO3, Temperature, TOC, TSS/TS, Turbidity, UVT, UV254",
+    "description_vi": "Phụ kiện chính hãng chất lượng cao của hệ thống giám sát nước s::can (Badger Meter), đảm bảo độ đồng bộ và độ bền vận hành tối đa.",
+    "description_en": "The spectro-lyser V3 Industrial ATEX is engineered for precision and durability. From refineries to sewers and wastewater treatment plants, it provides reliable monitoring for the most challenging industrial applications.",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp",
+      "Industrial Process",
+      "Data Centers"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/bkpvpnhcxm/png/spectrolyser-industrial-ATEX-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/spectrometer-probes/spectrolyser-industrial-atex/",
+    "brand": "s::can"
+  },
+  {
+    "id": "538",
+    "name": "spectro::lyser V3 Titanium",
+    "name_vi": "spectro::lyser V3 Titanium (Đầu dò quang phổ)",
+    "category": "Đầu dò quang phổ",
+    "category_en": "Spectrometer Probes",
+    "category_slug": "spectrometer",
+    "parameters": "BOD, COD, Color, DOC, Dissolved Ozone, Fingerprint, HS-/H2S, NO3-N/NO3, Temperature, TOC, TSS/TS, Turbidity, UVT, UV254",
+    "description_vi": "Phụ kiện chính hãng chất lượng cao của hệ thống giám sát nước s::can (Badger Meter), đảm bảo độ đồng bộ và độ bền vận hành tối đa.",
+    "description_en": "The spectro-lyser V3 Titanium is ideal for highly corrosive industrial applications and seawater installations.",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp",
+      "Industrial Process",
+      "Quan trắc môi trường sông hồ",
+      "Data Centers"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/ilntezhpsk/png/spectrolyser-titanium-pro-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/spectrometer-probes/spectrolyser-titanium-pro/",
+    "brand": "s::can"
+  },
+  {
+    "id": "531",
+    "name": "carbo::lyser V3 Organic Carbon Spectrometer Probe",
+    "name_vi": "carbo::lyser V3 Organic Carbon Spectrometer Probe (Đầu dò quang phổ)",
+    "category": "Đầu dò quang phổ",
+    "category_en": "Spectrometer Probes",
+    "category_slug": "spectrometer",
+    "parameters": "BOD, COD, DOC, Temperature, TOC, TSS/TS, Turbidity, UV254",
+    "description_vi": "Phụ kiện chính hãng chất lượng cao của hệ thống giám sát nước s::can (Badger Meter), đảm bảo độ đồng bộ và độ bền vận hành tối đa.",
+    "description_en": "The carbo-lyser is ideal for measuring organic carbon parameters such as UV254, total organic carbon (TOC), dissolved organic carbon (DOC), chemical oxygen demand (COD) and biological oxygen demand (BOD), as well as turbidity and solids (TSS/TS) concentration. It is suitable for applications ranging from pure water to industrial wastewater. Pre-calibrations for different water types and applications make it easier to use.",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước cấp & nước uống",
+      "Quan trắc môi trường sông hồ",
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp",
+      "Industrial Process"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/d6zhysezxj/png/carbolyser-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/spectrometer-probes/carbolyser-v3/",
+    "brand": "s::can"
+  },
+  {
+    "id": "521",
+    "name": "chlodi::lyser Chlorine Dioxide Physical Sensor",
+    "name_vi": "chlodi::lyser Chlorine Dioxide Physical Sensor (Cảm biến điện hóa & vật lý)",
+    "category": "Cảm biến điện hóa & vật lý",
+    "category_en": "Physical Sensors",
+    "category_slug": "sensor",
+    "parameters": "Chlorine Dioxide, Temperature",
+    "description_vi": "Phụ kiện chính hãng chất lượng cao của hệ thống giám sát nước s::can (Badger Meter), đảm bảo độ đồng bộ và độ bền vận hành tối đa.",
+    "description_en": "The chlodi-lyser is an amperometric sensor for monitoring chlorine dioxide. It is ideal for all kinds of water treatment and produces stable readings even at high fluctuations of pH, temperature and flow.",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp",
+      "Industrial Process"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/snhsqcslly/png/chlodilyser-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/physical-sensors/chlodilyser-chlorine-dioxide-sensor/",
+    "brand": "s::can"
+  },
+  {
+    "id": "534",
+    "name": "chlori::lyser Free & Total Chlorine Physical Sensor",
+    "name_vi": "chlori::lyser Free & Total Chlorine Physical Sensor (Cảm biến điện hóa & vật lý)",
+    "category": "Cảm biến điện hóa & vật lý",
+    "category_en": "Physical Sensors",
+    "category_slug": "sensor",
+    "parameters": "FCl or TCl, Temperature",
+    "description_vi": "Phụ kiện chính hãng chất lượng cao của hệ thống giám sát nước s::can (Badger Meter), đảm bảo độ đồng bộ và độ bền vận hành tối đa.",
+    "description_en": "The chlori-lyser is a revolutionary pH- and flow-independent sensor for monitoring free chlorine or total chlorine. Its internal buffer electrolyte allows pH-independent measurement between pH 4 to 9, and its 3-electrode system provides extremely stable readings. High precision is ensured even at high fluctuations of pH, temperature and flow.",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước cấp & nước uống",
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp",
+      "Industrial Process"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/wvrdk7ziob/png/chlorilyser-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/physical-sensors/chlorilyser-free-total-chlorine-sensor/",
+    "brand": "s::can"
+  },
+  {
+    "id": "522",
+    "name": "condu::lyser Conductivity Physical Sensor",
+    "name_vi": "condu::lyser Conductivity Physical Sensor (Cảm biến điện hóa & vật lý)",
+    "category": "Cảm biến điện hóa & vật lý",
+    "category_en": "Physical Sensors",
+    "category_slug": "sensor",
+    "parameters": "Conductivity, Salinity, TDS, Temperature",
+    "description_vi": "Phụ kiện chính hãng chất lượng cao của hệ thống giám sát nước s::can (Badger Meter), đảm bảo độ đồng bộ và độ bền vận hành tối đa.",
+    "description_en": "The condu-lyser is a maintenance-free and long-term stable probe for online measurement of conductivity, automatically compensated with temperature. It can be mounted directly in the media or in a flow cell providing high precision by either conductive or inductive measurement.",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước cấp & nước uống",
+      "Quan trắc môi trường sông hồ",
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp",
+      "Industrial Process",
+      "Collection System Monitoring",
+      "Data Centers"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/vbkczpinfo/png/condulyser-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/physical-sensors/condulyser-conductivity-physical-sensor/",
+    "brand": "s::can"
+  },
+  {
+    "id": "535",
+    "name": "hyper::lyser Hydrogen Peroxide Sensor",
+    "name_vi": "hyper::lyser Hydrogen Peroxide Sensor (Cảm biến điện hóa & vật lý)",
+    "category": "Cảm biến điện hóa & vật lý",
+    "category_en": "Physical Sensors",
+    "category_slug": "sensor",
+    "parameters": "Hydrogen Peroxide, Temperature",
+    "description_vi": "Phụ kiện chính hãng chất lượng cao của hệ thống giám sát nước s::can (Badger Meter), đảm bảo độ đồng bộ và độ bền vận hành tối đa.",
+    "description_en": "The hyper-lyser is an amperometric sensor for monitoring hydrogen peroxide. It is ideal for all kinds of water treatment and produces stable readings even at high fluctuations of pH, temperature and flow. Strong surfactants are tolerated.",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp",
+      "Industrial Process"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/ami3lvjovu/png/hyperlyser-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/physical-sensors/hyperlyser-h2o2-physical-sensor/",
+    "brand": "s::can"
+  },
+  {
+    "id": "536",
+    "name": "nitro::lyser V3 Nitrate & Turbidity Spectrometer Probe",
+    "name_vi": "nitro::lyser V3 Nitrate & Turbidity Spectrometer Probe (Đầu dò quang phổ)",
+    "category": "Đầu dò quang phổ",
+    "category_en": "Spectrometer Probes",
+    "category_slug": "spectrometer",
+    "parameters": "NO3-N/NO3, Temperature, TSS/TS, Turbidity",
+    "description_vi": "Phụ kiện chính hãng chất lượng cao của hệ thống giám sát nước s::can (Badger Meter), đảm bảo độ đồng bộ và độ bền vận hành tối đa.",
+    "description_en": "The nitro-lyser measures nitrate concentration, turbidity and solids concentration. The displayed nitrate concentration is not affected by cross-influences from other substance groups such as organic carbon or total solids.",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước cấp & nước uống",
+      "Quan trắc môi trường sông hồ",
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp",
+      "Industrial Process"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/ipaxrzduob/png/nitrolyser-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/spectrometer-probes/nitrolyser-v3/",
+    "brand": "s::can"
+  },
+  {
+    "id": "528",
+    "name": "oxi::lyser Dissolved Oxygen Physical Sensor",
+    "name_vi": "oxi::lyser Dissolved Oxygen Physical Sensor (Cảm biến điện hóa & vật lý)",
+    "category": "Cảm biến điện hóa & vật lý",
+    "category_en": "Physical Sensors",
+    "category_slug": "sensor",
+    "parameters": "Dissolved Oxygen, Temperature",
+    "description_vi": "Phụ kiện chính hãng chất lượng cao của hệ thống giám sát nước s::can (Badger Meter), đảm bảo độ đồng bộ và độ bền vận hành tối đa.",
+    "description_en": "The oxi-lyser is an optical multiparameter probe that measures the concentration of dissolved oxygen (DO) and the temperature directly in the water. It does not need a minimum flow to produce accurate readings and integrates the temperature measurement for online correction. Minimal conventional calibration and virtually zero maintenance.",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước cấp & nước uống",
+      "Quan trắc môi trường sông hồ",
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp",
+      "Industrial Process"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/5xwqn5sere/png/oxilyser-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/physical-sensors/oxilyser-do-physical-sensor/",
+    "brand": "s::can"
+  },
+  {
+    "id": "532",
+    "name": "ozo::lyser V3 Ozone Spectrometer Probe",
+    "name_vi": "ozo::lyser V3 Ozone Spectrometer Probe (Đầu dò quang phổ)",
+    "category": "Đầu dò quang phổ",
+    "category_en": "Spectrometer Probes",
+    "category_slug": "spectrometer",
+    "parameters": "Dissolved Ozone, Temperature, TSS/TS, Turbidity",
+    "description_vi": "Phụ kiện chính hãng chất lượng cao của hệ thống giám sát nước s::can (Badger Meter), đảm bảo độ đồng bộ và độ bền vận hành tối đa.",
+    "description_en": "Measurement of ozone in water is what the ozo-lyser is optimized for. This member of the spectrometer family is optimized to determine concentrations of ozone dissolved in water online and in situ. It offers an alternative to classical electrochemical ozone sensors.",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước cấp & nước uống",
+      "Quan trắc môi trường sông hồ",
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp",
+      "Industrial Process"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/o4zphkgldu/png/ozolyser-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/spectrometer-probes/ozolyser-v3/",
+    "brand": "s::can"
+  },
+  {
+    "id": "537",
+    "name": "peroxy::lyser Peracetic Acid Physical Sensor",
+    "name_vi": "peroxy::lyser Peracetic Acid Physical Sensor (Cảm biến điện hóa & vật lý)",
+    "category": "Cảm biến điện hóa & vật lý",
+    "category_en": "Physical Sensors",
+    "category_slug": "sensor",
+    "parameters": "PAA, Temperature",
+    "description_vi": "Phụ kiện chính hãng chất lượng cao của hệ thống giám sát nước s::can (Badger Meter), đảm bảo độ đồng bộ và độ bền vận hành tối đa.",
+    "description_en": "The peroxy-lyser is an amperometric sensor for monitoring peracetic acid. It is ideal for a variety of water treatment and produces stable readings even at high fluctuations of pH, temperature and flow.",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp",
+      "Industrial Process"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/envq5ai6dj/png/peroxylyser-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/physical-sensors/peroxylyser-paa-physical-sensor/",
+    "brand": "s::can"
+  },
+  {
+    "id": "518",
+    "name": "pH::lyser pH and Temperature Physical Sensor",
+    "name_vi": "pH::lyser pH and Temperature Physical Sensor (Cảm biến điện hóa & vật lý)",
+    "category": "Cảm biến điện hóa & vật lý",
+    "category_en": "Physical Sensors",
+    "category_slug": "sensor",
+    "parameters": "pH, Temperature",
+    "description_vi": "Phụ kiện chính hãng chất lượng cao của hệ thống giám sát nước s::can (Badger Meter), đảm bảo độ đồng bộ và độ bền vận hành tối đa.",
+    "description_en": "The pH-lyser is designed for the real-time measurement of pH and temperature directly in the medium or in a flow-cell. Operates under tough conditions and in water with very low conductivity.",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước cấp & nước uống",
+      "Quan trắc môi trường sông hồ",
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp",
+      "Industrial Process",
+      "Collection System Monitoring",
+      "Data Centers"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/fvmic2zb5j/png/pHlyser-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/physical-sensors/phlyser-physical-sensor/",
+    "brand": "s::can"
+  },
+  {
+    "id": "529",
+    "name": "uv::lyser V3 Turbidity & Total Suspended Solids Spectrometer Probe",
+    "name_vi": "uv::lyser V3 Turbidity & Total Suspended Solids Spectrometer Probe (Đầu dò quang phổ)",
+    "category": "Đầu dò quang phổ",
+    "category_en": "Spectrometer Probes",
+    "category_slug": "spectrometer",
+    "parameters": "Temperature, TSS/TS, Turbidity, UVT, UV254",
+    "description_vi": "Phụ kiện chính hãng chất lượng cao của hệ thống giám sát nước s::can (Badger Meter), đảm bảo độ đồng bộ và độ bền vận hành tối đa.",
+    "description_en": "The uv-lyser monitors turbidity, total suspended solids and up to 4 individual wavelengths between 200 and 720 nm. Ideal for surface water, groundwater, drinking water and wastewater applications.",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước cấp & nước uống",
+      "Quan trắc môi trường sông hồ",
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp",
+      "Industrial Process"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/yho24eliyy/png/uvlyser-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/spectrometer-probes/uvlyser-v3/",
+    "brand": "s::can"
+  },
+  {
+    "id": "530",
+    "name": "multi::lyser V3 Spectrometer Probe",
+    "name_vi": "multi::lyser V3 Spectrometer Probe (Đầu dò quang phổ)",
+    "category": "Đầu dò quang phổ",
+    "category_en": "Spectrometer Probes",
+    "category_slug": "spectrometer",
+    "parameters": "BOD, COD, TOC, DOC, UV254, NO3-N/NO3, TSS/TS, Turbidity, Temperature",
+    "description_vi": "Phụ kiện chính hãng chất lượng cao của hệ thống giám sát nước s::can (Badger Meter), đảm bảo độ đồng bộ và độ bền vận hành tối đa.",
+    "description_en": "The multi-lyser combines the carbo-lyser and nitro-lyser and its ability to measure organic carbon and nitrate (NO3-N/NO3) for surface water, groundwater, drinking water and wastewater.",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước cấp & nước uống",
+      "Quan trắc môi trường sông hồ",
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp",
+      "Industrial Process"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/181szs3klx/png/multilyser-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/spectrometer-probes/multilyser-v3/",
+    "brand": "s::can"
+  },
+  {
+    "id": "479",
+    "name": "ammo::lyser Pro Ammonium Physical Sensor",
+    "name_vi": "ammo::lyser Pro Ammonium Physical Sensor (Cảm biến điện hóa & vật lý)",
+    "category": "Cảm biến điện hóa & vật lý",
+    "category_en": "Physical Sensors",
+    "category_slug": "sensor",
+    "parameters": "Ammonium, NO3-N/NO3, pH, TemperatureWith potassium compensation",
+    "description_vi": "Phụ kiện chính hãng chất lượng cao của hệ thống giám sát nước s::can (Badger Meter), đảm bảo độ đồng bộ và độ bền vận hành tối đa.",
+    "description_en": "A multiparameter probe for the online measurement of ammonium. It is a reliable device capable of outclassing conventional analyzers regarding measurement stability and lifetime. Precision is guaranteed by real-time compensation of the ammonium value with temperature, pH and potassium and a high-performance reference electrode.",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/kiqph6cwlc/png/ammolyser-pro-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/physical-sensors/ammolyser-pro/",
+    "brand": "s::can"
+  },
+  {
+    "id": "517",
+    "name": "redo::lyser ORP Physical Sensor",
+    "name_vi": "redo::lyser ORP Physical Sensor (Cảm biến điện hóa & vật lý)",
+    "category": "Cảm biến điện hóa & vật lý",
+    "category_en": "Physical Sensors",
+    "category_slug": "sensor",
+    "parameters": "ORP, Temperature",
+    "description_vi": "Phụ kiện chính hãng chất lượng cao của hệ thống giám sát nước s::can (Badger Meter), đảm bảo độ đồng bộ và độ bền vận hành tối đa.",
+    "description_en": "The redo-lyser is a long-term stable and maintenance-free sensor for the online measurement of Oxidation-Reduction Potential (ORP) immersed in the medium or in a flow cell.",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước cấp & nước uống",
+      "Quan trắc môi trường sông hồ",
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp",
+      "Industrial Process"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/3mfzrgcktz/png/redolyser-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/physical-sensors/redolyser-redox-physical-sensor/",
+    "brand": "s::can"
+  },
+  {
+    "id": "523",
+    "name": "soli::lyser Suspended Solids Physical Sensor",
+    "name_vi": "soli::lyser Suspended Solids Physical Sensor (Cảm biến điện hóa & vật lý)",
+    "category": "Cảm biến điện hóa & vật lý",
+    "category_en": "Physical Sensors",
+    "category_slug": "sensor",
+    "parameters": "TSS/TS",
+    "description_vi": "Phụ kiện chính hãng chất lượng cao của hệ thống giám sát nước s::can (Badger Meter), đảm bảo độ đồng bộ và độ bền vận hành tối đa.",
+    "description_en": "The soli-lyser is an optical probe that measures concentrations of suspended solids directly in the water. Using the principle of infrared absorbance, the readings are not affected by colors.",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước cấp & nước uống",
+      "Quan trắc môi trường sông hồ",
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp",
+      "Industrial Process"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/bras1vcb8e/png/solilyser-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/physical-sensors/solilyser-physical-sensor/",
+    "brand": "s::can"
+  },
+  {
+    "id": "520",
+    "name": "i::scan Spectrophotometer Probe",
+    "name_vi": "i::scan Spectrophotometer Probe (Đầu dò quang phổ)",
+    "category": "Đầu dò quang phổ",
+    "category_en": "Spectrometer Probes",
+    "category_slug": "spectrometer",
+    "parameters": "COD, Color, DOC, Temperature, TOC, TSS/TS, Turbidity, UV254",
+    "description_vi": "Phụ kiện chính hãng chất lượng cao của hệ thống giám sát nước s::can (Badger Meter), đảm bảo độ đồng bộ và độ bền vận hành tối đa.",
+    "description_en": "From very cost-sensitive applications down to highly resolved smart water grids, the i-scan multiparameter spectrophotometer probe combines the high performance of a multi-wavelength spectrophotometer with the lower costs of simple photometers.",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước cấp & nước uống",
+      "Quan trắc môi trường sông hồ",
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp",
+      "Industrial Process",
+      "Data Centers"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/jufrc8wtwh/jpeg/iscan.jpeg?w=600&h=600&keep=c&crop=yes&color=ffffffff&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/spectrometer-probes/iscan/",
+    "brand": "s::can"
+  },
+  {
+    "id": "445",
+    "name": "Air Compressor for Spectrometer Probes and Sensors",
+    "name_vi": "Air Compressor for Spectrometer Probes and Sensors (Phụ kiện & trạm đo quang học)",
+    "category": "Phụ kiện & trạm đo quang học",
+    "category_en": "Water Quality Accessories",
+    "category_slug": "accessory",
+    "parameters": "",
+    "description_vi": "Hệ thống làm sạch quang học tự động dành cho các đầu dò s::can, ngăn ngừa hiện tượng bám màng sinh học và cặn bẩn, giúp thiết bị đo ổn định lâu dài mà không cần can thiệp bảo trì thủ công.",
+    "description_en": "Provides compressed air for oxi-lyser, soli-lyser, ammo-lyser and spectrometer probes.\n\nRemoval of fouling using compressed air\nAluminum housing IP65 for wall mounting\nOptional 12 VDC or 110 VAC versions available\nRailing-mounting set available",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước cấp & nước uống",
+      "Quan trắc môi trường sông hồ",
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/7khaaxdk6i/png/air-compressor-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/air-compressor/",
+    "brand": "s::can"
+  },
+  {
+    "id": "448",
+    "name": "Ammonium Electrode for ammo::lyser",
+    "name_vi": "Ammonium Electrode for ammo::lyser (Phụ kiện & trạm đo quang học)",
+    "category": "Phụ kiện & trạm đo quang học",
+    "category_en": "Water Quality Accessories",
+    "category_slug": "accessory",
+    "parameters": "",
+    "description_vi": "Điện cực thay thế chính hãng chất lượng cao cho cảm biến s::can, độ nhạy cao và tuổi thọ bền bỉ trong môi trường giám sát nước liên tục.",
+    "description_en": "An ion-selective electrode for measuring the ammonium concentration with the ammo-lyser.\n\nProtection class: IP 68 (mounted in housing)\nApplication: Wastewater, surface water and drinking water",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước cấp & nước uống",
+      "Quan trắc môi trường sông hồ",
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/8axjqwt0qu/png/ammonium-electrode-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/ammolyser-ammonium-electrode/",
+    "brand": "s::can"
+  },
+  {
+    "id": "465",
+    "name": "ana::tool Event Detection Software",
+    "name_vi": "ana::tool Event Detection Software (Phụ kiện & trạm đo quang học)",
+    "category": "Phụ kiện & trạm đo quang học",
+    "category_en": "Water Quality Accessories",
+    "category_slug": "accessory",
+    "parameters": "",
+    "description_vi": "Phần mềm phân tích dữ liệu và phát hiện bất thường nguồn nước theo thời gian thực, tự động cảnh báo các sự cố ô nhiễm hoặc chất lạ trong nguồn nước sinh hoạt.",
+    "description_en": "ana-tool identifies unknown and unusual conditions and enables operators to react in a timely manner to faults in the monitored system, determines normality of this data and triggers an alarm when a significant deviation from the norm is detected.\n\nOpen interface to all types of sensors and measuring devices\nOnline and real-time validation of data before event detection significantly reduces false alarm rate\nGraphical user interface provides an overview of the entire station at a glance Web-based interface, allows access at any time from any location\nDesigned to take advantage of the extensive capabilities of spectral data\nIncludes an indicator of actual alarm sensitivity\nWith automatic training with a moving time window, the system automatically adapts to slow changes in the water matrix\nThe sensitivity of the alarm system is reduced during periods when the water composition changes continuously",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước cấp & nước uống",
+      "Quan trắc môi trường sông hồ",
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/rhxvoojz57/png/anatool-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/anatool-event-detection-software/",
+    "brand": "s::can"
+  },
+  {
+    "id": "470",
+    "name": "auto::blade Mechanical Cleaning for Spectrometer Probes",
+    "name_vi": "auto::blade Mechanical Cleaning for Spectrometer Probes (Phụ kiện & trạm đo quang học)",
+    "category": "Phụ kiện & trạm đo quang học",
+    "category_en": "Water Quality Accessories",
+    "category_slug": "accessory",
+    "parameters": "",
+    "description_vi": "Hệ thống làm sạch quang học tự động dành cho các đầu dò s::can, ngăn ngừa hiện tượng bám màng sinh học và cặn bẩn, giúp thiết bị đo ổn định lâu dài mà không cần can thiệp bảo trì thủ công.",
+    "description_en": "The auto-blade is a mechanical cleaning accessory for spectrometer probes.\n\nMounting on F-48-V3 wastewater flow cell\nExchangeable wiper blades\nSet of cleaning and valve unit\nPath length: 5 mm",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước cấp & nước uống",
+      "Quan trắc môi trường sông hồ",
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/c7drpspyou/png/autoblade-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/autoblade-mechanical-cleaning/",
+    "brand": "s::can"
+  },
+  {
+    "id": "469",
+    "name": "Carrier for Submersed Sensors",
+    "name_vi": "Carrier for Submersed Sensors (Phụ kiện & trạm đo quang học)",
+    "category": "Phụ kiện & trạm đo quang học",
+    "category_en": "Water Quality Accessories",
+    "category_slug": "accessory",
+    "parameters": "",
+    "description_vi": "Bộ phụ kiện gá lắp, ngâm chìm hoặc gá áp lực trên đường ống công nghiệp, chế tạo bằng thép không gỉ SS316 hoặc nhựa kỹ thuật POM-C/PVC bền bỉ.",
+    "description_en": "The carrier is used for proper and easy submersed installation for Badger Meter sensors.\n\nSensor cable and pressure hose compatible\nMounting with pipe: 50 mm\nHousing material: PVC and stainless steel",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước cấp & nước uống",
+      "Quan trắc môi trường sông hồ",
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/kinf22uq9e/png/submersed-carrier-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/submersed-sensor-carrier/",
+    "brand": "s::can"
+  },
+  {
+    "id": "473",
+    "name": "Cleaning Agent for Spectrometer Probes",
+    "name_vi": "Cleaning Agent for Spectrometer Probes (Phụ kiện & trạm đo quang học)",
+    "category": "Phụ kiện & trạm đo quang học",
+    "category_en": "Water Quality Accessories",
+    "category_slug": "accessory",
+    "parameters": "",
+    "description_vi": "Hệ thống làm sạch quang học tự động dành cho các đầu dò s::can, ngăn ngừa hiện tượng bám màng sinh học và cặn bẩn, giúp thiết bị đo ổn định lâu dài mà không cần can thiệp bảo trì thủ công.",
+    "description_en": "This liquid supports the easy and proper cleaning of the measuring windows of various spectrometer probes.\n\nChemical removal of persistent window fouling\nEffective for grease and organic fouling",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước cấp & nước uống",
+      "Quan trắc môi trường sông hồ",
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/krjq92yiat/png/cleaning-agent-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/probe-cleaning-agent/",
+    "brand": "s::can"
+  },
+  {
+    "id": "474",
+    "name": "Cleaning Valve for Spectrometer Probes & Sensors",
+    "name_vi": "Cleaning Valve for Spectrometer Probes & Sensors (Phụ kiện & trạm đo quang học)",
+    "category": "Phụ kiện & trạm đo quang học",
+    "category_en": "Water Quality Accessories",
+    "category_slug": "accessory",
+    "parameters": "",
+    "description_vi": "Hệ thống làm sạch quang học tự động dành cho các đầu dò s::can, ngăn ngừa hiện tượng bám màng sinh học và cặn bẩn, giúp thiết bị đo ổn định lâu dài mà không cần can thiệp bảo trì thủ công.",
+    "description_en": "Supports automatic cleaning of measuring elements for oxil-yser, soli-lyser, ammo-lyser and spectrometer probes.\n\nRemoval of fouling, sediments and clogging using compressed air or water\nWorks with the Air Compressor for Spectrometer Probes & Sensors",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước cấp & nước uống",
+      "Quan trắc môi trường sông hồ",
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/s4tb43euxx/png/cleaning-valve-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/cleaning-valve/",
+    "brand": "s::can"
+  },
+  {
+    "id": "499",
+    "name": "con::nect Power Supply for spectro::lyser",
+    "name_vi": "con::nect Power Supply for spectro::lyser (Phụ kiện & trạm đo quang học)",
+    "category": "Phụ kiện & trạm đo quang học",
+    "category_en": "Water Quality Accessories",
+    "category_slug": "accessory",
+    "parameters": "",
+    "description_vi": "Bộ cấp nguồn và chuyển đổi giao tiếp công nghiệp cho đầu dò quang phổ spectro::lyser, hỗ trợ kết nối Modbus RTU / TCP, 4-20mA và kết nối PC.",
+    "description_en": "Transform your computer into a terminal for the spectro-lyser. The interface box connects the probes to the computer, the supply of compressed air and power supply.\n\nThe con-nect serves as a power supply, providing a convenient solution for powering and connecting spectrometer probes and sensor probes\nThe device offers USB interface to a computer, facilitating easy data transfer and configuration. Additionally, it features an RS485 interface to SCADA systems with Modbus RTU integrated\nThe device allows for the control of cleaning valves, enabling automated maintenance routines\nWith power supply options of 12/24 VDC and 110/230 VAC",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước cấp & nước uống",
+      "Quan trắc môi trường sông hồ",
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/ydkkbnpezn/png/connect-powersupply-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/connect-power-supply/",
+    "brand": "s::can"
+  },
+  {
+    "id": "501",
+    "name": "con::nect V3 for spectro::lyser V3",
+    "name_vi": "con::nect V3 for spectro::lyser V3 (Phụ kiện & trạm đo quang học)",
+    "category": "Phụ kiện & trạm đo quang học",
+    "category_en": "Water Quality Accessories",
+    "category_slug": "accessory",
+    "parameters": "",
+    "description_vi": "Bộ cấp nguồn và chuyển đổi giao tiếp công nghiệp cho đầu dò quang phổ spectro::lyser, hỗ trợ kết nối Modbus RTU / TCP, 4-20mA và kết nối PC.",
+    "description_en": "Connects to the spectro-lyser V3 via WLAN and use the user-friendly web interface Io-Tool for probe configuration and data visualization.\n\nAn efficient connection device for one spectro-lyser V3 probe and one cleaning device\nWith the ability to expand con-cube and con-lyte sensor networks, the device facilitates longer distances and a higher number of sensors\nFeaturing an RJ45 connector for wired network access, the device provides flexible connectivity options",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước cấp & nước uống",
+      "Quan trắc môi trường sông hồ",
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/bh8zlfs7y0/png/connect-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/connect-v3/",
+    "brand": "s::can"
+  },
+  {
+    "id": "475",
+    "name": "Extension Cable for Physical Sensors",
+    "name_vi": "Extension Cable for Physical Sensors (Phụ kiện & trạm đo quang học)",
+    "category": "Phụ kiện & trạm đo quang học",
+    "category_en": "Water Quality Accessories",
+    "category_slug": "accessory",
+    "parameters": "",
+    "description_vi": "Cáp nối dài tín hiệu công nghiệp chuẩn chống nước IP68, đảm bảo truyền dẫn tín hiệu số ổn định từ cảm biến về bộ điều khiển trung tâm ở khoảng cách xa.",
+    "description_en": "An extension of the sensor cable with IP 68 plug connection for flexible adaptation to local conditions.\n\nAvailable in three cable lengths: 33 feet (10 meters), 66 feet (20 meters) or 98 feet (30 meters)",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước cấp & nước uống",
+      "Quan trắc môi trường sông hồ",
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/lb7zhisrjd/png/physical-sensor-extension-cable-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/physical-sensor-extension-cable/",
+    "brand": "s::can"
+  },
+  {
+    "id": "477",
+    "name": "Extension Cable for Spectrometer Probes",
+    "name_vi": "Extension Cable for Spectrometer Probes (Phụ kiện & trạm đo quang học)",
+    "category": "Phụ kiện & trạm đo quang học",
+    "category_en": "Water Quality Accessories",
+    "category_slug": "accessory",
+    "parameters": "",
+    "description_vi": "Cáp nối dài tín hiệu công nghiệp chuẩn chống nước IP68, đảm bảo truyền dẫn tín hiệu số ổn định từ cảm biến về bộ điều khiển trung tâm ở khoảng cách xa.",
+    "description_en": "This extension cable for spectrometer probes has an IP 67 plug connection and adapts to local conditions with flexibility.\n\nAvailable in three cable lengths: 33 feet (10 meters), 66 feet (20 meters) or 98 feet (30 meters)",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước cấp & nước uống",
+      "Quan trắc môi trường sông hồ",
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/amn28uotoa/png/spectrometer-extension-cable-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/probe-extension-cable/",
+    "brand": "s::can"
+  },
+  {
+    "id": "478",
+    "name": "Field Case for Spectrometer Probes",
+    "name_vi": "Field Case for Spectrometer Probes (Phụ kiện & trạm đo quang học)",
+    "category": "Phụ kiện & trạm đo quang học",
+    "category_en": "Water Quality Accessories",
+    "category_slug": "accessory",
+    "parameters": "",
+    "description_vi": "Phụ kiện chính hãng chất lượng cao của hệ thống giám sát nước s::can (Badger Meter), đảm bảo độ đồng bộ và độ bền vận hành tối đa.",
+    "description_en": "The field case provides remote monitoring and power for spectrometer probes.\n\nStand-alone field case\nNo power supply necessary\nRemote usage",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước cấp & nước uống",
+      "Quan trắc môi trường sông hồ",
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/cakhwox8mh/png/field-case-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/probe-field-case/",
+    "brand": "s::can"
+  },
+  {
+    "id": "484",
+    "name": "Flow Cell Autobrush for spectro::lyser - Pathlength: 100 mm",
+    "name_vi": "Flow Cell Autobrush for spectro::lyser - Pathlength: 100 mm (Phụ kiện & trạm đo quang học)",
+    "category": "Phụ kiện & trạm đo quang học",
+    "category_en": "Water Quality Accessories",
+    "category_slug": "accessory",
+    "parameters": "",
+    "description_vi": "Buồng đo dòng chảy (Flow Cell) chuyên dụng cho Flow Cell Autobrush for spectro::lyser - Pathlength: 100 mm, cho phép dẫn mẫu nước qua điện cực hoặc đầu dò với lưu lượng ổn định, lắp đặt dễ dàng trên bảng panel hoặc đường ống bypass.",
+    "description_en": "Flow cell autobrush for spectro-lyser - 100 mm. For proper and easy flow-through installation of spectrometer probes\n\nFor proper and easy flow-through installation of spectrometer probes\nDesigned for applications with frequent, automatic cleaning\nCleaning of optical windows with rotating brush without demounting of spectrometer probe probes\nPathlength: 100 mm",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước cấp & nước uống",
+      "Quan trắc môi trường sông hồ",
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/6rh03cj3nv/png/Flow-Cell-Autobrush-spectrolyser-100mm-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/flow-cell-autobrush-100mm/",
+    "brand": "s::can"
+  },
+  {
+    "id": "485",
+    "name": "Flow Cell Autobrush for spectro::lyser - Pathlength: 35 mm",
+    "name_vi": "Flow Cell Autobrush for spectro::lyser - Pathlength: 35 mm (Phụ kiện & trạm đo quang học)",
+    "category": "Phụ kiện & trạm đo quang học",
+    "category_en": "Water Quality Accessories",
+    "category_slug": "accessory",
+    "parameters": "",
+    "description_vi": "Buồng đo dòng chảy (Flow Cell) chuyên dụng cho Flow Cell Autobrush for spectro::lyser - Pathlength: 35 mm, cho phép dẫn mẫu nước qua điện cực hoặc đầu dò với lưu lượng ổn định, lắp đặt dễ dàng trên bảng panel hoặc đường ống bypass.",
+    "description_en": "Used for proper and easy flow-through installation of spectro-lyser probes.\n\nDesigned for applications with frequent, automatic cleaning\nCleaning of optical windows with rotating brush without demounting of spectrometer probe probes\nHousing material: POM-C\nPathlegnth: 35 mm",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước cấp & nước uống",
+      "Quan trắc môi trường sông hồ",
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/chojarypru/png/Flow-Cell-Autobrush-spectrolyser-35mm-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/flow-cell-autobrush-35mm/",
+    "brand": "s::can"
+  },
+  {
+    "id": "486",
+    "name": "Flow Cell for condu::lyser, chlori::lyser, redo::lyser and pH::lyser",
+    "name_vi": "Flow Cell for condu::lyser, chlori::lyser, redo::lyser and pH::lyser (Phụ kiện & trạm đo quang học)",
+    "category": "Phụ kiện & trạm đo quang học",
+    "category_en": "Water Quality Accessories",
+    "category_slug": "accessory",
+    "parameters": "",
+    "description_vi": "Buồng đo dòng chảy (Flow Cell) chuyên dụng cho Flow Cell for condu::lyser, chlori::lyser, redo::lyser and pH::lyser, cho phép dẫn mẫu nước qua điện cực hoặc đầu dò với lưu lượng ổn định, lắp đặt dễ dàng trên bảng panel hoặc đường ống bypass.",
+    "description_en": "Flow cell for proper and easy flow-through installation of condu-lyser, chlori-lyser, redo-lyser and pH-lyser physical sensors.\n\nFor applications without automatic cleaning in drinking water\nHousing material: POM-C",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước cấp & nước uống",
+      "Quan trắc môi trường sông hồ",
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/fcimkhvd9z/png/Flow-Cell-condu-lyser-chlorilyser-redolyser-pHlyser-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/flow-cell/",
+    "brand": "s::can"
+  },
+  {
+    "id": "487",
+    "name": "Flow Cell for i::scan and Three More Probes",
+    "name_vi": "Flow Cell for i::scan and Three More Probes (Phụ kiện & trạm đo quang học)",
+    "category": "Phụ kiện & trạm đo quang học",
+    "category_en": "Water Quality Accessories",
+    "category_slug": "accessory",
+    "parameters": "",
+    "description_vi": "Buồng đo dòng chảy (Flow Cell) chuyên dụng cho Flow Cell for i::scan and Three More Probes, cho phép dẫn mẫu nước qua điện cực hoặc đầu dò với lưu lượng ổn định, lắp đặt dễ dàng trên bảng panel hoặc đường ống bypass.",
+    "description_en": "Flow cell for proper and easy flow-through installation of an i-scan and up to three physical probes.\n\nAutomatic cleaning with auto brush for i-scan available (optional)\nHousing material: POM-C",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước cấp & nước uống",
+      "Quan trắc môi trường sông hồ",
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/di3bnvuuwx/png/Flow-cell-iscan-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/4-probe-flow-cell/",
+    "brand": "s::can"
+  },
+  {
+    "id": "488",
+    "name": "Flow Cell for ISE Probe",
+    "name_vi": "Flow Cell for ISE Probe (Phụ kiện & trạm đo quang học)",
+    "category": "Phụ kiện & trạm đo quang học",
+    "category_en": "Water Quality Accessories",
+    "category_slug": "accessory",
+    "parameters": "",
+    "description_vi": "Buồng đo dòng chảy (Flow Cell) chuyên dụng cho Flow Cell for ISE Probe, cho phép dẫn mẫu nước qua điện cực hoặc đầu dò với lưu lượng ổn định, lắp đặt dễ dàng trên bảng panel hoặc đường ống bypass.",
+    "description_en": "A PVC flow-through fitting for measuring wastewater or surface water in the by-pass with an ammo-lyser.\n\nApplication: Wastewater and surface water\nHousing material: PVC",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước cấp & nước uống",
+      "Quan trắc môi trường sông hồ",
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/apcjynhzr6/png/Flow-cell-ise-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/ise-probe-flow-cell/",
+    "brand": "s::can"
+  },
+  {
+    "id": "489",
+    "name": "Flow Cell for pH::lyser, redo::lyser & condu::lyser Sensors",
+    "name_vi": "Flow Cell for pH::lyser, redo::lyser & condu::lyser Sensors (Phụ kiện & trạm đo quang học)",
+    "category": "Phụ kiện & trạm đo quang học",
+    "category_en": "Water Quality Accessories",
+    "category_slug": "accessory",
+    "parameters": "",
+    "description_vi": "Buồng đo dòng chảy (Flow Cell) chuyên dụng cho Flow Cell for pH::lyser, redo::lyser & condu::lyser Sensors, cho phép dẫn mẫu nước qua điện cực hoặc đầu dò với lưu lượng ổn định, lắp đặt dễ dàng trên bảng panel hoặc đường ống bypass.",
+    "description_en": "Used for proper and easy flow-through installation of pH-lyser, redo-lyser and condu-lyser spectrometer probes.\n\nApplication: Wastewater\nHousing material: PVC\nFor applications without automatic cleaning",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước cấp & nước uống",
+      "Quan trắc môi trường sông hồ",
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/bbztz51lp7/png/Flow-Cell-pHlyser-redolyser-condulyser-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/sensor-flow-cell/",
+    "brand": "s::can"
+  },
+  {
+    "id": "490",
+    "name": "Flow Cell for Spectrometer Probes - Pathlength: 100 mm",
+    "name_vi": "Flow Cell for Spectrometer Probes - Pathlength: 100 mm (Phụ kiện & trạm đo quang học)",
+    "category": "Phụ kiện & trạm đo quang học",
+    "category_en": "Water Quality Accessories",
+    "category_slug": "accessory",
+    "parameters": "",
+    "description_vi": "Buồng đo dòng chảy (Flow Cell) chuyên dụng cho Flow Cell for Spectrometer Probes - Pathlength: 100 mm, cho phép dẫn mẫu nước qua điện cực hoặc đầu dò với lưu lượng ổn định, lắp đặt dễ dàng trên bảng panel hoặc đường ống bypass.",
+    "description_en": "Used for proper and easy flow-through installation of spectrometer probes.\n\nHousing material: POM-C\nPathlength: 100 mm\nHose connection size: 1/2 inch (12 mm)\nFor applications without automatic cleaning",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước cấp & nước uống",
+      "Quan trắc môi trường sông hồ",
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/vmcpf8qcek/png/Flow-cell-spectrometer-100mm-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/probe-flow-cell-100mm/",
+    "brand": "s::can"
+  },
+  {
+    "id": "493",
+    "name": "Flow Cell for Spectrometer Probes - Pathlength Up to 35 mm",
+    "name_vi": "Flow Cell for Spectrometer Probes - Pathlength Up to 35 mm (Phụ kiện & trạm đo quang học)",
+    "category": "Phụ kiện & trạm đo quang học",
+    "category_en": "Water Quality Accessories",
+    "category_slug": "accessory",
+    "parameters": "",
+    "description_vi": "Buồng đo dòng chảy (Flow Cell) chuyên dụng cho Flow Cell for Spectrometer Probes - Pathlength Up to 35 mm, cho phép dẫn mẫu nước qua điện cực hoặc đầu dò với lưu lượng ổn định, lắp đặt dễ dàng trên bảng panel hoặc đường ống bypass.",
+    "description_en": "Used for proper and easy flow-through installation of spectrometer probes.\n\nHousing material: POM-C\nPathlength: 0.5 - 35 mm\nHose connection size: 1/2 inch (12 mm)",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước cấp & nước uống",
+      "Quan trắc môi trường sông hồ",
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/cq6vdcobwy/png/Flow-cell-spectrometer-35mm-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/probe-flow-cell-35mm/",
+    "brand": "s::can"
+  },
+  {
+    "id": "492",
+    "name": "Flow Cell for Spectrometer Probes for Wastewater",
+    "name_vi": "Flow Cell for Spectrometer Probes for Wastewater (Phụ kiện & trạm đo quang học)",
+    "category": "Phụ kiện & trạm đo quang học",
+    "category_en": "Water Quality Accessories",
+    "category_slug": "accessory",
+    "parameters": "",
+    "description_vi": "Buồng đo dòng chảy (Flow Cell) chuyên dụng cho Flow Cell for Spectrometer Probes for Wastewater, cho phép dẫn mẫu nước qua điện cực hoặc đầu dò với lưu lượng ổn định, lắp đặt dễ dàng trên bảng panel hoặc đường ống bypass.",
+    "description_en": "Used for proper and easy flow-through installation of one spectrometer probe in wastewater applications.\n\nApplication: Wastewater\nHousing material: PVC",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước cấp & nước uống",
+      "Quan trắc môi trường sông hồ",
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/kbysg4wuvk/png/Flow-cell-wastewater-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/wastewater-probe-flow-cell/",
+    "brand": "s::can"
+  },
+  {
+    "id": "491",
+    "name": "i::scan Carrier Housings",
+    "name_vi": "i::scan Carrier Housings (Phụ kiện & trạm đo quang học)",
+    "category": "Phụ kiện & trạm đo quang học",
+    "category_en": "Water Quality Accessories",
+    "category_slug": "accessory",
+    "parameters": "",
+    "description_vi": "Bộ phụ kiện gá lắp, ngâm chìm hoặc gá áp lực trên đường ống công nghiệp, chế tạo bằng thép không gỉ SS316 hoặc nhựa kỹ thuật POM-C/PVC bền bỉ.",
+    "description_en": "i-scan carrier for connection to i-scan spectrometer probe.\n\nHousing material: PVC, POM-C\nSubmersible mounting\nAvailable in three carrier orientations: Horizontal, vertical and 45 degree angle attachment",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước cấp & nước uống",
+      "Quan trắc môi trường sông hồ",
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/bxjtxwqp74/png/iscan-carrier-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/iscan-carrier-housing/",
+    "brand": "s::can"
+  },
+  {
+    "id": "483",
+    "name": "Multifunctional Slide for Spectrometer Probes - Pathlength: 100 mm",
+    "name_vi": "Multifunctional Slide for Spectrometer Probes - Pathlength: 100 mm (Phụ kiện & trạm đo quang học)",
+    "category": "Phụ kiện & trạm đo quang học",
+    "category_en": "Water Quality Accessories",
+    "category_slug": "accessory",
+    "parameters": "",
+    "description_vi": "Phụ kiện chính hãng chất lượng cao của hệ thống giám sát nước s::can (Badger Meter), đảm bảo độ đồng bộ và độ bền vận hành tối đa.",
+    "description_en": "This multi-purpose sleeve is used for centering spectrometer probes. Offered in 100 mm pathlength.\n\nFor use with: Spectrometer probes\nFor spectral measurement in laboratory\nPathlength: 100 mm",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước cấp & nước uống",
+      "Quan trắc môi trường sông hồ",
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/i1vbcq2hhx/png/multifunction-slide-100mm-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/probe-multifunctional-slide-100mm/",
+    "brand": "s::can"
+  },
+  {
+    "id": "482",
+    "name": "Multifunctional Slide for Spectrometer Probes - Pathlength: 35 mm",
+    "name_vi": "Multifunctional Slide for Spectrometer Probes - Pathlength: 35 mm (Phụ kiện & trạm đo quang học)",
+    "category": "Phụ kiện & trạm đo quang học",
+    "category_en": "Water Quality Accessories",
+    "category_slug": "accessory",
+    "parameters": "",
+    "description_vi": "Phụ kiện chính hãng chất lượng cao của hệ thống giám sát nước s::can (Badger Meter), đảm bảo độ đồng bộ và độ bền vận hành tối đa.",
+    "description_en": "This multi-purpose sleeve is used for centering spectrometer probes. Offered in up to 35 mm pathlength.\n\nFor use with: Spectrometer probes\nFor spectral measurement in laboratory\nPathlength: 0.5 - 35 mm",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước cấp & nước uống",
+      "Quan trắc môi trường sông hồ",
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/fs1jztx3c7/png/multifunction-slide-35mm-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/probe-multifunctional-slide-35mm/",
+    "brand": "s::can"
+  },
+  {
+    "id": "452",
+    "name": "pH Electrode for ammo::lyser",
+    "name_vi": "pH Electrode for ammo::lyser (Phụ kiện & trạm đo quang học)",
+    "category": "Phụ kiện & trạm đo quang học",
+    "category_en": "Water Quality Accessories",
+    "category_slug": "accessory",
+    "parameters": "",
+    "description_vi": "Điện cực thay thế chính hãng chất lượng cao cho cảm biến s::can, độ nhạy cao và tuổi thọ bền bỉ trong môi trường giám sát nước liên tục.",
+    "description_en": "An Ion-selective electrode for the ammo-lyser, used to measure the pH value.\n\nApplication: Wastewater, surface water and drinking water\nFor use with: ammo-lyser physical sensors\nMeasures: pH",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước cấp & nước uống",
+      "Quan trắc môi trường sông hồ",
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/kfvdddrumk/png/pH-electrode-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/ammolyser-ph-electrode/",
+    "brand": "s::can"
+  },
+  {
+    "id": "463",
+    "name": "Potassium Electrode for ammo::lyser",
+    "name_vi": "Potassium Electrode for ammo::lyser (Phụ kiện & trạm đo quang học)",
+    "category": "Phụ kiện & trạm đo quang học",
+    "category_en": "Water Quality Accessories",
+    "category_slug": "accessory",
+    "parameters": "",
+    "description_vi": "Điện cực thay thế chính hãng chất lượng cao cho cảm biến s::can, độ nhạy cao và tuổi thọ bền bỉ trong môi trường giám sát nước liên tục.",
+    "description_en": "An ion-selective electrode for the ammo-lyser, used to measure potassium concentration.\n\nApplication: Wastewater, surface water and drinking water\nFor use with: ammo-lyser physical sensors\nMeasures: Potassium concentration",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước cấp & nước uống",
+      "Quan trắc môi trường sông hồ",
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/ne8rcing31/png/potassium-electrode-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/ammolyser-potassium-electrode/",
+    "brand": "s::can"
+  },
+  {
+    "id": "481",
+    "name": "Pressure Mounting for i::scan In-Pipe Installation",
+    "name_vi": "Pressure Mounting for i::scan In-Pipe Installation (Phụ kiện & trạm đo quang học)",
+    "category": "Phụ kiện & trạm đo quang học",
+    "category_en": "Water Quality Accessories",
+    "category_slug": "accessory",
+    "parameters": "",
+    "description_vi": "Bộ phụ kiện gá lắp, ngâm chìm hoặc gá áp lực trên đường ống công nghiệp, chế tạo bằng thép không gỉ SS316 hoặc nhựa kỹ thuật POM-C/PVC bền bỉ.",
+    "description_en": "Allows for the i-scan spectrometer probe to be mounted and demounted under pressure without interruption of water flow.\n\nFor use with: i-scan spectrometer probes\nEnables under pressure drilling of pipes made of: PE, PVC, DCI, steel and AC pipes\nHousing material: Steel\nProcess connection: Handle shut off saddle with a o-ring (DN 50 &ndash; DN 300 & others on request)",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước cấp & nước uống",
+      "Quan trắc môi trường sông hồ",
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/p0ltr6slir/png/iscan-pressure-mount-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/iscan-pressure-mounting/",
+    "brand": "s::can"
+  },
+  {
+    "id": "464",
+    "name": "Reference Electrode for ammo::lyser",
+    "name_vi": "Reference Electrode for ammo::lyser (Phụ kiện & trạm đo quang học)",
+    "category": "Phụ kiện & trạm đo quang học",
+    "category_en": "Water Quality Accessories",
+    "category_slug": "accessory",
+    "parameters": "",
+    "description_vi": "Điện cực thay thế chính hãng chất lượng cao cho cảm biến s::can, độ nhạy cao và tuổi thọ bền bỉ trong môi trường giám sát nước liên tục.",
+    "description_en": "A durable and stable reference electrode for the ammo-lyser for measuring various parameters in wastewater, surface water or drinking water.\n\nLong life (&plusmn;3 years)\nNon-porous, solid state electrode\nSmaller drift than conventional electrodes\nProtection class: IP 68 (mounted in housing)",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước cấp & nước uống",
+      "Quan trắc môi trường sông hồ",
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/f4qplhtrwg/png/reference-electrode-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/ammolyser-reference-electrode/",
+    "brand": "s::can"
+  },
+  {
+    "id": "456",
+    "name": "ruck::sack Submersible Autobrush for Spectrometer Probes",
+    "name_vi": "ruck::sack Submersible Autobrush for Spectrometer Probes (Phụ kiện & trạm đo quang học)",
+    "category": "Phụ kiện & trạm đo quang học",
+    "category_en": "Water Quality Accessories",
+    "category_slug": "accessory",
+    "parameters": "",
+    "description_vi": "Hệ thống làm sạch quang học tự động dành cho các đầu dò s::can, ngăn ngừa hiện tượng bám màng sinh học và cặn bẩn, giúp thiết bị đo ổn định lâu dài mà không cần can thiệp bảo trì thủ công.",
+    "description_en": "The ruck-sack is an attachment for spectrometer probes and for the i-scan with submersible autobrush and exchangeable cleaning brushes.\n\nSubmersible autobrush for spectrometer probes and i-scan\nExchangeble brushes\nShelter protects the brush from clogging\nOffered in several pathlengths: 5 mm, 15 mm and 35 mm",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước cấp & nước uống",
+      "Quan trắc môi trường sông hồ",
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/rpusfenkpv/png/rucksack-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/rucksack-submersible-autobrush/",
+    "brand": "s::can"
+  },
+  {
+    "id": "468",
+    "name": "Single i::scan Flow Cell",
+    "name_vi": "Single i::scan Flow Cell (Phụ kiện & trạm đo quang học)",
+    "category": "Phụ kiện & trạm đo quang học",
+    "category_en": "Water Quality Accessories",
+    "category_slug": "accessory",
+    "parameters": "",
+    "description_vi": "Buồng đo dòng chảy (Flow Cell) chuyên dụng cho Single i::scan Flow Cell, cho phép dẫn mẫu nước qua điện cực hoặc đầu dò với lưu lượng ổn định, lắp đặt dễ dàng trên bảng panel hoặc đường ống bypass.",
+    "description_en": "Used for proper and easy flow-through installation of i-scan in wastewater.\n\nApplication: Wastewater\nHousing material: PVC",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước cấp & nước uống",
+      "Quan trắc môi trường sông hồ",
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/jjtdf8nngm/png/flow-cell-iscan-single-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/single-iscan-flow-cell/",
+    "brand": "s::can"
+  },
+  {
+    "id": "467",
+    "name": "Single i::scan Flow Cell Bypass Fitting",
+    "name_vi": "Single i::scan Flow Cell Bypass Fitting (Phụ kiện & trạm đo quang học)",
+    "category": "Phụ kiện & trạm đo quang học",
+    "category_en": "Water Quality Accessories",
+    "category_slug": "accessory",
+    "parameters": "",
+    "description_vi": "Buồng đo dòng chảy (Flow Cell) chuyên dụng cho Single i::scan Flow Cell Bypass Fitting, cho phép dẫn mẫu nước qua điện cực hoặc đầu dò với lưu lượng ổn định, lắp đặt dễ dàng trên bảng panel hoặc đường ống bypass.",
+    "description_en": "Flow cell bypass fitting for installation of one i-scan spectrometer probe.\n\nAutomatic cleaning with autobrush for i-scan available (optional)\nHousing material: POM-C\nAvailable with and without auto brush",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước cấp & nước uống",
+      "Quan trắc môi trường sông hồ",
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/0h5iibf3yg/png/iscan-bypass-fitting-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/single-iscan-flow-cell-bypass-fitting/",
+    "brand": "s::can"
+  },
+  {
+    "id": "462",
+    "name": "Spectrometer Probe Carrier",
+    "name_vi": "Spectrometer Probe Carrier (Phụ kiện & trạm đo quang học)",
+    "category": "Phụ kiện & trạm đo quang học",
+    "category_en": "Water Quality Accessories",
+    "category_slug": "accessory",
+    "parameters": "",
+    "description_vi": "Bộ phụ kiện gá lắp, ngâm chìm hoặc gá áp lực trên đường ống công nghiệp, chế tạo bằng thép không gỉ SS316 hoặc nhựa kỹ thuật POM-C/PVC bền bỉ.",
+    "description_en": "Designed for hassle-free submerged deployment of spectrometer probe.\n\nAccommodates both probe cables and pressure hoses\nHousing material: PVC and POM-C\nOffered in two carrier orientations: Horizontal and vertical attachment",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước cấp & nước uống",
+      "Quan trắc môi trường sông hồ",
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/6qt3ekfmtg/png/spectrometer-carrier-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/probe-carrier/",
+    "brand": "s::can"
+  },
+  {
+    "id": "447",
+    "name": "Spectrometer Probe Cleaning Brush",
+    "name_vi": "Spectrometer Probe Cleaning Brush (Phụ kiện & trạm đo quang học)",
+    "category": "Phụ kiện & trạm đo quang học",
+    "category_en": "Water Quality Accessories",
+    "category_slug": "accessory",
+    "parameters": "",
+    "description_vi": "Hệ thống làm sạch quang học tự động dành cho các đầu dò s::can, ngăn ngừa hiện tượng bám màng sinh học và cặn bẩn, giúp thiết bị đo ổn định lâu dài mà không cần can thiệp bảo trì thủ công.",
+    "description_en": "Brushes for proper cleaning of the optical measuring windows for spectrometer probes. Remove fouling and maintain optical window clarity.",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước cấp & nước uống",
+      "Quan trắc môi trường sông hồ",
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/my0di7sj6y/png/cleaning-brush-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/probe-cleaning-brush/",
+    "brand": "s::can"
+  },
+  {
+    "id": "461",
+    "name": "Stainless Steel Fixing Adapter",
+    "name_vi": "Stainless Steel Fixing Adapter (Phụ kiện & trạm đo quang học)",
+    "category": "Phụ kiện & trạm đo quang học",
+    "category_en": "Water Quality Accessories",
+    "category_slug": "accessory",
+    "parameters": "",
+    "description_vi": "Bộ phụ kiện gá lắp, ngâm chìm hoặc gá áp lực trên đường ống công nghiệp, chế tạo bằng thép không gỉ SS316 hoặc nhựa kỹ thuật POM-C/PVC bền bỉ.",
+    "description_en": "Stainless steel fixing adapter allows for quick mounting and demounting of in situ installed spectrometer probes and physical sensors.\n\nHousing material: Stainless Steel",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước cấp & nước uống",
+      "Quan trắc môi trường sông hồ",
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/wqyf5qv5ro/png/stainless-steel-adapter-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/stainless-steel-fixing-adapter/",
+    "brand": "s::can"
+  },
+  {
+    "id": "460",
+    "name": "Stainless Steel Inserts for Spectrometer Probes",
+    "name_vi": "Stainless Steel Inserts for Spectrometer Probes (Phụ kiện & trạm đo quang học)",
+    "category": "Phụ kiện & trạm đo quang học",
+    "category_en": "Water Quality Accessories",
+    "category_slug": "accessory",
+    "parameters": "",
+    "description_vi": "Phụ kiện chính hãng chất lượng cao của hệ thống giám sát nước s::can (Badger Meter), đảm bảo độ đồng bộ và độ bền vận hành tối đa.",
+    "description_en": "These inserts help to change the optical path length of V2 spectrometer probes.\n\nInsert material: Stainless steel\nIncludes: o-rings, sapphire measurement windows and service tools\nAvailable in five pathlenghts: 0.5 mm, 1 mm, 2 mm, 5 mm and 15 mm",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước cấp & nước uống",
+      "Quan trắc môi trường sông hồ",
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/vy7nqawwmd/png/stainless-steel-insert-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/probe-stainless-steel-inserts/",
+    "brand": "s::can"
+  },
+  {
+    "id": "459",
+    "name": "Weather Shield for con::cube and con::lyte",
+    "name_vi": "Weather Shield for con::cube and con::lyte (Phụ kiện & trạm đo quang học)",
+    "category": "Phụ kiện & trạm đo quang học",
+    "category_en": "Water Quality Accessories",
+    "category_slug": "accessory",
+    "parameters": "",
+    "description_vi": "Mái che thời tiết bảo vệ bộ điều khiển con::cube và con::lyte khi lắp đặt ngoài trời, chống bức xạ nhiệt trực tiếp từ mặt trời và mưa bão.",
+    "description_en": "Weather shield for con-cube and con-lyte terminals to protect against severe weather conditions.\n\nMounting for con-cube or con-lyte\nFor mounting on walls or railings\nIncludes mounting hardware\nHousing material: Stainless steel",
+    "highlights_vi": [
+      "Sản phẩm chính hãng s::can - A Badger Meter Brand",
+      "Tiêu chuẩn công nghiệp châu Âu độ bền cao",
+      "Tương thích hoàn hảo với hệ thống trạm đo s::can",
+      "Dễ dàng lắp đặt và bảo dưỡng"
+    ],
+    "markets_vi": [
+      "Xử lý nước cấp & nước uống",
+      "Quan trắc môi trường sông hồ",
+      "Xử lý nước thải đô thị",
+      "Xử lý nước thải công nghiệp"
+    ],
+    "image_url": "https://badgermeter.widen.net/content/eck9jjzf7q/png/weather-shield-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "original_url": "https://www.badgermeter.com/products/water-quality-monitoring/accessories/weather-shield/",
+    "brand": "s::can"
+  },
+  {
+    "id": 1001,
+    "name": "ATi Q46H/62 Free Chlorine Monitor",
+    "name_vi": "Thiết Bị Đo Clo Dư Tự Do Q46H/62",
+    "brand": "ATi",
+    "category": "Thiết bị đo chất lượng nước",
+    "category_slug": "sensor",
+    "parameters": "Clo tự do, pH, Nhiệt độ",
+    "description_vi": "Giải pháp giám sát Clo dư không dùng hóa chất xúc tác reagent-free của ATi. Đo Clo tự do sử dụng cảm biến phân cực màng trực tiếp, xuất đồng thời giá trị Clo, pH và nhiệt độ.",
+    "highlights_vi": [
+      "Hoàn toàn không dùng hóa chất xúc tác (reagent-free), giảm 90% chi phí vận hành O&M",
+      "Tín hiệu xuất ra bao gồm đồng thời giá trị Clo, pH và Nhiệt độ",
+      "Cảm biến màng phân cực 3 cực thế bền bỉ theo thời gian",
+      "Tùy chọn sục rửa tự động AutoClean bằng khí nén hoặc tuần hoàn nước"
+    ],
+    "markets_vi": [
+      "Nước cấp sinh hoạt",
+      "Tháp giải nhiệt",
+      "Hồ bơi công nghiệp",
+      "Khử trùng nước thải"
+    ],
+    "local_image": "assets/img/ati/products/q46h-chlorine-panel.png",
+    "image_url": "assets/img/ati/products/q46h-chlorine-panel.png",
+    "original_url": "https://www.analyticaltechnology.com"
+  },
+  {
+    "id": 1002,
+    "name": "ATi Q46N Ammonia Monitor",
+    "name_vi": "Thiết Bị Giám Sát Chỉ Tiêu Amoni Q46N",
+    "brand": "ATi",
+    "category": "Thiết bị đo chất lượng nước",
+    "category_slug": "sensor",
+    "parameters": "Amoni tự do, Tổng Amoni, Monocloramin",
+    "description_vi": "Q46N đo amoni tự do, tổng amoni và mono cloramine trong nước cấp bằng phương pháp cảm biến điện hóa độ nhạy cao với chất xúc tác chi phí thấp, dễ dàng bảo trì.",
+    "highlights_vi": [
+      "Đo đồng thời Amoni tự do, Tổng amoni và Monocloramin",
+      "Phương pháp cảm biến điện hóa ổn định và tin cậy",
+      "Chất xúc tác chi phí cực thấp, dễ dàng thay thế định kỳ",
+      "Dễ dàng bảo dưỡng và hiệu chuẩn trực tiếp"
+    ],
+    "markets_vi": [
+      "Nhà máy nước sạch",
+      "Mạng lưới cấp nước đô thị",
+      "Giám sát trạm khử trùng Cloramin"
+    ],
+    "local_image": "assets/img/ati/products/q46n-ammonia.png",
+    "image_url": "assets/img/ati/products/q46n-ammonia.png",
+    "original_url": "https://www.analyticaltechnology.com"
+  },
+  {
+    "id": 1003,
+    "name": "ATi MetriNet Smart Water Distribution Monitor",
+    "name_vi": "Hệ Thống Quan Trắc Nước Thông Minh MetriNet (Chạy Pin/Solar)",
+    "brand": "ATi",
+    "category": "Thiết bị đo chất lượng nước",
+    "category_slug": "spectrometer",
+    "parameters": "Lên đến 16 chỉ tiêu: Clo, pH, Độ đục, DO, Độ dẫn, Áp suất, Nhiệt độ...",
+    "description_vi": "MetriNet cung cấp giải pháp bền bỉ, lắp ráp dạng module trên đường ống áp lực. Có thể lắp tới 8 cảm biến M-Node siêu nhỏ và giám sát 16 thông số cùng lúc với mức tiêu thụ điện cực thấp.",
+    "highlights_vi": [
+      "Cấp nguồn từ pin hoặc tấm năng lượng mặt trời (Solar), tiêu thụ điện năng siêu thấp",
+      "Lắp đặt dạng mô-đun M-Node đo tới 16 thông số trên cùng 1 điểm",
+      "Tùy chọn truyền thông không dây 4G/NB-IoT về đám mây CPES Cloud",
+      "Hỗ trợ đầy đủ giao thức Modbus, Ethernet/IP, Profibus"
+    ],
+    "markets_vi": [
+      "Mạng lưới phân phối nước đô thị",
+      "Cấp nước thông minh Smart Water",
+      "Phát hiện ô nhiễm đường ống"
+    ],
+    "local_image": "assets/img/ati/products/metrinet-battery.png",
+    "image_url": "assets/img/ati/products/metrinet-battery.png",
+    "original_url": "https://www.analyticaltechnology.com"
+  },
+  {
+    "id": 1004,
+    "name": "ATi NephNet Portable Turbidity Monitor",
+    "name_vi": "Bộ Giám Sát Độ Đục Cầm Tay NephNet",
+    "brand": "ATi",
+    "category": "Thiết bị đo chất lượng nước",
+    "category_slug": "sensor",
+    "parameters": "Độ đục dải thấp (0.000 - 100.0 NTU)",
+    "description_vi": "Bộ giám sát độ đục cầm tay NephNet được sử dụng trong quá trình xịt rửa và làm sạch đường ống có điều khiển. Tích hợp bộ datalogger không dây, độ chính xác xuất sắc ở dải đo cực thấp.",
+    "highlights_vi": [
+      "Thiết kế cầm tay cơ động, lắp nhanh trên van xả khí/ống nhánh",
+      "Giám sát liên tục và truyền từ xa dữ liệu độ đục trong sục rửa đường ống",
+      "Độ chính xác vượt trội ở dải đo cực thấp dưới 0.1 NTU",
+      "Tương thích bộ ghi nhận dữ liệu Datalogger hiện hữu"
+    ],
+    "markets_vi": [
+      "Bảo trì mạng lưới cấp nước",
+      "Súc xả đường ống phân phối",
+      "Kiểm định chất lượng nước tại vòi"
+    ],
+    "local_image": "assets/img/ati/products/nephnet-turbidity.png",
+    "image_url": "assets/img/ati/products/nephnet-turbidity.png",
+    "original_url": "https://www.analyticaltechnology.com"
+  },
+  {
+    "id": 1005,
+    "name": "ATi Fixed Turbidity & TSS Monitor",
+    "name_vi": "Thiết Bị Đo Độ Đục Cố Định & Cặn Lơ Lửng Chuẩn ISO 7027",
+    "brand": "ATi",
+    "category": "Thiết bị đo chất lượng nước",
+    "category_slug": "sensor",
+    "parameters": "0.001 - 4000 NTU / mg/L TSS",
+    "description_vi": "Giám sát nước thô, nước lọc qua màng, nước thải đầu ra và các ứng dụng công nghệ. Phù hợp chuẩn EPA 180.1 và ISO 7027, phương pháp hiệu chuẩn đơn giản không dùng Formazin độc hại.",
+    "highlights_vi": [
+      "Phù hợp tiêu chuẩn EPA 180.1 / ISO 7027 tán xạ 90 độ",
+      "Phù hợp tiêu chuẩn kiểm định và cân chỉnh chất rắn quang học",
+      "Buồng đo Bubble Trap loại bỏ bọt khí triệt để",
+      "Phương pháp hiệu chuẩn dễ dàng và an toàn"
+    ],
+    "markets_vi": [
+      "Nước cấp sau lắng lọc",
+      "Nước thải sau xử lý",
+      "Nước thô sông hồ"
+    ],
+    "local_image": "assets/img/ati/products/turbidity-fixed.png",
+    "image_url": "assets/img/ati/products/turbidity-fixed.png",
+    "original_url": "https://www.analyticaltechnology.com"
+  },
+  {
+    "id": 1006,
+    "name": "ATi UV254 Organic Matter Monitor",
+    "name_vi": "Thiết Bị Đo Độ Hấp Thụ Bước Sóng UV254 (Hàm Lượng Chất Hữu Cơ)",
+    "brand": "ATi",
+    "category": "Thiết bị đo chất lượng nước",
+    "category_slug": "sensor",
+    "parameters": "UV254, SAC254, TOC, BOD, COD quy đổi, Độ đục",
+    "description_vi": "Đo lường độ hấp thụ bước sóng UV254 cung cấp giá trị thời gian thực về hàm lượng các chất hữu cơ hòa tan trong nguồn nước. Tích hợp tính năng đo độ đục để bù trừ sai số quang học.",
+    "highlights_vi": [
+      "Đo đồng thời UV254 và Độ đục để bù sai số quang học tự động",
+      "Cung cấp chỉ số hữu cơ thời gian thực (in-situ) không cần lấy mẫu",
+      "Nhiều dải đo khác nhau cho nước sạch và nước thải",
+      "Tùy chọn hệ thống tự làm sạch quang học tự động Q-clean"
+    ],
+    "markets_vi": [
+      "Kiểm soát tiền xử lý khử trùng",
+      "Phát hiện ô nhiễm hữu cơ",
+      "Xử lý nước thải công nghiệp"
+    ],
+    "local_image": "assets/img/ati/products/uv254-sensor.png",
+    "image_url": "assets/img/ati/products/uv254-sensor.png",
+    "original_url": "https://www.analyticaltechnology.com"
+  },
+  {
+    "id": 1007,
+    "name": "ATi Q46F Fluoride Monitor",
+    "name_vi": "Thiết Bị Giám Sát Chỉ Tiêu Flo Dư Q46F",
+    "brand": "ATi",
+    "category": "Thiết bị đo chất lượng nước",
+    "category_slug": "sensor",
+    "parameters": "0.1 - 10.0 ppm F-",
+    "description_vi": "Giám sát liên tục nồng độ Flo để đảm bảo lượng Flo được châm vừa đủ theo quy chuẩn y tế. Sử dụng cảm biến ion điện hóa màng chọn lọc kết hợp bộ đệm TISAB chi phí thấp.",
+    "highlights_vi": [
+      "Cảm biến điện cực chọn lọc ion Lanthanum Fluoride ISE",
+      "Bộ đệm (buffer) chi phí thấp đảm bảo độ chính xác vượt trội",
+      "Căn chỉnh 2 điểm tự động (Auto 2-point calibration)",
+      "Đo trực tiếp theo phương pháp ion điện hóa tiên tiến"
+    ],
+    "markets_vi": [
+      "Nhà máy nước sinh hoạt",
+      "Kiểm soát nồng độ Flo bảo vệ răng",
+      "Công nghiệp bán dẫn"
+    ],
+    "local_image": "assets/img/ati/products/q46f-fluoride.png",
+    "image_url": "assets/img/ati/products/q46f-fluoride.png",
+    "original_url": "https://www.analyticaltechnology.com"
+  },
+  {
+    "id": 1008,
+    "name": "ATi Sitebox Portable Multi-Parameter Water Station",
+    "name_vi": "Hệ Thống Đo Chất Lượng Nước Xách Tay Sitebox",
+    "brand": "ATi",
+    "category": "Thiết bị đo chất lượng nước",
+    "category_slug": "spectrometer",
+    "parameters": "8 cảm biến & 16 thông số chất lượng nước đồng thời",
+    "description_vi": "Có thể xách tay di chuyển được, Sitebox là trạm phân tích nước cơ động dạng vali nhấc lên và di chuyển. Cho phép giám sát dữ liệu thực tức thì trong vòng 30 phút.",
+    "highlights_vi": [
+      "Thiết kế dạng vali chống va đập cơ động nhấc lên và di chuyển",
+      "Cung cấp dữ liệu quan trắc thực tế tại hiện trường trong vòng 30 phút",
+      "Cấu hình cho kiểm định 2 dòng, 3 dòng hoặc nhiều dòng chảy",
+      "Hỗ trợ tới 8 cảm biến và 16 thông số giám sát đồng thời"
+    ],
+    "markets_vi": [
+      "Kiểm tra cơ động sự cố môi trường",
+      "Kiểm định trạm nước",
+      "Nghiên cứu khảo sát nguồn nước"
+    ],
+    "local_image": "assets/img/ati/products/sitebox-portable.png",
+    "image_url": "assets/img/ati/products/sitebox-portable.png",
+    "original_url": "https://www.analyticaltechnology.com"
+  },
+  {
+    "id": 1009,
+    "name": "ATi Q46H Residual Oxidant Monitor",
+    "name_vi": "Hệ Thống Đo Oxy Hóa Tồn Dư (Ozone, Clo Điôxít, Oxy Già, PAA)",
+    "brand": "ATi",
+    "category": "Thiết bị đo chất lượng nước",
+    "category_slug": "sensor",
+    "parameters": "Ozone (O3), ClO2, H2O2, Axit Peracetic (PAA)",
+    "description_vi": "Hệ thống đo điện hóa tin cậy cho các chất oxy hóa sử dụng trong hệ thống khử khuẩn hay xử lý nước tinh khiết, đồ uống, thực phẩm và dược phẩm.",
+    "highlights_vi": [
+      "Đo chọn lọc các chất khử trùng: Ô-zôn, Clo oxit, Ôxi già, Axit Peracetic",
+      "Cảm biến màng điện cực cách ly không bị gây nhiễu chéo",
+      "Độ nhạy cao từ mức ppb đến ppm",
+      "Vỏ bảo vệ chuẩn IP66 / NEMA 4X chống ăn mòn hóa chất"
+    ],
+    "markets_vi": [
+      "Dược phẩm",
+      "Nhà máy đồ uống & bia rượu",
+      "Hệ thống khử trùng Ozone y tế"
+    ],
+    "local_image": "assets/img/ati/products/q46h-ozone.png",
+    "image_url": "assets/img/ati/products/q46h-ozone.png",
+    "original_url": "https://www.analyticaltechnology.com"
+  },
+  {
+    "id": 1010,
+    "name": "ATi Q46D Optical Dissolved Oxygen Monitor",
+    "name_vi": "Thiết Bị Đo Oxy Hòa Tan Quang Học Q46D (DO Bể Hiếu Khí)",
+    "brand": "ATi",
+    "category": "Thiết bị đo chất lượng nước",
+    "category_slug": "sensor",
+    "parameters": "DO 0-40.0 ppm / 0-200% Saturation",
+    "description_vi": "Điều khiển luồng không khí để tối ưu quá trình sục khí, từ đó tiết kiệm đến 40% năng lượng điện quạt thổi khí trong trạm xử lý nước thải. Tích hợp bộ Q-blast tự làm sạch độc đáo.",
+    "highlights_vi": [
+      "Cảm biến quang học đo nồng độ ppm và độ bão hòa % Saturation",
+      "Bộ Q-blast độc đáo tự làm sạch bằng khí nén áp lực cao",
+      "Tối ưu điều khiển quạt sục khí, tiết kiệm điện năng vận hành",
+      "Chi phí bảo trì cực thấp, không cần thay dung dịch điện phân"
+    ],
+    "markets_vi": [
+      "Trạm xử lý nước thải sinh hoạt và KCN",
+      "Bể hiếu khí Aerotank",
+      "Nuôi trồng thủy sản công nghệ cao"
+    ],
+    "local_image": "assets/img/ati/products/q46d-do-qblast.png",
+    "image_url": "assets/img/ati/products/q46d-do-qblast.png",
+    "original_url": "https://www.analyticaltechnology.com"
+  },
+  {
+    "id": 1011,
+    "name": "ATi Air Stripping Total Chlorine & Sulfide System",
+    "name_vi": "Hệ Thống Tách Khí Air-Stripping Đo Tổng Clo & Sulfide",
+    "brand": "ATi",
+    "category": "Thiết bị đo chất lượng nước",
+    "category_slug": "sensor",
+    "parameters": "Tổng Clo, Sulfide hòa tan, Sulfite dư",
+    "description_vi": "Công nghệ Tách khí (air stripping) chuyển đổi chất cần đo sang pha khí trước khi cảm biến đo đạc, giúp loại bỏ hoàn toàn việc cảm biến tiếp xúc trực tiếp với bùn bẩn, chống nghẹt 100%.",
+    "highlights_vi": [
+      "Công nghệ tách khí Air Stripping ngăn ngừa cảm biến tiếp xúc mẫu bẩn",
+      "Đo nồng độ Sulfide và Sulfite bảo vệ hệ thống khử clo nước thải",
+      "Cảm biến đo pha khí triệt tiêu hoàn toàn hiện tượng cảnh báo giả",
+      "Tự động làm sạch đường trích mẫu định kỳ"
+    ],
+    "markets_vi": [
+      "Nước thải công nghiệp nặng",
+      "Hệ thống khử clo nhà máy điện",
+      "Trạm khử mùi nước thải"
+    ],
+    "local_image": "assets/img/ati/products/water-quality-panel.png",
+    "image_url": "assets/img/ati/products/water-quality-panel.png",
+    "original_url": "https://www.analyticaltechnology.com"
+  },
+  {
+    "id": 1012,
+    "name": "ATi MLSS & Sludge Blanket Monitor",
+    "name_vi": "Thiết Bị Đo Nồng Độ Bùn Hoạt Tính MLSS & Lớp Bùn Lắng",
+    "brand": "ATi",
+    "category": "Thiết bị đo chất lượng nước",
+    "category_slug": "sensor",
+    "parameters": "MLSS (0-30 g/L), Chiều cao lớp bùn Sludge Blanket",
+    "description_vi": "Đo chất rắn lơ lửng và nồng độ bùn hoạt tính MLSS trong bể sục khí và bể lắng, hỗ trợ việc điều khiển quá trình bùn hồi lưu RAS/WAS và cảnh báo tràn bùn.",
+    "highlights_vi": [
+      "Giám sát thời gian thực nồng độ bùn hoạt tính MLSS",
+      "Duy trì mức MLSS tối ưu cho hệ vi sinh bể sinh học",
+      "Tích hợp cảm biến đo mức mặt bùn lắng FilterSmart/EchoSmart",
+      "Tùy chọn bộ tự làm sạch Q-blast định kỳ"
+    ],
+    "markets_vi": [
+      "Bể lắng sơ cấp & thứ cấp",
+      "Bể hiếu khí Aerotank",
+      "Điều khiển bơm bùn hoàn lưu RAS/WAS"
+    ],
+    "local_image": "assets/img/ati/products/tss-sludge-sensor.png",
+    "image_url": "assets/img/ati/products/tss-sludge-sensor.png",
+    "original_url": "https://www.analyticaltechnology.com"
+  },
+  {
+    "id": 1013,
+    "name": "ATi Q46P & Q46R Industrial pH/ORP Differential System",
+    "name_vi": "Hệ Thống Đo pH / ORP Vi Sai Công Nghiệp Q46P/R",
+    "brand": "ATi",
+    "category": "Thiết bị đo chất lượng nước",
+    "category_slug": "sensor",
+    "parameters": "pH (0-14), ORP (-2000 đến +2000 mV)",
+    "description_vi": "Cảm biến đo vi sai pH/ORP với 3 điện cực giúp loại bỏ triệt để dòng điện rò đất và nghẹt cầu muối, tuổi thọ điện cực cao gấp 3 lần trong môi trường hóa chất khắc nghiệt.",
+    "highlights_vi": [
+      "Công nghệ điện cực vi sai (Differential pH Sensor) chống nghẹt dòng rò",
+      "Vỏ PEEK/Ryton chịu hóa chất ăn mòn mạnh và nhiệt độ cao",
+      "Tích hợp cảm biến nhiệt độ PT1000 giải bù nhiệt tự động",
+      "Chi phí bảo trì cực thấp, hỗ trợ tùy chọn tự làm sạch Q-blast"
+    ],
+    "markets_vi": [
+      "Hóa chất & Xi mạ",
+      "Xử lý nước thải công nghiệp",
+      "Nhiệt điện & Dầu khí"
+    ],
+    "local_image": "assets/img/ati/products/q46p-ph-orp.png",
+    "image_url": "assets/img/ati/products/q46p-ph-orp.png",
+    "original_url": "https://www.analyticaltechnology.com"
+  },
+  {
+    "id": 1014,
+    "name": "ATi D12 Toxic & Combustible Gas Transmitter",
+    "name_vi": "Bộ Transmitter Phát Hiện Khí Độc & Khí Cháy Nổ D12",
+    "brand": "ATi",
+    "category": "Thiết bị đo khí độc",
+    "category_slug": "sensor",
+    "parameters": "Hơn 60 loại khí: Cl2, SO2, NH3, H2S, O3, CO, LEL cháy nổ...",
+    "description_vi": "Bộ phát hiện khí đa năng có thể đo hơn 60 loại khí độc hại hoặc cảm biến xúc tác cho khí cháy nổ LEL. Vỏ máy chống cháy nổ Class 1 Div 1 & ATEX, giao diện cảm ứng từ không cần mở nắp.",
+    "highlights_vi": [
+      "Đo được hơn 60 loại khí độc hại và khí dễ cháy nổ LEL",
+      "Module cảm biến thông minh tháo lắp nhanh và hiệu chuẩn độc lập",
+      "Giao diện cảm ứng từ Mag-Key điều khiển an toàn trong vùng nổ",
+      "Tính năng tự động kiểm tra báo động Auto-Test / Bump Test"
+    ],
+    "markets_vi": [
+      "Trạm châm Clo nhà máy nước",
+      "Lọc hóa dầu",
+      "Hầm mỏ & Hóa chất",
+      "Phòng thí nghiệm"
+    ],
+    "local_image": "assets/img/ati/products/d12-gas-flameproof.png",
+    "image_url": "assets/img/ati/products/d12-gas-flameproof.png",
+    "original_url": "https://www.analyticaltechnology.com"
+  },
+  {
+    "id": 1015,
+    "name": "ATi D16 PortaSens III Portable Leak Detector",
+    "name_vi": "Bộ Phát Hiện Rò Rỉ Khí Cầm Tay PortaSens III (D16)",
+    "brand": "ATi",
+    "category": "Thiết bị đo khí độc",
+    "category_slug": "sensor",
+    "parameters": "Hơn 60 loại khí độc, bộ nhớ 6GB",
+    "description_vi": "PortaSens III là thiết bị phát hiện rò rỉ khí cầm tay hàng đầu thế giới. Tích hợp bơm hút lấy mẫu khí, màn hình màu cảm ứng và bộ nhớ datalogger 6GB ghi nhận lịch sử nồng độ khí.",
+    "highlights_vi": [
+      "Thiết bị cầm tay tích hợp bơm hút mẫu khí trực tiếp",
+      "Bộ nhớ ghi nhận dữ liệu Datalogger 6GB kết nối máy tính USB",
+      "Màn hình cảm ứng màu trực quan, hiển thị biểu đồ thời gian thực",
+      "Sử dụng các module cảm biến thông minh tháo lắp nhanh"
+    ],
+    "markets_vi": [
+      "Tuần tra an toàn lao động",
+      "Tìm kiếm vị trí rò rỉ khí độc Cl2/NH3",
+      "Ứng cứu sự cố hóa chất"
+    ],
+    "local_image": "assets/img/ati/products/d16-portasens.png",
+    "image_url": "assets/img/ati/products/d16-portasens.png",
+    "original_url": "https://www.analyticaltechnology.com"
+  },
+  {
+    "id": 1016,
+    "name": "ATi Smart Sensor Modules Ecosystem",
+    "name_vi": "Hệ Sinh Thái Module Cảm Biến Khí Thông Minh ATi",
+    "brand": "ATi",
+    "category": "Thiết bị đo khí độc",
+    "category_slug": "accessory",
+    "parameters": "60+ module cảm biến khí độc lập tích hợp bộ nhớ EPROM",
+    "description_vi": "Mỗi module cảm biến thông minh của ATi tích hợp bộ cảm biến, bộ khuếch đại và bộ nhớ hiệu chuẩn. Có thể hiệu chuẩn độc lập trong phòng thí nghiệm và cắm vào dùng ngay trên hiện trường.",
+    "highlights_vi": [
+      "Hiệu chuẩn độc lập trong phòng lab, cắm vào đầu phát hiện dùng ngay (Plug & Play)",
+      "Lưu trữ toàn bộ thông số calib, ngày hết hạn và dải đo trong chip nhớ",
+      "Tiết kiệm 80% thời gian bảo dưỡng hiệu chuẩn tại hiện trường",
+      "Độ nhạy cao, chống nhiễu chéo vượt trội"
+    ],
+    "markets_vi": [
+      "Trạm quan trắc khí độc",
+      "Nhà máy nước",
+      "Khu chế xuất hóa chất"
+    ],
+    "local_image": "assets/img/ati/products/smart-sensor-modules.png",
+    "image_url": "assets/img/ati/products/smart-sensor-modules.png",
+    "original_url": "https://www.analyticaltechnology.com"
+  }
+]

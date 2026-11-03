@@ -1,0 +1,2667 @@
+[
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/aiu24monno/png/spectrolyser-UV-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "spectro-lyser V3 Spectrometer Probe",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>spectro-lyser V3 Spectrometer Probe</p>",
+    "productDescription": "<p>The spectro-lyser V3 utilizes advanced technology to analyze water parameters in real-time. Seamlessly connects to mobile devices for convenient data access and management. With its robust design and user-friendly interface, the spectrolyser V3 offers invaluable insights for water management and environmental monitoring applications.</p>",
+    "url": "/products/water-quality-monitoring/spectrometer-probes/spectrolyser-v3/",
+    "id": "539",
+    "stats": [
+      {
+        "label": "<p>Parameters</p>",
+        "valueImperial": "BOD, Chl-a, Chloramine, CLD, COD, Color, DOC, Dissolved Ozone, Fingerprint, HS-, NO3-N/NO3, Pressure, Temperature, TOC, TSS/TS, Turbidity, UV254",
+        "valueMetric": "BOD, Chl-a, Chloramine, CLD, COD, Color, DOC, Dissolved Ozone, Fingerprint, HS-, NO3-N/NO3, Pressure, Temperature, TOC, TSS/TS, Turbidity, UV254"
+      }
+    ],
+    "markets": [
+      "Industrial Wastewater Treatment",
+      "Drinking Water Treatment",
+      "Environmental Monitoring",
+      "Wastewater Treatment",
+      "Industrial Process",
+      "Collection System Monitoring",
+      "Data Centers"
+    ],
+    "marketNamesAndTitles": {
+      "industrial Wastewater Treatment": "Industrial Wastewater",
+      "drinking Water Treatment": "Drinking Water Treatment",
+      "environmental Monitoring": "Environmental Monitoring",
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Process": "Industrial Process",
+      "collection System Monitoring": "Collection System Monitoring",
+      "data Centers": "Data Centers"
+    },
+    "subparametersWithTranslatedNames": {
+      "biological Oxygen Demand": "Biological Oxygen Demand",
+      "bisulfide & Hydrogen Sulfide": "Bisulfide & Hydrogen Sulfide",
+      "chemical Oxygen Demand": "Chemical Oxygen Demand",
+      "chloramine": "Chloramine",
+      "chlorine Demands": "Chlorine Demands",
+      "chlorophyll a": "Chlorophyll a",
+      "color": "Color",
+      "dissolved Organic Carbon": "Dissolved Organic Carbon",
+      "dissolved Ozone": "Dissolved Ozone",
+      "fingerprint": "Fingerprint",
+      "nitrite Nitrogen / Nitrite": "Nitrite Nitrogen / Nitrite",
+      "total Suspended Solids": "Total Suspended Solids",
+      "temperature": "Temperature",
+      "total Organic Carbon": "Total Organic Carbon",
+      "turbidity": "Turbidity",
+      "uV254": "UV254",
+      "pressure": "Pressure"
+    },
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Spectrometer Probes",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Spectrometer Probes",
+      "value": "Water Quality Spectrometer Probes"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "Water Quality Monitoring",
+    "subparameters": [
+      "Biological Oxygen Demand",
+      "Bisulfide & Hydrogen Sulfide",
+      "Chemical Oxygen Demand",
+      "Chloramine",
+      "Chlorine Demands",
+      "Chlorophyll a",
+      "Color",
+      "Dissolved Organic Carbon",
+      "Dissolved Ozone",
+      "Fingerprint",
+      "Nitrite Nitrogen / Nitrite",
+      "Total Suspended Solids",
+      "Temperature",
+      "Total Organic Carbon",
+      "Turbidity",
+      "UV254",
+      "Pressure"
+    ],
+    "guid": "2c1cc4e0-17be-471d-bae5-a6e72a98f2c1",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_2c1cc4e0-17be-471d-bae5-a6e72a98f2c1_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/z88e2qd4ns/png/ammolyser-eco-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "ammo-lyser Eco Ammonium Physical Sensor",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>ammo-lyser Eco Ammonium Physical Sensor</p>",
+    "productDescription": "<p>A multiparameter probe for the online measurement of ammonium. It is a reliable device outclassing conventional analyzers in terms of measurement stability and lifetime. Precision is guaranteed by real-time compensation of the ammonium value with temperature, potassium and a high-performance reference electrode.</p>",
+    "url": "/products/water-quality-monitoring/physical-sensors/ammolyser-eco/",
+    "id": "480",
+    "stats": [
+      {
+        "label": "<p>Parameters</p>",
+        "valueImperial": "Ammonium, NO3-N/NO3, pH, Temperature",
+        "valueMetric": "Ammonium, NO3-N/NO3, pH, Temperature"
+      }
+    ],
+    "markets": [
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment"
+    ],
+    "marketNamesAndTitles": {
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater"
+    },
+    "subparametersWithTranslatedNames": {
+      "ammonium Nitrogen & Ammonium": "Ammonium Nitrogen & Ammonium",
+      "temperature": "Temperature",
+      "nitrate Nitrogen / Nitrate": "Nitrate Nitrogen / Nitrate",
+      "pH": "pH"
+    },
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Physical Sensors",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Physical Sensors",
+      "value": "Water Quality Physical Sensors"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "Water Quality Monitoring",
+    "subparameters": [
+      "Ammonium Nitrogen & Ammonium",
+      "Temperature",
+      "Nitrate Nitrogen / Nitrate",
+      "pH"
+    ],
+    "guid": "ef15aa37-c87b-4e23-8efe-4d4720f2f612",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_ef15aa37-c87b-4e23-8efe-4d4720f2f612_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/aiu24monno/png/spectrolyser-UV-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "spectro-lyser UV-Wavelengths Spectrometer Probe",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>spectro-lyser UV-Wavelengths Spectrometer Probe</p>",
+    "productDescription": "<p>The spectro-lyser UV measures distinct UV-Wavelengths for determining specific pollutions. Ideal for wastewater, surface water and drinking water applications.</p>",
+    "url": "/products/water-quality-monitoring/spectrometer-probes/spectrolyser-uv-wavelengths/",
+    "id": "527",
+    "stats": [
+      {
+        "label": "<p>Parameters</p>",
+        "valueImperial": "COD, Dissolved Ozone, Fingerprint, HS-/H2S, NO2-N/NO2, NO3-N/NO3, Temperature, TOC, TSS/TS, UVT, UV254",
+        "valueMetric": "COD, Dissolved Ozone, Fingerprint, HS-/H2S, NO2-N/NO2, NO3-N/NO3, Temperature, TOC, TSS/TS, UVT, UV254"
+      }
+    ],
+    "markets": [
+      "Environmental Monitoring",
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment",
+      "Industrial Process",
+      "Drinking Water Treatment",
+      "Data Centers"
+    ],
+    "marketNamesAndTitles": {
+      "environmental Monitoring": "Environmental Monitoring",
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater",
+      "industrial Process": "Industrial Process",
+      "drinking Water Treatment": "Drinking Water Treatment",
+      "data Centers": "Data Centers"
+    },
+    "subparametersWithTranslatedNames": {
+      "bisulfide & Hydrogen Sulfide": "Bisulfide & Hydrogen Sulfide",
+      "chemical Oxygen Demand": "Chemical Oxygen Demand",
+      "dissolved Ozone": "Dissolved Ozone",
+      "fingerprint": "Fingerprint",
+      "nitrate Nitrogen / Nitrate": "Nitrate Nitrogen / Nitrate",
+      "nitrite Nitrogen / Nitrite": "Nitrite Nitrogen / Nitrite",
+      "total Suspended Solids": "Total Suspended Solids",
+      "temperature": "Temperature",
+      "total Organic Carbon": "Total Organic Carbon",
+      "uvt": "UVT",
+      "uV254": "UV254"
+    },
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Spectrometer Probes",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Spectrometer Probes",
+      "value": "Water Quality Spectrometer Probes"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "Water Quality Monitoring",
+    "subparameters": [
+      "Bisulfide & Hydrogen Sulfide",
+      "Chemical Oxygen Demand",
+      "Dissolved Ozone",
+      "Fingerprint",
+      "Nitrate Nitrogen / Nitrate",
+      "Nitrite Nitrogen / Nitrite",
+      "Total Suspended Solids",
+      "Temperature",
+      "Total Organic Carbon",
+      "UVT",
+      "UV254"
+    ],
+    "guid": "287df750-0f73-40e1-ae79-488f4b6ec84a",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_287df750-0f73-40e1-ae79-488f4b6ec84a_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/bkpvpnhcxm/png/spectrolyser-industrial-ATEX-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "spectro-lyser Industrial ATEX Spectrometer Probe",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>spectro-lyser V3 ATEX</p>",
+    "productDescription": "<p>The spectro-lyser V3 Industrial ATEX is engineered for precision and durability. From refineries to sewers and wastewater treatment plants, it provides reliable monitoring for the most challenging industrial applications.</p>",
+    "url": "/products/water-quality-monitoring/spectrometer-probes/spectrolyser-industrial-atex/",
+    "id": "525",
+    "stats": [
+      {
+        "label": "<p>Parameters</p>",
+        "valueImperial": "BOD, Chl-A, Chloramine, CLD, COD, Color, Dissolved Ozone, DOC, Fingerprint, HS-/H2S, NO3-N/NO3, Temperature, TOC, TSS/TS, Turbidity, UVT, UV254",
+        "valueMetric": "BOD, Chl-A, Chloramine, CLD, COD, Color, Dissolved Ozone, DOC, Fingerprint, HS-/H2S, NO3-N/NO3, Temperature, TOC, TSS/TS, Turbidity, UVT, UV254"
+      }
+    ],
+    "markets": [
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment",
+      "Industrial Process",
+      "Data Centers"
+    ],
+    "marketNamesAndTitles": {
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater",
+      "industrial Process": "Industrial Process",
+      "data Centers": "Data Centers"
+    },
+    "subparametersWithTranslatedNames": {
+      "biological Oxygen Demand": "Biological Oxygen Demand",
+      "bisulfide & Hydrogen Sulfide": "Bisulfide & Hydrogen Sulfide",
+      "chemical Oxygen Demand": "Chemical Oxygen Demand",
+      "chloramine": "Chloramine",
+      "chlorine Demands": "Chlorine Demands",
+      "chlorophyll a": "Chlorophyll a",
+      "color": "Color",
+      "dissolved Organic Carbon": "Dissolved Organic Carbon",
+      "dissolved Ozone": "Dissolved Ozone",
+      "fingerprint": "Fingerprint",
+      "nitrite Nitrogen / Nitrite": "Nitrite Nitrogen / Nitrite",
+      "total Suspended Solids": "Total Suspended Solids",
+      "temperature": "Temperature",
+      "total Organic Carbon": "Total Organic Carbon",
+      "uvt": "UVT",
+      "turbidity": "Turbidity",
+      "uV254": "UV254"
+    },
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Spectrometer Probes",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Spectrometer Probes",
+      "value": "Water Quality Spectrometer Probes"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "Water Quality Monitoring",
+    "subparameters": [
+      "Biological Oxygen Demand",
+      "Bisulfide & Hydrogen Sulfide",
+      "Chemical Oxygen Demand",
+      "Chloramine",
+      "Chlorine Demands",
+      "Chlorophyll a",
+      "Color",
+      "Dissolved Organic Carbon",
+      "Dissolved Ozone",
+      "Fingerprint",
+      "Nitrite Nitrogen / Nitrite",
+      "Total Suspended Solids",
+      "Temperature",
+      "Total Organic Carbon",
+      "UVT",
+      "Turbidity",
+      "UV254"
+    ],
+    "guid": "42cd67b6-79e3-41a7-bcbe-359279b239fd",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_42cd67b6-79e3-41a7-bcbe-359279b239fd_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/ilntezhpsk/png/spectrolyser-titanium-pro-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "spectro-lyser Titanium Pro Spectrometer Probe - Corrosive Application",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>spectro-lyser V3 Titanium</p>",
+    "productDescription": "<p>The spectro-lyser V3 Titanium is ideal for highly corrosive industrial applications and seawater installations.</p>",
+    "url": "/products/water-quality-monitoring/spectrometer-probes/spectrolyser-titanium-pro/",
+    "id": "538",
+    "stats": [
+      {
+        "label": "<p>Parameters</p>",
+        "valueImperial": "BOD, COD, Color, DOC, Dissolved Ozone, Fingerprint, HS-/H2S, NO3-N/NO3, Temperature, TOC, TSS/TS, Turbidity, UVT, UV254",
+        "valueMetric": "BOD, COD, Color, DOC, Dissolved Ozone, Fingerprint, HS-/H2S, NO3-N/NO3, Temperature, TOC, TSS/TS, Turbidity, UVT, UV254"
+      }
+    ],
+    "markets": [
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment",
+      "Industrial Process",
+      "Environmental Monitoring",
+      "Data Centers"
+    ],
+    "marketNamesAndTitles": {
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater",
+      "industrial Process": "Industrial Process",
+      "environmental Monitoring": "Environmental Monitoring",
+      "data Centers": "Data Centers"
+    },
+    "subparametersWithTranslatedNames": {
+      "biological Oxygen Demand": "Biological Oxygen Demand",
+      "uvt": "UVT",
+      "chemical Oxygen Demand": "Chemical Oxygen Demand",
+      "color": "Color",
+      "dissolved Organic Carbon": "Dissolved Organic Carbon",
+      "dissolved Ozone": "Dissolved Ozone",
+      "fingerprint": "Fingerprint",
+      "nitrite Nitrogen / Nitrite": "Nitrite Nitrogen / Nitrite",
+      "total Suspended Solids": "Total Suspended Solids",
+      "temperature": "Temperature",
+      "total Organic Carbon": "Total Organic Carbon",
+      "turbidity": "Turbidity",
+      "uV254": "UV254",
+      "bisulfide & Hydrogen Sulfide": "Bisulfide & Hydrogen Sulfide"
+    },
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Spectrometer Probes",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Spectrometer Probes",
+      "value": "Water Quality Spectrometer Probes"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "Water Quality Monitoring",
+    "subparameters": [
+      "Biological Oxygen Demand",
+      "UVT",
+      "Chemical Oxygen Demand",
+      "Color",
+      "Dissolved Organic Carbon",
+      "Dissolved Ozone",
+      "Fingerprint",
+      "Nitrite Nitrogen / Nitrite",
+      "Total Suspended Solids",
+      "Temperature",
+      "Total Organic Carbon",
+      "Turbidity",
+      "UV254",
+      "Bisulfide & Hydrogen Sulfide"
+    ],
+    "guid": "5618af79-daea-43cd-ace7-97843e449186",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_5618af79-daea-43cd-ace7-97843e449186_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/d6zhysezxj/png/carbolyser-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "carbo-lyser V3 Organic Carbon Spectrometer Probe",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>carbo-lyser V3 Organic Carbon Spectrometer Probe</p>",
+    "productDescription": "<p>The carbo-lyser is ideal for measuring organic carbon parameters such as UV254, total organic carbon (TOC), dissolved organic carbon (DOC), chemical oxygen demand (COD) and biological oxygen demand (BOD), as well as turbidity and solids (TSS/TS) concentration. It is suitable for applications ranging from pure water to industrial wastewater. Pre-calibrations for different water types and applications make it easier to use.</p>",
+    "url": "/products/water-quality-monitoring/spectrometer-probes/carbolyser-v3/",
+    "id": "531",
+    "stats": [
+      {
+        "label": "<p>Parameters</p>",
+        "valueImperial": "BOD, COD, DOC, Temperature, TOC, TSS/TS, Turbidity, UV254",
+        "valueMetric": "BOD, COD, DOC, Temperature, TOC, TSS/TS, Turbidity, UV254"
+      }
+    ],
+    "markets": [
+      "Drinking Water Treatment",
+      "Environmental Monitoring",
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment",
+      "Industrial Process"
+    ],
+    "marketNamesAndTitles": {
+      "drinking Water Treatment": "Drinking Water Treatment",
+      "environmental Monitoring": "Environmental Monitoring",
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater",
+      "industrial Process": "Industrial Process"
+    },
+    "subparametersWithTranslatedNames": {
+      "biological Oxygen Demand": "Biological Oxygen Demand",
+      "chemical Oxygen Demand": "Chemical Oxygen Demand",
+      "dissolved Organic Carbon": "Dissolved Organic Carbon",
+      "total Suspended Solids": "Total Suspended Solids",
+      "temperature": "Temperature",
+      "total Organic Carbon": "Total Organic Carbon",
+      "turbidity": "Turbidity",
+      "uV254": "UV254"
+    },
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Spectrometer Probes",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Spectrometer Probes",
+      "value": "Water Quality Spectrometer Probes"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "Water Quality Monitoring",
+    "subparameters": [
+      "Biological Oxygen Demand",
+      "Chemical Oxygen Demand",
+      "Dissolved Organic Carbon",
+      "Total Suspended Solids",
+      "Temperature",
+      "Total Organic Carbon",
+      "Turbidity",
+      "UV254"
+    ],
+    "guid": "9b166a37-3136-4d6f-af05-aee871d9b766",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_9b166a37-3136-4d6f-af05-aee871d9b766_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/snhsqcslly/png/chlodilyser-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "chlodi-lyser Chlorine Dioxide Sensor",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>chlodi-lyser Chlorine Dioxide Physical Sensor</p>",
+    "productDescription": "<p>The chlodi-lyser is an amperometric sensor for monitoring chlorine dioxide. It is ideal for all kinds of water treatment and produces stable readings even at high fluctuations of pH, temperature and flow.</p>",
+    "url": "/products/water-quality-monitoring/physical-sensors/chlodilyser-chlorine-dioxide-sensor/",
+    "id": "521",
+    "stats": [
+      {
+        "label": "<p>Parameters</p>",
+        "valueImperial": "Chlorine Dioxide, Temperature",
+        "valueMetric": "Chlorine Dioxide, Temperature"
+      }
+    ],
+    "markets": [
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment",
+      "Industrial Process"
+    ],
+    "marketNamesAndTitles": {
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater",
+      "industrial Process": "Industrial Process"
+    },
+    "subparametersWithTranslatedNames": {
+      "chlorine Dioxide": "Chlorine Dioxide",
+      "temperature": "Temperature"
+    },
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Physical Sensors",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Physical Sensors",
+      "value": "Water Quality Physical Sensors"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "Water Quality Monitoring",
+    "subparameters": [
+      "Chlorine Dioxide",
+      "Temperature"
+    ],
+    "guid": "c054df4c-5a20-4a82-9a5a-defed2f710b2",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_c054df4c-5a20-4a82-9a5a-defed2f710b2_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/wvrdk7ziob/png/chlorilyser-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "chlori-lyser Free & Total Chlorine Physical Sensor",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>chlori-lyser Free &amp; Total Chlorine Physical Sensor</p>",
+    "productDescription": "<p>The chlori-lyser is a revolutionary pH- and flow-independent sensor for monitoring free chlorine or total chlorine. Its internal buffer electrolyte allows pH-independent measurement between pH 4 to 9, and its 3-electrode system provides extremely stable readings. High precision is ensured even at high fluctuations of pH, temperature and flow.</p>",
+    "url": "/products/water-quality-monitoring/physical-sensors/chlorilyser-free-total-chlorine-sensor/",
+    "id": "534",
+    "stats": [
+      {
+        "label": "<p>Parameters</p>",
+        "valueImperial": "FCl or TCl, Temperature",
+        "valueMetric": "FCl or TCl, Temperature"
+      }
+    ],
+    "markets": [
+      "Drinking Water Treatment",
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment",
+      "Industrial Process"
+    ],
+    "marketNamesAndTitles": {
+      "drinking Water Treatment": "Drinking Water Treatment",
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater",
+      "industrial Process": "Industrial Process"
+    },
+    "subparametersWithTranslatedNames": {
+      "temperature": "Temperature",
+      "chlorine": "Chlorine"
+    },
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Physical Sensors",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Physical Sensors",
+      "value": "Water Quality Physical Sensors"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "Water Quality Monitoring",
+    "subparameters": [
+      "Temperature",
+      "Chlorine"
+    ],
+    "guid": "fd64beb5-2286-4819-b3e1-39e51b0d91e0",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_fd64beb5-2286-4819-b3e1-39e51b0d91e0_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/vbkczpinfo/png/condulyser-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "condu-lyser Conductivity Physical Sensor",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>condu-lyser Conductivity Physical Sensor</p>",
+    "productDescription": "<p>The condu-lyser is a maintenance-free and long-term stable probe for online measurement of conductivity, automatically compensated with temperature. It can be mounted directly in the media or in a flow cell providing high precision by either conductive or inductive measurement. <br /><br /></p>",
+    "url": "/products/water-quality-monitoring/physical-sensors/condulyser-conductivity-physical-sensor/",
+    "id": "522",
+    "stats": [
+      {
+        "label": "<p>Parameters</p>",
+        "valueImperial": "Conductivity, Salinity, TDS, Temperature",
+        "valueMetric": "Conductivity, Salinity, TDS, Temperature"
+      }
+    ],
+    "markets": [
+      "Drinking Water Treatment",
+      "Environmental Monitoring",
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment",
+      "Industrial Process",
+      "Collection System Monitoring",
+      "Data Centers"
+    ],
+    "marketNamesAndTitles": {
+      "drinking Water Treatment": "Drinking Water Treatment",
+      "environmental Monitoring": "Environmental Monitoring",
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater",
+      "industrial Process": "Industrial Process",
+      "collection System Monitoring": "Collection System Monitoring",
+      "data Centers": "Data Centers"
+    },
+    "subparametersWithTranslatedNames": {
+      "conductivity": "Conductivity",
+      "temperature": "Temperature"
+    },
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Physical Sensors",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Physical Sensors",
+      "value": "Water Quality Physical Sensors"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "Water Quality Monitoring",
+    "subparameters": [
+      "Conductivity",
+      "Temperature"
+    ],
+    "guid": "ce1a1f3a-5f1c-4e5c-82e8-3bbc04d71e13",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_ce1a1f3a-5f1c-4e5c-82e8-3bbc04d71e13_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/ami3lvjovu/png/hyperlyser-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "hyper-lyser Hydrogen Peroxide Sensor",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>hyper-lyser Hydrogen Peroxide Sensor</p>",
+    "productDescription": "<p>The hyper-lyser is an amperometric sensor for monitoring hydrogen peroxide. It is ideal for all kinds of water treatment and produces stable readings even at high fluctuations of pH, temperature and flow. Strong surfactants are tolerated.</p>",
+    "url": "/products/water-quality-monitoring/physical-sensors/hyperlyser-h2o2-physical-sensor/",
+    "id": "535",
+    "stats": [
+      {
+        "label": "<p>Parameters</p>",
+        "valueImperial": "Hydrogen Peroxide, Temperature",
+        "valueMetric": "Hydrogen Peroxide, Temperature"
+      }
+    ],
+    "markets": [
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment",
+      "Industrial Process"
+    ],
+    "marketNamesAndTitles": {
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater",
+      "industrial Process": "Industrial Process"
+    },
+    "subparametersWithTranslatedNames": {
+      "temperature": "Temperature",
+      "hydrogen Peroxide": "Hydrogen Peroxide"
+    },
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Physical Sensors",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Physical Sensors",
+      "value": "Water Quality Physical Sensors"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "Water Quality Monitoring",
+    "subparameters": [
+      "Temperature",
+      "Hydrogen Peroxide"
+    ],
+    "guid": "022b8456-f71c-4880-acc3-b33df904d3dc",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_022b8456-f71c-4880-acc3-b33df904d3dc_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/ipaxrzduob/png/nitrolyser-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "nitro-lyser V3 Nitrate & Turbidity Spectrometer Probe",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>nitro-lyser V3 Nitrate &amp; Turbidity Spectrometer Probe</p>",
+    "productDescription": "<p>The nitro-lyser measures nitrate concentration, turbidity and solids concentration. The displayed nitrate concentration is not affected by cross-influences from other substance groups such as organic carbon or total solids.</p>",
+    "url": "/products/water-quality-monitoring/spectrometer-probes/nitrolyser-v3/",
+    "id": "536",
+    "stats": [
+      {
+        "label": "<p>Parameters</p>",
+        "valueImperial": "NO3-N/NO3, Temperature, TSS/TS, Turbidity",
+        "valueMetric": "NO3-N/NO3, Temperature, TSS/TS, Turbidity"
+      }
+    ],
+    "markets": [
+      "Drinking Water Treatment",
+      "Environmental Monitoring",
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment",
+      "Industrial Process"
+    ],
+    "marketNamesAndTitles": {
+      "drinking Water Treatment": "Drinking Water Treatment",
+      "environmental Monitoring": "Environmental Monitoring",
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater",
+      "industrial Process": "Industrial Process"
+    },
+    "subparametersWithTranslatedNames": {
+      "nitrite Nitrogen / Nitrite": "Nitrite Nitrogen / Nitrite",
+      "total Suspended Solids": "Total Suspended Solids",
+      "temperature": "Temperature",
+      "turbidity": "Turbidity"
+    },
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Spectrometer Probes",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Spectrometer Probes",
+      "value": "Water Quality Spectrometer Probes"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "Water Quality Monitoring",
+    "subparameters": [
+      "Nitrite Nitrogen / Nitrite",
+      "Total Suspended Solids",
+      "Temperature",
+      "Turbidity"
+    ],
+    "guid": "42244437-387e-469c-8ca4-eb795ebfc555",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_42244437-387e-469c-8ca4-eb795ebfc555_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/5xwqn5sere/png/oxilyser-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "oxi-lyser Dissolved Oxygen Physical Sensor",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>oxi-lyser Dissolved Oxygen Physical Sensor</p>",
+    "productDescription": "<p>The oxi-lyser is an optical multiparameter probe that measures the concentration of dissolved oxygen (DO) and the temperature directly in the water. It does not need a minimum flow to produce accurate readings and integrates the temperature measurement for online correction. Minimal conventional calibration and virtually zero maintenance.</p>",
+    "url": "/products/water-quality-monitoring/physical-sensors/oxilyser-do-physical-sensor/",
+    "id": "528",
+    "stats": [
+      {
+        "label": "<p>Parameters</p>",
+        "valueImperial": "Dissolved Oxygen, Temperature",
+        "valueMetric": "Dissolved Oxygen, Temperature"
+      }
+    ],
+    "markets": [
+      "Drinking Water Treatment",
+      "Environmental Monitoring",
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment",
+      "Industrial Process"
+    ],
+    "marketNamesAndTitles": {
+      "drinking Water Treatment": "Drinking Water Treatment",
+      "environmental Monitoring": "Environmental Monitoring",
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater",
+      "industrial Process": "Industrial Process"
+    },
+    "subparametersWithTranslatedNames": {
+      "dissolved Oxygen": "Dissolved Oxygen",
+      "temperature": "Temperature"
+    },
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Physical Sensors",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Physical Sensors",
+      "value": "Water Quality Physical Sensors"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "Water Quality Monitoring",
+    "subparameters": [
+      "Dissolved Oxygen",
+      "Temperature"
+    ],
+    "guid": "346d67ec-b329-4609-9ddf-35dc3fd45db9",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_346d67ec-b329-4609-9ddf-35dc3fd45db9_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/o4zphkgldu/png/ozolyser-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "ozo-lyser V3 Ozone Spectrometer Probe",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>ozo-lyser V3 Ozone Spectrometer Probe</p>",
+    "productDescription": "<p>Measurement of ozone in water is what the ozo-lyser is optimized for. This member of the spectrometer family is optimized to determine concentrations of ozone dissolved in water online and in situ. It offers an alternative to classical electrochemical ozone sensors.</p>",
+    "url": "/products/water-quality-monitoring/spectrometer-probes/ozolyser-v3/",
+    "id": "532",
+    "stats": [
+      {
+        "label": "<p>Parameters</p>",
+        "valueImperial": "Dissolved Ozone, Temperature, TSS/TS, Turbidity",
+        "valueMetric": "Dissolved Ozone, Temperature, TSS/TS, Turbidity"
+      }
+    ],
+    "markets": [
+      "Drinking Water Treatment",
+      "Environmental Monitoring",
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment",
+      "Industrial Process"
+    ],
+    "marketNamesAndTitles": {
+      "drinking Water Treatment": "Drinking Water Treatment",
+      "environmental Monitoring": "Environmental Monitoring",
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater",
+      "industrial Process": "Industrial Process"
+    },
+    "subparametersWithTranslatedNames": {
+      "dissolved Ozone": "Dissolved Ozone",
+      "total Suspended Solids": "Total Suspended Solids",
+      "temperature": "Temperature",
+      "turbidity": "Turbidity"
+    },
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Spectrometer Probes",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Spectrometer Probes",
+      "value": "Water Quality Spectrometer Probes"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "Water Quality Monitoring",
+    "subparameters": [
+      "Dissolved Ozone",
+      "Total Suspended Solids",
+      "Temperature",
+      "Turbidity"
+    ],
+    "guid": "f5dd7f07-5b73-41b6-88d4-a7b41de5c209",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_f5dd7f07-5b73-41b6-88d4-a7b41de5c209_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/envq5ai6dj/png/peroxylyser-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "peroxy-lyser Peracetic Acid Physical Sensor",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>peroxy-lyser Peracetic Acid Physical Sensor</p>",
+    "productDescription": "<p>The peroxy-lyser is an amperometric sensor for monitoring peracetic acid. It is ideal for a variety of water treatment and produces stable readings even at high fluctuations of pH, temperature and flow.</p>",
+    "url": "/products/water-quality-monitoring/physical-sensors/peroxylyser-paa-physical-sensor/",
+    "id": "537",
+    "stats": [
+      {
+        "label": "<p>Parameters</p>",
+        "valueImperial": "PAA, Temperature",
+        "valueMetric": "PAA, Temperature"
+      }
+    ],
+    "markets": [
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment",
+      "Industrial Process"
+    ],
+    "marketNamesAndTitles": {
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater",
+      "industrial Process": "Industrial Process"
+    },
+    "subparametersWithTranslatedNames": {
+      "peracetic Acid": "Peracetic Acid",
+      "temperature": "Temperature"
+    },
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Physical Sensors",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Physical Sensors",
+      "value": "Water Quality Physical Sensors"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "Water Quality Monitoring",
+    "subparameters": [
+      "Peracetic Acid",
+      "Temperature"
+    ],
+    "guid": "e0eb850b-0ee1-44a6-8fe1-1613ea8b05d1",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_e0eb850b-0ee1-44a6-8fe1-1613ea8b05d1_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/fvmic2zb5j/png/pHlyser-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "pH-lyser pH and Temperature Physical Sensor",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>pH-lyser pH and Temperature Physical Sensor</p>",
+    "productDescription": "<p>The pH-lyser is designed for the real-time measurement of pH and temperature directly in the medium or in a flow-cell. Operates under tough conditions and in water with very low conductivity.</p>",
+    "url": "/products/water-quality-monitoring/physical-sensors/phlyser-physical-sensor/",
+    "id": "518",
+    "stats": [
+      {
+        "label": "<p>Parameters</p>",
+        "valueImperial": "pH, Temperature",
+        "valueMetric": "pH, Temperature"
+      }
+    ],
+    "markets": [
+      "Drinking Water Treatment",
+      "Environmental Monitoring",
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment",
+      "Industrial Process",
+      "Collection System Monitoring",
+      "Data Centers"
+    ],
+    "marketNamesAndTitles": {
+      "drinking Water Treatment": "Drinking Water Treatment",
+      "environmental Monitoring": "Environmental Monitoring",
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater",
+      "industrial Process": "Industrial Process",
+      "collection System Monitoring": "Collection System Monitoring",
+      "data Centers": "Data Centers"
+    },
+    "subparametersWithTranslatedNames": {
+      "pH": "pH",
+      "temperature": "Temperature"
+    },
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Physical Sensors",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Physical Sensors",
+      "value": "Water Quality Physical Sensors"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "Water Quality Monitoring",
+    "subparameters": [
+      "pH",
+      "Temperature"
+    ],
+    "guid": "49a3a376-0aac-4a53-8dc4-ae6510c2137e",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_49a3a376-0aac-4a53-8dc4-ae6510c2137e_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/yho24eliyy/png/uvlyser-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "uv-lyser V3 Turbidity & Total Suspended Solids Spectrometer Probe",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>uv-lyser V3 Turbidity &amp; Total Suspended Solids Spectrometer Probe</p>",
+    "productDescription": "<p>The uv-lyser monitors turbidity, total suspended solids and up to 4 individual wavelengths between 200 and 720 nm. Ideal for surface water, groundwater, drinking water and wastewater applications.</p>",
+    "url": "/products/water-quality-monitoring/spectrometer-probes/uvlyser-v3/",
+    "id": "529",
+    "stats": [
+      {
+        "label": "<p>Parameters</p>",
+        "valueImperial": "Temperature, TSS/TS, Turbidity, UVT, UV254",
+        "valueMetric": "Temperature, TSS/TS, Turbidity, UVT, UV254"
+      }
+    ],
+    "markets": [
+      "Drinking Water Treatment",
+      "Environmental Monitoring",
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment",
+      "Industrial Process"
+    ],
+    "marketNamesAndTitles": {
+      "drinking Water Treatment": "Drinking Water Treatment",
+      "environmental Monitoring": "Environmental Monitoring",
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater",
+      "industrial Process": "Industrial Process"
+    },
+    "subparametersWithTranslatedNames": {
+      "uV254": "UV254",
+      "total Suspended Solids": "Total Suspended Solids",
+      "uvt": "UVT",
+      "turbidity": "Turbidity",
+      "temperature": "Temperature"
+    },
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Spectrometer Probes",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Spectrometer Probes",
+      "value": "Water Quality Spectrometer Probes"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "Water Quality Monitoring",
+    "subparameters": [
+      "UV254",
+      "Total Suspended Solids",
+      "UVT",
+      "Turbidity",
+      "Temperature"
+    ],
+    "guid": "5e48dedb-92b9-4bab-8b27-fe5d272fa73c",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_5e48dedb-92b9-4bab-8b27-fe5d272fa73c_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/181szs3klx/png/multilyser-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "multi-lyser V3 Spectrometer Probe",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>multi-lyser V3 Spectrometer Probe</p>",
+    "productDescription": "<p>The multi-lyser combines the carbo-lyser and nitro-lyser and its ability to measure organic carbon and nitrate (NO3-N/NO3) for surface water, groundwater, drinking water and wastewater.</p>",
+    "url": "/products/water-quality-monitoring/spectrometer-probes/multilyser-v3/",
+    "id": "530",
+    "stats": [
+      {
+        "label": "<p>Parameters</p>",
+        "valueImperial": "BOD, COD, TOC, DOC, UV254, NO3-N/NO3, TSS/TS, Turbidity, Temperature",
+        "valueMetric": "BOD, COD, TOC, DOC, UV254, NO3-N/NO3, TSS/TS, Turbidity, Temperature"
+      }
+    ],
+    "markets": [
+      "Drinking Water Treatment",
+      "Environmental Monitoring",
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment",
+      "Industrial Process"
+    ],
+    "marketNamesAndTitles": {
+      "drinking Water Treatment": "Drinking Water Treatment",
+      "environmental Monitoring": "Environmental Monitoring",
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater",
+      "industrial Process": "Industrial Process"
+    },
+    "subparametersWithTranslatedNames": {
+      "biological Oxygen Demand": "Biological Oxygen Demand",
+      "chemical Oxygen Demand": "Chemical Oxygen Demand",
+      "dissolved Organic Carbon": "Dissolved Organic Carbon",
+      "nitrate Nitrogen / Nitrate": "Nitrate Nitrogen / Nitrate",
+      "total Suspended Solids": "Total Suspended Solids",
+      "temperature": "Temperature",
+      "total Organic Carbon": "Total Organic Carbon",
+      "turbidity": "Turbidity",
+      "uV254": "UV254"
+    },
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Spectrometer Probes",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Spectrometer Probes",
+      "value": "Water Quality Spectrometer Probes"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "Water Quality Monitoring",
+    "subparameters": [
+      "Biological Oxygen Demand",
+      "Chemical Oxygen Demand",
+      "Dissolved Organic Carbon",
+      "Nitrate Nitrogen / Nitrate",
+      "Total Suspended Solids",
+      "Temperature",
+      "Total Organic Carbon",
+      "Turbidity",
+      "UV254"
+    ],
+    "guid": "2d9da0e5-9749-4859-9b69-fabe0abf5b66",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_2d9da0e5-9749-4859-9b69-fabe0abf5b66_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/kiqph6cwlc/png/ammolyser-pro-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "ammo-lyser Pro Ammonium Physical Sensor",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>ammo-lyser Pro Ammonium Physical Sensor</p>",
+    "productDescription": "<p>A multiparameter probe for the online measurement of ammonium. It is a reliable device capable of outclassing conventional analyzers regarding measurement stability and lifetime. Precision is guaranteed by real-time compensation of the ammonium value with temperature, pH and potassium and a high-performance reference electrode.</p>",
+    "url": "/products/water-quality-monitoring/physical-sensors/ammolyser-pro/",
+    "id": "479",
+    "stats": [
+      {
+        "label": "<p>Parameters</p>",
+        "valueImperial": "Ammonium, NO3-N/NO3, pH, Temperature<br /><sub><em>With potassium compensation</em></sub>",
+        "valueMetric": "Ammonium, NO3-N/NO3, pH, Temperature<br /><sub><em>With potassium compensation</em></sub>"
+      }
+    ],
+    "markets": [
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment"
+    ],
+    "marketNamesAndTitles": {
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater"
+    },
+    "subparametersWithTranslatedNames": {
+      "ammonium Nitrogen & Ammonium": "Ammonium Nitrogen & Ammonium",
+      "pH": "pH",
+      "temperature": "Temperature"
+    },
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Physical Sensors",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Physical Sensors",
+      "value": "Water Quality Physical Sensors"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "Water Quality Monitoring",
+    "subparameters": [
+      "Ammonium Nitrogen & Ammonium",
+      "pH",
+      "Temperature"
+    ],
+    "guid": "c14d85e5-707f-4386-bc1c-57c86d7333d4",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_c14d85e5-707f-4386-bc1c-57c86d7333d4_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/3mfzrgcktz/png/redolyser-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "redo-lyser ORP Potential Physical Sensor",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>redo-lyser ORP Physical Sensor</p>",
+    "productDescription": "<p>The redo-lyser is a long-term stable and maintenance-free sensor for the online measurement of Oxidation-Reduction Potential (ORP) immersed in the medium or in a flow cell.</p>",
+    "url": "/products/water-quality-monitoring/physical-sensors/redolyser-redox-physical-sensor/",
+    "id": "517",
+    "stats": [
+      {
+        "label": "<p>Parameters</p>",
+        "valueImperial": "ORP, Temperature",
+        "valueMetric": "ORP, Temperature"
+      }
+    ],
+    "markets": [
+      "Drinking Water Treatment",
+      "Environmental Monitoring",
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment",
+      "Industrial Process"
+    ],
+    "marketNamesAndTitles": {
+      "drinking Water Treatment": "Drinking Water Treatment",
+      "environmental Monitoring": "Environmental Monitoring",
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater",
+      "industrial Process": "Industrial Process"
+    },
+    "subparametersWithTranslatedNames": {
+      "temperature": "Temperature",
+      "oxidation-Reduction Potential": "Oxidation-Reduction Potential"
+    },
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Physical Sensors",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Physical Sensors",
+      "value": "Water Quality Physical Sensors"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "Water Quality Monitoring",
+    "subparameters": [
+      "Temperature",
+      "Oxidation-Reduction Potential"
+    ],
+    "guid": "1ab0e837-c9c9-4ae4-a100-f76c0ebe8b69",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_1ab0e837-c9c9-4ae4-a100-f76c0ebe8b69_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/bras1vcb8e/png/solilyser-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "soli-lyser Suspended Solids Physical Sensor",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>soli-lyser Suspended Solids Physical Sensor</p>",
+    "productDescription": "<p>The soli-lyser is an optical probe that measures concentrations of suspended solids directly in the water. Using the principle of infrared absorbance, the readings are not affected by colors.</p>",
+    "url": "/products/water-quality-monitoring/physical-sensors/solilyser-physical-sensor/",
+    "id": "523",
+    "stats": [
+      {
+        "label": "<p>Parameters</p>",
+        "valueImperial": "TSS/TS",
+        "valueMetric": "TSS/TS"
+      }
+    ],
+    "markets": [
+      "Drinking Water Treatment",
+      "Environmental Monitoring",
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment",
+      "Industrial Process"
+    ],
+    "marketNamesAndTitles": {
+      "drinking Water Treatment": "Drinking Water Treatment",
+      "environmental Monitoring": "Environmental Monitoring",
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater",
+      "industrial Process": "Industrial Process"
+    },
+    "subparametersWithTranslatedNames": {
+      "total Suspended Solids": "Total Suspended Solids"
+    },
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Physical Sensors",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Physical Sensors",
+      "value": "Water Quality Physical Sensors"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "Water Quality Monitoring",
+    "subparameters": [
+      "Total Suspended Solids"
+    ],
+    "guid": "1d8b28c8-2fc5-488b-a653-a603726ee717",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_1d8b28c8-2fc5-488b-a653-a603726ee717_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/jufrc8wtwh/jpeg/iscan.jpeg?w=600&h=600&keep=c&crop=yes&color=ffffffff&quality=80&u=39eotr",
+    "productImageUrlAltText": "i-scan Spectrophotometer Probe",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>i-scan Spectrophotometer Probe</p>",
+    "productDescription": "<p>From very cost-sensitive applications down to highly resolved smart water grids, the i-scan multiparameter spectrophotometer probe combines the high performance of a multi-wavelength spectrophotometer with the lower costs of simple photometers.</p>",
+    "url": "/products/water-quality-monitoring/spectrometer-probes/iscan/",
+    "id": "520",
+    "stats": [
+      {
+        "label": "<p>Parameters</p>",
+        "valueImperial": "COD, Color, DOC, Temperature, TOC, TSS/TS, Turbidity, UV254",
+        "valueMetric": "COD, Color, DOC, Temperature, TOC, TSS/TS, Turbidity, UV254"
+      }
+    ],
+    "markets": [
+      "Drinking Water Treatment",
+      "Environmental Monitoring",
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment",
+      "Industrial Process",
+      "Data Centers"
+    ],
+    "marketNamesAndTitles": {
+      "drinking Water Treatment": "Drinking Water Treatment",
+      "environmental Monitoring": "Environmental Monitoring",
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater",
+      "industrial Process": "Industrial Process",
+      "data Centers": "Data Centers"
+    },
+    "subparametersWithTranslatedNames": {
+      "chemical Oxygen Demand": "Chemical Oxygen Demand",
+      "uvt": "UVT",
+      "color": "Color",
+      "dissolved Organic Carbon": "Dissolved Organic Carbon",
+      "total Suspended Solids": "Total Suspended Solids",
+      "temperature": "Temperature",
+      "total Organic Carbon": "Total Organic Carbon",
+      "turbidity": "Turbidity",
+      "uV254": "UV254"
+    },
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Spectrometer Probes",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Spectrometer Probes",
+      "value": "Water Quality Spectrometer Probes"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "Water Quality Monitoring",
+    "subparameters": [
+      "Chemical Oxygen Demand",
+      "UVT",
+      "Color",
+      "Dissolved Organic Carbon",
+      "Total Suspended Solids",
+      "Temperature",
+      "Total Organic Carbon",
+      "Turbidity",
+      "UV254"
+    ],
+    "guid": "6ada2f49-c197-4b1c-bca4-00072407712b",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_6ada2f49-c197-4b1c-bca4-00072407712b_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/7khaaxdk6i/png/air-compressor-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "Air Compressor for Spectrometer Probes and Sensors",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>Air Compressor for Spectrometer Probes and Sensors</p>",
+    "productDescription": "<p>Provides compressed air for oxi-lyser, soli-lyser, ammo-lyser and spectrometer probes.</p>\n<ul>\n<li>Removal of fouling using compressed air</li>\n<li>Aluminum housing IP65 for wall mounting</li>\n<li>Optional 12 VDC or 110 VAC versions available</li>\n<li>Railing-mounting set available</li>\n</ul>",
+    "url": "/products/water-quality-monitoring/accessories/air-compressor/",
+    "id": "445",
+    "stats": [],
+    "markets": [
+      "Drinking Water Treatment",
+      "Environmental Monitoring",
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment"
+    ],
+    "marketNamesAndTitles": {
+      "drinking Water Treatment": "Drinking Water Treatment",
+      "environmental Monitoring": "Environmental Monitoring",
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater"
+    },
+    "subparametersWithTranslatedNames": {},
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Water Quality Accessories",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Water Quality Accessories",
+      "value": "Water Quality Accessories"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "",
+    "subparameters": [],
+    "guid": "985d9b1a-5a24-42e7-b576-765f39bda598",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_985d9b1a-5a24-42e7-b576-765f39bda598_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/8axjqwt0qu/png/ammonium-electrode-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "Ammonium Electrode for ammo-lyser ",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>Ammonium Electrode for ammo-lyser</p>",
+    "productDescription": "<p>An ion-selective electrode for measuring the ammonium concentration with the ammo-lyser.</p>\n<ul>\n<li>Protection class: IP 68 (mounted in housing)</li>\n<li>Application: Wastewater, surface water and drinking water</li>\n</ul>",
+    "url": "/products/water-quality-monitoring/accessories/ammolyser-ammonium-electrode/",
+    "id": "448",
+    "stats": [],
+    "markets": [
+      "Drinking Water Treatment",
+      "Environmental Monitoring",
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment"
+    ],
+    "marketNamesAndTitles": {
+      "drinking Water Treatment": "Drinking Water Treatment",
+      "environmental Monitoring": "Environmental Monitoring",
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater"
+    },
+    "subparametersWithTranslatedNames": {},
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Water Quality Accessories",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Water Quality Accessories",
+      "value": "Water Quality Accessories"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "",
+    "subparameters": [],
+    "guid": "6dab7f99-aff6-419f-90c4-8ab9367ac0e5",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_6dab7f99-aff6-419f-90c4-8ab9367ac0e5_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/rhxvoojz57/png/anatool-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "ana-tool Event Detection Software",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>ana-tool Event Detection Software</p>",
+    "productDescription": "<p>ana-tool identifies unknown and unusual conditions and enables operators to react in a timely manner to faults in the monitored system, determines normality of this data and triggers an alarm when a significant deviation from the norm is detected.</p>\n<ul>\n<li>Open interface to all types of sensors and measuring devices</li>\n<li>Online and real-time validation of data before event detection significantly reduces false alarm rate</li>\n<li>Graphical user interface provides an overview of the entire station at a glance Web-based interface, allows access at any time from any location</li>\n<li>Designed to take advantage of the extensive capabilities of spectral data</li>\n<li>Includes an indicator of actual alarm sensitivity</li>\n<li>With automatic training with a moving time window, the system automatically adapts to slow changes in the water matrix</li>\n<li>The sensitivity of the alarm system is reduced during periods when the water composition changes continuously</li>\n</ul>",
+    "url": "/products/water-quality-monitoring/accessories/anatool-event-detection-software/",
+    "id": "465",
+    "stats": [],
+    "markets": [
+      "Drinking Water Treatment",
+      "Environmental Monitoring",
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment"
+    ],
+    "marketNamesAndTitles": {
+      "drinking Water Treatment": "Drinking Water Treatment",
+      "environmental Monitoring": "Environmental Monitoring",
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater"
+    },
+    "subparametersWithTranslatedNames": {},
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Water Quality Accessories",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Water Quality Accessories",
+      "value": "Water Quality Accessories"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "",
+    "subparameters": [],
+    "guid": "9b25a747-85e1-4ab0-9323-36bbeefba334",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_9b25a747-85e1-4ab0-9323-36bbeefba334_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/c7drpspyou/png/autoblade-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "auto-blade Mechanical Cleaning for Spectrometer Probes",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>auto-blade Mechanical Cleaning for Spectrometer Probes</p>",
+    "productDescription": "<p>The auto-blade is a mechanical cleaning accessory for spectrometer probes.</p>\n<ul>\n<li>Mounting on F-48-V3 wastewater flow cell</li>\n<li>Exchangeable wiper blades</li>\n<li>Set of cleaning and valve unit</li>\n<li>Path length: 5 mm</li>\n</ul>\n<p>&nbsp;</p>",
+    "url": "/products/water-quality-monitoring/accessories/autoblade-mechanical-cleaning/",
+    "id": "470",
+    "stats": [],
+    "markets": [
+      "Drinking Water Treatment",
+      "Environmental Monitoring",
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment"
+    ],
+    "marketNamesAndTitles": {
+      "drinking Water Treatment": "Drinking Water Treatment",
+      "environmental Monitoring": "Environmental Monitoring",
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater"
+    },
+    "subparametersWithTranslatedNames": {},
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Water Quality Accessories",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Water Quality Accessories",
+      "value": "Water Quality Accessories"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "",
+    "subparameters": [],
+    "guid": "5a487b5f-49a5-49f5-8c6b-dcabcc1ff049",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_5a487b5f-49a5-49f5-8c6b-dcabcc1ff049_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/kinf22uq9e/png/submersed-carrier-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "Carrier for Submersed Sensors",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>Carrier for Submersed Sensors</p>",
+    "productDescription": "<p>The carrier is used for proper and easy submersed installation for Badger Meter sensors.</p>\n<ul>\n<li>Sensor cable and pressure hose compatible</li>\n<li>Mounting with pipe: 50 mm</li>\n<li>Housing material: PVC and stainless steel</li>\n</ul>",
+    "url": "/products/water-quality-monitoring/accessories/submersed-sensor-carrier/",
+    "id": "469",
+    "stats": [],
+    "markets": [
+      "Drinking Water Treatment",
+      "Environmental Monitoring",
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment"
+    ],
+    "marketNamesAndTitles": {
+      "drinking Water Treatment": "Drinking Water Treatment",
+      "environmental Monitoring": "Environmental Monitoring",
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater"
+    },
+    "subparametersWithTranslatedNames": {},
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Water Quality Accessories",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Water Quality Accessories",
+      "value": "Water Quality Accessories"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "",
+    "subparameters": [],
+    "guid": "ef3c219c-39da-442a-9426-c229ffb558f4",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_ef3c219c-39da-442a-9426-c229ffb558f4_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/krjq92yiat/png/cleaning-agent-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "Cleaning Agent for Spectrometer Probes",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>Cleaning Agent for Spectrometer Probes</p>",
+    "productDescription": "<p>This liquid supports the easy and proper cleaning of the measuring windows of various spectrometer probes.</p>\n<ul>\n<li>Chemical removal of persistent window fouling</li>\n<li>Effective for grease and organic fouling</li>\n</ul>",
+    "url": "/products/water-quality-monitoring/accessories/probe-cleaning-agent/",
+    "id": "473",
+    "stats": [],
+    "markets": [
+      "Drinking Water Treatment",
+      "Environmental Monitoring",
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment"
+    ],
+    "marketNamesAndTitles": {
+      "drinking Water Treatment": "Drinking Water Treatment",
+      "environmental Monitoring": "Environmental Monitoring",
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater"
+    },
+    "subparametersWithTranslatedNames": {},
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Water Quality Accessories",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Water Quality Accessories",
+      "value": "Water Quality Accessories"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "",
+    "subparameters": [],
+    "guid": "2482af16-295e-4b42-b73e-8c7775a2487c",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_2482af16-295e-4b42-b73e-8c7775a2487c_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/s4tb43euxx/png/cleaning-valve-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "Cleaning Valve for Spectrometer Probes & Sensors",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>Cleaning Valve for Spectrometer Probes &amp; Sensors</p>",
+    "productDescription": "<p>Supports automatic cleaning of measuring elements for oxil-yser, soli-lyser, ammo-lyser and spectrometer probes.</p>\n<ul>\n<li>Removal of fouling, sediments and clogging using compressed air or water</li>\n<li>Works with the Air Compressor for Spectrometer Probes &amp; Sensors</li>\n</ul>",
+    "url": "/products/water-quality-monitoring/accessories/cleaning-valve/",
+    "id": "474",
+    "stats": [],
+    "markets": [
+      "Drinking Water Treatment",
+      "Environmental Monitoring",
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment"
+    ],
+    "marketNamesAndTitles": {
+      "drinking Water Treatment": "Drinking Water Treatment",
+      "environmental Monitoring": "Environmental Monitoring",
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater"
+    },
+    "subparametersWithTranslatedNames": {},
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Water Quality Accessories",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Water Quality Accessories",
+      "value": "Water Quality Accessories"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "",
+    "subparameters": [],
+    "guid": "9686c714-8c8b-41b8-9d90-791eff4de2cf",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_9686c714-8c8b-41b8-9d90-791eff4de2cf_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/ydkkbnpezn/png/connect-powersupply-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "con-nect Power Supply for spectro-lyser",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>con-nect Power Supply for spectro-lyser</p>",
+    "productDescription": "<p>Transform your computer into a terminal for the spectro-lyser. The interface box connects the probes to the computer, the supply of compressed air and power supply.</p>\n<ul>\n<li>The con-nect serves as a power supply, providing a convenient solution for powering and connecting spectrometer probes and sensor probes</li>\n<li>The device offers USB interface to a computer, facilitating easy data transfer and configuration. Additionally, it features an RS485 interface to SCADA systems with Modbus RTU integrated</li>\n<li>The device allows for the control of cleaning valves, enabling automated maintenance routines</li>\n<li>With power supply options of 12/24 VDC and 110/230 VAC</li>\n</ul>",
+    "url": "/products/water-quality-monitoring/accessories/connect-power-supply/",
+    "id": "499",
+    "stats": [],
+    "markets": [
+      "Drinking Water Treatment",
+      "Environmental Monitoring",
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment"
+    ],
+    "marketNamesAndTitles": {
+      "drinking Water Treatment": "Drinking Water Treatment",
+      "environmental Monitoring": "Environmental Monitoring",
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater"
+    },
+    "subparametersWithTranslatedNames": {},
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Water Quality Accessories",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Water Quality Accessories",
+      "value": "Water Quality Accessories"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "",
+    "subparameters": [],
+    "guid": "1b41486e-9146-45dc-967b-19c1ca98a283",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_1b41486e-9146-45dc-967b-19c1ca98a283_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/bh8zlfs7y0/png/connect-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "con-nect V3 for spectro-lyser V3",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>con-nect V3 for spectro-lyser V3</p>",
+    "productDescription": "<p>Connects to the spectro-lyser V3 via WLAN and use the user-friendly web interface Io-Tool for probe configuration and data visualization.</p>\n<ul>\n<li>An efficient connection device for one spectro-lyser V3 probe and one cleaning device</li>\n<li>With the ability to expand con-cube and con-lyte sensor networks, the device facilitates longer distances and a higher number of sensors</li>\n<li>Featuring an RJ45 connector for wired network access, the device provides flexible connectivity options</li>\n</ul>",
+    "url": "/products/water-quality-monitoring/accessories/connect-v3/",
+    "id": "501",
+    "stats": [],
+    "markets": [
+      "Drinking Water Treatment",
+      "Environmental Monitoring",
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment"
+    ],
+    "marketNamesAndTitles": {
+      "drinking Water Treatment": "Drinking Water Treatment",
+      "environmental Monitoring": "Environmental Monitoring",
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater"
+    },
+    "subparametersWithTranslatedNames": {},
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Water Quality Accessories",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Water Quality Accessories",
+      "value": "Water Quality Accessories"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "",
+    "subparameters": [],
+    "guid": "21e6ed95-8eb1-4034-bf24-3d4186bed913",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_21e6ed95-8eb1-4034-bf24-3d4186bed913_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/lb7zhisrjd/png/physical-sensor-extension-cable-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "Extension Cable for Physical Sensors",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>Extension Cable for Physical Sensors</p>",
+    "productDescription": "<p>An extension of the sensor cable with IP 68 plug connection for flexible adaptation to local conditions.</p>\n<ul>\n<li>Available in three cable lengths: 33 feet (10 meters), 66 feet (20 meters) or 98 feet (30 meters)</li>\n</ul>",
+    "url": "/products/water-quality-monitoring/accessories/physical-sensor-extension-cable/",
+    "id": "475",
+    "stats": [],
+    "markets": [
+      "Drinking Water Treatment",
+      "Environmental Monitoring",
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment"
+    ],
+    "marketNamesAndTitles": {
+      "drinking Water Treatment": "Drinking Water Treatment",
+      "environmental Monitoring": "Environmental Monitoring",
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater"
+    },
+    "subparametersWithTranslatedNames": {},
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Water Quality Accessories",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Water Quality Accessories",
+      "value": "Water Quality Accessories"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "",
+    "subparameters": [],
+    "guid": "5ef13157-b8d3-4027-8982-c74cbb1d04b1",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_5ef13157-b8d3-4027-8982-c74cbb1d04b1_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/amn28uotoa/png/spectrometer-extension-cable-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": null,
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>Extension Cable for Spectrometer Probes</p>",
+    "productDescription": "<p>This extension cable for spectrometer probes has an IP 67 plug connection and adapts to local conditions with flexibility.</p>\n<ul>\n<li>Available in three cable lengths: 33 feet (10 meters), 66 feet (20 meters) or 98 feet (30 meters)</li>\n</ul>",
+    "url": "/products/water-quality-monitoring/accessories/probe-extension-cable/",
+    "id": "477",
+    "stats": [],
+    "markets": [
+      "Drinking Water Treatment",
+      "Environmental Monitoring",
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment"
+    ],
+    "marketNamesAndTitles": {
+      "drinking Water Treatment": "Drinking Water Treatment",
+      "environmental Monitoring": "Environmental Monitoring",
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater"
+    },
+    "subparametersWithTranslatedNames": {},
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Water Quality Accessories",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Water Quality Accessories",
+      "value": "Water Quality Accessories"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "",
+    "subparameters": [],
+    "guid": "cf034d59-8bbf-4e09-9176-7869a01a9e03",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_cf034d59-8bbf-4e09-9176-7869a01a9e03_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/cakhwox8mh/png/field-case-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "Field Case for Spectrometer Probes",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>Field Case for Spectrometer Probes</p>",
+    "productDescription": "<p>The field case provides remote monitoring and power for spectrometer probes.</p>\n<ul>\n<li>Stand-alone field case</li>\n<li>No power supply necessary</li>\n<li>Remote usage</li>\n</ul>",
+    "url": "/products/water-quality-monitoring/accessories/probe-field-case/",
+    "id": "478",
+    "stats": [],
+    "markets": [
+      "Drinking Water Treatment",
+      "Environmental Monitoring",
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment"
+    ],
+    "marketNamesAndTitles": {
+      "drinking Water Treatment": "Drinking Water Treatment",
+      "environmental Monitoring": "Environmental Monitoring",
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater"
+    },
+    "subparametersWithTranslatedNames": {},
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Water Quality Accessories",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Water Quality Accessories",
+      "value": "Water Quality Accessories"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "",
+    "subparameters": [],
+    "guid": "22233e8a-b506-46ff-8b49-e7082dcbbf19",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_22233e8a-b506-46ff-8b49-e7082dcbbf19_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/6rh03cj3nv/png/Flow-Cell-Autobrush-spectrolyser-100mm-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "Flow Cell Autobrush for spectro-lyser - Pathlength: 100 mm",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>Flow Cell Autobrush for spectro-lyser - Pathlength: 100 mm</p>",
+    "productDescription": "<p>Flow cell autobrush for spectro-lyser - 100 mm. For proper and easy flow-through installation of spectrometer probes</p>\n<ul>\n<li>For proper and easy flow-through installation of spectrometer probes</li>\n<li>Designed for applications with frequent, automatic cleaning</li>\n<li>Cleaning of optical windows with rotating brush without demounting of spectrometer probe probes</li>\n<li>Pathlength: 100 mm</li>\n</ul>",
+    "url": "/products/water-quality-monitoring/accessories/flow-cell-autobrush-100mm/",
+    "id": "484",
+    "stats": [],
+    "markets": [
+      "Drinking Water Treatment",
+      "Environmental Monitoring",
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment"
+    ],
+    "marketNamesAndTitles": {
+      "drinking Water Treatment": "Drinking Water Treatment",
+      "environmental Monitoring": "Environmental Monitoring",
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater"
+    },
+    "subparametersWithTranslatedNames": {},
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Water Quality Accessories",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Water Quality Accessories",
+      "value": "Water Quality Accessories"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "",
+    "subparameters": [],
+    "guid": "a4d625fa-3bed-4931-a7d1-f78539f7f918",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_a4d625fa-3bed-4931-a7d1-f78539f7f918_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/chojarypru/png/Flow-Cell-Autobrush-spectrolyser-35mm-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "Flow Cell Autobrush for spectro-lyser - Pathlength: 35 mm",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>Flow Cell Autobrush for spectro-lyser - Pathlength: 35 mm</p>",
+    "productDescription": "<p>Used for proper and easy flow-through installation of spectro-lyser probes.</p>\n<ul>\n<li>Designed for applications with frequent, automatic cleaning</li>\n<li>Cleaning of optical windows with rotating brush without demounting of spectrometer probe probes</li>\n<li>Housing material: POM-C</li>\n<li>Pathlegnth: 35 mm</li>\n</ul>",
+    "url": "/products/water-quality-monitoring/accessories/flow-cell-autobrush-35mm/",
+    "id": "485",
+    "stats": [],
+    "markets": [
+      "Drinking Water Treatment",
+      "Environmental Monitoring",
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment"
+    ],
+    "marketNamesAndTitles": {
+      "drinking Water Treatment": "Drinking Water Treatment",
+      "environmental Monitoring": "Environmental Monitoring",
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater"
+    },
+    "subparametersWithTranslatedNames": {},
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Water Quality Accessories",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Water Quality Accessories",
+      "value": "Water Quality Accessories"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "",
+    "subparameters": [],
+    "guid": "d4336b4b-1fd5-4b8d-9a8a-ec8feb59001f",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_d4336b4b-1fd5-4b8d-9a8a-ec8feb59001f_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/fcimkhvd9z/png/Flow-Cell-condu-lyser-chlorilyser-redolyser-pHlyser-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "Flow Cell for condu-lyser, chlori-lyser, redo-lyser and pH-lyser",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>Flow Cell for condu-lyser, chlori-lyser, redo-lyser and pH-lyser</p>",
+    "productDescription": "<p>Flow cell for proper and easy flow-through installation of condu-lyser, chlori-lyser, redo-lyser and pH-lyser physical sensors.</p>\n<ul>\n<li>For applications without automatic cleaning in drinking water</li>\n<li>Housing material: POM-C</li>\n</ul>",
+    "url": "/products/water-quality-monitoring/accessories/flow-cell/",
+    "id": "486",
+    "stats": [],
+    "markets": [
+      "Drinking Water Treatment",
+      "Environmental Monitoring",
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment"
+    ],
+    "marketNamesAndTitles": {
+      "drinking Water Treatment": "Drinking Water Treatment",
+      "environmental Monitoring": "Environmental Monitoring",
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater"
+    },
+    "subparametersWithTranslatedNames": {},
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Water Quality Accessories",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Water Quality Accessories",
+      "value": "Water Quality Accessories"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "",
+    "subparameters": [],
+    "guid": "2a3e2e04-d31d-4b59-acf4-35e4dffca637",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_2a3e2e04-d31d-4b59-acf4-35e4dffca637_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/di3bnvuuwx/png/Flow-cell-iscan-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "Flow Cell for i-scan and Three More Probes",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>Flow Cell for i-scan and Three More Probes</p>",
+    "productDescription": "<p>Flow cell for proper and easy flow-through installation of an i-scan and up to three physical probes.</p>\n<ul>\n<li>Automatic cleaning with auto brush for i-scan available (optional)</li>\n<li>Housing material: POM-C</li>\n</ul>",
+    "url": "/products/water-quality-monitoring/accessories/4-probe-flow-cell/",
+    "id": "487",
+    "stats": [],
+    "markets": [
+      "Drinking Water Treatment",
+      "Environmental Monitoring",
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment"
+    ],
+    "marketNamesAndTitles": {
+      "drinking Water Treatment": "Drinking Water Treatment",
+      "environmental Monitoring": "Environmental Monitoring",
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater"
+    },
+    "subparametersWithTranslatedNames": {},
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Water Quality Accessories",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Water Quality Accessories",
+      "value": "Water Quality Accessories"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "",
+    "subparameters": [],
+    "guid": "6823dfe8-fa6d-45f8-ac97-87739ec3795d",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_6823dfe8-fa6d-45f8-ac97-87739ec3795d_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/apcjynhzr6/png/Flow-cell-ise-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "Flow Cell for ISE Probe",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>Flow Cell for ISE Probe</p>",
+    "productDescription": "<p>A PVC flow-through fitting for measuring wastewater or surface water in the by-pass with an ammo-lyser.</p>\n<ul>\n<li>Application: Wastewater and surface water</li>\n<li>Housing material: PVC</li>\n</ul>",
+    "url": "/products/water-quality-monitoring/accessories/ise-probe-flow-cell/",
+    "id": "488",
+    "stats": [],
+    "markets": [
+      "Drinking Water Treatment",
+      "Environmental Monitoring",
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment"
+    ],
+    "marketNamesAndTitles": {
+      "drinking Water Treatment": "Drinking Water Treatment",
+      "environmental Monitoring": "Environmental Monitoring",
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater"
+    },
+    "subparametersWithTranslatedNames": {},
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Water Quality Accessories",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Water Quality Accessories",
+      "value": "Water Quality Accessories"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "",
+    "subparameters": [],
+    "guid": "55dc6c17-358a-4cbb-ac3b-0e41fa0d3ef5",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_55dc6c17-358a-4cbb-ac3b-0e41fa0d3ef5_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/bbztz51lp7/png/Flow-Cell-pHlyser-redolyser-condulyser-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "Flow Cell for pH-lyser, redo-lyser & condu-lyser Sensors",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>Flow Cell for pH-lyser, redo-lyser &amp; condu-lyser Sensors</p>",
+    "productDescription": "<p>Used for proper and easy flow-through installation of pH-lyser, redo-lyser and condu-lyser spectrometer probes.</p>\n<ul>\n<li>Application: Wastewater</li>\n<li>Housing material: PVC</li>\n<li>For applications without automatic cleaning</li>\n</ul>",
+    "url": "/products/water-quality-monitoring/accessories/sensor-flow-cell/",
+    "id": "489",
+    "stats": [],
+    "markets": [
+      "Drinking Water Treatment",
+      "Environmental Monitoring",
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment"
+    ],
+    "marketNamesAndTitles": {
+      "drinking Water Treatment": "Drinking Water Treatment",
+      "environmental Monitoring": "Environmental Monitoring",
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater"
+    },
+    "subparametersWithTranslatedNames": {},
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Water Quality Accessories",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Water Quality Accessories",
+      "value": "Water Quality Accessories"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "",
+    "subparameters": [],
+    "guid": "5d227bc0-6431-427e-a18d-1af835a3dd85",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_5d227bc0-6431-427e-a18d-1af835a3dd85_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/vmcpf8qcek/png/Flow-cell-spectrometer-100mm-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "Flow Cell for Spectrometer Probes - Pathlength: 100 mm",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>Flow Cell for Spectrometer Probes - Pathlength: 100 mm</p>",
+    "productDescription": "<p>Used for proper and easy flow-through installation of spectrometer probes.</p>\n<ul>\n<li>Housing material: POM-C</li>\n<li>Pathlength: 100 mm</li>\n<li>Hose connection size: 1/2 inch (12 mm)</li>\n<li>For applications without automatic cleaning</li>\n</ul>",
+    "url": "/products/water-quality-monitoring/accessories/probe-flow-cell-100mm/",
+    "id": "490",
+    "stats": [],
+    "markets": [
+      "Drinking Water Treatment",
+      "Environmental Monitoring",
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment"
+    ],
+    "marketNamesAndTitles": {
+      "drinking Water Treatment": "Drinking Water Treatment",
+      "environmental Monitoring": "Environmental Monitoring",
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater"
+    },
+    "subparametersWithTranslatedNames": {},
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Water Quality Accessories",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Water Quality Accessories",
+      "value": "Water Quality Accessories"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "",
+    "subparameters": [],
+    "guid": "1ba7131a-653a-42f9-944d-4f41f953e13b",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_1ba7131a-653a-42f9-944d-4f41f953e13b_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/cq6vdcobwy/png/Flow-cell-spectrometer-35mm-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "Flow Cell for Spectrometer Probes - Pathlength Up to 35 mm",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>Flow Cell for Spectrometer Probes - Pathlength Up to 35 mm</p>",
+    "productDescription": "<p>Used for proper and easy flow-through installation of spectrometer probes.</p>\n<ul>\n<li>Housing material: POM-C</li>\n<li>Pathlength: 0.5 - 35 mm</li>\n<li>Hose connection size: 1/2 inch (12 mm)</li>\n</ul>",
+    "url": "/products/water-quality-monitoring/accessories/probe-flow-cell-35mm/",
+    "id": "493",
+    "stats": [],
+    "markets": [
+      "Drinking Water Treatment",
+      "Environmental Monitoring",
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment"
+    ],
+    "marketNamesAndTitles": {
+      "drinking Water Treatment": "Drinking Water Treatment",
+      "environmental Monitoring": "Environmental Monitoring",
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater"
+    },
+    "subparametersWithTranslatedNames": {},
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Water Quality Accessories",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Water Quality Accessories",
+      "value": "Water Quality Accessories"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "",
+    "subparameters": [],
+    "guid": "cc98c645-1164-4040-a430-55ada83d61d0",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_cc98c645-1164-4040-a430-55ada83d61d0_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/kbysg4wuvk/png/Flow-cell-wastewater-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "Flow Cell for Spectrometer Probes for Wastewater",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>Flow Cell for Spectrometer Probes for Wastewater</p>",
+    "productDescription": "<p>Used for proper and easy flow-through installation of one spectrometer probe in wastewater applications.</p>\n<ul>\n<li>Application: Wastewater</li>\n<li>Housing material: PVC</li>\n</ul>",
+    "url": "/products/water-quality-monitoring/accessories/wastewater-probe-flow-cell/",
+    "id": "492",
+    "stats": [],
+    "markets": [
+      "Drinking Water Treatment",
+      "Environmental Monitoring",
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment"
+    ],
+    "marketNamesAndTitles": {
+      "drinking Water Treatment": "Drinking Water Treatment",
+      "environmental Monitoring": "Environmental Monitoring",
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater"
+    },
+    "subparametersWithTranslatedNames": {},
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Water Quality Accessories",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Water Quality Accessories",
+      "value": "Water Quality Accessories"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "",
+    "subparameters": [],
+    "guid": "87e90dd9-47ea-4ab8-bb94-95032838acd6",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_87e90dd9-47ea-4ab8-bb94-95032838acd6_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/bxjtxwqp74/png/iscan-carrier-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "i-scan Carrier Housings",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>i-scan Carrier Housings</p>",
+    "productDescription": "<p>i-scan carrier for connection to i-scan spectrometer probe.</p>\n<ul>\n<li>Housing material: PVC, POM-C</li>\n<li>Submersible mounting</li>\n<li>Available in three carrier orientations: Horizontal, vertical and 45 degree angle attachment</li>\n</ul>",
+    "url": "/products/water-quality-monitoring/accessories/iscan-carrier-housing/",
+    "id": "491",
+    "stats": [],
+    "markets": [
+      "Drinking Water Treatment",
+      "Environmental Monitoring",
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment"
+    ],
+    "marketNamesAndTitles": {
+      "drinking Water Treatment": "Drinking Water Treatment",
+      "environmental Monitoring": "Environmental Monitoring",
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater"
+    },
+    "subparametersWithTranslatedNames": {},
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Water Quality Accessories",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Water Quality Accessories",
+      "value": "Water Quality Accessories"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "",
+    "subparameters": [],
+    "guid": "715bae09-aee3-4aed-9efd-04ba9bf8931b",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_715bae09-aee3-4aed-9efd-04ba9bf8931b_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/i1vbcq2hhx/png/multifunction-slide-100mm-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "Multifunctional Slide for Spectrometer Probes - Pathlength: 100 mm",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>Multifunctional Slide for Spectrometer Probes - Pathlength: 100 mm</p>",
+    "productDescription": "<p>This multi-purpose sleeve is used for centering spectrometer probes. Offered in 100 mm pathlength.</p>\n<ul>\n<li>For use with: Spectrometer probes</li>\n<li>For spectral measurement in laboratory</li>\n<li>Pathlength: 100 mm</li>\n</ul>",
+    "url": "/products/water-quality-monitoring/accessories/probe-multifunctional-slide-100mm/",
+    "id": "483",
+    "stats": [],
+    "markets": [
+      "Drinking Water Treatment",
+      "Environmental Monitoring",
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment"
+    ],
+    "marketNamesAndTitles": {
+      "drinking Water Treatment": "Drinking Water Treatment",
+      "environmental Monitoring": "Environmental Monitoring",
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater"
+    },
+    "subparametersWithTranslatedNames": {},
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Water Quality Accessories",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Water Quality Accessories",
+      "value": "Water Quality Accessories"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "",
+    "subparameters": [],
+    "guid": "0b22fbb6-2767-4760-b439-f2259beadae4",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_0b22fbb6-2767-4760-b439-f2259beadae4_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/fs1jztx3c7/png/multifunction-slide-35mm-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "Multifunctional Slide for Spectrometer Probes - Pathlength: 35 mm",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>Multifunctional Slide for Spectrometer Probes - Pathlength: 35 mm</p>",
+    "productDescription": "<p>This multi-purpose sleeve is used for centering spectrometer probes. Offered in up to 35 mm pathlength.</p>\n<ul>\n<li>For use with: Spectrometer probes</li>\n<li>For spectral measurement in laboratory</li>\n<li>Pathlength: 0.5 - 35 mm</li>\n</ul>",
+    "url": "/products/water-quality-monitoring/accessories/probe-multifunctional-slide-35mm/",
+    "id": "482",
+    "stats": [],
+    "markets": [
+      "Drinking Water Treatment",
+      "Environmental Monitoring",
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment"
+    ],
+    "marketNamesAndTitles": {
+      "drinking Water Treatment": "Drinking Water Treatment",
+      "environmental Monitoring": "Environmental Monitoring",
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater"
+    },
+    "subparametersWithTranslatedNames": {},
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Water Quality Accessories",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Water Quality Accessories",
+      "value": "Water Quality Accessories"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "",
+    "subparameters": [],
+    "guid": "a0323502-4e63-4f88-9ca5-a21e63f646c9",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_a0323502-4e63-4f88-9ca5-a21e63f646c9_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/kfvdddrumk/png/pH-electrode-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "pH Electrode for ammo-lyser",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>pH Electrode for ammo-lyser</p>",
+    "productDescription": "<p>An Ion-selective electrode for the ammo-lyser, used to measure the pH value.</p>\n<ul>\n<li>Application: Wastewater, surface water and drinking water</li>\n<li>For use with: ammo-lyser physical sensors</li>\n<li>Measures: pH</li>\n</ul>",
+    "url": "/products/water-quality-monitoring/accessories/ammolyser-ph-electrode/",
+    "id": "452",
+    "stats": [],
+    "markets": [
+      "Drinking Water Treatment",
+      "Environmental Monitoring",
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment"
+    ],
+    "marketNamesAndTitles": {
+      "drinking Water Treatment": "Drinking Water Treatment",
+      "environmental Monitoring": "Environmental Monitoring",
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater"
+    },
+    "subparametersWithTranslatedNames": {},
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Water Quality Accessories",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Water Quality Accessories",
+      "value": "Water Quality Accessories"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "",
+    "subparameters": [],
+    "guid": "ea9b87bf-f2fd-411b-92b7-362b69508af2",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_ea9b87bf-f2fd-411b-92b7-362b69508af2_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/ne8rcing31/png/potassium-electrode-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "Potassium Electrode for ammo-lyser",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>Potassium Electrode for ammo-lyser</p>",
+    "productDescription": "<p>An ion-selective electrode for the ammo-lyser, used to measure potassium concentration.</p>\n<ul>\n<li>Application: Wastewater, surface water and drinking water</li>\n<li>For use with: ammo-lyser physical sensors</li>\n<li>Measures: Potassium concentration</li>\n</ul>",
+    "url": "/products/water-quality-monitoring/accessories/ammolyser-potassium-electrode/",
+    "id": "463",
+    "stats": [],
+    "markets": [
+      "Drinking Water Treatment",
+      "Environmental Monitoring",
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment"
+    ],
+    "marketNamesAndTitles": {
+      "drinking Water Treatment": "Drinking Water Treatment",
+      "environmental Monitoring": "Environmental Monitoring",
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater"
+    },
+    "subparametersWithTranslatedNames": {},
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Water Quality Accessories",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Water Quality Accessories",
+      "value": "Water Quality Accessories"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "",
+    "subparameters": [],
+    "guid": "255c86db-af66-491c-bd36-ddb56de32531",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_255c86db-af66-491c-bd36-ddb56de32531_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/p0ltr6slir/png/iscan-pressure-mount-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "Pressure Mounting for i-scan In-Pipe Installation",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>Pressure Mounting for i-scan In-Pipe Installation</p>",
+    "productDescription": "<p>Allows for the i-scan spectrometer probe to be mounted and demounted under pressure without interruption of water flow.</p>\n<ul>\n<li>For use with: i-scan spectrometer probes</li>\n<li>Enables under pressure drilling of pipes made of: PE, PVC, DCI, steel and AC pipes</li>\n<li>Housing material: Steel</li>\n<li>Process connection: Handle shut off saddle with a o-ring (DN 50 &ndash; DN 300 &amp; others on request)</li>\n</ul>",
+    "url": "/products/water-quality-monitoring/accessories/iscan-pressure-mounting/",
+    "id": "481",
+    "stats": [],
+    "markets": [
+      "Drinking Water Treatment",
+      "Environmental Monitoring",
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment"
+    ],
+    "marketNamesAndTitles": {
+      "drinking Water Treatment": "Drinking Water Treatment",
+      "environmental Monitoring": "Environmental Monitoring",
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater"
+    },
+    "subparametersWithTranslatedNames": {},
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Water Quality Accessories",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Water Quality Accessories",
+      "value": "Water Quality Accessories"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "",
+    "subparameters": [],
+    "guid": "7fe74493-17df-4691-b8af-8fd70deb8b69",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_7fe74493-17df-4691-b8af-8fd70deb8b69_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/f4qplhtrwg/png/reference-electrode-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "Reference Electrode for ammo-lyser",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>Reference Electrode for ammo-lyser</p>",
+    "productDescription": "<p>A durable and stable reference electrode for the ammo-lyser for measuring various parameters in wastewater, surface water or drinking water.</p>\n<ul>\n<li>Long life (&plusmn;3 years)</li>\n<li>Non-porous, solid state electrode</li>\n<li>Smaller drift than conventional electrodes</li>\n<li>Protection class: IP 68 (mounted in housing)</li>\n</ul>",
+    "url": "/products/water-quality-monitoring/accessories/ammolyser-reference-electrode/",
+    "id": "464",
+    "stats": [],
+    "markets": [
+      "Drinking Water Treatment",
+      "Environmental Monitoring",
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment"
+    ],
+    "marketNamesAndTitles": {
+      "drinking Water Treatment": "Drinking Water Treatment",
+      "environmental Monitoring": "Environmental Monitoring",
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater"
+    },
+    "subparametersWithTranslatedNames": {},
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Water Quality Accessories",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Water Quality Accessories",
+      "value": "Water Quality Accessories"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "",
+    "subparameters": [],
+    "guid": "39b06d1b-9ecd-46a6-b4fe-1bfea5526bff",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_39b06d1b-9ecd-46a6-b4fe-1bfea5526bff_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/rpusfenkpv/png/rucksack-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "ruck-sack Submersible Autobrush for Spectrometer Probes",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>ruck-sack Submersible Autobrush for Spectrometer Probes</p>",
+    "productDescription": "<p>The ruck-sack is an attachment for spectrometer probes and for the i-scan with submersible autobrush and exchangeable cleaning brushes.</p>\n<ul>\n<li>Submersible autobrush for spectrometer probes and i-scan</li>\n<li>Exchangeble brushes</li>\n<li>Shelter protects the brush from clogging</li>\n<li>Offered in several pathlengths: 5 mm, 15 mm and 35 mm</li>\n</ul>",
+    "url": "/products/water-quality-monitoring/accessories/rucksack-submersible-autobrush/",
+    "id": "456",
+    "stats": [],
+    "markets": [
+      "Drinking Water Treatment",
+      "Environmental Monitoring",
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment"
+    ],
+    "marketNamesAndTitles": {
+      "drinking Water Treatment": "Drinking Water Treatment",
+      "environmental Monitoring": "Environmental Monitoring",
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater"
+    },
+    "subparametersWithTranslatedNames": {},
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Water Quality Accessories",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Water Quality Accessories",
+      "value": "Water Quality Accessories"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "",
+    "subparameters": [],
+    "guid": "302bbf8d-0825-43a5-bb17-e0000c1f3be4",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_302bbf8d-0825-43a5-bb17-e0000c1f3be4_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/jjtdf8nngm/png/flow-cell-iscan-single-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "Single i-scan Flow Cell",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>Single i-scan Flow Cell</p>",
+    "productDescription": "<p>Used for proper and easy flow-through installation of i-scan in wastewater.</p>\n<ul>\n<li>Application: Wastewater</li>\n<li>Housing material: PVC</li>\n</ul>",
+    "url": "/products/water-quality-monitoring/accessories/single-iscan-flow-cell/",
+    "id": "468",
+    "stats": [],
+    "markets": [
+      "Drinking Water Treatment",
+      "Environmental Monitoring",
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment"
+    ],
+    "marketNamesAndTitles": {
+      "drinking Water Treatment": "Drinking Water Treatment",
+      "environmental Monitoring": "Environmental Monitoring",
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater"
+    },
+    "subparametersWithTranslatedNames": {},
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Water Quality Accessories",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Water Quality Accessories",
+      "value": "Water Quality Accessories"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "",
+    "subparameters": [],
+    "guid": "3317d706-cd69-4403-b5cd-9bffe65a5c72",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_3317d706-cd69-4403-b5cd-9bffe65a5c72_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/0h5iibf3yg/png/iscan-bypass-fitting-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "Single i-scan Flow Cell Bypass Fitting",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>Single i-scan Flow Cell Bypass Fitting</p>",
+    "productDescription": "<p>Flow cell bypass fitting for installation of one i-scan spectrometer probe.</p>\n<ul>\n<li>Automatic cleaning with autobrush for i-scan available (optional)</li>\n<li>Housing material: POM-C</li>\n<li>Available with and without auto brush</li>\n</ul>",
+    "url": "/products/water-quality-monitoring/accessories/single-iscan-flow-cell-bypass-fitting/",
+    "id": "467",
+    "stats": [],
+    "markets": [
+      "Drinking Water Treatment",
+      "Environmental Monitoring",
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment"
+    ],
+    "marketNamesAndTitles": {
+      "drinking Water Treatment": "Drinking Water Treatment",
+      "environmental Monitoring": "Environmental Monitoring",
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater"
+    },
+    "subparametersWithTranslatedNames": {},
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Water Quality Accessories",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Water Quality Accessories",
+      "value": "Water Quality Accessories"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "",
+    "subparameters": [],
+    "guid": "1af1073e-c7d1-4929-baf9-327287424aa1",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_1af1073e-c7d1-4929-baf9-327287424aa1_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/6qt3ekfmtg/png/spectrometer-carrier-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "Spectrometer Probe Carrier",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>Spectrometer Probe Carrier</p>",
+    "productDescription": "<p>Designed for hassle-free submerged deployment of spectrometer probe.</p>\n<ul>\n<li>Accommodates both probe cables and pressure hoses</li>\n<li>Housing material: PVC and POM-C</li>\n<li>Offered in two carrier orientations: Horizontal and vertical attachment<br /><br /></li>\n</ul>",
+    "url": "/products/water-quality-monitoring/accessories/probe-carrier/",
+    "id": "462",
+    "stats": [],
+    "markets": [
+      "Drinking Water Treatment",
+      "Environmental Monitoring",
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment"
+    ],
+    "marketNamesAndTitles": {
+      "drinking Water Treatment": "Drinking Water Treatment",
+      "environmental Monitoring": "Environmental Monitoring",
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater"
+    },
+    "subparametersWithTranslatedNames": {},
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Water Quality Accessories",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Water Quality Accessories",
+      "value": "Water Quality Accessories"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "",
+    "subparameters": [],
+    "guid": "56ff9ef9-ad2c-4809-b3e2-7ebc7349da1a",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_56ff9ef9-ad2c-4809-b3e2-7ebc7349da1a_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/my0di7sj6y/png/cleaning-brush-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "Spectrometer Probe Cleaning Brush",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>Spectrometer Probe Cleaning Brush</p>",
+    "productDescription": "<p>Brushes for proper cleaning of the optical measuring windows for spectrometer probes. Remove fouling and maintain optical window clarity.</p>",
+    "url": "/products/water-quality-monitoring/accessories/probe-cleaning-brush/",
+    "id": "447",
+    "stats": [],
+    "markets": [
+      "Drinking Water Treatment",
+      "Environmental Monitoring",
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment"
+    ],
+    "marketNamesAndTitles": {
+      "drinking Water Treatment": "Drinking Water Treatment",
+      "environmental Monitoring": "Environmental Monitoring",
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater"
+    },
+    "subparametersWithTranslatedNames": {},
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Water Quality Accessories",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Water Quality Accessories",
+      "value": "Water Quality Accessories"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "",
+    "subparameters": [],
+    "guid": "0c0ba4cb-29fc-4c78-b276-feac5e26eef2",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_0c0ba4cb-29fc-4c78-b276-feac5e26eef2_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/wqyf5qv5ro/png/stainless-steel-adapter-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "Stainless Steel Fixing Adapter",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>Stainless Steel Fixing Adapter</p>",
+    "productDescription": "<p>Stainless steel fixing adapter allows for quick mounting and demounting of in situ installed spectrometer probes and physical sensors.</p>\n<ul>\n<li>Housing material: Stainless Steel</li>\n</ul>",
+    "url": "/products/water-quality-monitoring/accessories/stainless-steel-fixing-adapter/",
+    "id": "461",
+    "stats": [],
+    "markets": [
+      "Drinking Water Treatment",
+      "Environmental Monitoring",
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment"
+    ],
+    "marketNamesAndTitles": {
+      "drinking Water Treatment": "Drinking Water Treatment",
+      "environmental Monitoring": "Environmental Monitoring",
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater"
+    },
+    "subparametersWithTranslatedNames": {},
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Water Quality Accessories",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Water Quality Accessories",
+      "value": "Water Quality Accessories"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "",
+    "subparameters": [],
+    "guid": "bed807d3-fc71-4d52-bfdb-2e6095083679",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_bed807d3-fc71-4d52-bfdb-2e6095083679_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/vy7nqawwmd/png/stainless-steel-insert-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "Stainless Steel Inserts for Spectrometer Probes",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>Stainless Steel Inserts for Spectrometer Probes</p>",
+    "productDescription": "<p>These inserts help to change the optical path length of V2 spectrometer probes.</p>\n<ul>\n<li>Insert material: Stainless steel</li>\n<li>Includes: o-rings, sapphire measurement windows and service tools</li>\n<li>Available in five pathlenghts: 0.5 mm, 1 mm, 2 mm, 5 mm and 15 mm</li>\n</ul>",
+    "url": "/products/water-quality-monitoring/accessories/probe-stainless-steel-inserts/",
+    "id": "460",
+    "stats": [],
+    "markets": [
+      "Drinking Water Treatment",
+      "Environmental Monitoring",
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment"
+    ],
+    "marketNamesAndTitles": {
+      "drinking Water Treatment": "Drinking Water Treatment",
+      "environmental Monitoring": "Environmental Monitoring",
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater"
+    },
+    "subparametersWithTranslatedNames": {},
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Water Quality Accessories",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Water Quality Accessories",
+      "value": "Water Quality Accessories"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "",
+    "subparameters": [],
+    "guid": "99774af2-eddc-453e-a319-ae215573e58f",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_99774af2-eddc-453e-a319-ae215573e58f_en"
+  },
+  {
+    "productImageUrl": "https://badgermeter.widen.net/content/eck9jjzf7q/png/weather-shield-%28low-res%29.png?w=600&h=600&keep=c&crop=yes&color=ffffff00&quality=80&u=39eotr",
+    "productImageUrlAltText": "Weather Shield for con-cube and con-lyte",
+    "brandImageUrl": "https://badgermeter.widen.net/content/rxsjj20hjc/png/scan_Logo_Simplified_Gray%20%28Low%20Res%29.png?h=36&position=c&color=ffffff00&quality=80&u=iszoby",
+    "brandImageUrlAltText": "s::can",
+    "productName": "<p>Weather Shield for con-cube and con-lyte</p>",
+    "productDescription": "<p>Weather shield for con-cube and con-lyte terminals to protect against severe weather conditions.</p>\n<ul>\n<li>Mounting for con-cube or con-lyte</li>\n<li>For mounting on walls or railings</li>\n<li>Includes mounting hardware</li>\n<li>Housing material: Stainless steel</li>\n</ul>",
+    "url": "/products/water-quality-monitoring/accessories/weather-shield/",
+    "id": "459",
+    "stats": [],
+    "markets": [
+      "Drinking Water Treatment",
+      "Environmental Monitoring",
+      "Wastewater Treatment",
+      "Industrial Wastewater Treatment"
+    ],
+    "marketNamesAndTitles": {
+      "drinking Water Treatment": "Drinking Water Treatment",
+      "environmental Monitoring": "Environmental Monitoring",
+      "wastewater Treatment": "Wastewater Treatment",
+      "industrial Wastewater Treatment": "Industrial Wastewater"
+    },
+    "subparametersWithTranslatedNames": {},
+    "productCategory": "Water Quality Monitoring",
+    "productCategoryTitle": null,
+    "productType": "Water Quality Accessories",
+    "productTypeTitle": {},
+    "productTypeNameAndTitle": {
+      "key": "Water Quality Accessories",
+      "value": "Water Quality Accessories"
+    },
+    "brand": "s::can",
+    "brandTitle": "<p>s-can</p>",
+    "flowTypes": [],
+    "parameter": "",
+    "subparameters": [],
+    "guid": "0f20d307-0e25-4975-98a8-193063684a9f",
+    "hitId": "BadgerMeter_Web_Models_Catalog_ProductVariation/CatalogContent_0f20d307-0e25-4975-98a8-193063684a9f_en"
+  }
+]

@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CPES - Công Ty TNHH Giải Pháp CPE | Giải Pháp Công Nghiệp & Quan Trắc Nước Tiên Tiến</title>
+  <meta name="description" content="Công ty TNHH Giải Pháp CPE (CPES) - Đối tác tin cậy chuyên cung cấp giải pháp quan trắc chất lượng nước s::can, ATi, van điều khiển, thiết bị tự động hóa công nghiệp.">
+  
+  <link rel="icon" type="image/webp" href="assets/img/brand/logo-cpes-doc.webp">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Chuyển đến nội dung chính</a>
+
+  <!-- SITE HEADER -->
+  <header class="site-header" role="banner">
+    <div class="container header-row">
+      <a href="index.html" class="brand-link" aria-label="CPES Trang chủ">
+        <img src="assets/img/brand/logo-cpes-ngang.webp" alt="CPES - CPE Solutions" class="brand-logo-img" width="168" height="44">
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-desktop" role="navigation" aria-label="Menu chính">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link active" aria-current="page">Giới thiệu</a>
+          </li>
+          <li class="nav-item">
+            <a href="san-pham.html" class="nav-link">Sản phẩm</a>
+          </li>
+          <li class="nav-item">
+            <a href="giai-phap.html" class="nav-link">Giải pháp</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="btn btn-sm btn-primary btn-header-cta" onclick="openQuoteModal('Tư vấn dự án')">
+          Liên hệ tư vấn
+        </button>
+        <button type="button" class="menu-toggle" aria-label="Mở menu di động" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Menu di động">
+    <div class="drawer-content">
+      <div style="display: flex; align-items: center; justify-content: space-between; padding-bottom: 16px; border-bottom: 1px solid var(--line);">
+        <img src="assets/img/brand/logo-cpes-ngang.webp" alt="CPES" style="height: 36px; width: auto;">
+      </div>
+      <ul class="drawer-nav">
+        <li><a href="index.html" class="drawer-link active">Giới thiệu</a></li>
+        <li><a href="san-pham.html" class="drawer-link">Sản phẩm</a></li>
+        <li><a href="giai-phap.html" class="drawer-link">Giải pháp công nghiệp</a></li>
+      </ul>
+      <div style="margin-top: auto; display: flex; flex-direction: column; gap: 10px;">
+        <button type="button" class="btn btn-primary" onclick="openQuoteModal('Tư vấn giải pháp')">
+          Yêu cầu báo giá
+        </button>
+        <a href="tel:0942537025" class="btn btn-ghost" style="font-size: 0.9rem;">
+          Hotline: (+84) 942 537 025
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <!-- 1. HERO SECTION -->
+    <section class="section hero bg-hex-pattern">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="eyebrow">Giải pháp công nghệ tiên tiến</span>
+          <h1 class="hero-title">
+            Đối Tác Tin Cậy Cung Cấp <span>Giải Pháp Công Nghiệp</span> Toàn Diện
+          </h1>
+          <p class="hero-lead">
+            CPES tiên phong ứng dụng công nghệ giám sát chất lượng nước quang phổ s::can, thiết bị phân tích ATi, hệ thống van điều khiển và tự động hóa an toàn cho các ngành công nghiệp trọng điểm.
+          </p>
+          <div class="hero-cta-group">
+            <a href="san-pham.html" class="btn btn-primary">
+              Xem sản phẩm
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <button type="button" class="btn btn-ghost" onclick="openQuoteModal('Tư vấn tổng quan')">
+              Liên hệ tư vấn
+            </button>
+          </div>
+          <div class="hero-badges">
+            <div class="hero-badge-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              <span>Chuẩn công nghiệp Châu Âu & Mỹ</span>
+            </div>
+            <div class="hero-badge-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Phân phối s::can & ATi chính hãng</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-card-featured">
+            <div class="hero-img-wrap">
+              <img src="assets/img/scan/01-spectro-lyser-v3.png" alt="spectro::lyser V3" width="280" height="220">
+            </div>
+            <div class="hero-card-body">
+              <span class="tag-chip">Công nghệ s::can độc quyền</span>
+              <h4>spectro::lyser V3 Spectrometer Probe</h4>
+              <p style="font-size: 0.88rem; color: var(--muted); margin-bottom: 8px;">
+                Đầu dò quang phổ UV-Vis quét toàn dải in-situ, tự động làm sạch bằng khí nén, đo không dùng hóa chất thuốc thử.
+              </p>
+              <div class="hero-card-tags" style="margin-bottom: 14px;">
+                <span class="param-pill">BOD / COD / TOC</span>
+                <span class="param-pill">TSS / Độ đục</span>
+                <span class="param-pill">NO3 / O3</span>
+              </div>
+              <div style="display: flex; gap: 8px;">
+                <a href="chi-tiet-san-pham.html?id=539" class="btn btn-sm btn-ghost" style="flex: 1;">Xem chi tiết</a>
+                <button type="button" class="btn btn-sm btn-primary" onclick="openQuoteModal('spectro::lyser V3')" style="flex: 1;">Báo giá</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. VỀ CHÚNG TÔI & 4 Ô NGÀNH -->
+    <section class="section alt" id="ve-chung-toi">
+      <div class="container">
+        <div class="sec-head">
+          <div>
+            <span class="eyebrow">Về chúng tôi</span>
+            <h2>Công Ty TNHH Giải Pháp CPE</h2>
+          </div>
+        </div>
+
+        <!-- Dùng nguyên văn từ brief -->
+        <blockquote class="about-quote">
+          <p>
+            Công ty TNHH Giải Pháp CPE được thành lập với mục tiêu trở thành đối tác tin cậy chuyên cung cấp các giải pháp trong công nghiệp, áp dụng công nghệ tiên tiến đặc biệt các giải pháp về giám sát chất lượng nước; giải pháp an toàn trong sản xuất, hệ thống van đóng/mở, van điều khiển; hệ thống camera và CCTV thông minh, giám sát khí độc và cháy nổ; và các giải pháp tự động khác phần mềm quản lý thiết bị, bơm công nghiệp, biến tần, hệ thống bôi trơn tự động, hệ thống PCCC tự động.
+          </p>
+          <p style="font-weight: 700; color: var(--brand); margin-top: 10px;">
+            Giải pháp tập trung vào các ngành: Nước và nước thải; Dầu khí và hóa dầu; Nhiệt điện và Khai khoáng.
+          </p>
+        </blockquote>
+
+        <!-- 4 Ô ngành công nghiệp trọng tâm -->
+        <div class="industries-grid">
+          <div class="industry-card">
+            <div class="industry-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+            </div>
+            <h3>Nước & Nước Thải</h3>
+            <p>Hệ thống trạm quan trắc tự động liên tục COD, TSS, BOD, Amoni theo Thông tư 10/2021/TT-BTNMT; giám sát nước cấp và nước uống tinh khiết.</p>
+          </div>
+
+          <div class="industry-card">
+            <div class="industry-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"></path></svg>
+            </div>
+            <h3>Dầu Khí & Hóa Dầu</h3>
+            <p>Đầu dò đạt chuẩn phòng nổ ATEX/IECEx, hệ thống phát hiện khí độc H2S, khí cháy nổ, camera CCTV chuyên dụng cho môi trường khắc nghiệt.</p>
+          </div>
+
+          <div class="industry-card">
+            <div class="industry-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            </div>
+            <h3>Nhiệt Điện</h3>
+            <p>Hệ thống van điều khiển RCV/KITZ chịu áp lực và nhiệt độ cao, phân tích nước cấp lò hơi độ tinh khiết cao, đo oxy hòa tan vi lượng và kiểm soát khí thải.</p>
+          </div>
+
+          <div class="industry-card">
+            <div class="industry-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+            </div>
+            <h3>Khai Khoáng</h3>
+            <p>Bơm công nghiệp chịu mài mòn, biến tần, giải pháp bôi trơn tự động JSG và quan trắc nước thải quặng mỏ bền bỉ liên tục.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 & 4. BỘ TRỤ CỘT NHẬN DIỆN C-P-E-S (HỢP NHẤT HOÀN HẢO) -->
+    <section class="section" id="gia-tri-cot-loi">
+      <div class="container">
+        <div class="sec-head center">
+          <span class="eyebrow">Trụ cột phát triển bền vững</span>
+          <h2>Bộ Trụ Cột Nhận Diện C-P-E-S</h2>
+          <p class="lead">Sự kết nối hài hòa giữa Giá Trị Cốt Lõi định hình văn hóa doanh nghiệp và Triết Lý Bán Hàng cam kết cùng khách hàng.</p>
+        </div>
+
+        <div class="cpes-identity-grid">
+          <!-- CHỮ C -->
+          <div class="cpes-pillar-card">
+            <div class="pillar-header">
+              <div class="pillar-letter">C</div>
+              <div class="pillar-title">
+                <h4>Chữ C Trong CPES</h4>
+                <span>Học hỏi & Khách hàng</span>
+              </div>
+            </div>
+            <div class="pillar-dual-content">
+              <div class="pillar-block">
+                <div class="block-badge">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+                  Giá trị cốt lõi
+                </div>
+                <p><strong>Luôn học hỏi và Phát triển:</strong> Chủ động tiếp thu các công nghệ đo lường và giải pháp tự động hóa tiên tiến của thế giới.</p>
+              </div>
+              <div class="pillar-block accent-block">
+                <div class="block-badge">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                  Triết lý bán hàng
+                </div>
+                <p><strong>Khách hàng là trung tâm:</strong> Lắng nghe mọi khó khăn của dự án để thiết kế cấu hình giải pháp phù hợp nhất.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CHỮ P -->
+          <div class="cpes-pillar-card">
+            <div class="pillar-header">
+              <div class="pillar-letter">P</div>
+              <div class="pillar-title">
+                <h4>Chữ P Trong CPES</h4>
+                <span>Sáng tạo & Giá trị</span>
+              </div>
+            </div>
+            <div class="pillar-dual-content">
+              <div class="pillar-block">
+                <div class="block-badge">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  Giá trị cốt lõi
+                </div>
+                <p><strong>Tiến bộ & Sáng tạo:</strong> Không ngừng cải tiến quy trình kỹ thuật, mang lại độ chính xác và tin cậy cao nhất.</p>
+              </div>
+              <div class="pillar-block accent-block">
+                <div class="block-badge">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Triết lý bán hàng
+                </div>
+                <p><strong>Giá trị hơn giá cả:</strong> Mang lại hiệu quả vận hành thực chất, tuổi thọ bền bỉ và tối ưu hóa chi phí vòng đời.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CHỮ E -->
+          <div class="cpes-pillar-card">
+            <div class="pillar-header">
+              <div class="pillar-letter">E</div>
+              <div class="pillar-title">
+                <h4>Chữ E Trong CPES</h4>
+                <span>Đạo đức & Niềm tin</span>
+              </div>
+            </div>
+            <div class="pillar-dual-content">
+              <div class="pillar-block">
+                <div class="block-badge">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                  Giá trị cốt lõi
+                </div>
+                <p><strong>Đạo đức nghề nghiệp:</strong> Đề cao tính trung thực, minh bạch và tinh thần trách nhiệm trong từng cam kết hợp đồng.</p>
+              </div>
+              <div class="pillar-block accent-block">
+                <div class="block-badge">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
+                  Triết lý bán hàng
+                </div>
+                <p><strong>Tạo niềm tin vững bền:</strong> Đồng hành hỗ trợ kỹ thuật lâu dài, bảo hành chính hãng và bảo dưỡng tận tâm.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CHỮ S -->
+          <div class="cpes-pillar-card">
+            <div class="pillar-header">
+              <div class="pillar-letter">S</div>
+              <div class="pillar-title">
+                <h4>Chữ S Trong CPES</h4>
+                <span>Xã hội & Thấu hiểu</span>
+              </div>
+            </div>
+            <div class="pillar-dual-content">
+              <div class="pillar-block">
+                <div class="block-badge">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+                  Giá trị cốt lõi
+                </div>
+                <p><strong>Trách nhiệm xã hội:</strong> Ứng dụng giải pháp quan trắc để bảo vệ nguồn nước và hệ sinh thái môi trường Việt Nam.</p>
+              </div>
+              <div class="pillar-block accent-block">
+                <div class="block-badge">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                  Triết lý bán hàng
+                </div>
+                <p><strong>Đồng cảm & Thấu hiểu:</strong> Cùng khách hàng tháo gỡ từng bài toán quan trắc và tối ưu hóa vận hành nhà máy.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. ĐỐI TÁC & THƯƠNG HIỆU PHÂN PHỐI -->
+    <section class="section alt" id="doi-tac">
+      <div class="container">
+        <div class="sec-head center">
+          <span class="eyebrow">Mạng lưới đối tác</span>
+          <h2>Thương Hiệu & Đối Tác Công Nghiệp</h2>
+          <p class="lead">CPES hợp tác chặt chẽ cùng các nhà sản xuất thiết bị đo lường và điều khiển công nghiệp hàng đầu thế giới.</p>
+        </div>
+
+        <div style="margin-bottom: 24px; text-align: center;">
+          <span style="font-size: 0.88rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em;">
+            Thương hiệu phân phối chiến lược
+          </span>
+        </div>
+
+        <div class="marquee-container" style="margin-bottom: 40px;">
+          <div class="marquee-content">
+            <div class="partner-logo-box">
+              <img src="assets/img/partner/logo-scan.png" alt="s::can" style="max-height: 48px; object-fit: contain;">
+            </div>
+            <div class="partner-logo-box">
+              <img src="assets/img/partner/logo-ati.png" alt="ATi" style="max-height: 48px; object-fit: contain;">
+            </div>
+            <div class="partner-logo-box">
+              <img src="assets/img/partner/logo-kitz.png" alt="KITZ Group" style="max-height: 48px; object-fit: contain;">
+            </div>
+            <div class="partner-logo-box">
+              <img src="assets/img/partner/logo-jsg.png" alt="JSG Industrial" style="max-height: 48px; object-fit: contain;">
+            </div>
+            <div class="partner-logo-box">
+              <img src="assets/img/partner/logo-control-techniques.png" alt="Control Techniques" style="max-height: 48px; object-fit: contain;">
+            </div>
+            <div class="partner-logo-box">
+              <img src="assets/img/partner/logo-tecnovideo.png" alt="Tecnovideo" style="max-height: 48px; object-fit: contain;">
+            </div>
+            <div class="partner-logo-box">
+              <img src="assets/img/partner/logo-ldi.png" alt="LDI" style="max-height: 48px; object-fit: contain;">
+            </div>
+            <div class="partner-logo-box">
+              <img src="assets/img/partner/logo-prime-tech.png" alt="Prime Technologies" style="max-height: 48px; object-fit: contain;">
+            </div>
+            <div class="partner-logo-box">
+              <img src="assets/img/partner/logo-abc-solutions.png" alt="ABC Solutions" style="max-height: 48px; object-fit: contain;">
+            </div>
+          </div>
+          <div class="marquee-content" aria-hidden="true">
+            <div class="partner-logo-box">
+              <img src="assets/img/partner/logo-scan.png" alt="s::can" style="max-height: 48px; object-fit: contain;">
+            </div>
+            <div class="partner-logo-box">
+              <img src="assets/img/partner/logo-ati.png" alt="ATi" style="max-height: 48px; object-fit: contain;">
+            </div>
+            <div class="partner-logo-box">
+              <img src="assets/img/partner/logo-kitz.png" alt="KITZ Group" style="max-height: 48px; object-fit: contain;">
+            </div>
+            <div class="partner-logo-box">
+              <img src="assets/img/partner/logo-jsg.png" alt="JSG Industrial" style="max-height: 48px; object-fit: contain;">
+            </div>
+            <div class="partner-logo-box">
+              <img src="assets/img/partner/logo-control-techniques.png" alt="Control Techniques" style="max-height: 48px; object-fit: contain;">
+            </div>
+            <div class="partner-logo-box">
+              <img src="assets/img/partner/logo-tecnovideo.png" alt="Tecnovideo" style="max-height: 48px; object-fit: contain;">
+            </div>
+            <div class="partner-logo-box">
+              <img src="assets/img/partner/logo-ldi.png" alt="LDI" style="max-height: 48px; object-fit: contain;">
+            </div>
+            <div class="partner-logo-box">
+              <img src="assets/img/partner/logo-prime-tech.png" alt="Prime Technologies" style="max-height: 48px; object-fit: contain;">
+            </div>
+            <div class="partner-logo-box">
+              <img src="assets/img/partner/logo-abc-solutions.png" alt="ABC Solutions" style="max-height: 48px; object-fit: contain;">
+            </div>
+          </div>
+        </div>
+
+        <!-- Khách hàng tiêu biểu (Placeholder viền nét đứt theo brief) -->
+        <div style="margin-top: 32px; text-align: center;">
+          <span style="font-size: 0.88rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 16px;">
+            Khách hàng & Dự án tiêu biểu
+          </span>
+          <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px;">
+            <div class="partner-logo-box ph-box">[[CẦN XÁC NHẬN: logo khách hàng 1]]</div>
+            <div class="partner-logo-box ph-box">[[CẦN XÁC NHẬN: logo khách hàng 2]]</div>
+            <div class="partner-logo-box ph-box">[[CẦN XÁC NHẬN: logo khách hàng 3]]</div>
+            <div class="partner-logo-box ph-box">[[CẦN XÁC NHẬN: logo khách hàng 4]]</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. LIÊN HỆ & BẢN ĐỒ (Trang 4 PDF) -->
+    <section class="section" id="lien-he">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info-col">
+            <span class="eyebrow">Kết nối với chúng tôi</span>
+            <h2>Liên Hệ Tư Vấn Kỹ Thuật</h2>
+            <p style="margin-bottom: 28px; color: var(--ink-2);">
+              Đội ngũ kỹ sư giàu kinh nghiệm của CPES sẵn sàng lắng nghe và khảo sát hiện trường để đề xuất giải pháp đo lường, tự động hóa thích hợp nhất.
+            </p>
+
+            <div class="contact-info-list">
+              <div class="contact-info-item">
+                <div class="contact-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </div>
+                <div class="contact-text">
+                  <h4>Địa chỉ trụ sở:</h4>
+                  <p>490 Phạm Thái Bường, Phường Tân Phong, Quận 7, TP. Hồ Chí Minh, Việt Nam</p>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </div>
+                <div class="contact-text">
+                  <h4>Điện thoại / Hotline:</h4>
+                  <p><a href="tel:0942537025" style="font-weight: 700; color: var(--brand);">(+84) 942 537 025</a></p>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <div class="contact-text">
+                  <h4>Email:</h4>
+                  <p><a href="mailto:Sales@cpes.vn" style="font-weight: 600;">Sales@cpes.vn</a></p>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                </div>
+                <div class="contact-text">
+                  <h4>Website:</h4>
+                  <p>cpes.vn</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bản đồ Google Maps nhúng theo địa chỉ -->
+            <div class="map-container">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.026414777413!2d106.70882197588326!3d10.732431759955148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f9a9c4dc0e7%3A0xea8b43f054e7d9d!2zNDkwIFBo4bqhbSBUaMOhaSBCxrDhu51uZywgVMOibiBQaG9uZywgUXXhuq1uIDcsIEjhu5MgQ2jDrSBNaW5o!5e0!3m2!1svi!2s!4v1700000000000!5m2!1svi!2s" 
+                title="Bản đồ vị trí CPES 490 Phạm Thái Bường, Tân Phong, Quận 7, TP.HCM"
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+
+          <!-- Form Yêu cầu tư vấn (Mock) -->
+          <div class="contact-form-col">
+            <div class="contact-form-card">
+              <h3 style="margin-bottom: 8px; color: var(--brand-dark);">Gửi Yêu Cầu Tư Vấn Kỹ Thuật</h3>
+              <p style="font-size: 0.92rem; color: var(--muted); margin-bottom: 24px;">
+                Điền thông tin vào mẫu dưới đây, chuyên viên CPES sẽ liên hệ lại ngay trong ngày làm việc.
+              </p>
+
+              <form id="contactForm">
+                <div class="form-group">
+                  <label class="form-label">Họ và tên của bạn *</label>
+                  <input type="text" class="form-control" name="name" placeholder="Nguyễn Văn A" required>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+                  <div class="form-group">
+                    <label class="form-label">Số điện thoại *</label>
+                    <input type="tel" class="form-control" name="phone" placeholder="09xx xxx xxx" required>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Email công việc *</label>
+                    <input type="email" class="form-control" name="email" placeholder="name@company.com" required>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Tên cơ quan / Doanh nghiệp</label>
+                  <input type="text" class="form-control" name="company" placeholder="Ví dụ: Công ty CP Cấp nước...">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Giải pháp / Thiết bị cần tư vấn *</label>
+                  <select class="form-control" name="service" required>
+                    <option value="Quan trắc nước thải online s::can">Quan trắc nước thải tự động liên tục s::can</option>
+                    <option value="Giám sát nước cấp & nước uống">Giám sát chất lượng nước cấp & mạng lưới đô thị</option>
+                    <option value="Thiết bị phân tích ATi">Brochure & Thiết bị phân tích ATi</option>
+                    <option value="Hệ thống van công nghiệp">Hệ thống van điều khiển & van đóng mở</option>
+                    <option value="Giám sát an toàn & cháy nổ">CCTV thông minh, giám sát khí độc & cháy nổ</option>
+                    <option value="Khác">Giải pháp công nghiệp khác</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Nội dung chi tiết yêu cầu</label>
+                  <textarea class="form-control" name="message" placeholder="Mô tả thông số cần đo, lưu lượng, địa điểm dự án hoặc các quy chuẩn cần đáp ứng..." rows="3"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%;">
+                  Gửi yêu cầu tư vấn ngay
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <img src="assets/img/brand/logo-cpes-doc.webp" alt="CPES Logo" width="130" height="52">
+          <h4 style="margin: 0 0 10px; font-size: 1.15rem; color: #fff;">CÔNG TY TNHH GIẢI PHÁP CPE</h4>
+          <p style="font-size: 0.9rem; color: var(--on-dark-muted); line-height: 1.6;">
+            Đối tác tin cậy chuyên cung cấp các giải pháp công nghiệp tiên tiến: giám sát chất lượng nước, van điều khiển, thiết bị phân tích an toàn.
+          </p>
+          <div style="margin-top: 12px; font-size: 0.82rem; color: var(--on-dark-muted);">
+            <span class="ph">[[CẦN XÁC NHẬN: Mã số thuế & Giấy phép ĐKKD]]</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Sản Phẩm & Thiết Bị</h4>
+          <ul class="footer-links">
+            <li><a href="san-pham.html#scan">Đầu dò quang phổ s::can</a></li>
+            <li><a href="san-pham.html#scan">Cảm biến điện hóa s::can</a></li>
+            <li><a href="san-pham.html#ati">Brochure thiết bị ATi</a></li>
+            <li><a href="san-pham.html#scan">Phụ kiện & Buồng đo Flow Cell</a></li>
+            <li><a href="san-pham.html">Tất cả sản phẩm (57 mã)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Giải Pháp Ngành</h4>
+          <ul class="footer-links">
+            <li><a href="giai-phap.html#giai-phap-nuoc-thai">Quan trắc nước thải tự động</a></li>
+            <li><a href="giai-phap.html#giai-phap-nuoc-cap">Giám sát nước cấp sinh hoạt</a></li>
+            <li><a href="giai-phap.html#giai-phap-dau-khi">Ngành Dầu khí & Hóa dầu</a></li>
+            <li><a href="giai-phap.html#giai-phap-nhiet-dien">Ngành Nhiệt điện</a></li>
+            <li><a href="giai-phap.html">Ngành Khai khoáng</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Thông Tin Liên Hệ</h4>
+          <ul class="footer-links">
+            <li>📍 490 Phạm Thái Bường, Tân Phong, Q.7, TP.HCM</li>
+            <li>📞 Hotline: (+84) 942 537 025</li>
+            <li>✉️ Email: Sales@cpes.vn</li>
+            <li>🌐 Website: cpes.vn</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; <span id="currentYear">2026</span> Công ty TNHH Giải Pháp CPE (CPES). Bảo lưu mọi quyền.
+        </div>
+        <div style="font-size: 0.82rem; color: var(--on-dark-muted);">
+          Thiết bị s::can & ATi là các thương hiệu thuộc tập đoàn Badger Meter®
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MOBILE FIXED ACTION BAR -->
+  <aside class="mobile-action-bar" aria-label="Thanh thao tác nhanh di động">
+    <a href="tel:0942537025" class="mobile-action-item">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+      <span>Gọi ngay</span>
+    </a>
+    <a href="https://zalo.me/0942537025" target="_blank" rel="noopener noreferrer" class="mobile-action-item">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+      <span>Zalo</span>
+    </a>
+    <button type="button" class="mobile-action-item btn-action-primary" onclick="openQuoteModal('Báo giá di động')">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+      <span>Báo giá</span>
+    </button>
+  </aside>
+
+  <!-- JS SCRIPTS -->
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/chatbot.js"></script>
+  <script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

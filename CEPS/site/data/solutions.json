@@ -1,0 +1,117 @@
+[
+  {
+    "id": "giai-phap-nuoc-thai",
+    "title": "Giải Pháp Quan Trắc Nước Thải Tự Động & Liên Tục",
+    "slug": "quan-trac-nuoc-thai",
+    "badge": "Tiêu chuẩn Thông tư 10/2021/TT-BTNMT",
+    "summary": "Hệ thống trạm quan trắc tự động liên tục giám sát chất lượng nước thải công nghiệp và đô thị, đo quang phổ UV-Vis trực tiếp không dùng hóa chất thuốc thử, truyền số liệu 24/7 về Sở Tài nguyên & Môi trường.",
+    "description": "Giải pháp quan trắc nước thải của CPES kết hợp giữa công nghệ đầu dò quang phổ tiên tiến spectro::lyser V3 của s::can (Badger Meter) và các cảm biến phân tích điện hóa độ chính xác cao của ATi. Hệ thống đo trực tiếp các chỉ tiêu ô nhiễm hữu cơ và dinh dưỡng trong dòng nước thải mà không cần hệ thống tiền xử lý phức tạp hay hóa chất tiêu hao đắt đỏ.",
+    "parameters": [
+      "COD (Nhu cầu oxy hóa học)",
+      "BOD (Nhu cầu oxy sinh học)",
+      "TSS (Tổng chất rắn lơ lửng)",
+      "Amoni (NH4-N)",
+      "Nitrat (NO3-N)",
+      "pH & Nhiệt độ",
+      "Lưu lượng (Kênh hở / Đường ống có áp)"
+    ],
+    "advantages": [
+      "Đo quang phổ trực tiếp in-situ không cần dùng thuốc thử (Reagent-free)",
+      "Tích hợp hệ thống làm sạch quang học bằng khí nén tự động chống bám bẩn",
+      "Datalogger công nghiệp con::cube V3 lưu trữ dữ liệu an toàn và truyền Modbus/4G",
+      "Chi phí vận hành và bảo trì hàng năm gần như bằng 0"
+    ],
+    "products_used": [
+      "spectro::lyser V3",
+      "ammo::lyser Eco",
+      "pH::lyser",
+      "con::cube V3",
+      "Máy nén khí tự động làm sạch"
+    ],
+    "image": "assets/img/scan/section-river-monitoring.jpg",
+    "cta_text": "Yêu cầu tư vấn hệ thống nước thải"
+  },
+  {
+    "id": "giai-phap-nuoc-cap",
+    "title": "Giải Pháp Giám Sát Nước Cấp & Mạng Lưới Nước Uống",
+    "slug": "giam-sat-nuoc-cap",
+    "badge": "Tiêu chuẩn QCVN 01-1:2018/BYT",
+    "summary": "Kiểm soát an toàn tuyệt đối chất lượng nguồn nước cấp từ nhà máy xử lý nước sinh hoạt đến từng điểm tiêu thụ trên mạng lưới đường ống đô thị, phát hiện sớm nguy cơ ô nhiễm nguồn nước.",
+    "description": "Để đảm bảo an ninh nguồn nước sạch phục vụ đời sống nhân dân và sản xuất, giải pháp của CPES ứng dụng hệ thống vi quang phổ i::scan và cảm biến đo Clo chlori::lyser không phụ thuộc pH và lưu lượng. Hệ thống giúp phát hiện sự xâm nhập của chất hữu cơ, hóa chất độc hại hoặc suy giảm dư lượng clo khử trùng theo thời gian thực.",
+    "parameters": [
+      "Độ đục (Turbidity) & Độ màu (Color)",
+      "Clo tự do / Clo tổng (Free & Total Chlorine)",
+      "Chỉ số hữu cơ UV254 & TOC",
+      "Độ dẫn điện (Conductivity) & TDS",
+      "pH & Nhiệt độ",
+      "Áp lực đường ống & Lưu lượng"
+    ],
+    "advantages": [
+      "Lắp đặt trực tiếp trên đường ống áp lực (In-pipe) hoặc qua buồng bypass",
+      "Cảm biến đo Clo công nghệ mới không phụ thuộc sự biến thiên pH",
+      "Phần mềm ana::tool phát hiện bất thường và cảnh báo sớm ô nhiễm",
+      "Hệ thống module MetriNet tiết kiệm nước mẫu xả bỏ tối đa"
+    ],
+    "products_used": [
+      "i::scan",
+      "chlori::lyser",
+      "condu::lyser",
+      "ana::tool Software",
+      "ATi MetriNet System"
+    ],
+    "image": "assets/img/scan/section-concube-station.jpg",
+    "cta_text": "Yêu cầu tư vấn hệ thống nước cấp"
+  },
+  {
+    "id": "giai-phap-dau-khi",
+    "title": "Giải Pháp Giám Sát Khí Độc & Cháy Nổ (Dầu Khí - Hóa Chất)",
+    "slug": "dau-khi-hoa-dau",
+    "badge": "[[CẦN XÁC NHẬN: chứng nhận ATEX / IECEx]]",
+    "summary": "Hệ thống đầu dò quang phổ chống cháy nổ spectro::lyser V3 ATEX và mạng lưới cảm biến khí độc, khí cháy nổ chuyên dụng cho giàn khoan, kho cảng, nhà máy lọc dầu.",
+    "description": "[[CẦN XÁC NHẬN: nội dung chi tiết giải pháp giám sát an toàn cho ngành dầu khí và hóa dầu do khách hàng cung cấp]]",
+    "parameters": [
+      "Khí cháy nổ LEL",
+      "Khí H2S, CO, SO2",
+      "Giám sát ô nhiễm nước thải dầu mỡ ATEX Zone 1/2",
+      "Camera CCTV phòng nổ chuyên dụng"
+    ],
+    "advantages": [
+      "Tiêu chuẩn phòng nổ quốc tế nghiêm ngặt",
+      "Hoạt động bền bỉ trong môi trường khí quyển biển và hóa chất",
+      "Tích hợp hệ thống SCADA / DCS nhà máy"
+    ],
+    "products_used": [
+      "spectro::lyser V3 ATEX",
+      "Hệ thống cảm biến khí ATi D12",
+      "Camera phòng nổ Tecnovideo"
+    ],
+    "image": "assets/img/scan/section-river-monitoring.jpg",
+    "status": "pending"
+  },
+  {
+    "id": "giai-phap-nhiet-dien",
+    "title": "Giải Pháp Điều Khiển & Quan Trắc Cho Nhà Máy Nhiệt Điện",
+    "slug": "nhiet-dien",
+    "badge": "[[CẦN XÁC NHẬN: tiêu chuẩn kỹ thuật]]",
+    "summary": "Hệ thống van điều khiển chuyên dụng KITZ/RCV, giám sát nước lò hơi tinh khiết, nước làm mát tuần hoàn và khí thải CEMS.",
+    "description": "[[CẦN XÁC NHẬN: nội dung chi tiết giải pháp cho ngành nhiệt điện do khách hàng cung cấp]]",
+    "parameters": [
+      "Độ dẫn điện Cation nước cấp lò hơi",
+      "Silica & Natri hòa tan",
+      "Oxy hòa tan vi lượng (ppb DO)",
+      "Khí thải liên tục CEMS"
+    ],
+    "advantages": [
+      "Độ nhạy cực cao ở mức ppb",
+      "Bảo vệ tua bin và hệ thống ống sinh hơi khỏi ăn mòn",
+      "Van điều khiển chịu nhiệt độ và áp suất siêu cao"
+    ],
+    "products_used": [
+      "Cảm biến vi lượng ATi Q46",
+      "Van điều khiển Research Control Valves",
+      "Hệ thống bôi trơn tự động JSG"
+    ],
+    "image": "assets/img/scan/section-concube-station.jpg",
+    "status": "pending"
+  }
+]
