@@ -1,0 +1,15 @@
+.git
+.gitignore
+.assetsignore
+.claude
+.wrangler
+.dev.vars
+.setup-code.txt
+node_modules
+worker
+migrations
+tests
+package.json
+package-lock.json
+wrangler.jsonc
+*.md

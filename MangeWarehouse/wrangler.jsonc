@@ -1,0 +1,11 @@
+{
+  "name": "warecon",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-11-02",
+  // The PWA files live in the project root; .assetsignore keeps server code, secrets and docs out of the public site.
+  "assets": { "directory": "./", "binding": "ASSETS" },
+  "d1_databases": [
+    { "binding": "DB", "database_name": "warecon-db", "database_id": "d69857c2-bf34-4b88-bf4a-7c561a2d740a", "migrations_dir": "migrations" }
+  ],
+  "observability": { "enabled": true }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "warecon",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:migrate": "wrangler d1 migrations apply warecon-db --remote",
+    "db:migrate:local": "wrangler d1 migrations apply warecon-db --local",
+    "test": "node tests/check.js"
+  },
+  "devDependencies": {
+    "wrangler": "4.164.0"
+  }
+}
