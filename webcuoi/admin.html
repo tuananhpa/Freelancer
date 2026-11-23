@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Quản trị · Mì Studio</title>
+<link rel="icon" href="assets/img/brand/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600&family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body>
+
+<!-- đăng nhập -->
+<section class="login" id="login">
+  <form class="login__box" id="loginForm" novalidate>
+    <div class="login__brand"><b>MÌ</b> Studio <small>Quản trị</small></div>
+    <label>Tài khoản<input name="user" autocomplete="username" required></label>
+    <label>Mật khẩu<input name="pass" type="password" autocomplete="current-password" required></label>
+    <button class="abtn abtn--pri" type="submit">Đăng nhập</button>
+    <p class="login__err" role="alert"></p>
+    <p class="login__note">Đăng nhập bằng tài khoản quản trị Mì Studio.</p>
+  </form>
+</section>
+
+<!-- giao diện quản trị -->
+<div class="app" id="app" hidden>
+  <aside class="side">
+    <div class="side__brand"><b>MÌ</b> Studio<small>Quản trị nội dung</small></div>
+    <nav class="side__nav" aria-label="Mục quản trị">
+      <button data-tab="albums" aria-current="page">Album ảnh</button>
+      <button data-tab="texts">Chữ trên trang</button>
+      <button data-tab="images">Hình ảnh</button>
+      <button data-tab="films">Phim cưới</button>
+      <button data-tab="prices">Bảng giá</button>
+      <button data-tab="reviews">Cảm nhận</button>
+      <button data-tab="contact">Liên hệ</button>
+      <button data-tab="backup">Sao lưu</button>
+    </nav>
+    <button class="side__out" id="logout">Đăng xuất</button>
+  </aside>
+  <div class="main">
+    <header class="top">
+      <h1 id="tabTitle">Album ảnh</h1>
+      <span class="top__status" id="status" role="status" aria-live="polite">Đã đồng bộ</span>
+      <a class="abtn" href="index.html" target="_blank" rel="noopener">Xem trang ↗</a>
+    </header>
+    <div class="demo-note"></div>
+    <main class="panel" id="panel"></main>
+  </div>
+</div>
+
+<!-- chọn ảnh có sẵn -->
+<div class="picker" id="picker" role="dialog" aria-modal="true" aria-label="Chọn ảnh" hidden>
+  <div class="picker__box">
+    <div class="picker__bar"><h2>Chọn ảnh từ album</h2><button class="abtn" data-act="closePicker">Đóng</button></div>
+    <div class="picker__grid" id="pickerGrid"></div>
+  </div>
+</div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/store.js"></script>
+<script src="assets/js/admin.js"></script>
+</body>
+</html>

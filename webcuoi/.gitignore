@@ -1,0 +1,6 @@
+_raw/
+.claude/
+dist/
+.wrangler/
+.dev.vars
+/*.jpg

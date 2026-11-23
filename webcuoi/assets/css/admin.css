@@ -1,0 +1,139 @@
+:root{--sage:#5b867c;--sage-d:#3f625a;--ink:#23332f;--muted:#66746f;--line:#e2ddd3;--bg:#f6f2eb;--card:#fff;--red:#b03a2e;--r:12px}
+*{box-sizing:border-box}
+body{margin:0;font:400 15px/1.55 "Be Vietnam Pro",system-ui,sans-serif;color:var(--ink);background:var(--bg)}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--sage);outline-offset:2px}
+[hidden]{display:none!important}
+h1,h2,h3{margin:0;font-weight:600}
+
+.abtn{display:inline-flex;align-items:center;justify-content:center;gap:.4em;min-height:38px;padding:.45em 1em;border-radius:8px;border:1px solid var(--line);background:#fff;cursor:pointer;text-decoration:none;font-size:.88rem;white-space:nowrap}
+.abtn:hover{border-color:var(--sage);color:var(--sage-d)}
+.abtn--pri{background:var(--sage);border-color:var(--sage);color:#fff}
+.abtn--pri:hover{background:var(--sage-d);color:#fff}
+.abtn--danger{color:var(--red)}
+.abtn--danger.is-armed{background:var(--red);border-color:var(--red);color:#fff}
+.abtn--sm{min-height:32px;padding:.3em .7em;font-size:.8rem}
+.abtn--icon{width:34px;min-height:34px;padding:0}
+
+/* đăng nhập */
+.login{min-height:100vh;display:grid;place-items:center;background:var(--sage);padding:20px}
+.login__box{background:#fff;border-radius:16px;padding:2.2rem;width:min(380px,100%);display:grid;gap:1rem;box-shadow:0 30px 80px -30px rgba(0,0,0,.4)}
+.login__brand{font:600 1.8rem/1 "Cormorant Garamond",serif;color:var(--sage-d);margin-bottom:.4rem}
+.login__brand small{display:block;font:500 .72rem "Be Vietnam Pro";letter-spacing:.25em;text-transform:uppercase;color:var(--muted);margin-top:.5rem}
+.login label,.field{display:grid;gap:.3rem;font-size:.8rem;font-weight:500;color:var(--muted)}
+input,select,textarea{width:100%;border:1px solid var(--line);border-radius:8px;padding:.6rem .7rem;background:#fff;font-size:.92rem}
+textarea{resize:vertical;min-height:44px}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--sage);border-color:transparent}
+.login__err{margin:0;color:var(--red);font-size:.85rem;min-height:1.2em}
+.login__note{margin:0;font-size:.75rem;color:var(--muted)}
+
+/* khung */
+.app{display:grid;grid-template-columns:230px 1fr;min-height:100vh}
+.side{background:#1c2b28;color:#d7e2de;display:flex;flex-direction:column;padding:1.4rem 1rem;position:sticky;top:0;height:100vh}
+.side__brand{font:600 1.5rem/1 "Cormorant Garamond",serif;color:#fff;padding:0 .6rem 1.4rem}
+.side__brand small{display:block;font:400 .7rem "Be Vietnam Pro";letter-spacing:.2em;text-transform:uppercase;color:#9fb5ad;margin-top:.4rem}
+.side__nav{display:grid;gap:2px}
+.side__nav button{background:none;border:0;text-align:left;padding:.65rem .8rem;border-radius:8px;cursor:pointer;color:inherit}
+.side__nav button:hover{background:rgba(255,255,255,.06)}
+.side__nav button[aria-current]{background:var(--sage);color:#fff}
+.side__out{margin-top:auto;background:none;border:1px solid rgba(255,255,255,.2);color:inherit;border-radius:8px;padding:.55rem;cursor:pointer}
+.main{min-width:0}
+.top{display:flex;align-items:center;gap:1rem;padding:1rem 1.6rem;background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+.top h1{font-size:1.25rem}
+.top__status{margin-left:auto;font-size:.82rem;color:var(--muted)}
+.top__status.is-dirty{color:#a26b00}
+.top__status.is-err{color:var(--red)}
+.demo-note{margin:1rem 1.6rem 0;padding:.7rem 1rem;background:#fff6d9;border:1px solid #f0dc9b;border-radius:10px;font-size:.82rem;color:#6b5200}
+.panel{padding:1.4rem 1.6rem 4rem;display:grid;gap:1.2rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:1.2rem 1.3rem}
+.card__head{display:flex;align-items:center;gap:.8rem;margin-bottom:1rem;flex-wrap:wrap}
+.card__head h2{font-size:1.05rem}
+.card__head .abtn:first-of-type{margin-left:auto}
+.hint{font-size:.8rem;color:var(--muted);margin:.2rem 0 0}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.9rem}
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.9rem}
+.toolbar{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center}
+.search{max-width:320px}
+
+/* danh sách album */
+.alist{display:grid;gap:.6rem}
+.arow{display:grid;grid-template-columns:72px 1fr auto;gap:1rem;align-items:center;padding:.6rem;border:1px solid var(--line);border-radius:10px;background:#fff}
+.arow.is-off{opacity:.55}
+.arow img{width:72px;height:72px;object-fit:cover;border-radius:8px;background:#eee}
+.arow__t b{display:block;font-weight:600}
+.arow__t span{font-size:.8rem;color:var(--muted)}
+.arow__act{display:flex;gap:.4rem;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.switch{display:inline-flex;align-items:center;gap:.45rem;font-size:.8rem;cursor:pointer;user-select:none}
+.switch input{appearance:none;width:38px;height:22px;border-radius:999px;background:#cfd6d3;position:relative;padding:0;border:0;cursor:pointer;transition:background .2s;flex:none}
+.switch input::after{content:"";position:absolute;left:3px;top:3px;width:16px;height:16px;border-radius:50%;background:#fff;transition:transform .2s}
+.switch input:checked{background:var(--sage)}
+.switch input:checked::after{transform:translateX(16px)}
+
+/* ảnh trong album */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:.8rem}
+.pitem{position:relative;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff}
+.pitem img{width:100%;aspect-ratio:1;object-fit:cover;display:block;background:#eee}
+.pitem.is-cover{outline:3px solid var(--sage);outline-offset:-3px}
+.pitem__badge{position:absolute;left:6px;top:6px;background:var(--sage);color:#fff;font-size:.68rem;padding:.15em .5em;border-radius:999px}
+.pitem__act{display:flex;gap:4px;padding:6px;flex-wrap:wrap}
+.pitem__act .abtn{flex:1;min-width:0;padding:.2em .3em}
+.upload{display:grid;place-items:center;border:2px dashed var(--line);border-radius:10px;min-height:150px;cursor:pointer;color:var(--muted);text-align:center;padding:1rem;font-size:.85rem}
+.upload:hover{border-color:var(--sage);color:var(--sage-d)}
+.upload input{display:none}
+
+/* chữ & ảnh trang */
+.group{display:grid;gap:.9rem}
+.tfield{display:grid;gap:.3rem}
+.tfield__lab{display:flex;align-items:center;gap:.5rem;font-size:.78rem;color:var(--muted)}
+.tfield__lab code{font-size:.72rem;background:#f1ede5;padding:.05em .4em;border-radius:4px}
+.tfield__lab .abtn{margin-left:auto}
+.tfield.is-changed textarea{border-color:var(--sage);background:#f6faf8}
+.igrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem}
+.iitem{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff}
+.iitem img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:#eee}
+.iitem.is-off img{opacity:.4}
+.iitem__b{padding:.6rem;display:grid;gap:.4rem}
+.iitem__b code{font-size:.72rem;color:var(--muted)}
+.iitem__act{display:flex;gap:.3rem;flex-wrap:wrap}
+
+/* hàng chỉnh (phim, giá, cảm nhận) */
+.rows{display:grid;gap:.7rem}
+.erow{display:grid;gap:.7rem;align-items:end;padding:.8rem;border:1px solid var(--line);border-radius:10px;background:#fff}
+.erow.is-off{opacity:.6}
+.erow--film{grid-template-columns:90px 1.4fr 1fr 1.2fr auto}
+.erow--film img{width:90px;height:64px;object-fit:cover;border-radius:6px;cursor:pointer}
+.erow--print{grid-template-columns:2fr 1fr auto}
+.erow--wall{grid-template-columns:1fr 1fr 1fr auto}
+.erow--rev{grid-template-columns:2.2fr 1fr auto}
+.erow__act{display:flex;gap:.3rem;align-items:center;flex-wrap:wrap}
+
+/* chọn ảnh */
+.picker{position:fixed;inset:0;z-index:50;background:rgba(20,30,28,.6);display:grid;place-items:center;padding:20px}
+.picker__box{background:#fff;border-radius:14px;width:min(1000px,100%);max-height:88vh;display:flex;flex-direction:column;overflow:hidden}
+.picker__bar{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.2rem;border-bottom:1px solid var(--line)}
+.picker__bar h2{font-size:1.05rem}
+.picker__grid{overflow:auto;padding:1rem 1.2rem;display:grid;gap:1rem}
+.picker__grid h3{font-size:.9rem;color:var(--muted);font-weight:500}
+.picker__row{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:.5rem}
+.picker__row button{padding:0;border:2px solid transparent;border-radius:8px;overflow:hidden;cursor:pointer;background:#eee}
+.picker__row button:hover{border-color:var(--sage)}
+.picker__row img{width:100%;aspect-ratio:1;object-fit:cover;display:block}
+
+@media (max-width:900px){
+  .app{grid-template-columns:1fr}
+  .app>*,.side__nav{min-width:0}
+  .side{position:static;height:auto;flex-direction:row;flex-wrap:wrap;align-items:center;gap:.5rem;padding:.8rem}
+  .side__brand{padding:0 .4rem 0 0;font-size:1.2rem}
+  .side__brand small{display:none}
+  .side__nav{display:flex;overflow-x:auto;order:3;width:100%}
+  .side__nav button{white-space:nowrap}
+  .side__out{margin:0 0 0 auto}
+  .top{position:static;flex-wrap:wrap}
+  .panel,.top{padding-inline:1rem}
+  .demo-note{margin-inline:1rem}
+  .grid2,.grid4{grid-template-columns:1fr}
+  .arow{grid-template-columns:56px 1fr}
+  .arow img{width:56px;height:56px}
+  .arow__act{grid-column:1/-1;justify-content:flex-start}
+  .erow--film,.erow--print,.erow--wall,.erow--rev{grid-template-columns:1fr}
+}
