@@ -6,8 +6,9 @@
     "start": "node server.mjs",
     "app": "electron .",
     "test": "node --test test/*.test.mjs",
-    "dist": "electron-builder --win portable",
-    "build:demo": "node scripts/build-demo.mjs"
+    "dist": "electron-builder --win nsis",
+    "build:demo": "node scripts/build-demo.mjs",
+    "bundle:tts": "node scripts/bundle-tts.mjs"
   },
   "type": "commonjs",
   "dependencies": {
@@ -38,6 +39,9 @@
       "electron/**",
       "demo/**",
       "package.json",
+      "!tts/offline/**",
+      "!tts/runtime/**",
+      "!tts/hf-keep/**",
       "!data/**",
       "!test/**",
       "!dist/**",
@@ -48,8 +52,23 @@
       "tts/**"
     ],
     "win": {
-      "target": "portable",
+      "target": "nsis",
       "icon": "electron/icon-256.png"
+    },
+    "extraResources": [
+      {
+        "from": "tts/offline",
+        "to": "tts-runtime",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ],
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true
     }
   }
 }

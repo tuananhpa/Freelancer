@@ -43,7 +43,7 @@ export const waitJob = async (job, onTick) => {
   return job;
 };
 
-let status = { voices: [], vieneu: 'off', ai: false };
+let status = { voices: [], vieneu: 'off' };
 export let assets = [];
 export const reloadAssets = async () => (assets = await api('assets'));
 
@@ -64,7 +64,7 @@ function voiceOptions(selected, allowDefault) {
     html += `<optgroup label="${esc(g)}">` + list.map(v => `<option value="${esc(v.id)}" ${v.id === selected ? 'selected' : ''} ${v.disabled ? 'disabled' : ''}>${esc(voiceLabel(v))}</option>`).join('') + '</optgroup>';
   return html;
 }
-const assetOptions = (sel, kind = 'music') => '<option value="">Chưa chọn file</option>' + assets.filter(a => (a.kind || 'music') === kind || a.id === sel).map(a => `<option value="${a.id}" ${a.id === sel ? 'selected' : ''}>${esc(a.name)}</option>`).join('');
+const assetOptions = (sel, kind = 'music') => '<option value="">Chưa chọn file</option>' + assets.filter(a => !kind || (a.kind || 'music') === kind || a.id === sel).map(a => `<option value="${a.id}" ${a.id === sel ? 'selected' : ''}>${esc(a.name)}</option>`).join('');
 
 export function pickFile(accept, multiple) {
   return new Promise(res => { const i = Object.assign(document.createElement('input'), { type: 'file', accept, multiple }); i.onchange = () => res([...i.files]); i.click(); });
@@ -269,7 +269,7 @@ function blockHtml(b, i) {
         <label class="f">Âm lượng <span class="muted num" data-v="volume">${Math.round((b.volume ?? 1) * 100)}%</span><input type="range" data-f="volume" min="0" max="2" step="0.05" value="${b.volume ?? 1}"></label>
       </div>
       <div class="acts">
-        <button class="btn sm" data-act="tidy">Biên tập nhẹ</button><button class="btn sm" data-act="speech">Xem cách đọc</button><span class="sp"></span>
+        <span class="sp"></span>
         <button class="btn sm ${b.approved ? '' : 'primary'}" data-act="approve">${b.approved ? 'Bỏ duyệt' : icon('check') + 'Duyệt đoạn này'}</button>
         <button class="btn sm brass" data-act="play" ${b.approved ? '' : 'disabled title="Duyệt đoạn này trước khi tạo giọng đọc"'}>${icon('play')}Nghe thử</button>
       </div><div data-slot></div></div>
@@ -280,8 +280,7 @@ function blockHtml(b, i) {
     <div class="seg-body">
       <div class="seg-h"><input class="title" data-f="title" value="${esc(b.title)}" aria-label="Tên bài">${move}</div>
       <div class="ctrls">
-        <label class="f">File nhạc (mp3)<span class="row"><select data-f="assetId" class="grow">${assetOptions(b.assetId)}</select><button class="btn sm" data-act="upload">${icon('upload')}Tải lên</button></span></label>
-        <label class="f">Loại<select data-f="type"><option value="song" ${b.type === 'song' ? 'selected' : ''}>Ca khúc</option><option value="jingle" ${b.type === 'jingle' ? 'selected' : ''}>Nhạc hiệu</option></select></label>
+        <label class="f">File nhạc hoặc ghi âm<span class="row"><select data-f="assetId" class="grow">${assetOptions(b.assetId, '')}</select><button class="btn sm" data-act="upload">${icon('upload')}Tải lên</button></span></label>
         <label class="f">Âm lượng <span class="muted num" data-v="volume">${Math.round((b.volume ?? 1) * 100)}%</span><input type="range" data-f="volume" min="0" max="2" step="0.05" value="${b.volume ?? 1}"></label>
       </div>
       ${b.assetId ? `<audio controls preload="none" src="/media/assets/${b.assetId}.mp3"></audio>` : '<p class="muted">Chưa chọn file nên mục này sẽ bị bỏ qua.</p>'}
@@ -306,7 +305,7 @@ view.addEventListener('input', e => {
   const b = P.blocks[art.dataset.i];
   let v = e.target.value;
   if (f === 'rate' || f === 'volume') { v = +v; $(`[data-v=${f}]`, art).textContent = f === 'rate' ? v.toFixed(2) + 'x' : Math.round(v * 100) + '%'; }
-  if (f === 'voice' || f === 'assetId' || f === 'type') return;
+  if (f === 'voice' || f === 'assetId') return;
   b[f] = v;
   if (f === 'text' && b.approved) setApproved(b, art, false); // edited text needs a new approval
   save();
@@ -316,7 +315,6 @@ view.addEventListener('change', e => {
   const b = P.blocks[art.dataset.i], f = e.target.dataset.f;
   if (f === 'voice') { b.voice = e.target.value; save(); }
   if (f === 'assetId') { b.assetId = e.target.value || null; save(); drawBlocks(); }
-  if (f === 'type') { b.type = e.target.value; save(); drawBlocks(); }
 });
 view.addEventListener('click', async e => {
   const ins = e.target.closest('[data-ins]');
@@ -329,8 +327,6 @@ view.addEventListener('click', async e => {
     case 'del': if (confirm(`Xóa mục "${b.title}"?`)) { P.blocks.splice(i, 1); save(); drawBlocks(); } break;
     case 'approve': setApproved(b, art, !b.approved); save(); break;
     case 'upload': busy(btn, async () => { const [f] = await pickFile('.mp3,audio/mpeg'); if (!f) return; const a = await uploadMp3(f); b.assetId = a.id; if (/^(Ca khúc|Nhạc hiệu.*)$/.test(b.title)) b.title = a.name.replace(/\.mp3$/i, ''); save(); drawBlocks(); toast('Đã tải lên ' + a.name); }); break;
-    case 'speech': busy(btn, async () => { const { speech } = await api('speech', { json: { text: b.text } }); slot.innerHTML = `<div class="speech"><b>Văn bản máy sẽ đọc</b> (văn bản gốc giữ nguyên)\n${esc(speech)}</div>`; }); break;
-    case 'tidy': busy(btn, () => tidyDialog(b, art)); break;
     case 'play': busy(btn, async () => {
       slot.innerHTML = '<p class="muted">Đang tạo giọng đọc. Đoạn dài có thể mất vài phút ở lần đầu, các lần sau phát ngay.</p>';
       try {
@@ -341,26 +337,11 @@ view.addEventListener('click', async e => {
     }); break;
   }
 });
-async function tidyDialog(b, art) {
-  const run = async ai => (await api('tidy', { json: { text: b.text, ai } })).text;
-  const show = (fixed, ai) => {
-    const body = modal.open(`<h2>Biên tập nhẹ${ai ? ' bằng AI' : ''}</h2>
-      <p class="muted">Chỉ sửa khoảng trắng, dấu câu, viết hoa đầu câu${ai ? ' và lỗi chính tả' : ''}. Từ ngữ giữ nguyên.</p>
-      <div class="diff"><div><b>Hiện tại</b>\n${esc(b.text)}</div><div><b>Sau khi sửa</b>\n${esc(fixed)}</div></div>
-      <div class="row" style="margin-top:14px;justify-content:flex-end">
-        ${!ai && status.ai ? '<button class="btn" id="aiFix">Sửa chính tả bằng AI</button>' : ''}
-        <button class="btn" data-close>Hủy</button><button class="btn primary" id="apply" ${fixed === b.text ? 'disabled' : ''}>${fixed === b.text ? 'Không có gì cần sửa' : 'Áp dụng'}</button></div>`);
-    $('#apply', body).onclick = () => { b.text = fixed; $('textarea', art).value = fixed; if (b.approved) setApproved(b, art, false); save(); modal.close(); toast('Đã áp dụng. Duyệt lại đoạn này nhé.'); };
-    $('#aiFix', body)?.addEventListener('click', ev => busy(ev.currentTarget, async () => show(await run(true), true)));
-  };
-  show(await run(false), false);
-}
-
 // ---------------- studio
 async function renderStudio() {
   await reloadAssets();
   crumbs([['Chương trình', '#/'], [P.title, `#/p/${P.id}`], ['Dựng âm thanh']], `<span class="muted" id="saved">Đã lưu</span><a class="btn sm primary" href="#/p/${P.id}/export">${icon('export')}Xuất file</a>`);
-  unmount = await mountStudio(view, { P, save, flush, reloadProject, api, toast, busy, modal, esc, icon, fmt, waitJob, recordDialog, pickFile, uploadMp3, reloadAssets, getAssets: () => assets });
+  unmount = await mountStudio(view, { P, save, flush, reloadProject, api, toast, esc, icon, fmt, waitJob, getAssets: () => assets });
 }
 
 // ---------------- export
@@ -368,7 +349,7 @@ async function renderExport() {
   crumbs([['Chương trình', '#/'], [P.title, `#/p/${P.id}`], ['Xuất file']]);
   const pending = P.blocks.filter(b => b.type === 'voice' && b.text.trim() && !b.approved).length;
   view.innerHTML = `<div class="page"><h1>Xuất file</h1>
-    <p class="lead">Ghép đúng theo timeline ở phần Dựng âm thanh. Đoạn nào trong kịch bản chưa có trên timeline sẽ được tự thêm vào cuối.</p>
+    <p class="lead">Ghép theo đúng thứ tự trong Kịch bản, kèm phần cắt đầu, đuôi đã chỉnh ở Dựng âm thanh.</p>
     ${pending ? `<div class="panel"><b>Còn ${pending} đoạn chưa duyệt.</b> <a href="#/p/${P.id}">Mở kịch bản để duyệt</a> trước khi xuất.</div>` : ''}
     <div class="panel" ${pending ? 'hidden' : ''} id="exp">
       <div class="choice">

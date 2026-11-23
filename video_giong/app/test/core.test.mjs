@@ -61,19 +61,28 @@ test('first sync lays clips in script order with gaps + auto background', () => 
   assert.equal(bg.dur, 45.2 + 1.5);
 });
 
-test('re-sync keeps manual moves, replaces changed audio in place, drops deleted blocks', () => {
+test('re-sync follows script order, keeps trims of unchanged audio, drops deleted blocks', () => {
   const p = proj();
   p.timeline = syncTimeline(p, vinfo(), adur);
-  p.timeline.clips.find(c => c.blockId === 'm1').start = 100;   // user moved the song
+  Object.assign(p.timeline.clips.find(c => c.blockId === 'm1'), { in: 5, dur: 20, fadeOut: 2 }); // user trimmed the song
   p.timeline.clips.push({ id: 'r', track: 'voice', src: 'assets/rec1234.mp3', start: 5, in: 0, dur: 3, srcDur: 3, rate: 1, volume: 1 });
   const info = vinfo(); info.set('v1', { src: 'tts/bbbbbb1.wav', srcDur: 12 }); // text edited
-  p.blocks = p.blocks.filter(b => b.id !== 'v2');
+  p.blocks = [p.blocks[1], p.blocks[0]];                                      // song moved first, v2 deleted
   const t = syncTimeline(p, info, adur);
-  assert.equal(t.clips.find(c => c.blockId === 'm1').start, 100);
-  const v1 = t.clips.find(c => c.blockId === 'v1');
-  assert.deepEqual([v1.start, v1.dur, v1.src], [0, 12, 'tts/bbbbbb1.wav']);
-  assert.ok(!t.clips.some(c => c.blockId === 'v2'));
-  assert.ok(t.clips.some(c => c.id === 'r'));     // recording untouched
+  const m1 = t.clips.find(c => c.blockId === 'm1'), v1 = t.clips.find(c => c.blockId === 'v1');
+  assert.deepEqual([m1.start, m1.in, m1.dur, m1.fadeOut], [0, 5, 20, 2]);
+  assert.deepEqual([v1.start, v1.in, v1.dur, v1.src], [20.6, 0, 12, 'tts/bbbbbb1.wav']);
+  assert.ok(!t.clips.some(c => c.blockId === 'v2' || c.id === 'r'));
+  assert.equal(t.clips.find(c => c.track === 'bg').dur, 32.6 + 1.5);
+});
+
+test('re-sync rescales a trim when the script speed changes', () => {
+  const p = proj();
+  p.timeline = syncTimeline(p, vinfo(), adur);
+  Object.assign(p.timeline.clips.find(c => c.blockId === 'v2'), { in: 1, dur: 2 }); // at 2x
+  p.blocks[2].rate = 1;
+  const v2 = syncTimeline(p, vinfo(), adur).clips.find(c => c.blockId === 'v2');
+  assert.deepEqual([v2.in, v2.dur, v2.rate], [2, 4, 1]);
 });
 
 test('background ducks only while music overlaps', () => {

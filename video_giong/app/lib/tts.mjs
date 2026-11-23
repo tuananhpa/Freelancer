@@ -5,6 +5,7 @@
 //  - edge:   Microsoft Edge online voices (fast, 2 voices) — fallback.
 //  - google: Google Dịch online voice — fallback.
 import fs from 'node:fs/promises';
+import { existsSync } from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import { spawn } from 'node:child_process';
@@ -52,7 +53,11 @@ export function voices() {
 
 // ---- VieNeu: one long-lived Python worker, requests queued over stdin/stdout JSON lines
 // .replace: python can't read files inside a packaged Electron app.asar
-const WORKER = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'tts', 'vieneu_worker.py').replace('app.asar', 'app.asar.unpacked');
+const TTS_DIR = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'tts').replace('app.asar', 'app.asar.unpacked');
+const WORKER = path.join(TTS_DIR, 'vieneu_worker.py');
+// private Python + model built by scripts/bundle-tts.mjs; installed app has it in resources/tts-runtime
+const RUNTIME = [process.resourcesPath && path.join(process.resourcesPath, 'tts-runtime'), path.join(TTS_DIR, 'offline')]
+  .find(d => d && existsSync(path.join(d, 'python', 'python.exe')));
 export const vieneu = {
   state: 'off', // off | loading | ready | missing | error: ...
   proc: null, waiting: new Map(), seq: 0, readyP: null,
@@ -60,8 +65,9 @@ export const vieneu = {
     if (this.readyP) return this.readyP;
     this.state = 'loading';
     this.readyP = new Promise((resolve, reject) => {
-      const py = process.env.PYTHON || (process.platform === 'win32' ? 'python' : 'python3');
-      const p = spawn(py, ['-u', WORKER], { stdio: ['pipe', 'pipe', 'pipe'], env: { ...process.env, PYTHONIOENCODING: 'utf-8' } });
+      const py = process.env.PYTHON || (RUNTIME ? path.join(RUNTIME, 'python', 'python.exe') : process.platform === 'win32' ? 'python' : 'python3');
+      const env = { ...process.env, PYTHONIOENCODING: 'utf-8', ...(RUNTIME && { HF_HOME: path.join(RUNTIME, 'hf'), HF_HUB_OFFLINE: '1' }) };
+      const p = spawn(py, ['-u', WORKER], { stdio: ['pipe', 'pipe', 'pipe'], env, windowsHide: true });
       this.proc = p;
       let log = '';
       p.stderr.on('data', d => { log = (log + d).slice(-2000); });

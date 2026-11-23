@@ -7,7 +7,7 @@ import path from 'node:path';
 import os from 'node:os';
 import { fileURLToPath } from 'node:url';
 import { extractText, textToBlocks, uid } from './lib/docparse.mjs';
-import { toSpeech, tidy, DEFAULT_RULES } from './lib/speech.mjs';
+import { toSpeech, DEFAULT_RULES } from './lib/speech.mjs';
 import { voices, synth, vieneu } from './lib/tts.mjs';
 import { render, ffmpeg, peaks, syncProject } from './lib/render.mjs';
 
@@ -74,22 +74,6 @@ function sendFile(req, res, file, download) {
   });
 }
 
-async function geminiTidy(text) {
-  const key = process.env.GEMINI_API_KEY;
-  const model = process.env.GEMINI_MODEL || 'gemini-2.5-flash';
-  const prompt = 'Sửa lỗi chính tả và dấu câu (ngắt câu) cho văn bản tiếng Việt dưới đây. ' +
-    'TUYỆT ĐỐI không thêm, bớt, thay hay viết lại từ ngữ; giữ nguyên tên riêng, chức danh, số liệu, chữ viết tắt, thuật ngữ quân sự và các dòng. ' +
-    'Chỉ trả về văn bản đã sửa, không giải thích.\n\n' + text;
-  const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, {
-    method: 'POST', headers: { 'Content-Type': 'application/json', 'x-goog-api-key': key },
-    body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }], generationConfig: { temperature: 0 } }),
-  });
-  const j = await r.json();
-  const out = j.candidates?.[0]?.content?.parts?.map(p => p.text).join('').trim();
-  if (!out) throw httpErr(502, 'AI không trả kết quả: ' + (j.error?.message || 'không rõ'));
-  return out;
-}
-
 const newProject = (title, blocks = []) => ({ id: uid('p'), title, defaultVoice: 'vieneu:Adam', bg: { assetId: null, volume: 0.15 }, blocks, createdAt: Date.now(), updatedAt: Date.now() });
 
 async function api(req, res, url) {
@@ -97,7 +81,7 @@ async function api(req, res, url) {
   const M = req.method;
   const [a, id] = p;
 
-  if (a === 'status') return send(res, 200, { voices: voices(), vieneu: vieneu.state, ai: !!process.env.GEMINI_API_KEY });
+  if (a === 'status') return send(res, 200, { voices: voices(), vieneu: vieneu.state });
 
   if (a === 'projects') {
     if (!id && M === 'GET') {
@@ -171,13 +155,6 @@ async function api(req, res, url) {
   }
 
   if (a === 'speech' && M === 'POST') { const b = await json(req); return send(res, 200, { speech: toSpeech(String(b.text || ''), await getRules()) }); }
-
-  if (a === 'tidy' && M === 'POST') {
-    const b = await json(req);
-    const text = String(b.text || '');
-    if (b.ai && !process.env.GEMINI_API_KEY) throw httpErr(400, 'Chưa cấu hình GEMINI_API_KEY trong file .env');
-    return send(res, 200, { text: b.ai ? await geminiTidy(text) : tidy(text), ai: !!b.ai });
-  }
 
   if (a === 'tts' && M === 'POST') {
     const b = await json(req);
