@@ -104,3 +104,20 @@ test('mix graph: one chain per clip, loop + tempo + delay', () => {
   assert.match(m.filter, /amix=inputs=2:normalize=0/);
   assert.equal(m.total, 10.5);
 });
+
+test('same text asked twice at once is generated once, both callers get progress', async () => {
+  const { synth, vieneu } = await import('../lib/tts.mjs');
+  const os = await import('node:os'), fsp = await import('node:fs/promises'), path = await import('node:path');
+  const dir = await fsp.mkdtemp(path.join(os.tmpdir(), 'tts-'));
+  const say = vieneu.say; let calls = 0;
+  vieneu.say = async (_v, _t, out, onProgress) => { calls++; await new Promise(r => setTimeout(r, 20)); onProgress?.(0.5); await fsp.writeFile(out, 'x'); };
+  try {
+    const got = [];
+    const [a, b] = await Promise.all([synth('vieneu:Adam', 'xin chào', dir, f => got.push(f)), synth('vieneu:Adam', 'xin chào', dir, f => got.push(f))]);
+    assert.equal(a, b);
+    assert.equal(calls, 1);
+    assert.deepEqual(got, [0.5, 0.5]);
+    await synth('vieneu:Adam', 'xin chào', dir); // cached now
+    assert.equal(calls, 1);
+  } finally { vieneu.say = say; await fsp.rm(dir, { recursive: true, force: true }); }
+});

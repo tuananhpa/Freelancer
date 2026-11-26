@@ -164,6 +164,18 @@ async function api(req, res, url) {
     return sendFile(req, res, file);
   }
 
+  // long segments: same as /tts but as a job with progress; result plays from /media/<src>
+  if (a === 'tts-job' && M === 'POST') {
+    const b = await json(req);
+    const text = toSpeech(String(b.text || ''), await getRules()).slice(0, 20000);
+    if (!text.trim()) throw httpErr(400, 'Đoạn trống');
+    return send(res, 200, startJob('tts', async job => {
+      Object.assign(job, { phase: 'Đang tạo giọng đọc' });
+      const file = await synth(String(b.voice || 'vieneu:Adam'), text, D.tts, f => (job.progress = Math.round(f * 100)));
+      return { src: 'tts/' + path.basename(file) };
+    }));
+  }
+
   if (a === 'peaks' && M === 'GET') return send(res, 200, await peaks(resolveSrc(url.searchParams.get('src'))));
 
   // script -> TTS -> timeline (keeps manual timeline edits)

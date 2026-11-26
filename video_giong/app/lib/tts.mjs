@@ -83,6 +83,7 @@ export const vieneu = {
         let m; try { m = JSON.parse(line); } catch { return; }
         if ('ready' in m) { if (m.ready) { this.state = 'ready'; resolve(); } else { this.state = 'error: ' + m.error; reject(new Error(m.error)); } return; }
         const w = this.waiting.get(m.id); if (!w) return;
+        if ('progress' in m) return w.onProgress?.(m.progress);
         this.waiting.delete(m.id);
         m.ok ? w.resolve() : w.reject(new Error('VieNeu: ' + m.error));
       });
@@ -90,11 +91,11 @@ export const vieneu = {
     this.readyP.catch(() => {});
     return this.readyP;
   },
-  async say(voice, text, out) {
+  async say(voice, text, out, onProgress) {
     await this.start();
     const id = String(++this.seq);
     return new Promise((resolve, reject) => {
-      this.waiting.set(id, { resolve, reject });
+      this.waiting.set(id, { resolve, reject, onProgress });
       this.proc.stdin.write(JSON.stringify({ id, text, voice, out }) + '\n');
     });
   },
@@ -128,17 +129,32 @@ async function google(_voice, text) {
 
 const ONLINE = { edge, google };
 
-export async function synth(voiceId, text, cacheDir) {
+// file -> { p, subs }: the same text asked twice at once (Nghe thử + Dựng âm thanh) is generated once
+const inflight = new Map();
+
+/** onProgress(0..1) is called while VieNeu works through a long text. */
+export async function synth(voiceId, text, cacheDir, onProgress) {
   const [p, v] = [voiceId.slice(0, voiceId.indexOf(':')), voiceId.slice(voiceId.indexOf(':') + 1)];
   if (p !== 'vieneu' && !ONLINE[p]) throw new Error(`Không có giọng ${voiceId}`);
   const file = path.join(cacheDir, crypto.createHash('sha1').update(voiceId + '\n' + text).digest('hex') + (p === 'vieneu' ? '.wav' : '.mp3'));
   try { await fs.access(file); return file; } catch {}
   const mp3 = file.replace(/\.wav$/, '.mp3'); // demo seed ships VieNeu audio compressed as mp3
   if (mp3 !== file) try { await fs.access(mp3); return mp3; } catch {}
-  await fs.mkdir(cacheDir, { recursive: true });
+  let job = inflight.get(file);
+  if (!job) {
+    job = { subs: new Set() };
+    job.p = make(p, v, text, file, f => job.subs.forEach(s => s(f))).finally(() => inflight.delete(file));
+    inflight.set(file, job);
+  }
+  if (onProgress) job.subs.add(onProgress);
+  return job.p;
+}
+
+async function make(p, v, text, file, onProgress) {
+  await fs.mkdir(path.dirname(file), { recursive: true });
   if (p === 'vieneu') {
     const tmp = file + '.part.wav';
-    await vieneu.say(v, text, tmp);
+    await vieneu.say(v, text, tmp, onProgress);
     await fs.rename(tmp, file);
     return file;
   }

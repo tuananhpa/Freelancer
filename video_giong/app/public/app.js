@@ -328,11 +328,12 @@ view.addEventListener('click', async e => {
     case 'approve': setApproved(b, art, !b.approved); save(); break;
     case 'upload': busy(btn, async () => { const [f] = await pickFile('.mp3,audio/mpeg'); if (!f) return; const a = await uploadMp3(f); b.assetId = a.id; if (/^(Ca khúc|Nhạc hiệu.*)$/.test(b.title)) b.title = a.name.replace(/\.mp3$/i, ''); save(); drawBlocks(); toast('Đã tải lên ' + a.name); }); break;
     case 'play': busy(btn, async () => {
-      slot.innerHTML = '<p class="muted">Đang tạo giọng đọc. Đoạn dài có thể mất vài phút ở lần đầu, các lần sau phát ngay.</p>';
+      const wait = pct => (slot.innerHTML = `<p class="muted">Đang tạo giọng đọc${pct ? ` <b class="num">${pct}%</b>` : ''}. Đoạn dài có thể mất vài phút ở lần đầu, các lần sau phát ngay.</p>`);
+      wait(0);
       try {
-        const blob = await api('tts', { json: { voice: b.voice || P.defaultVoice, text: b.text } });
+        const job = await waitJob(await api('tts-job', { json: { voice: b.voice || P.defaultVoice, text: b.text } }), j => wait(j.progress));
         slot.innerHTML = '<audio controls autoplay></audio>';
-        const au = $('audio', slot); au.src = URL.createObjectURL(blob); au.playbackRate = b.rate || 1; au.volume = Math.min(1, b.volume ?? 1);
+        const au = $('audio', slot); au.src = '/media/' + job.src; au.playbackRate = b.rate || 1; au.volume = Math.min(1, b.volume ?? 1);
       } catch (err) { slot.innerHTML = ''; throw err; }
     }); break;
   }

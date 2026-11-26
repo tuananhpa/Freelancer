@@ -56,12 +56,13 @@ export async function syncProject(project, { rules, assetsDir, ttsDir, job = {},
   const voice = project.blocks.filter(b => b.type === 'voice' && b.text?.trim());
   const ready = voice.filter(b => b.approved);
   const voiceInfo = new Map();
-  let done = 0;
+  const frac = new Map(); // blockId -> 0..1, so one long block still moves the bar
+  const tick = (id, f) => { frac.set(id, f); set([...frac.values()].reduce((a, x) => a + x, 0) / ready.length); };
   set(0);
   await pool(ready, 2, async b => {
-    const file = await synth(b.voice || project.defaultVoice, toSpeech(b.text, rules), ttsDir);
+    const file = await synth(b.voice || project.defaultVoice, toSpeech(b.text, rules), ttsDir, f => tick(b.id, f));
     voiceInfo.set(b.id, { src: 'tts/' + path.basename(file), srcDur: (await peaks(file)).duration });
-    set(++done / ready.length);
+    tick(b.id, 1);
   });
   const assetDur = new Map();
   for (const id of new Set([...project.blocks.map(b => b.assetId), project.bg?.assetId].filter(Boolean))) {
