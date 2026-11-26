@@ -1,0 +1,9 @@
+{
+  "name": "cpes-website",
+  "compatibility_date": "2026-11-02",
+  "assets": {
+    "directory": "./dist",
+    // client-side routes (/san-pham, /giai-phap…) fall back to index.html
+    "not_found_handling": "single-page-application"
+  }
+}

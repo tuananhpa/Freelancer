@@ -1,0 +1,13 @@
+{
+  "name": "mi-studio-phongsucuoi",
+  "main": "worker.js",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*", "/media/*"]
+  },
+  "kv_namespaces": [
+    { "binding": "CONTENT", "id": "31f60a117e6d46dc992d863ec043ae15" }
+  ]
+}

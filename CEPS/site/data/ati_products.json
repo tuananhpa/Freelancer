@@ -1,0 +1,388 @@
+[
+  {
+    "id": 1001,
+    "name": "ATi Q46H/62 Free Chlorine Monitor",
+    "name_vi": "Thiết Bị Đo Clo Dư Tự Do Q46H/62",
+    "brand": "ATi",
+    "category": "Thiết bị đo chất lượng nước",
+    "category_slug": "sensor",
+    "parameters": "Clo tự do, pH, Nhiệt độ",
+    "description_vi": "Giải pháp giám sát Clo dư không dùng hóa chất xúc tác reagent-free của ATi. Đo Clo tự do sử dụng cảm biến phân cực màng trực tiếp, xuất đồng thời giá trị Clo, pH và nhiệt độ.",
+    "highlights_vi": [
+      "Hoàn toàn không dùng hóa chất xúc tác (reagent-free), giảm 90% chi phí vận hành O&M",
+      "Tín hiệu xuất ra bao gồm đồng thời giá trị Clo, pH và Nhiệt độ",
+      "Cảm biến màng phân cực 3 cực thế bền bỉ theo thời gian",
+      "Tùy chọn sục rửa tự động AutoClean bằng khí nén hoặc tuần hoàn nước"
+    ],
+    "markets_vi": [
+      "Nước cấp sinh hoạt",
+      "Tháp giải nhiệt",
+      "Hồ bơi công nghiệp",
+      "Khử trùng nước thải"
+    ],
+    "local_image": "assets/img/ati/products/q46h-chlorine-panel.png",
+    "image_url": "assets/img/ati/products/q46h-chlorine-panel.png",
+    "original_url": "https://www.analyticaltechnology.com"
+  },
+  {
+    "id": 1002,
+    "name": "ATi Q46N Ammonia Monitor",
+    "name_vi": "Thiết Bị Giám Sát Chỉ Tiêu Amoni Q46N",
+    "brand": "ATi",
+    "category": "Thiết bị đo chất lượng nước",
+    "category_slug": "sensor",
+    "parameters": "Amoni tự do, Tổng Amoni, Monocloramin",
+    "description_vi": "Q46N đo amoni tự do, tổng amoni và mono cloramine trong nước cấp bằng phương pháp cảm biến điện hóa độ nhạy cao với chất xúc tác chi phí thấp, dễ dàng bảo trì.",
+    "highlights_vi": [
+      "Đo đồng thời Amoni tự do, Tổng amoni và Monocloramin",
+      "Phương pháp cảm biến điện hóa ổn định và tin cậy",
+      "Chất xúc tác chi phí cực thấp, dễ dàng thay thế định kỳ",
+      "Dễ dàng bảo dưỡng và hiệu chuẩn trực tiếp"
+    ],
+    "markets_vi": [
+      "Nhà máy nước sạch",
+      "Mạng lưới cấp nước đô thị",
+      "Giám sát trạm khử trùng Cloramin"
+    ],
+    "local_image": "assets/img/ati/products/q46n-ammonia.png",
+    "image_url": "assets/img/ati/products/q46n-ammonia.png",
+    "original_url": "https://www.analyticaltechnology.com"
+  },
+  {
+    "id": 1003,
+    "name": "ATi MetriNet Smart Water Distribution Monitor",
+    "name_vi": "Hệ Thống Quan Trắc Nước Thông Minh MetriNet (Chạy Pin/Solar)",
+    "brand": "ATi",
+    "category": "Thiết bị đo chất lượng nước",
+    "category_slug": "spectrometer",
+    "parameters": "Lên đến 16 chỉ tiêu: Clo, pH, Độ đục, DO, Độ dẫn, Áp suất, Nhiệt độ...",
+    "description_vi": "MetriNet cung cấp giải pháp bền bỉ, lắp ráp dạng module trên đường ống áp lực. Có thể lắp tới 8 cảm biến M-Node siêu nhỏ và giám sát 16 thông số cùng lúc với mức tiêu thụ điện cực thấp.",
+    "highlights_vi": [
+      "Cấp nguồn từ pin hoặc tấm năng lượng mặt trời (Solar), tiêu thụ điện năng siêu thấp",
+      "Lắp đặt dạng mô-đun M-Node đo tới 16 thông số trên cùng 1 điểm",
+      "Tùy chọn truyền thông không dây 4G/NB-IoT về đám mây CPES Cloud",
+      "Hỗ trợ đầy đủ giao thức Modbus, Ethernet/IP, Profibus"
+    ],
+    "markets_vi": [
+      "Mạng lưới phân phối nước đô thị",
+      "Cấp nước thông minh Smart Water",
+      "Phát hiện ô nhiễm đường ống"
+    ],
+    "local_image": "assets/img/ati/products/metrinet-battery.png",
+    "image_url": "assets/img/ati/products/metrinet-battery.png",
+    "original_url": "https://www.analyticaltechnology.com"
+  },
+  {
+    "id": 1004,
+    "name": "ATi NephNet Portable Turbidity Monitor",
+    "name_vi": "Bộ Giám Sát Độ Đục Cầm Tay NephNet",
+    "brand": "ATi",
+    "category": "Thiết bị đo chất lượng nước",
+    "category_slug": "sensor",
+    "parameters": "Độ đục dải thấp (0.000 - 100.0 NTU)",
+    "description_vi": "Bộ giám sát độ đục cầm tay NephNet được sử dụng trong quá trình xịt rửa và làm sạch đường ống có điều khiển. Tích hợp bộ datalogger không dây, độ chính xác xuất sắc ở dải đo cực thấp.",
+    "highlights_vi": [
+      "Thiết kế cầm tay cơ động, lắp nhanh trên van xả khí/ống nhánh",
+      "Giám sát liên tục và truyền từ xa dữ liệu độ đục trong sục rửa đường ống",
+      "Độ chính xác vượt trội ở dải đo cực thấp dưới 0.1 NTU",
+      "Tương thích bộ ghi nhận dữ liệu Datalogger hiện hữu"
+    ],
+    "markets_vi": [
+      "Bảo trì mạng lưới cấp nước",
+      "Súc xả đường ống phân phối",
+      "Kiểm định chất lượng nước tại vòi"
+    ],
+    "local_image": "assets/img/ati/products/nephnet-turbidity.png",
+    "image_url": "assets/img/ati/products/nephnet-turbidity.png",
+    "original_url": "https://www.analyticaltechnology.com"
+  },
+  {
+    "id": 1005,
+    "name": "ATi Fixed Turbidity & TSS Monitor",
+    "name_vi": "Thiết Bị Đo Độ Đục Cố Định & Cặn Lơ Lửng Chuẩn ISO 7027",
+    "brand": "ATi",
+    "category": "Thiết bị đo chất lượng nước",
+    "category_slug": "sensor",
+    "parameters": "0.001 - 4000 NTU / mg/L TSS",
+    "description_vi": "Giám sát nước thô, nước lọc qua màng, nước thải đầu ra và các ứng dụng công nghệ. Phù hợp chuẩn EPA 180.1 và ISO 7027, phương pháp hiệu chuẩn đơn giản không dùng Formazin độc hại.",
+    "highlights_vi": [
+      "Phù hợp tiêu chuẩn EPA 180.1 / ISO 7027 tán xạ 90 độ",
+      "Phù hợp tiêu chuẩn kiểm định và cân chỉnh chất rắn quang học",
+      "Buồng đo Bubble Trap loại bỏ bọt khí triệt để",
+      "Phương pháp hiệu chuẩn dễ dàng và an toàn"
+    ],
+    "markets_vi": [
+      "Nước cấp sau lắng lọc",
+      "Nước thải sau xử lý",
+      "Nước thô sông hồ"
+    ],
+    "local_image": "assets/img/ati/products/turbidity-fixed.png",
+    "image_url": "assets/img/ati/products/turbidity-fixed.png",
+    "original_url": "https://www.analyticaltechnology.com"
+  },
+  {
+    "id": 1006,
+    "name": "ATi UV254 Organic Matter Monitor",
+    "name_vi": "Thiết Bị Đo Độ Hấp Thụ Bước Sóng UV254 (Hàm Lượng Chất Hữu Cơ)",
+    "brand": "ATi",
+    "category": "Thiết bị đo chất lượng nước",
+    "category_slug": "sensor",
+    "parameters": "UV254, SAC254, TOC, BOD, COD quy đổi, Độ đục",
+    "description_vi": "Đo lường độ hấp thụ bước sóng UV254 cung cấp giá trị thời gian thực về hàm lượng các chất hữu cơ hòa tan trong nguồn nước. Tích hợp tính năng đo độ đục để bù trừ sai số quang học.",
+    "highlights_vi": [
+      "Đo đồng thời UV254 và Độ đục để bù sai số quang học tự động",
+      "Cung cấp chỉ số hữu cơ thời gian thực (in-situ) không cần lấy mẫu",
+      "Nhiều dải đo khác nhau cho nước sạch và nước thải",
+      "Tùy chọn hệ thống tự làm sạch quang học tự động Q-clean"
+    ],
+    "markets_vi": [
+      "Kiểm soát tiền xử lý khử trùng",
+      "Phát hiện ô nhiễm hữu cơ",
+      "Xử lý nước thải công nghiệp"
+    ],
+    "local_image": "assets/img/ati/products/uv254-sensor.png",
+    "image_url": "assets/img/ati/products/uv254-sensor.png",
+    "original_url": "https://www.analyticaltechnology.com"
+  },
+  {
+    "id": 1007,
+    "name": "ATi Q46F Fluoride Monitor",
+    "name_vi": "Thiết Bị Giám Sát Chỉ Tiêu Flo Dư Q46F",
+    "brand": "ATi",
+    "category": "Thiết bị đo chất lượng nước",
+    "category_slug": "sensor",
+    "parameters": "0.1 - 10.0 ppm F-",
+    "description_vi": "Giám sát liên tục nồng độ Flo để đảm bảo lượng Flo được châm vừa đủ theo quy chuẩn y tế. Sử dụng cảm biến ion điện hóa màng chọn lọc kết hợp bộ đệm TISAB chi phí thấp.",
+    "highlights_vi": [
+      "Cảm biến điện cực chọn lọc ion Lanthanum Fluoride ISE",
+      "Bộ đệm (buffer) chi phí thấp đảm bảo độ chính xác vượt trội",
+      "Căn chỉnh 2 điểm tự động (Auto 2-point calibration)",
+      "Đo trực tiếp theo phương pháp ion điện hóa tiên tiến"
+    ],
+    "markets_vi": [
+      "Nhà máy nước sinh hoạt",
+      "Kiểm soát nồng độ Flo bảo vệ răng",
+      "Công nghiệp bán dẫn"
+    ],
+    "local_image": "assets/img/ati/products/q46f-fluoride.png",
+    "image_url": "assets/img/ati/products/q46f-fluoride.png",
+    "original_url": "https://www.analyticaltechnology.com"
+  },
+  {
+    "id": 1008,
+    "name": "ATi Sitebox Portable Multi-Parameter Water Station",
+    "name_vi": "Hệ Thống Đo Chất Lượng Nước Xách Tay Sitebox",
+    "brand": "ATi",
+    "category": "Thiết bị đo chất lượng nước",
+    "category_slug": "spectrometer",
+    "parameters": "8 cảm biến & 16 thông số chất lượng nước đồng thời",
+    "description_vi": "Có thể xách tay di chuyển được, Sitebox là trạm phân tích nước cơ động dạng vali nhấc lên và di chuyển. Cho phép giám sát dữ liệu thực tức thì trong vòng 30 phút.",
+    "highlights_vi": [
+      "Thiết kế dạng vali chống va đập cơ động nhấc lên và di chuyển",
+      "Cung cấp dữ liệu quan trắc thực tế tại hiện trường trong vòng 30 phút",
+      "Cấu hình cho kiểm định 2 dòng, 3 dòng hoặc nhiều dòng chảy",
+      "Hỗ trợ tới 8 cảm biến và 16 thông số giám sát đồng thời"
+    ],
+    "markets_vi": [
+      "Kiểm tra cơ động sự cố môi trường",
+      "Kiểm định trạm nước",
+      "Nghiên cứu khảo sát nguồn nước"
+    ],
+    "local_image": "assets/img/ati/products/sitebox-portable.png",
+    "image_url": "assets/img/ati/products/sitebox-portable.png",
+    "original_url": "https://www.analyticaltechnology.com"
+  },
+  {
+    "id": 1009,
+    "name": "ATi Q46H Residual Oxidant Monitor",
+    "name_vi": "Hệ Thống Đo Oxy Hóa Tồn Dư (Ozone, Clo Điôxít, Oxy Già, PAA)",
+    "brand": "ATi",
+    "category": "Thiết bị đo chất lượng nước",
+    "category_slug": "sensor",
+    "parameters": "Ozone (O3), ClO2, H2O2, Axit Peracetic (PAA)",
+    "description_vi": "Hệ thống đo điện hóa tin cậy cho các chất oxy hóa sử dụng trong hệ thống khử khuẩn hay xử lý nước tinh khiết, đồ uống, thực phẩm và dược phẩm.",
+    "highlights_vi": [
+      "Đo chọn lọc các chất khử trùng: Ô-zôn, Clo oxit, Ôxi già, Axit Peracetic",
+      "Cảm biến màng điện cực cách ly không bị gây nhiễu chéo",
+      "Độ nhạy cao từ mức ppb đến ppm",
+      "Vỏ bảo vệ chuẩn IP66 / NEMA 4X chống ăn mòn hóa chất"
+    ],
+    "markets_vi": [
+      "Dược phẩm",
+      "Nhà máy đồ uống & bia rượu",
+      "Hệ thống khử trùng Ozone y tế"
+    ],
+    "local_image": "assets/img/ati/products/q46h-ozone.png",
+    "image_url": "assets/img/ati/products/q46h-ozone.png",
+    "original_url": "https://www.analyticaltechnology.com"
+  },
+  {
+    "id": 1010,
+    "name": "ATi Q46D Optical Dissolved Oxygen Monitor",
+    "name_vi": "Thiết Bị Đo Oxy Hòa Tan Quang Học Q46D (DO Bể Hiếu Khí)",
+    "brand": "ATi",
+    "category": "Thiết bị đo chất lượng nước",
+    "category_slug": "sensor",
+    "parameters": "DO 0-40.0 ppm / 0-200% Saturation",
+    "description_vi": "Điều khiển luồng không khí để tối ưu quá trình sục khí, từ đó tiết kiệm đến 40% năng lượng điện quạt thổi khí trong trạm xử lý nước thải. Tích hợp bộ Q-blast tự làm sạch độc đáo.",
+    "highlights_vi": [
+      "Cảm biến quang học đo nồng độ ppm và độ bão hòa % Saturation",
+      "Bộ Q-blast độc đáo tự làm sạch bằng khí nén áp lực cao",
+      "Tối ưu điều khiển quạt sục khí, tiết kiệm điện năng vận hành",
+      "Chi phí bảo trì cực thấp, không cần thay dung dịch điện phân"
+    ],
+    "markets_vi": [
+      "Trạm xử lý nước thải sinh hoạt và KCN",
+      "Bể hiếu khí Aerotank",
+      "Nuôi trồng thủy sản công nghệ cao"
+    ],
+    "local_image": "assets/img/ati/products/q46d-do-qblast.png",
+    "image_url": "assets/img/ati/products/q46d-do-qblast.png",
+    "original_url": "https://www.analyticaltechnology.com"
+  },
+  {
+    "id": 1011,
+    "name": "ATi Air Stripping Total Chlorine & Sulfide System",
+    "name_vi": "Hệ Thống Tách Khí Air-Stripping Đo Tổng Clo & Sulfide",
+    "brand": "ATi",
+    "category": "Thiết bị đo chất lượng nước",
+    "category_slug": "sensor",
+    "parameters": "Tổng Clo, Sulfide hòa tan, Sulfite dư",
+    "description_vi": "Công nghệ Tách khí (air stripping) chuyển đổi chất cần đo sang pha khí trước khi cảm biến đo đạc, giúp loại bỏ hoàn toàn việc cảm biến tiếp xúc trực tiếp với bùn bẩn, chống nghẹt 100%.",
+    "highlights_vi": [
+      "Công nghệ tách khí Air Stripping ngăn ngừa cảm biến tiếp xúc mẫu bẩn",
+      "Đo nồng độ Sulfide và Sulfite bảo vệ hệ thống khử clo nước thải",
+      "Cảm biến đo pha khí triệt tiêu hoàn toàn hiện tượng cảnh báo giả",
+      "Tự động làm sạch đường trích mẫu định kỳ"
+    ],
+    "markets_vi": [
+      "Nước thải công nghiệp nặng",
+      "Hệ thống khử clo nhà máy điện",
+      "Trạm khử mùi nước thải"
+    ],
+    "local_image": "assets/img/ati/products/water-quality-panel.png",
+    "image_url": "assets/img/ati/products/water-quality-panel.png",
+    "original_url": "https://www.analyticaltechnology.com"
+  },
+  {
+    "id": 1012,
+    "name": "ATi MLSS & Sludge Blanket Monitor",
+    "name_vi": "Thiết Bị Đo Nồng Độ Bùn Hoạt Tính MLSS & Lớp Bùn Lắng",
+    "brand": "ATi",
+    "category": "Thiết bị đo chất lượng nước",
+    "category_slug": "sensor",
+    "parameters": "MLSS (0-30 g/L), Chiều cao lớp bùn Sludge Blanket",
+    "description_vi": "Đo chất rắn lơ lửng và nồng độ bùn hoạt tính MLSS trong bể sục khí và bể lắng, hỗ trợ việc điều khiển quá trình bùn hồi lưu RAS/WAS và cảnh báo tràn bùn.",
+    "highlights_vi": [
+      "Giám sát thời gian thực nồng độ bùn hoạt tính MLSS",
+      "Duy trì mức MLSS tối ưu cho hệ vi sinh bể sinh học",
+      "Tích hợp cảm biến đo mức mặt bùn lắng FilterSmart/EchoSmart",
+      "Tùy chọn bộ tự làm sạch Q-blast định kỳ"
+    ],
+    "markets_vi": [
+      "Bể lắng sơ cấp & thứ cấp",
+      "Bể hiếu khí Aerotank",
+      "Điều khiển bơm bùn hoàn lưu RAS/WAS"
+    ],
+    "local_image": "assets/img/ati/products/tss-sludge-sensor.png",
+    "image_url": "assets/img/ati/products/tss-sludge-sensor.png",
+    "original_url": "https://www.analyticaltechnology.com"
+  },
+  {
+    "id": 1013,
+    "name": "ATi Q46P & Q46R Industrial pH/ORP Differential System",
+    "name_vi": "Hệ Thống Đo pH / ORP Vi Sai Công Nghiệp Q46P/R",
+    "brand": "ATi",
+    "category": "Thiết bị đo chất lượng nước",
+    "category_slug": "sensor",
+    "parameters": "pH (0-14), ORP (-2000 đến +2000 mV)",
+    "description_vi": "Cảm biến đo vi sai pH/ORP với 3 điện cực giúp loại bỏ triệt để dòng điện rò đất và nghẹt cầu muối, tuổi thọ điện cực cao gấp 3 lần trong môi trường hóa chất khắc nghiệt.",
+    "highlights_vi": [
+      "Công nghệ điện cực vi sai (Differential pH Sensor) chống nghẹt dòng rò",
+      "Vỏ PEEK/Ryton chịu hóa chất ăn mòn mạnh và nhiệt độ cao",
+      "Tích hợp cảm biến nhiệt độ PT1000 giải bù nhiệt tự động",
+      "Chi phí bảo trì cực thấp, hỗ trợ tùy chọn tự làm sạch Q-blast"
+    ],
+    "markets_vi": [
+      "Hóa chất & Xi mạ",
+      "Xử lý nước thải công nghiệp",
+      "Nhiệt điện & Dầu khí"
+    ],
+    "local_image": "assets/img/ati/products/q46p-ph-orp.png",
+    "image_url": "assets/img/ati/products/q46p-ph-orp.png",
+    "original_url": "https://www.analyticaltechnology.com"
+  },
+  {
+    "id": 1014,
+    "name": "ATi D12 Toxic & Combustible Gas Transmitter",
+    "name_vi": "Bộ Transmitter Phát Hiện Khí Độc & Khí Cháy Nổ D12",
+    "brand": "ATi",
+    "category": "Thiết bị đo khí độc",
+    "category_slug": "sensor",
+    "parameters": "Hơn 60 loại khí: Cl2, SO2, NH3, H2S, O3, CO, LEL cháy nổ...",
+    "description_vi": "Bộ phát hiện khí đa năng có thể đo hơn 60 loại khí độc hại hoặc cảm biến xúc tác cho khí cháy nổ LEL. Vỏ máy chống cháy nổ Class 1 Div 1 & ATEX, giao diện cảm ứng từ không cần mở nắp.",
+    "highlights_vi": [
+      "Đo được hơn 60 loại khí độc hại và khí dễ cháy nổ LEL",
+      "Module cảm biến thông minh tháo lắp nhanh và hiệu chuẩn độc lập",
+      "Giao diện cảm ứng từ Mag-Key điều khiển an toàn trong vùng nổ",
+      "Tính năng tự động kiểm tra báo động Auto-Test / Bump Test"
+    ],
+    "markets_vi": [
+      "Trạm châm Clo nhà máy nước",
+      "Lọc hóa dầu",
+      "Hầm mỏ & Hóa chất",
+      "Phòng thí nghiệm"
+    ],
+    "local_image": "assets/img/ati/products/d12-gas-flameproof.png",
+    "image_url": "assets/img/ati/products/d12-gas-flameproof.png",
+    "original_url": "https://www.analyticaltechnology.com"
+  },
+  {
+    "id": 1015,
+    "name": "ATi D16 PortaSens III Portable Leak Detector",
+    "name_vi": "Bộ Phát Hiện Rò Rỉ Khí Cầm Tay PortaSens III (D16)",
+    "brand": "ATi",
+    "category": "Thiết bị đo khí độc",
+    "category_slug": "sensor",
+    "parameters": "Hơn 60 loại khí độc, bộ nhớ 6GB",
+    "description_vi": "PortaSens III là thiết bị phát hiện rò rỉ khí cầm tay hàng đầu thế giới. Tích hợp bơm hút lấy mẫu khí, màn hình màu cảm ứng và bộ nhớ datalogger 6GB ghi nhận lịch sử nồng độ khí.",
+    "highlights_vi": [
+      "Thiết bị cầm tay tích hợp bơm hút mẫu khí trực tiếp",
+      "Bộ nhớ ghi nhận dữ liệu Datalogger 6GB kết nối máy tính USB",
+      "Màn hình cảm ứng màu trực quan, hiển thị biểu đồ thời gian thực",
+      "Sử dụng các module cảm biến thông minh tháo lắp nhanh"
+    ],
+    "markets_vi": [
+      "Tuần tra an toàn lao động",
+      "Tìm kiếm vị trí rò rỉ khí độc Cl2/NH3",
+      "Ứng cứu sự cố hóa chất"
+    ],
+    "local_image": "assets/img/ati/products/d16-portasens.png",
+    "image_url": "assets/img/ati/products/d16-portasens.png",
+    "original_url": "https://www.analyticaltechnology.com"
+  },
+  {
+    "id": 1016,
+    "name": "ATi Smart Sensor Modules Ecosystem",
+    "name_vi": "Hệ Sinh Thái Module Cảm Biến Khí Thông Minh ATi",
+    "brand": "ATi",
+    "category": "Thiết bị đo khí độc",
+    "category_slug": "accessory",
+    "parameters": "60+ module cảm biến khí độc lập tích hợp bộ nhớ EPROM",
+    "description_vi": "Mỗi module cảm biến thông minh của ATi tích hợp bộ cảm biến, bộ khuếch đại và bộ nhớ hiệu chuẩn. Có thể hiệu chuẩn độc lập trong phòng thí nghiệm và cắm vào dùng ngay trên hiện trường.",
+    "highlights_vi": [
+      "Hiệu chuẩn độc lập trong phòng lab, cắm vào đầu phát hiện dùng ngay (Plug & Play)",
+      "Lưu trữ toàn bộ thông số calib, ngày hết hạn và dải đo trong chip nhớ",
+      "Tiết kiệm 80% thời gian bảo dưỡng hiệu chuẩn tại hiện trường",
+      "Độ nhạy cao, chống nhiễu chéo vượt trội"
+    ],
+    "markets_vi": [
+      "Trạm quan trắc khí độc",
+      "Nhà máy nước",
+      "Khu chế xuất hóa chất"
+    ],
+    "local_image": "assets/img/ati/products/smart-sensor-modules.png",
+    "image_url": "assets/img/ati/products/smart-sensor-modules.png",
+    "original_url": "https://www.analyticaltechnology.com"
+  }
+]

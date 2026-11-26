@@ -1,0 +1,26 @@
+[
+ {
+  "id": "amwru9ust2m621",
+  "name": "Nhạc nền (nhạc mẫu).mp3",
+  "kind": "music",
+  "duration": 32,
+  "size": 641089,
+  "createdAt": 1795352080051
+ },
+ {
+  "id": "amwru9uoy1l8kp",
+  "name": "Hành khúc (nhạc mẫu).mp3",
+  "kind": "music",
+  "duration": 33,
+  "size": 661465,
+  "createdAt": 1795352079908
+ },
+ {
+  "id": "amwru9umc0wo04",
+  "name": "Nhạc hiệu (nhạc mẫu).mp3",
+  "kind": "music",
+  "duration": 7.5,
+  "size": 151555,
+  "createdAt": 1795352079760
+ }
+]

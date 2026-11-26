@@ -1,0 +1,9 @@
+node_modules/
+data/
+dist/
+.env
+tts/offline/
+tts/runtime/
+tts/hf-keep/
+bundle.log
+dist.log

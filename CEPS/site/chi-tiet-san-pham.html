@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="pageTitle">Chi Tiết Sản Phẩm | CPES - Giải Pháp Công Nghiệp</title>
+  <meta name="description" id="pageMetaDesc" content="Thông số kỹ thuật chi tiết, ứng dụng thực tế và báo giá thiết bị đo lường chất lượng nước s::can và ATi phân phối bởi CPES.">
+  
+  <link rel="icon" type="image/webp" href="assets/img/brand/logo-cpes-doc.webp">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <style>
+    /* Styling riêng cho trang chi tiết sản phẩm */
+    .product-detail-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 36px;
+      margin-bottom: 48px;
+    }
+    @media (min-width: 992px) {
+      .product-detail-layout {
+        grid-template-columns: 1fr 1.15fr;
+        gap: 52px;
+      }
+    }
+    .product-gallery-box {
+      background: radial-gradient(circle, #ffffff 40%, #eef5ef 100%);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 36px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 400px;
+      box-shadow: var(--shadow-sm);
+      position: sticky;
+      top: calc(var(--header-h) + 20px);
+    }
+    .product-gallery-img {
+      max-height: 340px;
+      max-width: 100%;
+      object-fit: contain;
+      filter: drop-shadow(0 14px 24px rgba(29, 83, 33, 0.12));
+      transition: transform 0.3s var(--ease);
+    }
+    .product-gallery-box:hover .product-gallery-img {
+      transform: scale(1.05);
+    }
+    .spec-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+      font-size: 0.92rem;
+    }
+    .spec-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--line);
+    }
+    .spec-table td:first-child {
+      font-weight: 700;
+      color: var(--brand-dark);
+      width: 35%;
+      background: var(--bg-alt);
+    }
+    .breadcrumb-nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+    .breadcrumb-nav a:hover {
+      color: var(--brand);
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Chuyển đến nội dung chính</a>
+
+  <!-- SITE HEADER (ĐÃ ẨN NÚT QUẢN TRỊ) -->
+  <header class="site-header" role="banner">
+    <div class="container header-row">
+      <a href="index.html" class="brand-link" aria-label="CPES Trang chủ">
+        <img src="assets/img/brand/logo-cpes-ngang.webp" alt="CPES - CPE Solutions" class="brand-logo-img" width="168" height="44">
+      </a>
+
+      <nav class="nav-desktop" role="navigation" aria-label="Menu chính">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html" class="nav-link">Giới thiệu</a></li>
+          <li class="nav-item">
+            <a href="san-pham.html" class="nav-link active" aria-current="page">Sản phẩm</a>
+          </li>
+          <li class="nav-item"><a href="giai-phap.html" class="nav-link">Giải pháp</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="btn btn-sm btn-primary btn-header-cta" onclick="openQuoteModal()">
+          Yêu cầu báo giá
+        </button>
+        <button type="button" class="menu-toggle" aria-label="Mở menu di động" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Menu di động">
+    <div class="drawer-content">
+      <div style="display: flex; align-items: center; justify-content: space-between; padding-bottom: 16px; border-bottom: 1px solid var(--line);">
+        <img src="assets/img/brand/logo-cpes-ngang.webp" alt="CPES" style="height: 36px; width: auto;">
+      </div>
+      <ul class="drawer-nav">
+        <li><a href="index.html" class="drawer-link">Giới thiệu</a></li>
+        <li><a href="san-pham.html" class="drawer-link active">Sản phẩm</a></li>
+        <li><a href="giai-phap.html" class="drawer-link">Giải pháp công nghiệp</a></li>
+      </ul>
+      <div style="margin-top: auto; display: flex; flex-direction: column; gap: 10px;">
+        <button type="button" class="btn btn-primary" onclick="openQuoteModal()">
+          Yêu cầu báo giá
+        </button>
+        <a href="tel:0942537025" class="btn btn-ghost" style="font-size: 0.9rem;">
+          Hotline: (+84) 942 537 025
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content" class="section" style="padding-top: 24px;">
+    <div class="container">
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+        <a href="index.html">Trang chủ</a>
+        <span>/</span>
+        <a href="san-pham.html">Sản phẩm</a>
+        <span>/</span>
+        <span id="breadcrumbCurrent" style="color: var(--ink); font-weight: 600;">Đang nạp sản phẩm...</span>
+      </nav>
+
+      <!-- Khung chi tiết sản phẩm nạp động từ JS -->
+      <div id="productDetailContainer">
+        <div style="padding: 60px 20px; text-align: center; color: var(--muted);">
+          <div class="param-pill" style="display:inline-block; margin-bottom:12px;">Đang tải thông tin thiết bị...</div>
+        </div>
+      </div>
+
+      <!-- SẢN PHẨM LIÊN QUAN -->
+      <section style="margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--line);">
+        <div class="sec-head" style="margin-bottom: 24px;">
+          <div>
+            <span class="eyebrow">Đề xuất kỹ thuật</span>
+            <h3 style="font-size: 1.4rem; color: var(--brand-dark); margin: 0;">Sản Phẩm Cùng Hệ Thống</h3>
+          </div>
+          <a href="san-pham.html" class="btn btn-sm btn-ghost">Xem toàn bộ danh mục &rarr;</a>
+        </div>
+        <div class="catalog-grid" id="relatedProductsGrid" style="grid-auto-columns: calc(33.333% - 14px);">
+          <!-- Nạp động qua JS -->
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <img src="assets/img/brand/logo-cpes-doc.webp" alt="CPES Logo" width="130" height="52">
+          <h4 style="margin: 0 0 10px; font-size: 1.15rem; color: #fff;">CÔNG TY TNHH GIẢI PHÁP CPE</h4>
+          <p style="font-size: 0.9rem; color: var(--on-dark-muted); line-height: 1.6;">
+            Đối tác tin cậy chuyên cung cấp các giải pháp công nghiệp: quan trắc nước thải, nước cấp, van điều khiển, thiết bị phân tích an toàn.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Sản Phẩm & Thiết Bị</h4>
+          <ul class="footer-links">
+            <li><a href="san-pham.html#scan">Đầu dò quang phổ s::can</a></li>
+            <li><a href="san-pham.html#scan">Cảm biến điện hóa s::can</a></li>
+            <li><a href="san-pham.html#ati">Brochure thiết bị ATi</a></li>
+            <li><a href="san-pham.html">Tất cả sản phẩm (66 mã)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Giải Pháp Ngành</h4>
+          <ul class="footer-links">
+            <li><a href="giai-phap.html#giai-phap-nuoc-thai">Quan trắc nước thải tự động</a></li>
+            <li><a href="giai-phap.html#giai-phap-nuoc-cap">Giám sát nước cấp sinh hoạt</a></li>
+            <li><a href="giai-phap.html">Dầu khí, Nhiệt điện & Khai khoáng</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Thông Tin Liên Hệ</h4>
+          <ul class="footer-links">
+            <li>📍 490 Phạm Thái Bường, Tân Phong, Q.7, TP.HCM</li>
+            <li>📞 Hotline: (+84) 942 537 025</li>
+            <li>✉️ Email: Sales@cpes.vn</li>
+            <li>🌐 Website: cpes.vn</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; <span id="currentYear">2026</span> Công ty TNHH Giải Pháp CPE (CPES).
+        </div>
+        <div style="font-size: 0.82rem; color: var(--on-dark-muted);">
+          s::can & ATi — A Badger Meter® Brand
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MOBILE FIXED ACTION BAR -->
+  <aside class="mobile-action-bar" aria-label="Thanh thao tác nhanh di động">
+    <a href="tel:0942537025" class="mobile-action-item">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+      <span>Gọi ngay</span>
+    </a>
+    <a href="https://zalo.me/0942537025" target="_blank" rel="noopener noreferrer" class="mobile-action-item">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+      <span>Zalo</span>
+    </a>
+    <button type="button" class="mobile-action-item btn-action-primary" id="mobileQuoteBtn">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+      <span>Báo giá</span>
+    </button>
+  </aside>
+
+  <!-- JS SCRIPTS -->
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/chatbot.js"></script>
+  <script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const prodId = urlParams.get('id');
+      const container = document.getElementById('productDetailContainer');
+      const breadcrumb = document.getElementById('breadcrumbCurrent');
+
+      let allProducts = [];
+      try {
+        allProducts = await CPES_API.getProducts();
+      } catch (err) {
+        console.error(err);
+      }
+
+      let product = null;
+      if (prodId) {
+        product = allProducts.find(p => p.id == prodId || p.name.toLowerCase().includes(prodId.toLowerCase()));
+      }
+      if (!product && allProducts.length > 0) {
+        product = allProducts[0]; // fallback
+      }
+
+      if (!product) {
+        container.innerHTML = `
+          <div style="text-align: center; padding: 60px 20px;">
+            <h3>Không tìm thấy sản phẩm yêu cầu</h3>
+            <p style="color: var(--muted); margin-bottom: 20px;">Sản phẩm không tồn tại hoặc đã được cập nhật mã mới.</p>
+            <a href="san-pham.html" class="btn btn-primary">Quay lại danh mục sản phẩm</a>
+          </div>
+        `;
+        return;
+      }
+
+      // Cập nhật tiêu đề & meta
+      document.title = `${product.name} | CPES - Giải Pháp Công Nghiệp`;
+      breadcrumb.textContent = product.name;
+
+      const imgSrc = product.local_image || product.image_url;
+      const paramsList = (product.parameters || '').split(/[,;\/]/).map(s => s.trim()).filter(Boolean);
+      const paramsPills = paramsList.map(p => `<span class="param-pill" style="font-size:0.85rem; padding:4px 12px;">${p}</span>`).join('');
+      const highlightsList = (product.highlights_vi || []).map(h => `
+        <li style="display:flex; align-items:flex-start; gap:10px; margin-bottom:8px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2.5" style="flex-shrink:0; margin-top:3px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <span style="font-size:0.95rem; color:var(--ink-2);">${h}</span>
+        </li>
+      `).join('');
+      const marketsList = (product.markets_vi || []).map(m => `<span class="tag-chip" style="font-size:0.85rem; padding:6px 14px;">${m}</span>`).join('');
+
+      container.innerHTML = `
+        <div class="product-detail-layout">
+          <!-- Cột Trái: Ảnh Sản Phẩm Lớn -->
+          <div class="product-gallery-box">
+            <span class="tag-chip" style="position: absolute; top: 20px; left: 20px; background: #fff; box-shadow: var(--shadow-sm); font-size: 0.8rem; font-weight: 700;">
+              ${product.brand}
+            </span>
+            <img src="${imgSrc}" alt="${product.name_vi}" class="product-gallery-img" onerror="this.src='${product.image_url}'">
+            <div style="margin-top: 16px; font-size: 0.82rem; color: var(--muted);">
+              Ảnh thiết bị công nghiệp chính hãng tách nền
+            </div>
+          </div>
+
+          <!-- Cột Phải: Thông Tin Kỹ Thuật & Báo Giá -->
+          <div>
+            <span class="eyebrow">${product.category}</span>
+            <h1 style="font-size: clamp(1.8rem, 3.2vw, 2.4rem); color: var(--brand-dark); margin-bottom: 8px;">
+              ${product.name}
+            </h1>
+            <div style="font-size: 1.1rem; font-weight: 600; color: var(--brand); margin-bottom: 16px;">
+              ${product.name_vi}
+            </div>
+
+            <p style="font-size: 1rem; line-height: 1.65; color: var(--ink-2); margin-bottom: 20px;">
+              ${product.description_vi}
+            </p>
+
+            ${product.parameters ? `
+              <div style="background: var(--bg-alt); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px 20px; margin-bottom: 24px;">
+                <h4 style="margin: 0 0 10px; font-size: 0.95rem; color: var(--brand-dark);">Thông số đo lường chính:</h4>
+                <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                  ${paramsPills}
+                </div>
+              </div>
+            ` : ''}
+
+            <div style="display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 28px;">
+              <button type="button" class="btn btn-primary" onclick="openQuoteModal('${product.name}')">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                Yêu cầu báo giá thiết bị
+              </button>
+              <a href="tel:0942537025" class="btn btn-ghost">
+                Hotline: (+84) 942 537 025
+              </a>
+            </div>
+
+            <!-- Đặc tính nổi bật -->
+            ${highlightsList ? `
+              <div style="margin-bottom: 24px;">
+                <h4 style="font-size: 1.05rem; color: var(--brand-dark); margin-bottom: 12px;">Đặc tính & Ưu điểm vượt trội:</h4>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                  ${highlightsList}
+                </ul>
+              </div>
+            ` : ''}
+
+            <!-- Ứng dụng theo ngành -->
+            ${marketsList ? `
+              <div style="margin-bottom: 24px;">
+                <h4 style="font-size: 1.05rem; color: var(--brand-dark); margin-bottom: 12px;">Ứng dụng thực tế theo ngành:</h4>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                  ${marketsList}
+                </div>
+              </div>
+            ` : ''}
+
+            <!-- Nguồn gốc xuất xứ & Hỗ trợ kỹ thuật -->
+            <div style="border-top: 1px solid var(--line); padding-top: 18px; font-size: 0.88rem; color: var(--muted); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px;">
+              <span>Thương hiệu: <strong>${product.brand}</strong></span>
+              <span>Bảo hành: <strong>12–24 tháng chính hãng</strong></span>
+              ${product.original_url && product.original_url.startsWith('http') ? `
+                <a href="${product.original_url}" target="_blank" rel="noopener noreferrer" style="color: var(--brand); font-weight: 600;">Xem tại hãng Badger Meter &nearr;</a>
+              ` : ''}
+            </div>
+          </div>
+        </div>
+      `;
+
+      // Cập nhật nút báo giá ở thanh mobile
+      document.getElementById('mobileQuoteBtn').onclick = () => openQuoteModal(product.name);
+
+      // Render 3 sản phẩm liên quan
+      const related = allProducts.filter(p => p.id !== product.id && (p.brand_slug === product.brand_slug || p.category_slug === product.category_slug)).slice(0, 3);
+      const relGrid = document.getElementById('relatedProductsGrid');
+      if (relGrid && related.length > 0) {
+        relGrid.innerHTML = related.map(p => `
+          <article class="product-card">
+            <div class="product-card-plate">
+              <img src="${p.local_image || p.image_url}" alt="${p.name_vi}" loading="lazy" width="220" height="180">
+            </div>
+            <span class="product-card-category">${p.category}</span>
+            <h3 class="product-card-title">${p.name}</h3>
+            <p class="product-card-desc">${p.description_vi}</p>
+            <div class="product-card-footer">
+              <a href="chi-tiet-san-pham.html?id=${p.id}" class="btn btn-sm btn-ghost">Chi tiết</a>
+              <button type="button" class="btn btn-sm btn-primary" onclick="openQuoteModal('${p.name}')">Báo giá</button>
+            </div>
+          </article>
+        `).join('');
+      }
+    });
+  </script>
+</body>
+</html>

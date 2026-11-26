@@ -1,0 +1,789 @@
+[
+ {
+  "id": "ati-metrinet",
+  "brand": "ATi",
+  "name": "MetriNet – Giám sát hệ thống phân phối nước thông minh",
+  "code": "MetriNet",
+  "category": "nuoc",
+  "categoryLabel": "Giám sát chất lượng nước",
+  "description": "MetriNet cấp nguồn từ pin, cung cấp giải pháp bền bỉ, lắp ráp dạng module có thể lắp 8 cảm biến khác nhau và 16 thông số cho việc giám sát chất lượng nước trên đường ống cấp nước.",
+  "bullets": [
+   "Tiêu thụ điện thấp",
+   "Có tùy chọn truyền dữ liệu không dây",
+   "Truyền thông Modbus, Ethernet/IP, Profibus"
+  ],
+  "image": "/img/ati/products/metrinet.webp",
+  "page": 4,
+  "hotspot": [
+   0.07,
+   0.127,
+   0.95,
+   0.352
+  ]
+ },
+ {
+  "id": "ati-q46n",
+  "brand": "ATi",
+  "name": "Q46N – Giám sát chỉ tiêu Amoni",
+  "code": "Q46N",
+  "category": "nuoc",
+  "categoryLabel": "Giám sát chất lượng nước",
+  "description": "Q46N đo amoni tự do, tổng amoni và mono cloramine trong nước cấp.",
+  "bullets": [
+   "Phương pháp cảm biến điện hóa",
+   "Chất xúc tác chi phí thấp",
+   "Dễ dàng bảo trì"
+  ],
+  "image": "/img/ati/products/q46n.webp",
+  "page": 4,
+  "hotspot": [
+   0.07,
+   0.37,
+   0.95,
+   0.594
+  ]
+ },
+ {
+  "id": "ati-giam-sat-chi-tieu-clo-du",
+  "brand": "ATi",
+  "name": "Giám sát chỉ tiêu Clo dư",
+  "code": "",
+  "category": "nuoc",
+  "categoryLabel": "Giám sát chất lượng nước",
+  "description": "Giải pháp giám sát clo dư không dùng hóa chất xúc tác của ATi có thể đo Clo tự do, Clo tổng, Clo liên kết sử dụng cảm biến đo trực tiếp.",
+  "bullets": [
+   "Tín hiệu xuất ra bao gồm giá trị Clo, pH và Nhiệt độ",
+   "Không tốn phí chất xúc tác",
+   "Bền bỉ theo thời gian"
+  ],
+  "image": "/img/ati/products/giam-sat-chi-tieu-clo-du.webp",
+  "page": 4,
+  "hotspot": [
+   0.07,
+   0.61,
+   0.95,
+   0.836
+  ]
+ },
+ {
+  "id": "ati-nephnet",
+  "brand": "ATi",
+  "name": "NephNet – Giám sát độ đục cầm tay",
+  "code": "NephNet",
+  "category": "nuoc",
+  "categoryLabel": "Giám sát chất lượng nước",
+  "description": "Bộ giám sát cầm tay NephNet được sử dụng trong quá trình xịt rửa và làm sạch có điều khiển.",
+  "bullets": [
+   "Giám sát liên tục, từ xa độ đục",
+   "Có thể được sử dụng cùng với bộ datalogger hiện hữu",
+   "Độ chính xác tốt hơn ở dải đo thấp"
+  ],
+  "image": "/img/ati/products/nephnet.webp",
+  "page": 5,
+  "hotspot": [
+   0.07,
+   0.127,
+   0.95,
+   0.352
+  ]
+ },
+ {
+  "id": "ati-giam-sat-do-duc-co-dinh",
+  "brand": "ATi",
+  "name": "Giám sát độ đục cố định",
+  "code": "",
+  "category": "nuoc",
+  "categoryLabel": "Giám sát chất lượng nước",
+  "description": "Giám sát nước thô, nước thải qua màng lọc, nước thải đầu ra và các ứng dụng trong khu vực công nghệ.",
+  "bullets": [
+   "Phù hợp với tiêu chuẩn EPA 180.1/ ISO 7027",
+   "Phù hợp tiêu chuẩn kiểm định và cân chỉnh chất rắn",
+   "Phương pháp hiệu chuẩn dễ dàng"
+  ],
+  "image": "/img/ati/products/giam-sat-do-duc-co-dinh.webp",
+  "page": 5,
+  "hotspot": [
+   0.07,
+   0.37,
+   0.95,
+   0.594
+  ]
+ },
+ {
+  "id": "ati-giam-sat-chi-tieu-uv254",
+  "brand": "ATi",
+  "name": "Giám sát chỉ tiêu UV254",
+  "code": "",
+  "category": "nuoc",
+  "categoryLabel": "Giám sát chất lượng nước",
+  "description": "Đo lường độ hấp thụ bước sóng UV254 cung cấp giá trị thời gian thực về hàm lượng các chất hữu cơ.",
+  "bullets": [
+   "Đo UV254 và độ đục",
+   "Nhiều dải đo khác nhau",
+   "Tùy chọn làm sạch tự động Q-clean"
+  ],
+  "image": "/img/ati/products/giam-sat-chi-tieu-uv254.webp",
+  "page": 5,
+  "hotspot": [
+   0.07,
+   0.61,
+   0.95,
+   0.836
+  ]
+ },
+ {
+  "id": "ati-giam-sat-chi-tieu-flo",
+  "brand": "ATi",
+  "name": "Giám sát chỉ tiêu Flo",
+  "code": "",
+  "category": "nuoc",
+  "categoryLabel": "Giám sát chất lượng nước",
+  "description": "Giám sát liên tục nồng độ Flo để đảm bảo lượng Flo được châm vừa đủ.",
+  "bullets": [
+   "Bộ đệm (buffer) chi phí thấp đảm bảo độ chính xác",
+   "Cân chỉnh 2 điểm tự động",
+   "Đo trực tiếp theo phương pháp ion điện hóa"
+  ],
+  "image": "/img/ati/products/giam-sat-chi-tieu-flo.webp",
+  "page": 6,
+  "hotspot": [
+   0.07,
+   0.127,
+   0.95,
+   0.352
+  ]
+ },
+ {
+  "id": "ati-sitebox",
+  "brand": "ATi",
+  "name": "Sitebox – Hệ thống đo chất lượng nước dạng xách tay",
+  "code": "Sitebox",
+  "category": "nuoc",
+  "categoryLabel": "Giám sát chất lượng nước",
+  "description": "Có thể xách tay di chuyển được, Sitebox là hệ thống đo chất lượng nước có thể được di chuyển dễ dàng theo cơ chế \"nhấc lên và di chuyển\".",
+  "bullets": [
+   "Có thể giám sát dữ liệu thực trong vòng 30 phút",
+   "Được cấu hình cho việc kiểm định gồm hai dòng, ba dòng và nhiều dòng chảy",
+   "8 cảm biến và 16 thông số được giám sát"
+  ],
+  "image": "/img/ati/products/sitebox.webp",
+  "page": 6,
+  "hotspot": [
+   0.07,
+   0.37,
+   0.95,
+   0.594
+  ]
+ },
+ {
+  "id": "ati-panel-do-chat-luong-nuoc",
+  "brand": "ATi",
+  "name": "Panel đo chất lượng nước",
+  "code": "",
+  "category": "nuoc",
+  "categoryLabel": "Giám sát chất lượng nước",
+  "description": "Giám sát online đa chỉ tiêu trong hệ thống phân phối nước cấp và các hệ thống xử lý nước cấp.",
+  "bullets": [
+   "Tùy chỉnh thông số đo theo yêu cầu",
+   "Các tính năng có thể được thiết kế phù hợp theo yêu cầu",
+   "Nhiều phương án truyền dữ liệu"
+  ],
+  "image": "/img/ati/products/panel-do-chat-luong-nuoc.webp",
+  "page": 6,
+  "hotspot": [
+   0.07,
+   0.61,
+   0.95,
+   0.836
+  ]
+ },
+ {
+  "id": "ati-giam-sat-oxy-ton-du",
+  "brand": "ATi",
+  "name": "Giám sát oxy tồn dư",
+  "code": "",
+  "category": "nuoc",
+  "categoryLabel": "Giám sát chất lượng nước",
+  "description": "Hệ thống đo điện hóa tin cậy cho các chất oxi hóa sử dụng trong hệ thống khử khuẩn hay xử lý.",
+  "bullets": [
+   "Ô-zôn",
+   "Clo oxit",
+   "Ôxi già",
+   "Axit peracetic"
+  ],
+  "image": "/img/ati/products/giam-sat-oxy-ton-du.webp",
+  "page": 7,
+  "hotspot": [
+   0.07,
+   0.127,
+   0.95,
+   0.352
+  ]
+ },
+ {
+  "id": "ati-do-giam-sat-permanganate",
+  "brand": "ATi",
+  "name": "Đo giám sát permanganate",
+  "code": "",
+  "category": "nuoc",
+  "categoryLabel": "Giám sát chất lượng nước",
+  "description": "Giám sát chất lượng nước liên tục qua chỉ tiêu permanganate trong giai đoạn tiền xử lý giúp ngăn ngừa các vấn đề đổi màu.",
+  "bullets": [
+   "Chất xúc tác chi phí thấp",
+   "Dễ bảo trì"
+  ],
+  "image": "/img/ati/products/do-giam-sat-permanganate.webp",
+  "page": 7,
+  "hotspot": [
+   0.07,
+   0.37,
+   0.95,
+   0.594
+  ]
+ },
+ {
+  "id": "ati-giam-sat-do-o-phosphate",
+  "brand": "ATi",
+  "name": "Giám sát đo o-Phosphate",
+  "code": "",
+  "category": "nuoc",
+  "categoryLabel": "Giám sát chất lượng nước",
+  "description": "Đảm bảo việc kiểm soát ăn mòn với việc giám sát liên tục online lượng hóa chất o-Phosphate được đưa vào xử lý.",
+  "bullets": [
+   "Tự bù độ trôi điểm zero",
+   "Cảnh báo chất xúc tác mức thấp",
+   "Không cần các hiệu chuẩn bên ngoài"
+  ],
+  "image": "/img/ati/products/giam-sat-do-o-phosphate.webp",
+  "page": 7,
+  "hotspot": [
+   0.07,
+   0.61,
+   0.95,
+   0.836
+  ]
+ },
+ {
+  "id": "ati-giam-sat-oxi-hoa-tan",
+  "brand": "ATi",
+  "name": "Giám sát ôxi hòa tan",
+  "code": "",
+  "category": "nuoc",
+  "categoryLabel": "Giám sát chất lượng nước",
+  "description": "Điều khiển luồng không khí để tối ưu quá trình sục khí, từ đó tiết kiệm năng lượng.",
+  "bullets": [
+   "Cảm biến quang",
+   "Bộ Q-blast độc đáo tự làm sạch",
+   "Bảo trì thấp"
+  ],
+  "image": "/img/ati/products/giam-sat-oxi-hoa-tan.webp",
+  "page": 8,
+  "hotspot": [
+   0.07,
+   0.127,
+   0.95,
+   0.352
+  ]
+ },
+ {
+  "id": "ati-bo-tach-khi-air-stripping-tong-clo",
+  "brand": "ATi",
+  "name": "Bộ \"tách khí - air stripping\" tổng Clo",
+  "code": "",
+  "category": "nuoc",
+  "categoryLabel": "Giám sát chất lượng nước",
+  "description": "Giám sát nước thải đầu ra sử dụng phương pháp định lượng I-ốt cho việc phát hiện tổng Clo.",
+  "bullets": [
+   "Đạt chuẩn EPA",
+   "Cảm biến pha khí tránh cảnh báo giả",
+   "Độ nhạy đo đến mức ppm"
+  ],
+  "image": "/img/ati/products/bo-tach-khi-air-stripping-tong-clo.webp",
+  "page": 8,
+  "hotspot": [
+   0.07,
+   0.37,
+   0.95,
+   0.594
+  ]
+ },
+ {
+  "id": "ati-giam-sat-sulfite",
+  "brand": "ATi",
+  "name": "Giám sát Sulfite",
+  "code": "",
+  "category": "nuoc",
+  "categoryLabel": "Giám sát chất lượng nước",
+  "description": "Cung cấp cho việc vận hành với công cụ tin cậy trong việc giảm chi phí châm hóa chất ở khu vực công nghệ khử clo.",
+  "bullets": [
+   "Giảm chi phí châm hóa chất đắt đỏ",
+   "Cảm biến pha khí giúp ngăn ngừa cảnh báo giả",
+   "Tự động làm sạch đường trích mẫu"
+  ],
+  "image": "/img/ati/products/giam-sat-sulfite.webp",
+  "page": 8,
+  "hotspot": [
+   0.07,
+   0.61,
+   0.95,
+   0.836
+  ]
+ },
+ {
+  "id": "ati-giam-sat-chat-ran-lo-lung-nong-do-bun-hoat-tinh-mlss",
+  "brand": "ATi",
+  "name": "Giám sát chất rắn lơ lửng/ nồng độ bùn hoạt tính MLSS",
+  "code": "",
+  "category": "nuoc",
+  "categoryLabel": "Giám sát chất lượng nước",
+  "description": "Đo chất rắn lơ lửng/ nồng độ bùn hoạt tính MLSS trong bể sục khí hỗ trợ việc điều khiển quá trình xử lý và cung cấp các cảnh báo khi có điều kiện bất thường xảy ra.",
+  "bullets": [
+   "Giám sát thời gian thực",
+   "Duy trì mức MLSS tối ưu",
+   "Tùy chọn bộ tự làm sạch Q-blast"
+  ],
+  "image": "/img/ati/products/giam-sat-chat-ran-lo-lung-nong-do-bun-hoat-tinh-mlss.webp",
+  "page": 9,
+  "hotspot": [
+   0.07,
+   0.127,
+   0.95,
+   0.352
+  ]
+ },
+ {
+  "id": "ati-giam-sat-sulfide",
+  "brand": "ATi",
+  "name": "Giám sát Sulfide",
+  "code": "",
+  "category": "nuoc",
+  "categoryLabel": "Giám sát chất lượng nước",
+  "description": "Công nghệ \"Tách khí - air stripping\" giúp loại bỏ được việc cảm biến tiếp xúc với quy trình công nghệ, loại bỏ được các vấn đề bám bẩn.",
+  "bullets": [
+   "Chất xúc tác chi phí thấp",
+   "Cảm biến pha khí ngăn ngừa cảnh báo giả",
+   "Làm sạch tự động đường lấy mẫu"
+  ],
+  "image": "/img/ati/products/giam-sat-sulfide.webp",
+  "page": 9,
+  "hotspot": [
+   0.07,
+   0.37,
+   0.95,
+   0.594
+  ]
+ },
+ {
+  "id": "ati-do-nitrite",
+  "brand": "ATi",
+  "name": "Đo nitrite",
+  "code": "",
+  "category": "nuoc",
+  "categoryLabel": "Giám sát chất lượng nước",
+  "description": "Thu thập thông tin chính xác với cảm biến nitrite cho việc cảnh báo sớm quá trình nitrat hóa trong hệ thống cung cấp nước trên mạng lưới.",
+  "bullets": [
+   "Giới hạn phát hiện 10ppb",
+   "Không cần chất xúc tác",
+   "Chi phí bảo trì thấp"
+  ],
+  "image": "/img/ati/products/do-nitrite.webp",
+  "page": 9,
+  "hotspot": [
+   0.07,
+   0.61,
+   0.95,
+   0.836
+  ]
+ },
+ {
+  "id": "ati-giam-sat-do-dan-dien",
+  "brand": "ATi",
+  "name": "Giám sát độ dẫn điện",
+  "code": "",
+  "category": "nuoc",
+  "categoryLabel": "Giám sát chất lượng nước",
+  "description": "Giám sát độ dẫn, độ kháng, tổng chất rắn lơ lửng, nồng độ hóa chất với đa cấu hình.",
+  "bullets": [
+   "Đo độ dẫn 2 điện cực",
+   "Đo các ứng dụng chung dùng 4 điện cực"
+  ],
+  "image": "/img/ati/products/giam-sat-do-dan-dien.webp",
+  "page": 10,
+  "hotspot": [
+   0.07,
+   0.127,
+   0.95,
+   0.352
+  ]
+ },
+ {
+  "id": "ati-giam-sat-ph-orp",
+  "brand": "ATi",
+  "name": "Giám sát pH/ORP",
+  "code": "",
+  "category": "nuoc",
+  "categoryLabel": "Giám sát chất lượng nước",
+  "description": "Cảm biến đo pH, đo vi sai pH với nhiều cách lắp đặt khác nhau cho thời gian vận hành lâu dài.",
+  "bullets": [
+   "Chi phí bảo trì thấp",
+   "Tùy chọn tự động làm sạch Q-blast"
+  ],
+  "image": "/img/ati/products/giam-sat-ph-orp.webp",
+  "page": 10,
+  "hotspot": [
+   0.07,
+   0.37,
+   0.95,
+   0.594
+  ]
+ },
+ {
+  "id": "ati-filtersmart",
+  "brand": "ATi",
+  "name": "FilterSmart – Giám sát quá trình rửa ngược (backwash), lớp bùn (sludge blanket)",
+  "code": "FilterSmart",
+  "category": "nuoc",
+  "categoryLabel": "Giám sát chất lượng nước",
+  "description": "FilterSmart cho phép giám sát quá trình rửa ngược backwash bằng cách đo mức của bùn lắng và độ đục, tích hợp trong 1 cảm biến.",
+  "bullets": [
+   "Giảm thiểu nhất việc sử dụng nước",
+   "Tối ưu nhất thời gian sử dụng bộ lọc",
+   "Sử dụng để chạy bơm WAS và RAS"
+  ],
+  "image": "/img/ati/products/filtersmart.webp",
+  "page": 10,
+  "hotspot": [
+   0.07,
+   0.61,
+   0.95,
+   0.836
+  ]
+ },
+ {
+  "id": "ati-d16",
+  "brand": "ATi",
+  "name": "D16 Bộ phát hiện khí rò rỉ cầm tay",
+  "code": "D16",
+  "category": "khi",
+  "categoryLabel": "Đo & phát hiện khí",
+  "description": "PortaSens III là bộ phát hiện rò rỉ khí được tích hợp bộ ghi dữ liệu (datalogger) có dung lượng 6GB.",
+  "bullets": [
+   "Các module khí dạng \"Cảm biến thông minh\"",
+   "Bơm lấy mẫu tích hợp",
+   "Màn hình giao diện cảm ứng dễ sử dụng"
+  ],
+  "image": "/img/ati/products/d16.webp",
+  "page": 12,
+  "hotspot": [
+   0.07,
+   0.127,
+   0.95,
+   0.352
+  ]
+ },
+ {
+  "id": "ati-f12",
+  "brand": "ATi",
+  "name": "F12 Bộ phát hiện khí độc",
+  "code": "F12",
+  "category": "khi",
+  "categoryLabel": "Đo & phát hiện khí",
+  "description": "Các bộ chuyển đổi tín hiệu (transmitter) loại 2 dây có chống cháy nổ tiêu chuẩn Ex intrinsic safety, sử dụng nguồn một chiều DC hoặc xoay chiều AC, trang bị nhiều cảnh báo khí.",
+  "bullets": [
+   "Các module khí dạng \"Cảm biến thông minh\"",
+   "Thao tác sử dụng qua 4 nút nhấn",
+   "Kiểm tra báo động (Bump test) tự động"
+  ],
+  "image": "/img/ati/products/f12.webp",
+  "page": 12,
+  "hotspot": [
+   0.07,
+   0.37,
+   0.95,
+   0.594
+  ]
+ },
+ {
+  "id": "ati-d12",
+  "brand": "ATi",
+  "name": "D12 Bộ phát hiện khí độc và khí cháy",
+  "code": "D12",
+  "category": "khi",
+  "categoryLabel": "Đo & phát hiện khí",
+  "description": "Bộ phát hiện khí có thể đo được 30 loại khí độc khác nhau, hoặc cảm biến xúc tác cho việc đo theo LEL.",
+  "bullets": [
+   "Các module khí dạng \"Cảm biến thông minh\"",
+   "Giao diện sử dụng chạm cảm ứng từ",
+   "Kiểm tra báo động (bump test) tự động"
+  ],
+  "image": "/img/ati/products/d12.webp",
+  "page": 12,
+  "hotspot": [
+   0.07,
+   0.61,
+   0.95,
+   0.836
+  ]
+ },
+ {
+  "id": "ati-a14-a11",
+  "brand": "ATi",
+  "name": "A14/ A11 Bộ phát hiện khí module",
+  "code": "A14/A11",
+  "category": "khi",
+  "categoryLabel": "Đo & phát hiện khí",
+  "description": "GasSens là hệ thống linh hoạt cung cấp một nền tảng cho nhiều đầu đo khí thông qua nhiều ngõ vào và nhiều cảnh báo khác nhau.",
+  "bullets": [
+   "Lên đến 12 ngõ vào cho bộ phát hiện khí",
+   "Chuẩn kháng nước bụi NEMA 4x (tương đương IP66)",
+   "Kiểm tra báo động (bump test) tự động"
+  ],
+  "image": "/img/ati/products/a14-a11.webp",
+  "page": 13,
+  "hotspot": [
+   0.07,
+   0.127,
+   0.95,
+   0.352
+  ]
+ },
+ {
+  "id": "ati-d12ex-ir",
+  "brand": "ATi",
+  "name": "D12Ex-IR Bộ đo khí nguyên lý hồng ngoại",
+  "code": "D12Ex-IR",
+  "category": "khi",
+  "categoryLabel": "Đo & phát hiện khí",
+  "description": "Bộ đo khí nguyên lý hồng ngoại thiết kế chắc chắn, chống cháy nổ, có thể đo được đơn vị LEL hoặc các loại khí độc.",
+  "bullets": [
+   "Các cảm biến cần đo LEL, nồng độ hydrocarbon cao, CO2 và N2O",
+   "Kiểm tra báo động (bump-test) tự động"
+  ],
+  "image": "/img/ati/products/d12ex-ir.webp",
+  "page": 13,
+  "hotspot": [
+   0.07,
+   0.37,
+   0.95,
+   0.594
+  ]
+ },
+ {
+  "id": "ati-q45s",
+  "brand": "ATi",
+  "name": "Q45S Bộ phát hiện hơi H2S (wet H2S)",
+  "code": "Q45S",
+  "category": "khi",
+  "categoryLabel": "Đo & phát hiện khí",
+  "description": "Hệ thống giám sát mùi hôi trong môi trường có hơi bão hòa.",
+  "bullets": [
+   "Phù hợp với các bình lọc khí thải (Scrubber)",
+   "Chuẩn kháng nước bụi NEMA 4x (tương đương IP66)",
+   "Tự động loại bỏ các giọt nước (droplet removal)"
+  ],
+  "image": "/img/ati/products/q45s.webp",
+  "page": 13,
+  "hotspot": [
+   0.07,
+   0.61,
+   0.95,
+   0.836
+  ]
+ },
+ {
+  "id": "ati-b12",
+  "brand": "ATi",
+  "name": "B12 Bộ đo khí 2-dây (2-wire)",
+  "code": "B12",
+  "category": "khi",
+  "categoryLabel": "Đo & phát hiện khí",
+  "description": "Bộ chuyển đổi tín hiệu (transmitter) 2-dây cho các ứng dụng phát hiện khí độc, với nhiều phương án lắp đặt khác nhau.",
+  "bullets": [
+   "Cấp nguồn bằng pin hay vòng kín (loop powered)",
+   "Chuẩn kháng nước bụi NEMA 4X (tương đương IP66)",
+   "Cảm biến tách rời hay tích hợp"
+  ],
+  "image": "/img/ati/products/b12.webp",
+  "page": 14,
+  "hotspot": [
+   0.07,
+   0.127,
+   0.95,
+   0.352
+  ]
+ },
+ {
+  "id": "ati-b14",
+  "brand": "ATi",
+  "name": "B14 Module cảnh báo khí",
+  "code": "B14",
+  "category": "khi",
+  "categoryLabel": "Đo & phát hiện khí",
+  "description": "Module thu nhận tín hiệu dạng tích hợp cung cấp các cảnh báo, hiển thị và là bộ truyền tín hiệu trung gian cho hệ thống phát hiện khí.",
+  "bullets": [
+   "Cảnh báo, báo động theo giá trị đặt",
+   "Hiển thị đèn LED các trạng thái cảnh báo",
+   "Chuẩn kháng nước bụi NEMA 4X (tương đương IP66)"
+  ],
+  "image": "/img/ati/products/b14.webp",
+  "page": 14,
+  "hotspot": [
+   0.07,
+   0.37,
+   0.95,
+   0.594
+  ]
+ },
+ {
+  "id": "ati-b12-wet",
+  "brand": "ATi",
+  "name": "B12 Bộ phát hiện khí ướt",
+  "code": "B12-wet",
+  "category": "khi",
+  "categoryLabel": "Đo & phát hiện khí",
+  "description": "Phù hợp với các ứng dụng phát hiện khí ướt trong các bình lọc khí thải mà có thể bão hòa với hơi nước.",
+  "bullets": [
+   "Bộ chuyển đổi cấp điện dạng vòng (loop power)",
+   "Sensor kháng ăn mòn",
+   "Màn hình hiển thị tại chỗ"
+  ],
+  "image": "/img/ati/products/b12-wet.webp",
+  "page": 14,
+  "hotspot": [
+   0.07,
+   0.61,
+   0.95,
+   0.836
+  ]
+ },
+ {
+  "id": "ati-c21",
+  "brand": "ATi",
+  "name": "C21 Bộ lấy mẫu DRI-GAS",
+  "code": "C21",
+  "category": "khi",
+  "categoryLabel": "Đo & phát hiện khí",
+  "description": "DRI-GAS loại bỏ hơi nước trong các đường khí và cung cấp mẫu khí khô.",
+  "bullets": [
+   "Nhiều đầu ra với lưu lượng khác nhau",
+   "Cảnh báo tắc nghẽn ống khí mẫu"
+  ],
+  "image": "/img/ati/products/c21.webp",
+  "page": 15,
+  "hotspot": [
+   0.07,
+   0.127,
+   0.95,
+   0.352
+  ]
+ },
+ {
+  "id": "ati-e12-15",
+  "brand": "ATi",
+  "name": "E12-15 Bộ phát hiện khí Ammonia mức cao dạng hồng ngoại",
+  "code": "E12-15",
+  "category": "khi",
+  "categoryLabel": "Đo & phát hiện khí",
+  "description": "Bộ phát hiện khí bền bỉ, tin cậy và thông minh được sử dụng để giám sát nồng độ khí ammonia từ giá trị ppm đến giá trị cao có thể gây nổ.",
+  "bullets": [
+   "Giá trị đo Ammonia ở giới hạn phát hiện trên là 15%",
+   "Có chức năng tự kiểm tra liên tục"
+  ],
+  "image": "/img/ati/products/e12-15.webp",
+  "page": 15,
+  "hotspot": [
+   0.07,
+   0.37,
+   0.95,
+   0.594
+  ]
+ },
+ {
+  "id": "ati-c12-17",
+  "brand": "ATi",
+  "name": "C12-17 Bộ chuyển đổi transmitter đo khí cháy nổ",
+  "code": "C12-17",
+  "category": "khi",
+  "categoryLabel": "Đo & phát hiện khí",
+  "description": "Bộ chuyển đổi transmitter đo khí cháy nổ có thể phát hiện giới hạn cháy nổ dưới LEL.",
+  "bullets": [
+   "Tín hiệu ngõ ra 4-20mA",
+   "Tùy chọn hiển thị và cảnh báo",
+   "Vỏ ngoài bằng thép không rỉ SS316"
+  ],
+  "image": "/img/ati/products/c12-17.webp",
+  "page": 15,
+  "hotspot": [
+   0.07,
+   0.61,
+   0.95,
+   0.836
+  ]
+ },
+ {
+  "id": "ati-a21",
+  "brand": "ATi",
+  "name": "A21 Bộ lấy mẫu khí",
+  "code": "A21",
+  "category": "khi",
+  "categoryLabel": "Đo & phát hiện khí",
+  "description": "Hệ thống bơm mẫu khí có thể bơm các điểm lấy mẫu ở địa điểm khó tiếp cận, và đưa khí mẫu đến nơi thuận tiện hơn.",
+  "bullets": [
+   "Có thể chỉnh các lưu lượng khác nhau",
+   "Chuẩn kháng nước bụi NEMA 4X (tương đương IP66)",
+   "Cảnh báo mất lưu lượng"
+  ],
+  "image": "/img/ati/products/a21.webp",
+  "page": 16,
+  "hotspot": [
+   0.07,
+   0.127,
+   0.95,
+   0.352
+  ]
+ },
+ {
+  "id": "ati-a23-14",
+  "brand": "ATi",
+  "name": "A23-14 Bộ tạo Ozone",
+  "code": "A23-14",
+  "category": "khi",
+  "categoryLabel": "Đo & phát hiện khí",
+  "description": "Bộ tạo ozone xách tay được thiết kế để tạo ra một mẫu khí dưới 1ppm cho việc hiệu chỉnh các máy phát hiện khí.",
+  "bullets": [
+   "Tế bào sinh ozone dạng UV",
+   "Bình chứa 103 lít khí (20.9% O2)",
+   "Trang bị bộ chỉnh lưu lượng cố định ở đầu ra"
+  ],
+  "image": "/img/ati/products/a23-14.webp",
+  "page": 16,
+  "hotspot": [
+   0.07,
+   0.37,
+   0.95,
+   0.594
+  ]
+ },
+ {
+  "id": "ati-a12",
+  "brand": "ATi",
+  "name": "A12 Bộ chuyển đổi transmitter khí độc/ cháy nổ",
+  "code": "A12",
+  "category": "khi",
+  "categoryLabel": "Đo & phát hiện khí",
+  "description": "Bộ chuyển đổi khí có thể kết hợp với 30 loại sensor khí độc/ cháy nổ khác nhau, được trang bị vỏ chống cháy nổ.",
+  "bullets": [
+   "Các cảm biến khí độc điện hóa",
+   "Cảm biến hạt xúc tác cho khí cháy nổ",
+   "Chức năng tự kiểm tra báo động (bump test) cho cả hai loại cảm biến"
+  ],
+  "image": "/img/ati/products/a12.webp",
+  "page": 16,
+  "hotspot": [
+   0.07,
+   0.61,
+   0.95,
+   0.836
+  ]
+ }
+]
